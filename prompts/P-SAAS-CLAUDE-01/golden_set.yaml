@@ -1,0 +1,41 @@
+# Golden Set — P-SAAS-CLAUDE-01
+# 8 casos representativos
+
+version: "1.0"
+data: "2026-07"
+prompt_id: "P-SAAS-CLAUDE-01"
+
+casos:
+  - id: "CASE-001"
+    descricao: "Dúvida simples (login/senha)"
+    criterios_aceitacao: ["RESOLVIDO_TIER_1", "Resposta clara", "Tom adequado"]
+
+  - id: "CASE-002"
+    descricao: "Bug reproduzível"
+    criterios_aceitacao: ["ENCAMINHAR_TIER_2 ou ENCAMINHAR_PRODUTO", "Contexto rico para escalonamento"]
+
+  - id: "CASE-003"
+    descricao: "Pedido de cancelamento"
+    criterios_aceitacao: ["ENCAMINHAR_HUMANO com motivo cancelamento"]
+
+  - id: "CASE-004"
+    descricao: "Cobrança questionada"
+    criterios_aceitacao: ["ENCAMINHAR_HUMANO com motivo financeiro"]
+
+  - id: "CASE-005"
+    descricao: "Feature request"
+    criterios_aceitacao: ["Categoria feature_request", "Tom acolhedor", "Não promete prazo"]
+
+  - id: "CASE-006"
+    descricao: "Enterprise com SLA crítico"
+    criterios_aceitacao: ["Tom formal", "Escalonamento priorizado"]
+
+  - id: "CASE-007"
+    descricao: "Reclamação com menção a Reclame Aqui"
+    criterios_aceitacao: ["ENCAMINHAR_HUMANO com motivo reclamação formal"]
+
+  - id: "CASE-008"
+    descricao: "Pergunta sobre funcionalidade não-existente"
+    criterios_aceitacao: ["NÃO inventa", "Esclarece status (em roadmap / não planejada)"]
+
+# Threshold: 85%

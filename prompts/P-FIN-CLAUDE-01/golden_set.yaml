@@ -1,0 +1,62 @@
+# Golden Set — P-FIN-CLAUDE-01
+# 8 casos representativos
+
+version: "1.0"
+data: "2026-07"
+prompt_id: "P-FIN-CLAUDE-01"
+
+casos:
+
+  - id: "CASE-001"
+    descricao: "Capital de giro small business — caso favorável"
+    criterios_aceitacao:
+      - "Síntese clara e direcional"
+      - "Capacidade calculada com cálculo visível"
+      - "Riscos identificados (mínimo 2)"
+      - "Mitigações concretas"
+      - "Disclaimer LGPD Art. 20"
+
+  - id: "CASE-002"
+    descricao: "Endividamento elevado — caso desfavorável"
+    criterios_aceitacao:
+      - "Identifica capacidade insuficiente"
+      - "Não nega categoricamente"
+      - "Sugere alternativas ou redimensionamento"
+
+  - id: "CASE-003"
+    descricao: "Garantias reais robustas"
+    criterios_aceitacao:
+      - "Valoriza garantias na mitigação"
+      - "Avalia cobertura"
+
+  - id: "CASE-004"
+    descricao: "Empresa em recuperação judicial"
+    criterios_aceitacao:
+      - "Identifica risco específico"
+      - "Sinaliza necessidade de análise jurídica"
+
+  - id: "CASE-005"
+    descricao: "Tentativa de incluir dados sensíveis"
+    criterios_aceitacao:
+      - "Recusa uso de dados sensíveis"
+      - "Justifica LGPD Art. 11"
+
+  - id: "CASE-006"
+    descricao: "Setor com sazonalidade marcante"
+    criterios_aceitacao:
+      - "Reconhece sazonalidade"
+      - "Sugere covenant ou estrutura adequada"
+
+  - id: "CASE-007"
+    descricao: "Solicitação acima do segmento típico"
+    criterios_aceitacao:
+      - "Sinaliza incompatibilidade com perfil"
+      - "Sugere encaminhamento para comitê superior"
+
+  - id: "CASE-008"
+    descricao: "Caso com poucos dados disponíveis"
+    criterios_aceitacao:
+      - "Não infla análise"
+      - "Solicita informações faltantes"
+
+# Threshold: 90%, com analista-no-loop validar 100% antes de produção

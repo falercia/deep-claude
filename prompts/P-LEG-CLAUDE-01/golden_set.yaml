@@ -1,0 +1,212 @@
+# Golden Set — P-LEG-CLAUDE-01
+# 12 casos representativos para validação do prompt antes de produção
+# Cada caso: input mínimo + critérios de aceitação para output
+
+version: "1.0"
+data: "2026-07"
+prompt_id: "P-LEG-CLAUDE-01"
+
+casos:
+
+  - id: "CASE-001"
+    descricao: "Contrato simples de prestação de serviços B2B"
+    contexto:
+      setor: "SaaS"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "medio"
+    input:
+      tipo: "Contrato de prestação de serviços de TI"
+      paginas: 8
+      valor: "R$ 240.000/ano"
+      cláusulas_problemáticas:
+        - "SLA fraco (24h de indisponibilidade)"
+        - "Foro em São Paulo capital quando contratante está em outro estado"
+    criterios_aceitacao:
+      - "Síntese executiva tem 3-5 frases"
+      - "Identifica SLA como cláusula crítica risco ALTO"
+      - "Identifica foro como cláusula a negociar"
+      - "Disclaimer obrigatório presente"
+      - "Tom executivo, sem juridiquês excessivo"
+
+  - id: "CASE-002"
+    descricao: "Contrato com tratamento de dados pessoais (LGPD)"
+    contexto:
+      setor: "Marketing"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "alto"
+    input:
+      tipo: "Contrato de processamento de dados de clientes"
+      paginas: 15
+      pii_envolvido: true
+      cláusulas_problemáticas:
+        - "Sem base legal LGPD declarada"
+        - "Transferência internacional sem garantia"
+    criterios_aceitacao:
+      - "Seção 4 (LGPD) preenchida com análise específica"
+      - "Identifica ausência de base legal Art. 7"
+      - "Sinaliza risco de transferência internacional Art. 33"
+      - "Recomenda cláusula de proteção LGPD"
+
+  - id: "CASE-003"
+    descricao: "Contrato B2C (relação de consumo)"
+    contexto:
+      setor: "Varejo"
+      jurisdicao: "Brasil"
+      relacao: "B2C"
+      criticidade: "medio"
+    input:
+      tipo: "Termo de uso de aplicativo"
+      paginas: 12
+      cláusulas_problemáticas:
+        - "Cláusula de eleição de foro contra consumidor"
+        - "Limitação de responsabilidade abusiva"
+    criterios_aceitacao:
+      - "Identifica cláusulas abusivas sob CDC"
+      - "Cita inversão do ônus da prova"
+      - "Aponta foro do consumidor como direito irrenunciável"
+
+  - id: "CASE-004"
+    descricao: "Contrato com estatal (Lei 13.303/2016)"
+    contexto:
+      setor: "Energia"
+      jurisdicao: "Brasil"
+      relacao: "Estatal"
+      criticidade: "alto"
+    input:
+      tipo: "Contrato de fornecimento para estatal"
+      paginas: 30
+    criterios_aceitacao:
+      - "Cita Lei das Estatais (13.303/16)"
+      - "Aponta regras específicas (governança, publicidade)"
+
+  - id: "CASE-005"
+    descricao: "Contrato setor financeiro (BACEN)"
+    contexto:
+      setor: "Fintech"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "alto"
+    input:
+      tipo: "Contrato de cloud para instituição financeira"
+      paginas: 40
+    criterios_aceitacao:
+      - "Cita Resolução BACEN aplicável"
+      - "Aponta requisitos de soberania de dados"
+      - "Aponta requisitos de auditoria"
+
+  - id: "CASE-006"
+    descricao: "Contrato setor saúde (ANS, LGPD reforçado)"
+    contexto:
+      setor: "Saúde"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "alto"
+    input:
+      tipo: "Contrato de operação com hospital"
+      paginas: 25
+    criterios_aceitacao:
+      - "Trata dados de saúde como sensíveis (LGPD Art. 11)"
+      - "Cita ANS quando aplicável"
+      - "Sinaliza CFM Resolução 2.314/2022 (telemedicina) se relevante"
+
+  - id: "CASE-007"
+    descricao: "Contrato de M&A (acordo de não-concorrência)"
+    contexto:
+      setor: "Tecnologia"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "alto"
+    input:
+      tipo: "Acordo de M&A com cláusulas de não-concorrência"
+      paginas: 50
+    criterios_aceitacao:
+      - "Avalia razoabilidade da não-concorrência"
+      - "Avalia escopo geográfico e temporal"
+
+  - id: "CASE-008"
+    descricao: "Contrato simples sem problemas"
+    contexto:
+      setor: "Consultoria"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "baixo"
+    input:
+      tipo: "Contrato de consultoria padrão"
+      paginas: 5
+    criterios_aceitacao:
+      - "Identifica como baixo risco"
+      - "Não inventa problemas onde não há"
+      - "Síntese curta e direta"
+
+  - id: "CASE-009"
+    descricao: "Contrato multi-jurisdição"
+    contexto:
+      setor: "Tecnologia"
+      jurisdicao: "Brasil + Europa"
+      relacao: "B2B"
+      criticidade: "alto"
+    input:
+      tipo: "Contrato global com cliente europeu"
+      paginas: 35
+    criterios_aceitacao:
+      - "Aponta aplicabilidade LGPD + GDPR"
+      - "Sinaliza necessidade análise EU AI Act se aplicável"
+
+  - id: "CASE-010"
+    descricao: "Contrato com IA generativa envolvida"
+    contexto:
+      setor: "SaaS"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "alto"
+    input:
+      tipo: "Contrato de uso de plataforma de IA"
+      paginas: 20
+    criterios_aceitacao:
+      - "Aponta cláusulas de propriedade intelectual de outputs"
+      - "Aponta cláusulas de uso de dados para treinamento"
+      - "Sinaliza Marco Civil e LGPD"
+
+  - id: "CASE-011"
+    descricao: "Contrato com cláusula de IP problemática"
+    contexto:
+      setor: "Indústria"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "medio"
+    input:
+      tipo: "Contrato de P&D"
+      paginas: 15
+    criterios_aceitacao:
+      - "Identifica risco IP"
+      - "Recomenda redação clara de titularidade"
+
+  - id: "CASE-012"
+    descricao: "Contrato extremamente curto (1 página)"
+    contexto:
+      setor: "Varejo"
+      jurisdicao: "Brasil"
+      relacao: "B2B"
+      criticidade: "baixo"
+    input:
+      tipo: "Termo de adesão"
+      paginas: 1
+    criterios_aceitacao:
+      - "Não infla análise artificialmente"
+      - "Sinaliza eventual insuficiência de proteções"
+
+# Como rodar evals
+
+# Para cada caso:
+# 1. Submeter input ao prompt
+# 2. Capturar output
+# 3. Validar cada critério de aceitação (pass/fail)
+# 4. Score = passes / total_critérios
+# 5. Threshold de produção: score médio ≥ 85% no golden set completo
+
+# Repositório-irmão tem eval_runner.py executável:
+# github.com/falercia/inteligencia-aumentada-recursos/evals/
+
+# Capítulo 34 do livro detalha o processo completo de evals.
