@@ -11,6 +11,8 @@ A obra *Deep Claude* opera sob o princípio editorial da **Camada Dupla**: o liv
 
 Sem Apêndice Vivo, o livro técnico fica obsoleto em meses. Com cadência mensal cumprida, a obra permanece calibrada por anos.
 
+> **Fonte única da série.** Este Apêndice Vivo é a **camada de números cross-vendor de toda a série** (Claude, GPT, Gemini e open-source). O livro *Inteligência Aumentada · Os Invariantes* — que ensina o método vendor-neutral de ler esses números — aponta para cá através do seu repositório companion ([`inteligencia-aumentada-recursos` → `apendice-vivo`](https://github.com/falercia/inteligencia-aumentada-recursos/tree/main/apendice-vivo)). Mantém-se em **um só lugar** para que a cadência mensal nunca se fragmente em dois datasets.
+
 ---
 
 ## Estrutura
