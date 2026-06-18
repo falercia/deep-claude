@@ -1,0 +1,5 @@
+# Dependências do harness de eval — Deep Claude
+# Instalar com: pip install -r evals/requirements.txt
+
+anthropic>=0.40.0
+pyyaml>=6.0

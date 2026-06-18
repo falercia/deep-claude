@@ -24,6 +24,7 @@ Sem Apêndice Vivo, o livro técnico fica obsoleto em meses. Com cadência mensa
 | [`BENCHMARKS.md`](./BENCHMARKS.md) | SWE-bench, MMLU-Pro, GPQA, HumanEval+ e similares |
 | [`JANELAS-SLA.md`](./JANELAS-SLA.md) | Janelas de contexto, cotas por plano, SLAs declarados |
 | [`FONTES.md`](./FONTES.md) | Fontes primárias linkadas para rastreabilidade |
+| [`REGULACAO.md`](./REGULACAO.md) | Status regulatório de IA: LGPD, ANPD, PL 2338/2023, normas setoriais BR; EU AI Act, NIST AI RMF, ISO/IEC 42001 |
 | [`CHANGELOG-APENDICE.md`](./CHANGELOG-APENDICE.md) | Histórico mensal de atualizações e errata |
 | [`2026-MM-snapshot.md`](./) | Snapshot consolidado do mês corrente |
 
@@ -62,6 +63,7 @@ Mudanças relevantes fora da janela mensal (lançamento de modelo, mudança de p
 ## Capítulos relacionados
 
 - **Capítulo 45 — Apêndice Vivo** (mecanismo editorial)
+- **Capítulo 46 — Regulação e Compliance de IA** (usa `REGULACAO.md` como referência viva)
 - **Capítulo 4 — Modelos Claude** (escolha entre Opus, Sonnet, Haiku)
 - **Capítulo 5 — Quando usar cada tier** (matriz de decisão)
 - **Capítulo 6 — Refresher Tokens** (mecânica de cobrança)

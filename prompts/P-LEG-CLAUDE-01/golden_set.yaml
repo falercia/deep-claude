@@ -19,9 +19,44 @@ casos:
       tipo: "Contrato de prestação de serviços de TI"
       paginas: 8
       valor: "R$ 240.000/ano"
-      cláusulas_problemáticas:
+      clausulas_problematicas:
         - "SLA fraco (24h de indisponibilidade)"
         - "Foro em São Paulo capital quando contratante está em outro estado"
+      # EXEMPLO ILUSTRATIVO — texto fictício criado para o harness.
+      # Não representa contrato real; use apenas para demonstração do eval.
+      texto_exemplo: |
+        CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE TECNOLOGIA DA INFORMAÇÃO
+        [EXEMPLO ILUSTRATIVO — FICTÍCIO]
+
+        Partes:
+          Contratante: Empresa Alfa Ltda., CNPJ 00.000.000/0001-00, Belo Horizonte/MG
+          Contratada:  TechSolve Sistemas S.A., CNPJ 11.111.111/0001-11, São Paulo/SP
+
+        Objeto: Fornecimento e suporte de plataforma SaaS de gestão de projetos.
+        Valor: R$ 240.000,00 anuais, pagos em parcelas mensais de R$ 20.000,00.
+        Prazo: 24 meses, renováveis automaticamente.
+
+        Cláusula 7.1 — Disponibilidade do Serviço:
+        "A Contratada compromete-se a manter o serviço disponível, admitindo-se
+        indisponibilidade de até 24 (vinte e quatro) horas consecutivas em caso de
+        manutenção programada ou situações de força maior, sem caracterizar
+        inadimplemento contratual."
+
+        Cláusula 14.3 — Eleição de Foro:
+        "As partes elegem o foro da Comarca de São Paulo/SP, com exclusão de
+        qualquer outro, por mais privilegiado que seja, para dirimir quaisquer
+        controvérsias decorrentes deste contrato."
+    output_esperado:
+      # Resumo do output esperado — referência para o juiz humano, não para o LLM.
+      sintese: "Contrato de TI de 24 meses, R$ 240k/ano, risco geral médio. SLA de 24h é inadequado para sistema de gestão. Foro exclusivo em SP prejudica contratante mineiro. Recomendar renegociação antes de assinar."
+      clausulas_criticas:
+        - id: "7.1"
+          risco: "ALTO"
+          motivo: "24h de indisponibilidade admitida é excessivo para SaaS produtivo"
+        - id: "14.3"
+          risco: "MÉDIO"
+          motivo: "Foro unilateral em SP gera custo e inconveniente para contratante em MG"
+      disclaimer_presente: true
     criterios_aceitacao:
       - "Síntese executiva tem 3-5 frases"
       - "Identifica SLA como cláusula crítica risco ALTO"
@@ -40,9 +75,40 @@ casos:
       tipo: "Contrato de processamento de dados de clientes"
       paginas: 15
       pii_envolvido: true
-      cláusulas_problemáticas:
+      clausulas_problematicas:
         - "Sem base legal LGPD declarada"
         - "Transferência internacional sem garantia"
+      # EXEMPLO ILUSTRATIVO — texto fictício criado para o harness.
+      # Não representa contrato real nem dado pessoal de ninguém real.
+      texto_exemplo: |
+        CONTRATO DE SERVIÇOS DE MARKETING DIGITAL COM PROCESSAMENTO DE DADOS
+        [EXEMPLO ILUSTRATIVO — FICTÍCIO]
+
+        Partes:
+          Controladora: Varejo Online S.A., CNPJ 22.222.222/0001-22, Rio de Janeiro/RJ
+          Operadora:    DataMkt Soluções Ltda., CNPJ 33.333.333/0001-33, São Paulo/SP
+
+        Objeto: A Operadora processará dados de clientes da Controladora para fins de
+        segmentação e campanhas de e-mail marketing.
+
+        Cláusula 5 — Dados Pessoais:
+        "A Operadora terá acesso a cadastro de clientes, incluindo nome, e-mail,
+        histórico de compras e preferências de consumo. Os dados serão utilizados
+        exclusivamente para as finalidades descritas neste contrato."
+        [Nota: nenhuma base legal do Art. 7 LGPD é mencionada explicitamente.]
+
+        Cláusula 9 — Processamento em Infraestrutura Internacional:
+        "A Operadora poderá utilizar servidores localizados nos Estados Unidos e
+        União Europeia para processamento e armazenamento dos dados."
+        [Nota: ausência de cláusula-padrão de proteção para transferência internacional.]
+    output_esperado:
+      # Resumo do output esperado — referência para validação humana.
+      secao_lgpd_preenchida: true
+      pontos_criticos:
+        - "Cláusula 5 não declara base legal (Art. 7 LGPD) — execução de contrato seria a mais provável, mas deve ser declarada"
+        - "Cláusula 9 permite transferência internacional sem garantias equivalentes (Art. 33 LGPD)"
+      recomendacao: "Incluir aditivo com base legal explícita e cláusula-padrão de proteção para transferência internacional"
+      disclaimer_presente: true
     criterios_aceitacao:
       - "Seção 4 (LGPD) preenchida com análise específica"
       - "Identifica ausência de base legal Art. 7"
