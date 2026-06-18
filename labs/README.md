@@ -34,6 +34,7 @@ labs/cap-XX-nome-do-lab/
 | Cap 9 — Claude Code | `cap-09-claude-code-tour` | Planejado |
 | Cap 21 — API + SDKs | `cap-21-api-primeira-chamada` | Planejado |
 | Cap 30 — Claude Skills | `cap-30-construir-skill-do-zero` | Planejado |
+| Cap 34 — Evaluations | `cap-34-eval-runner-completo` | Pronto |
 
 ---
 
@@ -56,7 +57,6 @@ labs/cap-XX-nome-do-lab/
 |---|---|
 | Cap 32 — Computer Use | `cap-32-computer-use-pratico` |
 | Cap 33 — Vision | `cap-33-vision-multimodal` |
-| Cap 34 — Evaluations | `cap-34-eval-runner-completo` |
 | Cap 35 — LLMOps | `cap-35-observabilidade-end-to-end` |
 
 ---

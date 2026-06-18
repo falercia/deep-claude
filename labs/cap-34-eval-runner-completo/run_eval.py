@@ -3,8 +3,8 @@
 run_eval.py — Harness de eval executável para o repo Deep Claude.
 
 Uso básico:
-    python run_eval.py ../prompts/P-LEG-CLAUDE-01/golden_set.yaml
-    python run_eval.py ../prompts/P-LEG-CLAUDE-01/golden_set.yaml --dry-run
+    python run_eval.py ../../prompts/P-LEG-CLAUDE-01/golden_set.yaml
+    python run_eval.py ../../prompts/P-LEG-CLAUDE-01/golden_set.yaml --dry-run
 
 Lógica:
     1. Lê o golden_set.yaml e o prompt.xml da mesma pasta.
@@ -411,13 +411,13 @@ def main():
         epilog="""
 Exemplos:
   # Dry-run (sem API, valida estrutura e imprime plano):
-  python evals/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml --dry-run
+  python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml --dry-run
 
   # Execucao real (exige ANTHROPIC_API_KEY):
-  python evals/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml
+  python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml
 
   # Modelo customizado via variavel de ambiente:
-  EVAL_MODEL_ALVO=claude-opus-4-20260401 python evals/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml
+  EVAL_MODEL_ALVO=claude-opus-4-20260401 python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml
 
 Referencia: Cap 34 do livro Deep Claude (evals offline + LLM-as-judge).
 """,

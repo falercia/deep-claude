@@ -45,16 +45,16 @@ Valida o YAML, monta todos os prompts e imprime o plano de execução sem chamar
 Útil para CI, revisão editorial, e verificação de estrutura:
 
 ```bash
-python evals/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml --dry-run
-python evals/run_eval.py prompts/P-FIN-CLAUDE-01/golden_set.yaml --dry-run
-python evals/run_eval.py prompts/P-MED-CLAUDE-01/golden_set.yaml --dry-run
+python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml --dry-run
+python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-FIN-CLAUDE-01/golden_set.yaml --dry-run
+python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-MED-CLAUDE-01/golden_set.yaml --dry-run
 ```
 
 ### Execução real
 
 ```bash
-python evals/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml
-python evals/run_eval.py prompts/P-FIN-CLAUDE-01/golden_set.yaml
+python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-LEG-CLAUDE-01/golden_set.yaml
+python labs/cap-34-eval-runner-completo/run_eval.py prompts/P-FIN-CLAUDE-01/golden_set.yaml
 ```
 
 O runner imprime uma tabela de PASS/FAIL por caso e a taxa global de cobertura ao final.
