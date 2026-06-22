@@ -114,10 +114,6 @@ Práticas complementares de FinOps para LLM:
 
 ---
 
-> 🎯 **DA CADEIRA DO CTO**
->
-> Nunca apresentei ROI de IA em slide sem ter o denominador documentado. Não porque seja mais honesto que os outros — mas porque aprendi que o slide que não sobrevive à pergunta do CFO na reunião seguinte custa mais do que o projeto inteiro. O que eu meço de verdade: custo por resultado entregue, com baseline documentado antes do deploy. Não "horas estimadas economizadas" — horas medidas em processo específico, com amostra real, antes e depois. O que eu nunca faço: somar "economia estimada" de dez times sem medir nenhuma. Esse número só serve para a apresentação ao board — não serve para decidir se vale escalar. A regra que uso: se o denominador do ROI não existe antes do piloto, o ROI calculado depois é ficção com aparência de análise. Defendo investimento em IA sem problema — mas só com denominador em mãos.
-
 ## 44.4 — MÉTRICAS HONESTAS VERSUS MÉTRICAS DE VAIDADE
 
 Toda plataforma nova produz o mesmo fenômeno: métricas abundantes, fáceis de medir, fáceis de apresentar, e sem correlação com valor criado.

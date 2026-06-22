@@ -106,9 +106,6 @@ A falha mais comum não é não usar Claude Code — é usar com autonomia alta 
 | Domínio regulado | Média — Code executa, humano revisa e valida conformidade |
 | Objetivo ainda exploratório | Zero — defina primeiro, delegue depois |
 
-> 🎯 **DA CADEIRA DO CTO**
-> Antes de soltar um agente num repositório, exijo três condições não-negociáveis: cobertura de testes que me permita detectar regressão, um CLAUDE.md que documente restrições arquiteturais explícitas (o que não pode ser tocado, quais padrões são mandatórios, quais dependências são intocáveis), e um ambiente de staging onde o agente executa antes de qualquer merge para main. Sem essas três condições, a autonomia começa baixa e cresce conforme eu ganho evidência — não conforme o agente impressiona. O erro que vejo repetir em equipes que adotam cedo demais é confundir velocidade de entrega com qualidade de entrega. Agente que entrega rápido num repositório sem testes e sem instruções de arquitetura entrega rápido na direção errada. A minha régua: autonomia proporcional à minha capacidade de auditar o que foi feito — não à minha confiança de que vai dar certo.
-
 > ⚠️ **POSTMORTEM — O agente que refatorou o que não devia**
 > *O que tentaram:* um time de engenharia instruiu Claude Code a migrar componentes de uma biblioteca de UI para a versão nova. O pedido era amplo: "migre todos os componentes que usam a API antiga". O agente recebeu autonomia alta — sem Modo Plan, sem batches, sem revisão prévia.
 > *O que deu errado:* o agente identificou corretamente os componentes-alvo mas, ao rastrear dependências transitivas, também tocou um módulo de autenticação que usava uma abstração da mesma biblioteca por razão diferente. A refatoração silenciosa quebrou um fluxo de login em produção que a suíte de testes não cobria. O incidente só foi detectado dois dias depois, por relato de usuário.

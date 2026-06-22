@@ -133,12 +133,6 @@ Pauta tipo: revisão de Connectors ou Skills aguardando aprovação, análise de
 
 Sinal de comitê disfuncional: aprovar tudo sem análise (governança de papel) ou nunca aprovar nada (governança que mata adoção).
 
-> 🎯 **DA CADEIRA DO CTO**
->
-> Accountability de IA em escala só funciona se for desconfortável para alguém. Quando monto a governança de IA numa organização, a primeira pergunta que faço não é "temos política?" — é "tem nome de pessoa no RACI que vai perder o sono se algo der errado?" Se a resposta for "o time de dados", acabei: governança de fachada confirmada. O erro que evito a todo custo é o RACI que nomeia cargos genéricos. Cargo não atende telefone às 23h — pessoa atende. Cada decisão da tabela 42.3.5 tem que ter um nome de alguém que pode ser demitido se errar. Esse desconforto é o que torna o controle real.
->
-> O aparte de M&A: quando faço due diligence de uma empresa-alvo, IA virou linha obrigatória da avaliação. O que eu olho não é o roadmap de produto — é se há RACI assinado, se o comitê tem ata, se os incidentes estão registrados, e se a AUP foi treinada ou apenas publicada. Uma empresa com IA em produção sem governança documentada é passivo oculto. O preço da aquisição precisa refletir o custo de regularizar o que está exposto — ou o negócio não fecha. Maturidade de governança de IA de uma empresa-alvo hoje equivale ao que era a maturidade de segurança de TI há dez anos: quem ignorou, pagou caro depois.
-
 > ⚠️ **POSTMORTEM — GOVERNANÇA NO POWERPOINT, NÃO NA OPERAÇÃO**
 >
 > *O que tentaram:* Uma empresa de serviços financeiros publicou uma política de IA de 12 páginas, criou um comitê com reunião trimestral e apresentou o framework ao conselho como evidência de maturidade. Três Connectors foram ativados em paralelo por times distintos sem passar pelo comitê. O RACI existia em documento, mas nenhum dos "responsáveis" listados sabia que o papel era deles.

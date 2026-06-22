@@ -121,10 +121,6 @@ A Lei Geral de Proteção de Dados (Lei 13.709/2018) não menciona inteligência
 
 ---
 
-> 🎯 **DA CADEIRA DO CTO**
->
-> A postura de segurança e LGPD que adoto começa de um princípio simples: sou controlador, não vítima do fornecedor. Quando algo vaza, a pergunta do regulador não vai ser "o fornecedor tinha SOC 2?" — vai ser "o que você colocou no sistema e com qual base legal?" Essa pergunta é minha, sempre. Na prática, isso significa que antes de qualquer deploy com dado de cliente, eu exijo três coisas: DPA assinado, classificação de dado documentada por fluxo, e RACI com nome de DPO no loop de incidente. Não deixo ambiguidade sobre residência de dado: se o contrato não especifica onde o dado fica processado, o contrato está incompleto. Para setor regulado — financeiro, saúde, infraestrutura — eu não aprovo nenhum rollout sem ata do comitê de privacidade confirmando a base legal. O erro caro que evito: confiar que a certificação do fornecedor transfere a minha responsabilidade. Não transfere. O fornecedor entrega o cofre seguro; o que eu coloco nele e com qual direito legal é minha decisão — e minha exposição.
-
 ### 45.3.5 — Riscos de segurança específicos de IA: prompt injection e exfiltração
 
 Além dos riscos tradicionais de segurança de dados (interceptação, acesso não autorizado, vazamento), sistemas baseados em LLMs introduzem vetores de ataque que não existem em software convencional. Dois são os mais relevantes para adoção corporativa.

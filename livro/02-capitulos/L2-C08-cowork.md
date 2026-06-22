@@ -51,9 +51,6 @@ Os **conectores e MCP** estendem o alcance de Cowork a sistemas externos — e-m
 
 A lição estrutural: cada superfície que você habilita amplia o que Cowork pode fazer por você e, na exata mesma medida, o que pode fazer de errado. Conceder acesso é uma decisão de proporcionalidade, não um passo de configuração.
 
-> 🎯 **DA CADEIRA DO CTO**
-> Quando defino o escopo de acesso de um agente que vai tocar arquivos reais, a pergunta que faço não é "o que ele precisa conseguir fazer". A pergunta é "o que acontece se ele fizer exatamente o que eu pedi, mas eu tiver subestimado o efeito colateral?". Esse enquadramento muda a decisão. Na prática, nunca autorizo acesso à raiz de documentos, à pasta do projeto inteiro ou a conectores de e-mail em primeira sessão — começo com a subpasta mínima e expando conforme confiança cresce e os freios estão sendo usados. O que não delego a agente que toca arquivos reais: acesso a sistemas compartilhados sem revisão humana no disparo, e qualquer coisa que toque dados de cliente ou comunicação externa. Não porque a ferramenta não consiga — porque governança indelegável não é limitação técnica, é critério. Modelos passam. O critério de quem decide o escopo fica.
-
 > ⚠️ **POSTMORTEM — A pasta-raiz que vazou**
 > *O que tentaram:* uma equipe de operações montou Cowork apontando para a pasta raiz de documentos da empresa — "para não precisar trocar de pasta a cada tarefa". O objetivo era organizar e consolidar relatórios de Q4.
 > *O que deu errado:* o agente, seguindo instrução legítima de consolidação, leu, moveu e renomeou arquivos de outras pastas que estavam na raiz — incluindo contratos em rascunho não-finalizados e um diretório de RH que aparecia na hierarquia. Nenhum dado foi enviado para fora, mas a reorganização atingiu arquivos sensíveis fora do escopo pretendido. Desfazer levou mais tempo do que o trabalho original teria levado de forma manual.

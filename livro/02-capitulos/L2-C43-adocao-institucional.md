@@ -113,12 +113,6 @@ Projects bem configurados (Cap. 13) são a memória de contexto organizacional. 
 
 Resistência à adoção de IA não é irracional. É a resposta racional de quem vê uma tecnologia chegar sem clareza sobre o que significa para seu papel, sem fluência para usá-la bem, e sem garantia de que o erro de aprendizado não terá custo para a carreira.
 
-> 🎯 **DA CADEIRA DO CTO**
->
-> Liderar adoção sem teatro significa ter uma resposta honesta para a pergunta "o que mudou para você esta semana por causa da IA?" — e a resposta não pode ser "implantamos a ferramenta". Toda adoção que já acompanhei que virou teatro tinha o mesmo DNA: liderança comunicando métricas de licença como se fossem métricas de resultado, piloto eterno sem critério de promoção, e Champions que apresentam em reunião mas não conseguem nomear o que o time mudou de verdade. O que funciona: eu escolho uma área, defino uma métrica de processo específica — tempo de ciclo de um contrato, número de rodadas de revisão de um relatório — meço antes, e exijo o número depois de 60 dias. Se o número não moveu, o caso de uso está errado, não a tecnologia. Adoção de verdade não precisa de apresentação — aparece na métrica.
->
-> O aparte de turnaround: quando preciso virar uma área travada, a primeira coisa que faço com Claude não é pedir ao time para "usar IA". Eu mesmo mapejo onde o gargalo está — onde o tempo some, onde o retrabalho se acumula — e conecto Claude diretamente a esse ponto. Se o gargalo é revisão de documentos antes de aprovação, monto um fluxo com Claude, meço o antes, e apresento o depois em duas semanas. Vitória concreta, visível, sem encenação. O time de turnaround adota o que resolve o problema real — não o que a liderança mandou adotar.
-
 Dados do contexto brasileiro apontam para o fator humano como gargalo principal: mais da metade das empresas cita falta de expertise interna; cerca de 22% relatam resistência de funcionários, frequentemente resultado de iniciativas mal comunicadas (Falconi/TI Inside, jul. 2025). Números específicos ficam no Apêndice J.
 
 Resistência é gerenciável quando comunicação precede ação, a narrativa é de augmentação — não substituição — e o ambiente é seguro para experimentar. Torna-se obstáculo estrutural quando a ferramenta chega antes da narrativa e o erro de aprendizado tem custo visível.
