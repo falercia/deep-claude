@@ -1,0 +1,166 @@
+<svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule42a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="sh42a" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrInk42a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="438" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="38" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 42.1 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="68" font-size="23" font-weight="700" fill="#1B2A33">O modelo de adoção em quatro ondas</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="86" width="86" height="3.5" rx="1.75" fill="url(#goldRule42a)"/>
+
+  <!-- WAVE CARDS: 4 cards, horizontal pipeline -->
+  <!-- Card width ~182, gap ~14, arrow ~20 -->
+  <!-- Card 1: x=44, Card 2: x=246, Card 3: x=448, Card 4: x=650 -->
+  <!-- Cards height: from y=108 to y=370 (262px) -->
+
+  <!-- WAVE 1 - Piloto (neutro/muted) -->
+  <rect x="44" y="108" width="182" height="262" rx="12" fill="#F1ECE0" stroke="#CFC8B6" stroke-width="1.5" filter="url(#sh42a)"/>
+  <!-- Badge circle -->
+  <circle cx="85" cy="136" r="18" fill="#D8D0BD" stroke="#CFC8B6" stroke-width="1.5"/>
+  <text x="85" y="142" font-size="15" font-weight="700" fill="#44525C" text-anchor="middle">1</text>
+  <!-- Wave name -->
+  <text x="135" y="130" font-size="15" font-weight="700" fill="#1B2A33">Piloto</text>
+  <!-- Duration -->
+  <rect x="108" y="136" width="96" height="20" rx="8" fill="#D8D0BD"/>
+  <text x="156" y="150" font-size="11" fill="#44525C" text-anchor="middle" font-weight="600">2–6 semanas</text>
+  <!-- Divider -->
+  <line x1="62" y1="166" x2="208" y2="166" stroke="#CFC8B6" stroke-width="1"/>
+  <!-- Bullets -->
+  <circle cx="60" cy="183" r="3.5" fill="#44525C"/>
+  <text x="72" y="187" font-size="12" fill="#44525C">Selecionar</text>
+  <text x="72" y="202" font-size="12" fill="#44525C">3–8 early</text>
+  <text x="72" y="216" font-size="12" fill="#44525C">adopters</text>
+  <circle cx="60" cy="230" r="3.5" fill="#44525C"/>
+  <text x="72" y="234" font-size="12" fill="#44525C">Definir casos de</text>
+  <text x="72" y="248" font-size="12" fill="#44525C">uso específicos</text>
+  <circle cx="60" cy="262" r="3.5" fill="#44525C"/>
+  <text x="72" y="266" font-size="12" fill="#44525C">Capturar métricas</text>
+  <text x="72" y="280" font-size="12" fill="#44525C">de referência</text>
+  <!-- Promotion criterion band -->
+  <rect x="44" y="316" width="182" height="54" rx="0 0 12 12" fill="#D8D0BD"/>
+  <rect x="44" y="316" width="182" height="54" rx="12" fill="#D8D0BD"/>
+  <text x="135" y="334" font-size="11" font-weight="700" fill="#44525C" text-anchor="middle">CRITÉRIO DE PROMOÇÃO</text>
+  <text x="135" y="350" font-size="11" fill="#44525C" text-anchor="middle">ROI validado +</text>
+  <text x="135" y="364" font-size="11" fill="#44525C" text-anchor="middle">aprendizados documentados</text>
+
+  <!-- Arrow 1 -->
+  <line x1="234" y1="239" x2="238" y2="239" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk42a)"/>
+  <text x="237" y="222" font-size="10" fill="#7C7768" text-anchor="middle" font-style="italic">critério de</text>
+  <text x="237" y="234" font-size="10" fill="#7C7768" text-anchor="middle" font-style="italic">promoção</text>
+
+  <!-- WAVE 2 - Champions (teal) -->
+  <rect x="246" y="108" width="182" height="262" rx="12" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5" filter="url(#sh42a)"/>
+  <!-- Badge circle -->
+  <circle cx="287" cy="136" r="18" fill="#2E7D8A" stroke="#2E7D8A" stroke-width="1.5"/>
+  <text x="287" y="142" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <!-- Wave name -->
+  <text x="337" y="130" font-size="15" font-weight="700" fill="#1B2A33">Champions</text>
+  <!-- Duration -->
+  <rect x="310" y="136" width="96" height="20" rx="8" fill="#CFE3E6"/>
+  <text x="358" y="150" font-size="11" fill="#2E7D8A" text-anchor="middle" font-weight="600">4–8 semanas</text>
+  <!-- Divider -->
+  <line x1="264" y1="166" x2="410" y2="166" stroke="#CFE3E6" stroke-width="1"/>
+  <!-- Bullets -->
+  <circle cx="262" cy="183" r="3.5" fill="#2E7D8A"/>
+  <text x="274" y="187" font-size="12" fill="#44525C">Formar grupo</text>
+  <text x="274" y="202" font-size="12" fill="#44525C">de referência</text>
+  <circle cx="262" cy="216" r="3.5" fill="#2E7D8A"/>
+  <text x="274" y="220" font-size="12" fill="#44525C">Documentar</text>
+  <text x="274" y="234" font-size="12" fill="#44525C">playbooks</text>
+  <circle cx="262" cy="248" r="3.5" fill="#2E7D8A"/>
+  <text x="274" y="252" font-size="12" fill="#44525C">Suporte peer-to-</text>
+  <text x="274" y="266" font-size="12" fill="#44525C">peer estruturado</text>
+  <!-- Promotion criterion band -->
+  <rect x="246" y="316" width="182" height="54" rx="12" fill="#CFE3E6"/>
+  <text x="337" y="334" font-size="11" font-weight="700" fill="#2E7D8A" text-anchor="middle">CRITÉRIO DE PROMOÇÃO</text>
+  <text x="337" y="350" font-size="11" fill="#2E7D8A" text-anchor="middle">Playbooks prontos +</text>
+  <text x="337" y="364" font-size="11" fill="#2E7D8A" text-anchor="middle">champions capacitados</text>
+
+  <!-- Arrow 2 -->
+  <line x1="436" y1="239" x2="440" y2="239" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk42a)"/>
+  <text x="439" y="222" font-size="10" fill="#7C7768" text-anchor="middle" font-style="italic">critério de</text>
+  <text x="439" y="234" font-size="10" fill="#7C7768" text-anchor="middle" font-style="italic">promoção</text>
+
+  <!-- WAVE 3 - Expansão controlada (teal darker) -->
+  <rect x="448" y="108" width="182" height="262" rx="12" fill="#EFF6F7" stroke="#1B5E68" stroke-width="1.5" filter="url(#sh42a)"/>
+  <!-- Badge circle -->
+  <circle cx="489" cy="136" r="18" fill="#1B5E68" stroke="#1B5E68" stroke-width="1.5"/>
+  <text x="489" y="142" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <!-- Wave name -->
+  <text x="539" y="124" font-size="14" font-weight="700" fill="#1B2A33">Expansão</text>
+  <text x="539" y="142" font-size="14" font-weight="700" fill="#1B2A33">controlada</text>
+  <!-- Duration -->
+  <rect x="448" y="156" width="182" height="20" rx="0" fill="transparent"/>
+  <rect x="510" y="154" width="96" height="20" rx="8" fill="#1B5E68"/>
+  <text x="558" y="168" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">8–12 semanas</text>
+  <!-- Divider -->
+  <line x1="466" y1="184" x2="612" y2="184" stroke="#CFE3E6" stroke-width="1"/>
+  <!-- Bullets -->
+  <circle cx="464" cy="200" r="3.5" fill="#1B5E68"/>
+  <text x="476" y="204" font-size="12" fill="#44525C">Escalar para</text>
+  <text x="476" y="218" font-size="12" fill="#44525C">equipes alvo</text>
+  <circle cx="464" cy="232" r="3.5" fill="#1B5E68"/>
+  <text x="476" y="236" font-size="12" fill="#44525C">Monitorar adoção</text>
+  <text x="476" y="250" font-size="12" fill="#44525C">por cohort</text>
+  <circle cx="464" cy="264" r="3.5" fill="#1B5E68"/>
+  <text x="476" y="268" font-size="12" fill="#44525C">Ajustar com</text>
+  <text x="476" y="282" font-size="12" fill="#44525C">feedback real</text>
+  <!-- Promotion criterion band -->
+  <rect x="448" y="316" width="182" height="54" rx="12" fill="#1B5E68"/>
+  <text x="539" y="334" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">CRITÉRIO DE PROMOÇÃO</text>
+  <text x="539" y="350" font-size="11" fill="#CFE3E6" text-anchor="middle">Adoção estável +</text>
+  <text x="539" y="364" font-size="11" fill="#CFE3E6" text-anchor="middle">governança operando</text>
+
+  <!-- Arrow 3 -->
+  <line x1="638" y1="239" x2="642" y2="239" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk42a)"/>
+  <text x="641" y="222" font-size="10" fill="#7C7768" text-anchor="middle" font-style="italic">critério de</text>
+  <text x="641" y="234" font-size="10" fill="#7C7768" text-anchor="middle" font-style="italic">promoção</text>
+
+  <!-- WAVE 4 - Institucionalização (gold/dark) -->
+  <rect x="650" y="108" width="186" height="262" rx="12" fill="#FBF6EA" stroke="#C2912C" stroke-width="1.5" filter="url(#sh42a)"/>
+  <!-- Badge circle -->
+  <circle cx="693" cy="136" r="18" fill="#C2912C" stroke="#C2912C" stroke-width="1.5"/>
+  <text x="693" y="142" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <!-- Wave name -->
+  <text x="743" y="124" font-size="13.5" font-weight="700" fill="#1B2A33">Instituciona-</text>
+  <text x="743" y="142" font-size="13.5" font-weight="700" fill="#1B2A33">lização</text>
+  <!-- Duration -->
+  <rect x="712" y="154" width="96" height="20" rx="8" fill="#EADfBF"/>
+  <text x="760" y="168" font-size="11" fill="#C2912C" text-anchor="middle" font-weight="600">ongoing</text>
+  <!-- Divider -->
+  <line x1="668" y1="184" x2="818" y2="184" stroke="#E2C879" stroke-width="1"/>
+  <!-- Bullets -->
+  <circle cx="666" cy="200" r="3.5" fill="#C2912C"/>
+  <text x="678" y="204" font-size="12" fill="#44525C">Integrar em</text>
+  <text x="678" y="218" font-size="12" fill="#44525C">onboarding</text>
+  <circle cx="666" cy="232" r="3.5" fill="#C2912C"/>
+  <text x="678" y="236" font-size="12" fill="#44525C">Medir impacto</text>
+  <text x="678" y="250" font-size="12" fill="#44525C">organizacional</text>
+  <circle cx="666" cy="264" r="3.5" fill="#C2912C"/>
+  <text x="678" y="268" font-size="12" fill="#44525C">Governança</text>
+  <text x="678" y="282" font-size="12" fill="#44525C">contínua</text>
+  <!-- Promotion criterion band -->
+  <rect x="650" y="316" width="186" height="54" rx="12" fill="#C2912C"/>
+  <text x="743" y="334" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">ESTADO FINAL</text>
+  <text x="743" y="350" font-size="11" fill="#FBF6EA" text-anchor="middle">IA integrada à</text>
+  <text x="743" y="364" font-size="11" fill="#FBF6EA" text-anchor="middle">cultura operacional</text>
+
+  <!-- Caption -->
+  <text x="44" y="410" font-size="12.5" fill="#7C7768" font-style="italic">"Sem critério de promoção, a onda estagna. Sem sequência, escala amplifica o problema — não o valor."</text>
+</svg>

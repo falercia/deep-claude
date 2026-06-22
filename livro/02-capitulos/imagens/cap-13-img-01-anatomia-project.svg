@@ -1,0 +1,89 @@
+<svg viewBox="0 0 880 510" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh13a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule13a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk13a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="508" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 13.1 · INVARIANTE 3 — CAMADA DUPLA</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Anatomia de um Project</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule13a)"/>
+
+  <!-- Three persistent layers: top -->
+  <!-- Knowledge Base -->
+  <g filter="url(#sh13a)">
+    <rect x="44" y="118" width="248" height="272" rx="13" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M44,131 a13,13 0 0 1 13,-13 h222 a13,13 0 0 1 13,13 v22 h-248 z" fill="#C2912C"/>
+  <text x="64" y="146" font-size="13.5" font-weight="700" fill="#FFFFFF">KNOWLEDGE BASE</text>
+  <text x="64" y="174" font-size="12" fill="#1B2A33">Arquivos indexados pelo Claude</text>
+  <text x="64" y="192" font-size="12" fill="#7C7768">PDFs, planilhas, docs, código</text>
+  <rect x="64" y="207" width="208" height="22" rx="6" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="76" y="222" font-size="11.5" fill="#1B2A33">relatorio-mercado-2025.pdf</text>
+  <rect x="64" y="237" width="208" height="22" rx="6" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="76" y="252" font-size="11.5" fill="#1B2A33">benchmarks-modelos.xlsx</text>
+  <rect x="64" y="267" width="208" height="22" rx="6" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="76" y="282" font-size="11.5" fill="#1B2A33">framework-analise.md</text>
+  <rect x="64" y="297" width="208" height="22" rx="6" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="76" y="312" font-size="11.5" fill="#1B2A33">entrevistas-cios.docx</text>
+  <text x="64" y="346" font-size="12" fill="#9A7A2E" font-weight="600">recuperação semântica</text>
+  <text x="64" y="364" font-size="11.5" fill="#7C7768">citação automática nas respostas</text>
+  <text x="64" y="380" font-size="11.5" fill="#7C7768">atualização manual periódica</text>
+
+  <!-- Custom Instructions -->
+  <g filter="url(#sh13a)">
+    <rect x="316" y="118" width="248" height="272" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M316,131 a13,13 0 0 1 13,-13 h222 a13,13 0 0 1 13,13 v22 h-248 z" fill="#2E7D8A"/>
+  <text x="336" y="146" font-size="13.5" font-weight="700" fill="#FFFFFF">CUSTOM INSTRUCTIONS</text>
+  <text x="336" y="174" font-size="12" fill="#1B2A33">System prompt persistente</text>
+  <text x="336" y="192" font-size="12" fill="#7C7768">aplicado a toda conversa do Project</text>
+  <rect x="336" y="207" width="208" height="128" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="350" y="228" font-size="11" fill="#1B2A33" font-style="italic">"Analista sênior de mercado</text>
+  <text x="350" y="246" font-size="11" fill="#1B2A33" font-style="italic">de IA no Brasil 2026.</text>
+  <text x="350" y="264" font-size="11" fill="#1B2A33" font-style="italic">Tom executivo, PT-BR.</text>
+  <text x="350" y="282" font-size="11" fill="#1B2A33" font-style="italic">Cite páginas da KB.</text>
+  <text x="350" y="300" font-size="11" fill="#1B2A33" font-style="italic">Máx. 300 palavras salvo</text>
+  <text x="350" y="318" font-size="11" fill="#1B2A33" font-style="italic">pedido de profundidade."</text>
+  <text x="336" y="358" font-size="12" fill="#256A75" font-weight="600">Invariante 2 — Extremidades</text>
+  <text x="336" y="376" font-size="11.5" fill="#7C7768">system prompt ocupa posição mais</text>
+  <text x="336" y="392" font-size="11.5" fill="#7C7768">forte do contexto — por design</text>
+
+  <!-- Project Tools -->
+  <g filter="url(#sh13a)">
+    <rect x="588" y="118" width="248" height="272" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M588,131 a13,13 0 0 1 13,-13 h222 a13,13 0 0 1 13,13 v22 h-248 z" fill="#44525C"/>
+  <text x="608" y="146" font-size="13.5" font-weight="700" fill="#FFFFFF">PROJECT TOOLS</text>
+  <text x="608" y="174" font-size="12" fill="#1B2A33">Capacidades habilitadas</text>
+  <text x="608" y="192" font-size="12" fill="#7C7768">configuradas por Project</text>
+  <rect x="608" y="207" width="208" height="22" rx="6" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="620" y="222" font-size="11.5" fill="#1B2A33">Busca web (opcional)</text>
+  <rect x="608" y="237" width="208" height="22" rx="6" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="620" y="252" font-size="11.5" fill="#1B2A33">MCP connectors específicos</text>
+  <rect x="608" y="267" width="208" height="22" rx="6" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="620" y="282" font-size="11.5" fill="#1B2A33">Skills criadas para o contexto</text>
+  <rect x="608" y="297" width="208" height="22" rx="6" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="620" y="312" font-size="11.5" fill="#1B2A33">Compartilhamento de equipe</text>
+  <text x="608" y="358" font-size="12" fill="#44525C" font-weight="600">cada Project, config própria</text>
+  <text x="608" y="376" font-size="11.5" fill="#7C7768">Camada Dupla: padrão durável</text>
+  <text x="608" y="392" font-size="11.5" fill="#7C7768">fica nas tools e na KB</text>
+
+  <!-- Conversations band -->
+  <g filter="url(#sh13a)">
+    <rect x="44" y="410" width="792" height="62" rx="13" fill="#1B2A33"/>
+  </g>
+  <text x="64" y="432" font-size="13.5" font-weight="700" fill="#C2912C">CONVERSAS — herdam automaticamente as três camadas acima</text>
+  <text x="64" y="450" font-size="12" fill="#FFFFFF">Análise por setor (ontem) · Cenário de adoção (3 dias) · Concorrência regional (hoje, em andamento)</text>
+  <text x="64" y="465" font-size="11" fill="#7C7768">Números e fatos perecíveis ficam nas conversas. O método e o contexto ficam nas camadas persistentes.</text>
+
+  <text x="44" y="492" font-size="12.5" fill="#7C7768" font-style="italic">Project é a sala de trabalho dedicada. Cada conversa chega com biblioteca, briefing e ferramentas já carregados — sem recontextualizar.</text>
+</svg>

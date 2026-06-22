@@ -1,0 +1,111 @@
+<svg viewBox="0 0 880 510" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh18a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule18a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk18a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold18a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="508" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + título -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 18.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Anatomia de uma tarefa agendada</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule18a)"/>
+
+  <!-- COMPONENTE 1: Agendamento -->
+  <g filter="url(#sh18a)">
+    <rect x="44" y="114" width="174" height="152" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M44,127 a12,12 0 0 1 12,-12 h150 a12,12 0 0 1 12,12 v18 h-174 z" fill="#C2912C"/>
+  <text x="131" y="140" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">AGENDAMENTO</text>
+  <text x="64" y="170" font-size="12" fill="#1B2A33" font-weight="600">Horário fixo recorrente</text>
+  <text x="64" y="188" font-size="11.5" fill="#7C7768">toda manhã às 7h</text>
+  <text x="64" y="208" font-size="12" fill="#1B2A33" font-weight="600">Dia da semana</text>
+  <text x="64" y="226" font-size="11.5" fill="#7C7768">toda segunda às 9h</text>
+  <text x="64" y="246" font-size="12" fill="#1B2A33" font-weight="600">Intervalo regular</text>
+  <text x="64" y="264" font-size="11.5" fill="#7C7768">a cada 4 horas</text>
+
+  <!-- seta 1 -->
+  <path d="M218,190 H258" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk18a)"/>
+
+  <!-- COMPONENTE 2: Prompt -->
+  <g filter="url(#sh18a)">
+    <rect x="258" y="114" width="184" height="152" rx="12" fill="#1B2A33"/>
+  </g>
+  <path d="M258,127 a12,12 0 0 1 12,-12 h160 a12,12 0 0 1 12,12 v18 h-184 z" fill="#1B2A33" stroke="#C2912C" stroke-width="1.5"/>
+  <text x="350" y="140" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle" letter-spacing="0.5">PROMPT</text>
+  <text x="278" y="168" font-size="11.5" fill="#FFFFFF">Contexto rico</text>
+  <text x="278" y="186" font-size="11" fill="#C2912C">quem sou, qual meu papel</text>
+  <text x="278" y="206" font-size="11.5" fill="#FFFFFF">Instrução específica</text>
+  <text x="278" y="224" font-size="11" fill="#C2912C">o que fazer, como fazer</text>
+  <text x="278" y="244" font-size="11.5" fill="#FFFFFF">Formato de saída</text>
+  <text x="278" y="262" font-size="11" fill="#C2912C">critérios de qualidade</text>
+
+  <!-- seta 2 -->
+  <path d="M442,190 H482" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk18a)"/>
+
+  <!-- COMPONENTE 3: Tools -->
+  <g filter="url(#sh18a)">
+    <rect x="482" y="114" width="180" height="152" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M482,127 a12,12 0 0 1 12,-12 h156 a12,12 0 0 1 12,12 v18 h-180 z" fill="#2E7D8A"/>
+  <text x="572" y="140" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">TOOLS</text>
+  <text x="502" y="170" font-size="12" fill="#1B2A33" font-weight="600">MCP conectados</text>
+  <text x="502" y="188" font-size="11.5" fill="#7C7768">Gmail, Slack, Calendar</text>
+  <text x="502" y="208" font-size="12" fill="#1B2A33" font-weight="600">Web Search</text>
+  <text x="502" y="226" font-size="11.5" fill="#7C7768">notícias e dados atuais</text>
+  <text x="502" y="246" font-size="12" fill="#1B2A33" font-weight="600">Projects e workspace</text>
+  <text x="502" y="264" font-size="11.5" fill="#7C7768">contexto persistente</text>
+
+  <!-- seta 3 -->
+  <path d="M662,190 H702" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk18a)"/>
+
+  <!-- COMPONENTE 4: Canal de entrega -->
+  <g filter="url(#sh18a)">
+    <rect x="702" y="114" width="152" height="152" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M702,127 a12,12 0 0 1 12,-12 h128 a12,12 0 0 1 12,12 v18 h-152 z" fill="#C2912C"/>
+  <text x="778" y="140" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">ENTREGA</text>
+  <text x="722" y="170" font-size="12" fill="#1B2A33" font-weight="600">E-mail</text>
+  <text x="722" y="188" font-size="11.5" fill="#7C7768">leitura tranquila</text>
+  <text x="722" y="208" font-size="12" fill="#1B2A33" font-weight="600">Slack / notificação</text>
+  <text x="722" y="226" font-size="11.5" fill="#7C7768">urgência e contexto</text>
+  <text x="722" y="246" font-size="12" fill="#1B2A33" font-weight="600">Arquivo em pasta</text>
+  <text x="722" y="264" font-size="11.5" fill="#7C7768">relatório ou resumo</text>
+
+  <!-- Seta dupla descendo para execução -->
+  <path d="M350,266 V306" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold18a)"/>
+  <path d="M572,266 V306" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk18a)"/>
+
+  <!-- EXECUÇÃO EM BACKGROUND -->
+  <g filter="url(#sh18a)">
+    <rect x="44" y="310" width="810" height="64" rx="13" fill="#1B2A33"/>
+  </g>
+  <text x="449" y="339" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">EXECUÇÃO EM BACKGROUND</text>
+  <text x="449" y="360" font-size="12" fill="#C2912C" text-anchor="middle">roda conforme programado · sem você presente · registra histórico de cada disparo</text>
+
+  <!-- Seta para resultado -->
+  <path d="M449,374 V410" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold18a)"/>
+
+  <!-- RESULTADO -->
+  <g filter="url(#sh18a)">
+    <rect x="44" y="414" width="810" height="54" rx="11" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="64" y="437" font-size="13" font-weight="700" fill="#9A7A2E">Resultado entregue no canal certo</text>
+  <text x="64" y="455" font-size="12" fill="#7C7768">você consome quando convém · 5 minutos substituem 20–40 minutos de processamento manual</text>
+
+  <!-- Caixa de governança -->
+  <g filter="url(#sh18a)">
+    <rect x="44" y="482" width="810" height="22" rx="7" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="449" y="497" font-size="11.5" fill="#B5532F" text-anchor="middle" font-weight="700">Governança: configure alerta de falha · revise tasks periodicamente · escopos mínimos necessários</text>
+</svg>

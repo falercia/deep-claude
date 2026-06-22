@@ -1,0 +1,110 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule433" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <clipPath id="rowClip433">
+      <rect x="44" y="112" width="792" height="248" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="458" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="52" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C" text-anchor="start">DIAGRAMA 43.3 · INVARIANTE 5 — CUSTO COMPOSTO</text>
+
+  <!-- Title -->
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">TCO de uma solução com Claude: os quatro componentes</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule433)"/>
+
+  <!-- Row backgrounds (alternating), clipped -->
+  <!-- Row 1 odd: #F7F3EA -->
+  <rect x="44" y="112" width="792" height="62" fill="#F7F3EA" clip-path="url(#rowClip433)"/>
+  <!-- Row 2 even: #FEFCF7 -->
+  <rect x="44" y="174" width="792" height="62" fill="#FEFCF7" clip-path="url(#rowClip433)"/>
+  <!-- Row 3 odd: #F7F3EA -->
+  <rect x="44" y="236" width="792" height="62" fill="#F7F3EA" clip-path="url(#rowClip433)"/>
+  <!-- Row 4 even: #FEFCF7 -->
+  <rect x="44" y="298" width="792" height="62" fill="#FEFCF7" clip-path="url(#rowClip433)"/>
+
+  <!-- Containing border -->
+  <rect x="44" y="112" width="792" height="248" rx="10" fill="none" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- ===== ROW 1: API + Infraestrutura (teal, 20%, 102px) center_y=143 ===== -->
+  <!-- Badge -->
+  <circle cx="62" cy="143" r="12" fill="#2E7D8A"/>
+  <text x="62" y="147" font-size="11" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <!-- Label -->
+  <text x="84" y="139" font-size="13" font-weight="700" fill="#1B2A33">API + Infraestrutura</text>
+  <!-- Description -->
+  <text x="84" y="156" font-size="11.5" fill="#44525C">chamadas de API, hospedagem, armazenamento</text>
+  <!-- Bar track -->
+  <rect x="300" y="132" width="510" height="22" rx="6" fill="#E6DFC9"/>
+  <!-- Filled bar -->
+  <rect x="300" y="132" width="102" height="22" rx="6" fill="#2E7D8A"/>
+  <!-- Percentage inside bar -->
+  <text x="351" y="147" font-size="12" font-weight="700" fill="white" text-anchor="middle">20%</text>
+
+  <!-- ===== ROW 2: Pessoas e Engenharia (gold, 45%, 229.5px) center_y=205 ===== -->
+  <!-- Badge -->
+  <circle cx="62" cy="205" r="12" fill="#C2912C"/>
+  <text x="62" y="209" font-size="11" font-weight="700" fill="white" text-anchor="middle">2</text>
+  <!-- Label -->
+  <text x="84" y="201" font-size="13" font-weight="700" fill="#1B2A33">Pessoas e Engenharia</text>
+  <!-- Description -->
+  <text x="84" y="218" font-size="11.5" fill="#44525C">dev, prompt eng., integração, treinamento</text>
+  <!-- Bar track -->
+  <rect x="300" y="194" width="510" height="22" rx="6" fill="#E6DFC9"/>
+  <!-- Filled bar -->
+  <rect x="300" y="194" width="229.5" height="22" rx="6" fill="#C2912C"/>
+  <!-- Percentage inside bar -->
+  <text x="414.75" y="209" font-size="12" font-weight="700" fill="white" text-anchor="middle">45%</text>
+  <!-- Annotation: "maior fatia" -->
+  <text x="545" y="201" font-size="11" font-weight="700" fill="#C2912C">maior fatia</text>
+  <!-- Left-pointing arrow triangle -->
+  <polygon points="539,205 534,202 534,208" fill="#C2912C"/>
+  <line x1="534" y1="205" x2="529.5" y2="205" stroke="#C2912C" stroke-width="1.5"/>
+
+  <!-- ===== ROW 3: Operações e Monitoramento (muted, 20%, 102px) center_y=267 ===== -->
+  <!-- Badge -->
+  <circle cx="62" cy="267" r="12" fill="#8A8070"/>
+  <text x="62" y="271" font-size="11" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <!-- Label -->
+  <text x="84" y="263" font-size="13" font-weight="700" fill="#1B2A33">Operações e Monitoramento</text>
+  <!-- Description -->
+  <text x="84" y="280" font-size="11.5" fill="#44525C">observabilidade, alertas, manutenção contínua</text>
+  <!-- Bar track -->
+  <rect x="300" y="256" width="510" height="22" rx="6" fill="#E6DFC9"/>
+  <!-- Filled bar -->
+  <rect x="300" y="256" width="102" height="22" rx="6" fill="#8A8070"/>
+  <!-- Percentage inside bar -->
+  <text x="351" y="271" font-size="12" font-weight="700" fill="white" text-anchor="middle">20%</text>
+
+  <!-- ===== ROW 4: Governança e Compliance (terracota, 15%, 76.5px) center_y=329 ===== -->
+  <!-- Badge -->
+  <circle cx="62" cy="329" r="12" fill="#B5532F"/>
+  <text x="62" y="333" font-size="11" font-weight="700" fill="white" text-anchor="middle">4</text>
+  <!-- Label -->
+  <text x="84" y="325" font-size="13" font-weight="700" fill="#1B2A33">Governança e Compliance</text>
+  <!-- Description -->
+  <text x="84" y="342" font-size="11.5" fill="#44525C">políticas, auditorias, gestão de risco</text>
+  <!-- Bar track -->
+  <rect x="300" y="318" width="510" height="22" rx="6" fill="#E6DFC9"/>
+  <!-- Filled bar -->
+  <rect x="300" y="318" width="76.5" height="22" rx="6" fill="#B5532F"/>
+  <!-- Percentage outside bar (right-aligned, 76.5px might be tight for centered) -->
+  <text x="338.25" y="333" font-size="12" font-weight="700" fill="white" text-anchor="middle">15%</text>
+
+  <!-- Note box -->
+  <rect x="44" y="365" width="520" height="28" rx="6" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="56" y="383" font-size="12" fill="#2E7D8A">Nota: proporções variam por maturidade da equipe e volume de uso</text>
+
+  <!-- Caption line 1 -->
+  <text x="44" y="415" font-size="12.5" fill="#7C7768" font-style="italic">"Calcular TCO sem as linhas de pessoas e governança subestima o investimento real por um fator de dois a cinco."</text>
+  <!-- Caption line 2 -->
+  <text x="44" y="434" font-size="12.5" fill="#7C7768" font-style="italic">Os números variam — a proporção se mantém.</text>
+</svg>

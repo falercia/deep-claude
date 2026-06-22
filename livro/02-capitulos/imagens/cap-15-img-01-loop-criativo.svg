@@ -1,0 +1,57 @@
+<svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh15a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule15a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk15a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 15.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">O loop de autonomia criativa</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule15a)"/>
+
+  <!-- ring -->
+  <circle cx="440" cy="280" r="182" fill="none" stroke="#C2912C" stroke-width="1.4" stroke-dasharray="3 6" opacity="0.7"/>
+  <text x="440" y="120" font-size="11.5" fill="#9A7A2E" text-anchor="middle" font-weight="600" letter-spacing="0.5">A FERRAMENTA CONDUZ 1–3 · VOCÊ LIDERA O HÍBRIDO</text>
+
+  <!-- clockwise flow arrows -->
+  <path d="M520,150 A182,182 0 0 1 600,228" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+  <path d="M620,340 A182,182 0 0 1 540,412" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+  <path d="M340,410 A182,182 0 0 1 260,332" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+  <path d="M262,222 A182,182 0 0 1 360,150" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+
+  <!-- center -->
+  <g filter="url(#sh15a)"><circle cx="440" cy="280" r="74" fill="#1B2A33"/></g>
+  <text x="440" y="274" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPERADOR</text>
+  <text x="440" y="293" font-size="11" fill="#C2912C" text-anchor="middle">especifica</text>
+  <text x="440" y="307" font-size="11" fill="#C2912C" text-anchor="middle">e julga</text>
+
+  <!-- 1 Descrever (top) -->
+  <g filter="url(#sh15a)"><rect x="356" y="116" width="168" height="50" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <text x="440" y="139" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">1 · Descrever</text>
+  <text x="440" y="156" font-size="11.5" fill="#7C7768" text-anchor="middle">texto, arquivos, código</text>
+
+  <!-- 2 Gerar (right) -->
+  <g filter="url(#sh15a)"><rect x="596" y="255" width="186" height="50" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <text x="689" y="278" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">2 · Gerar</text>
+  <text x="689" y="295" font-size="11.5" fill="#7C7768" text-anchor="middle">primeira versão renderizada</text>
+
+  <!-- 3 Refinar (bottom) -->
+  <g filter="url(#sh15a)"><rect x="346" y="394" width="188" height="50" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <text x="440" y="417" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">3 · Refinar</text>
+  <text x="440" y="434" font-size="11.5" fill="#7C7768" text-anchor="middle">comentários, sliders, canvas</text>
+
+  <!-- 4 Julgar (left) — destaque indelegável -->
+  <g filter="url(#sh15a)"><rect x="98" y="255" width="190" height="50" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+  <text x="193" y="278" font-size="14" font-weight="700" fill="#9A7A2E" text-anchor="middle">4 · Julgar</text>
+  <text x="193" y="295" font-size="11.5" fill="#7C7768" text-anchor="middle">indelegável: pronto? verdadeiro?</text>
+
+  <text x="44" y="480" font-size="12.5" fill="#7C7768" font-style="italic">As três primeiras estações a ferramenta conduz com fluência; a quarta — julgar — não migra. Autonomia proporcional é o humano permanecer no ponto de decisão.</text>
+</svg>

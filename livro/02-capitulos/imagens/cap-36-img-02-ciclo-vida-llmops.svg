@@ -1,0 +1,120 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+    <marker id="arrTeal" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="488" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 35.2 · INVARIANTE 7 — TERMÔMETRO</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">O ciclo de vida LLMOps</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Phase nodes arranged in a hexagonal loop -->
+  <!-- F1: Desenvolvimento (top left) -->
+  <g filter="url(#sh)">
+    <rect x="56" y="130" width="196" height="80" rx="13" fill="#1B2A33"/>
+  </g>
+  <circle cx="80" cy="145" r="13" fill="#C2912C"/>
+  <text x="80" y="150" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="154" y="165" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Desenvolvimento</text>
+  <text x="154" y="183" font-size="11.5" fill="#C2912C" text-anchor="middle">versionar prompt</text>
+  <text x="154" y="198" font-size="11.5" fill="#C2912C" text-anchor="middle">golden set + eval</text>
+
+  <!-- F2: Deploy com gates (top center) -->
+  <g filter="url(#sh)">
+    <rect x="340" y="130" width="196" height="80" rx="13" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <circle cx="364" cy="145" r="13" fill="#C2912C"/>
+  <text x="364" y="150" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="438" y="165" font-size="13.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Deploy com gates</text>
+  <text x="438" y="183" font-size="11.5" fill="#7C7768" text-anchor="middle">base determinística</text>
+  <text x="438" y="198" font-size="11.5" fill="#7C7768" text-anchor="middle">+ sem regressão adversarial</text>
+
+  <!-- F3: Operação (top right) -->
+  <g filter="url(#sh)">
+    <rect x="626" y="130" width="210" height="80" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <circle cx="650" cy="145" r="13" fill="#C2912C"/>
+  <text x="650" y="150" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="731" y="165" font-size="13.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Operação</text>
+  <text x="731" y="183" font-size="11.5" fill="#7C7768" text-anchor="middle">observabilidade em camadas</text>
+  <text x="731" y="198" font-size="11.5" fill="#7C7768" text-anchor="middle">logs, métricas, traces</text>
+
+  <!-- F4: Evals online (bottom right) — highlighted as continuous -->
+  <g filter="url(#sh)">
+    <rect x="626" y="300" width="210" height="90" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <circle cx="650" cy="315" r="13" fill="#2E7D8A"/>
+  <text x="650" y="320" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="731" y="335" font-size="13.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Evals online</text>
+  <text x="731" y="353" font-size="11.5" fill="#7C7768" text-anchor="middle">amostra contínua com</text>
+  <text x="731" y="371" font-size="11.5" fill="#7C7768" text-anchor="middle">LLM-judge calibrado</text>
+  <!-- Continuous badge -->
+  <rect x="680" y="380" width="130" height="18" rx="9" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="745" y="393" font-size="10.5" fill="#256A75" text-anchor="middle" font-weight="600">CONTÍNUO · não episódico</text>
+
+  <!-- F5: Feedback loop (bottom center) — highlighted as continuous -->
+  <g filter="url(#sh)">
+    <rect x="340" y="300" width="196" height="90" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <circle cx="364" cy="315" r="13" fill="#2E7D8A"/>
+  <text x="364" y="320" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="438" y="335" font-size="13.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Feedback loop</text>
+  <text x="438" y="353" font-size="11.5" fill="#7C7768" text-anchor="middle">falhas reais → golden set</text>
+  <text x="438" y="371" font-size="11.5" fill="#7C7768" text-anchor="middle">casos novos de produção</text>
+  <!-- Continuous badge -->
+  <rect x="362" y="380" width="150" height="18" rx="9" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="437" y="393" font-size="10.5" fill="#256A75" text-anchor="middle" font-weight="600">CONTÍNUO · não episódico</text>
+
+  <!-- F6: Rollback / Iteração (bottom left) -->
+  <g filter="url(#sh)">
+    <rect x="56" y="300" width="196" height="80" rx="13" fill="#FFFFFF" stroke="#E7CDBE"/>
+  </g>
+  <circle cx="80" cy="315" r="13" fill="#B5532F"/>
+  <text x="80" y="320" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="154" y="335" font-size="13.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Rollback + Iteração</text>
+  <text x="154" y="353" font-size="11.5" fill="#7C7768" text-anchor="middle">revert imediato;</text>
+  <text x="154" y="370" font-size="11.5" fill="#7C7768" text-anchor="middle">diagnóstico em paralelo</text>
+
+  <!-- Arrows connecting phases -->
+  <!-- F1 → F2 -->
+  <path d="M252,170 H338" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+  <!-- F2 → F3 -->
+  <path d="M536,170 H624" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+  <!-- F3 → F4 (down) -->
+  <path d="M731,210 V298" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+  <!-- F4 → F5 (left) -->
+  <path d="M624,345 H538" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal)"/>
+  <!-- F5 → F6 (left) -->
+  <path d="M338,345 H254" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal)"/>
+  <!-- F6 → F1 (up) -->
+  <path d="M154,298 V212" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold)"/>
+
+  <!-- User feedback arrow enters between F3 and F5 -->
+  <g filter="url(#sh)">
+    <rect x="355" y="228" width="170" height="36" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="440" y="243" font-size="12" font-weight="600" fill="#9A7A2E" text-anchor="middle">→ sinal do usuário</text>
+  <text x="440" y="258" font-size="11" fill="#7C7768" text-anchor="middle">thumbs down, reporte de erro</text>
+  <!-- Arrow from user signal to F5 -->
+  <path d="M440,264 V298" fill="none" stroke="#C2912C" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrGold)"/>
+
+  <!-- Caption -->
+  <text x="44" y="420" font-size="12.5" fill="#7C7768" font-style="italic">Fases 4 e 5 são contínuas — rodam enquanto o sistema respira. As demais são episódicas. O ciclo não termina: cada falha real volta ao ponto 1.</text>
+</svg>

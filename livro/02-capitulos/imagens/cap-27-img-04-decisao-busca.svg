@@ -1,0 +1,119 @@
+<svg viewBox="0 0 880 510" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh264" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule264" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk264" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold264" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="508" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 26.4 · INVARIANTE 2 — EXTREMIDADES</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">Árvore de decisão: semântica × léxica × híbrida × nenhuma</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule264)"/>
+
+  <!-- Q1: intenção ou termo exato? -->
+  <g filter="url(#sh264)">
+    <rect x="290" y="112" width="300" height="58" rx="12" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="136" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">O usuário busca por conceito</text>
+  <text x="440" y="155" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">ou intenção?</text>
+
+  <!-- Q1 -> SIM (right): -> Q2 -->
+  <path d="M590,141 H660 V200" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="622" y="133" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q1 -> NÃO (down): -> Q3 -->
+  <path d="M440,170 V200" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="450" y="190" font-size="12" font-weight="700" fill="#B5532F">NÃO (termo exato)</text>
+
+  <!-- Q2: corpus diverso, usuários variados? -->
+  <g filter="url(#sh264)">
+    <rect x="570" y="204" width="266" height="58" rx="12" fill="#243B47"/>
+  </g>
+  <text x="703" y="228" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Corpus diverso e</text>
+  <text x="703" y="247" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">usuários variados?</text>
+
+  <!-- Q2 -> SIM: híbrida -->
+  <path d="M703,262 V310" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="712" y="290" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q2 -> NÃO: semântica -->
+  <path d="M836,233 H858 V360 H796" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="845" y="225" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Q3: jargão proprietário? -->
+  <g filter="url(#sh264)">
+    <rect x="290" y="204" width="266" height="58" rx="12" fill="#243B47"/>
+  </g>
+  <text x="423" y="228" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Vocabulário proprietário</text>
+  <text x="423" y="247" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">ou auditabilidade crítica?</text>
+
+  <!-- Q3 -> SIM: léxica -->
+  <path d="M290,233 H220 V310" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="235" y="224" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q3 -> NÃO: -> Q4 -->
+  <path d="M423,262 V310" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="432" y="290" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Q4: base cabe na janela? -->
+  <g filter="url(#sh264)">
+    <rect x="290" y="314" width="266" height="58" rx="12" fill="#243B47"/>
+  </g>
+  <text x="423" y="337" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Base cabe na janela de</text>
+  <text x="423" y="356" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">contexto?</text>
+
+  <!-- Q4 -> SIM: contexto longo -->
+  <path d="M423,372 V420" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="432" y="400" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q4 -> NÃO: semântica -->
+  <path d="M556,343 H592" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk264)"/>
+  <text x="560" y="335" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Result node: Léxica (BM25/keyword) -->
+  <g filter="url(#sh264)">
+    <rect x="100" y="314" width="176" height="74" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <rect x="100" y="314" width="176" height="26" rx="12" fill="#44525C"/>
+  <rect x="100" y="328" width="176" height="12" fill="#44525C"/>
+  <text x="188" y="332" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">LÉXICA</text>
+  <text x="188" y="358" font-size="11.5" fill="#7C7768" text-anchor="middle">BM25 / keyword</text>
+  <text x="188" y="375" font-size="11" fill="#7C7768" text-anchor="middle">termos exatos, auditável</text>
+
+  <!-- Result node: Híbrida -->
+  <g filter="url(#sh264)">
+    <rect x="594" y="314" width="176" height="74" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <rect x="594" y="314" width="176" height="26" rx="12" fill="#C2912C"/>
+  <rect x="594" y="328" width="176" height="12" fill="#C2912C"/>
+  <text x="682" y="332" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">HÍBRIDA</text>
+  <text x="682" y="358" font-size="11.5" fill="#7C7768" text-anchor="middle">semântica + léxica</text>
+  <text x="682" y="375" font-size="11" fill="#7C7768" text-anchor="middle">+ reranking · padrão prod.</text>
+
+  <!-- Result node: Semântica -->
+  <g filter="url(#sh264)">
+    <rect x="594" y="366" width="176" height="74" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <rect x="594" y="366" width="176" height="26" rx="12" fill="#2E7D8A"/>
+  <rect x="594" y="380" width="176" height="12" fill="#2E7D8A"/>
+  <text x="682" y="384" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">SEMÂNTICA</text>
+  <text x="682" y="410" font-size="11.5" fill="#7C7768" text-anchor="middle">embeddings</text>
+  <text x="682" y="427" font-size="11" fill="#7C7768" text-anchor="middle">intenção, linguagem natural</text>
+
+  <!-- Result node: Sem recuperação (contexto direto) -->
+  <g filter="url(#sh264)">
+    <rect x="335" y="424" width="176" height="66" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <rect x="335" y="424" width="176" height="26" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/>
+  <text x="423" y="440" font-size="12.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">SEM RECUPERAÇÃO</text>
+  <text x="423" y="458" font-size="11.5" fill="#7C7768" text-anchor="middle">contexto longo direto</text>
+  <text x="423" y="474" font-size="11" fill="#7C7768" text-anchor="middle">+ prompt caching</text>
+
+  <text x="44" y="496" font-size="12.5" fill="#7C7768" font-style="italic">Na maioria dos sistemas em produção: busca híbrida com reranking. Antes de investir em embeddings, verifique se o problema não é de modelo, documentos ou chunking.</text>
+</svg>

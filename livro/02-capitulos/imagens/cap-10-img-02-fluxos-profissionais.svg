@@ -1,0 +1,80 @@
+<svg viewBox="0 0 880 520" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="518" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 10.2 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Cinco fluxos profissionais que fazem diferença</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Flow 1: Contexto antes de pedido -->
+  <g filter="url(#sh)">
+    <rect x="44" y="110" width="792" height="66" rx="10" fill="#FFFFFF" stroke="#EADfBF"/>
+  </g>
+  <circle cx="72" cy="143" r="14" fill="#C2912C"/>
+  <text x="72" y="148" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="100" y="133" font-size="14" font-weight="700" fill="#1B2A33">CONTEXTO ANTES DE PEDIDO</text>
+  <text x="100" y="152" font-size="12" fill="#7C7768">Primeira mensagem: papel + contexto + restrições ANTES do pedido específico. Economiza idas</text>
+  <text x="100" y="168" font-size="12" fill="#7C7768">e voltas em toda a conversa subsequente — a configuração inicial rende dividendos em toda interação.</text>
+  <rect x="680" y="118" width="140" height="22" rx="11" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="750" y="133" font-size="10.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">toda nova conversa</text>
+
+  <!-- Flow 2: Iteração refinadora -->
+  <g filter="url(#sh)">
+    <rect x="44" y="188" width="792" height="66" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/>
+  </g>
+  <circle cx="72" cy="221" r="14" fill="#2E7D8A"/>
+  <text x="72" y="226" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="100" y="211" font-size="14" font-weight="700" fill="#1B2A33">ITERAÇÃO REFINADORA</text>
+  <text x="100" y="230" font-size="12" fill="#7C7768">Primeira resposta = boa. Refinamento dirigido = ótima. "vá fundo em X" · "reescreva mais conciso"</text>
+  <text x="100" y="246" font-size="12" fill="#7C7768">"adicione contraevidência" · "estruture em três blocos". Cada refinamento custa menos que recomeçar.</text>
+  <rect x="680" y="196" width="140" height="22" rx="11" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="750" y="211" font-size="10.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">análises e escrita</text>
+
+  <!-- Flow 3: Projects para recorrência -->
+  <g filter="url(#sh)">
+    <rect x="44" y="266" width="792" height="66" rx="10" fill="#FFFFFF" stroke="#EADfBF"/>
+  </g>
+  <circle cx="72" cy="299" r="14" fill="#C2912C"/>
+  <text x="72" y="304" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="100" y="289" font-size="14" font-weight="700" fill="#1B2A33">PROJECTS PARA RECORRÊNCIA</text>
+  <text x="100" y="308" font-size="12" fill="#7C7768">Reconheça cedo quando conversa única vai virar contexto recorrente. Crie Project com Knowledge</text>
+  <text x="100" y="324" font-size="12" fill="#7C7768">Base + instruções persistentes. Economiza retrabalho em cada sessão do mesmo tema.</text>
+  <rect x="680" y="274" width="140" height="22" rx="11" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="750" y="289" font-size="10.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">temas recorrentes</text>
+
+  <!-- Flow 4: Extended thinking seletivo -->
+  <g filter="url(#sh)">
+    <rect x="44" y="344" width="792" height="66" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/>
+  </g>
+  <circle cx="72" cy="377" r="14" fill="#2E7D8A"/>
+  <text x="72" y="382" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="100" y="367" font-size="14" font-weight="700" fill="#1B2A33">EXTENDED THINKING SELETIVO</text>
+  <text x="100" y="386" font-size="12" fill="#7C7768">Ativar em análises complexas — pode dobrar ou triplicar qualidade de raciocínio em Opus.</text>
+  <text x="100" y="402" font-size="12" fill="#7C7768">Desligar em conversas casuais: consome tokens sem ganho. Seletividade é a chave.</text>
+  <rect x="680" y="352" width="140" height="22" rx="11" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="750" y="367" font-size="10.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">análises críticas</text>
+
+  <!-- Flow 5: Artifacts para saída estruturada -->
+  <g filter="url(#sh)">
+    <rect x="44" y="422" width="792" height="66" rx="10" fill="#FFFFFF" stroke="#EADfBF"/>
+  </g>
+  <circle cx="72" cy="455" r="14" fill="#1B2A33"/>
+  <text x="72" y="460" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">5</text>
+  <text x="100" y="445" font-size="14" font-weight="700" fill="#1B2A33">ARTIFACTS PARA SAÍDA ESTRUTURADA</text>
+  <text x="100" y="464" font-size="12" fill="#7C7768">Resultado vai fora do chat? Peça "crie um artifact". Painel lateral editável · exportável · formatação</text>
+  <text x="100" y="480" font-size="12" fill="#7C7768">rica preservada. Relatórios, tabelas, código — tudo mais apresentável do que texto enterrado no chat.</text>
+  <rect x="680" y="430" width="140" height="22" rx="11" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="750" y="445" font-size="10.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">entregáveis externos</text>
+
+  <!-- Caption -->
+  <text x="44" y="510" font-size="12.5" fill="#7C7768" font-style="italic">Padrões reaplicáveis que separam operador casual de profissional — cada um implementável em minutos, com retorno imediato.</text>
+</svg>

@@ -1,0 +1,121 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh261" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule261" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk261" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold261" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="458" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 26.1 · INVARIANTE 2 — EXTREMIDADES</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">Espaço vetorial: significado como geometria</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule261)"/>
+
+  <!-- Main space background -->
+  <rect x="44" y="108" width="560" height="310" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+
+  <!-- axis labels -->
+  <text x="54" y="126" font-size="11" fill="#7C7768" font-style="italic">dimensão semântica A →</text>
+  <text x="54" y="408" font-size="11" fill="#7C7768" font-style="italic">dimensão semântica B (representação 2D simplificada)</text>
+
+  <!-- CLUSTER: Tecnologia (teal) -->
+  <ellipse cx="180" cy="220" rx="68" ry="56" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="180" y="148" font-size="11.5" font-weight="700" fill="#256A75" text-anchor="middle">TECNOLOGIA</text>
+  <!-- dots -->
+  <circle cx="162" cy="200" r="5" fill="#2E7D8A" opacity="0.85"/>
+  <circle cx="195" cy="215" r="5" fill="#2E7D8A" opacity="0.85"/>
+  <circle cx="170" cy="235" r="4" fill="#2E7D8A" opacity="0.7"/>
+  <circle cx="205" cy="238" r="4" fill="#2E7D8A" opacity="0.7"/>
+  <circle cx="178" cy="255" r="4" fill="#2E7D8A" opacity="0.6"/>
+  <text x="164" y="196" font-size="9.5" fill="#256A75">machine learning</text>
+  <text x="197" y="213" font-size="9.5" fill="#256A75">redes neurais</text>
+  <text x="172" y="252" font-size="9.5" fill="#256A75">dados</text>
+
+  <!-- CLUSTER: Finanças (gold) -->
+  <ellipse cx="370" cy="190" rx="72" ry="52" fill="#FBF6EA" stroke="#C2912C" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="370" y="133" font-size="11.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">FINANÇAS</text>
+  <circle cx="348" cy="175" r="5" fill="#C2912C" opacity="0.85"/>
+  <circle cx="382" cy="185" r="5" fill="#C2912C" opacity="0.85"/>
+  <circle cx="358" cy="200" r="4" fill="#C2912C" opacity="0.7"/>
+  <circle cx="393" cy="205" r="4" fill="#C2912C" opacity="0.7"/>
+  <circle cx="365" cy="218" r="4" fill="#C2912C" opacity="0.6"/>
+  <text x="350" y="172" font-size="9.5" fill="#9A7A2E">taxa de juros</text>
+  <text x="383" y="183" font-size="9.5" fill="#9A7A2E">CDI</text>
+  <text x="360" y="216" font-size="9.5" fill="#9A7A2E">rentabilidade</text>
+
+  <!-- CLUSTER: Saúde (risk/terracota) -->
+  <ellipse cx="160" cy="340" rx="60" ry="46" fill="#F0DDD2" stroke="#B5532F" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="160" y="290" font-size="11.5" font-weight="700" fill="#B5532F" text-anchor="middle">SAÚDE</text>
+  <circle cx="143" cy="330" r="5" fill="#B5532F" opacity="0.85"/>
+  <circle cx="172" cy="322" r="5" fill="#B5532F" opacity="0.85"/>
+  <circle cx="150" cy="348" r="4" fill="#B5532F" opacity="0.7"/>
+  <circle cx="178" cy="355" r="4" fill="#B5532F" opacity="0.6"/>
+  <text x="145" y="327" font-size="9.5" fill="#B5532F">diagnóstico</text>
+  <text x="153" y="345" font-size="9.5" fill="#B5532F">tratamento</text>
+
+  <!-- CLUSTER: Jurídico (dark) -->
+  <ellipse cx="460" cy="330" rx="66" ry="48" fill="#F1ECE0" stroke="#44525C" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="460" y="278" font-size="11.5" font-weight="700" fill="#44525C" text-anchor="middle">JURÍDICO</text>
+  <circle cx="438" cy="315" r="5" fill="#44525C" opacity="0.85"/>
+  <circle cx="470" cy="308" r="5" fill="#44525C" opacity="0.85"/>
+  <circle cx="447" cy="338" r="4" fill="#44525C" opacity="0.7"/>
+  <circle cx="478" cy="348" r="4" fill="#44525C" opacity="0.6"/>
+  <text x="440" y="312" font-size="9.5" fill="#44525C">cláusula</text>
+  <text x="450" y="335" font-size="9.5" fill="#44525C">contrato</text>
+
+  <!-- Query vector -->
+  <circle cx="355" cy="175" r="8" fill="#1B2A33" stroke="#C2912C" stroke-width="2"/>
+  <text x="355" y="164" font-size="10.5" font-weight="700" fill="#1B2A33" text-anchor="middle">consulta</text>
+
+  <!-- ANN radius circle (dashed) -->
+  <circle cx="355" cy="175" r="52" fill="none" stroke="#1B2A33" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+
+  <!-- k-nearest neighbor lines -->
+  <line x1="355" y1="175" x2="348" y2="175" stroke="#C2912C" stroke-width="1.8" opacity="0.7"/>
+  <line x1="355" y1="175" x2="382" y2="185" stroke="#C2912C" stroke-width="1.8" opacity="0.7"/>
+  <line x1="355" y1="175" x2="358" y2="200" stroke="#C2912C" stroke-width="1.8" opacity="0.7"/>
+
+  <!-- highlight nearest -->
+  <circle cx="348" cy="175" r="7" fill="none" stroke="#C2912C" stroke-width="2.5"/>
+  <circle cx="382" cy="185" r="7" fill="none" stroke="#C2912C" stroke-width="2.5"/>
+  <circle cx="358" cy="200" r="6" fill="none" stroke="#C2912C" stroke-width="2"/>
+
+  <!-- right panel -->
+  <rect x="630" y="108" width="208" height="310" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  <rect x="630" y="108" width="208" height="36" rx="12" fill="#1B2A33"/>
+  <rect x="630" y="130" width="208" height="14" fill="#1B2A33"/>
+  <text x="734" y="131" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">Como funciona</text>
+
+  <text x="648" y="164" font-size="12" font-weight="700" fill="#1B2A33">1. Transformar texto</text>
+  <text x="648" y="180" font-size="11.5" fill="#7C7768">em vetor de números</text>
+  <line x1="648" y1="192" x2="822" y2="192" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="648" y="210" font-size="12" font-weight="700" fill="#1B2A33">2. Significado similar</text>
+  <text x="648" y="226" font-size="11.5" fill="#7C7768">&#x2192; vetores próximos</text>
+  <line x1="648" y1="238" x2="822" y2="238" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="648" y="256" font-size="12" font-weight="700" fill="#1B2A33">3. Consulta vira vetor</text>
+  <text x="648" y="272" font-size="11.5" fill="#7C7768">no mesmo espaço</text>
+  <line x1="648" y1="284" x2="822" y2="284" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="648" y="302" font-size="12" font-weight="700" fill="#C2912C">4. K vizinhos mais</text>
+  <text x="648" y="318" font-size="11.5" fill="#C2912C">próximos = resultado</text>
+  <line x1="648" y1="330" x2="822" y2="330" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="648" y="350" font-size="11.5" fill="#7C7768">Distância no mapa</text>
+  <text x="648" y="366" font-size="11.5" fill="#7C7768">= diferença de</text>
+  <text x="648" y="382" font-size="11.5" fill="#7C7768">significado</text>
+  <text x="648" y="400" font-size="11" fill="#B5532F" font-style="italic">sem correspondência</text>
+  <text x="648" y="414" font-size="11" fill="#B5532F" font-style="italic">de palavras exatas</text>
+
+  <text x="44" y="438" font-size="12.5" fill="#7C7768" font-style="italic">O embedding não encontra palavras — encontra vizinhos de significado. A qualidade do chunk que entra determina a vizinhança que sai. (Invariante 2 — Extremidades.)</text>
+</svg>

@@ -1,0 +1,165 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh-eco" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRuleEco" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrEco" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="558" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="44" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 2.3 · O ECOSSISTEMA CLAUDE</text>
+  <!-- Title -->
+  <text x="44" y="74" font-size="23" font-weight="700" fill="#1B2A33">Mapa unificado do ecossistema</text>
+  <!-- Gold rule -->
+  <rect x="44" y="86" width="86" height="3.5" rx="1.75" fill="url(#goldRuleEco)"/>
+
+  <!-- ── BACKGROUND GROUP BANDS ── -->
+
+  <!-- Group A: Superfícies de uso (left arc) -->
+  <rect x="38" y="108" width="204" height="378" rx="14" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1.3"/>
+  <text x="140" y="130" font-size="11" font-weight="700" fill="#2E7D8A" text-anchor="middle" letter-spacing="1">SUPERFÍCIES DE USO</text>
+
+  <!-- Group B: Superfícies de construção (right arc) -->
+  <rect x="638" y="108" width="204" height="378" rx="14" fill="#F1ECE0" stroke="#CFC8B6" stroke-width="1.3"/>
+  <text x="740" y="130" font-size="11" font-weight="700" fill="#44525C" text-anchor="middle" letter-spacing="1">CONSTRUÇÃO E EXTENSÃO</text>
+
+  <!-- ── CENTER NODE: Claude (modelo) ── -->
+  <g filter="url(#sh-eco)">
+    <circle cx="440" cy="298" r="72" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="290" font-size="14.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Claude</text>
+  <text x="440" y="308" font-size="12" fill="#C2912C" text-anchor="middle">(modelo)</text>
+  <text x="440" y="325" font-size="10.5" fill="#E6DFC9" text-anchor="middle">você está aqui</text>
+
+  <!-- ── SPOKE LINES ── -->
+  <!-- Left group spokes -->
+  <line x1="368" y1="266" x2="231" y2="192" stroke="#2E7D8A" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="368" y1="280" x2="231" y2="240" stroke="#2E7D8A" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="368" y1="298" x2="231" y2="298" stroke="#2E7D8A" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="368" y1="316" x2="231" y2="355" stroke="#2E7D8A" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="368" y1="330" x2="231" y2="410" stroke="#2E7D8A" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+
+  <!-- Right group spokes -->
+  <line x1="512" y1="266" x2="649" y2="192" stroke="#44525C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="512" y1="280" x2="649" y2="240" stroke="#44525C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="512" y1="298" x2="649" y2="298" stroke="#44525C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="512" y1="316" x2="649" y2="355" stroke="#44525C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="512" y1="330" x2="649" y2="410" stroke="#44525C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+
+  <!-- Top spokes -->
+  <line x1="420" y1="226" x2="350" y2="163" stroke="#C2912C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="460" y1="226" x2="530" y2="163" stroke="#C2912C" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.6"/>
+
+  <!-- ── USO NODES (left + top-left + bottom-left) ── -->
+
+  <!-- Cowork -->
+  <g filter="url(#sh-eco)">
+    <rect x="55" y="163" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#2E7D8A" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="182" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">Cowork</text>
+  <text x="120" y="198" font-size="10.5" fill="#7C7768" text-anchor="middle">agente autônomo</text>
+
+  <!-- Web -->
+  <g filter="url(#sh-eco)">
+    <rect x="55" y="217" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#2E7D8A" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="236" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">Claude.ai Web</text>
+  <text x="120" y="252" font-size="10.5" fill="#7C7768" text-anchor="middle">interface principal</text>
+
+  <!-- Desktop -->
+  <g filter="url(#sh-eco)">
+    <rect x="55" y="271" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#2E7D8A" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="290" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">Desktop</text>
+  <text x="120" y="306" font-size="10.5" fill="#7C7768" text-anchor="middle">integração local</text>
+
+  <!-- Mobile -->
+  <g filter="url(#sh-eco)">
+    <rect x="55" y="325" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#2E7D8A" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="344" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">Mobile</text>
+  <text x="120" y="360" font-size="10.5" fill="#7C7768" text-anchor="middle">voz + câmera + apps</text>
+
+  <!-- Projects -->
+  <g filter="url(#sh-eco)">
+    <rect x="55" y="379" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#2E7D8A" stroke-width="1.5"/>
+  </g>
+  <text x="120" y="398" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">Projects</text>
+  <text x="120" y="414" font-size="10.5" fill="#7C7768" text-anchor="middle">contexto persistente</text>
+
+  <!-- ── TOP NODES: Artifacts + Research (center-top) ── -->
+
+  <!-- Artifacts -->
+  <g filter="url(#sh-eco)">
+    <rect x="286" y="128" width="130" height="46" rx="10" fill="#FBF6EA" stroke="#C2912C" stroke-width="1.5"/>
+  </g>
+  <text x="351" y="147" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">Artifacts</text>
+  <text x="351" y="163" font-size="10.5" fill="#7C7768" text-anchor="middle">saídas vivas</text>
+
+  <!-- Research + Design -->
+  <g filter="url(#sh-eco)">
+    <rect x="464" y="128" width="130" height="46" rx="10" fill="#FBF6EA" stroke="#C2912C" stroke-width="1.5"/>
+  </g>
+  <text x="529" y="147" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">Research</text>
+  <text x="529" y="163" font-size="10.5" fill="#7C7768" text-anchor="middle">busca profunda</text>
+
+  <!-- ── CONSTRUÇÃO/EXTENSÃO NODES (right) ── -->
+
+  <!-- Claude Code -->
+  <g filter="url(#sh-eco)">
+    <rect x="655" y="163" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#44525C" stroke-width="1.5"/>
+  </g>
+  <text x="720" y="182" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Claude Code</text>
+  <text x="720" y="198" font-size="10.5" fill="#7C7768" text-anchor="middle">CLI + agente eng.</text>
+
+  <!-- Skills -->
+  <g filter="url(#sh-eco)">
+    <rect x="655" y="217" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#44525C" stroke-width="1.5"/>
+  </g>
+  <text x="720" y="236" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Skills</text>
+  <text x="720" y="252" font-size="10.5" fill="#7C7768" text-anchor="middle">fluxos reutilizáveis</text>
+
+  <!-- API -->
+  <g filter="url(#sh-eco)">
+    <rect x="655" y="271" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#44525C" stroke-width="1.5"/>
+  </g>
+  <text x="720" y="290" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">API</text>
+  <text x="720" y="306" font-size="10.5" fill="#7C7768" text-anchor="middle">integração programática</text>
+
+  <!-- MCP -->
+  <g filter="url(#sh-eco)">
+    <rect x="655" y="325" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#44525C" stroke-width="1.5"/>
+  </g>
+  <text x="720" y="344" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">MCP</text>
+  <text x="720" y="360" font-size="10.5" fill="#7C7768" text-anchor="middle">padrão aberto de tools</text>
+
+  <!-- Connectors -->
+  <g filter="url(#sh-eco)">
+    <rect x="655" y="379" width="130" height="46" rx="10" fill="#FFFFFF" stroke="#44525C" stroke-width="1.5"/>
+  </g>
+  <text x="720" y="398" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Connectors</text>
+  <text x="720" y="414" font-size="10.5" fill="#7C7768" text-anchor="middle">integrações nativas</text>
+
+  <!-- ── "VOCÊ ESTÁ AQUI" POINTER ── -->
+  <path d="M440,226 L440,210 L415,200" fill="none" stroke="#C2912C" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="440" cy="226" r="4" fill="#C2912C"/>
+
+  <!-- ── LEGEND ── -->
+  <text x="44" y="516" font-size="12.5" fill="#7C7768" font-style="italic">Uma superfície por necessidade: escolha pelo tipo de trabalho — uso, construção ou extensão. O modelo está no centro; o método ao redor.</text>
+
+  <!-- Bottom legend chips -->
+  <rect x="44" y="528" width="14" height="14" rx="3" fill="#EFF6F7" stroke="#2E7D8A"/>
+  <text x="64" y="540" font-size="11" fill="#2E7D8A">Superfícies de uso</text>
+  <rect x="200" y="528" width="14" height="14" rx="3" fill="#FBF6EA" stroke="#C2912C"/>
+  <text x="220" y="540" font-size="11" fill="#9A7A2E">Saídas e discovery</text>
+  <rect x="356" y="528" width="14" height="14" rx="3" fill="#F1ECE0" stroke="#44525C"/>
+  <text x="376" y="540" font-size="11" fill="#44525C">Construção e extensão</text>
+</svg>

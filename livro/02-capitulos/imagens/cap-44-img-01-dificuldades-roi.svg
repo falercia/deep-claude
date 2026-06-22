@@ -1,0 +1,63 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule431" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="dropShadow431" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C" text-anchor="start">DIAGRAMA 43.1 · INVARIANTE 5 — CUSTO COMPOSTO</text>
+
+  <!-- Title -->
+  <text x="44" y="75" font-size="23" font-weight="700" fill="#1B2A33" text-anchor="start">As quatro dificuldades de medir ROI de IA</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule431)"/>
+
+  <!-- Card 1: Top-left — Ganho difuso (teal) -->
+  <rect x="44" y="110" width="390" height="145" rx="12" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5" filter="url(#dropShadow431)"/>
+  <circle cx="66" cy="136" r="14" fill="#2E7D8A"/>
+  <text x="66" y="141" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="90" y="141" font-size="14" font-weight="700" fill="#1B2A33">Ganho difuso</text>
+  <text x="66" y="172" font-size="12.5" fill="#44525C">atravessa funções e departamentos</text>
+  <text x="66" y="190" font-size="12.5" fill="#44525C">sem fio direto com o resultado</text>
+
+  <!-- Card 2: Top-right — Custo composto (gold) -->
+  <rect x="454" y="110" width="382" height="145" rx="12" fill="#FBF6EA" stroke="#C2912C" stroke-width="1.5" filter="url(#dropShadow431)"/>
+  <circle cx="476" cy="136" r="14" fill="#C2912C"/>
+  <text x="476" y="141" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="500" y="141" font-size="14" font-weight="700" fill="#1B2A33">Custo composto</text>
+  <text x="476" y="172" font-size="12.5" fill="#44525C">invisível na chamada individual</text>
+  <text x="476" y="190" font-size="12.5" fill="#44525C">visível apenas no padrão acumulado</text>
+
+  <!-- Card 3: Bottom-left — Baseline incerto (neutro) -->
+  <rect x="44" y="275" width="390" height="145" rx="12" fill="#F1ECE0" stroke="#8A8070" stroke-width="1.5" filter="url(#dropShadow431)"/>
+  <circle cx="66" cy="301" r="14" fill="#6B6355"/>
+  <text x="66" y="306" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="90" y="306" font-size="14" font-weight="700" fill="#1B2A33">Baseline incerto</text>
+  <text x="66" y="337" font-size="12.5" fill="#44525C">dado pré-IA raramente existe</text>
+  <text x="66" y="355" font-size="12.5" fill="#44525C">ou foi registrado de forma incomparável</text>
+
+  <!-- Card 4: Bottom-right — Atribuição disputada (terracota) -->
+  <rect x="454" y="275" width="382" height="145" rx="12" fill="#F0DDD2" stroke="#B5532F" stroke-width="1.5" filter="url(#dropShadow431)"/>
+  <circle cx="476" cy="301" r="14" fill="#B5532F"/>
+  <text x="476" y="306" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="500" y="306" font-size="14" font-weight="700" fill="#1B2A33">Atribuição disputada</text>
+  <text x="476" y="337" font-size="12.5" fill="#44525C">correlação não é causalidade</text>
+  <text x="476" y="355" font-size="12.5" fill="#44525C">outros fatores agem em paralelo</text>
+
+  <!-- Center diamond node -->
+  <rect x="355" y="214" width="170" height="52" rx="26" fill="#1B2A33" filter="url(#dropShadow431)"/>
+  <text x="440" y="235" font-size="12.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">ROI honesto exige</text>
+  <text x="440" y="253" font-size="12.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">método, não intuição.</text>
+
+  <!-- Caption -->
+  <text x="440" y="460" font-size="12.5" fill="#7C7768" font-style="italic" text-anchor="middle">"Essas dificuldades não tornam o ROI impossível — tornam-no impossível sem método."</text>
+</svg>

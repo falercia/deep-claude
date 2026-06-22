@@ -1,0 +1,92 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh21a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule21a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk21a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold21a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 21.1 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">Anatomia de uma chamada à Messages API</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule21a)"/>
+
+  <!-- REQUISIÇÃO panel -->
+  <g filter="url(#sh21a)">
+    <rect x="44" y="116" width="340" height="280" rx="14" fill="#1B2A33"/>
+  </g>
+  <rect x="44" y="116" width="340" height="38" rx="14" fill="#1B2A33"/>
+  <rect x="44" y="140" width="340" height="14" fill="#1B2A33"/>
+  <text x="214" y="141" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">REQUISIÇÃO</text>
+  <text x="214" y="158" font-size="11" fill="#C2912C" text-anchor="middle">objeto JSON enviado</text>
+
+  <!-- Request fields -->
+  <g font-size="13" fill="#FFFFFF">
+    <text x="70" y="188"><tspan font-weight="700" fill="#C2912C">model</tspan><tspan fill="#7C7768">  — qual modelo processa</tspan></text>
+    <text x="70" y="212"><tspan font-weight="700" fill="#E2C879">system</tspan><tspan fill="#7C7768">  — instrução permanente</tspan></text>
+    <text x="70" y="236"><tspan font-weight="700" fill="#FFFFFF">messages[]</tspan><tspan fill="#7C7768">  — histórico completo</tspan></text>
+    <text x="70" y="260"><tspan font-weight="700" fill="#FFFFFF">max_tokens</tspan><tspan fill="#7C7768">  — budget de geração</tspan></text>
+    <text x="70" y="284"><tspan font-weight="700" fill="#FFFFFF">stop_sequences</tspan><tspan fill="#7C7768">  — delimitadores</tspan></text>
+    <text x="70" y="308"><tspan font-weight="700" fill="#2E7D8A">stream</tspan><tspan fill="#7C7768">  — SSE incremental</tspan></text>
+    <text x="70" y="332"><tspan font-weight="700" fill="#2E7D8A">tools</tspan><tspan fill="#7C7768">  — ferramentas disponíveis</tspan></text>
+  </g>
+
+  <!-- Arrow: request -> response -->
+  <path d="M384,210 H480" fill="none" stroke="#C2912C" stroke-width="2.6" marker-end="url(#arrGold21a)"/>
+  <text x="432" y="203" font-size="11.5" fill="#C2912C" text-anchor="middle" font-weight="600">instrução</text>
+  <path d="M480,290 H384" fill="none" stroke="#44525C" stroke-width="2.6" marker-end="url(#arrInk21a)"/>
+  <text x="432" y="284" font-size="11.5" fill="#44525C" text-anchor="middle" font-weight="600">resultado</text>
+
+  <!-- API endpoint badge -->
+  <g filter="url(#sh21a)">
+    <rect x="400" y="230" width="120" height="36" rx="18" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="460" y="253" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">POST /v1/messages</text>
+
+  <!-- RESPOSTA panel -->
+  <g filter="url(#sh21a)">
+    <rect x="496" y="116" width="340" height="280" rx="14" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <rect x="496" y="116" width="340" height="38" rx="14" fill="#44525C"/>
+  <rect x="496" y="140" width="340" height="14" fill="#44525C"/>
+  <text x="666" y="141" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">RESPOSTA</text>
+  <text x="666" y="158" font-size="11" fill="#E2C879" text-anchor="middle">objeto JSON devolvido</text>
+
+  <!-- Response fields -->
+  <g font-size="13" fill="#1B2A33">
+    <text x="520" y="188"><tspan font-weight="700">id</tspan><tspan fill="#7C7768">  — identificador da chamada</tspan></text>
+    <text x="520" y="212"><tspan font-weight="700">type</tspan><tspan fill="#7C7768">  — "message"</tspan></text>
+    <text x="520" y="236"><tspan font-weight="700">role</tspan><tspan fill="#7C7768">  — "assistant"</tspan></text>
+    <text x="520" y="260"><tspan font-weight="700">content[]</tspan><tspan fill="#7C7768">  — blocos de saída</tspan></text>
+    <text x="520" y="284"><tspan font-weight="700" fill="#B5532F">stop_reason</tspan><tspan fill="#7C7768">  — por que parou</tspan></text>
+    <text x="520" y="316"><tspan font-weight="700" fill="#9A7A2E">usage{}</tspan></text>
+    <text x="538" y="336"><tspan fill="#7C7768" font-size="12">input_tokens · output_tokens</tspan></text>
+  </g>
+
+  <!-- stop_reason chips -->
+  <g filter="url(#sh21a)">
+    <rect x="496" y="408" width="340" height="38" rx="11" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="516" y="423" font-size="12" font-weight="700" fill="#B5532F">stop_reason: </text>
+  <text x="516" y="438" font-size="11.5" fill="#7C7768">end_turn · max_tokens · stop_sequence · tool_use</text>
+
+  <!-- request-id callout -->
+  <g filter="url(#sh21a)">
+    <rect x="44" y="412" width="340" height="34" rx="10" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <text x="64" y="426" font-size="12" font-weight="700" fill="#2E7D8A">request-id</text>
+  <text x="64" y="440" font-size="11.5" fill="#7C7768">logue sempre — identifica a chamada em incidentes</text>
+
+  <!-- Footer -->
+  <text x="44" y="465" font-size="12.5" fill="#7C7768" font-style="italic">A Messages API tem um único endpoint. Tudo que Claude faz programaticamente passa por esse contrato JSON.</text>
+</svg>

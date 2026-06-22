@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FCF9F2"/><stop offset="1" stop-color="#F3EDDF"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#243B47"/><stop offset="1" stop-color="#1B2A33"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1B2A33" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#bg)"/>
+
+  <!-- inset frame (safe margin 46px) -->
+  <rect x="46" y="46" width="708" height="1108" rx="6" fill="none" stroke="#D8CDB2" stroke-width="1.5"/>
+  <rect x="46" y="46" width="708" height="7" fill="url(#gold)"/>
+
+  <!-- series kicker -->
+  <text x="400" y="124" text-anchor="middle" font-size="15" letter-spacing="4" font-weight="700" fill="#C2912C">INTELIGÊNCIA AUMENTADA</text>
+  <text x="400" y="148" text-anchor="middle" font-size="12.5" letter-spacing="2.5" fill="#7C7768">VOLUME 2 · O VOLUME VIVO</text>
+
+  <!-- ecosystem constellation (kept within x:215..585, y:200..470) -->
+  <g stroke="#BCB395" stroke-width="1.2" opacity="0.85">
+    <line x1="400" y1="335" x2="290" y2="252"/>
+    <line x1="400" y1="335" x2="528" y2="244"/>
+    <line x1="400" y1="335" x2="566" y2="356"/>
+    <line x1="400" y1="335" x2="512" y2="452"/>
+    <line x1="400" y1="335" x2="392" y2="478"/>
+    <line x1="400" y1="335" x2="268" y2="438"/>
+    <line x1="400" y1="335" x2="236" y2="330"/>
+    <line x1="400" y1="335" x2="356" y2="214"/>
+    <line x1="290" y1="252" x2="356" y2="214"/>
+    <line x1="528" y1="244" x2="566" y2="356"/>
+    <line x1="512" y1="452" x2="392" y2="478"/>
+    <line x1="268" y1="438" x2="236" y2="330"/>
+  </g>
+  <g filter="url(#soft)">
+    <circle cx="290" cy="252" r="12" fill="#2E7D8A"/>
+    <circle cx="528" cy="244" r="14" fill="#C2912C"/>
+    <circle cx="566" cy="356" r="10" fill="#2E7D8A"/>
+    <circle cx="512" cy="452" r="13" fill="#C2912C"/>
+    <circle cx="392" cy="478" r="11" fill="#2E7D8A"/>
+    <circle cx="268" cy="438" r="14" fill="#C2912C"/>
+    <circle cx="236" cy="330" r="10" fill="#2E7D8A"/>
+    <circle cx="356" cy="214" r="9" fill="#C2912C"/>
+    <circle cx="470" cy="196" r="7" fill="#B5532F"/>
+    <circle cx="588" cy="430" r="7" fill="#B5532F"/>
+  </g>
+  <g filter="url(#soft)">
+    <circle cx="400" cy="335" r="48" fill="url(#coreGlow)"/>
+  </g>
+  <circle cx="400" cy="335" r="48" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+  <text x="400" y="331" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">Claude</text>
+  <text x="400" y="349" text-anchor="middle" font-size="9.5" letter-spacing="1" fill="#C2912C">ECOSSISTEMA</text>
+
+  <!-- title (sized to fit well within frame) -->
+  <text x="400" y="650" text-anchor="middle" font-size="74" font-weight="800" fill="#1B2A33">Deep Claude</text>
+  <rect x="330" y="676" width="140" height="4" rx="2" fill="url(#gold)"/>
+
+  <!-- subtitle -->
+  <text x="400" y="726" text-anchor="middle" font-size="23" font-weight="500" fill="#44525C">O Currículo Executivo</text>
+  <text x="400" y="757" text-anchor="middle" font-size="23" font-weight="500" fill="#44525C">do Ecossistema Anthropic</text>
+
+  <!-- tagline -->
+  <text x="400" y="802" text-anchor="middle" font-size="15.5" font-style="italic" fill="#7C7768">O manual conectado ao livro que envelhece bem.</text>
+
+  <!-- Volume Vivo seal -->
+  <g filter="url(#soft)">
+    <rect x="292" y="840" width="216" height="40" rx="20" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <circle cx="316" cy="860" r="5" fill="#B5532F"/>
+  <text x="416" y="865" text-anchor="middle" font-size="14" font-weight="700" letter-spacing="1.2" fill="#9A7A2E">VOLUME VIVO · 2026</text>
+
+  <!-- companion line -->
+  <text x="400" y="996" text-anchor="middle" font-size="13.5" letter-spacing="1" fill="#7C7768">companheiro de</text>
+  <text x="400" y="1020" text-anchor="middle" font-size="16" font-weight="600" fill="#44525C">Inteligência Aumentada · Os Invariantes da IA</text>
+
+  <!-- author -->
+  <line x1="330" y1="1078" x2="470" y2="1078" stroke="url(#gold)" stroke-width="2"/>
+  <text x="400" y="1116" text-anchor="middle" font-size="25" font-weight="700" letter-spacing="2.5" fill="#1B2A33">FABIO GARCIA</text>
+</svg>

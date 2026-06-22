@@ -1,0 +1,116 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="558" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 9.3 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Sete fluxos profissionais do Claude Code</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Row 1: flows 1-3 -->
+
+  <!-- Flow 1: Feature end-to-end -->
+  <g filter="url(#sh)">
+    <rect x="44" y="114" width="250" height="102" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="68" cy="138" r="14" fill="#1B2A33"/>
+  <text x="68" y="143" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">1</text>
+  <text x="90" y="135" font-size="13" font-weight="700" fill="#1B2A33">FEATURE END-TO-END</text>
+  <text x="60" y="158" font-size="11.5" fill="#7C7768">Descreve funcionalidade → ciclo</text>
+  <text x="60" y="173" font-size="11.5" fill="#7C7768">completo: lê, planeja, escreve,</text>
+  <text x="60" y="188" font-size="11.5" fill="#7C7768">testa e abre PR</text>
+  <rect x="60" y="200" width="220" height="7" rx="3.5" fill="#C2912C" opacity="0.3"/>
+
+  <!-- Flow 2: Refatoração coordenada -->
+  <g filter="url(#sh)">
+    <rect x="314" y="114" width="250" height="102" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="338" cy="138" r="14" fill="#2E7D8A"/>
+  <text x="338" y="143" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="360" y="135" font-size="13" font-weight="700" fill="#1B2A33">REFATORAÇÃO</text>
+  <text x="360" y="153" font-size="13" font-weight="700" fill="#1B2A33">COORDENADA</text>
+  <text x="330" y="172" font-size="11.5" fill="#7C7768">Mudança em muitos arquivos</text>
+  <text x="330" y="187" font-size="11.5" fill="#7C7768">de forma consistente — escala</text>
+  <rect x="330" y="200" width="220" height="7" rx="3.5" fill="#2E7D8A" opacity="0.3"/>
+
+  <!-- Flow 3: Debug investigativo -->
+  <g filter="url(#sh)">
+    <rect x="584" y="114" width="252" height="102" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="608" cy="138" r="14" fill="#B5532F"/>
+  <text x="608" y="143" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="630" y="135" font-size="13" font-weight="700" fill="#1B2A33">DEBUG</text>
+  <text x="630" y="153" font-size="13" font-weight="700" fill="#1B2A33">INVESTIGATIVO</text>
+  <text x="600" y="172" font-size="11.5" fill="#7C7768">Mente fresca analisa sem viés</text>
+  <text x="600" y="187" font-size="11.5" fill="#7C7768">de autoria — bugs elusivos</text>
+  <rect x="600" y="200" width="220" height="7" rx="3.5" fill="#B5532F" opacity="0.3"/>
+
+  <!-- Row 2: flows 4-6 -->
+
+  <!-- Flow 4: Code review interno -->
+  <g filter="url(#sh)">
+    <rect x="44" y="240" width="250" height="102" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="68" cy="264" r="14" fill="#1B2A33"/>
+  <text x="68" y="269" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">4</text>
+  <text x="90" y="261" font-size="13" font-weight="700" fill="#1B2A33">CODE REVIEW</text>
+  <text x="90" y="279" font-size="13" font-weight="700" fill="#1B2A33">INTERNO</text>
+  <text x="60" y="298" font-size="11.5" fill="#7C7768">Filtro antes do review humano</text>
+  <text x="60" y="313" font-size="11.5" fill="#7C7768">→ checklist de melhorias</text>
+  <rect x="60" y="326" width="220" height="7" rx="3.5" fill="#C2912C" opacity="0.3"/>
+
+  <!-- Flow 5: Documentação rica -->
+  <g filter="url(#sh)">
+    <rect x="314" y="240" width="250" height="102" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="338" cy="264" r="14" fill="#2E7D8A"/>
+  <text x="338" y="269" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="360" y="261" font-size="13" font-weight="700" fill="#1B2A33">DOCUMENTAÇÃO</text>
+  <text x="360" y="279" font-size="13" font-weight="700" fill="#1B2A33">RICA</text>
+  <text x="330" y="298" font-size="11.5" fill="#7C7768">Docs completas do código atual</text>
+  <text x="330" y="313" font-size="11.5" fill="#7C7768">regeneráveis periodicamente</text>
+  <rect x="330" y="326" width="220" height="7" rx="3.5" fill="#2E7D8A" opacity="0.3"/>
+
+  <!-- Flow 6: Exploração de base legada -->
+  <g filter="url(#sh)">
+    <rect x="584" y="240" width="252" height="102" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="608" cy="264" r="14" fill="#B5532F"/>
+  <text x="608" y="269" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="630" y="261" font-size="13" font-weight="700" fill="#1B2A33">EXPLORAÇÃO</text>
+  <text x="630" y="279" font-size="13" font-weight="700" fill="#1B2A33">DE BASE LEGADA</text>
+  <text x="600" y="298" font-size="11.5" fill="#7C7768">Onboarding em código novo</text>
+  <text x="600" y="313" font-size="11.5" fill="#7C7768">em horas, não semanas</text>
+  <rect x="600" y="326" width="220" height="7" rx="3.5" fill="#B5532F" opacity="0.3"/>
+
+  <!-- Flow 7: Orquestração com subagentes (full width) -->
+  <g filter="url(#sh)">
+    <rect x="44" y="366" width="792" height="102" rx="12" fill="#FFFFFF" stroke="#EADfBF"/>
+  </g>
+  <path d="M44,378 a12,12 0 0 1 12,-12 h768 a12,12 0 0 1 12,12 v20 h-792 z" fill="#C2912C"/>
+  <circle cx="70" cy="388" r="14" fill="#FFFFFF"/>
+  <text x="70" y="393" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">7</text>
+  <text x="96" y="394" font-size="14" font-weight="700" fill="#FFFFFF">ORQUESTRAÇÃO COM SUBAGENTES</text>
+
+  <text x="60" y="422" font-size="12.5" fill="#7C7768">Tarefas grandes delegadas a subagentes especializados rodando em paralelo</text>
+  <text x="60" y="440" font-size="12.5" fill="#7C7768">um para backend · um para frontend · um para infraestrutura → orquestrador consolida os resultados</text>
+  <text x="60" y="458" font-size="12" font-weight="700" fill="#9A7A2E">o padrão das equipes maduras em 2026 — features grandes em horas, não semanas</text>
+
+  <!-- Rule of use banner -->
+  <g filter="url(#sh)">
+    <rect x="44" y="488" width="792" height="44" rx="22" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="507" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">REGRA UNIVERSAL</text>
+  <text x="440" y="523" font-size="12" fill="#FFFFFF" text-anchor="middle">Descreva o objetivo final — não cada passo intermediário. Use CLAUDE.md para instruções persistentes.</text>
+
+  <!-- Caption -->
+  <text x="44" y="550" font-size="12.5" fill="#7C7768" font-style="italic">Cada fluxo é um padrão reaplicável — domine todos para extrair ROI dramático em equipes de engenharia.</text>
+</svg>

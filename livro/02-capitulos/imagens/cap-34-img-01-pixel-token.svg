@@ -1,0 +1,101 @@
+<svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh33a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule33a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk33a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal33a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <marker id="arrGold33a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="418" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 33.1 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Input visual: do pixel ao token</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule33a)"/>
+
+  <!-- Stage 1: IMAGEM -->
+  <g filter="url(#sh33a)">
+    <rect x="44" y="130" width="150" height="100" rx="13" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <!-- Photo icon representation -->
+  <rect x="72" y="150" width="94" height="60" rx="6" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <rect x="80" y="158" width="30" height="20" rx="3" fill="#CFC8B6"/>
+  <rect x="116" y="162" width="40" height="14" rx="3" fill="#D8D0BD"/>
+  <rect x="80" y="184" width="78" height="18" rx="3" fill="#E6DFC9"/>
+  <text x="119" y="208" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">IMAGEM</text>
+  <text x="119" y="222" font-size="11" fill="#7C7768" text-anchor="middle">pixels · resolução</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M194,180 H238" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk33a)"/>
+
+  <!-- Stage 2: CODIFICAÇÃO VISUAL -->
+  <g filter="url(#sh33a)">
+    <rect x="244" y="130" width="166" height="100" rx="13" fill="#FBF6EA" stroke="#EADfBF"/>
+  </g>
+  <text x="327" y="172" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">CODIFICAÇÃO</text>
+  <text x="327" y="190" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">VISUAL</text>
+  <text x="327" y="210" font-size="11.5" fill="#7C7768" text-anchor="middle">representação interna</text>
+  <text x="327" y="224" font-size="11" fill="#7C7768" text-anchor="middle">do modelo</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M410,180 H454" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal33a)"/>
+
+  <!-- Stage 3: TOKENS VISUAIS -->
+  <g filter="url(#sh33a)">
+    <rect x="460" y="130" width="166" height="100" rx="13" fill="#EFF6F7" stroke="#CFE3E6"/>
+  </g>
+  <text x="543" y="172" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">TOKENS</text>
+  <text x="543" y="190" font-size="13" font-weight="700" fill="#2E7D8A" text-anchor="middle">VISUAIS</text>
+  <text x="543" y="210" font-size="11.5" fill="#7C7768" text-anchor="middle">no context window</text>
+  <text x="543" y="224" font-size="11" fill="#7C7768" text-anchor="middle">custo ~ resolução</text>
+
+  <!-- Arrow 3→4 -->
+  <path d="M626,180 H670" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold33a)"/>
+
+  <!-- Stage 4: RACIOCÍNIO (dark) -->
+  <g filter="url(#sh33a)">
+    <rect x="676" y="120" width="160" height="120" rx="13" fill="#1B2A33"/>
+  </g>
+  <text x="756" y="162" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">RACIOCÍNIO</text>
+  <text x="756" y="182" font-size="12.5" fill="#FFFFFF" text-anchor="middle">texto + visual</text>
+  <text x="756" y="200" font-size="11.5" fill="#C2912C" text-anchor="middle">processados juntos</text>
+  <text x="756" y="218" font-size="11.5" fill="#C2912C" text-anchor="middle">no mesmo modelo</text>
+
+  <!-- Tokens de texto feeding in from below -->
+  <g filter="url(#sh33a)">
+    <rect x="676" y="268" width="160" height="52" rx="11" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <text x="756" y="290" font-size="12.5" font-weight="700" fill="#44525C" text-anchor="middle">TOKENS DE TEXTO</text>
+  <text x="756" y="308" font-size="11" fill="#7C7768" text-anchor="middle">prompt · instruções</text>
+  <path d="M756,268 V242" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk33a)"/>
+
+  <!-- Cost annotation -->
+  <g filter="url(#sh33a)">
+    <rect x="44" y="264" width="370" height="68" rx="11" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <text x="64" y="290" font-size="13" font-weight="700" fill="#C2912C">Custo em tokens ~ resolução da imagem</text>
+  <text x="64" y="310" font-size="12" fill="#44525C">resolução moderada = custo menor, qualidade suficiente</text>
+  <text x="64" y="328" font-size="11.5" fill="#7C7768" font-style="italic">acima de certo teto, mais pixels não melhoram a análise</text>
+
+  <!-- Quality ceiling annotation -->
+  <g filter="url(#sh33a)">
+    <rect x="460" y="264" width="200" height="68" rx="11" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <text x="480" y="290" font-size="12.5" font-weight="700" fill="#B5532F">Teto de qualidade</text>
+  <text x="480" y="308" font-size="11.5" fill="#44525C">resolução de input</text>
+  <text x="480" y="326" font-size="11.5" fill="#44525C">define o teto de análise</text>
+
+  <!-- Caption -->
+  <text x="44" y="404" font-size="12.5" fill="#7C7768" font-style="italic">Vision é input plausível-mas-falível: o modelo raciocina sobre tokens visuais com a mesma confiança com que raciocina sobre texto — mesmo quando a imagem não é clara o suficiente.</text>
+</svg>

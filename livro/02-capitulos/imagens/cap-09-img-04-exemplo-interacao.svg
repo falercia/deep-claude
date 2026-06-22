@@ -1,0 +1,123 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="558" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 9.4 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Sessão real do Claude Code — paginação end-to-end</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Input prompt -->
+  <g filter="url(#sh)">
+    <rect x="44" y="112" width="792" height="48" rx="10" fill="#1B2A33"/>
+  </g>
+  <text x="62" y="132" font-size="11.5" font-weight="700" fill="#C2912C">PEDIDO:</text>
+  <text x="130" y="132" font-size="12" fill="#FFFFFF">"Adicione paginação no endpoint GET /clientes com query params page e limit, escreva testes e abra PR"</text>
+  <text x="62" y="150" font-size="11" fill="#44525C">claude · ~/projetos/api-clientes</text>
+
+  <!-- Arrow down -->
+  <path d="M440,160 V178" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk)"/>
+
+  <!-- Steps: vertical pipeline, 2 columns -->
+  <!-- Left column: steps 1-3 -->
+  <!-- Step 1 -->
+  <g filter="url(#sh)">
+    <rect x="44" y="182" width="384" height="72" rx="10" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="70" cy="218" r="14" fill="#2E7D8A"/>
+  <text x="70" y="223" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="94" y="208" font-size="13" font-weight="700" fill="#1B2A33">ANÁLISE DO WORKSPACE</text>
+  <text x="94" y="226" font-size="11.5" fill="#7C7768">Lê arquivos relevantes · identifica padrão existente</text>
+  <text x="94" y="243" font-size="11.5" fill="#7C7768">mapeia onde mudanças serão feitas</text>
+
+  <path d="M236,254 V268" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk)"/>
+
+  <!-- Step 2 -->
+  <g filter="url(#sh)">
+    <rect x="44" y="272" width="384" height="72" rx="10" fill="#FFFFFF" stroke="#EADfBF"/>
+  </g>
+  <circle cx="70" cy="308" r="14" fill="#C2912C"/>
+  <text x="70" y="313" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="94" y="298" font-size="13" font-weight="700" fill="#1B2A33">PROPOSTA DE PLANO</text>
+  <text x="94" y="316" font-size="11.5" fill="#7C7768">Decisões arquiteturais explícitas numeradas</text>
+  <text x="94" y="333" font-size="11.5" fill="#7C7768">query params · skip/take · metadata · testes</text>
+  <!-- Approval badge -->
+  <rect x="350" y="286" width="68" height="22" rx="11" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="384" y="301" font-size="10.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">&#x2713; APROVADO</text>
+
+  <path d="M236,344 V358" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk)"/>
+
+  <!-- Step 3 -->
+  <g filter="url(#sh)">
+    <rect x="44" y="362" width="384" height="72" rx="10" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="70" cy="398" r="14" fill="#2E7D8A"/>
+  <text x="70" y="403" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="94" y="388" font-size="13" font-weight="700" fill="#1B2A33">EXECUÇÃO DAS MUDANÇAS</text>
+  <text x="94" y="406" font-size="11.5" fill="#7C7768">Modifica arquivos com estilo consistente</text>
+  <text x="94" y="423" font-size="11.5" fill="#7C7768">routes.ts · service.ts · testes adicionados</text>
+
+  <!-- Arrow from col1 to col2 at step 3 level -->
+  <path d="M428,398 H448" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk)"/>
+
+  <!-- Right column: steps 4-6 -->
+  <!-- Step 4 -->
+  <g filter="url(#sh)">
+    <rect x="452" y="362" width="384" height="72" rx="10" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="478" cy="398" r="14" fill="#2E7D8A"/>
+  <text x="478" y="403" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="502" y="388" font-size="13" font-weight="700" fill="#1B2A33">VALIDAÇÃO COM TESTES</text>
+  <text x="502" y="406" font-size="11.5" fill="#7C7768">Roda suíte · novos passam · existentes intactos</text>
+  <text x="502" y="423" font-size="11.5" fill="#7C7768">se falha → propõe correção automaticamente</text>
+
+  <path d="M644,434 V448" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk)"/>
+
+  <!-- Step 5 -->
+  <g filter="url(#sh)">
+    <rect x="452" y="452" width="384" height="56" rx="10" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <circle cx="478" cy="480" r="14" fill="#1B2A33"/>
+  <text x="478" y="485" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">5</text>
+  <text x="502" y="472" font-size="13" font-weight="700" fill="#1B2A33">BRANCH E COMMIT</text>
+  <text x="502" y="490" font-size="11.5" fill="#7C7768">Nome convencionado · mensagem estruturada (CLAUDE.md)</text>
+
+  <path d="M644,508 V522" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk)"/>
+
+  <!-- Step 6 -->
+  <g filter="url(#sh)">
+    <rect x="452" y="526" width="384" height="18" rx="8" fill="#C2912C"/>
+  </g>
+  <circle cx="476" cy="535" r="9" fill="#FFFFFF"/>
+  <text x="476" y="539" font-size="10" font-weight="700" fill="#C2912C" text-anchor="middle">6</text>
+  <text x="494" y="539" font-size="12" font-weight="700" fill="#FFFFFF">PULL REQUEST ABERTO · pronto para review humano</text>
+
+  <!-- Left steps 1-2 connection going down and right -->
+  <path d="M236,434 V480 H428 H452" fill="none" stroke="#E6DFC9" stroke-width="1.5" stroke-dasharray="5 3"/>
+
+  <!-- Time indicator -->
+  <g filter="url(#sh)">
+    <rect x="44" y="452" width="384" height="92" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/>
+  </g>
+  <text x="236" y="480" font-size="15" font-weight="700" fill="#1B2A33" text-anchor="middle">3 — 7 minutos</text>
+  <text x="236" y="500" font-size="12" fill="#7C7768" text-anchor="middle">para tarefa que levaria 30 min a 2 horas</text>
+  <text x="236" y="520" font-size="12" fill="#7C7768" text-anchor="middle">manualmente</text>
+  <text x="236" y="538" font-size="11.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">você revisa o PR · comenta · Claude itera</text>
+
+  <!-- Caption -->
+  <text x="44" y="554" font-size="12.5" fill="#7C7768" font-style="italic">O trabalho cognitivo desloca-se de execução para supervisão crítica — a diferença que separa uso real de uso casual.</text>
+</svg>

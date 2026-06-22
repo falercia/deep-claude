@@ -1,0 +1,123 @@
+<svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule42b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="sh42b" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="418" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="38" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 42.2 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="68" font-size="23" font-weight="700" fill="#1B2A33">Os 4 Ds distribuídos por nível organizacional</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="86" width="86" height="3.5" rx="1.75" fill="url(#goldRule42b)"/>
+
+  <!-- Legend -->
+  <!-- Filled gold = PRIMÁRIO -->
+  <circle cx="510" cy="102" r="7" fill="#C2912C"/>
+  <text x="522" y="107" font-size="12" fill="#44525C" font-weight="600">Primário</text>
+  <!-- Outline teal = PRESENTE -->
+  <circle cx="590" cy="102" r="7" fill="none" stroke="#2E7D8A" stroke-width="2"/>
+  <text x="602" y="107" font-size="12" fill="#44525C" font-weight="600">Presente</text>
+  <!-- Grey = menor -->
+  <circle cx="672" cy="102" r="7" fill="#D8D0BD"/>
+  <text x="684" y="107" font-size="12" fill="#44525C" font-weight="600">Menor</text>
+
+  <!-- Column Headers: 4 Ds -->
+  <!-- Layout: row label area x=44..230, then 4 columns each 152px wide starting x=234 -->
+  <!-- D1: x=234..386, D2: x=390..542, D3: x=546..698, D4: x=702..834 -->
+
+  <rect x="234" y="116" width="148" height="38" rx="10" fill="#1B2A33" filter="url(#sh42b)"/>
+  <text x="308" y="131" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Delegation</text>
+  <text x="308" y="147" font-size="11" fill="#E2C879" text-anchor="middle">D1</text>
+
+  <rect x="390" y="116" width="148" height="38" rx="10" fill="#2E7D8A" filter="url(#sh42b)"/>
+  <text x="464" y="131" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Description</text>
+  <text x="464" y="147" font-size="11" fill="#CFE3E6" text-anchor="middle">D2</text>
+
+  <rect x="546" y="116" width="148" height="38" rx="10" fill="#2E7D8A" filter="url(#sh42b)"/>
+  <text x="620" y="131" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Discernment</text>
+  <text x="620" y="147" font-size="11" fill="#CFE3E6" text-anchor="middle">D3</text>
+
+  <rect x="702" y="116" width="136" height="38" rx="10" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="770" y="131" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Diligence</text>
+  <text x="770" y="147" font-size="11" fill="#FBF6EA" text-anchor="middle">D4</text>
+
+  <!-- Row 1: EXECUTIVO (y=168 to 230) -->
+  <rect x="44" y="164" width="182" height="62" rx="10" fill="#1B2A33" filter="url(#sh42b)"/>
+  <text x="135" y="189" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">EXECUTIVO</text>
+  <text x="135" y="207" font-size="11" fill="#E2C879" text-anchor="middle">Responsabilidade</text>
+  <text x="135" y="220" font-size="11" fill="#E2C879" text-anchor="middle">estratégica</text>
+  <!-- Row 1 background -->
+  <rect x="234" y="164" width="604" height="62" rx="4" fill="#F1ECE0" opacity="0.6"/>
+  <!-- Row 1, D1: Delegation = PRIMÁRIO (gold) -->
+  <circle cx="308" cy="195" r="14" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="308" y="200" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">D1</text>
+  <!-- Row 1, D2: Description = MENOR (grey) -->
+  <circle cx="464" cy="195" r="14" fill="#D8D0BD"/>
+  <text x="464" y="200" font-size="11" font-weight="600" fill="#7C7768" text-anchor="middle">D2</text>
+  <!-- Row 1, D3: Discernment = PRESENTE (outline teal) -->
+  <circle cx="620" cy="195" r="14" fill="none" stroke="#2E7D8A" stroke-width="2"/>
+  <text x="620" y="200" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">D3</text>
+  <!-- Row 1, D4: Diligence = PRIMÁRIO (gold) -->
+  <circle cx="770" cy="195" r="14" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="770" y="200" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">D4</text>
+  <!-- Annotation -->
+  <text x="236" y="236" font-size="11" fill="#C2912C" font-style="italic">Delegation + Diligence primárias</text>
+
+  <!-- Row 2: GERENCIAL (y=248 to 310) -->
+  <rect x="44" y="248" width="182" height="62" rx="10" fill="#2E7D8A" filter="url(#sh42b)"/>
+  <text x="135" y="273" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">GERENCIAL</text>
+  <text x="135" y="291" font-size="11" fill="#CFE3E6" text-anchor="middle">Execução e</text>
+  <text x="135" y="304" font-size="11" fill="#CFE3E6" text-anchor="middle">coordenação</text>
+  <!-- Row 2 background -->
+  <rect x="234" y="248" width="604" height="62" rx="4" fill="#EFF6F7" opacity="0.6"/>
+  <!-- Row 2, D1: PRIMÁRIO -->
+  <circle cx="308" cy="279" r="14" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="308" y="284" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">D1</text>
+  <!-- Row 2, D2: PRESENTE -->
+  <circle cx="464" cy="279" r="14" fill="none" stroke="#2E7D8A" stroke-width="2"/>
+  <text x="464" y="284" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">D2</text>
+  <!-- Row 2, D3: PRIMÁRIO -->
+  <circle cx="620" cy="279" r="14" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="620" y="284" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">D3</text>
+  <!-- Row 2, D4: PRESENTE -->
+  <circle cx="770" cy="279" r="14" fill="none" stroke="#2E7D8A" stroke-width="2"/>
+  <text x="770" y="284" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">D4</text>
+  <!-- Annotation -->
+  <text x="236" y="322" font-size="11" fill="#2E7D8A" font-style="italic">Todos os 4 Ds presentes — ênfase em Delegation + Discernment</text>
+
+  <!-- Row 3: OPERACIONAL (y=332 to 394) -->
+  <rect x="44" y="332" width="182" height="62" rx="10" fill="#44525C" filter="url(#sh42b)"/>
+  <text x="135" y="357" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">OPERACIONAL</text>
+  <text x="135" y="375" font-size="11" fill="#E6DFC9" text-anchor="middle">Uso direto</text>
+  <text x="135" y="388" font-size="11" fill="#E6DFC9" text-anchor="middle">do assistente</text>
+  <!-- Row 3 background -->
+  <rect x="234" y="332" width="604" height="62" rx="4" fill="#F1ECE0" opacity="0.6"/>
+  <!-- Row 3, D1: MENOR -->
+  <circle cx="308" cy="363" r="14" fill="#D8D0BD"/>
+  <text x="308" y="368" font-size="11" font-weight="600" fill="#7C7768" text-anchor="middle">D1</text>
+  <!-- Row 3, D2: PRIMÁRIO -->
+  <circle cx="464" cy="363" r="14" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="464" y="368" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">D2</text>
+  <!-- Row 3, D3: PRIMÁRIO -->
+  <circle cx="620" cy="363" r="14" fill="#C2912C" filter="url(#sh42b)"/>
+  <text x="620" y="368" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">D3</text>
+  <!-- Row 3, D4: PRESENTE -->
+  <circle cx="770" cy="363" r="14" fill="none" stroke="#2E7D8A" stroke-width="2"/>
+  <text x="770" y="368" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">D4</text>
+  <!-- Annotation -->
+  <text x="236" y="406" font-size="11" fill="#44525C" font-style="italic">Description + Discernment primárias</text>
+
+  <!-- Caption -->
+  <text x="44" y="408" font-size="12.5" fill="#7C7768" font-style="italic">"A distribuição dos 4 Ds por nível informa o design do programa por trilha — não há um programa único para todos."</text>
+</svg>

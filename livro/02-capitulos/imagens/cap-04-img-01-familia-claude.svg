@@ -1,0 +1,71 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh4a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule4a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="axEnd4a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="488" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 4.1 · INVARIANTE 4 — ENCAIXE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">A Família Claude: três tiers de otimização</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule4a)"/>
+
+  <!-- axes -->
+  <line x1="150" y1="415" x2="820" y2="415" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd4a)"/>
+  <line x1="150" y1="415" x2="150" y2="124" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd4a)"/>
+
+  <text x="490" y="446" font-size="12.5" fill="#1B2A33" text-anchor="middle" font-weight="600">CUSTO E LATÊNCIA →</text>
+  <text x="490" y="460" font-size="11.5" fill="#7C7768" text-anchor="middle">menor ←————————————————→ maior</text>
+  <text x="138" y="270" font-size="12.5" fill="#1B2A33" font-weight="600" text-anchor="middle" transform="rotate(-90 138 270)">CAPACIDADE →</text>
+  <text x="126" y="270" font-size="11" fill="#7C7768" text-anchor="middle" transform="rotate(-90 126 270)">menor ←————→ maior</text>
+
+  <!-- quadrant dividers -->
+  <line x1="460" y1="134" x2="460" y2="415" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="150" y1="275" x2="820" y2="275" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- OPUS — alta capacidade, alto custo: top-right -->
+  <g filter="url(#sh4a)">
+    <rect x="494" y="142" width="298" height="120" rx="13" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <path d="M494,155 a13,13 0 0 1 13,-13 h272 a13,13 0 0 1 13,13 v22 h-298 z" fill="#C2912C"/>
+  <text x="530" y="171" font-size="16" font-weight="700" fill="#FFFFFF">OPUS</text>
+  <text x="784" y="171" font-size="11.5" fill="#FBEFD0" text-anchor="end" font-style="italic">tier premium</text>
+  <text x="510" y="200" font-size="13" font-weight="700" fill="#9A7A2E">Fronteira absoluta de capacidade</text>
+  <text x="510" y="218" font-size="12" fill="#7C7768">raciocínio profundo · escrita crítica</text>
+  <text x="510" y="236" font-size="12" fill="#7C7768">decisão irreversível · extended thinking</text>
+  <text x="510" y="252" font-size="11.5" fill="#9A7A2E" font-weight="600">~5-10% das tarefas · custo mais alto</text>
+
+  <!-- HAIKU — baixa capacidade, baixo custo: bottom-left -->
+  <g filter="url(#sh4a)">
+    <rect x="170" y="290" width="268" height="108" rx="13" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <path d="M170,303 a13,13 0 0 1 13,-13 h242 a13,13 0 0 1 13,13 v22 h-268 z" fill="#2E7D8A"/>
+  <text x="208" y="319" font-size="16" font-weight="700" fill="#FFFFFF">HAIKU</text>
+  <text x="430" y="319" font-size="11.5" fill="#DCEFF1" text-anchor="end" font-style="italic">tier de velocidade</text>
+  <text x="188" y="346" font-size="13" font-weight="700" fill="#256A75">Latência mínima, custo mínimo</text>
+  <text x="188" y="364" font-size="12" fill="#7C7768">classificar · extrair · rotear · real-time</text>
+  <text x="188" y="382" font-size="11.5" fill="#256A75" font-weight="600">~25-45% do volume · ~20× mais barato que Opus</text>
+
+  <!-- SONNET — equilíbrio: center -->
+  <g filter="url(#sh4a)">
+    <rect x="290" y="196" width="268" height="88" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M290,209 a13,13 0 0 1 13,-13 h242 a13,13 0 0 1 13,13 v22 h-268 z" fill="#44525C"/>
+  <text x="326" y="225" font-size="16" font-weight="700" fill="#FFFFFF">SONNET</text>
+  <text x="550" y="225" font-size="11.5" fill="#D0D8DC" text-anchor="end" font-style="italic">tier balanceado</text>
+  <text x="308" y="252" font-size="13" font-weight="700" fill="#44525C">O default consciente para produção</text>
+  <text x="308" y="270" font-size="12" fill="#7C7768">capacidade próxima a Opus · custo muito menor</text>
+
+  <!-- center label note -->
+  <rect x="308" y="272" width="232" height="22" rx="6" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="424" y="287" font-size="11.5" fill="#44525C" font-weight="600" text-anchor="middle">~50-70% das tarefas · padrão de partida</text>
+
+  <text x="44" y="478" font-size="12.5" fill="#7C7768" font-style="italic">Três tiers, cada um otimizado para uma faixa de capacidade, velocidade e custo. Versões e preços correntes: Apêndice Vivo.</text>
+</svg>

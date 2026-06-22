@@ -1,0 +1,511 @@
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><title>Deep Claude — Sistema visual (piloto)</title>
+<style>
+body{font-family:'Inter','Segoe UI',Arial,sans-serif;max-width:1000px;margin:0 auto;padding:40px 28px;background:#fff;color:#1B2A33}
+h1{font-size:26px;margin-bottom:4px} .sub{color:#7C7768;margin-bottom:28px}
+.pal{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 36px}
+.sw{font-size:12px;text-align:center} .sw span{display:block;width:64px;height:42px;border-radius:8px;border:1px solid #e0dccd;margin-bottom:5px}
+figure{margin:0 0 40px} figcaption{font-weight:700;font-size:15px;margin-bottom:10px;color:#1B2A33}
+.frame{border:1px solid #ece7da;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 1px 6px rgba(27,42,51,.06)}
+.frame svg{display:block;width:100%;height:auto}
+code{display:inline-block;margin-top:8px;font-size:11.5px;color:#9a9485;background:#f6f3ec;padding:3px 8px;border-radius:5px}
+hr{border:none;border-top:1px solid #eee;margin:34px 0}
+</style></head><body>
+<h1>Deep Claude — Sistema de diagramas (piloto)</h1>
+<div class=sub>8 diagramas-piloto cobrindo todos os tipos visuais do livro. Valide o estilo aqui antes de eu escalar para os ~94. Vetorial puro (SVG) — imprime perfeito e é editável.</div>
+<div class=pal><div class="sw"><span style="background:#1B2A33"></span>tinta-ardósia<br><small>#1B2A33</small></div><div class="sw"><span style="background:#C2912C"></span>dourado<br><small>#C2912C</small></div><div class="sw"><span style="background:#2E7D8A"></span>teal apoio<br><small>#2E7D8A</small></div><div class="sw"><span style="background:#B5532F"></span>terracota risco<br><small>#B5532F</small></div><div class="sw"><span style="background:#FBF8F1"></span>papel<br><small>#FBF8F1</small></div><div class="sw"><span style="background:#44525C"></span>tinta-suave<br><small>#44525C</small></div></div>
+<hr>
+<figure><figcaption>Conceito — A Camada Dupla (Cap 46 · Inv. 3)</figcaption><div class="frame"><svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrGold" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+    <marker id="arrTeal" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 46.1 · INVARIANTE 3 — CAMADA DUPLA</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Decore o padrão, consulte o número</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- LEFT PANEL: O LIVRO -->
+  <g filter="url(#sh)">
+    <rect x="56" y="124" width="336" height="214" rx="13" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M56,137 a13,13 0 0 1 13,-13 h310 a13,13 0 0 1 13,13 v22 h-336 z" fill="#C2912C"/>
+  <text x="76" y="152" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="1">O LIVRO</text>
+  <text x="372" y="152" font-size="12" fill="#FBEFD0" text-anchor="end" font-style="italic">a camada que você internaliza</text>
+
+  <g font-size="13.5" fill="#1B2A33">
+    <rect x="76" y="178" width="296" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+    <text x="92" y="200">Método, princípio e julgamento</text>
+    <rect x="76" y="220" width="296" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+    <text x="92" y="242">Padrões de arquitetura e decisão</text>
+    <rect x="76" y="262" width="296" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+    <text x="92" y="284">Mecânica dos trade-offs</text>
+  </g>
+  <text x="76" y="320" font-size="12.5" fill="#9A7A2E" font-weight="600">MEIA-VIDA: ANOS</text>
+  <text x="372" y="320" font-size="12" fill="#7C7768" text-anchor="end">revisão em ciclos longos</text>
+
+  <!-- RIGHT PANEL: O REPOSITÓRIO -->
+  <g filter="url(#sh)">
+    <rect x="488" y="124" width="336" height="214" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M488,137 a13,13 0 0 1 13,-13 h310 a13,13 0 0 1 13,13 v22 h-336 z" fill="#2E7D8A"/>
+  <text x="508" y="152" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="1">O REPOSITÓRIO</text>
+  <text x="804" y="152" font-size="12" fill="#DCEFF1" text-anchor="end" font-style="italic">a camada que você consulta</text>
+
+  <g font-size="13.5" fill="#1B2A33">
+    <rect x="508" y="178" width="296" height="34" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+    <text x="524" y="200">Versões, preços e cotas</text>
+    <rect x="508" y="220" width="296" height="34" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+    <text x="524" y="242">Benchmarks, limites e regulação</text>
+    <rect x="508" y="262" width="296" height="34" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+    <text x="524" y="284">Recursos executáveis e evals</text>
+  </g>
+  <text x="508" y="320" font-size="12.5" fill="#256A75" font-weight="600">MEIA-VIDA: MESES</text>
+  <text x="804" y="320" font-size="12" fill="#7C7768" text-anchor="end">atualização contínua</text>
+
+  <!-- Arrows to decision -->
+  <path d="M224,338 C224,372 360,372 418,388" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold)"/>
+  <path d="M656,338 C656,372 520,372 462,388" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal)"/>
+
+  <!-- Decision node -->
+  <g filter="url(#sh)">
+    <rect x="290" y="392" width="300" height="52" rx="26" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="417" font-size="14.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">DECISÃO EXECUTIVA INFORMADA</text>
+  <text x="440" y="434" font-size="11.5" fill="#C2912C" text-anchor="middle" letter-spacing="0.5">cada camada puxada da fonte certa, no momento da decisão</text>
+
+  <!-- caption -->
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Misturar as duas camadas na mesma página faz o livro envelhecer junto com o release. Separá-las é o que envelhece bem.</text>
+</svg>
+</div><code>cap-46-img-01-camada-dupla.svg</code></figure><figure><figcaption>Anatomia/stack — Superfícies de acesso do Cowork (Cap 8 · Inv. 6)</figcaption><div class="frame"><svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <linearGradient id="riskBar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#DCEAEC"/><stop offset="1" stop-color="#E7B79F"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 8.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">As quatro superfícies de acesso do Cowork</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule2)"/>
+
+  <!-- risk axis -->
+  <rect x="44" y="128" width="14" height="280" rx="7" fill="url(#riskBar)"/>
+  <text x="51" y="120" font-size="11" fill="#B5532F" text-anchor="middle" font-weight="600">+ risco</text>
+  <text x="51" y="424" font-size="11" fill="#256A75" text-anchor="middle" font-weight="600">base</text>
+
+  <!-- four stacked surfaces, increasing reach/risk bottom→top -->
+  <!-- 1 pasta conectada (base) -->
+  <g filter="url(#sh2)"><rect x="82" y="356" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <circle cx="112" cy="382" r="14" fill="#2E7D8A"/><text x="112" y="387" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">1</text>
+  <text x="138" y="378" font-size="15" font-weight="700" fill="#1B2A33">Pasta conectada</text>
+  <text x="138" y="396" font-size="12.5" fill="#7C7768">arquivos reais, escopo escolhido por você — o limite mais importante</text>
+  <text x="822" y="387" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">disco local</text>
+
+  <!-- 2 sandbox -->
+  <g filter="url(#sh2)"><rect x="82" y="296" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <circle cx="112" cy="322" r="14" fill="#2E7D8A"/><text x="112" y="327" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">2</text>
+  <text x="138" y="318" font-size="15" font-weight="700" fill="#1B2A33">Sandbox isolado</text>
+  <text x="138" y="336" font-size="12.5" fill="#7C7768">execução de código separada da sua máquina — recurso de segurança</text>
+  <text x="822" y="327" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">ambiente isolado</text>
+
+  <!-- 3 computer use (preview) -->
+  <g filter="url(#sh2)"><rect x="82" y="236" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <circle cx="112" cy="262" r="14" fill="#B5532F"/><text x="112" y="267" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">3</text>
+  <text x="138" y="258" font-size="15" font-weight="700" fill="#1B2A33">Computer use <tspan fill="#B5532F" font-size="11" font-weight="700">· research preview</tspan></text>
+  <text x="138" y="276" font-size="12.5" fill="#7C7768">opera a tela e aplicativos — maior alcance, exige o freio mais explícito</text>
+  <text x="822" y="267" font-size="11.5" fill="#B5532F" text-anchor="end" font-weight="600">seus apps</text>
+
+  <!-- 4 conectores / MCP -->
+  <g filter="url(#sh2)"><rect x="82" y="176" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <circle cx="112" cy="202" r="14" fill="#B5532F"/><text x="112" y="207" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">4</text>
+  <text x="138" y="198" font-size="15" font-weight="700" fill="#1B2A33">Conectores e MCP</text>
+  <text x="138" y="216" font-size="12.5" fill="#7C7768">sistemas externos e compartilhados — ações frequentemente irreversíveis</text>
+  <text x="822" y="207" font-size="11.5" fill="#B5532F" text-anchor="end" font-weight="600">terceiros</text>
+
+  <text x="44" y="450" font-size="12.5" fill="#7C7768" font-style="italic">Cada superfície habilitada amplia o que o Cowork faz por você — e, na mesma medida, o que pode fazer de errado. Conceder acesso é decisão de proporcionalidade.</text>
+</svg>
+</div><code>cap-08-img-01-superficies-acesso.svg</code></figure><figure><figcaption>Ciclo — Autonomia supervisionada (Cap 8 · Inv. 6)</figcaption><div class="frame"><svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk3" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 8.2 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">O ciclo de autonomia supervisionada</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule3)"/>
+
+  <!-- dashed control ring -->
+  <circle cx="440" cy="280" r="182" fill="none" stroke="#C2912C" stroke-width="1.4" stroke-dasharray="3 6" opacity="0.7"/>
+  <text x="440" y="120" font-size="11.5" fill="#9A7A2E" text-anchor="middle" font-weight="600" letter-spacing="0.5">PARADA DISPONÍVEL A QUALQUER MOMENTO</text>
+
+  <!-- curved flow arrows clockwise -->
+  <path d="M520,150 A182,182 0 0 1 600,228" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk3)"/>
+  <path d="M620,340 A182,182 0 0 1 540,412" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk3)"/>
+  <path d="M340,410 A182,182 0 0 1 260,332" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk3)"/>
+  <path d="M262,222 A182,182 0 0 1 360,150" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk3)"/>
+
+  <!-- center -->
+  <g filter="url(#sh3)"><circle cx="440" cy="280" r="74" fill="#1B2A33"/></g>
+  <text x="440" y="272" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">HUMANO</text>
+  <text x="440" y="291" font-size="11" fill="#C2912C" text-anchor="middle">no ponto de</text>
+  <text x="440" y="305" font-size="11" fill="#C2912C" text-anchor="middle">decisão consequente</text>
+
+  <!-- N node -->
+  <g filter="url(#sh3)"><rect x="356" y="116" width="168" height="50" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <text x="440" y="139" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">1 · Objetivo</text>
+  <text x="440" y="156" font-size="11.5" fill="#7C7768" text-anchor="middle">o desfecho, não o passo</text>
+
+  <!-- E node (highlight: previsibilidade) -->
+  <g filter="url(#sh3)"><rect x="596" y="255" width="186" height="50" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <text x="689" y="278" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">2 · Plano exibido</text>
+  <text x="689" y="295" font-size="11.5" fill="#7C7768" text-anchor="middle">previsibilidade antes de agir</text>
+
+  <!-- S node (highlight gold: aprovação) -->
+  <g filter="url(#sh3)"><rect x="346" y="394" width="188" height="50" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+  <text x="440" y="417" font-size="14" font-weight="700" fill="#9A7A2E" text-anchor="middle">3 · Aprovação humana</text>
+  <text x="440" y="434" font-size="11.5" fill="#7C7768" text-anchor="middle">escopo e permissão granular</text>
+
+  <!-- W node -->
+  <g filter="url(#sh3)"><rect x="98" y="255" width="190" height="50" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <text x="193" y="278" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">4 · Execução visível</text>
+  <text x="193" y="295" font-size="11.5" fill="#7C7768" text-anchor="middle">observabilidade passo a passo</text>
+
+  <text x="44" y="480" font-size="12.5" fill="#7C7768" font-style="italic">Os quatro freios implementam a proporcionalidade: plano dá previsibilidade; permissão dá escopo; execução visível dá observabilidade; parada dá reversibilidade de curso.</text>
+</svg>
+</div><code>cap-08-img-02-ciclo-supervisao.svg</code></figure><figure><figcaption>Árvore de decisão — Qual Claude usar (Cap 5 · Inv. 4)</figcaption><div class="frame"><svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk4" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 5.1 · INVARIANTE 4 — ENCAIXE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Qual Claude usar? A árvore de decisão</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule4)"/>
+
+  <!-- Q1 -->
+  <g filter="url(#sh4)"><rect x="290" y="120" width="300" height="58" rx="12" fill="#1B2A33"/></g>
+  <text x="440" y="145" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Exige raciocínio profundo,</text>
+  <text x="440" y="164" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">análise crítica ou escrita executiva?</text>
+
+  <!-- Q1 -> Opus (sim) -->
+  <path d="M590,149 H706 V214" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="648" y="142" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q1 -> Q2 (não) -->
+  <path d="M440,178 V214" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="452" y="200" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Opus node -->
+  <g filter="url(#sh4)"><rect x="626" y="218" width="160" height="74" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <rect x="626" y="218" width="160" height="26" rx="12" fill="#C2912C"/><rect x="626" y="232" width="160" height="12" fill="#C2912C"/>
+  <text x="706" y="236" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPUS</text>
+  <text x="706" y="262" font-size="11.5" fill="#7C7768" text-anchor="middle">a faca cirúrgica</text>
+  <text x="706" y="279" font-size="11.5" fill="#7C7768" text-anchor="middle">~5-10% das chamadas</text>
+
+  <!-- Q2 -->
+  <g filter="url(#sh4)"><rect x="290" y="218" width="300" height="58" rx="12" fill="#243B47"/></g>
+  <text x="440" y="243" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Tarefa simples</text>
+  <text x="440" y="262" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">e volume gigantesco?</text>
+
+  <!-- Q2 -> Haiku (sim) -->
+  <path d="M290,247 H174 V330" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="220" y="240" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q2 -> Sonnet (não) -->
+  <path d="M440,276 V330" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="452" y="306" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Haiku node -->
+  <g filter="url(#sh4)"><rect x="94" y="334" width="160" height="74" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <rect x="94" y="334" width="160" height="26" rx="12" fill="#2E7D8A"/><rect x="94" y="348" width="160" height="12" fill="#2E7D8A"/>
+  <text x="174" y="352" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">HAIKU</text>
+  <text x="174" y="378" font-size="11.5" fill="#7C7768" text-anchor="middle">o motor de produção</text>
+  <text x="174" y="395" font-size="11.5" fill="#7C7768" text-anchor="middle">~25-45% das chamadas</text>
+
+  <!-- Sonnet node (default) -->
+  <g filter="url(#sh4)"><rect x="360" y="334" width="160" height="74" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <rect x="360" y="334" width="160" height="26" rx="12" fill="#44525C"/><rect x="360" y="348" width="160" height="12" fill="#44525C"/>
+  <text x="440" y="352" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">SONNET</text>
+  <text x="440" y="378" font-size="11.5" fill="#7C7768" text-anchor="middle">o cavalo de batalha</text>
+  <text x="440" y="395" font-size="11.5" fill="#9A7A2E" text-anchor="middle" font-weight="600">default consciente</text>
+
+  <text x="44" y="450" font-size="12.5" fill="#7C7768" font-style="italic">Usar o modelo errado não é só desperdício de custo — é degradação de resultado. O encaixe errado custa duas vezes. (Valores correntes no Apêndice Vivo.)</text>
+</svg>
+</div><code>cap-05-img-01-arvore-decisao-modelos.svg</code></figure><figure><figcaption>Arquitetura em camadas — MCP corporativo (Cap 28 · Inv. 6)</figcaption><div class="frame"><svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh5" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk5" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 28.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Arquitetura corporativa de MCP</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule5)"/>
+
+  <!-- Claude node -->
+  <g filter="url(#sh5)"><rect x="48" y="178" width="120" height="150" rx="14" fill="#1B2A33"/></g>
+  <text x="108" y="246" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">Claude</text>
+  <text x="108" y="266" font-size="11" fill="#C2912C" text-anchor="middle">cliente MCP</text>
+
+  <!-- connectors -->
+  <path d="M168,220 H214" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk5)" fill="none"/>
+  <path d="M168,253 H214" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk5)" fill="none"/>
+  <path d="M168,286 H214" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk5)" fill="none"/>
+
+  <!-- Layer 1: SaaS externo -->
+  <g filter="url(#sh5)"><rect x="220" y="126" width="612" height="60" rx="11" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <rect x="220" y="126" width="9" height="60" rx="4" fill="#2E7D8A"/>
+  <text x="244" y="150" font-size="14.5" font-weight="700" fill="#1B2A33">SaaS externos · servidores oficiais</text>
+  <text x="244" y="170" font-size="11.5" fill="#7C7768">manutenção zero · mantidos pelo fornecedor</text>
+  <g font-size="11" fill="#256A75">
+    <rect x="560" y="138" width="58" height="20" rx="10" fill="#EFF6F7" stroke="#CFE3E6"/><text x="589" y="152" text-anchor="middle">GitHub</text>
+    <rect x="624" y="138" width="50" height="20" rx="10" fill="#EFF6F7" stroke="#CFE3E6"/><text x="649" y="152" text-anchor="middle">Slack</text>
+    <rect x="680" y="138" width="62" height="20" rx="10" fill="#EFF6F7" stroke="#CFE3E6"/><text x="711" y="152" text-anchor="middle">Salesforce</text>
+    <rect x="748" y="138" width="74" height="20" rx="10" fill="#EFF6F7" stroke="#CFE3E6"/><text x="785" y="152" text-anchor="middle">Drive / CRM</text>
+  </g>
+
+  <!-- Layer 2: MCP interno -->
+  <g filter="url(#sh5)"><rect x="220" y="194" width="612" height="60" rx="11" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <rect x="220" y="194" width="9" height="60" rx="4" fill="#C2912C"/>
+  <text x="244" y="218" font-size="14.5" font-weight="700" fill="#1B2A33">MCP interno · construído pela empresa</text>
+  <text x="244" y="238" font-size="11.5" fill="#7C7768">expõe sistemas legados uma vez, reusável por qualquer cliente</text>
+  <g font-size="11" fill="#9A7A2E">
+    <rect x="612" y="206" width="44" height="20" rx="10" fill="#FBF6EA" stroke="#EADfBF"/><text x="634" y="220" text-anchor="middle">ERP</text>
+    <rect x="662" y="206" width="80" height="20" rx="10" fill="#FBF6EA" stroke="#EADfBF"/><text x="702" y="220" text-anchor="middle">Data warehouse</text>
+    <rect x="748" y="206" width="74" height="20" rx="10" fill="#FBF6EA" stroke="#EADfBF"/><text x="785" y="220" text-anchor="middle">CRM próprio</text>
+  </g>
+
+  <!-- Layer 3: filesystem local -->
+  <g filter="url(#sh5)"><rect x="220" y="262" width="612" height="60" rx="11" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <rect x="220" y="262" width="9" height="60" rx="4" fill="#44525C"/>
+  <text x="244" y="286" font-size="14.5" font-weight="700" fill="#1B2A33">Filesystem e local · por usuário</text>
+  <text x="244" y="306" font-size="11.5" fill="#7C7768">Desktop e Code · permissão granular configurável</text>
+  <g font-size="11" fill="#44525C">
+    <rect x="624" y="274" width="58" height="20" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/><text x="653" y="288" text-anchor="middle">Pastas</text>
+    <rect x="688" y="274" width="60" height="20" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/><text x="718" y="288" text-anchor="middle">Git local</text>
+    <rect x="754" y="274" width="68" height="20" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/><text x="788" y="288" text-anchor="middle">Apps locais</text>
+  </g>
+
+  <!-- Governance band -->
+  <g filter="url(#sh5)"><rect x="48" y="346" width="784" height="74" rx="13" fill="#1B2A33"/></g>
+  <text x="68" y="372" font-size="13.5" font-weight="700" fill="#C2912C" letter-spacing="0.5">CAMADA DE GOVERNANÇA — processo com dono, não lista de políticas</text>
+  <g font-size="12" fill="#FFFFFF">
+    <rect x="68" y="384" width="172" height="24" rx="12" fill="#2A3D48"/><text x="154" y="400" text-anchor="middle">Catálogo aprovado</text>
+    <rect x="252" y="384" width="186" height="24" rx="12" fill="#2A3D48"/><text x="345" y="400" text-anchor="middle">Permissão por função</text>
+    <rect x="450" y="384" width="186" height="24" rx="12" fill="#2A3D48"/><text x="543" y="400" text-anchor="middle">Log de cada chamada</text>
+    <rect x="648" y="384" width="166" height="24" rx="12" fill="#2A3D48"/><text x="731" y="400" text-anchor="middle">Revisão obrigatória</text>
+  </g>
+
+  <text x="44" y="458" font-size="12.5" fill="#7C7768" font-style="italic">Sem a camada de governança, MCP em escala vira passivo de segurança. Ela é o que separa arquitetura corporativa de coleção de integrações ad hoc.</text>
+</svg>
+</div><code>cap-28-img-01-mcp-corporativo.svg</code></figure><figure><figcaption>Pipeline — RAG fim a fim (Cap 27 · Inv. 1)</figcaption><div class="frame"><svg viewBox="0 0 880 450" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh6" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1B2A33" flood-opacity="0.11"/>
+    </filter>
+    <linearGradient id="goldRule6" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk6" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal6" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="448" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 27.1 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="75" font-size="23" font-weight="700" fill="#1B2A33">O pipeline RAG, fim a fim</text>
+  <rect x="44" y="87" width="86" height="3.5" rx="1.75" fill="url(#goldRule6)"/>
+
+  <!-- INDEXAÇÃO lane -->
+  <text x="44" y="120" font-size="11.5" font-weight="700" fill="#9A7A2E" letter-spacing="1">INDEXAÇÃO · offline, paga uma vez</text>
+  <g font-size="12.5" fill="#1B2A33" text-anchor="middle">
+    <g filter="url(#sh6)"><rect x="44" y="130" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+    <text x="119" y="153" font-weight="700">Documentos</text><text x="119" y="170" font-size="11" fill="#7C7768">fontes brutas</text>
+    <g filter="url(#sh6)"><rect x="232" y="130" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+    <text x="307" y="153" font-weight="700">Chunking</text><text x="307" y="170" font-size="11" fill="#7C7768">+ contexto do doc</text>
+    <g filter="url(#sh6)"><rect x="420" y="130" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+    <text x="495" y="153" font-weight="700">Embeddings</text><text x="495" y="170" font-size="11" fill="#7C7768">vetores + BM25</text>
+    <g filter="url(#sh6)"><rect x="608" y="130" width="224" height="50" rx="10" fill="#1B2A33" stroke="#1B2A33"/></g>
+    <text x="720" y="153" font-weight="700" fill="#FFFFFF">Índice híbrido</text><text x="720" y="170" font-size="11" fill="#C2912C">semântico + léxico</text>
+  </g>
+  <path d="M194,155 H230" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M382,155 H418" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M570,155 H606" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+
+  <!-- índice feeds retrieval (down arrow) -->
+  <path d="M720,180 V236" stroke="#2E7D8A" stroke-width="2.2" stroke-dasharray="4 4" marker-end="url(#arrTeal6)" fill="none"/>
+
+  <!-- CONSULTA lane -->
+  <text x="44" y="232" font-size="11.5" font-weight="700" fill="#256A75" letter-spacing="1">CONSULTA · online, por pergunta</text>
+  <g font-size="12.5" fill="#1B2A33" text-anchor="middle">
+    <g filter="url(#sh6)"><rect x="44" y="244" width="138" height="50" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+    <text x="113" y="267" font-weight="700">Pergunta</text><text x="113" y="284" font-size="11" fill="#7C7768">do usuário</text>
+    <g filter="url(#sh6)"><rect x="214" y="244" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+    <text x="289" y="267" font-weight="700">Recuperação</text><text x="289" y="284" font-size="11" fill="#7C7768">híbrida</text>
+    <g filter="url(#sh6)"><rect x="396" y="244" width="138" height="50" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+    <text x="465" y="267" font-weight="700">Reranking</text><text x="465" y="284" font-size="11" fill="#7C7768">2ª peneira</text>
+    <g filter="url(#sh6)"><rect x="566" y="244" width="160" height="50" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+    <text x="646" y="267" font-weight="700" fill="#9A7A2E">Geração</text><text x="646" y="284" font-size="11" fill="#7C7768">com citação</text>
+    <g filter="url(#sh6)"><rect x="758" y="244" width="74" height="50" rx="10" fill="#1B2A33"/></g>
+    <text x="795" y="267" font-weight="700" fill="#FFFFFF">Resposta</text><text x="795" y="284" font-size="10.5" fill="#C2912C">+ fonte</text>
+  </g>
+  <path d="M182,269 H212" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M364,269 H394" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M534,269 H564" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M726,269 H756" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+
+  <!-- evaluation callout -->
+  <g filter="url(#sh6)"><rect x="214" y="330" width="452" height="46" rx="11" fill="#F0DDD2" stroke="#E7CDBE"/></g>
+  <text x="234" y="350" font-size="13" font-weight="700" fill="#B5532F">⚠ Avalie a recuperação separada da geração</text>
+  <text x="234" y="367" font-size="11.5" fill="#7C7768">citar fonte não garante verdade — recuperação ruim só dá fontes plausíveis a uma resposta errada</text>
+
+  <text x="44" y="406" font-size="12.5" fill="#7C7768" font-style="italic">RAG aterra a geração em fontes recuperadas e auditáveis. Mal feito, não cura a alucinação — apenas a disfarça. (Cifras correntes no Apêndice Vivo.)</text>
+</svg>
+</div><code>cap-27-img-01-pipeline-rag.svg</code></figure><figure><figcaption>Loop — Tool use (Cap 22 · Inv. 6)</figcaption><div class="frame"><svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh7" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule7" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk7" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="438" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 22.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="75" font-size="23" font-weight="700" fill="#1B2A33">O loop de tool use</text>
+  <rect x="44" y="87" width="86" height="3.5" rx="1.75" fill="url(#goldRule7)"/>
+
+  <!-- Model node (left) -->
+  <g filter="url(#sh7)"><rect x="74" y="150" width="200" height="150" rx="14" fill="#1B2A33"/></g>
+  <text x="174" y="212" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">Modelo</text>
+  <text x="174" y="234" font-size="12" fill="#C2912C" text-anchor="middle">raciocina e decide</text>
+  <text x="174" y="250" font-size="12" fill="#C2912C" text-anchor="middle">QUANDO chamar</text>
+
+  <!-- Executor node (right) -->
+  <g filter="url(#sh7)"><rect x="606" y="150" width="200" height="150" rx="14" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <text x="706" y="206" font-size="17" font-weight="700" fill="#1B2A33" text-anchor="middle">Você / Executor</text>
+  <text x="706" y="228" font-size="12" fill="#7C7768" text-anchor="middle">executa a chamada</text>
+  <text x="706" y="244" font-size="12" fill="#7C7768" text-anchor="middle">no mundo real</text>
+
+  <!-- top arrow: model -> executor (requisição) -->
+  <path d="M274,190 H604" fill="none" stroke="#44525C" stroke-width="2.4" marker-end="url(#arrInk7)"/>
+  <text x="440" y="178" font-size="12.5" fill="#1B2A33" text-anchor="middle" font-weight="600">1 · requisição estruturada (qual tool, quais parâmetros)</text>
+
+  <!-- bottom arrow: executor -> model (resultado) -->
+  <path d="M606,262 H276" fill="none" stroke="#44525C" stroke-width="2.4" marker-end="url(#arrInk7)"/>
+  <text x="440" y="286" font-size="12.5" fill="#1B2A33" text-anchor="middle" font-weight="600">2 · resultado retorna ao contexto · o modelo continua</text>
+
+  <!-- governance boundary -->
+  <line x1="440" y1="120" x2="440" y2="330" stroke="#B5532F" stroke-width="1.6" stroke-dasharray="5 5"/>
+  <g filter="url(#sh7)"><rect x="356" y="332" width="168" height="40" rx="20" fill="#F0DDD2" stroke="#E7CDBE"/></g>
+  <text x="440" y="357" font-size="12.5" font-weight="700" fill="#B5532F" text-anchor="middle">fronteira de execução</text>
+  <text x="440" y="116" font-size="11.5" fill="#B5532F" text-anchor="middle" font-weight="600">PONTO DE GOVERNANÇA</text>
+
+  <text x="44" y="406" font-size="12.5" fill="#7C7768" font-style="italic">O modelo PEDE a ação; quem executa é você. É na fronteira de execução que escopo, auditoria e reversibilidade entram — proporcionais ao risco da tool.</text>
+</svg>
+</div><code>cap-22-img-01-ciclo-agentico.svg</code></figure><figure><figcaption>Matriz 2×2 — Portfolio de roteamento (Cap 5 · Inv. 4)</figcaption><div class="frame"><svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh8" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule8" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="axEnd" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 5.2 · INVARIANTE 4 — ENCAIXE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Portfolio de roteamento, não modelo único</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule8)"/>
+
+  <!-- axes -->
+  <line x1="150" y1="400" x2="800" y2="400" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd)"/>
+  <line x1="150" y1="400" x2="150" y2="128" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd)"/>
+  <text x="800" y="424" font-size="12.5" fill="#1B2A33" text-anchor="end" font-weight="600">VOLUME →</text>
+  <text x="138" y="124" font-size="12.5" fill="#1B2A33" text-anchor="end" font-weight="600" transform="rotate(-90 138 124)" >COMPLEXIDADE →</text>
+
+  <!-- quadrant guides -->
+  <line x1="475" y1="150" x2="475" y2="400" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="3 4"/>
+  <line x1="150" y1="275" x2="800" y2="275" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- Opus zone: alta complexidade, baixo volume (top-left) -->
+  <g filter="url(#sh8)"><rect x="178" y="166" width="266" height="92" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+  <text x="198" y="194" font-size="16" font-weight="700" fill="#9A7A2E">OPUS</text>
+  <text x="198" y="216" font-size="12" fill="#7C7768">alta complexidade · baixo volume</text>
+  <text x="198" y="234" font-size="12" fill="#7C7768">decisão irreversível, escrita crítica</text>
+  <text x="198" y="250" font-size="11.5" fill="#9A7A2E" font-weight="600">~5-10%</text>
+
+  <!-- Haiku zone: baixa complexidade, alto volume (bottom-right) -->
+  <g filter="url(#sh8)"><rect x="506" y="290" width="266" height="92" rx="12" fill="#EFF6F7" stroke="#BBD7DB"/></g>
+  <text x="526" y="318" font-size="16" font-weight="700" fill="#256A75">HAIKU</text>
+  <text x="526" y="340" font-size="12" fill="#7C7768">baixa complexidade · alto volume</text>
+  <text x="526" y="358" font-size="12" fill="#7C7768">classificar, extrair, rotear, real-time</text>
+  <text x="526" y="374" font-size="11.5" fill="#256A75" font-weight="600">~25-45%</text>
+
+  <!-- Sonnet zone: center/default diagonal band -->
+  <g filter="url(#sh8)"><rect x="372" y="248" width="210" height="74" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <text x="392" y="276" font-size="16" font-weight="700" fill="#44525C">SONNET</text>
+  <text x="392" y="296" font-size="12" fill="#7C7768">o default consciente</text>
+  <text x="392" y="313" font-size="11.5" fill="#44525C" font-weight="600">~50-70% · cobre o grosso</text>
+
+  <text x="44" y="448" font-size="12.5" fill="#7C7768" font-style="italic">Operação madura roteia entre os três por sinal de complexidade na entrada — ganha velocidade, qualidade e custo ao mesmo tempo, três objetivos que costumam estar em trade-off.</text>
+</svg>
+</div><code>cap-05-img-02-portfolio-roteamento.svg</code></figure>
+</body></html>

@@ -1,0 +1,97 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh32a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule32a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk32a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal32a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <marker id="arrRisk32a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#B5532F"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="488" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 32.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">O loop de visão e ação do computer use</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule32a)"/>
+
+  <!-- Center "LOOP" label -->
+  <text x="440" y="290" font-size="18" font-weight="700" fill="#CFC8B6" text-anchor="middle" letter-spacing="3">LOOP</text>
+
+  <!-- Node 1: CAPTURA (top-left, teal) -->
+  <g filter="url(#sh32a)">
+    <rect x="100" y="130" width="190" height="96" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M100,143 a13,13 0 0 1 13,-13 h164 a13,13 0 0 1 13,13 v20 h-190 z" fill="#2E7D8A"/>
+  <text x="195" y="157" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">1 · CAPTURA</text>
+  <text x="195" y="182" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">Screenshot</text>
+  <text x="195" y="200" font-size="11.5" fill="#7C7768" text-anchor="middle">estado atual da tela</text>
+  <text x="195" y="217" font-size="11" fill="#7C7768" text-anchor="middle">enviado ao modelo</text>
+
+  <!-- Node 2: RACIOCÍNIO (top-right, dark) -->
+  <g filter="url(#sh32a)">
+    <rect x="590" y="130" width="190" height="96" rx="13" fill="#1B2A33"/>
+  </g>
+  <text x="685" y="160" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2 · RACIOCÍNIO</text>
+  <text x="685" y="182" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">Claude analisa</text>
+  <text x="685" y="200" font-size="11.5" fill="#C2912C" text-anchor="middle">interpreta estado</text>
+  <text x="685" y="217" font-size="11.5" fill="#C2912C" text-anchor="middle">decide próxima ação</text>
+
+  <!-- Node 3: AÇÃO (bottom-right, white/tinta border) -->
+  <g filter="url(#sh32a)">
+    <rect x="590" y="360" width="190" height="96" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M590,373 a13,13 0 0 1 13,-13 h164 a13,13 0 0 1 13,13 v20 h-190 z" fill="#44525C"/>
+  <text x="685" y="387" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">3 · AÇÃO</text>
+  <text x="685" y="412" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">Executor realiza</text>
+  <text x="685" y="430" font-size="11.5" fill="#7C7768" text-anchor="middle">clique · digitação</text>
+  <text x="685" y="447" font-size="11" fill="#7C7768" text-anchor="middle">scroll · atalho</text>
+
+  <!-- Node 4: OBSERVAÇÃO (bottom-left, teal light) -->
+  <g filter="url(#sh32a)">
+    <rect x="100" y="360" width="190" height="96" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M100,373 a13,13 0 0 1 13,-13 h164 a13,13 0 0 1 13,13 v20 h-190 z" fill="#2E7D8A"/>
+  <text x="195" y="387" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">4 · OBSERVAÇÃO</text>
+  <text x="195" y="412" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">Novo screenshot</text>
+  <text x="195" y="430" font-size="11.5" fill="#7C7768" text-anchor="middle">estado resultante</text>
+  <text x="195" y="447" font-size="11" fill="#7C7768" text-anchor="middle">avalia progresso</text>
+
+  <!-- Arrows: 1→2 (top, left to right) -->
+  <path d="M290,178 H588" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal32a)"/>
+  <text x="440" y="170" font-size="11.5" fill="#256A75" text-anchor="middle" font-weight="600">imagem do estado atual</text>
+
+  <!-- Arrows: 2→3 (right side, top to bottom) -->
+  <path d="M685,226 V358" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk32a)"/>
+  <text x="730" y="298" font-size="11" fill="#44525C" font-weight="600" transform="rotate(90, 730, 298)">requisição de ação</text>
+
+  <!-- Governance intercept dashed line between 2 and 3 -->
+  <line x1="720" y1="246" x2="796" y2="246" stroke="#B5532F" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <rect x="730" y="252" width="106" height="28" rx="8" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="783" y="268" font-size="10.5" font-weight="700" fill="#B5532F" text-anchor="middle">PONTO DE</text>
+  <text x="783" y="280" font-size="10" font-weight="700" fill="#B5532F" text-anchor="middle">INTERCEPTAÇÃO</text>
+
+  <!-- Arrows: 3→4 (bottom, right to left) -->
+  <path d="M588,408 H292" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk32a)"/>
+  <text x="440" y="428" font-size="11.5" fill="#44525C" text-anchor="middle" font-weight="600">estado após ação</text>
+
+  <!-- Arrows: 4→1 (left side, bottom to top) -->
+  <path d="M195,358 V228" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal32a)"/>
+
+  <!-- Exit arrow from loop -->
+  <path d="M290,408 L380,460" fill="none" stroke="#C2912C" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrRisk32a)"/>
+  <rect x="360" y="452" width="188" height="28" rx="12" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="454" y="470" font-size="11.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">conclusão ou interrupção</text>
+
+  <!-- Caption -->
+  <text x="44" y="478" font-size="12.5" fill="#7C7768" font-style="italic">O modelo PEDE a ação; o executor realiza. Entre raciocínio e ação mora o ponto de governança: escopo, validação, e humano no loop para ações consequentes.</text>
+</svg>

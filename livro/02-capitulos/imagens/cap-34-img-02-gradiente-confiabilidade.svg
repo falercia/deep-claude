@@ -1,0 +1,89 @@
+<svg viewBox="0 0 880 450" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh33b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule33b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <linearGradient id="curveGrad33b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#B5532F" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="448" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 33.2 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Gradiente de confiabilidade de vision por tipo de tarefa</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule33b)"/>
+
+  <!-- Chart area -->
+  <!-- Y axis -->
+  <line x1="110" y1="118" x2="110" y2="360" stroke="#CFC8B6" stroke-width="1.5"/>
+  <!-- X axis -->
+  <line x1="110" y1="360" x2="836" y2="360" stroke="#CFC8B6" stroke-width="1.5"/>
+
+  <!-- Y axis label -->
+  <text x="58" y="244" font-size="12" font-weight="700" fill="#44525C" text-anchor="middle" transform="rotate(-90, 58, 244)">CONFIABILIDADE</text>
+  <!-- Y axis high/low labels -->
+  <text x="104" y="128" font-size="11.5" font-weight="700" fill="#2E7D8A" text-anchor="end">ALTA</text>
+  <text x="104" y="356" font-size="11.5" font-weight="700" fill="#B5532F" text-anchor="end">BAIXA</text>
+
+  <!-- Y gridlines (subtle) -->
+  <line x1="110" y1="178" x2="836" y2="178" stroke="#E6DFC9" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="110" y1="238" x2="836" y2="238" stroke="#E6DFC9" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="110" y1="298" x2="836" y2="298" stroke="#E6DFC9" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- X axis task labels (4 categories) -->
+  <!-- Task 1: Descrição (x=202) -->
+  <text x="202" y="380" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Descrição</text>
+  <text x="202" y="396" font-size="11" fill="#7C7768" text-anchor="middle">de imagens</text>
+
+  <!-- Task 2: Extração (x=394) -->
+  <text x="394" y="380" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Extração</text>
+  <text x="394" y="396" font-size="11" fill="#7C7768" text-anchor="middle">de documentos</text>
+
+  <!-- Task 3: Contagem (x=586) -->
+  <text x="586" y="380" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Contagem</text>
+  <text x="586" y="396" font-size="11" fill="#7C7768" text-anchor="middle">de objetos</text>
+
+  <!-- Task 4: Texto degradado (x=778) -->
+  <text x="778" y="380" font-size="13" font-weight="700" fill="#B5532F" text-anchor="middle">Texto degradado</text>
+  <text x="778" y="396" font-size="11" fill="#B5532F" text-anchor="middle">ambíguo / ilegível</text>
+
+  <!-- Vertical dividers between categories -->
+  <line x1="298" y1="120" x2="298" y2="360" stroke="#E6DFC9" stroke-width="1"/>
+  <line x1="490" y1="120" x2="490" y2="360" stroke="#E6DFC9" stroke-width="1"/>
+  <line x1="682" y1="120" x2="682" y2="360" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- Filled area under curve (gradient) -->
+  <polygon points="110,148 202,150 394,210 490,255 586,295 682,335 778,348 836,354 836,360 110,360" fill="url(#curveGrad33b)"/>
+
+  <!-- The descending curve (step-like, irregular) -->
+  <polyline points="110,148 202,150 280,155 298,170 394,210 430,230 490,255 540,278 586,295 620,316 682,335 730,342 778,348 836,354" fill="none" stroke="#C2912C" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Dot markers on key points -->
+  <circle cx="202" cy="150" r="6" fill="#C2912C"/>
+  <circle cx="394" cy="210" r="6" fill="#C2912C"/>
+  <circle cx="586" cy="295" r="6" fill="#C2912C"/>
+  <circle cx="778" cy="348" r="6" fill="#B5532F"/>
+
+  <!-- Annotation: "alta confiança" at left -->
+  <rect x="120" y="126" width="126" height="22" rx="11" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="183" y="141" font-size="11" font-weight="700" fill="#2E7D8A" text-anchor="middle">alta confiança media</text>
+
+  <!-- Annotation: "sem sinal de aviso" at right -->
+  <line x1="778" y1="348" x2="778" y2="318" stroke="#B5532F" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="716" y="298" width="128" height="22" rx="11" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="780" y="313" font-size="11" font-weight="700" fill="#B5532F" text-anchor="middle">sem sinal de aviso</text>
+
+  <!-- Band label: step pattern annotation -->
+  <rect x="418" y="132" width="182" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="509" y="148" font-size="11.5" fill="#9A7A2E" text-anchor="middle" font-weight="600">A curva cai sem regularidade</text>
+  <text x="509" y="162" font-size="11" fill="#7C7768" text-anchor="middle">e sem aviso visual no output</text>
+
+  <!-- Caption -->
+  <text x="44" y="436" font-size="12.5" fill="#7C7768" font-style="italic">O output errado tem a mesma aparência do certo. O design do processo — verificação proporcional ao custo do erro — é a única contramedida.</text>
+</svg>

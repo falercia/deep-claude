@@ -1,0 +1,112 @@
+<svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule432" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="52" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C" text-anchor="start">DIAGRAMA 43.2 · INVARIANTE 5 — CUSTO COMPOSTO</text>
+
+  <!-- Title -->
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33" text-anchor="start">O modelo de valor: cinco categorias com critério de legitimidade</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule432)"/>
+
+  <!-- Table outer border -->
+  <rect x="44" y="108" width="792" height="316" rx="10" stroke="#CFC8B6" stroke-width="1.5" fill="none"/>
+
+  <!-- Header backgrounds -->
+  <!-- Left header -->
+  <path d="M54,108 L244,108 L244,144 L44,144 L44,118 Q44,108 54,108 Z" fill="#F1ECE0"/>
+  <!-- Middle header -->
+  <rect x="244" y="108" width="296" height="36" fill="#2E7D8A"/>
+  <!-- Right header -->
+  <path d="M540,108 L826,108 Q836,108 836,118 L836,144 L540,144 Z" fill="#B5532F"/>
+
+  <!-- Header text -->
+  <text x="144" y="131" font-size="11" font-weight="700" fill="#44525C" letter-spacing="1.5" text-anchor="middle">CATEGORIA</text>
+  <text x="392" y="131" font-size="11" font-weight="700" fill="white" letter-spacing="1.5" text-anchor="middle">FORMA LEGÍTIMA</text>
+  <text x="688" y="131" font-size="11" font-weight="700" fill="white" letter-spacing="1.5" text-anchor="middle">FORMA ILEGÍTIMA</text>
+
+  <!-- Row backgrounds -->
+  <!-- Row 1: odd -->
+  <rect x="45" y="144" width="790" height="56" fill="#FEFCF7"/>
+  <!-- Row 2: even -->
+  <rect x="45" y="200" width="790" height="56" fill="#F7F3EA"/>
+  <!-- Row 3: odd -->
+  <rect x="45" y="256" width="790" height="56" fill="#FEFCF7"/>
+  <!-- Row 4: even -->
+  <rect x="45" y="312" width="790" height="56" fill="#F7F3EA"/>
+  <!-- Row 5: odd — clip to rounded corners at bottom -->
+  <path d="M45,368 L835,368 L835,414 Q835,424 825,424 L55,424 Q45,424 45,414 Z" fill="#FEFCF7"/>
+
+  <!-- Horizontal dividers -->
+  <line x1="44" y1="144" x2="836" y2="144" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="200" x2="836" y2="200" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="256" x2="836" y2="256" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="312" x2="836" y2="312" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="368" x2="836" y2="368" stroke="#CFC8B6" stroke-width="1"/>
+
+  <!-- Vertical dividers -->
+  <line x1="244" y1="108" x2="244" y2="424" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="540" y1="108" x2="540" y2="424" stroke="#CFC8B6" stroke-width="1"/>
+
+  <!-- ROW 1 (y=144, center=172) -->
+  <!-- Badge -->
+  <circle cx="62" cy="172" r="11" fill="#C2912C"/>
+  <text x="62" y="176.5" font-size="11" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <!-- Label text -->
+  <text x="82" y="176" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="start">Tempo recuperado</text>
+  <!-- Legítima chip -->
+  <rect x="272" y="158" width="240" height="28" rx="6" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="392" y="177" font-size="12" fill="#2E7D8A" text-anchor="middle">mede a tarefa real, antes e depois</text>
+  <!-- Ilegítima chip -->
+  <rect x="548" y="158" width="280" height="28" rx="6" fill="#F0DDD2" stroke="#B5532F" stroke-width="1"/>
+  <text x="688" y="177" font-size="12" fill="#B5532F" text-anchor="middle">horas declaradas em pesquisa, sem medição</text>
+
+  <!-- ROW 2 (y=200, center=228) -->
+  <circle cx="62" cy="228" r="11" fill="#2E7D8A"/>
+  <text x="62" y="232.5" font-size="11" font-weight="700" fill="white" text-anchor="middle">2</text>
+  <text x="82" y="232" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="start">Qualidade elevada</text>
+  <rect x="290" y="214" width="204" height="28" rx="6" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="392" y="233" font-size="12" fill="#2E7D8A" text-anchor="middle">taxa de erro com métrica objetiva</text>
+  <rect x="572" y="214" width="232" height="28" rx="6" fill="#F0DDD2" stroke="#B5532F" stroke-width="1"/>
+  <text x="688" y="233" font-size="12" fill="#B5532F" text-anchor="middle">satisfação percebida sem dado</text>
+
+  <!-- ROW 3 (y=256, center=284) -->
+  <circle cx="62" cy="284" r="11" fill="#C2912C"/>
+  <text x="62" y="288.5" font-size="11" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <text x="82" y="288" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="start">Velocidade de ciclo</text>
+  <rect x="282" y="270" width="220" height="28" rx="6" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="392" y="289" font-size="12" fill="#2E7D8A" text-anchor="middle">tempo de ciclo ponta a ponta</text>
+  <rect x="572" y="270" width="232" height="28" rx="6" fill="#F0DDD2" stroke="#B5532F" stroke-width="1"/>
+  <text x="688" y="289" font-size="12" fill="#B5532F" text-anchor="middle">tempo só no passo da IA</text>
+
+  <!-- ROW 4 (y=312, center=340) -->
+  <circle cx="62" cy="340" r="11" fill="#6B6355"/>
+  <text x="62" y="344.5" font-size="11" font-weight="700" fill="white" text-anchor="middle">4</text>
+  <text x="82" y="344" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="start">Custo evitado</text>
+  <rect x="268" y="326" width="248" height="28" rx="6" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="392" y="345" font-size="12" fill="#2E7D8A" text-anchor="middle">casos específicos, custo documentado</text>
+  <rect x="553" y="326" width="270" height="28" rx="6" fill="#F0DDD2" stroke="#B5532F" stroke-width="1"/>
+  <text x="688" y="345" font-size="12" fill="#B5532F" text-anchor="middle">expansão hipotética não contratada</text>
+
+  <!-- ROW 5 (y=368, center=396) -->
+  <circle cx="62" cy="396" r="11" fill="#B5532F"/>
+  <text x="62" y="400.5" font-size="11" font-weight="700" fill="white" text-anchor="middle">5</text>
+  <text x="82" y="400" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="start">Receita habilitada</text>
+  <rect x="258" y="382" width="268" height="28" rx="6" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="392" y="401" font-size="12" fill="#2E7D8A" text-anchor="middle">pipeline documentado, receita atribuível</text>
+  <rect x="548" y="382" width="280" height="28" rx="6" fill="#F0DDD2" stroke="#B5532F" stroke-width="1"/>
+  <text x="688" y="401" font-size="12" fill="#B5532F" text-anchor="middle">crescimento pós-adoção = resultado da IA</text>
+
+  <!-- Caption -->
+  <text x="44" y="446" font-size="12.5" fill="#7C7768" font-style="italic" text-anchor="start">ROI de slide usa as formas ilegítimas — convincente na apresentação, indefensável na auditoria.</text>
+  <text x="44" y="464" font-size="12.5" fill="#7C7768" font-style="italic" text-anchor="start">Valor capturado exige realocação do tempo liberado.</text>
+</svg>

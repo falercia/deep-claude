@@ -1,0 +1,74 @@
+<svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh1b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule1b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 1.2 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Os 4 Ds do AI Fluency Framework</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule1b)"/>
+
+  <!-- D1 Delegation -->
+  <g filter="url(#sh1b)">
+    <rect x="52" y="122" width="370" height="166" rx="13" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <path d="M52,135 a13,13 0 0 1 13,-13 h344 a13,13 0 0 1 13,13 v26 h-370 z" fill="#C2912C"/>
+  <circle cx="82" cy="148" r="14" fill="#9A7A2E"/>
+  <text x="82" y="153" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">D1</text>
+  <text x="110" y="153" font-size="14" font-weight="700" fill="#FFFFFF">DELEGATION</text>
+  <text x="72" y="186" font-size="13" font-weight="700" fill="#9A7A2E">Decidir SE, QUANDO e COMO</text>
+  <text x="72" y="204" font-size="13" fill="#7C7768">engajar IA — antes de qualquer prompt</text>
+  <text x="72" y="228" font-size="12" fill="#7C7768">Automation · Augmentation · Agency</text>
+  <text x="72" y="248" font-size="11.5" fill="#9A7A2E" font-weight="600">o mais estratégico dos quatro</text>
+  <text x="72" y="268" font-size="11" fill="#7C7768" font-style="italic">pergunta central: se der errado, quem explica?</text>
+
+  <!-- D2 Description -->
+  <g filter="url(#sh1b)">
+    <rect x="458" y="122" width="370" height="166" rx="13" fill="#F1ECE0" stroke="#D8D0BD"/>
+  </g>
+  <path d="M458,135 a13,13 0 0 1 13,-13 h344 a13,13 0 0 1 13,13 v26 h-370 z" fill="#44525C"/>
+  <circle cx="488" cy="148" r="14" fill="#2D3B45"/>
+  <text x="488" y="153" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">D2</text>
+  <text x="516" y="153" font-size="14" font-weight="700" fill="#FFFFFF">DESCRIPTION</text>
+  <text x="478" y="186" font-size="13" font-weight="700" fill="#44525C">Descrever objetivos com eficácia</text>
+  <text x="478" y="204" font-size="13" fill="#7C7768">para que a IA se comporte de forma útil</text>
+  <text x="478" y="228" font-size="12" fill="#7C7768">contexto · iteração · formato · escolha de modelo</text>
+  <text x="478" y="248" font-size="11.5" fill="#44525C" font-weight="600">prompt engineering = 1/4 de uma das 4 competências</text>
+  <text x="478" y="268" font-size="11" fill="#7C7768" font-style="italic">a 1ª resposta é ponto de partida, não entregável</text>
+
+  <!-- D3 Discernment -->
+  <g filter="url(#sh1b)">
+    <rect x="52" y="314" width="370" height="166" rx="13" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <path d="M52,327 a13,13 0 0 1 13,-13 h344 a13,13 0 0 1 13,13 v26 h-370 z" fill="#B5532F"/>
+  <circle cx="82" cy="340" r="14" fill="#8E3E22"/>
+  <text x="82" y="345" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">D3</text>
+  <text x="110" y="345" font-size="14" font-weight="700" fill="#FFFFFF">DISCERNMENT</text>
+  <text x="72" y="378" font-size="13" font-weight="700" fill="#B5532F">Julgar outputs criticamente</text>
+  <text x="72" y="396" font-size="13" fill="#7C7768">verificar, auditar, questionar o plausível</text>
+  <text x="72" y="420" font-size="12" fill="#7C7768">loop: Description → Discernment → re-Description</text>
+  <text x="72" y="440" font-size="11.5" fill="#B5532F" font-weight="600">a mais cara de negligenciar em decisões de impacto</text>
+  <text x="72" y="460" font-size="11" fill="#7C7768" font-style="italic">plausível não é sinônimo de correto</text>
+
+  <!-- D4 Diligence -->
+  <g filter="url(#sh1b)">
+    <rect x="458" y="314" width="370" height="166" rx="13" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <path d="M458,327 a13,13 0 0 1 13,-13 h344 a13,13 0 0 1 13,13 v26 h-370 z" fill="#2E7D8A"/>
+  <circle cx="488" cy="340" r="14" fill="#1E5560"/>
+  <text x="488" y="345" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">D4</text>
+  <text x="516" y="345" font-size="14" font-weight="700" fill="#FFFFFF">DILIGENCE</text>
+  <text x="478" y="378" font-size="13" font-weight="700" fill="#256A75">Assumir responsabilidade</text>
+  <text x="478" y="396" font-size="13" fill="#7C7768">pelo que fazemos com IA e como</text>
+  <text x="478" y="420" font-size="12" fill="#7C7768">conformidade · transparência · privacidade</text>
+  <text x="478" y="440" font-size="11.5" fill="#256A75" font-weight="600">o output sai com seu nome — você é responsável</text>
+  <text x="478" y="460" font-size="11" fill="#7C7768" font-style="italic">raramente treinado; mais conectado ao Inv. 8</text>
+
+  <text x="44" y="494" font-size="12.5" fill="#7C7768" font-style="italic">Delegation · Description · Discernment · Diligence. As quatro competências são igualmente pesadas — prompt engineering é apenas uma fração de Description.</text>
+</svg>

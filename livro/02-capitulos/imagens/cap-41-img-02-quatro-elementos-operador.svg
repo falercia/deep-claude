@@ -1,0 +1,102 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh40b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule40b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrGold40b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+    <marker id="arrInk40b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 40.2 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Os quatro elementos do operador competente</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule40b)"/>
+
+  <!-- Center: Resultado -->
+  <g filter="url(#sh40b)">
+    <rect x="330" y="200" width="220" height="80" rx="40" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="232" font-size="14.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">MULTIPLICADOR</text>
+  <text x="440" y="252" font-size="12" fill="#C2912C" text-anchor="middle">APONTANDO PARA O LADO CERTO</text>
+  <text x="440" y="269" font-size="11" fill="#7C7768" text-anchor="middle">resultado real, não risco disfarçado</text>
+
+  <!-- Element 1: Define critério ANTES (top) -->
+  <g filter="url(#sh40b)">
+    <rect x="290" y="118" width="300" height="68" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <circle cx="310" cy="152" r="16" fill="#C2912C"/>
+  <text x="310" y="157" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="340" y="140" font-size="13.5" font-weight="700" fill="#9A7A2E">Define critério ANTES de operar</text>
+  <text x="340" y="158" font-size="11.5" fill="#7C7768">rubrica explícita · golden set definido pelo domain expert</text>
+  <text x="340" y="174" font-size="11" fill="#7C7768">não pelo engenheiro de prompt</text>
+  <path d="M440,186 V200" fill="none" stroke="#C2912C" stroke-width="2" marker-end="url(#arrGold40b)"/>
+
+  <!-- Element 2: Decisão com dono humano (left) -->
+  <g filter="url(#sh40b)">
+    <rect x="44" y="196" width="272" height="88" rx="12" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <circle cx="64" cy="230" r="16" fill="#2E7D8A"/>
+  <text x="64" y="235" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="94" y="218" font-size="13.5" font-weight="700" fill="#256A75">Decisão consequente</text>
+  <text x="94" y="236" font-size="13.5" font-weight="700" fill="#256A75">com dono humano</text>
+  <text x="94" y="254" font-size="11.5" fill="#7C7768">juridicamente responsável</text>
+  <text x="94" y="270" font-size="11" fill="#7C7768">registro auditável</text>
+  <path d="M316,240 H330" fill="none" stroke="#2E7D8A" stroke-width="2" marker-end="url(#arrInk40b)"/>
+
+  <!-- Element 3: Mede o que importa (right) -->
+  <g filter="url(#sh40b)">
+    <rect x="564" y="196" width="272" height="88" rx="12" fill="#F1ECE0" stroke="#D8D0BD"/>
+  </g>
+  <circle cx="584" cy="230" r="16" fill="#44525C"/>
+  <text x="584" y="235" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="614" y="218" font-size="13.5" font-weight="700" fill="#44525C">Mede o que importa,</text>
+  <text x="614" y="236" font-size="13.5" font-weight="700" fill="#44525C">não o que é fácil</text>
+  <text x="614" y="254" font-size="11.5" fill="#7C7768">viés adversarial, não velocidade</text>
+  <text x="614" y="270" font-size="11" fill="#7C7768">faithfulness, não NPS de curto prazo</text>
+  <path d="M564,240 H550" fill="none" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk40b)"/>
+
+  <!-- Element 4: Detecta degradação (bottom) -->
+  <g filter="url(#sh40b)">
+    <rect x="290" y="298" width="300" height="88" rx="12" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <circle cx="310" cy="332" r="16" fill="#B5532F"/>
+  <text x="310" y="337" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="340" y="320" font-size="13.5" font-weight="700" fill="#B5532F">Constrói mecanismo de</text>
+  <text x="340" y="338" font-size="13.5" font-weight="700" fill="#B5532F">detecção de degradação</text>
+  <text x="340" y="356" font-size="11.5" fill="#7C7768">risco não é na implantação</text>
+  <text x="340" y="372" font-size="11" fill="#7C7768">é na erosão silenciosa após</text>
+  <path d="M440,298 V280" fill="none" stroke="#B5532F" stroke-width="2" marker-end="url(#arrInk40b)"/>
+
+  <!-- Bottom: Examples chips -->
+  <g font-size="11.5">
+    <g filter="url(#sh40b)">
+      <rect x="44" y="414" width="172" height="28" rx="8" fill="#EFF6F7" stroke="#BBD7DB"/>
+    </g>
+    <text x="130" y="432" text-anchor="middle" fill="#256A75" font-weight="600">RH: adversarial mensal</text>
+
+    <g filter="url(#sh40b)">
+      <rect x="228" y="414" width="172" height="28" rx="8" fill="#FBF6EA" stroke="#E2D4AC"/>
+    </g>
+    <text x="314" y="432" text-anchor="middle" fill="#9A7A2E" font-weight="600">Educação: defesa oral</text>
+
+    <g filter="url(#sh40b)">
+      <rect x="412" y="414" width="200" height="28" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+    </g>
+    <text x="512" y="432" text-anchor="middle" fill="#44525C" font-weight="600">Consultoria: golden set bloqueio</text>
+
+    <g filter="url(#sh40b)">
+      <rect x="624" y="414" width="202" height="28" rx="8" fill="#F0DDD2" stroke="#E7CDBE"/>
+    </g>
+    <text x="725" y="432" text-anchor="middle" fill="#B5532F" font-weight="600">Critério antes do output</text>
+  </g>
+
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Os quatro elementos são padrão de operação competente — independem do setor. A variável não é o modelo; é a presença ou ausência desse padrão no time que opera.</text>
+</svg>

@@ -1,0 +1,117 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh272" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule272" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk272" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="458" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 27.2 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">Dois sistemas, duas métricas de avaliação</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule272)"/>
+
+  <!-- System diagram at top: pipeline boxes -->
+  <g font-size="11.5" text-anchor="middle">
+    <g filter="url(#sh272)"><rect x="44" y="112" width="96" height="40" rx="8" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+    <text x="92" y="132" font-weight="700" fill="#1B2A33">Pergunta</text>
+    <text x="92" y="147" fill="#7C7768">do usuário</text>
+
+    <path d="M140,132 H160" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk272)" fill="none"/>
+
+    <g filter="url(#sh272)"><rect x="162" y="112" width="110" height="40" rx="8" fill="#EFF6F7" stroke="#2E7D8A"/></g>
+    <text x="217" y="132" font-weight="700" fill="#1B2A33">Recuperação</text>
+    <text x="217" y="147" fill="#7C7768">híbrida + rerank</text>
+
+    <path d="M272,132 H292" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk272)" fill="none"/>
+
+    <g filter="url(#sh272)"><rect x="294" y="112" width="110" height="40" rx="8" fill="#EFF6F7" stroke="#2E7D8A"/></g>
+    <text x="349" y="132" font-weight="700" fill="#1B2A33">Top-K Chunks</text>
+    <text x="349" y="147" fill="#7C7768">selecionados</text>
+
+    <path d="M404,132 H424" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk272)" fill="none"/>
+
+    <g filter="url(#sh272)"><rect x="426" y="112" width="110" height="40" rx="8" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+    <text x="481" y="132" font-weight="700" fill="#9A7A2E">Geração</text>
+    <text x="481" y="147" fill="#7C7768">com citação</text>
+
+    <path d="M536,132 H556" stroke="#44525C" stroke-width="2" marker-end="url(#arrInk272)" fill="none"/>
+
+    <g filter="url(#sh272)"><rect x="558" y="112" width="84" height="40" rx="8" fill="#1B2A33"/></g>
+    <text x="600" y="132" font-weight="700" fill="#FFFFFF">Resposta</text>
+    <text x="600" y="147" fill="#C2912C">+ fonte</text>
+  </g>
+
+  <!-- Evaluation split line -->
+  <line x1="404" y1="100" x2="404" y2="172" stroke="#B5532F" stroke-width="1.8" stroke-dasharray="5 4"/>
+  <text x="404" y="96" font-size="11" fill="#B5532F" text-anchor="middle" font-weight="700">FRONTEIRA DE AVALIAÇÃO</text>
+
+  <!-- LEFT COLUMN: Avaliação de Recuperação -->
+  <g filter="url(#sh272)">
+    <rect x="44" y="178" width="380" height="224" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <!-- header -->
+  <rect x="44" y="178" width="380" height="38" rx="12" fill="#2E7D8A"/>
+  <rect x="44" y="204" width="380" height="12" fill="#2E7D8A"/>
+  <text x="234" y="202" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#x27A1; AVALIAÇÃO DE RECUPERAÇÃO</text>
+
+  <!-- Pergunta diagnóstica -->
+  <text x="62" y="230" font-size="12" font-weight="700" fill="#1B2A33">Pergunta-chave:</text>
+  <text x="62" y="246" font-size="11.5" fill="#7C7768">O chunk correto apareceu no top-K?</text>
+
+  <!-- Metricas -->
+  <text x="62" y="270" font-size="12" font-weight="700" fill="#256A75">Métricas principais</text>
+  <circle cx="72" cy="284" r="4" fill="#2E7D8A"/>
+  <text x="84" y="288" font-size="11.5" fill="#1B2A33"><tspan font-weight="700">Recall@K</tspan> — chunk correto no top-K?</text>
+  <circle cx="72" cy="304" r="4" fill="#2E7D8A"/>
+  <text x="84" y="308" font-size="11.5" fill="#1B2A33"><tspan font-weight="700">MRR</tspan> — quão alto ficou o chunk certo?</text>
+  <circle cx="72" cy="324" r="4" fill="#2E7D8A"/>
+  <text x="84" y="328" font-size="11.5" fill="#1B2A33"><tspan font-weight="700">Taxa de falha</tspan> — sem chunk relevante</text>
+
+  <!-- Sinais de falha de recuperação -->
+  <line x1="62" y1="340" x2="406" y2="340" stroke="#E6DFC9" stroke-width="1"/>
+  <text x="62" y="358" font-size="12" font-weight="700" fill="#B5532F">Sinais de falha aqui:</text>
+  <text x="62" y="374" font-size="11.5" fill="#7C7768">&#x2022; Chunks sem contexto do documento maior</text>
+  <text x="62" y="390" font-size="11.5" fill="#7C7768">&#x2022; Só embeddings (sem BM25 para termos exatos)</text>
+
+  <!-- RIGHT COLUMN: Avaliação de Geração -->
+  <g filter="url(#sh272)">
+    <rect x="454" y="178" width="380" height="224" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <!-- header -->
+  <rect x="454" y="178" width="380" height="38" rx="12" fill="#C2912C"/>
+  <rect x="454" y="204" width="380" height="12" fill="#C2912C"/>
+  <text x="644" y="202" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#x27A1; AVALIAÇÃO DE GERAÇÃO</text>
+
+  <!-- Pergunta diagnóstica -->
+  <text x="472" y="230" font-size="12" font-weight="700" fill="#1B2A33">Pergunta-chave:</text>
+  <text x="472" y="246" font-size="11.5" fill="#7C7768">Com os chunks certos, a resposta foi fiel?</text>
+
+  <!-- Métricas -->
+  <text x="472" y="270" font-size="12" font-weight="700" fill="#9A7A2E">Métricas principais</text>
+  <circle cx="482" cy="284" r="4" fill="#C2912C"/>
+  <text x="494" y="288" font-size="11.5" fill="#1B2A33"><tspan font-weight="700">Faithfulness</tspan> — ancorada nos chunks?</text>
+  <circle cx="482" cy="304" r="4" fill="#C2912C"/>
+  <text x="494" y="308" font-size="11.5" fill="#1B2A33"><tspan font-weight="700">Answer correctness</tspan> — factualmente correta?</text>
+  <circle cx="482" cy="324" r="4" fill="#C2912C"/>
+  <text x="494" y="328" font-size="11.5" fill="#1B2A33"><tspan font-weight="700">Citation precision</tspan> — citou o chunk certo?</text>
+
+  <!-- Sinais de falha de geração -->
+  <line x1="472" y1="340" x2="816" y2="340" stroke="#E6DFC9" stroke-width="1"/>
+  <text x="472" y="358" font-size="12" font-weight="700" fill="#B5532F">Sinais de falha aqui:</text>
+  <text x="472" y="374" font-size="11.5" fill="#7C7768">&#x2022; Resposta correta, mas cita chunk errado</text>
+  <text x="472" y="390" font-size="11.5" fill="#7C7768">&#x2022; Chunk certo recuperado, mas geração infiel</text>
+
+  <!-- Bottom warning -->
+  <g filter="url(#sh272)">
+    <rect x="44" y="416" width="792" height="34" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="440" y="434" font-size="13" font-weight="700" fill="#B5532F" text-anchor="middle">Erro mais caro: medir só a resposta final sem separar recuperação de geração</text>
+  <text x="440" y="446" font-size="11.5" fill="#7C7768" text-anchor="middle">Sem golden set com chunk de origem identificado, é impossível saber onde melhorar o sistema</text>
+</svg>

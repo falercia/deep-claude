@@ -1,0 +1,132 @@
+<svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh-pl" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRulePl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrPl" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrPlRed" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#B5532F"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="44" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 42.2 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+  <!-- Title -->
+  <text x="44" y="74" font-size="23" font-weight="700" fill="#1B2A33">Pipeline de uso seguro corporativo</text>
+  <!-- Gold rule -->
+  <rect x="44" y="86" width="86" height="3.5" rx="1.75" fill="url(#goldRulePl)"/>
+
+  <!-- ── PIPELINE STAGE NODES ── -->
+  <!-- Stage positions: 6 stages across 880px, each ~108px wide, centered around y=265 -->
+  <!-- Connector lines first (drawn under nodes) -->
+
+  <!-- Arrow 1-2 -->
+  <line x1="170" y1="265" x2="210" y2="265" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrPl)"/>
+  <!-- Arrow 2-3 -->
+  <line x1="318" y1="265" x2="358" y2="265" stroke="#B5532F" stroke-width="2.2" marker-end="url(#arrPlRed)"/>
+  <!-- Arrow 3-4 -->
+  <line x1="466" y1="265" x2="506" y2="265" stroke="#B5532F" stroke-width="2.2" marker-end="url(#arrPlRed)"/>
+  <!-- Arrow 4-5 -->
+  <line x1="614" y1="265" x2="654" y2="265" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrPl)"/>
+  <!-- Arrow 5-6 -->
+  <line x1="758" y1="265" x2="782" y2="265" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrPl)"/>
+
+  <!-- ── STAGE 1: Classificação do dado ── -->
+  <g filter="url(#sh-pl)">
+    <rect x="44" y="230" width="126" height="70" rx="12" fill="#FFFFFF" stroke="#CFC8B6" stroke-width="1.5"/>
+  </g>
+  <text x="107" y="254" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Classificação</text>
+  <text x="107" y="270" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="middle">do dado</text>
+  <text x="107" y="288" font-size="10.5" fill="#7C7768" text-anchor="middle">público · interno ·</text>
+  <text x="107" y="300" font-size="10.5" fill="#7C7768" text-anchor="middle">confidencial · restrito</text>
+  <!-- Step badge -->
+  <circle cx="57" cy="236" r="11" fill="#1B2A33"/>
+  <text x="57" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+
+  <!-- ── STAGE 2: Escopo de acesso ── -->
+  <g filter="url(#sh-pl)">
+    <rect x="212" y="230" width="106" height="70" rx="12" fill="#FFFFFF" stroke="#CFC8B6" stroke-width="1.5"/>
+  </g>
+  <text x="265" y="254" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Escopo de</text>
+  <text x="265" y="270" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="middle">acesso</text>
+  <text x="265" y="288" font-size="10.5" fill="#7C7768" text-anchor="middle">mínimo necessário</text>
+  <text x="265" y="300" font-size="10.5" fill="#7C7768" text-anchor="middle">allow-list</text>
+  <circle cx="225" cy="236" r="11" fill="#1B2A33"/>
+  <text x="225" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+
+  <!-- ── STAGE 3: Aprovação humana (GATE - terracota) ── -->
+  <g filter="url(#sh-pl)">
+    <rect x="360" y="222" width="106" height="86" rx="12" fill="#F0DDD2" stroke="#B5532F" stroke-width="2.2"/>
+  </g>
+  <!-- Gate label top -->
+  <rect x="360" y="222" width="106" height="22" rx="12" fill="#B5532F"/>
+  <rect x="360" y="234" width="106" height="10" fill="#B5532F"/>
+  <text x="413" y="237" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">GATE</text>
+  <text x="413" y="264" font-size="12.5" font-weight="700" fill="#8C3A1F" text-anchor="middle">Aprovação</text>
+  <text x="413" y="280" font-size="12.5" font-weight="700" fill="#8C3A1F" text-anchor="middle">humana</text>
+  <text x="413" y="296" font-size="10.5" fill="#7C7768" text-anchor="middle">ações de raio alto</text>
+  <circle cx="373" cy="232" r="11" fill="#B5532F"/>
+  <text x="373" y="236" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+
+  <!-- ── STAGE 4: Eval / validação (GATE - terracota) ── -->
+  <g filter="url(#sh-pl)">
+    <rect x="508" y="222" width="106" height="86" rx="12" fill="#F0DDD2" stroke="#B5532F" stroke-width="2.2"/>
+  </g>
+  <rect x="508" y="222" width="106" height="22" rx="12" fill="#B5532F"/>
+  <rect x="508" y="234" width="106" height="10" fill="#B5532F"/>
+  <text x="561" y="237" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">GATE</text>
+  <text x="561" y="264" font-size="12.5" font-weight="700" fill="#8C3A1F" text-anchor="middle">Eval /</text>
+  <text x="561" y="280" font-size="12.5" font-weight="700" fill="#8C3A1F" text-anchor="middle">validação</text>
+  <text x="561" y="296" font-size="10.5" fill="#7C7768" text-anchor="middle">qualidade + risco</text>
+  <circle cx="521" cy="232" r="11" fill="#B5532F"/>
+  <text x="521" y="236" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+
+  <!-- ── STAGE 5: Produção ── -->
+  <g filter="url(#sh-pl)">
+    <rect x="656" y="230" width="102" height="70" rx="12" fill="#FFFFFF" stroke="#CFC8B6" stroke-width="1.5"/>
+  </g>
+  <text x="707" y="260" font-size="12.5" font-weight="700" fill="#1B2A33" text-anchor="middle">Produção</text>
+  <text x="707" y="278" font-size="10.5" fill="#7C7768" text-anchor="middle">RACI assinado</text>
+  <text x="707" y="292" font-size="10.5" fill="#7C7768" text-anchor="middle">kill switch pronto</text>
+  <circle cx="669" cy="236" r="11" fill="#1B2A33"/>
+  <text x="669" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+
+  <!-- ── STAGE 6: Monitoramento ── -->
+  <g filter="url(#sh-pl)">
+    <rect x="784" y="230" width="80" height="70" rx="12" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5"/>
+  </g>
+  <text x="824" y="258" font-size="12.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">Monito-</text>
+  <text x="824" y="274" font-size="12.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">ramento</text>
+  <text x="824" y="292" font-size="10.5" fill="#7C7768" text-anchor="middle">logs + alertas</text>
+  <circle cx="797" cy="236" r="11" fill="#2E7D8A"/>
+  <text x="797" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+
+  <!-- ── GATE ANNOTATIONS ── -->
+  <!-- Gate 3 annotation arrow down -->
+  <line x1="413" y1="308" x2="413" y2="360" stroke="#B5532F" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <circle cx="413" cy="370" r="3" fill="#B5532F"/>
+  <text x="413" y="388" font-size="10.5" fill="#B5532F" text-anchor="middle" font-weight="600">dono nominado</text>
+  <text x="413" y="402" font-size="10" fill="#7C7768" text-anchor="middle">quem assina responde</text>
+
+  <!-- Gate 4 annotation arrow down -->
+  <line x1="561" y1="308" x2="561" y2="360" stroke="#B5532F" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <circle cx="561" cy="370" r="3" fill="#B5532F"/>
+  <text x="561" y="388" font-size="10.5" fill="#B5532F" text-anchor="middle" font-weight="600">critério explícito</text>
+  <text x="561" y="402" font-size="10" fill="#7C7768" text-anchor="middle">não apenas checklist</text>
+
+  <!-- Gate legend chip -->
+  <rect x="44" y="418" width="14" height="14" rx="3" fill="#B5532F"/>
+  <text x="64" y="430" font-size="11" fill="#B5532F" font-weight="600">Gate de governança</text>
+  <text x="64" y="444" font-size="11" fill="#7C7768">— ponto onde o humano responde; remover um gate é trocar governança por velocidade.</text>
+
+  <!-- Legend -->
+  <text x="44" y="478" font-size="12.5" fill="#7C7768" font-style="italic">Cada gate é um ponto onde o humano responde; tirar um gate é trocar governança por velocidade. O Invariante 8 não é burocracia: é o princípio de que accountability não pode ser delegada.</text>
+</svg>

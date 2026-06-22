@@ -1,0 +1,67 @@
+<svg viewBox="0 0 880 450" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh6" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1B2A33" flood-opacity="0.11"/>
+    </filter>
+    <linearGradient id="goldRule6" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk6" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal6" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="448" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 27.1 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="75" font-size="23" font-weight="700" fill="#1B2A33">O pipeline RAG, fim a fim</text>
+  <rect x="44" y="87" width="86" height="3.5" rx="1.75" fill="url(#goldRule6)"/>
+
+  <!-- INDEXAÇÃO lane -->
+  <text x="44" y="120" font-size="11.5" font-weight="700" fill="#9A7A2E" letter-spacing="1">INDEXAÇÃO · offline, paga uma vez</text>
+  <g font-size="12.5" fill="#1B2A33" text-anchor="middle">
+    <g filter="url(#sh6)"><rect x="44" y="130" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+    <text x="119" y="153" font-weight="700">Documentos</text><text x="119" y="170" font-size="11" fill="#7C7768">fontes brutas</text>
+    <g filter="url(#sh6)"><rect x="232" y="130" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+    <text x="307" y="153" font-weight="700">Chunking</text><text x="307" y="170" font-size="11" fill="#7C7768">+ contexto do doc</text>
+    <g filter="url(#sh6)"><rect x="420" y="130" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+    <text x="495" y="153" font-weight="700">Embeddings</text><text x="495" y="170" font-size="11" fill="#7C7768">vetores + BM25</text>
+    <g filter="url(#sh6)"><rect x="608" y="130" width="224" height="50" rx="10" fill="#1B2A33" stroke="#1B2A33"/></g>
+    <text x="720" y="153" font-weight="700" fill="#FFFFFF">Índice híbrido</text><text x="720" y="170" font-size="11" fill="#C2912C">semântico + léxico</text>
+  </g>
+  <path d="M194,155 H230" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M382,155 H418" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M570,155 H606" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+
+  <!-- índice feeds retrieval (down arrow) -->
+  <path d="M720,180 V236" stroke="#2E7D8A" stroke-width="2.2" stroke-dasharray="4 4" marker-end="url(#arrTeal6)" fill="none"/>
+
+  <!-- CONSULTA lane -->
+  <text x="44" y="232" font-size="11.5" font-weight="700" fill="#256A75" letter-spacing="1">CONSULTA · online, por pergunta</text>
+  <g font-size="12.5" fill="#1B2A33" text-anchor="middle">
+    <g filter="url(#sh6)"><rect x="44" y="244" width="138" height="50" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+    <text x="113" y="267" font-weight="700">Pergunta</text><text x="113" y="284" font-size="11" fill="#7C7768">do usuário</text>
+    <g filter="url(#sh6)"><rect x="214" y="244" width="150" height="50" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+    <text x="289" y="267" font-weight="700">Recuperação</text><text x="289" y="284" font-size="11" fill="#7C7768">híbrida</text>
+    <g filter="url(#sh6)"><rect x="396" y="244" width="138" height="50" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+    <text x="465" y="267" font-weight="700">Reranking</text><text x="465" y="284" font-size="11" fill="#7C7768">2ª peneira</text>
+    <g filter="url(#sh6)"><rect x="566" y="244" width="160" height="50" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+    <text x="646" y="267" font-weight="700" fill="#9A7A2E">Geração</text><text x="646" y="284" font-size="11" fill="#7C7768">com citação</text>
+    <g filter="url(#sh6)"><rect x="758" y="244" width="74" height="50" rx="10" fill="#1B2A33"/></g>
+    <text x="795" y="267" font-weight="700" fill="#FFFFFF">Resposta</text><text x="795" y="284" font-size="10.5" fill="#C2912C">+ fonte</text>
+  </g>
+  <path d="M182,269 H212" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M364,269 H394" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M534,269 H564" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+  <path d="M726,269 H756" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk6)" fill="none"/>
+
+  <!-- evaluation callout -->
+  <g filter="url(#sh6)"><rect x="214" y="330" width="452" height="46" rx="11" fill="#F0DDD2" stroke="#E7CDBE"/></g>
+  <text x="234" y="350" font-size="13" font-weight="700" fill="#B5532F">⚠ Avalie a recuperação separada da geração</text>
+  <text x="234" y="367" font-size="11.5" fill="#7C7768">citar fonte não garante verdade — recuperação ruim só dá fontes plausíveis a uma resposta errada</text>
+
+  <text x="44" y="406" font-size="12.5" fill="#7C7768" font-style="italic">RAG aterra a geração em fontes recuperadas e auditáveis. Mal feito, não cura a alucinação — apenas a disfarça. (Cifras correntes no Apêndice Vivo.)</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh17" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule17" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="488" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + título -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 17.1 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Quando Claude Voice brilha — e quando evitar</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule17)"/>
+
+  <!-- COLUNA ESQUERDA: Quando Voice brilha -->
+  <g filter="url(#sh17)">
+    <rect x="44" y="112" width="380" height="296" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M44,125 a13,13 0 0 1 13,-13 h354 a13,13 0 0 1 13,13 v22 h-380 z" fill="#2E7D8A"/>
+  <text x="234" y="141" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">VOZ BRILHA</text>
+
+  <!-- Item 1 -->
+  <circle cx="78" cy="186" r="14" fill="#2E7D8A"/>
+  <text x="78" y="191" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="104" y="181" font-size="14" font-weight="700" fill="#1B2A33">Mãos ocupadas</text>
+  <text x="104" y="198" font-size="12" fill="#7C7768">dirigindo, cozinhando, em exercício físico</text>
+
+  <line x1="78" y1="200" x2="78" y2="226" stroke="#CFE3E6" stroke-width="1"/>
+
+  <!-- Item 2 -->
+  <circle cx="78" cy="240" r="14" fill="#2E7D8A"/>
+  <text x="78" y="245" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="104" y="235" font-size="14" font-weight="700" fill="#1B2A33">Brainstorm em voz alta</text>
+  <text x="104" y="252" font-size="12" fill="#7C7768">explorar ideias, estruturar argumentos</text>
+
+  <line x1="78" y1="254" x2="78" y2="280" stroke="#CFE3E6" stroke-width="1"/>
+
+  <!-- Item 3 -->
+  <circle cx="78" cy="294" r="14" fill="#2E7D8A"/>
+  <text x="78" y="299" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="104" y="289" font-size="14" font-weight="700" fill="#1B2A33">Velocidade sobre precisão</text>
+  <text x="104" y="306" font-size="12" fill="#7C7768">rascunho rápido, ditado, ideia passageira</text>
+
+  <line x1="78" y1="308" x2="78" y2="334" stroke="#CFE3E6" stroke-width="1"/>
+
+  <!-- Item 4 -->
+  <circle cx="78" cy="348" r="14" fill="#2E7D8A"/>
+  <text x="78" y="353" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="104" y="343" font-size="14" font-weight="700" fill="#1B2A33">Aprendizado interativo</text>
+  <text x="104" y="360" font-size="12" fill="#7C7768">Q&amp;A sobre tema novo, diálogo adaptativo</text>
+
+  <rect x="64" y="378" width="340" height="22" rx="7" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="234" y="393" font-size="11.5" fill="#256A75" text-anchor="middle" font-weight="700">voz gera pensamento diferente do teclado</text>
+
+  <!-- COLUNA DIREITA: Quando evitar -->
+  <g filter="url(#sh17)">
+    <rect x="456" y="112" width="380" height="296" rx="13" fill="#FFFFFF" stroke="#E7CDBE"/>
+  </g>
+  <path d="M456,125 a13,13 0 0 1 13,-13 h354 a13,13 0 0 1 13,13 v22 h-380 z" fill="#B5532F"/>
+  <text x="646" y="141" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">EVITE — USE TECLADO</text>
+
+  <!-- Item 1 -->
+  <circle cx="490" cy="186" r="14" fill="#B5532F"/>
+  <text x="490" y="191" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="516" y="181" font-size="14" font-weight="700" fill="#1B2A33">Conteúdo técnico preciso</text>
+  <text x="516" y="198" font-size="12" fill="#7C7768">código, URLs, nomes próprios complexos</text>
+
+  <line x1="490" y1="200" x2="490" y2="226" stroke="#E7CDBE" stroke-width="1"/>
+
+  <!-- Item 2 -->
+  <circle cx="490" cy="240" r="14" fill="#B5532F"/>
+  <text x="490" y="245" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="516" y="235" font-size="14" font-weight="700" fill="#1B2A33">Alta precisão necessária</text>
+  <text x="516" y="252" font-size="12" fill="#7C7768">edição fina, revisão, análise de números</text>
+
+  <line x1="490" y1="254" x2="490" y2="280" stroke="#E7CDBE" stroke-width="1"/>
+
+  <!-- Item 3 -->
+  <circle cx="490" cy="294" r="14" fill="#B5532F"/>
+  <text x="490" y="299" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="516" y="289" font-size="14" font-weight="700" fill="#1B2A33">Ambiente barulhento</text>
+  <text x="516" y="306" font-size="12" fill="#7C7768">transporte lotado, vento forte, ruído alto</text>
+
+  <line x1="490" y1="308" x2="490" y2="334" stroke="#E7CDBE" stroke-width="1"/>
+
+  <!-- Item 4 -->
+  <circle cx="490" cy="348" r="14" fill="#B5532F"/>
+  <text x="490" y="353" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="516" y="343" font-size="14" font-weight="700" fill="#1B2A33">Privacidade da conversa</text>
+  <text x="516" y="360" font-size="12" fill="#7C7768">pessoas próximas não devem ouvir</text>
+
+  <rect x="476" y="378" width="340" height="22" rx="7" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="646" y="393" font-size="11.5" fill="#B5532F" text-anchor="middle" font-weight="700">voz gera rascunho — revise antes de exportar</text>
+
+  <!-- Painel inferior: dica universal -->
+  <g filter="url(#sh17)">
+    <rect x="44" y="424" width="792" height="48" rx="11" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="64" y="442" font-size="12.5" font-weight="700" fill="#9A7A2E">Dica universal de operador:</text>
+  <text x="64" y="460" font-size="12" fill="#7C7768">Sinalize o destino do conteúdo no começo da sessão e peça resumo estruturado no fim — insights de voz não ficam perdidos.</text>
+
+  <!-- Legenda rodapé -->
+  <text x="44" y="482" font-size="12.5" fill="#7C7768" font-style="italic">Voz não é teclado falado. É modalidade cognitiva que destrava pensamento em diálogo — use quando esse pensamento é o que a tarefa exige.</text>
+</svg>

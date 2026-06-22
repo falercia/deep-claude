@@ -1,0 +1,66 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk4" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 5.1 · INVARIANTE 4 — ENCAIXE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Qual Claude usar? A árvore de decisão</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule4)"/>
+
+  <!-- Q1 -->
+  <g filter="url(#sh4)"><rect x="290" y="120" width="300" height="58" rx="12" fill="#1B2A33"/></g>
+  <text x="440" y="145" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Exige raciocínio profundo,</text>
+  <text x="440" y="164" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">análise crítica ou escrita executiva?</text>
+
+  <!-- Q1 -> Opus (sim) -->
+  <path d="M590,149 H706 V214" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="648" y="142" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q1 -> Q2 (não) -->
+  <path d="M440,178 V214" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="452" y="200" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Opus node -->
+  <g filter="url(#sh4)"><rect x="626" y="218" width="160" height="74" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <rect x="626" y="218" width="160" height="26" rx="12" fill="#C2912C"/><rect x="626" y="232" width="160" height="12" fill="#C2912C"/>
+  <text x="706" y="236" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">OPUS</text>
+  <text x="706" y="262" font-size="11.5" fill="#7C7768" text-anchor="middle">a faca cirúrgica</text>
+  <text x="706" y="279" font-size="11.5" fill="#7C7768" text-anchor="middle">~5-10% das chamadas</text>
+
+  <!-- Q2 -->
+  <g filter="url(#sh4)"><rect x="290" y="218" width="300" height="58" rx="12" fill="#243B47"/></g>
+  <text x="440" y="243" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Tarefa simples</text>
+  <text x="440" y="262" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">e volume gigantesco?</text>
+
+  <!-- Q2 -> Haiku (sim) -->
+  <path d="M290,247 H174 V330" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="220" y="240" font-size="12" font-weight="700" fill="#256A75">SIM</text>
+  <!-- Q2 -> Sonnet (não) -->
+  <path d="M440,276 V330" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk4)"/>
+  <text x="452" y="306" font-size="12" font-weight="700" fill="#B5532F">NÃO</text>
+
+  <!-- Haiku node -->
+  <g filter="url(#sh4)"><rect x="94" y="334" width="160" height="74" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <rect x="94" y="334" width="160" height="26" rx="12" fill="#2E7D8A"/><rect x="94" y="348" width="160" height="12" fill="#2E7D8A"/>
+  <text x="174" y="352" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">HAIKU</text>
+  <text x="174" y="378" font-size="11.5" fill="#7C7768" text-anchor="middle">o motor de produção</text>
+  <text x="174" y="395" font-size="11.5" fill="#7C7768" text-anchor="middle">~25-45% das chamadas</text>
+
+  <!-- Sonnet node (default) -->
+  <g filter="url(#sh4)"><rect x="360" y="334" width="160" height="74" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <rect x="360" y="334" width="160" height="26" rx="12" fill="#44525C"/><rect x="360" y="348" width="160" height="12" fill="#44525C"/>
+  <text x="440" y="352" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">SONNET</text>
+  <text x="440" y="378" font-size="11.5" fill="#7C7768" text-anchor="middle">o cavalo de batalha</text>
+  <text x="440" y="395" font-size="11.5" fill="#9A7A2E" text-anchor="middle" font-weight="600">default consciente</text>
+
+  <text x="44" y="450" font-size="12.5" fill="#7C7768" font-style="italic">Usar o modelo errado não é só desperdício de custo — é degradação de resultado. O encaixe errado custa duas vezes. (Valores correntes no Apêndice Vivo.)</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrGold" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+    <marker id="arrTeal" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 46.1 · INVARIANTE 3 — CAMADA DUPLA</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Decore o padrão, consulte o número</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- LEFT PANEL: O LIVRO -->
+  <g filter="url(#sh)">
+    <rect x="56" y="124" width="336" height="214" rx="13" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M56,137 a13,13 0 0 1 13,-13 h310 a13,13 0 0 1 13,13 v22 h-336 z" fill="#C2912C"/>
+  <text x="76" y="152" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="1">O LIVRO</text>
+  <text x="372" y="152" font-size="12" fill="#FBEFD0" text-anchor="end" font-style="italic">a camada que você internaliza</text>
+
+  <g font-size="13.5" fill="#1B2A33">
+    <rect x="76" y="178" width="296" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+    <text x="92" y="200">Método, princípio e julgamento</text>
+    <rect x="76" y="220" width="296" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+    <text x="92" y="242">Padrões de arquitetura e decisão</text>
+    <rect x="76" y="262" width="296" height="34" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+    <text x="92" y="284">Mecânica dos trade-offs</text>
+  </g>
+  <text x="76" y="320" font-size="12.5" fill="#9A7A2E" font-weight="600">MEIA-VIDA: ANOS</text>
+  <text x="372" y="320" font-size="12" fill="#7C7768" text-anchor="end">revisão em ciclos longos</text>
+
+  <!-- RIGHT PANEL: O REPOSITÓRIO -->
+  <g filter="url(#sh)">
+    <rect x="488" y="124" width="336" height="214" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M488,137 a13,13 0 0 1 13,-13 h310 a13,13 0 0 1 13,13 v22 h-336 z" fill="#2E7D8A"/>
+  <text x="508" y="152" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="1">O REPOSITÓRIO</text>
+  <text x="804" y="152" font-size="12" fill="#DCEFF1" text-anchor="end" font-style="italic">a camada que você consulta</text>
+
+  <g font-size="13.5" fill="#1B2A33">
+    <rect x="508" y="178" width="296" height="34" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+    <text x="524" y="200">Versões, preços e cotas</text>
+    <rect x="508" y="220" width="296" height="34" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+    <text x="524" y="242">Benchmarks, limites e regulação</text>
+    <rect x="508" y="262" width="296" height="34" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+    <text x="524" y="284">Recursos executáveis e evals</text>
+  </g>
+  <text x="508" y="320" font-size="12.5" fill="#256A75" font-weight="600">MEIA-VIDA: MESES</text>
+  <text x="804" y="320" font-size="12" fill="#7C7768" text-anchor="end">atualização contínua</text>
+
+  <!-- Arrows to decision -->
+  <path d="M224,338 C224,372 360,372 418,388" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold)"/>
+  <path d="M656,338 C656,372 520,372 462,388" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal)"/>
+
+  <!-- Decision node -->
+  <g filter="url(#sh)">
+    <rect x="290" y="392" width="300" height="52" rx="26" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="417" font-size="14.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">DECISÃO EXECUTIVA INFORMADA</text>
+  <text x="440" y="434" font-size="11.5" fill="#C2912C" text-anchor="middle" letter-spacing="0.5">cada camada puxada da fonte certa, no momento da decisão</text>
+
+  <!-- caption -->
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Misturar as duas camadas na mesma página faz o livro envelhecer junto com o release. Separá-las é o que envelhece bem.</text>
+</svg>

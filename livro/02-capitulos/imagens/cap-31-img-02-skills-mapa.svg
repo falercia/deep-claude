@@ -1,0 +1,130 @@
+<svg viewBox="0 0 880 540" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+
+  <defs>
+    <!-- Gold rule gradient -->
+    <linearGradient id="goldRule30b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E8B84B" stop-opacity="0.4"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="sh30b" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <!-- Dark band gradient -->
+    <linearGradient id="darkBand30b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B2A33"/>
+      <stop offset="100%" stop-color="#263C48"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="538" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="52" font-size="12.5" font-weight="700" letter-spacing="2.5" fill="#C2912C" text-anchor="start">DIAGRAMA 30.2 · INVARIANTE 3 — CAMADA DUPLA</text>
+
+  <!-- Title -->
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Mapa de Skills por área</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule30b)"/>
+
+  <!-- ===================== ROW 1 ===================== -->
+
+  <!-- CARD 1: GESTÃO -->
+  <rect x="30" y="108" width="262" height="170" rx="12" fill="#FBF6EA" stroke="#EADfBF" stroke-width="1.5" filter="url(#sh30b)"/>
+  <!-- header bar -->
+  <rect x="30" y="108" width="262" height="34" rx="12" fill="#C2912C"/>
+  <rect x="30" y="128" width="262" height="14" fill="#C2912C"/>
+  <text x="161" y="130" font-size="13" font-weight="700" fill="white" text-anchor="middle">GESTÃO</text>
+  <!-- bullets -->
+  <text x="50" y="160" font-size="12.5" fill="#1B2A33">• Briefing 1:1 com colaborador</text>
+  <text x="50" y="178" font-size="12.5" fill="#1B2A33">• Relatório semanal estruturado</text>
+  <text x="50" y="196" font-size="12.5" fill="#1B2A33">• Avaliação de performance</text>
+  <text x="50" y="214" font-size="12.5" fill="#1B2A33">• Briefing pré-reunião</text>
+  <!-- tagline -->
+  <text x="161" y="265" font-size="11.5" font-style="italic" fill="#7C7768" text-anchor="middle">replica o jeito de liderar</text>
+
+  <!-- CARD 2: ENGENHARIA -->
+  <rect x="309" y="108" width="262" height="170" rx="12" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1.5" filter="url(#sh30b)"/>
+  <rect x="309" y="108" width="262" height="34" rx="12" fill="#2E7D8A"/>
+  <rect x="309" y="128" width="262" height="14" fill="#2E7D8A"/>
+  <text x="440" y="130" font-size="13" font-weight="700" fill="white" text-anchor="middle">ENGENHARIA</text>
+  <text x="329" y="160" font-size="12.5" fill="#1B2A33">• Code review padronizado</text>
+  <text x="329" y="178" font-size="12.5" fill="#1B2A33">• Geração de testes</text>
+  <text x="329" y="196" font-size="12.5" fill="#1B2A33">• Documentação de API</text>
+  <text x="329" y="214" font-size="12.5" fill="#1B2A33">• Postmortem de incidente</text>
+  <text x="440" y="265" font-size="11.5" font-style="italic" fill="#7C7768" text-anchor="middle">padroniza qualidade do time</text>
+
+  <!-- CARD 3: MARKETING -->
+  <rect x="588" y="108" width="262" height="170" rx="12" fill="#F0DDD2" stroke="#E7CDBE" stroke-width="1.5" filter="url(#sh30b)"/>
+  <rect x="588" y="108" width="262" height="34" rx="12" fill="#B5532F"/>
+  <rect x="588" y="128" width="262" height="14" fill="#B5532F"/>
+  <text x="719" y="130" font-size="13" font-weight="700" fill="white" text-anchor="middle">MARKETING</text>
+  <text x="608" y="160" font-size="12.5" fill="#1B2A33">• Post LinkedIn no tom da marca</text>
+  <text x="608" y="178" font-size="12.5" fill="#1B2A33">• Análise competitiva</text>
+  <text x="608" y="196" font-size="12.5" fill="#1B2A33">• Briefing de campanha</text>
+  <text x="608" y="214" font-size="12.5" fill="#1B2A33">• Relatório de métricas</text>
+  <text x="719" y="265" font-size="11.5" font-style="italic" fill="#7C7768" text-anchor="middle">consistência de voz e formato</text>
+
+  <!-- ===================== ROW 2 ===================== -->
+
+  <!-- CARD 4: JURÍDICO -->
+  <rect x="30" y="292" width="262" height="170" rx="12" fill="#F1ECE0" stroke="#D8D0BD" stroke-width="1.5" filter="url(#sh30b)"/>
+  <rect x="30" y="292" width="262" height="34" rx="12" fill="#44525C"/>
+  <rect x="30" y="312" width="262" height="14" fill="#44525C"/>
+  <text x="161" y="314" font-size="13" font-weight="700" fill="white" text-anchor="middle">JURÍDICO</text>
+  <text x="50" y="344" font-size="12.5" fill="#1B2A33">• Análise de contrato B2B</text>
+  <text x="50" y="362" font-size="12.5" fill="#1B2A33">• Parecer jurídico padrão</text>
+  <text x="50" y="380" font-size="12.5" fill="#1B2A33">• Triagem de processo</text>
+  <text x="50" y="398" font-size="12.5" fill="#1B2A33">• Compliance check</text>
+  <text x="161" y="449" font-size="11.5" font-style="italic" fill="#7C7768" text-anchor="middle">base de jurisprudência como reference</text>
+
+  <!-- CARD 5: VENDAS -->
+  <rect x="309" y="292" width="262" height="170" rx="12" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1.5" filter="url(#sh30b)"/>
+  <rect x="309" y="292" width="262" height="34" rx="12" fill="#2E7D8A"/>
+  <rect x="309" y="312" width="262" height="14" fill="#2E7D8A"/>
+  <text x="440" y="314" font-size="13" font-weight="700" fill="white" text-anchor="middle">VENDAS</text>
+  <text x="329" y="344" font-size="12.5" fill="#1B2A33">• Discovery call prep</text>
+  <text x="329" y="362" font-size="12.5" fill="#1B2A33">• Proposta personalizada</text>
+  <text x="329" y="380" font-size="12.5" fill="#1B2A33">• Resposta a RFP</text>
+  <text x="329" y="398" font-size="12.5" fill="#1B2A33">• Follow-up pós-reunião</text>
+  <text x="440" y="449" font-size="11.5" font-style="italic" fill="#7C7768" text-anchor="middle">escala SDR no nível de sênior</text>
+
+  <!-- CARD 6: APRENDIZADO -->
+  <rect x="588" y="292" width="262" height="170" rx="12" fill="#FBF6EA" stroke="#EADfBF" stroke-width="1.5" filter="url(#sh30b)"/>
+  <rect x="588" y="292" width="262" height="34" rx="12" fill="#C2912C"/>
+  <rect x="588" y="312" width="262" height="14" fill="#C2912C"/>
+  <text x="719" y="314" font-size="13" font-weight="700" fill="white" text-anchor="middle">APRENDIZADO</text>
+  <text x="608" y="344" font-size="12.5" fill="#1B2A33">• Síntese de livro executivo</text>
+  <text x="608" y="362" font-size="12.5" fill="#1B2A33">• Plano de estudo personalizado</text>
+  <text x="608" y="380" font-size="12.5" fill="#1B2A33">• Flashcards (spaced repetition)</text>
+  <text x="608" y="398" font-size="12.5" fill="#1B2A33">• Resumo de paper</text>
+  <text x="719" y="449" font-size="11.5" font-style="italic" fill="#7C7768" text-anchor="middle">tutor calibrado ao seu contexto</text>
+
+  <!-- ===================== BOTTOM BAND ===================== -->
+  <rect x="30" y="470" width="820" height="56" rx="10" fill="url(#darkBand30b)"/>
+
+  <!-- CRITÉRIO UNIVERSAL label -->
+  <text x="52" y="491" font-size="11" font-weight="700" letter-spacing="1.5" fill="#C2912C">CRITÉRIO UNIVERSAL</text>
+
+  <!-- Main text -->
+  <text x="52" y="508" font-size="11.5" fill="#FBF8F1">Qualquer fluxo executado mais de uma vez por mês, com estrutura razoavelmente estável, é candidato a virar Skill.</text>
+
+  <!-- 3 chips -->
+  <!-- Chip 1 -->
+  <rect x="534" y="476" width="96" height="20" rx="10" fill="#C2912C" fill-opacity="0.25" stroke="#C2912C" stroke-width="1"/>
+  <text x="582" y="490" font-size="11" fill="#E8B84B" text-anchor="middle" font-weight="600">Escopo delimitado</text>
+
+  <!-- Chip 2 -->
+  <rect x="638" y="476" width="88" height="20" rx="10" fill="#C2912C" fill-opacity="0.25" stroke="#C2912C" stroke-width="1"/>
+  <text x="682" y="490" font-size="11" fill="#E8B84B" text-anchor="middle" font-weight="600">Fluxo numerado</text>
+
+  <!-- Chip 3 -->
+  <rect x="734" y="476" width="82" height="20" rx="10" fill="#C2912C" fill-opacity="0.25" stroke="#C2912C" stroke-width="1"/>
+  <text x="775" y="490" font-size="11" fill="#E8B84B" text-anchor="middle" font-weight="600">Exemplos reais</text>
+
+  <!-- Footer legend -->
+  <text x="440" y="532" font-size="12.5" font-style="italic" fill="#7C7768" text-anchor="middle">Onde uma boa Skill rende ROI imediato em organizações de conhecimento.</text>
+
+</svg>

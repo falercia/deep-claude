@@ -1,0 +1,72 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh6a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule6a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arr6a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 6.1 · INVARIANTE 2 — EXTREMIDADES</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">A janela de contexto e como ela é ocupada</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule6a)"/>
+
+  <!-- Outer context window frame -->
+  <g filter="url(#sh6a)">
+    <rect x="52" y="112" width="776" height="316" rx="14" fill="#FFFFFF" stroke="#E6DFC9" stroke-width="2"/>
+  </g>
+  <text x="440" y="108" font-size="12" fill="#7C7768" text-anchor="middle">JANELA DE CONTEXTO — teto total compartilhado · tamanho corrente: Apêndice Vivo</text>
+
+  <!-- System prompt block -->
+  <rect x="66" y="130" width="748" height="54" rx="10" fill="#1B2A33"/>
+  <rect x="76" y="138" width="110" height="22" rx="5" fill="#C2912C"/>
+  <text x="131" y="153" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">SYSTEM PROMPT</text>
+  <text x="200" y="153" font-size="13" font-weight="700" fill="#FFFFFF">Instrução persistente</text>
+  <text x="200" y="169" font-size="12" fill="#C2912C">persona · regras · tom · comportamento</text>
+  <text x="808" y="153" font-size="11" fill="#7C7768" text-anchor="end">posição inicial · atenção máxima</text>
+  <text x="808" y="168" font-size="11" fill="#C2912C" text-anchor="end">em produção: cacheável</text>
+
+  <!-- Histórico block -->
+  <rect x="66" y="194" width="748" height="74" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <rect x="76" y="202" width="100" height="22" rx="5" fill="#44525C"/>
+  <text x="126" y="217" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">HISTÓRICO</text>
+  <text x="190" y="217" font-size="13" font-weight="700" fill="#1B2A33">Turnos anteriores (user + assistant)</text>
+  <text x="190" y="235" font-size="12" fill="#7C7768">cresce a cada turno · reenviado completo a cada chamada</text>
+  <text x="190" y="253" font-size="11.5" fill="#B5532F" font-weight="600">custo crescente: turno N relê todos os N-1 anteriores</text>
+
+  <!-- Documentos block -->
+  <rect x="66" y="278" width="748" height="56" rx="10" fill="#FBF6EA" stroke="#EADfBF"/>
+  <rect x="76" y="286" width="110" height="22" rx="5" fill="#9A7A2E"/>
+  <text x="131" y="301" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">DOCUMENTOS</text>
+  <text x="200" y="301" font-size="13" font-weight="700" fill="#1B2A33">Arquivos, PDFs, trechos colados</text>
+  <text x="200" y="319" font-size="12" fill="#7C7768">consomem dezenas de milhares de tokens · permanecem no histórico de turnos seguintes</text>
+
+  <!-- Mensagem atual block -->
+  <rect x="66" y="344" width="548" height="50" rx="10" fill="#EFF6F7" stroke="#BBD7DB"/>
+  <rect x="76" y="352" width="118" height="22" rx="5" fill="#2E7D8A"/>
+  <text x="135" y="367" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">MENSAGEM ATUAL</text>
+  <text x="210" y="367" font-size="13" font-weight="700" fill="#1B2A33">Instrução do turno corrente</text>
+  <text x="210" y="383" font-size="12" fill="#7C7768">borda final · atenção alta · posição de força</text>
+
+  <!-- Resposta block -->
+  <rect x="624" y="344" width="190" height="50" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <rect x="634" y="352" width="80" height="22" rx="5" fill="#B5532F"/>
+  <text x="674" y="367" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">RESPOSTA</text>
+  <text x="720" y="365" font-size="12" font-weight="700" fill="#B5532F">output gerado</text>
+  <text x="720" y="381" font-size="11.5" fill="#7C7768">output &gt; input em custo/token</text>
+
+  <!-- Total arrow -->
+  <line x1="440" y1="406" x2="440" y2="430" stroke="#44525C" stroke-width="2" marker-end="url(#arr6a)"/>
+  <g filter="url(#sh6a)">
+    <rect x="270" y="432" width="340" height="32" rx="16" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="452" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">TOTAL = INPUT + OUTPUT &lt; teto da janela</text>
+
+  <text x="44" y="474" font-size="12.5" fill="#7C7768" font-style="italic">System prompt + histórico + documentos + mensagem atual + resposta gerada: todos competem pelo mesmo espaço. Cada novo turno acrescenta os turnos anteriores inteiros ao input.</text>
+</svg>

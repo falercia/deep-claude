@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <rect width="1000" height="540" fill="#fefce8"/>
+  <text x="500" y="40" fill="#0d1b2a" font-size="22" font-weight="700" text-anchor="middle">CONNECTORS vs MCP — A DIFERENÇA QUE IMPORTA</text>
+  <text x="500" y="64" fill="#6b7280" font-size="13" text-anchor="middle">Dois mecanismos de integração com propósitos e contextos diferentes</text>
+
+  <!-- Connectors -->
+  <g>
+    <rect x="60" y="100" width="430" height="420" rx="12" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+    <text x="275" y="130" fill="#0d1b2a" font-size="16" font-weight="700" text-anchor="middle">🔌 CONNECTORS</text>
+    <text x="275" y="150" fill="#6b7280" font-size="11" text-anchor="middle" font-style="italic">integrações nativas oficiais</text>
+
+    <text x="80" y="184" fill="#0d1b2a" font-size="12" font-weight="700">QUEM MANTÉM:</text>
+    <text x="80" y="204" fill="#374151" font-size="11">A própria Anthropic, oficialmente</text>
+
+    <text x="80" y="234" fill="#0d1b2a" font-size="12" font-weight="700">ONDE APARECEM:</text>
+    <text x="80" y="254" fill="#374151" font-size="11">Claude.ai diretamente, pré-instalados</text>
+
+    <text x="80" y="284" fill="#0d1b2a" font-size="12" font-weight="700">SETUP:</text>
+    <text x="80" y="304" fill="#374151" font-size="11">Um clique para autenticar via OAuth</text>
+
+    <text x="80" y="334" fill="#0d1b2a" font-size="12" font-weight="700">EXEMPLOS:</text>
+    <text x="80" y="354" fill="#374151" font-size="11">Google Drive · Gmail · Calendar</text>
+    <text x="80" y="370" fill="#374151" font-size="11">Slack · Notion · Linear · Asana</text>
+    <text x="80" y="386" fill="#374151" font-size="11">GitHub · GitLab · Microsoft 365</text>
+
+    <text x="80" y="416" fill="#0d1b2a" font-size="12" font-weight="700">QUANDO USAR:</text>
+    <text x="80" y="434" fill="#374151" font-size="11">Quando o serviço tem Connector oficial</text>
+    <text x="80" y="450" fill="#374151" font-size="11">e você quer setup trivial sem código</text>
+
+    <text x="275" y="490" fill="#16a34a" font-size="12" font-weight="700" text-anchor="middle">★ ZERO ESFORÇO DE INTEGRAÇÃO</text>
+    <text x="275" y="508" fill="#9ca3af" font-size="10" text-anchor="middle">Setup em 30 segundos, manutenção zero</text>
+  </g>
+
+  <!-- MCP -->
+  <g>
+    <rect x="510" y="100" width="430" height="420" rx="12" fill="#fde68a" stroke="#fb923c" stroke-width="2"/>
+    <text x="725" y="130" fill="#0d1b2a" font-size="16" font-weight="700" text-anchor="middle">🔧 MCP SERVERS</text>
+    <text x="725" y="150" fill="#6b7280" font-size="11" text-anchor="middle" font-style="italic">protocolo aberto para qualquer sistema</text>
+
+    <text x="530" y="184" fill="#0d1b2a" font-size="12" font-weight="700">QUEM MANTÉM:</text>
+    <text x="530" y="204" fill="#374151" font-size="11">Você, comunidade ou terceiros</text>
+
+    <text x="530" y="234" fill="#0d1b2a" font-size="12" font-weight="700">ONDE APARECEM:</text>
+    <text x="530" y="254" fill="#374151" font-size="11">Claude Desktop, Code, customizado</text>
+
+    <text x="530" y="284" fill="#0d1b2a" font-size="12" font-weight="700">SETUP:</text>
+    <text x="530" y="304" fill="#374151" font-size="11">Configurar servidor + claude_desktop_config.json</text>
+
+    <text x="530" y="334" fill="#0d1b2a" font-size="12" font-weight="700">EXEMPLOS:</text>
+    <text x="530" y="354" fill="#374151" font-size="11">Sistema interno da empresa</text>
+    <text x="530" y="370" fill="#374151" font-size="11">Postgres customizado · ERP legado</text>
+    <text x="530" y="386" fill="#374151" font-size="11">Servidores comunitários (awesome-mcp)</text>
+
+    <text x="530" y="416" fill="#0d1b2a" font-size="12" font-weight="700">QUANDO USAR:</text>
+    <text x="530" y="434" fill="#374151" font-size="11">Quando não há Connector oficial,</text>
+    <text x="530" y="450" fill="#374151" font-size="11">ou precisa de controle granular</text>
+
+    <text x="725" y="490" fill="#fb923c" font-size="12" font-weight="700" text-anchor="middle">★ FLEXIBILIDADE TOTAL</text>
+    <text x="725" y="508" fill="#9ca3af" font-size="10" text-anchor="middle">Conecta qualquer sistema com qualquer cliente MCP</text>
+  </g>
+</svg>

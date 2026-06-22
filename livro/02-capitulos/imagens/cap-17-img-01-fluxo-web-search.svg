@@ -1,0 +1,105 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh16a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule16a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk16a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal16a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="458" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + título -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 16.1 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">A mecânica do Claude Web Search</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule16a)"/>
+
+  <!-- PASSO 1: Pergunta -->
+  <g filter="url(#sh16a)">
+    <rect x="44" y="120" width="136" height="64" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <text x="112" y="146" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">Pergunta</text>
+  <text x="112" y="164" font-size="11.5" fill="#7C7768" text-anchor="middle">do operador</text>
+  <text x="112" y="180" font-size="11" fill="#9A7A2E" text-anchor="middle" font-weight="600">info atual necessária?</text>
+
+  <!-- seta 1 -->
+  <path d="M180,152 H218" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk16a)"/>
+
+  <!-- PASSO 2: Query otimizada -->
+  <g filter="url(#sh16a)">
+    <rect x="218" y="110" width="158" height="84" rx="12" fill="#1B2A33"/>
+  </g>
+  <text x="297" y="139" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Query</text>
+  <text x="297" y="157" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">otimizada</text>
+  <text x="297" y="174" font-size="11" fill="#C2912C" text-anchor="middle">reformulada para</text>
+  <text x="297" y="188" font-size="11" fill="#C2912C" text-anchor="middle">o motor de busca</text>
+
+  <!-- seta 2 -->
+  <path d="M376,152 H414" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk16a)"/>
+
+  <!-- PASSO 3: Busca + seleção -->
+  <g filter="url(#sh16a)">
+    <rect x="414" y="110" width="158" height="84" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <text x="493" y="139" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Busca na web</text>
+  <text x="493" y="157" font-size="11.5" fill="#7C7768" text-anchor="middle">motor em tempo real</text>
+  <text x="493" y="174" font-size="11.5" fill="#7C7768" text-anchor="middle">3–10 páginas</text>
+  <text x="493" y="190" font-size="11" fill="#256A75" text-anchor="middle" font-weight="600">priorizadas por autoridade</text>
+
+  <!-- seta 3 -->
+  <path d="M572,152 H610" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk16a)"/>
+
+  <!-- PASSO 4: Leitura + extração -->
+  <g filter="url(#sh16a)">
+    <rect x="610" y="110" width="158" height="84" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <text x="689" y="139" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Lê e extrai</text>
+  <text x="689" y="157" font-size="11.5" fill="#7C7768" text-anchor="middle">conteúdo relevante</text>
+  <text x="689" y="174" font-size="11.5" fill="#7C7768" text-anchor="middle">descarta ruído visual</text>
+  <text x="689" y="190" font-size="11" fill="#256A75" text-anchor="middle" font-weight="600">entra no contexto</text>
+
+  <!-- seta para baixo ao painel de síntese -->
+  <path d="M689,194 V236" fill="none" stroke="#2E7D8A" stroke-width="2.2" marker-end="url(#arrTeal16a)"/>
+
+  <!-- PASSO 5: Síntese -->
+  <g filter="url(#sh16a)">
+    <rect x="44" y="240" width="810" height="82" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M44,253 a13,13 0 0 1 13,-13 h784 a13,13 0 0 1 13,13 v20 h-810 z" fill="#2E7D8A"/>
+  <text x="64" y="268" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">SÍNTESE COM CITAÇÕES INLINE</text>
+
+  <rect x="64" y="284" width="368" height="30" rx="7" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="248" y="303" font-size="12" fill="#1B2A33" text-anchor="middle">Conhecimento do treino + informação recuperada</text>
+
+  <rect x="446" y="284" width="368" height="30" rx="7" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="630" y="303" font-size="12" fill="#1B2A33" text-anchor="middle">Cada afirmação da web com link auditável inline</text>
+
+  <!-- Painel "quando usar" -->
+  <text x="44" y="352" font-size="11.5" font-weight="700" fill="#9A7A2E" letter-spacing="0.5">QUANDO WEB SEARCH FAZ DIFERENÇA</text>
+
+  <rect x="44" y="362" width="184" height="46" rx="9" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="136" y="381" font-size="12" font-weight="700" fill="#256A75" text-anchor="middle">Dados em tempo real</text>
+  <text x="136" y="398" font-size="11" fill="#7C7768" text-anchor="middle">cotações, indicadores, preços</text>
+
+  <rect x="242" y="362" width="184" height="46" rx="9" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="334" y="381" font-size="12" font-weight="700" fill="#256A75" text-anchor="middle">Eventos recentes</text>
+  <text x="334" y="398" font-size="11" fill="#7C7768" text-anchor="middle">notícias, lançamentos, regulação</text>
+
+  <rect x="440" y="362" width="184" height="46" rx="9" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="532" y="381" font-size="12" font-weight="700" fill="#256A75" text-anchor="middle">Verificação de fato</text>
+  <text x="532" y="398" font-size="11" fill="#7C7768" text-anchor="middle">confirmar antes de citar</text>
+
+  <rect x="638" y="362" width="216" height="46" rx="9" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="746" y="381" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Evite para:</text>
+  <text x="746" y="398" font-size="11" fill="#7C7768" text-anchor="middle">conceito do treino, brainstorm, pesquisa profunda</text>
+
+  <!-- Legenda rodapé -->
+  <text x="44" y="446" font-size="12.5" fill="#7C7768" font-style="italic">Busca pontual com citações inline, em segundos. O link na resposta não é verificação — abrir o link é a verificação.</text>
+</svg>

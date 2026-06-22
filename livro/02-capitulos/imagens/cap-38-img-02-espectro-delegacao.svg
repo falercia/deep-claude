@@ -1,0 +1,109 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh37b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule37b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <linearGradient id="spectrumGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E7D8A"/>
+      <stop offset="0.55" stop-color="#C2912C"/>
+      <stop offset="1" stop-color="#B5532F"/>
+    </linearGradient>
+    <marker id="axEnd37b" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+    <marker id="axEndUp37b" markerWidth="9" markerHeight="9" refX="3" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,7 L3,0 L6,7 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 37.2 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Espectro da delegação em saúde</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule37b)"/>
+
+  <!-- Axes -->
+  <line x1="80" y1="400" x2="820" y2="400" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd37b)"/>
+  <line x1="80" y1="400" x2="80" y2="130" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEndUp37b)"/>
+
+  <!-- X axis label -->
+  <text x="822" y="404" font-size="12.5" fill="#1B2A33" font-weight="600">DISTÂNCIA DA DECISÃO CLÍNICA →</text>
+  <text x="80" y="418" font-size="11.5" fill="#2E7D8A" font-weight="600">ADMINISTRATIVO</text>
+  <text x="770" y="418" font-size="11.5" fill="#B5532F" font-weight="600" text-anchor="end">CLÍNICO PURO</text>
+
+  <!-- Y axis label -->
+  <text x="68" y="270" font-size="11.5" fill="#1B2A33" font-weight="600" text-anchor="middle" transform="rotate(-90 68 270)">SUPERVISÃO HUMANA EXIGIDA →</text>
+
+  <!-- Spectrum bar -->
+  <rect x="80" y="350" width="720" height="22" rx="4" fill="url(#spectrumGrad)" opacity="0.35"/>
+
+  <!-- Zone labels -->
+  <text x="200" y="345" font-size="11.5" fill="#2E7D8A" text-anchor="middle" font-weight="600">ZONA VERDE</text>
+  <text x="200" y="360" font-size="10.5" fill="#2E7D8A" text-anchor="middle">pode apoiar com governança</text>
+  <text x="700" y="345" font-size="11.5" fill="#B5532F" text-anchor="middle" font-weight="600">ZONA VERMELHA</text>
+  <text x="700" y="360" font-size="10.5" fill="#B5532F" text-anchor="middle">nunca delegar</text>
+
+  <!-- Vertical boundary line -->
+  <line x1="490" y1="140" x2="490" y2="372" stroke="#B5532F" stroke-width="2" stroke-dasharray="6 4"/>
+  <g filter="url(#sh37b)">
+    <rect x="420" y="142" width="140" height="38" rx="19" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="490" y="157" font-size="11" font-weight="700" fill="#B5532F" text-anchor="middle">INVARIANTE 8</text>
+  <text x="490" y="172" font-size="10" fill="#B5532F" text-anchor="middle">fronteira da delegação</text>
+
+  <!-- Use case bubbles on the spectrum -->
+  <!-- Comunicação administrativa ~180 -->
+  <g filter="url(#sh37b)">
+    <rect x="90" y="270" width="162" height="60" rx="10" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <text x="171" y="295" font-size="12" font-weight="700" fill="#2E7D8A" text-anchor="middle">Comunicação</text>
+  <text x="171" y="311" font-size="11.5" fill="#2E7D8A" text-anchor="middle">administrativa</text>
+  <text x="171" y="325" font-size="10.5" fill="#7C7768" text-anchor="middle">Caso D</text>
+  <line x1="171" y1="330" x2="171" y2="350" stroke="#2E7D8A" stroke-width="1.5"/>
+  <circle cx="171" cy="361" r="5" fill="#2E7D8A"/>
+
+  <!-- Sumarização prontuário ~280 -->
+  <g filter="url(#sh37b)">
+    <rect x="215" y="195" width="162" height="60" rx="10" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <text x="296" y="220" font-size="12" font-weight="700" fill="#2E7D8A" text-anchor="middle">Sumarização de</text>
+  <text x="296" y="236" font-size="12" font-weight="700" fill="#2E7D8A" text-anchor="middle">prontuário</text>
+  <text x="296" y="250" font-size="10.5" fill="#7C7768" text-anchor="middle">Caso A · revisão obrigatória</text>
+  <line x1="296" y1="255" x2="296" y2="350" stroke="#2E7D8A" stroke-width="1.5"/>
+  <circle cx="296" cy="361" r="5" fill="#2E7D8A"/>
+
+  <!-- Formatação SOAP ~350 -->
+  <g filter="url(#sh37b)">
+    <rect x="340" y="220" width="130" height="60" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="405" y="245" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">Formatação</text>
+  <text x="405" y="261" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">SOAP</text>
+  <text x="405" y="276" font-size="10.5" fill="#7C7768" text-anchor="middle">Caso C · assinatura médica</text>
+  <line x1="405" y1="280" x2="405" y2="350" stroke="#C2912C" stroke-width="1.5"/>
+  <circle cx="405" cy="361" r="5" fill="#C2912C"/>
+
+  <!-- Diagnóstico ~600 -->
+  <g filter="url(#sh37b)">
+    <rect x="520" y="195" width="130" height="60" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="585" y="220" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Diagnóstico</text>
+  <text x="585" y="236" font-size="12" fill="#B5532F" text-anchor="middle">diferencial</text>
+  <text x="585" y="252" font-size="10.5" fill="#B5532F" font-weight="600" text-anchor="middle">ato médico · proibido</text>
+  <line x1="585" y1="255" x2="585" y2="350" stroke="#B5532F" stroke-width="1.5"/>
+  <circle cx="585" cy="361" r="5" fill="#B5532F"/>
+
+  <!-- Prescrição ~710 -->
+  <g filter="url(#sh37b)">
+    <rect x="640" y="220" width="130" height="60" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="705" y="245" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Prescrição</text>
+  <text x="705" y="261" font-size="12" fill="#B5532F" text-anchor="middle">de medicamento</text>
+  <text x="705" y="277" font-size="10.5" fill="#B5532F" font-weight="600" text-anchor="middle">ato médico · proibido</text>
+  <line x1="705" y1="280" x2="705" y2="350" stroke="#B5532F" stroke-width="1.5"/>
+  <circle cx="705" cy="361" r="5" fill="#B5532F"/>
+
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Benefício da IA é proporcional à carga administrativa removida; risco é proporcional à proximidade da decisão clínica. Os dois movem em direções opostas.</text>
+</svg>

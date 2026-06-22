@@ -1,0 +1,138 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrRisk" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#B5532F"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 34.1 · INVARIANTE 7 — TERMÔMETRO</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Os três componentes de um eval e seus pontos de falha</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Column headers -->
+  <text x="183" y="126" font-size="12" font-weight="700" fill="#44525C" text-anchor="middle" letter-spacing="1">COMPONENTE</text>
+  <text x="487" y="126" font-size="12" font-weight="700" fill="#44525C" text-anchor="middle" letter-spacing="1">FUNÇÃO</text>
+  <text x="752" y="126" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle" letter-spacing="1">FALHA CLÁSSICA</text>
+
+  <!-- Divider line under headers -->
+  <line x1="44" y1="132" x2="836" y2="132" stroke="#E6DFC9" stroke-width="1.2"/>
+
+  <!-- ROW 1: Casos representativos -->
+  <!-- Component box -->
+  <g filter="url(#sh)">
+    <rect x="56" y="150" width="254" height="80" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <rect x="56" y="150" width="254" height="30" rx="12" fill="#C2912C"/>
+  <rect x="56" y="168" width="254" height="12" fill="#C2912C"/>
+  <circle cx="80" cy="165" r="12" fill="#FFFFFF" fill-opacity="0.25"/>
+  <text x="80" y="170" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="195" y="169" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Casos representativos</text>
+  <text x="183" y="198" font-size="12" fill="#7C7768" text-anchor="middle">inputs que refletem o uso real</text>
+  <text x="183" y="215" font-size="12" fill="#7C7768" text-anchor="middle">típicos + borda + adversariais</text>
+
+  <!-- Arrow 1 -->
+  <path d="M310,190 H358" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+
+  <!-- Function box 1 -->
+  <g filter="url(#sh)">
+    <rect x="360" y="150" width="254" height="80" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <text x="487" y="183" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">Garante que o eval</text>
+  <text x="487" y="200" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">mede o que acontece</text>
+  <text x="487" y="217" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">em produção de verdade</text>
+
+  <!-- Arrow to failure 1 -->
+  <path d="M614,190 H662" fill="none" stroke="#B5532F" stroke-width="2.2" marker-end="url(#arrRisk)"/>
+
+  <!-- Failure box 1 -->
+  <g filter="url(#sh)">
+    <rect x="664" y="150" width="172" height="80" rx="12" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="750" y="178" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Dataset viesado</text>
+  <text x="750" y="196" font-size="11.5" fill="#7C7768" text-anchor="middle">casos fáceis que o time</text>
+  <text x="750" y="212" font-size="11.5" fill="#7C7768" text-anchor="middle">usou no desenvolvimento</text>
+
+  <!-- ROW 2: Critério de sucesso -->
+  <g filter="url(#sh)">
+    <rect x="56" y="254" width="254" height="80" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <rect x="56" y="254" width="254" height="30" rx="12" fill="#C2912C"/>
+  <rect x="56" y="272" width="254" height="12" fill="#C2912C"/>
+  <circle cx="80" cy="269" r="12" fill="#FFFFFF" fill-opacity="0.25"/>
+  <text x="80" y="274" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="195" y="273" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Critério de sucesso</text>
+  <text x="183" y="302" font-size="12" fill="#7C7768" text-anchor="middle">definição operacional</text>
+  <text x="183" y="319" font-size="12" fill="#7C7768" text-anchor="middle">de "certo" e "errado"</text>
+
+  <!-- Arrow 2 -->
+  <path d="M310,294 H358" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+
+  <!-- Function box 2 -->
+  <g filter="url(#sh)">
+    <rect x="360" y="254" width="254" height="80" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <text x="487" y="287" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">Permite aplicação</text>
+  <text x="487" y="304" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">consistente por qualquer</text>
+  <text x="487" y="321" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">avaliador — inclusive LLM</text>
+
+  <!-- Arrow to failure 2 -->
+  <path d="M614,294 H662" fill="none" stroke="#B5532F" stroke-width="2.2" marker-end="url(#arrRisk)"/>
+
+  <!-- Failure box 2 -->
+  <g filter="url(#sh)">
+    <rect x="664" y="254" width="172" height="80" rx="12" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="750" y="282" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Critério vago</text>
+  <text x="750" y="300" font-size="11.5" fill="#7C7768" text-anchor="middle">varia por avaliador;</text>
+  <text x="750" y="316" font-size="11.5" fill="#7C7768" text-anchor="middle">sem sinal comparável</text>
+
+  <!-- ROW 3: Método de pontuação -->
+  <g filter="url(#sh)">
+    <rect x="56" y="358" width="254" height="80" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <rect x="56" y="358" width="254" height="30" rx="12" fill="#C2912C"/>
+  <rect x="56" y="376" width="254" height="12" fill="#C2912C"/>
+  <circle cx="80" cy="373" r="12" fill="#FFFFFF" fill-opacity="0.25"/>
+  <text x="80" y="378" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="195" y="377" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Método de pontuação</text>
+  <text x="183" y="406" font-size="12" fill="#7C7768" text-anchor="middle">como medir a distância</text>
+  <text x="183" y="423" font-size="12" fill="#7C7768" text-anchor="middle">saída real vs. critério</text>
+
+  <!-- Arrow 3 -->
+  <path d="M310,398 H358" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+
+  <!-- Function box 3 -->
+  <g filter="url(#sh)">
+    <rect x="360" y="358" width="254" height="80" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <text x="487" y="391" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">Determina custo, velocidade</text>
+  <text x="487" y="408" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">e confiabilidade do sinal</text>
+  <text x="487" y="425" font-size="13" fill="#1B2A33" text-anchor="middle" font-weight="600">gerado pelo eval</text>
+
+  <!-- Arrow to failure 3 -->
+  <path d="M614,398 H662" fill="none" stroke="#B5532F" stroke-width="2.2" marker-end="url(#arrRisk)"/>
+
+  <!-- Failure box 3 -->
+  <g filter="url(#sh)">
+    <rect x="664" y="358" width="172" height="80" rx="12" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="750" y="386" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Método que não</text>
+  <text x="750" y="404" font-size="11.5" fill="#7C7768" text-anchor="middle">discrimina o que o</text>
+  <text x="750" y="420" font-size="11.5" fill="#7C7768" text-anchor="middle">critério exige</text>
+
+  <!-- Caption -->
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">As três falhas são independentes: casos representativos e critério claro não salvam um método de pontuação inadequado.</text>
+</svg>

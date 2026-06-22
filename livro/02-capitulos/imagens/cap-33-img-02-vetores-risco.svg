@@ -1,0 +1,94 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh32b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule32b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk32b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 32.2 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Os três vetores de risco do computer use</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule32b)"/>
+
+  <!-- Column headers -->
+  <text x="246" y="116" font-size="11.5" font-weight="700" fill="#B5532F" letter-spacing="1" text-anchor="middle">VETOR</text>
+  <text x="660" y="116" font-size="11.5" font-weight="700" fill="#2E7D8A" letter-spacing="1" text-anchor="middle">MITIGAÇÃO FUNDAMENTAL</text>
+  <line x1="44" y1="122" x2="836" y2="122" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- Vetor 1: Prompt Injection via tela -->
+  <g filter="url(#sh32b)">
+    <rect x="44" y="132" width="408" height="94" rx="13" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <circle cx="82" cy="179" r="16" fill="#B5532F"/>
+  <text x="82" y="184" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="112" y="158" font-size="14" font-weight="700" fill="#B5532F">Prompt Injection via Tela</text>
+  <text x="112" y="178" font-size="12.5" fill="#44525C">Conteúdo malicioso na tela contamina</text>
+  <text x="112" y="196" font-size="12.5" fill="#44525C">as instruções do modelo</text>
+  <rect x="112" y="208" width="150" height="14" rx="7" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="187" y="219" font-size="10" fill="#B5532F" text-anchor="middle" font-weight="700">o vetor mais insidioso</text>
+
+  <path d="M452,179 H470" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk32b)"/>
+
+  <g filter="url(#sh32b)">
+    <rect x="476" y="132" width="360" height="94" rx="13" fill="#EFF6F7" stroke="#CFE3E6"/>
+  </g>
+  <text x="496" y="158" font-size="13" font-weight="700" fill="#2E7D8A">Design do ambiente</text>
+  <text x="496" y="178" font-size="12" fill="#44525C">Allow-list de domínios e apps</text>
+  <text x="496" y="196" font-size="12" fill="#44525C">Minimizar conteúdo externo visível</text>
+  <text x="496" y="212" font-size="12" fill="#44525C">Classificadores automáticos da Anthropic</text>
+
+  <!-- Vetor 2: Ações irreversíveis -->
+  <g filter="url(#sh32b)">
+    <rect x="44" y="242" width="408" height="94" rx="13" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <circle cx="82" cy="289" r="16" fill="#B5532F"/>
+  <text x="82" y="294" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="112" y="268" font-size="14" font-weight="700" fill="#B5532F">Ações Irreversíveis</text>
+  <text x="112" y="288" font-size="12.5" fill="#44525C">O modelo opera a mesma superfície</text>
+  <text x="112" y="306" font-size="12.5" fill="#44525C">que um humano — com os mesmos efeitos</text>
+  <rect x="112" y="318" width="168" height="14" rx="7" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="196" y="329" font-size="10" fill="#B5532F" text-anchor="middle" font-weight="700">transferências, e-mails, contratos</text>
+
+  <path d="M452,289 H470" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk32b)"/>
+
+  <g filter="url(#sh32b)">
+    <rect x="476" y="242" width="360" height="94" rx="13" fill="#EFF6F7" stroke="#CFE3E6"/>
+  </g>
+  <text x="496" y="268" font-size="13" font-weight="700" fill="#2E7D8A">Humano no loop</text>
+  <text x="496" y="288" font-size="12" fill="#44525C">Confirmação explícita antes</text>
+  <text x="496" y="306" font-size="12" fill="#44525C">de cada ação irreversível</text>
+  <text x="496" y="322" font-size="12" fill="#44525C">Autonomia nível Co-piloto máximo</text>
+
+  <!-- Vetor 3: Confused Deputy -->
+  <g filter="url(#sh32b)">
+    <rect x="44" y="352" width="408" height="94" rx="13" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <circle cx="82" cy="399" r="16" fill="#B5532F"/>
+  <text x="82" y="404" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="112" y="378" font-size="14" font-weight="700" fill="#B5532F">Confused Deputy</text>
+  <text x="112" y="398" font-size="12.5" fill="#44525C">O modelo age com privilégios</text>
+  <text x="112" y="416" font-size="12.5" fill="#44525C">do usuário autenticado, sem ser ele</text>
+  <rect x="112" y="428" width="152" height="14" rx="7" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="188" y="439" font-size="10" fill="#B5532F" text-anchor="middle" font-weight="700">caracterizado pelo UK NCSC</text>
+
+  <path d="M452,399 H470" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk32b)"/>
+
+  <g filter="url(#sh32b)">
+    <rect x="476" y="352" width="360" height="94" rx="13" fill="#EFF6F7" stroke="#CFE3E6"/>
+  </g>
+  <text x="496" y="378" font-size="13" font-weight="700" fill="#2E7D8A">Mínimo de privilégios</text>
+  <text x="496" y="398" font-size="12" fill="#44525C">Ambiente isolado (VM / contêiner)</text>
+  <text x="496" y="416" font-size="12" fill="#44525C">Sem dados sensíveis no ambiente ativo</text>
+  <text x="496" y="432" font-size="12" fill="#44525C">Monitoramento de screenshots</text>
+
+  <!-- Caption -->
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Computer use tem o maior raio de impacto de todas as integrações. As três mitigações são obrigatórias — não opcionais — para qualquer uso não-trivial.</text>
+</svg>

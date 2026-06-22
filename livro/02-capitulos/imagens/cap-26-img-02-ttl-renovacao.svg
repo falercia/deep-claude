@@ -1,0 +1,123 @@
+<svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh252" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule252" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk252" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal252" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <marker id="arrRed252" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#B5532F"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="438" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 25.2 · INVARIANTE 5 — CUSTO COMPOSTO</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">TTL e renovação do relógio de cache</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule252)"/>
+
+  <!-- TTL 5 min lane label -->
+  <text x="44" y="126" font-size="11.5" font-weight="700" fill="#256A75" letter-spacing="1">TTL 5 MINUTOS · padrão atual (desde mar/2026) · custo de write menor</text>
+
+  <!-- timeline bar -->
+  <line x1="44" y1="165" x2="836" y2="165" stroke="#CFC8B6" stroke-width="1.5"/>
+
+  <!-- Write event -->
+  <g filter="url(#sh252)">
+    <rect x="44" y="140" width="100" height="50" rx="10" fill="#1B2A33"/>
+  </g>
+  <text x="94" y="161" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Write</text>
+  <text x="94" y="178" font-size="10.5" fill="#C2912C" text-anchor="middle">custo +alto</text>
+
+  <!-- TTL arc 5min -->
+  <path d="M144,140 Q220,100 296,140" stroke="#2E7D8A" stroke-width="2" fill="none" stroke-dasharray="5 3"/>
+  <text x="220" y="110" font-size="11" fill="#2E7D8A" text-anchor="middle" font-weight="600">5 min</text>
+
+  <!-- Read 1 (renews TTL) -->
+  <g filter="url(#sh252)">
+    <rect x="296" y="140" width="100" height="50" rx="10" fill="#FFFFFF" stroke="#2E7D8A"/>
+  </g>
+  <text x="346" y="161" font-size="12.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">Read 1</text>
+  <text x="346" y="178" font-size="10.5" fill="#7C7768" text-anchor="middle">renova TTL</text>
+
+  <!-- TTL arc renew -->
+  <path d="M396,140 Q472,100 548,140" stroke="#2E7D8A" stroke-width="2" fill="none" stroke-dasharray="5 3"/>
+  <text x="472" y="110" font-size="11" fill="#2E7D8A" text-anchor="middle" font-weight="600">+5 min</text>
+
+  <!-- Read 2 (renews TTL) -->
+  <g filter="url(#sh252)">
+    <rect x="548" y="140" width="100" height="50" rx="10" fill="#FFFFFF" stroke="#2E7D8A"/>
+  </g>
+  <text x="598" y="161" font-size="12.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">Read 2</text>
+  <text x="598" y="178" font-size="10.5" fill="#7C7768" text-anchor="middle">renova TTL</text>
+
+  <!-- Expiry if no read -->
+  <g filter="url(#sh252)">
+    <rect x="736" y="140" width="100" height="50" rx="10" fill="#F0DDD2" stroke="#B5532F"/>
+  </g>
+  <text x="786" y="158" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">Expiração</text>
+  <text x="786" y="174" font-size="10.5" fill="#7C7768" text-anchor="middle">sem leitura</text>
+  <text x="786" y="188" font-size="10.5" fill="#B5532F" text-anchor="middle">→ miss</text>
+  <path d="M648,165 H734" stroke="#B5532F" stroke-width="1.8" stroke-dasharray="4 4" marker-end="url(#arrRed252)" fill="none"/>
+  <text x="690" y="157" font-size="10.5" fill="#B5532F" text-anchor="middle">sem read</text>
+
+  <!-- Divider -->
+  <line x1="44" y1="220" x2="836" y2="220" stroke="#E6DFC9" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- TTL 1h lane label -->
+  <text x="44" y="242" font-size="11.5" font-weight="700" fill="#C2912C" letter-spacing="1">TTL 1 HORA · pipelines de lote e agentes de longa duração · custo de write maior</text>
+
+  <!-- timeline bar 1h -->
+  <line x1="44" y1="283" x2="836" y2="283" stroke="#CFC8B6" stroke-width="1.5"/>
+
+  <!-- Write 1h -->
+  <g filter="url(#sh252)">
+    <rect x="44" y="258" width="100" height="50" rx="10" fill="#1B2A33"/>
+  </g>
+  <text x="94" y="279" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Write</text>
+  <text x="94" y="296" font-size="10.5" fill="#C2912C" text-anchor="middle">custo ++ alto</text>
+
+  <!-- TTL arc 1h -->
+  <path d="M144,258 Q470,200 796,258" stroke="#C2912C" stroke-width="2" fill="none" stroke-dasharray="5 3"/>
+  <text x="470" y="220" font-size="11" fill="#C2912C" text-anchor="middle" font-weight="600">1 hora</text>
+
+  <!-- Multiple reads 1h -->
+  <g filter="url(#sh252)">
+    <rect x="230" y="258" width="88" height="50" rx="10" fill="#FFFFFF" stroke="#C2912C"/>
+  </g>
+  <text x="274" y="279" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">Read</text>
+  <text x="274" y="296" font-size="10.5" fill="#7C7768" text-anchor="middle">renova</text>
+
+  <g filter="url(#sh252)">
+    <rect x="430" y="258" width="88" height="50" rx="10" fill="#FFFFFF" stroke="#C2912C"/>
+  </g>
+  <text x="474" y="279" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">Read</text>
+  <text x="474" y="296" font-size="10.5" fill="#7C7768" text-anchor="middle">renova</text>
+
+  <g filter="url(#sh252)">
+    <rect x="630" y="258" width="88" height="50" rx="10" fill="#FFFFFF" stroke="#C2912C"/>
+  </g>
+  <text x="674" y="279" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">Read</text>
+  <text x="674" y="296" font-size="10.5" fill="#7C7768" text-anchor="middle">renova</text>
+
+  <path d="M144,283 H228" stroke="#C2912C" stroke-width="2" marker-end="url(#arrTeal252)" fill="none"/>
+  <path d="M318,283 H428" stroke="#C2912C" stroke-width="2" marker-end="url(#arrTeal252)" fill="none"/>
+  <path d="M518,283 H628" stroke="#C2912C" stroke-width="2" marker-end="url(#arrTeal252)" fill="none"/>
+  <path d="M718,283 H834" stroke="#C2912C" stroke-width="2" fill="none"/>
+
+  <!-- Key insight box -->
+  <g filter="url(#sh252)">
+    <rect x="44" y="332" width="792" height="46" rx="11" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="440" y="351" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">Break-even: quantas leituras para amortizar o write?</text>
+  <text x="440" y="369" font-size="11.5" fill="#7C7768" text-anchor="middle">TTL 5 min: 2 leituras · TTL 1 hora: 3 leituras · acima disso, toda read é economia líquida · valores exatos no Apêndice Vivo</text>
+
+  <text x="44" y="408" font-size="12.5" fill="#7C7768" font-style="italic">Cada leitura bem-sucedida renova o TTL a partir do zero — um sistema ativo mantém o cache quente sem custo adicional de write.</text>
+</svg>

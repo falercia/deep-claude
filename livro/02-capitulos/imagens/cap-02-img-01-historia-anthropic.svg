@@ -1,0 +1,109 @@
+<svg viewBox="0 0 880 540" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="538" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 2.1 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">A história da Anthropic e do Claude</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Phase band: Pesquisa -->
+  <rect x="44" y="112" width="88" height="22" rx="11" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="88" y="127" font-size="11" font-weight="700" fill="#2E7D8A" text-anchor="middle">PESQUISA</text>
+
+  <!-- Timeline spine -->
+  <line x1="150" y1="118" x2="150" y2="488" stroke="#CFC8B6" stroke-width="2"/>
+
+  <!-- Node 1: 2021 Fundação -->
+  <circle cx="150" cy="150" r="14" fill="#2E7D8A" filter="url(#sh)"/>
+  <text x="150" y="155" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">21</text>
+  <g filter="url(#sh)">
+    <rect x="176" y="132" width="380" height="52" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/>
+  </g>
+  <text x="192" y="153" font-size="14" font-weight="700" fill="#1B2A33">2021 — Fundação da Anthropic</text>
+  <text x="192" y="171" font-size="12" fill="#7C7768">Dario e Daniela Amodei + pesquisadores ex-OpenAI · divergência em segurança</text>
+
+  <!-- Node 2: Dez 2022 CAI paper -->
+  <circle cx="150" cy="218" r="14" fill="#2E7D8A" filter="url(#sh)"/>
+  <text x="150" y="223" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">22</text>
+  <g filter="url(#sh)">
+    <rect x="176" y="200" width="380" height="52" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/>
+  </g>
+  <text x="192" y="221" font-size="14" font-weight="700" fill="#1B2A33">Dez 2022 — Constitutional AI paper</text>
+  <text x="192" y="239" font-size="12" fill="#7C7768">Primeiro paper público de impacto · base técnica e filosófica do Claude</text>
+
+  <!-- Phase band: Comercial -->
+  <rect x="44" y="270" width="90" height="22" rx="11" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="89" y="285" font-size="11" font-weight="700" fill="#9A7A2E" text-anchor="middle">COMERCIAL</text>
+
+  <!-- Node 3: Mar 2023 -->
+  <circle cx="150" cy="308" r="14" fill="#C2912C" filter="url(#sh)"/>
+  <text x="150" y="313" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">23</text>
+  <g filter="url(#sh)">
+    <rect x="176" y="290" width="380" height="52" rx="10" fill="#FBF6EA" stroke="#EADfBF"/>
+  </g>
+  <text x="192" y="311" font-size="14" font-weight="700" fill="#1B2A33">Mar 2023 — Claude 1 ao público</text>
+  <text x="192" y="329" font-size="12" fill="#7C7768">Primeiro produto comercial · entrada no mercado após dois anos de pesquisa</text>
+
+  <!-- Node 4: Jul 2023 -->
+  <circle cx="150" cy="374" r="14" fill="#C2912C" filter="url(#sh)"/>
+  <text x="150" y="379" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">23</text>
+  <g filter="url(#sh)">
+    <rect x="176" y="356" width="380" height="52" rx="10" fill="#FBF6EA" stroke="#EADfBF"/>
+  </g>
+  <text x="192" y="377" font-size="14" font-weight="700" fill="#1B2A33">Jul 2023 — Claude 2 + claude.ai</text>
+  <text x="192" y="395" font-size="12" fill="#7C7768">Interface web lançada · acesso ao público ampliado</text>
+
+  <!-- Node 5: Mar 2024 -->
+  <circle cx="150" cy="440" r="14" fill="#C2912C" filter="url(#sh)"/>
+  <text x="150" y="445" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">24</text>
+  <g filter="url(#sh)">
+    <rect x="176" y="422" width="380" height="52" rx="10" fill="#FBF6EA" stroke="#EADfBF"/>
+  </g>
+  <text x="192" y="443" font-size="14" font-weight="700" fill="#1B2A33">Mar 2024 — Família Claude 3</text>
+  <text x="192" y="461" font-size="12" fill="#7C7768">Opus · Sonnet · Haiku — padrão de tiers que se mantém em 2026</text>
+
+  <!-- Right panel: Fronteira 2024-2026 -->
+  <g filter="url(#sh)">
+    <rect x="590" y="118" width="252" height="360" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <path d="M590,130 a12,12 0 0 1 12,-12 h228 a12,12 0 0 1 12,12 v22 h-252 z" fill="#1B2A33"/>
+  <text x="716" y="145" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">FRONTEIRA (2024–2026)</text>
+
+  <text x="608" y="176" font-size="12.5" font-weight="700" fill="#1B2A33">Out 2024</text>
+  <text x="608" y="192" font-size="11.5" fill="#7C7768">Computer Use · opera interfaces</text>
+  <line x1="608" y1="202" x2="826" y2="202" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="608" y="220" font-size="12.5" font-weight="700" fill="#1B2A33">Nov 2024</text>
+  <text x="608" y="236" font-size="11.5" fill="#7C7768">MCP — padrão aberto de tools</text>
+  <line x1="608" y1="246" x2="826" y2="246" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="608" y="264" font-size="12.5" font-weight="700" fill="#1B2A33">Fev 2025</text>
+  <text x="608" y="280" font-size="11.5" fill="#7C7768">Claude Code — produto público</text>
+  <line x1="608" y1="290" x2="826" y2="290" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="608" y="308" font-size="12.5" font-weight="700" fill="#1B2A33">Set 2025</text>
+  <text x="608" y="324" font-size="11.5" fill="#7C7768">Sonnet 4.5 · 77,2% SWE-bench</text>
+  <line x1="608" y1="334" x2="826" y2="334" stroke="#E6DFC9" stroke-width="1"/>
+
+  <text x="608" y="352" font-size="12.5" font-weight="700" fill="#1B2A33">2026</text>
+  <text x="608" y="368" font-size="11.5" fill="#7C7768">Cadência acelerada de lançamentos</text>
+  <line x1="608" y1="378" x2="826" y2="378" stroke="#E6DFC9" stroke-width="1"/>
+
+  <rect x="608" y="392" width="216" height="26" rx="13" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="716" y="409" font-size="11" font-weight="700" fill="#9A7A2E" text-anchor="middle">Portfólio corrente → Apêndice Vivo (J)</text>
+
+  <!-- Caption -->
+  <text x="44" y="528" font-size="12.5" fill="#7C7768" font-style="italic">Da fundação por dissidentes da OpenAI ao platô da fronteira — cada marco moldou o produto que você usa hoje.</text>
+</svg>

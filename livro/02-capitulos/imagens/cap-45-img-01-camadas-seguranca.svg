@@ -1,0 +1,110 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule441" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="shadow441" x="-5%" y="-5%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="458" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="44" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 44.1 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="72" font-size="23" font-weight="700" fill="#1B2A33">Camadas de segurança do deployment Claude</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="85" width="86" height="3.5" rx="1.75" fill="url(#goldRule441)"/>
+
+  <!-- Divider label between rows 2 and 3 (right side) -->
+  <!-- MAIN LAYERS AREA starts at y=106, each row ~62px -->
+
+  <!-- ROW 1: Infraestrutura Anthropic — teal -->
+  <rect x="44" y="106" width="630" height="62" rx="8" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1.2" filter="url(#shadow441)"/>
+  <!-- Layer number badge -->
+  <rect x="54" y="120" width="24" height="24" rx="12" fill="#2E7D8A"/>
+  <text x="66" y="136" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle">1</text>
+  <!-- Layer label -->
+  <text x="90" y="131" font-size="13.5" font-weight="700" fill="#2E7D8A">Infraestrutura Anthropic</text>
+  <text x="90" y="149" font-size="11" fill="#44525C">camada base — garantida pelo fornecedor</text>
+  <!-- Chips -->
+  <rect x="272" y="120" width="70" height="22" rx="11" fill="#2E7D8A" fill-opacity="0.15" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="307" y="135" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">TLS 1.2+</text>
+  <rect x="350" y="120" width="74" height="22" rx="11" fill="#2E7D8A" fill-opacity="0.15" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="387" y="135" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">AES-256</text>
+  <rect x="432" y="120" width="58" height="22" rx="11" fill="#2E7D8A" fill-opacity="0.15" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="461" y="135" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">SOC 2</text>
+  <rect x="498" y="120" width="80" height="22" rx="11" fill="#2E7D8A" fill-opacity="0.15" stroke="#2E7D8A" stroke-width="1"/>
+  <text x="538" y="135" font-size="11" font-weight="600" fill="#2E7D8A" text-anchor="middle">ISO 27001</text>
+  <!-- Responsibility badge RIGHT -->
+  <rect x="686" y="112" width="150" height="50" rx="8" fill="#2E7D8A" filter="url(#shadow441)"/>
+  <text x="761" y="132" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle" letter-spacing="1">ANTHROPIC</text>
+  <text x="761" y="150" font-size="11" fill="#CFE3E6" text-anchor="middle">garante ↑</text>
+
+  <!-- ROW 2: Camada de contrato — gold -->
+  <rect x="44" y="178" width="630" height="62" rx="8" fill="#FBF6EA" stroke="#EADfBF" stroke-width="1.2" filter="url(#shadow441)"/>
+  <rect x="54" y="192" width="24" height="24" rx="12" fill="#C2912C"/>
+  <text x="66" y="208" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle">2</text>
+  <text x="90" y="203" font-size="13.5" font-weight="700" fill="#C2912C">Camada de contrato</text>
+  <text x="90" y="221" font-size="11" fill="#44525C">formalização jurídica da relação controlador-operador</text>
+  <rect x="272" y="192" width="38" height="22" rx="11" fill="#C2912C" fill-opacity="0.18" stroke="#C2912C" stroke-width="1"/>
+  <text x="291" y="207" font-size="11" font-weight="600" fill="#C2912C" text-anchor="middle">DPA</text>
+  <rect x="318" y="192" width="40" height="22" rx="11" fill="#C2912C" fill-opacity="0.18" stroke="#C2912C" stroke-width="1"/>
+  <text x="338" y="207" font-size="11" font-weight="600" fill="#C2912C" text-anchor="middle">ZDR</text>
+  <rect x="366" y="192" width="148" height="22" rx="11" fill="#C2912C" fill-opacity="0.18" stroke="#C2912C" stroke-width="1"/>
+  <text x="440" y="207" font-size="11" font-weight="600" fill="#C2912C" text-anchor="middle">opt-out de treinamento</text>
+  <!-- Badge -->
+  <rect x="686" y="184" width="150" height="50" rx="8" fill="#C2912C" filter="url(#shadow441)"/>
+  <text x="761" y="204" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle" letter-spacing="1">COMPARTILHADO</text>
+  <text x="761" y="222" font-size="11" fill="#FBF6EA" text-anchor="middle">Anthropic + Cliente</text>
+
+  <!-- DIVIDER LINE between rows 2 and 3 -->
+  <line x1="44" y1="249" x2="836" y2="249" stroke="#B5532F" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="440" y="263" font-size="11" font-weight="600" fill="#B5532F" text-anchor="middle" letter-spacing="1">— linha de divisão de responsabilidade —</text>
+
+  <!-- ROW 3: Isolamento de rede — neutro -->
+  <rect x="44" y="270" width="630" height="62" rx="8" fill="#F1ECE0" stroke="#D8D0BD" stroke-width="1.2" filter="url(#shadow441)"/>
+  <rect x="54" y="284" width="24" height="24" rx="12" fill="#7C7768"/>
+  <text x="66" y="300" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle">3</text>
+  <text x="90" y="295" font-size="13.5" font-weight="700" fill="#44525C">Isolamento de rede</text>
+  <text x="90" y="313" font-size="11" fill="#44525C">habilitado pelo cliente na escolha de plataforma</text>
+  <rect x="272" y="284" width="74" height="22" rx="11" fill="#7C7768" fill-opacity="0.18" stroke="#7C7768" stroke-width="1"/>
+  <text x="309" y="299" font-size="11" font-weight="600" fill="#44525C" text-anchor="middle">Enterprise</text>
+  <rect x="354" y="284" width="62" height="22" rx="11" fill="#7C7768" fill-opacity="0.18" stroke="#7C7768" stroke-width="1"/>
+  <text x="385" y="299" font-size="11" font-weight="600" fill="#44525C" text-anchor="middle">Bedrock</text>
+  <rect x="424" y="284" width="78" height="22" rx="11" fill="#7C7768" fill-opacity="0.18" stroke="#7C7768" stroke-width="1"/>
+  <text x="463" y="299" font-size="11" font-weight="600" fill="#44525C" text-anchor="middle">Vertex VPC</text>
+  <!-- Badge -->
+  <rect x="686" y="276" width="150" height="50" rx="8" fill="#44525C" filter="url(#shadow441)"/>
+  <text x="761" y="296" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle" letter-spacing="1">CLIENTE</text>
+  <text x="761" y="314" font-size="11" fill="#D8D0BD" text-anchor="middle">habilita ↓</text>
+
+  <!-- ROW 4: Controles do cliente — terracota -->
+  <rect x="44" y="342" width="630" height="62" rx="8" fill="#F0DDD2" stroke="#E7CDBE" stroke-width="1.2" filter="url(#shadow441)"/>
+  <rect x="54" y="356" width="24" height="24" rx="12" fill="#B5532F"/>
+  <text x="66" y="372" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle">4</text>
+  <text x="90" y="367" font-size="13.5" font-weight="700" fill="#B5532F">Controles do cliente</text>
+  <text x="90" y="385" font-size="11" fill="#44525C">políticas, processos e governança interna</text>
+  <rect x="272" y="356" width="112" height="22" rx="11" fill="#B5532F" fill-opacity="0.18" stroke="#B5532F" stroke-width="1"/>
+  <text x="328" y="371" font-size="11" font-weight="600" fill="#B5532F" text-anchor="middle">Classificação de dado</text>
+  <rect x="392" y="356" width="44" height="22" rx="11" fill="#B5532F" fill-opacity="0.18" stroke="#B5532F" stroke-width="1"/>
+  <text x="414" y="371" font-size="11" font-weight="600" fill="#B5532F" text-anchor="middle">RACI</text>
+  <rect x="444" y="356" width="60" height="22" rx="11" fill="#B5532F" fill-opacity="0.18" stroke="#B5532F" stroke-width="1"/>
+  <text x="474" y="371" font-size="11" font-weight="600" fill="#B5532F" text-anchor="middle">Auditoria</text>
+  <rect x="512" y="356" width="40" height="22" rx="11" fill="#B5532F" fill-opacity="0.18" stroke="#B5532F" stroke-width="1"/>
+  <text x="532" y="371" font-size="11" font-weight="600" fill="#B5532F" text-anchor="middle">AUP</text>
+  <!-- Badge -->
+  <rect x="686" y="348" width="150" height="50" rx="8" fill="#B5532F" filter="url(#shadow441)"/>
+  <text x="761" y="368" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle" letter-spacing="1">CLIENTE</text>
+  <text x="761" y="386" font-size="11" fill="#F0DDD2" text-anchor="middle">garante ↓</text>
+
+  <!-- Caption -->
+  <text x="44" y="432" font-size="12.5" fill="#7C7768" font-style="italic" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+    Certificações do fornecedor protegem o lado dele. A organização precisa documentar seus próprios controles — um não substitui o outro.
+  </text>
+</svg>

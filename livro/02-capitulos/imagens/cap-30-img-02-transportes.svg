@@ -1,0 +1,83 @@
+<svg viewBox="0 0 880 530" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh29b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule29b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="528" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 29.2 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Stdio local versus HTTP remoto</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule29b)"/>
+
+  <!-- Column headers -->
+  <g filter="url(#sh29b)">
+    <rect x="44" y="112" width="376" height="50" rx="11" fill="#44525C"/>
+  </g>
+  <text x="232" y="133" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">STDIO (LOCAL)</text>
+  <text x="232" y="151" font-size="11.5" fill="#D8D0BD" text-anchor="middle">subprocesso na mesma máquina · stdin/stdout</text>
+
+  <g filter="url(#sh29b)">
+    <rect x="460" y="112" width="376" height="50" rx="11" fill="#B5532F"/>
+  </g>
+  <text x="648" y="133" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">HTTP REMOTO</text>
+  <text x="648" y="151" font-size="11.5" fill="#F0DDD2" text-anchor="middle">POST + SSE · múltiplos clientes</text>
+
+  <!-- Row 1: Latência -->
+  <g filter="url(#sh29b)"><rect x="44" y="178" width="376" height="52" rx="10" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <text x="64" y="198" font-size="12" font-weight="700" fill="#7C7768">LATÊNCIA</text>
+  <text x="64" y="216" font-size="13" font-weight="700" fill="#1B2A33">Microsegundos (IPC)</text>
+  <text x="392" y="207" font-size="11" fill="#7C7768" text-anchor="end" font-style="italic">zero overhead de rede</text>
+
+  <g filter="url(#sh29b)"><rect x="460" y="178" width="376" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <text x="480" y="198" font-size="12" font-weight="700" fill="#7C7768">LATÊNCIA</text>
+  <text x="480" y="216" font-size="13" font-weight="700" fill="#1B2A33">Milissegundos (rede)</text>
+  <text x="808" y="207" font-size="11" fill="#B5532F" text-anchor="end" font-style="italic">TLS + transmissão</text>
+
+  <!-- Row 2: Autenticação -->
+  <g filter="url(#sh29b)"><rect x="44" y="242" width="376" height="52" rx="10" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <text x="64" y="262" font-size="12" font-weight="700" fill="#7C7768">AUTENTICAÇÃO</text>
+  <text x="64" y="280" font-size="13" font-weight="700" fill="#1B2A33">Isolamento de processo</text>
+
+  <g filter="url(#sh29b)"><rect x="460" y="242" width="376" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <text x="480" y="262" font-size="12" font-weight="700" fill="#7C7768">AUTENTICAÇÃO</text>
+  <text x="480" y="280" font-size="13" font-weight="700" fill="#1B2A33">OAuth 2.1 / Bearer token obrigatório</text>
+
+  <!-- Row 3: Escala -->
+  <g filter="url(#sh29b)"><rect x="44" y="306" width="376" height="52" rx="10" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <text x="64" y="326" font-size="12" font-weight="700" fill="#7C7768">ESCALA</text>
+  <text x="64" y="344" font-size="13" font-weight="700" fill="#1B2A33">Um cliente, uma instância</text>
+
+  <g filter="url(#sh29b)"><rect x="460" y="306" width="376" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <text x="480" y="326" font-size="12" font-weight="700" fill="#7C7768">ESCALA</text>
+  <text x="480" y="344" font-size="13" font-weight="700" fill="#1B2A33">Múltiplos clientes simultâneos</text>
+
+  <!-- Row 4: Quando usar -->
+  <g filter="url(#sh29b)"><rect x="44" y="370" width="376" height="64" rx="10" fill="#F1ECE0" stroke="#D8D0BD"/></g>
+  <text x="64" y="390" font-size="12" font-weight="700" fill="#44525C">QUANDO USAR</text>
+  <text x="64" y="408" font-size="12" fill="#44525C">Servidor individual, arquivo local,</text>
+  <text x="64" y="424" font-size="12" fill="#44525C">tool de desenvolvedor</text>
+
+  <g filter="url(#sh29b)"><rect x="460" y="370" width="376" height="64" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/></g>
+  <text x="480" y="390" font-size="12" font-weight="700" fill="#B5532F">QUANDO USAR</text>
+  <text x="480" y="408" font-size="12" fill="#44525C">Servidor compartilhado por equipe</text>
+  <text x="480" y="424" font-size="12" fill="#44525C">ou organização, SaaS corporativo</text>
+
+  <!-- Security callout for HTTP -->
+  <g filter="url(#sh29b)"><rect x="460" y="448" width="376" height="36" rx="10" fill="#B5532F"/></g>
+  <text x="648" y="464" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">TLS 1.3 · mTLS · rate limiting · log centralizado</text>
+  <text x="648" y="478" font-size="11" fill="#F0DDD2" text-anchor="middle">pilha de segurança obrigatória</text>
+
+  <!-- Binário perímetro note for stdio -->
+  <g filter="url(#sh29b)"><rect x="44" y="448" width="376" height="36" rx="10" fill="#44525C"/></g>
+  <text x="232" y="464" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Binário instalado = perímetro de segurança</text>
+  <text x="232" y="478" font-size="11" fill="#D8D0BD" text-anchor="middle">sem rede, sem token em trânsito</text>
+
+  <!-- Caption -->
+  <text x="44" y="518" font-size="12.5" fill="#7C7768" font-style="italic">A escolha de transporte é uma decisão de quem usa o servidor: individual → stdio; equipe ou organização → HTTP com toda a pilha de autenticação.</text>
+</svg>

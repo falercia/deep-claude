@@ -1,0 +1,51 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh8" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule8" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="axEnd" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 5.2 · INVARIANTE 4 — ENCAIXE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Portfolio de roteamento, não modelo único</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule8)"/>
+
+  <!-- axes -->
+  <line x1="150" y1="400" x2="800" y2="400" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd)"/>
+  <line x1="150" y1="400" x2="150" y2="128" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd)"/>
+  <text x="800" y="424" font-size="12.5" fill="#1B2A33" text-anchor="end" font-weight="600">VOLUME →</text>
+  <text x="138" y="124" font-size="12.5" fill="#1B2A33" text-anchor="end" font-weight="600" transform="rotate(-90 138 124)" >COMPLEXIDADE →</text>
+
+  <!-- quadrant guides -->
+  <line x1="475" y1="150" x2="475" y2="400" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="3 4"/>
+  <line x1="150" y1="275" x2="800" y2="275" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- Opus zone: alta complexidade, baixo volume (top-left) -->
+  <g filter="url(#sh8)"><rect x="178" y="166" width="266" height="92" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/></g>
+  <text x="198" y="194" font-size="16" font-weight="700" fill="#9A7A2E">OPUS</text>
+  <text x="198" y="216" font-size="12" fill="#7C7768">alta complexidade · baixo volume</text>
+  <text x="198" y="234" font-size="12" fill="#7C7768">decisão irreversível, escrita crítica</text>
+  <text x="198" y="250" font-size="11.5" fill="#9A7A2E" font-weight="600">~5-10%</text>
+
+  <!-- Haiku zone: baixa complexidade, alto volume (bottom-right) -->
+  <g filter="url(#sh8)"><rect x="506" y="290" width="266" height="92" rx="12" fill="#EFF6F7" stroke="#BBD7DB"/></g>
+  <text x="526" y="318" font-size="16" font-weight="700" fill="#256A75">HAIKU</text>
+  <text x="526" y="340" font-size="12" fill="#7C7768">baixa complexidade · alto volume</text>
+  <text x="526" y="358" font-size="12" fill="#7C7768">classificar, extrair, rotear, real-time</text>
+  <text x="526" y="374" font-size="11.5" fill="#256A75" font-weight="600">~25-45%</text>
+
+  <!-- Sonnet zone: center/default diagonal band -->
+  <g filter="url(#sh8)"><rect x="372" y="248" width="210" height="74" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <text x="392" y="276" font-size="16" font-weight="700" fill="#44525C">SONNET</text>
+  <text x="392" y="296" font-size="12" fill="#7C7768">o default consciente</text>
+  <text x="392" y="313" font-size="11.5" fill="#44525C" font-weight="600">~50-70% · cobre o grosso</text>
+
+  <text x="44" y="448" font-size="12.5" fill="#7C7768" font-style="italic">Operação madura roteia entre os três por sinal de complexidade na entrada — ganha velocidade, qualidade e custo ao mesmo tempo, três objetivos que costumam estar em trade-off.</text>
+</svg>

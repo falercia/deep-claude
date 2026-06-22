@@ -1,0 +1,115 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule42c" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="sh42c" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrInk42c" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrAxis42c" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="458" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="38" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 42.3 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="68" font-size="23" font-weight="700" fill="#1B2A33">Amplitude × profundidade de adoção</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="86" width="86" height="3.5" rx="1.75" fill="url(#goldRule42c)"/>
+
+  <!-- Matrix area: x=110..820, y=108..390 -->
+  <!-- Center: x=465, y=249 -->
+  <!-- Quadrants:
+       Top-left:    x=110..465, y=108..249
+       Top-right:   x=465..820, y=108..249
+       Bottom-left: x=110..465, y=249..390
+       Bottom-right:x=465..820, y=249..390
+  -->
+
+  <!-- QUADRANT: Bottom-left — ACESSO SEM ADOÇÃO (terracota/risk) -->
+  <rect x="110" y="249" width="355" height="141" rx="0" fill="#FDF0EC" stroke="none"/>
+  <rect x="110" y="249" width="355" height="141" rx="12" fill="#FDF0EC"/>
+  <!-- clip to proper corners -->
+
+  <!-- QUADRANT: Bottom-right — ADOÇÃO SUPERFICIAL (muted/alerta) -->
+  <rect x="465" y="249" width="355" height="141" rx="12" fill="#F1ECE0"/>
+
+  <!-- QUADRANT: Top-left — DEPENDÊNCIA DE POUCOS (gold) -->
+  <rect x="110" y="108" width="355" height="141" rx="12" fill="#FBF6EA"/>
+
+  <!-- QUADRANT: Top-right — ADOÇÃO MADURA (dark ardósia) -->
+  <rect x="465" y="108" width="355" height="141" rx="12" fill="#1B2A33" filter="url(#sh42c)"/>
+
+  <!-- Quadrant dividers (dashed) -->
+  <line x1="465" y1="108" x2="465" y2="390" stroke="#CFC8B6" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="110" y1="249" x2="820" y2="249" stroke="#CFC8B6" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Outer border for matrix -->
+  <rect x="110" y="108" width="710" height="282" rx="12" fill="none" stroke="#CFC8B6" stroke-width="1.5"/>
+
+  <!-- Top-left content: DEPENDÊNCIA DE POUCOS -->
+  <text x="287" y="152" font-size="13.5" font-weight="700" fill="#C2912C" text-anchor="middle">DEPENDÊNCIA DE POUCOS</text>
+  <text x="287" y="172" font-size="12" fill="#44525C" text-anchor="middle">Alta profundidade,</text>
+  <text x="287" y="188" font-size="12" fill="#44525C" text-anchor="middle">baixa amplitude</text>
+  <rect x="167" y="202" width="240" height="28" rx="8" fill="#EADfBF" stroke="#E2C879" stroke-width="1"/>
+  <text x="287" y="221" font-size="11.5" fill="#C2912C" text-anchor="middle" font-weight="600">Vulnerabilidade de concentração</text>
+
+  <!-- Top-right content: ADOÇÃO MADURA -->
+  <text x="642" y="152" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">ADOÇÃO MADURA</text>
+  <text x="642" y="172" font-size="12" fill="#E6DFC9" text-anchor="middle">Alta profundidade,</text>
+  <text x="642" y="188" font-size="12" fill="#E6DFC9" text-anchor="middle">alta amplitude</text>
+  <rect x="544" y="202" width="196" height="28" rx="8" fill="#C2912C"/>
+  <text x="642" y="221" font-size="11.5" fill="#ffffff" text-anchor="middle" font-weight="700">OBJETIVO</text>
+  <!-- Star/target indicator -->
+  <text x="810" y="120" font-size="20" fill="#E2C879" text-anchor="middle">★</text>
+
+  <!-- Bottom-left content: ACESSO SEM ADOÇÃO -->
+  <text x="287" y="285" font-size="13.5" font-weight="700" fill="#B5532F" text-anchor="middle">ACESSO SEM ADOÇÃO</text>
+  <text x="287" y="305" font-size="12" fill="#44525C" text-anchor="middle">Baixa profundidade,</text>
+  <text x="287" y="321" font-size="12" fill="#44525C" text-anchor="middle">baixa amplitude</text>
+  <rect x="167" y="335" width="240" height="28" rx="8" fill="#F9DDD5" stroke="#B5532F" stroke-width="1"/>
+  <text x="287" y="354" font-size="11.5" fill="#B5532F" text-anchor="middle" font-weight="600">Risco de desperdício</text>
+
+  <!-- Bottom-right content: ADOÇÃO SUPERFICIAL -->
+  <text x="642" y="285" font-size="13.5" font-weight="700" fill="#44525C" text-anchor="middle">ADOÇÃO SUPERFICIAL</text>
+  <text x="642" y="305" font-size="12" fill="#44525C" text-anchor="middle">Baixa profundidade,</text>
+  <text x="642" y="321" font-size="12" fill="#44525C" text-anchor="middle">alta amplitude</text>
+  <rect x="522" y="335" width="240" height="28" rx="8" fill="#D8D0BD" stroke="#CFC8B6" stroke-width="1"/>
+  <text x="642" y="354" font-size="11.5" fill="#44525C" text-anchor="middle" font-weight="600">Alerta: uso sem valor real</text>
+
+  <!-- Y AXIS -->
+  <line x1="94" y1="400" x2="94" y2="100" stroke="#1B2A33" stroke-width="2" marker-end="url(#arrAxis42c)"/>
+  <!-- Y axis label -->
+  <text x="30" y="249" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle" transform="rotate(-90, 30, 249)">PROFUNDIDADE →</text>
+  <!-- Y axis ticks labels -->
+  <text x="104" y="394" font-size="11" fill="#7C7768" text-anchor="end">baixa</text>
+  <text x="104" y="114" font-size="11" fill="#7C7768" text-anchor="end">alta</text>
+  <text x="104" y="254" font-size="11" fill="#7C7768" text-anchor="end">·</text>
+
+  <!-- X AXIS -->
+  <line x1="100" y1="398" x2="828" y2="398" stroke="#1B2A33" stroke-width="2" marker-end="url(#arrAxis42c)"/>
+  <!-- X axis label -->
+  <text x="465" y="420" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle">AMPLITUDE →</text>
+  <!-- X axis sublabel -->
+  <text x="465" y="434" font-size="11" fill="#7C7768" text-anchor="middle" font-style="italic">% de licenças com uso recorrente</text>
+  <!-- X axis ticks labels -->
+  <text x="116" y="412" font-size="11" fill="#7C7768" text-anchor="middle">baixa</text>
+  <text x="812" y="412" font-size="11" fill="#7C7768" text-anchor="middle">alta</text>
+
+  <!-- Y axis sub label -->
+  <text x="60" y="392" font-size="10.5" fill="#7C7768" text-anchor="middle" font-style="italic">complexidade</text>
+  <text x="60" y="404" font-size="10.5" fill="#7C7768" text-anchor="middle" font-style="italic">dos casos</text>
+
+  <!-- Caption -->
+  <text x="44" y="447" font-size="12" fill="#7C7768" font-style="italic">"Alta amplitude com baixa profundidade é adoção superficial. Alta profundidade com baixa amplitude é dependência de poucos. O objetivo é crescimento em ambos os eixos."</text>
+</svg>

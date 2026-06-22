@@ -49,3 +49,11 @@ labs/*/cache/
 
 # Material de lançamento — formatos binários temporários
 lancamento/*/draft/
+
+# Backups e fantasmas de sync (Cowork)
+_backup-*/
+* 2.md
+* 2.svg
+* 2.html
+*.bak
+*.stale

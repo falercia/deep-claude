@@ -1,0 +1,127 @@
+<svg viewBox="0 0 880 530" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule30a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/>
+      <stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="sh30a" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <filter id="sh30aLight" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#1B2A33" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- FRAME -->
+  <rect x="1" y="1" width="878" height="528" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- KICKER -->
+  <text x="44" y="42" font-size="12.5" font-weight="700" letter-spacing="2.5" fill="#C2912C">DIAGRAMA 30.1 · INVARIANTE 3 — CAMADA DUPLA</text>
+
+  <!-- TITLE -->
+  <text x="44" y="74" font-size="23" font-weight="700" fill="#1B2A33">Anatomia de uma Skill</text>
+
+  <!-- GOLD RULE -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule30a)"/>
+
+  <!-- ====================================================
+       LEFT PANEL — ESTRUTURA DE PASTAS
+  ==================================================== -->
+  <rect x="36" y="112" width="384" height="370" rx="12" fill="white" stroke="#D8D0BD" stroke-width="1.2" filter="url(#sh30a)"/>
+
+  <!-- Panel header dark -->
+  <rect x="36" y="112" width="384" height="42" rx="12" fill="#1B2A33"/>
+  <rect x="36" y="136" width="384" height="18" fill="#1B2A33"/>
+  <text x="228" y="138" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.2">ESTRUTURA DE PASTAS</text>
+
+  <!-- Folder root label -->
+  <text x="60" y="176" font-size="13.5" font-weight="700" fill="#1B2A33">minha-skill/</text>
+
+  <!-- ROW 1: SKILL.md — O CORACAO (dourado) -->
+  <rect x="56" y="185" width="352" height="52" rx="8" fill="#FBF6EA" stroke="#E6DFC9" stroke-width="1" filter="url(#sh30aLight)"/>
+  <rect x="56" y="185" width="5" height="52" rx="2.5" fill="#C2912C"/>
+  <text x="73" y="204" font-size="13.5" font-weight="700" fill="#1B2A33">SKILL.md</text>
+  <rect x="260" y="191" width="82" height="18" rx="9" fill="#C2912C"/>
+  <text x="301" y="204" font-size="11" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">O CORACAO</text>
+  <text x="73" y="228" font-size="12" fill="#7C7768">instrucoes principais · metadados YAML + fluxo operacional</text>
+
+  <!-- ROW 2: scripts/ (teal) -->
+  <rect x="56" y="245" width="352" height="52" rx="8" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1" filter="url(#sh30aLight)"/>
+  <rect x="56" y="245" width="5" height="52" rx="2.5" fill="#2E7D8A"/>
+  <text x="73" y="265" font-size="13.5" font-weight="700" fill="#1B2A33">scripts/</text>
+  <text x="73" y="286" font-size="12" fill="#7C7768">scripts executaveis (Python, shell)</text>
+
+  <!-- ROW 3: templates/ (teal) -->
+  <rect x="56" y="305" width="352" height="52" rx="8" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1" filter="url(#sh30aLight)"/>
+  <rect x="56" y="305" width="5" height="52" rx="2.5" fill="#2E7D8A"/>
+  <text x="73" y="325" font-size="13.5" font-weight="700" fill="#1B2A33">templates/</text>
+  <text x="73" y="346" font-size="12" fill="#7C7768">arquivos modelo (Word, Excel, Markdown)</text>
+
+  <!-- ROW 4: examples/ (dourado) -->
+  <rect x="56" y="365" width="352" height="52" rx="8" fill="#FBF6EA" stroke="#E6DFC9" stroke-width="1" filter="url(#sh30aLight)"/>
+  <rect x="56" y="365" width="5" height="52" rx="2.5" fill="#C2912C"/>
+  <text x="73" y="385" font-size="13.5" font-weight="700" fill="#1B2A33">examples/</text>
+  <text x="73" y="406" font-size="12" fill="#7C7768">casos de referencia com qualidade calibrada</text>
+
+  <!-- ROW 5: references/ (muted) -->
+  <rect x="56" y="425" width="352" height="50" rx="8" fill="#F1ECE0" stroke="#D8D0BD" stroke-width="1" filter="url(#sh30aLight)"/>
+  <rect x="56" y="425" width="5" height="50" rx="2.5" fill="#7C7768"/>
+  <text x="73" y="445" font-size="13.5" font-weight="700" fill="#1B2A33">references/</text>
+  <text x="73" y="465" font-size="12" fill="#7C7768">material de consulta estavel</text>
+
+  <!-- ====================================================
+       RIGHT PANEL — SKILL.md CONTEUDO
+  ==================================================== -->
+  <rect x="436" y="112" width="408" height="370" rx="12" fill="white" stroke="#D8D0BD" stroke-width="1.2" filter="url(#sh30a)"/>
+
+  <!-- Panel header dourado -->
+  <rect x="436" y="112" width="408" height="42" rx="12" fill="#C2912C"/>
+  <rect x="436" y="136" width="408" height="18" fill="#C2912C"/>
+  <text x="640" y="138" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.2">SKILL.md — CONTEUDO</text>
+
+  <!-- Block 1: FRONTMATTER YAML (dark code block) -->
+  <rect x="454" y="162" width="372" height="76" rx="8" fill="#1B2A33"/>
+  <text x="470" y="182" font-size="11.5" font-weight="700" fill="#C2912C">FRONTMATTER YAML</text>
+  <text x="470" y="200" font-size="12" fill="#E2C879" font-family="'Courier New',Courier,monospace">name: minha-skill</text>
+  <text x="470" y="217" font-size="12" fill="#E2C879" font-family="'Courier New',Courier,monospace">description: "Use quando o usuario pedir X"</text>
+  <text x="470" y="231" font-size="11" fill="#7C7768" font-family="'Courier New',Courier,monospace">triggers: [palavra-chave, padrao, contexto]</text>
+
+  <!-- Block 2: # Quando usar -->
+  <rect x="454" y="247" width="372" height="62" rx="8" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1"/>
+  <rect x="454" y="247" width="5" height="62" rx="2.5" fill="#2E7D8A"/>
+  <text x="471" y="267" font-size="13" font-weight="700" fill="#2E7D8A"># Quando usar</text>
+  <text x="471" y="286" font-size="12" fill="#44525C">Gatilhos que ativam a skill automaticamente</text>
+  <text x="471" y="301" font-size="11.5" fill="#7C7768">Claude reconhece relevancia e carrega sob demanda</text>
+
+  <!-- Block 3: # Fluxo -->
+  <rect x="454" y="318" width="372" height="108" rx="8" fill="#FBF6EA" stroke="#E6DFC9" stroke-width="1"/>
+  <rect x="454" y="318" width="5" height="108" rx="2.5" fill="#C2912C"/>
+  <text x="471" y="338" font-size="13" font-weight="700" fill="#C2912C"># Fluxo (passos numerados)</text>
+
+  <circle cx="486" cy="358" r="11" fill="#C2912C"/>
+  <text x="486" y="362" font-size="11" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <text x="503" y="362" font-size="12" fill="#44525C">Entender o contexto e requisitos do usuario</text>
+
+  <circle cx="486" cy="384" r="11" fill="#2E7D8A"/>
+  <text x="486" y="388" font-size="11" font-weight="700" fill="white" text-anchor="middle">2</text>
+  <text x="503" y="388" font-size="12" fill="#44525C">Aplicar templates e scripts da pasta</text>
+
+  <circle cx="486" cy="410" r="11" fill="#1B2A33"/>
+  <text x="486" y="414" font-size="11" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <text x="503" y="414" font-size="12" fill="#44525C">Validar com examples/ e entregar resultado</text>
+
+  <!-- Bottom note inside right panel -->
+  <rect x="454" y="435" width="372" height="40" rx="8" fill="#F1ECE0" stroke="#D8D0BD" stroke-width="1"/>
+  <text x="640" y="452" font-size="12" fill="#7C7768" text-anchor="middle" font-style="italic">Claude carrega sob demanda ao reconhecer relevancia</text>
+  <text x="640" y="467" font-size="11" fill="#7C7768" text-anchor="middle" font-style="italic">— padrao duravel que persiste entre sessoes —</text>
+
+  <!-- ====================================================
+       BOTTOM CENTER PILL: ATIVO ORGANIZACIONAL
+  ==================================================== -->
+  <rect x="184" y="490" width="512" height="30" rx="15" fill="#1B2A33" filter="url(#sh30aLight)"/>
+  <text x="440" y="510" font-size="11.5" font-weight="700" fill="#E2C879" text-anchor="middle" letter-spacing="0.4">ATIVO ORGANIZACIONAL · Versionada em Git · Mantida como codigo · Compartilhada no workspace</text>
+
+  <!-- FOOTER LEGEND -->
+  <text x="44" y="526" font-size="12" fill="#7C7768" font-style="italic">Pasta versionavel com instrucoes, templates, scripts e exemplos. A Skill e a camada duravel (Inv. 3); a execucao a consome como referencia.</text>
+
+</svg>

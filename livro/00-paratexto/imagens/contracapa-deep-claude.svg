@@ -1,0 +1,88 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E2E38"/><stop offset="1" stop-color="#131F27"/>
+    </linearGradient>
+    <linearGradient id="goldc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E8CE83"/>
+    </linearGradient>
+    <filter id="softc" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#bgc)"/>
+  <rect x="46" y="46" width="708" height="1108" rx="6" fill="none" stroke="#3C5260" stroke-width="1.5"/>
+  <rect x="46" y="46" width="708" height="7" fill="url(#goldc)"/>
+
+  <!-- header -->
+  <text x="400" y="120" text-anchor="middle" font-size="14" letter-spacing="3.5" font-weight="700" fill="#D9B55A">O VOLUME VIVO DA SÉRIE</text>
+  <text x="400" y="150" text-anchor="middle" font-size="24" font-weight="800" fill="#FBF8F1">Inteligência Aumentada</text>
+  <rect x="360" y="166" width="80" height="3" rx="1.5" fill="url(#goldc)"/>
+
+  <!-- body paragraphs -->
+  <g font-size="17" fill="#C9D3D8">
+    <text x="90" y="222">O Livro 1 ensinou o que não muda: os nove Invariantes da IA, os</text>
+    <text x="90" y="250">fundamentos, os frameworks, a arquitetura de decisão. Este volume</text>
+    <text x="90" y="278">mostra como essas ideias ganham forma operável no ecossistema mais</text>
+    <text x="90" y="306">maduro disponível para aplicá-las: o Claude.</text>
+
+    <text x="90" y="356">Você vai operar Claude Web, Code, Projects, Artifacts, Research,</text>
+    <text x="90" y="384">Skills, Subagents, MCP, Voice e Scheduled Tasks com critério</text>
+    <text x="90" y="412">executivo — sabendo qual Invariante cada capacidade instancia, em</text>
+    <text x="90" y="440">qual encaixe ela se justifica, e em qual é desperdício. E vai ler</text>
+    <text x="90" y="468">estudos de caso brasileiros, do jurídico à educação, em que o</text>
+    <text x="90" y="496">método vira decisão de arquitetura, governança e custo.</text>
+  </g>
+
+  <!-- pull quote -->
+  <g filter="url(#softc)">
+    <rect x="90" y="534" width="620" height="92" rx="12" fill="#16242C" stroke="#5A7280"/>
+  </g>
+  <rect x="90" y="534" width="7" height="92" rx="3" fill="#C2912C"/>
+  <text x="124" y="576" font-size="21" font-weight="700" font-style="italic" fill="#FBF8F1">"Não há código no corpo.</text>
+  <text x="124" y="606" font-size="21" font-weight="700" font-style="italic" fill="#FBF8F1">Há método, decisão, governança."</text>
+
+  <!-- closing paragraph -->
+  <g font-size="17" fill="#C9D3D8">
+    <text x="90" y="678">Um Apêndice Vivo datado mantém versões, preços e benchmarks fora</text>
+    <text x="90" y="706">do livro, com fonte por linha. Quem precisa do número de hoje</text>
+    <text x="90" y="734">consulta o apêndice; quem precisa do padrão consulta o Livro 1;</text>
+    <text x="90" y="762">quem opera Claude amanhã usa os dois. Este livro envelhece de</text>
+    <text x="90" y="790">propósito — mas sob disciplina pública, e por isso continua útil.</text>
+  </g>
+
+  <!-- capability chips -->
+  <g font-size="12.5">
+    <rect x="90" y="828" width="92" height="26" rx="13" fill="#16242C" stroke="#3FA0AE"/><text x="136" y="845" text-anchor="middle" fill="#7FCAD4">Governança</text>
+    <rect x="190" y="828" width="60" height="26" rx="13" fill="#16242C" stroke="#3FA0AE"/><text x="220" y="845" text-anchor="middle" fill="#7FCAD4">Custo</text>
+    <rect x="258" y="828" width="116" height="26" rx="13" fill="#16242C" stroke="#3FA0AE"/><text x="316" y="845" text-anchor="middle" fill="#7FCAD4">Casos brasileiros</text>
+    <rect x="382" y="828" width="108" height="26" rx="13" fill="#2A2418" stroke="#9A7A2E"/><text x="436" y="845" text-anchor="middle" fill="#E2C879">Apêndice Vivo</text>
+    <rect x="498" y="828" width="128" height="26" rx="13" fill="#2A2418" stroke="#9A7A2E"/><text x="562" y="845" text-anchor="middle" fill="#E2C879">Repositório aberto</text>
+  </g>
+
+  <!-- repo line -->
+  <text x="90" y="906" font-size="14" fill="#8C9BA3">Repositório acompanhante: <tspan font-weight="700" fill="#C9D3D8">github.com/falercia/deep-claude</tspan></text>
+
+  <!-- footer -->
+  <line x1="90" y1="1010" x2="710" y2="1010" stroke="#3C5260" stroke-width="1.5"/>
+  <text x="90" y="1052" font-size="15" font-weight="700" fill="#FBF8F1">Inteligência Aumentada · Volume 2</text>
+  <text x="90" y="1076" font-size="13" fill="#8C9BA3">Fabio Garcia · 2026</text>
+  <text x="90" y="1100" font-size="12" fill="#6E7E86">Texto sob CC BY 4.0 · ISBN a obter</text>
+
+  <g filter="url(#softc)">
+    <rect x="556" y="1024" width="154" height="86" rx="6" fill="#FBF8F1" stroke="#5A7280"/>
+  </g>
+  <g fill="#1B2A33">
+    <rect x="572" y="1040" width="3" height="50"/><rect x="578" y="1040" width="2" height="50"/>
+    <rect x="584" y="1040" width="5" height="50"/><rect x="592" y="1040" width="2" height="50"/>
+    <rect x="598" y="1040" width="4" height="50"/><rect x="606" y="1040" width="2" height="50"/>
+    <rect x="611" y="1040" width="3" height="50"/><rect x="618" y="1040" width="5" height="50"/>
+    <rect x="626" y="1040" width="2" height="50"/><rect x="631" y="1040" width="4" height="50"/>
+    <rect x="639" y="1040" width="3" height="50"/><rect x="645" y="1040" width="2" height="50"/>
+    <rect x="650" y="1040" width="5" height="50"/><rect x="658" y="1040" width="2" height="50"/>
+    <rect x="664" y="1040" width="3" height="50"/><rect x="670" y="1040" width="4" height="50"/>
+    <rect x="678" y="1040" width="2" height="50"/><rect x="684" y="1040" width="3" height="50"/>
+  </g>
+  <text x="633" y="1102" text-anchor="middle" font-size="9.5" fill="#7C7768">ISBN a obter</text>
+</svg>

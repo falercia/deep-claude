@@ -1,0 +1,120 @@
+<svg viewBox="0 0 880 540" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh-mx" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRuleMx" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrMx" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrMxY" markerWidth="9" markerHeight="9" refX="3" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,9 L4.5,0 L9,9 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="538" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="44" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 8.3 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <!-- Title -->
+  <text x="44" y="74" font-size="23" font-weight="700" fill="#1B2A33">Matriz risco × autonomia</text>
+  <!-- Gold rule -->
+  <rect x="44" y="86" width="86" height="3.5" rx="1.75" fill="url(#goldRuleMx)"/>
+
+  <!-- ── AXIS LINES ── -->
+  <!-- X axis -->
+  <line x1="100" y1="400" x2="830" y2="400" stroke="#44525C" stroke-width="2" marker-end="url(#arrMx)"/>
+  <!-- Y axis -->
+  <line x1="100" y1="400" x2="100" y2="118" stroke="#44525C" stroke-width="2" marker-end="url(#arrMxY)"/>
+
+  <!-- Axis labels -->
+  <text x="465" y="430" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">AUTONOMIA CONCEDIDA</text>
+  <text x="465" y="447" font-size="11.5" fill="#7C7768" text-anchor="middle">baixa ←————————————————————→ alta</text>
+
+  <!-- Y axis label (rotated) -->
+  <text x="62" y="265" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle" transform="rotate(-90 62 265)">RAIO DE IMPACTO / RISCO</text>
+  <text x="36" y="265" font-size="11" fill="#7C7768" text-anchor="middle" transform="rotate(-90 36 265)">baixo ↑ ————— ↑ alto</text>
+
+  <!-- Cross dividers -->
+  <line x1="100" y1="260" x2="820" y2="260" stroke="#CFC8B6" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="460" y1="118" x2="460" y2="400" stroke="#CFC8B6" stroke-width="1.2" stroke-dasharray="6 4"/>
+
+  <!-- ── QUADRANT BACKGROUNDS ── -->
+
+  <!-- Q3: baixo autonomia, alto risco → ASSISTA DE PERTO (terracota) -->
+  <rect x="104" y="122" width="352" height="134" rx="10" fill="#F0DDD2" stroke="#B5532F" stroke-width="1.3" opacity="0.7"/>
+
+  <!-- Q4: alto autonomia, alto risco → FREIOS OBRIGATÓRIOS (terracota dark) -->
+  <rect x="464" y="122" width="352" height="134" rx="10" fill="#E7CDBE" stroke="#B5532F" stroke-width="1.8"/>
+
+  <!-- Q1: baixo autonomia, baixo risco → DELEGUE À VONTADE (teal) -->
+  <rect x="104" y="264" width="352" height="132" rx="10" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.3" opacity="0.7"/>
+
+  <!-- Q2: alto autonomia, baixo risco → DELEGUE COM OBSERVABILIDADE (dourado) -->
+  <rect x="464" y="264" width="352" height="132" rx="10" fill="#FBF6EA" stroke="#C2912C" stroke-width="1.3"/>
+
+  <!-- ── QUADRANT LABELS ── -->
+
+  <!-- Q1: Delegue à vontade -->
+  <text x="280" y="296" font-size="14.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">Delegue à vontade</text>
+  <text x="280" y="315" font-size="11.5" fill="#44525C" text-anchor="middle">Baixo risco + baixa autonomia</text>
+  <text x="280" y="332" font-size="11" fill="#7C7768" text-anchor="middle">uso conversacional, rascunho,</text>
+  <text x="280" y="347" font-size="11" fill="#7C7768" text-anchor="middle">análise sem efeito externo</text>
+  <!-- Badge -->
+  <circle cx="156" cy="300" r="14" fill="#2E7D8A"/>
+  <text x="156" y="305" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+
+  <!-- Q2: Delegue com observabilidade -->
+  <text x="640" y="296" font-size="14.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">Delegue com observabilidade</text>
+  <text x="640" y="315" font-size="11.5" fill="#44525C" text-anchor="middle">Baixo risco + alta autonomia</text>
+  <text x="640" y="332" font-size="11" fill="#7C7768" text-anchor="middle">agentes em sandbox, extração</text>
+  <text x="640" y="347" font-size="11" fill="#7C7768" text-anchor="middle">de dados internos, organização</text>
+  <!-- Badge -->
+  <circle cx="516" cy="300" r="14" fill="#C2912C"/>
+  <text x="516" y="305" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+
+  <!-- Q3: Assista de perto -->
+  <text x="280" y="156" font-size="14.5" font-weight="700" fill="#B5532F" text-anchor="middle">Assista de perto</text>
+  <text x="280" y="175" font-size="11.5" fill="#44525C" text-anchor="middle">Alto risco + baixa autonomia</text>
+  <text x="280" y="192" font-size="11" fill="#7C7768" text-anchor="middle">decisões de alto impacto, dados</text>
+  <text x="280" y="207" font-size="11" fill="#7C7768" text-anchor="middle">sensíveis com revisão humana</text>
+  <!-- Badge -->
+  <circle cx="156" cy="160" r="14" fill="#B5532F"/>
+  <text x="156" y="165" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+
+  <!-- Q4: Freios obrigatórios -->
+  <text x="640" y="150" font-size="14.5" font-weight="700" fill="#8C3A1F" text-anchor="middle">Freios obrigatórios</text>
+  <text x="640" y="169" font-size="11.5" fill="#44525C" text-anchor="middle">Alto risco + alta autonomia</text>
+  <!-- Pills -->
+  <g filter="url(#sh-mx)">
+    <rect x="504" y="180" width="90" height="22" rx="10" fill="#B5532F"/>
+    <text x="549" y="195" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">plano prévio</text>
+  </g>
+  <g filter="url(#sh-mx)">
+    <rect x="604" y="180" width="104" height="22" rx="10" fill="#B5532F"/>
+    <text x="656" y="195" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">aprovação humana</text>
+  </g>
+  <g filter="url(#sh-mx)">
+    <rect x="504" y="208" width="108" height="22" rx="10" fill="#B5532F"/>
+    <text x="558" y="223" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">reversibilidade</text>
+  </g>
+  <g filter="url(#sh-mx)">
+    <rect x="622" y="208" width="86" height="22" rx="10" fill="#B5532F"/>
+    <text x="665" y="223" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">observabilidade</text>
+  </g>
+  <!-- Badge -->
+  <circle cx="516" cy="150" r="14" fill="#8C3A1F"/>
+  <text x="516" y="155" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+
+  <!-- Axis tick labels -->
+  <text x="282" y="416" font-size="11" fill="#7C7768" text-anchor="middle">baixa</text>
+  <text x="640" y="416" font-size="11" fill="#7C7768" text-anchor="middle">alta</text>
+  <text x="86" y="390" font-size="11" fill="#7C7768" text-anchor="end">baixo</text>
+  <text x="86" y="138" font-size="11" fill="#7C7768" text-anchor="end">alto</text>
+
+  <!-- Legend -->
+  <text x="44" y="492" font-size="12.5" fill="#7C7768" font-style="italic">A autonomia só é ativo quando observabilidade e reversibilidade a acompanham. O quadrante 4 não é proibido — é o que exige os quatro freios do Invariante 6.</text>
+</svg>

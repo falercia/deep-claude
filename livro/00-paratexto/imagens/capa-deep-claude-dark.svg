@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E2E38"/><stop offset="1" stop-color="#131F27"/>
+    </linearGradient>
+    <linearGradient id="goldd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E8CE83"/>
+    </linearGradient>
+    <radialGradient id="cored" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#2C4350"/><stop offset="1" stop-color="#1B2A33"/>
+    </radialGradient>
+    <filter id="softd" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#bgd)"/>
+  <rect x="46" y="46" width="708" height="1108" rx="6" fill="none" stroke="#3C5260" stroke-width="1.5"/>
+  <rect x="46" y="46" width="708" height="7" fill="url(#goldd)"/>
+
+  <text x="400" y="124" text-anchor="middle" font-size="15" letter-spacing="4" font-weight="700" fill="#D9B55A">INTELIGÊNCIA AUMENTADA</text>
+  <text x="400" y="148" text-anchor="middle" font-size="12.5" letter-spacing="2.5" fill="#9FB0B8">VOLUME 2 · O VOLUME VIVO</text>
+
+  <g stroke="#3F5663" stroke-width="1.2">
+    <line x1="400" y1="335" x2="290" y2="252"/>
+    <line x1="400" y1="335" x2="528" y2="244"/>
+    <line x1="400" y1="335" x2="566" y2="356"/>
+    <line x1="400" y1="335" x2="512" y2="452"/>
+    <line x1="400" y1="335" x2="392" y2="478"/>
+    <line x1="400" y1="335" x2="268" y2="438"/>
+    <line x1="400" y1="335" x2="236" y2="330"/>
+    <line x1="400" y1="335" x2="356" y2="214"/>
+    <line x1="290" y1="252" x2="356" y2="214"/>
+    <line x1="528" y1="244" x2="566" y2="356"/>
+    <line x1="512" y1="452" x2="392" y2="478"/>
+    <line x1="268" y1="438" x2="236" y2="330"/>
+  </g>
+  <g filter="url(#softd)">
+    <circle cx="290" cy="252" r="12" fill="#3FA0AE"/>
+    <circle cx="528" cy="244" r="14" fill="#D9B55A"/>
+    <circle cx="566" cy="356" r="10" fill="#3FA0AE"/>
+    <circle cx="512" cy="452" r="13" fill="#D9B55A"/>
+    <circle cx="392" cy="478" r="11" fill="#3FA0AE"/>
+    <circle cx="268" cy="438" r="14" fill="#D9B55A"/>
+    <circle cx="236" cy="330" r="10" fill="#3FA0AE"/>
+    <circle cx="356" cy="214" r="9" fill="#D9B55A"/>
+    <circle cx="470" cy="196" r="7" fill="#CF6B45"/>
+    <circle cx="588" cy="430" r="7" fill="#CF6B45"/>
+  </g>
+  <g filter="url(#softd)">
+    <circle cx="400" cy="335" r="48" fill="url(#cored)"/>
+  </g>
+  <circle cx="400" cy="335" r="48" fill="none" stroke="url(#goldd)" stroke-width="2.5"/>
+  <text x="400" y="331" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">Claude</text>
+  <text x="400" y="349" text-anchor="middle" font-size="9.5" letter-spacing="1" fill="#D9B55A">ECOSSISTEMA</text>
+
+  <text x="400" y="650" text-anchor="middle" font-size="74" font-weight="800" fill="#FBF8F1">Deep Claude</text>
+  <rect x="330" y="676" width="140" height="4" rx="2" fill="url(#goldd)"/>
+
+  <text x="400" y="726" text-anchor="middle" font-size="23" font-weight="500" fill="#C9D3D8">O Currículo Executivo</text>
+  <text x="400" y="757" text-anchor="middle" font-size="23" font-weight="500" fill="#C9D3D8">do Ecossistema Anthropic</text>
+
+  <text x="400" y="802" text-anchor="middle" font-size="15.5" font-style="italic" fill="#8C9BA3">O manual conectado ao livro que envelhece bem.</text>
+
+  <g filter="url(#softd)">
+    <rect x="292" y="840" width="216" height="40" rx="20" fill="#16242C" stroke="#5A7280"/>
+  </g>
+  <circle cx="316" cy="860" r="5" fill="#CF6B45"/>
+  <text x="416" y="865" text-anchor="middle" font-size="14" font-weight="700" letter-spacing="1.2" fill="#E2C879">VOLUME VIVO · 2026</text>
+
+  <text x="400" y="996" text-anchor="middle" font-size="13.5" letter-spacing="1" fill="#8C9BA3">companheiro de</text>
+  <text x="400" y="1020" text-anchor="middle" font-size="16" font-weight="600" fill="#C9D3D8">Inteligência Aumentada · Os Invariantes da IA</text>
+
+  <line x1="330" y1="1078" x2="470" y2="1078" stroke="url(#goldd)" stroke-width="2"/>
+  <text x="400" y="1116" text-anchor="middle" font-size="25" font-weight="700" letter-spacing="2.5" fill="#FBF8F1">FABIO GARCIA</text>
+</svg>

@@ -1,0 +1,132 @@
+<svg viewBox="0 0 880 540" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule443" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="shadow443" x="-5%" y="-5%" width="115%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="headerGrad443" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B3E20"/>
+      <stop offset="100%" stop-color="#B5532F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="538" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="44" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 44.3 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="72" font-size="23" font-weight="700" fill="#1B2A33">Matriz de classificação de dado e nível de controle exigido</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="85" width="86" height="3.5" rx="1.75" fill="url(#goldRule443)"/>
+
+  <!-- TABLE HEADER ROW -->
+  <rect x="44" y="100" width="612" height="34" rx="6" fill="url(#headerGrad443)" filter="url(#shadow443)"/>
+  <text x="82" y="121" font-size="11.5" font-weight="700" fill="#FBF8F1">NÍVEL</text>
+  <text x="140" y="121" font-size="11.5" font-weight="700" fill="#FBF8F1">CLASSIFICAÇÃO</text>
+  <text x="330" y="121" font-size="11.5" font-weight="700" fill="#FBF8F1">PLANO MÍNIMO</text>
+  <text x="490" y="121" font-size="11.5" font-weight="700" fill="#FBF8F1">CONTROLES ADICIONAIS</text>
+
+  <!-- ROW 1: PÚBLICO -->
+  <rect x="44" y="134" width="612" height="44" rx="5" fill="#FFFFFF" stroke="#E6DFC9" stroke-width="1"/>
+  <rect x="52" y="143" width="26" height="26" rx="13" fill="#D8D0BD"/>
+  <text x="65" y="160" font-size="11.5" font-weight="700" fill="#44525C" text-anchor="middle">1</text>
+  <text x="100" y="152" font-size="12" font-weight="700" fill="#1B2A33">PÚBLICO</text>
+  <text x="100" y="168" font-size="11" fill="#7C7768">dados de domínio público</text>
+  <text x="330" y="162" font-size="12" fill="#44525C">Qualquer plano</text>
+  <text x="490" y="162" font-size="12" fill="#7C7768">Nenhum adicional</text>
+
+  <!-- ROW 2: INTERNO -->
+  <rect x="44" y="182" width="612" height="44" rx="5" fill="#F1ECE0" stroke="#D8D0BD" stroke-width="1"/>
+  <rect x="52" y="191" width="26" height="26" rx="13" fill="#CFC8B6"/>
+  <text x="65" y="208" font-size="11.5" font-weight="700" fill="#44525C" text-anchor="middle">2</text>
+  <text x="100" y="200" font-size="12" font-weight="700" fill="#1B2A33">INTERNO</text>
+  <text x="100" y="216" font-size="11" fill="#7C7768">uso restrito à organização</text>
+  <text x="330" y="210" font-size="12" fill="#44525C">Qualquer plano pago</text>
+  <text x="490" y="210" font-size="12" fill="#44525C">AUP interna</text>
+
+  <!-- ROW 3: CONFIDENCIAL -->
+  <rect x="44" y="230" width="612" height="44" rx="5" fill="#EAE4D4" stroke="#CFC8B6" stroke-width="1"/>
+  <rect x="52" y="239" width="26" height="26" rx="13" fill="#7C7768"/>
+  <text x="65" y="256" font-size="11.5" font-weight="700" fill="#FBF8F1" text-anchor="middle">3</text>
+  <text x="100" y="248" font-size="12" font-weight="700" fill="#1B2A33">CONFIDENCIAL</text>
+  <text x="100" y="264" font-size="11" fill="#7C7768">estratégico, financeiro, legal</text>
+  <text x="330" y="258" font-size="12" fill="#44525C">Claude para Empresas</text>
+  <text x="490" y="258" font-size="12" fill="#44525C">Controle de acesso + logs</text>
+
+  <!-- ROW 4: DADO PESSOAL COMUM -->
+  <rect x="44" y="278" width="612" height="44" rx="5" fill="#FBF6EA" stroke="#EADfBF" stroke-width="1.2"/>
+  <rect x="52" y="287" width="26" height="26" rx="13" fill="#C2912C"/>
+  <text x="65" y="304" font-size="11.5" font-weight="700" fill="#FBF8F1" text-anchor="middle">4</text>
+  <text x="100" y="296" font-size="12" font-weight="700" fill="#1B2A33">DADO PESSOAL COMUM</text>
+  <text x="100" y="312" font-size="11" fill="#7C7768">nome, e-mail, CPF — titular identificável</text>
+  <text x="330" y="306" font-size="12" fill="#C2912C" font-weight="600">Claude para Empresas</text>
+  <text x="490" y="300" font-size="11.5" fill="#44525C">Base legal LGPD +</text>
+  <text x="490" y="315" font-size="11.5" fill="#44525C">RACI + auditoria</text>
+
+  <!-- ROW 5: DADO SENSÍVEL LGPD -->
+  <rect x="44" y="326" width="612" height="44" rx="5" fill="#F0DDD2" stroke="#E7CDBE" stroke-width="1.5"/>
+  <rect x="52" y="335" width="26" height="26" rx="13" fill="#B5532F"/>
+  <text x="65" y="352" font-size="11.5" font-weight="700" fill="#FBF8F1" text-anchor="middle">5</text>
+  <text x="100" y="344" font-size="12" font-weight="700" fill="#B5532F">DADO SENSIVEL (LGPD)</text>
+  <text x="100" y="360" font-size="11" fill="#7C7768">saude, biometria, origem racial, religiao, filiacao</text>
+  <text x="330" y="348" font-size="11.5" fill="#B5532F" font-weight="700">Enterprise + DPA</text>
+  <text x="330" y="363" font-size="11" fill="#B5532F">obrigatorio</text>
+  <text x="490" y="342" font-size="11" fill="#44525C">RIPD + DPO +</text>
+  <text x="490" y="356" font-size="11" fill="#44525C">base reforçada +</text>
+  <text x="490" y="370" font-size="11" fill="#44525C">transf. internacional</text>
+
+  <!-- ROW 6: SIGILO LEGAL — but row 5 is taller, need to adjust -->
+  <!-- Row 5 is 44px but has 3 lines on right. Let's use 52px for row 5 and row 6. -->
+  <!-- Recalculate: Row 5 starts at 326, height 52 → row 6 starts at 382 -->
+
+  <!-- ROW 6: SIGILO LEGAL -->
+  <rect x="44" y="378" width="612" height="50" rx="5" fill="#E7CDBE" stroke="#B5532F" stroke-width="1.8"/>
+  <rect x="52" y="389" width="26" height="26" rx="13" fill="#8B3E20"/>
+  <text x="65" y="406" font-size="11.5" font-weight="700" fill="#FBF8F1" text-anchor="middle">6</text>
+  <text x="100" y="397" font-size="12" font-weight="700" fill="#8B3E20">SIGILO LEGAL</text>
+  <text x="100" y="413" font-size="11" fill="#7C7768">advogado-cliente, segredo industrial, sigilo bancario</text>
+  <text x="330" y="397" font-size="11.5" fill="#8B3E20" font-weight="700">Enterprise + DPA +</text>
+  <text x="330" y="413" font-size="11" fill="#8B3E20">analise juridica</text>
+  <text x="490" y="397" font-size="11.5" fill="#8B3E20" font-weight="700">Juridico especializado;</text>
+  <text x="490" y="413" font-size="11" fill="#44525C">revisao caso a caso</text>
+
+  <!-- RIGHT SIDE CALLOUT BOX -->
+  <rect x="672" y="100" width="164" height="328" rx="10" fill="#FBF6EA" stroke="#B5532F" stroke-width="1.8" filter="url(#shadow443)"/>
+  <rect x="672" y="100" width="164" height="36" rx="10" fill="#B5532F"/>
+  <text x="754" y="123" font-size="11" font-weight="700" fill="#FBF8F1" text-anchor="middle">NOTA IMPORTANTE</text>
+  <!-- callout text lines — wrapped manually -->
+  <text x="682" y="152" font-size="11.5" font-weight="700" fill="#B5532F">DPA nao e upgrade</text>
+  <text x="682" y="168" font-size="11.5" font-weight="700" fill="#B5532F">de conforto —</text>
+  <text x="682" y="188" font-size="11" fill="#44525C">e o instrumento</text>
+  <text x="682" y="204" font-size="11" fill="#44525C">que formaliza a</text>
+  <text x="682" y="220" font-size="11" fill="#44525C">relacao</text>
+  <text x="682" y="236" font-size="11" fill="#44525C">controlador-</text>
+  <text x="682" y="252" font-size="11" fill="#44525C">operador</text>
+
+  <line x1="682" y1="270" x2="826" y2="270" stroke="#E7CDBE" stroke-width="1"/>
+  <text x="682" y="292" font-size="11" font-weight="700" fill="#1B2A33">Planos minimos:</text>
+  <text x="682" y="312" font-size="11" fill="#2E7D8A">Empresas = Empresas</text>
+  <text x="682" y="328" font-size="11" fill="#B5532F">Enterprise = obrig.</text>
+  <text x="682" y="344" font-size="11" fill="#8B3E20">DPA = contratual</text>
+  <text x="682" y="364" font-size="11" fill="#8B3E20">juridico = externo</text>
+  <text x="682" y="384" font-size="11" font-weight="600" fill="#B5532F">niveis 5-6</text>
+  <text x="682" y="399" font-size="11" fill="#7C7768">exigem assessment</text>
+  <text x="682" y="414" font-size="11" fill="#7C7768">antes do uso</text>
+
+  <!-- Caption -->
+  <text x="44" y="450" font-size="12.5" fill="#7C7768" font-style="italic">
+    A decisao de compliance acontece antes do Enter — no momento em que voce classifica o dado e escolhe o que colocar no prompt.
+  </text>
+
+  <!-- Severity arrow on left side -->
+  <rect x="24" y="134" width="14" height="288" rx="7" fill="none" stroke="#B5532F" stroke-width="1.5"/>
+  <text x="12" y="280" font-size="11" font-weight="700" fill="#B5532F" text-anchor="middle" transform="rotate(-90,12,280)">SENSIBILIDADE CRESCENTE</text>
+  <!-- Arrow head at bottom -->
+  <polygon points="31,422 24,406 38,406" fill="#B5532F"/>
+</svg>

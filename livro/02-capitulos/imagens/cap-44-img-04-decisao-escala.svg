@@ -1,0 +1,107 @@
+<svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule434" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C2912C"/>
+      <stop offset="100%" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="38" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C" text-anchor="start" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">DIAGRAMA 43.4 · INVARIANTE 5 — CUSTO COMPOSTO</text>
+
+  <!-- Title -->
+  <text x="44" y="68" font-size="23" font-weight="700" fill="#1B2A33" text-anchor="start" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">Quando escalar vs. quando não escalar</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="80" width="86" height="3.5" rx="1.75" fill="url(#goldRule434)"/>
+
+  <!-- TABLE OUTER BORDER (rounded) -->
+  <rect x="44" y="108" width="792" height="354" rx="10" fill="none" stroke="#CFC8B6" stroke-width="1.5"/>
+
+  <!-- HEADER BACKGROUND: base fill for col1 -->
+  <rect x="44" y="108" width="792" height="42" rx="10" fill="#F1ECE0"/>
+  <!-- Cover bottom corners of header with square rect to make only top rounded -->
+  <rect x="44" y="130" width="792" height="20" fill="#F1ECE0"/>
+
+  <!-- Header col2 fill (teal) -->
+  <rect x="206" y="108" width="315" height="42" fill="#2E7D8A"/>
+  <!-- Header col3 fill (terracota) -->
+  <rect x="521" y="108" width="315" height="42" fill="#B5532F"/>
+  <!-- Round top-right corner of col3 -->
+  <rect x="521" y="108" width="315" height="42" rx="0" fill="#B5532F"/>
+
+  <!-- Column backgrounds for data rows -->
+  <rect x="206" y="150" width="315" height="312" fill="#EFF6F7"/>
+  <rect x="521" y="150" width="315" height="312" fill="#F0DDD2"/>
+
+  <!-- Horizontal dividers between data rows -->
+  <line x1="44" y1="202" x2="836" y2="202" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="254" x2="836" y2="254" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="306" x2="836" y2="306" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="358" x2="836" y2="358" stroke="#CFC8B6" stroke-width="1"/>
+  <line x1="44" y1="410" x2="836" y2="410" stroke="#CFC8B6" stroke-width="1"/>
+
+  <!-- Vertical column dividers -->
+  <line x1="206" y1="108" x2="206" y2="462" stroke="#CFC8B6" stroke-width="1.5"/>
+  <line x1="521" y1="108" x2="521" y2="462" stroke="#CFC8B6" stroke-width="1.5"/>
+
+  <!-- HEADER TEXT -->
+  <text x="125" y="134" font-size="10.5" font-weight="700" fill="#44525C" letter-spacing="1.5" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">DIMENSÃO</text>
+  <text x="363" y="134" font-size="11" font-weight="700" fill="white" letter-spacing="1.5" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">PRONTO PARA ESCALAR</text>
+  <text x="678" y="134" font-size="11" font-weight="700" fill="white" letter-spacing="1.5" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">NÃO ESCALAR AINDA</text>
+
+  <!-- ROW 1: Baseline | y=150 to 202, center=176 -->
+  <rect x="44" y="150" width="162" height="52" fill="#FEFCF7"/>
+  <text x="125" y="181" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">Baseline</text>
+  <text x="363" y="181" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">documentado com dado real</text>
+  <text x="678" y="181" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">estimado ou ausente</text>
+
+  <!-- ROW 2: Custo por resultado | y=202 to 254, center=228 -->
+  <rect x="44" y="202" width="162" height="52" fill="#F7F3EA"/>
+  <text x="125" y="222" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">Custo por</text>
+  <text x="125" y="237" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">resultado</text>
+  <text x="363" y="222" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">medido com atribuição</text>
+  <text x="363" y="237" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">por feature</text>
+  <text x="678" y="228" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">só fatura total disponível</text>
+
+  <!-- ROW 3: Subgrupos testados | y=254 to 306, center=280 -->
+  <rect x="44" y="254" width="162" height="52" fill="#FEFCF7"/>
+  <text x="125" y="274" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">Subgrupos</text>
+  <text x="125" y="289" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">testados</text>
+  <text x="363" y="274" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">usuário mediano incluído</text>
+  <text x="363" y="289" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">no piloto</text>
+  <text x="678" y="274" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">só melhores usuários</text>
+  <text x="678" y="289" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">no piloto</text>
+
+  <!-- ROW 4: TCO completo | y=306 to 358, center=332 -->
+  <rect x="44" y="306" width="162" height="52" fill="#F7F3EA"/>
+  <text x="125" y="337" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">TCO completo</text>
+  <text x="363" y="337" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">4 linhas de custo incluídas</text>
+  <text x="678" y="337" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">apenas API no orçamento</text>
+
+  <!-- ROW 5: ROI fantasma | y=358 to 410, center=384 -->
+  <rect x="44" y="358" width="162" height="52" fill="#FEFCF7"/>
+  <text x="125" y="389" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">ROI fantasma</text>
+  <text x="363" y="376" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">5 sinais verificados</text>
+  <text x="363" y="391" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">e descartados</text>
+  <text x="678" y="389" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">nenhum verificado</text>
+
+  <!-- ROW 6: Qualidade monitorada | y=410 to 462, center=436 -->
+  <rect x="44" y="410" width="162" height="52" fill="#F7F3EA"/>
+  <text x="125" y="430" font-size="11.5" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">Qualidade</text>
+  <text x="125" y="445" font-size="11.5" font-weight="700" fill="#1B2A33" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">monitorada</text>
+  <text x="363" y="430" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">métrica objetiva com</text>
+  <text x="363" y="445" font-size="12" fill="#1D6470" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">histórico documentado</text>
+  <text x="678" y="430" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">qualidade percebida /</text>
+  <text x="678" y="445" font-size="12" fill="#8B3A1E" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">satisfação subjetiva</text>
+
+  <!-- Footer note -->
+  <text x="440" y="471" font-size="11.5" fill="#44525C" font-style="italic" text-anchor="middle" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">Critério de escala: todas as linhas na coluna verde antes de ampliar.</text>
+
+  <!-- Caption -->
+  <text x="44" y="486" font-size="12.5" fill="#7C7768" font-style="italic" text-anchor="start" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">"Escalar com ROI fantasma multiplica o problema, não o valor."</text>
+  <text x="44" y="499" font-size="12.5" fill="#7C7768" font-style="italic" text-anchor="start" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">"A régua de decisão exige evidência — não projeção."</text>
+</svg>

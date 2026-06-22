@@ -1,0 +1,105 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh253" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule253" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk253" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 25.3 · INVARIANTE 5 — CUSTO COMPOSTO</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">Ordem canônica para máximo cache hit</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule253)"/>
+
+  <!-- Left column: numbered stack (bottom to top = first to last in prompt) -->
+  <!-- LAYER 1 (bottom = primeiro na API) -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="388" width="520" height="54" rx="10" fill="#EFF6F7" stroke="#2E7D8A"/>
+  </g>
+  <circle cx="76" cy="415" r="14" fill="#2E7D8A"/>
+  <text x="76" y="420" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="108" y="411" font-size="14" font-weight="700" fill="#1B2A33">Tools</text>
+  <text x="108" y="429" font-size="12" fill="#7C7768">definições de ferramentas (se fixas entre chamadas)</text>
+  <text x="548" y="415" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">TTL 1h &#x2192;</text>
+
+  <!-- LAYER 2 -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="326" width="520" height="54" rx="10" fill="#EFF6F7" stroke="#2E7D8A"/>
+  </g>
+  <circle cx="76" cy="353" r="14" fill="#2E7D8A"/>
+  <text x="76" y="358" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="108" y="349" font-size="14" font-weight="700" fill="#1B2A33">System Prompt</text>
+  <text x="108" y="367" font-size="12" fill="#7C7768">instruções de comportamento e regras de negócio</text>
+  <text x="548" y="353" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">TTL 1h &#x2192;</text>
+
+  <!-- LAYER 3 -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="264" width="520" height="54" rx="10" fill="#EFF6F7" stroke="#2E7D8A"/>
+  </g>
+  <circle cx="76" cy="291" r="14" fill="#2E7D8A"/>
+  <text x="76" y="296" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="108" y="287" font-size="14" font-weight="700" fill="#1B2A33">Base de Conhecimento / Documentação</text>
+  <text x="108" y="305" font-size="12" fill="#7C7768">conteúdo de referência estável — breakpoint aqui</text>
+  <text x="548" y="291" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">TTL 5min &#x2192;</text>
+
+  <!-- LAYER 4 -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="202" width="520" height="54" rx="10" fill="#EFF6F7" stroke="#2E7D8A"/>
+  </g>
+  <circle cx="76" cy="229" r="14" fill="#2E7D8A"/>
+  <text x="76" y="234" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="108" y="225" font-size="14" font-weight="700" fill="#1B2A33">Exemplos Few-Shot</text>
+  <text x="108" y="243" font-size="12" fill="#7C7768">demonstrações de entrada/saída (se fixos)</text>
+  <text x="548" y="229" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">TTL 5min &#x2192;</text>
+
+  <!-- BREAKPOINT LINE -->
+  <line x1="44" y1="196" x2="564" y2="196" stroke="#C2912C" stroke-width="2.5" stroke-dasharray="8 4"/>
+  <g filter="url(#sh253)">
+    <rect x="270" y="180" width="200" height="28" rx="14" fill="#FBF6EA" stroke="#C2912C"/>
+  </g>
+  <text x="370" y="199" font-size="12" font-weight="700" fill="#C2912C" text-anchor="middle">&#x25C6; posição do breakpoint &#x25C6;</text>
+
+  <!-- LAYER 5 (histórico) -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="138" width="520" height="38" rx="10" fill="#FFFFFF" stroke="#C2912C"/>
+  </g>
+  <circle cx="76" cy="157" r="14" fill="#C2912C"/>
+  <text x="76" y="162" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="108" y="153" font-size="13" font-weight="700" fill="#9A7A2E">Histórico de Conversa</text>
+  <text x="108" y="169" font-size="11.5" fill="#7C7768">turnos anteriores — opcional, breakpoint aqui se conversa longa</text>
+
+  <!-- LAYER 6 (top = volatile) -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="100" width="520" height="32" rx="10" fill="#F0DDD2" stroke="#B5532F"/>
+  </g>
+  <circle cx="76" cy="116" r="14" fill="#B5532F"/>
+  <text x="76" y="121" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="108" y="120" font-size="13" font-weight="700" fill="#B5532F">Mensagem Atual do Usuário</text>
+  <text x="530" y="120" font-size="11.5" fill="#B5532F" text-anchor="end">sempre volátil</text>
+
+  <!-- Right column: annotations -->
+  <rect x="600" y="100" width="238" height="174" rx="12" fill="#FFFFFF" stroke="#E6DFC9"/>
+  <text x="620" y="122" font-size="12" font-weight="700" fill="#2E7D8A">Tudo abaixo da linha:</text>
+  <text x="620" y="139" font-size="11.5" fill="#7C7768">potencialmente cacheável</text>
+  <text x="620" y="156" font-size="11.5" fill="#7C7768">&#x2713; processado uma vez</text>
+  <text x="620" y="173" font-size="11.5" fill="#7C7768">&#x2713; lido do cache nas</text>
+  <text x="620" y="190" font-size="11.5" fill="#7C7768">   chamadas seguintes</text>
+  <line x1="608" y1="204" x2="830" y2="204" stroke="#E6DFC9" stroke-width="1"/>
+  <text x="620" y="224" font-size="12" font-weight="700" fill="#B5532F">Acima da linha:</text>
+  <text x="620" y="241" font-size="11.5" fill="#7C7768">processado normalmente</text>
+  <text x="620" y="258" font-size="11.5" fill="#7C7768">a cada chamada</text>
+
+  <!-- Rule -->
+  <g filter="url(#sh253)">
+    <rect x="44" y="428" width="792" height="34" rx="9" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="450" font-size="13" font-weight="700" fill="#C2912C" text-anchor="middle">Regra: nunca gere conteúdo dinâmico antes do breakpoint — um byte diferente quebra todo o hit</text>
+
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Estável no início, volátil no fim. Timestamps, datas e variáveis de sessão pertencem sempre ao sufixo — após o último breakpoint.</text>
+</svg>

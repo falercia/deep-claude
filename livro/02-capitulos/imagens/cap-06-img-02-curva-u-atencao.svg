@@ -1,0 +1,71 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh6b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule6b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="axEnd6b" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 6.2 · INVARIANTE 2 — EXTREMIDADES</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">A curva U de atenção: extremidades vs. meio</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule6b)"/>
+
+  <!-- axes -->
+  <line x1="130" y1="390" x2="800" y2="390" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd6b)"/>
+  <line x1="130" y1="390" x2="130" y2="130" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd6b)"/>
+
+  <text x="465" y="422" font-size="12.5" fill="#1B2A33" text-anchor="middle" font-weight="600">POSIÇÃO NA JANELA DE CONTEXTO →</text>
+  <text x="118" y="260" font-size="12.5" fill="#1B2A33" font-weight="600" text-anchor="middle" transform="rotate(-90 118 260)">ATENÇÃO EFETIVA →</text>
+
+  <!-- axis tick labels -->
+  <text x="140" y="408" font-size="11.5" fill="#7C7768">início</text>
+  <text x="460" y="408" font-size="11.5" fill="#7C7768" text-anchor="middle">meio</text>
+  <text x="776" y="408" font-size="11.5" fill="#7C7768" text-anchor="end">fim</text>
+
+  <!-- U-curve path (smooth) -->
+  <path d="M 140,162 C 160,162 190,170 220,200 C 260,240 300,310 340,340 C 370,360 400,368 464,370 C 528,372 558,360 590,340 C 630,310 670,240 710,200 C 740,170 768,162 790,162"
+    fill="none" stroke="#1B2A33" stroke-width="3"/>
+
+  <!-- Fill under U-curve -->
+  <path d="M 140,162 C 160,162 190,170 220,200 C 260,240 300,310 340,340 C 370,360 400,368 464,370 C 528,372 558,360 590,340 C 630,310 670,240 710,200 C 740,170 768,162 790,162 L 790,390 L 140,390 Z"
+    fill="#1B2A33" opacity="0.06"/>
+
+  <!-- Zone labels -->
+  <!-- Zone left: high attention -->
+  <g filter="url(#sh6b)">
+    <rect x="142" y="134" width="180" height="82" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="232" y="158" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">ZONA DE ABERTURA</text>
+  <text x="232" y="176" font-size="12" fill="#7C7768" text-anchor="middle">atenção máxima</text>
+  <text x="232" y="194" font-size="12" fill="#7C7768" text-anchor="middle">system prompt, regras</text>
+  <text x="232" y="210" font-size="11.5" fill="#9A7A2E" font-weight="600" text-anchor="middle">instrução crítica: aqui</text>
+
+  <!-- Zone center: degraded attention -->
+  <g filter="url(#sh6b)">
+    <rect x="345" y="340" width="240" height="44" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="465" y="360" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">ZONA CENTRAL — diluição</text>
+  <text x="465" y="376" font-size="11.5" fill="#7C7768" text-anchor="middle">histórico · docs de apoio · exemplos</text>
+
+  <!-- Zone right: high attention -->
+  <g filter="url(#sh6b)">
+    <rect x="608" y="134" width="180" height="82" rx="10" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <text x="698" y="158" font-size="13" font-weight="700" fill="#256A75" text-anchor="middle">ZONA DE FECHAMENTO</text>
+  <text x="698" y="176" font-size="12" fill="#7C7768" text-anchor="middle">atenção máxima</text>
+  <text x="698" y="194" font-size="12" fill="#7C7768" text-anchor="middle">mensagem atual, formato</text>
+  <text x="698" y="210" font-size="11.5" fill="#256A75" font-weight="600" text-anchor="middle">instrução operacional: aqui</text>
+
+  <!-- Lost in the Middle reference -->
+  <rect x="345" y="290" width="240" height="28" rx="8" fill="#FFFFFF" stroke="#CFC8B6"/>
+  <text x="465" y="308" font-size="11.5" fill="#44525C" text-anchor="middle" font-style="italic">Liu et al. 2023 — Lost in the Middle</text>
+
+  <text x="44" y="456" font-size="12.5" fill="#7C7768" font-style="italic">Distribuição esquemática de atenção efetiva ao longo de uma janela longa: máxima nas pontas, decrescente no centro. A intensidade da degradação varia com o tamanho total da janela.</text>
+</svg>

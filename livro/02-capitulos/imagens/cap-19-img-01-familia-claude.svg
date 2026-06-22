@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <rect width="1000" height="540" fill="#fefce8"/>
+
+  <text x="500" y="40" fill="#0d1b2a" font-size="22" font-weight="700" text-anchor="middle">A FAMÍLIA CLAUDE EM 2026</text>
+  <text x="500" y="64" fill="#6b7280" font-size="13" text-anchor="middle">Três tiers nomeados, cada um otimizado para faixa diferente de capacidade, velocidade e custo</text>
+
+  <!-- Opus -->
+  <g>
+    <rect x="60" y="100" width="280" height="400" rx="14" fill="#1f2937" stroke="#E97451" stroke-width="3"/>
+    <text x="200" y="138" fill="#E97451" font-size="20" font-weight="700" text-anchor="middle">OPUS 4.6 / 4.7</text>
+    <text x="200" y="158" fill="#9ca3af" font-size="11" text-anchor="middle" font-style="italic">o premium absoluto</text>
+
+    <text x="80" y="200" fill="#fef3c7" font-size="13" font-weight="700">CAPACIDADE</text>
+    <text x="80" y="222" fill="#e5e7eb" font-size="11">★★★★★ frontier</text>
+    <text x="80" y="240" fill="#9ca3af" font-size="10">SWE-bench Verified 80,8%</text>
+    <text x="80" y="256" fill="#9ca3af" font-size="10">líder em código e escrita</text>
+
+    <text x="80" y="290" fill="#fef3c7" font-size="13" font-weight="700">VELOCIDADE</text>
+    <text x="80" y="312" fill="#e5e7eb" font-size="11">★★★ moderada</text>
+    <text x="80" y="330" fill="#9ca3af" font-size="10">~40-80 tokens/seg</text>
+
+    <text x="80" y="364" fill="#fef3c7" font-size="13" font-weight="700">CUSTO</text>
+    <text x="80" y="386" fill="#e5e7eb" font-size="11">US$ 15 / 75 (in/out por M)</text>
+    <text x="80" y="404" fill="#fbbf24" font-size="10" font-weight="700">premium</text>
+
+    <text x="80" y="438" fill="#fef3c7" font-size="13" font-weight="700">USE QUANDO</text>
+    <text x="80" y="458" fill="#9ca3af" font-size="10">• Análise crítica profunda</text>
+    <text x="80" y="474" fill="#9ca3af" font-size="10">• Código complexo e arquitetura</text>
+    <text x="80" y="490" fill="#9ca3af" font-size="10">• Escrita executiva, estratégia</text>
+  </g>
+
+  <!-- Sonnet -->
+  <g>
+    <rect x="360" y="100" width="280" height="400" rx="14" fill="#1f2937" stroke="#86efac" stroke-width="3"/>
+    <text x="500" y="138" fill="#86efac" font-size="20" font-weight="700" text-anchor="middle">SONNET 4.5 / 4.6</text>
+    <text x="500" y="158" fill="#9ca3af" font-size="11" text-anchor="middle" font-style="italic">o cavalo de batalha</text>
+
+    <text x="380" y="200" fill="#fef3c7" font-size="13" font-weight="700">CAPACIDADE</text>
+    <text x="380" y="222" fill="#e5e7eb" font-size="11">★★★★ excelente</text>
+    <text x="380" y="240" fill="#9ca3af" font-size="10">SWE-bench Verified 77,2%</text>
+    <text x="380" y="256" fill="#9ca3af" font-size="10">próximo de Opus em geral</text>
+
+    <text x="380" y="290" fill="#fef3c7" font-size="13" font-weight="700">VELOCIDADE</text>
+    <text x="380" y="312" fill="#e5e7eb" font-size="11">★★★★ rápida</text>
+    <text x="380" y="330" fill="#9ca3af" font-size="10">~80-150 tokens/seg</text>
+
+    <text x="380" y="364" fill="#fef3c7" font-size="13" font-weight="700">CUSTO</text>
+    <text x="380" y="386" fill="#e5e7eb" font-size="11">US$ 3 / 15 (in/out por M)</text>
+    <text x="380" y="404" fill="#16a34a" font-size="10" font-weight="700">melhor custo-benefício</text>
+
+    <text x="380" y="438" fill="#fef3c7" font-size="13" font-weight="700">USE QUANDO</text>
+    <text x="380" y="458" fill="#9ca3af" font-size="10">• 80% das aplicações em produção</text>
+    <text x="380" y="474" fill="#9ca3af" font-size="10">• RAG, agentes, automação</text>
+    <text x="380" y="490" fill="#9ca3af" font-size="10">• Onde dúvida → Sonnet</text>
+  </g>
+
+  <!-- Haiku -->
+  <g>
+    <rect x="660" y="100" width="280" height="400" rx="14" fill="#1f2937" stroke="#fbbf24" stroke-width="3"/>
+    <text x="800" y="138" fill="#fbbf24" font-size="20" font-weight="700" text-anchor="middle">HAIKU 4.5</text>
+    <text x="800" y="158" fill="#9ca3af" font-size="11" text-anchor="middle" font-style="italic">rapidíssimo e barato</text>
+
+    <text x="680" y="200" fill="#fef3c7" font-size="13" font-weight="700">CAPACIDADE</text>
+    <text x="680" y="222" fill="#e5e7eb" font-size="11">★★★ competente</text>
+    <text x="680" y="240" fill="#9ca3af" font-size="10">supera GPT-4 inicial</text>
+    <text x="680" y="256" fill="#9ca3af" font-size="10">em tarefas comuns</text>
+
+    <text x="680" y="290" fill="#fef3c7" font-size="13" font-weight="700">VELOCIDADE</text>
+    <text x="680" y="312" fill="#e5e7eb" font-size="11">★★★★★ rapidíssima</text>
+    <text x="680" y="330" fill="#9ca3af" font-size="10">~200+ tokens/seg</text>
+
+    <text x="680" y="364" fill="#fef3c7" font-size="13" font-weight="700">CUSTO</text>
+    <text x="680" y="386" fill="#e5e7eb" font-size="11">US$ 0,80 / 4 (in/out por M)</text>
+    <text x="680" y="404" fill="#16a34a" font-size="10" font-weight="700">extremamente barato</text>
+
+    <text x="680" y="438" fill="#fef3c7" font-size="13" font-weight="700">USE QUANDO</text>
+    <text x="680" y="458" fill="#9ca3af" font-size="10">• Volume gigantesco simples</text>
+    <text x="680" y="474" fill="#9ca3af" font-size="10">• Classificação, extração, roteamento</text>
+    <text x="680" y="490" fill="#9ca3af" font-size="10">• Real-time, alta concorrência</text>
+  </g>
+
+  <text x="500" y="525" fill="#E97451" font-size="12" text-anchor="middle" font-weight="600">A maioria dos sistemas maduros usa os três em conjunto, com roteador decidindo qual chamar para cada tarefa.</text>
+</svg>

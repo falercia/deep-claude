@@ -1,0 +1,110 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 35.1 · INVARIANTE 7 — TERMÔMETRO</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">LLMOps vs. MLOps vs. DevOps: onde diferem</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- Evolution axis -->
+  <path d="M100,120 H836" fill="none" stroke="#E6DFC9" stroke-width="1.5"/>
+  <path d="M780,114 H834 V126 H780" fill="none" stroke="#C2912C" stroke-width="1.5"/>
+  <path d="M832,117 L838,120 L832,123" fill="none" stroke="#C2912C" stroke-width="1.5"/>
+  <text x="460" y="115" font-size="11.5" font-weight="700" fill="#9A7A2E" text-anchor="middle" letter-spacing="2">EVOLUÇÃO DA DISCIPLINA →</text>
+
+  <!-- Column 1: DevOps -->
+  <g filter="url(#sh)">
+    <rect x="56" y="132" width="246" height="290" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M56,145 a13,13 0 0 1 13,-13 h220 a13,13 0 0 1 13,13 v22 h-246 z" fill="#44525C"/>
+  <text x="179" y="161" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">DevOps</text>
+
+  <!-- Row data DevOps -->
+  <rect x="72" y="178" width="214" height="46" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="88" y="197" font-size="11.5" font-weight="700" fill="#44525C">Artefato versionável</text>
+  <text x="88" y="214" font-size="12" fill="#1B2A33">código</text>
+
+  <rect x="72" y="234" width="214" height="46" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="88" y="253" font-size="11.5" font-weight="700" fill="#44525C">Natureza da saída</text>
+  <text x="88" y="270" font-size="12" fill="#1B2A33">determinística</text>
+
+  <rect x="72" y="290" width="214" height="46" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="88" y="309" font-size="11.5" font-weight="700" fill="#44525C">Tipo de monitoramento</text>
+  <text x="88" y="326" font-size="12" fill="#1B2A33">erros e latência</text>
+
+  <rect x="72" y="346" width="214" height="46" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+  <text x="88" y="365" font-size="11.5" font-weight="700" fill="#44525C">Rollback</text>
+  <text x="88" y="382" font-size="12" fill="#1B2A33">revert de código</text>
+
+  <!-- Column 2: MLOps -->
+  <g filter="url(#sh)">
+    <rect x="316" y="132" width="248" height="290" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M316,145 a13,13 0 0 1 13,-13 h222 a13,13 0 0 1 13,13 v22 h-248 z" fill="#2E7D8A"/>
+  <text x="440" y="161" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">MLOps</text>
+
+  <!-- Row data MLOps -->
+  <rect x="332" y="178" width="216" height="46" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="348" y="197" font-size="11.5" font-weight="700" fill="#256A75">Artefato versionável</text>
+  <text x="348" y="214" font-size="12" fill="#1B2A33">código + modelo binário</text>
+
+  <rect x="332" y="234" width="216" height="46" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="348" y="253" font-size="11.5" font-weight="700" fill="#256A75">Natureza da saída</text>
+  <text x="348" y="270" font-size="12" fill="#1B2A33">estocástica mas estática</text>
+
+  <rect x="332" y="290" width="216" height="46" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="348" y="309" font-size="11.5" font-weight="700" fill="#256A75">Tipo de monitoramento</text>
+  <text x="348" y="326" font-size="12" fill="#1B2A33">acurácia por versão</text>
+
+  <rect x="332" y="346" width="216" height="46" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="348" y="365" font-size="11.5" font-weight="700" fill="#256A75">Rollback</text>
+  <text x="348" y="382" font-size="12" fill="#1B2A33">revert de modelo</text>
+
+  <!-- Column 3: LLMOps (highlight) -->
+  <g filter="url(#sh)">
+    <rect x="578" y="132" width="258" height="290" rx="13" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M578,145 a13,13 0 0 1 13,-13 h232 a13,13 0 0 1 13,13 v22 h-258 z" fill="#C2912C"/>
+  <text x="707" y="161" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">LLMOps</text>
+  <!-- Star / highlight badge -->
+  <rect x="790" y="138" width="38" height="18" rx="9" fill="#FBF6EA" stroke="#E2D4AC"/>
+  <text x="809" y="151" font-size="10" fill="#9A7A2E" text-anchor="middle" font-weight="700">novo</text>
+
+  <!-- Row data LLMOps -->
+  <rect x="594" y="178" width="226" height="46" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="610" y="197" font-size="11.5" font-weight="700" fill="#9A7A2E">Artefato versionável</text>
+  <text x="610" y="214" font-size="12" fill="#1B2A33">código + prompt + config</text>
+
+  <rect x="594" y="234" width="226" height="46" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="610" y="253" font-size="11.5" font-weight="700" fill="#9A7A2E">Natureza da saída</text>
+  <text x="610" y="270" font-size="12" fill="#1B2A33">não-determinística contínua</text>
+
+  <rect x="594" y="290" width="226" height="46" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="610" y="309" font-size="11.5" font-weight="700" fill="#9A7A2E">Tipo de monitoramento</text>
+  <text x="610" y="326" font-size="12" fill="#1B2A33">qualidade semântica + tokens</text>
+
+  <rect x="594" y="346" width="226" height="46" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="610" y="365" font-size="11.5" font-weight="700" fill="#9A7A2E">Rollback</text>
+  <text x="610" y="382" font-size="12" fill="#1B2A33">revert de prompt em minutos</text>
+
+  <!-- Arrows between columns -->
+  <path d="M302,277 H314" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+  <path d="M564,277 H576" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrInk)"/>
+
+  <!-- Caption -->
+  <text x="44" y="454" font-size="12.5" fill="#7C7768" font-style="italic">LLMOps acrescenta: prompt como artefato versionável, qualidade semântica como métrica e custo por token como variável operacional contínua.</text>
+  <text x="44" y="470" font-size="12.5" fill="#7C7768" font-style="italic">Drift de modelo — atualização silenciosa pelo provedor — exige monitoramento que MLOps clássico não contempla.</text>
+</svg>

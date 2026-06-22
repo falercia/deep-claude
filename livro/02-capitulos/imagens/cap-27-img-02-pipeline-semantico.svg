@@ -1,0 +1,128 @@
+<svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh262" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule262" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk262" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal262" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <marker id="arrGold262" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="418" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 26.2 · INVARIANTE 2 — EXTREMIDADES</text>
+  <text x="44" y="76" font-size="23" font-weight="700" fill="#1B2A33">Pipeline de busca semântica (quatro etapas)</text>
+  <rect x="44" y="88" width="86" height="3.5" rx="1.75" fill="url(#goldRule262)"/>
+
+  <!-- INDEXAÇÃO lane (offline) -->
+  <text x="44" y="122" font-size="11.5" font-weight="700" fill="#9A7A2E" letter-spacing="1">INDEXAÇÃO · offline · paga uma vez</text>
+
+  <!-- Step 1: Documentos brutos -->
+  <g filter="url(#sh262)">
+    <rect x="44" y="132" width="140" height="60" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="114" y="156" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Documentos</text>
+  <text x="114" y="173" font-size="11" fill="#7C7768" text-anchor="middle">fontes brutas</text>
+
+  <path d="M184,162 H206" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- Step 2: Chunking (critical — Inv 2) -->
+  <g filter="url(#sh262)">
+    <rect x="208" y="132" width="140" height="60" rx="10" fill="#F0DDD2" stroke="#B5532F"/>
+  </g>
+  <text x="278" y="154" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Chunking</text>
+  <text x="278" y="170" font-size="11" fill="#7C7768" text-anchor="middle">recorte + metadados</text>
+  <text x="278" y="185" font-size="10.5" fill="#B5532F" text-anchor="middle" font-weight="700">&#x25B2; Inv. 2 — ENTRADA</text>
+
+  <path d="M348,162 H370" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- Step 3: Embedding -->
+  <g filter="url(#sh262)">
+    <rect x="372" y="132" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <text x="442" y="154" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Embedding</text>
+  <text x="442" y="170" font-size="11" fill="#7C7768" text-anchor="middle">modelo de embedding</text>
+  <text x="442" y="185" font-size="10.5" fill="#7C7768" text-anchor="middle">chunk &#x2192; vetor</text>
+
+  <path d="M512,162 H534" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- Step 4: Índice vetorial -->
+  <g filter="url(#sh262)">
+    <rect x="536" y="132" width="140" height="60" rx="10" fill="#1B2A33" stroke="#1B2A33"/>
+  </g>
+  <text x="606" y="154" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Índice vetorial</text>
+  <text x="606" y="170" font-size="11" fill="#C2912C" text-anchor="middle">vector store</text>
+  <text x="606" y="185" font-size="10.5" fill="#44525C" text-anchor="middle">armazenamento ANN</text>
+
+  <!-- CONSULTA lane -->
+  <text x="44" y="232" font-size="11.5" font-weight="700" fill="#256A75" letter-spacing="1">CONSULTA · online · por pergunta</text>
+
+  <!-- Consulta input -->
+  <g filter="url(#sh262)">
+    <rect x="44" y="244" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <text x="114" y="268" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Consulta</text>
+  <text x="114" y="285" font-size="11" fill="#7C7768" text-anchor="middle">do usuário</text>
+
+  <path d="M184,274 H206" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- Embedding consulta -->
+  <g filter="url(#sh262)">
+    <rect x="208" y="244" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <text x="278" y="265" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Embedding</text>
+  <text x="278" y="281" font-size="11" fill="#7C7768" text-anchor="middle">da consulta</text>
+  <text x="278" y="297" font-size="10" fill="#B5532F" text-anchor="middle">mesmo modelo!</text>
+
+  <path d="M348,274 H370" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- ANN search -->
+  <g filter="url(#sh262)">
+    <rect x="372" y="244" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <text x="442" y="265" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Busca ANN</text>
+  <text x="442" y="281" font-size="11" fill="#7C7768" text-anchor="middle">vizinhos mais próximos</text>
+  <text x="442" y="297" font-size="10.5" fill="#7C7768" text-anchor="middle">top-k candidatos</text>
+
+  <path d="M512,274 H534" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- Reranking -->
+  <g filter="url(#sh262)">
+    <rect x="536" y="244" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <text x="606" y="265" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Reranking</text>
+  <text x="606" y="281" font-size="11" fill="#7C7768" text-anchor="middle">seleção de precisão</text>
+  <text x="606" y="297" font-size="10.5" fill="#7C7768" text-anchor="middle">top-3 qualidade</text>
+
+  <path d="M676,274 H698" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk262)" fill="none"/>
+
+  <!-- LLM -->
+  <g filter="url(#sh262)">
+    <rect x="700" y="244" width="136" height="60" rx="10" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="768" y="265" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">LLM</text>
+  <text x="768" y="281" font-size="11" fill="#7C7768" text-anchor="middle">gera resposta</text>
+  <text x="768" y="297" font-size="10.5" fill="#7C7768" text-anchor="middle">com contexto</text>
+
+  <!-- Index feeds retrieval (vertical connector) -->
+  <path d="M606,192 V242" stroke="#2E7D8A" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrTeal262)" fill="none"/>
+
+  <!-- Callout: ponto crítico -->
+  <g filter="url(#sh262)">
+    <rect x="208" y="328" width="304" height="46" rx="10" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="360" y="348" font-size="12.5" font-weight="700" fill="#B5532F" text-anchor="middle">&#x25B2; PONTO CRÍTICO (Invariante 2)</text>
+  <text x="360" y="365" font-size="11.5" fill="#7C7768" text-anchor="middle">Chunking ruim &#x2192; embedding ruim &#x2192; recuperação ruim</text>
+  <text x="360" y="380" font-size="11" fill="#7C7768" text-anchor="middle">Nenhuma etapa posterior corrige entrada deteriorada</text>
+
+  <text x="44" y="400" font-size="12.5" fill="#7C7768" font-style="italic">O modelo de embedding da consulta deve ser o mesmo usado na indexação — espaços vetoriais incompatíveis produzem busca incoerente. (Provedores e dimensões no Apêndice Vivo.)</text>
+</svg>

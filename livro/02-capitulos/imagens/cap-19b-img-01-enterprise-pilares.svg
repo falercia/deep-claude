@@ -1,0 +1,178 @@
+<svg viewBox="0 0 880 548" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="goldRule19b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/>
+      <stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <filter id="sh19b" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="546" rx="16" fill="#FBF8F1" stroke="#E6DFC9" stroke-width="1.5"/>
+
+  <!-- Kicker -->
+  <text x="44" y="44" font-size="12.5" font-weight="700" letter-spacing="2.5" fill="#C2912C">DIAGRAMA 19B.1 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="74" font-size="23" font-weight="700" fill="#1B2A33">Os cinco pilares do Claude Enterprise</text>
+
+  <!-- Gold rule under title -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule19b)"/>
+
+  <!-- Subtitle / legend -->
+  <text x="44" y="116" font-size="13" fill="#7C7768" font-style="italic">Segurança, compliance, identidade, administração e suporte — controle aplicado em escala.</text>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PILLAR 1 — SEGURANÇA                              -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="34" y="132" width="156" height="296" rx="12" fill="#FBF6EA" stroke="#EADfBF" stroke-width="1.5" filter="url(#sh19b)"/>
+  <!-- Header bar (clipped top half for radius) -->
+  <rect x="34" y="132" width="156" height="42" rx="12" fill="#C2912C"/>
+  <rect x="34" y="154" width="156" height="20" fill="#C2912C"/>
+  <!-- Badge -->
+  <circle cx="57" cy="153" r="13" fill="rgba(255,255,255,0.22)"/>
+  <text x="57" y="158" font-size="13" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <!-- Header label -->
+  <text x="120" y="159" font-size="13.5" font-weight="700" fill="white" text-anchor="middle">SEGURANÇA</text>
+
+  <!-- Items -->
+  <text x="50" y="198" font-size="12.5" font-weight="700" fill="#1B2A33">SOC 2 Type II</text>
+  <text x="50" y="213" font-size="11.5" fill="#7C7768">ISO 27001 documentados</text>
+  <line x1="50" y1="225" x2="178" y2="225" stroke="#EADfBF" stroke-width="1"/>
+
+  <text x="50" y="242" font-size="12.5" font-weight="700" fill="#1B2A33">VPC Isolado</text>
+  <text x="50" y="257" font-size="11.5" fill="#7C7768">via AWS Bedrock</text>
+  <line x1="50" y1="269" x2="178" y2="269" stroke="#EADfBF" stroke-width="1"/>
+
+  <text x="50" y="286" font-size="12.5" font-weight="700" fill="#1B2A33">Data Residency</text>
+  <text x="50" y="301" font-size="11.5" fill="#7C7768">por região</text>
+  <line x1="50" y1="313" x2="178" y2="313" stroke="#EADfBF" stroke-width="1"/>
+
+  <text x="50" y="330" font-size="12.5" font-weight="700" fill="#1B2A33">DPA Formalizado</text>
+  <text x="50" y="345" font-size="11.5" fill="#7C7768">acordo de processamento</text>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PILLAR 2 — COMPLIANCE                             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="202" y="132" width="156" height="296" rx="12" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="1.5" filter="url(#sh19b)"/>
+  <rect x="202" y="132" width="156" height="42" rx="12" fill="#2E7D8A"/>
+  <rect x="202" y="154" width="156" height="20" fill="#2E7D8A"/>
+  <circle cx="225" cy="153" r="13" fill="rgba(255,255,255,0.22)"/>
+  <text x="225" y="158" font-size="13" font-weight="700" fill="white" text-anchor="middle">2</text>
+  <text x="288" y="159" font-size="13.5" font-weight="700" fill="white" text-anchor="middle">COMPLIANCE</text>
+
+  <text x="218" y="198" font-size="12.5" font-weight="700" fill="#1B2A33">GDPR · LGPD · CCPA</text>
+  <text x="218" y="213" font-size="11.5" fill="#7C7768">marcos regulatórios globais</text>
+  <line x1="218" y1="225" x2="346" y2="225" stroke="#CFE3E6" stroke-width="1"/>
+
+  <text x="218" y="242" font-size="12.5" font-weight="700" fill="#1B2A33">Retenção Customizável</text>
+  <text x="218" y="257" font-size="11.5" fill="#7C7768">políticas por workspace</text>
+  <line x1="218" y1="269" x2="346" y2="269" stroke="#CFE3E6" stroke-width="1"/>
+
+  <text x="218" y="286" font-size="12.5" font-weight="700" fill="#1B2A33">Sem Treinamento</text>
+  <text x="218" y="301" font-size="11.5" fill="#7C7768">com seus dados (contratual)</text>
+  <line x1="218" y1="313" x2="346" y2="313" stroke="#CFE3E6" stroke-width="1"/>
+
+  <text x="218" y="330" font-size="12.5" font-weight="700" fill="#1B2A33">Logs de Auditoria</text>
+  <text x="218" y="345" font-size="11.5" fill="#7C7768">exportáveis</text>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PILLAR 3 — IDENTIDADE  (diferencial-chave)        -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="370" y="132" width="156" height="296" rx="12" fill="#F0DDD2" stroke="#E7CDBE" stroke-width="2" filter="url(#sh19b)"/>
+  <rect x="370" y="132" width="156" height="42" rx="12" fill="#B5532F"/>
+  <rect x="370" y="154" width="156" height="20" fill="#B5532F"/>
+  <circle cx="393" cy="153" r="13" fill="rgba(255,255,255,0.22)"/>
+  <text x="393" y="158" font-size="13" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <text x="456" y="159" font-size="13.5" font-weight="700" fill="white" text-anchor="middle">IDENTIDADE</text>
+
+  <!-- Differentiator badge -->
+  <rect x="382" y="180" width="132" height="18" rx="4" fill="#B5532F" opacity="0.14"/>
+  <text x="448" y="193" font-size="11" font-weight="700" fill="#B5532F" text-anchor="middle">★ DIFERENCIAL-CHAVE</text>
+
+  <text x="386" y="217" font-size="12.5" font-weight="700" fill="#1B2A33">SCIM Provisionamento</text>
+  <text x="386" y="232" font-size="11.5" fill="#7C7768">automático via diretório</text>
+  <line x1="386" y1="244" x2="514" y2="244" stroke="#E7CDBE" stroke-width="1"/>
+
+  <text x="386" y="261" font-size="12.5" font-weight="700" fill="#1B2A33">Offboarding Automático</text>
+  <text x="386" y="276" font-size="11.5" fill="#7C7768">desativação instantânea</text>
+  <line x1="386" y1="288" x2="514" y2="288" stroke="#E7CDBE" stroke-width="1"/>
+
+  <text x="386" y="305" font-size="12.5" font-weight="700" fill="#1B2A33">SSO SAML + MFA</text>
+  <text x="386" y="320" font-size="11.5" fill="#7C7768">obrigatório por política</text>
+  <line x1="386" y1="332" x2="514" y2="332" stroke="#E7CDBE" stroke-width="1"/>
+
+  <text x="386" y="349" font-size="12.5" font-weight="700" fill="#1B2A33">Permissões Granulares</text>
+  <text x="386" y="364" font-size="11.5" fill="#7C7768">grupos e perfis de acesso</text>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PILLAR 4 — ADMINISTRAÇÃO                          -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="538" y="132" width="156" height="296" rx="12" fill="#F1ECE0" stroke="#D8D0BD" stroke-width="1.5" filter="url(#sh19b)"/>
+  <rect x="538" y="132" width="156" height="42" rx="12" fill="#44525C"/>
+  <rect x="538" y="154" width="156" height="20" fill="#44525C"/>
+  <circle cx="561" cy="153" r="13" fill="rgba(255,255,255,0.22)"/>
+  <text x="561" y="158" font-size="13" font-weight="700" fill="white" text-anchor="middle">4</text>
+  <text x="624" y="149" font-size="12.5" font-weight="700" fill="white" text-anchor="middle">ADMINIS-</text>
+  <text x="624" y="163" font-size="12.5" font-weight="700" fill="white" text-anchor="middle">TRAÇÃO</text>
+
+  <text x="554" y="198" font-size="12.5" font-weight="700" fill="#1B2A33">Hierarquia</text>
+  <text x="554" y="213" font-size="11.5" fill="#7C7768">de workspaces</text>
+  <line x1="554" y1="225" x2="682" y2="225" stroke="#D8D0BD" stroke-width="1"/>
+
+  <text x="554" y="242" font-size="12.5" font-weight="700" fill="#1B2A33">Políticas</text>
+  <text x="554" y="257" font-size="11.5" fill="#7C7768">por departamento</text>
+  <line x1="554" y1="269" x2="682" y2="269" stroke="#D8D0BD" stroke-width="1"/>
+
+  <text x="554" y="286" font-size="12.5" font-weight="700" fill="#1B2A33">Billing Centralizado</text>
+  <text x="554" y="301" font-size="11.5" fill="#7C7768">por cost center</text>
+  <line x1="554" y1="313" x2="682" y2="313" stroke="#D8D0BD" stroke-width="1"/>
+
+  <text x="554" y="330" font-size="12.5" font-weight="700" fill="#1B2A33">Aprovação Central</text>
+  <text x="554" y="345" font-size="11.5" fill="#7C7768">MCPs e Skills</text>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PILLAR 5 — SUPORTE PREMIUM                        -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="706" y="132" width="148" height="296" rx="12" fill="white" stroke="#CFC8B6" stroke-width="1.5" filter="url(#sh19b)"/>
+  <rect x="706" y="132" width="148" height="42" rx="12" fill="#1B2A33"/>
+  <rect x="706" y="154" width="148" height="20" fill="#1B2A33"/>
+  <circle cx="729" cy="153" r="13" fill="rgba(255,255,255,0.18)"/>
+  <text x="729" y="158" font-size="13" font-weight="700" fill="white" text-anchor="middle">5</text>
+  <text x="793" y="149" font-size="12.5" font-weight="700" fill="white" text-anchor="middle">SUPORTE</text>
+  <text x="793" y="163" font-size="12.5" font-weight="700" fill="white" text-anchor="middle">PREMIUM</text>
+
+  <text x="722" y="198" font-size="12.5" font-weight="700" fill="#1B2A33">CSM Dedicado</text>
+  <text x="722" y="213" font-size="11.5" fill="#7C7768">customer success manager</text>
+  <line x1="722" y1="225" x2="842" y2="225" stroke="#CFC8B6" stroke-width="1"/>
+
+  <text x="722" y="242" font-size="12.5" font-weight="700" fill="#1B2A33">SLA Contratual</text>
+  <text x="722" y="257" font-size="11.5" fill="#7C7768">uptime garantido</text>
+  <line x1="722" y1="269" x2="842" y2="269" stroke="#CFC8B6" stroke-width="1"/>
+
+  <text x="722" y="286" font-size="12.5" font-weight="700" fill="#1B2A33">Suporte 24×7</text>
+  <text x="722" y="301" font-size="11.5" fill="#7C7768">canal prioritário</text>
+  <line x1="722" y1="313" x2="842" y2="313" stroke="#CFC8B6" stroke-width="1"/>
+
+  <text x="722" y="330" font-size="12.5" font-weight="700" fill="#1B2A33">Engenheiros de Solução</text>
+  <text x="722" y="345" font-size="11.5" fill="#7C7768">implantação assistida</text>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- BOTTOM BAND                                       -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="34" y="444" width="820" height="50" rx="10" fill="#1B2A33"/>
+  <text x="444" y="463" font-size="11.5" font-weight="700" fill="#E2C879" text-anchor="middle" letter-spacing="0.8">DIFERENÇA DECISIVA VS. TEAM:</text>
+  <text x="444" y="481" font-size="11" fill="#CFC8B6" text-anchor="middle" letter-spacing="0.5">SCIM · DPA FORMAL · DATA RESIDENCY · VPC · HIERARQUIA DE WORKSPACES</text>
+
+  <!-- Footer legend -->
+  <text x="44" y="520" font-size="12.5" font-style="italic" fill="#7C7768">★ Identidade (Pilar 3) é o diferencial operacional mais crítico — SCIM elimina o risco de acesso fantasma em offboardings.</text>
+
+</svg>

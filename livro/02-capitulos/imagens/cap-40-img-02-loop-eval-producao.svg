@@ -1,0 +1,112 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh39b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule39b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk39b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrTeal39b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2E7D8A"/>
+    </marker>
+    <marker id="arrGold39b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 39.2 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Loop de eval contínuo em produção — copiloto in-product</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule39b)"/>
+
+  <!-- Center loop nodes -->
+  <!-- Node 1: COPILOTO EM PRODUÇÃO -->
+  <g filter="url(#sh39b)">
+    <rect x="300" y="148" width="280" height="56" rx="14" fill="#1B2A33"/>
+  </g>
+  <text x="440" y="172" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">COPILOTO EM PRODUÇÃO</text>
+  <text x="440" y="192" font-size="11.5" fill="#C2912C" text-anchor="middle">RAG + agente read-only · tenant isolated</text>
+
+  <!-- Arrow: produção → sinal -->
+  <path d="M440,204 V248" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk39b)"/>
+
+  <!-- Node 2: SINAL DE USO REAL -->
+  <g filter="url(#sh39b)">
+    <rect x="300" y="248" width="280" height="56" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <text x="440" y="272" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">SINAL DE USO REAL</text>
+  <text x="440" y="292" font-size="11.5" fill="#7C7768" text-anchor="middle">thumbs down · abandono · retentativa imediata</text>
+
+  <!-- Arrow: sinal → golden set -->
+  <path d="M440,304 V348" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk39b)"/>
+
+  <!-- Node 3: GOLDEN SET (atualizado) -->
+  <g filter="url(#sh39b)">
+    <rect x="300" y="348" width="280" height="56" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="440" y="372" font-size="14" font-weight="700" fill="#9A7A2E" text-anchor="middle">GOLDEN SET ATUALIZADO</text>
+  <text x="440" y="392" font-size="11.5" fill="#7C7768" text-anchor="middle">250 perguntas reais · LLM-as-judge calibrado</text>
+
+  <!-- Curved arrow: golden set → copiloto (loop fechado) -->
+  <path d="M300,376 C160,376 160,176 300,176" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold39b)"/>
+  <text x="180" y="290" font-size="12" fill="#C2912C" text-anchor="middle" font-weight="600">ajuste de</text>
+  <text x="180" y="306" font-size="12" fill="#C2912C" text-anchor="middle" font-weight="600">prompt ou</text>
+  <text x="180" y="322" font-size="12" fill="#C2912C" text-anchor="middle" font-weight="600">arquitetura</text>
+
+  <!-- Right side: Three eval layers -->
+  <g filter="url(#sh39b)">
+    <rect x="620" y="148" width="218" height="258" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M620,161 a13,13 0 0 1 13,-13 h192 a13,13 0 0 1 13,13 v20 h-218 z" fill="#44525C"/>
+  <text x="729" y="175" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">PIRÂMIDE DE EVAL</text>
+
+  <!-- Base layer -->
+  <rect x="638" y="192" width="182" height="54" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="729" y="210" font-size="12" font-weight="700" fill="#2E7D8A" text-anchor="middle">BASE</text>
+  <text x="729" y="226" font-size="11" fill="#7C7768" text-anchor="middle">schema validation de SQL</text>
+  <text x="729" y="240" font-size="11" fill="#7C7768" text-anchor="middle">execução sem erro</text>
+
+  <!-- Middle layer -->
+  <rect x="638" y="254" width="182" height="54" rx="8" fill="#FBF6EA" stroke="#E2D4AC"/>
+  <text x="729" y="272" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">MEIO</text>
+  <text x="729" y="288" font-size="11" fill="#7C7768" text-anchor="middle">golden set 250 perguntas</text>
+  <text x="729" y="304" font-size="11" fill="#7C7768" text-anchor="middle">LLM-as-judge calibrado</text>
+
+  <!-- Adversarial layer -->
+  <rect x="638" y="316" width="182" height="54" rx="8" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="729" y="334" font-size="12" font-weight="700" fill="#B5532F" text-anchor="middle">ADVERSARIAL</text>
+  <text x="729" y="350" font-size="11" fill="#7C7768" text-anchor="middle">injection · cross-tenant</text>
+  <text x="729" y="366" font-size="11" fill="#7C7768" text-anchor="middle">mensal</text>
+
+  <!-- Arrow from golden set to eval -->
+  <path d="M580,376 H618" fill="none" stroke="#C2912C" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arrGold39b)"/>
+
+  <!-- LLMOps indicators bottom -->
+  <g font-size="11.5">
+    <g filter="url(#sh39b)">
+      <rect x="44" y="430" width="140" height="28" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+    </g>
+    <text x="114" y="448" text-anchor="middle" fill="#44525C" font-weight="600">tracing por sessão</text>
+
+    <g filter="url(#sh39b)">
+      <rect x="194" y="430" width="140" height="28" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+    </g>
+    <text x="264" y="448" text-anchor="middle" fill="#44525C" font-weight="600">rollout canário</text>
+
+    <g filter="url(#sh39b)">
+      <rect x="344" y="430" width="140" height="28" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+    </g>
+    <text x="414" y="448" text-anchor="middle" fill="#44525C" font-weight="600">rollback de prompt</text>
+
+    <g filter="url(#sh39b)">
+      <rect x="494" y="430" width="168" height="28" rx="8" fill="#F1ECE0" stroke="#D8D0BD"/>
+    </g>
+    <text x="578" y="448" text-anchor="middle" fill="#44525C" font-weight="600">custo por conta</text>
+  </g>
+
+  <text x="44" y="460" font-size="12.5" fill="#7C7768" font-style="italic" visibility="hidden">LLMOps</text>
+</svg>

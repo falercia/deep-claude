@@ -1,0 +1,62 @@
+<svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh14b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule14b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk14b" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="478" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 14.2 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Quando usar Artifacts</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule14b)"/>
+
+  <!-- 5 gatilhos em duas colunas -->
+  <!-- Gatilho 1 -->
+  <g filter="url(#sh14b)"><rect x="44" y="116" width="386" height="72" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <circle cx="74" cy="152" r="14" fill="#C2912C"/><text x="74" y="157" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">1</text>
+  <text x="102" y="145" font-size="14" font-weight="700" fill="#9A7A2E">Uso fora do chat</text>
+  <text x="102" y="163" font-size="12.5" fill="#7C7768">resultado será copiado, exportado ou compartilhado com terceiros</text>
+  <text x="102" y="179" font-size="11.5" fill="#1B2A33">documentos, código, relatórios, propostas</text>
+
+  <!-- Gatilho 2 -->
+  <g filter="url(#sh14b)"><rect x="450" y="116" width="386" height="72" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <circle cx="480" cy="152" r="14" fill="#C2912C"/><text x="480" y="157" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">2</text>
+  <text x="508" y="145" font-size="14" font-weight="700" fill="#9A7A2E">Refinamento iterativo</text>
+  <text x="508" y="163" font-size="12.5" fill="#7C7768">múltiplas versões do mesmo material com histórico rastreável</text>
+  <text x="508" y="179" font-size="11.5" fill="#1B2A33">drafts evoluindo turn por turn, sem duplicar no chat</text>
+
+  <!-- Gatilho 3 -->
+  <g filter="url(#sh14b)"><rect x="44" y="206" width="386" height="72" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <circle cx="74" cy="242" r="14" fill="#2E7D8A"/><text x="74" y="247" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">3</text>
+  <text x="102" y="235" font-size="14" font-weight="700" fill="#256A75">Interatividade</text>
+  <text x="102" y="253" font-size="12.5" fill="#7C7768">resultado precisa rodar, ser clicado ou ter inputs ajustáveis ao vivo</text>
+  <text x="102" y="269" font-size="11.5" fill="#1B2A33">calculadoras, dashboards, simuladores, formulários</text>
+
+  <!-- Gatilho 4 -->
+  <g filter="url(#sh14b)"><rect x="450" y="206" width="386" height="72" rx="10" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <circle cx="480" cy="242" r="14" fill="#2E7D8A"/><text x="480" y="247" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">4</text>
+  <text x="508" y="235" font-size="14" font-weight="700" fill="#256A75">Conteúdo estruturado</text>
+  <text x="508" y="253" font-size="12.5" fill="#7C7768">formatação rica, seções, tabelas, código embarcado</text>
+  <text x="508" y="269" font-size="11.5" fill="#1B2A33">documentação técnica, especificações, propostas</text>
+
+  <!-- Gatilho 5 (full width) -->
+  <g filter="url(#sh14b)"><rect x="44" y="296" width="792" height="72" rx="10" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <circle cx="74" cy="332" r="14" fill="#44525C"/><text x="74" y="337" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">5</text>
+  <text x="102" y="325" font-size="14" font-weight="700" fill="#44525C">Visualização</text>
+  <text x="102" y="343" font-size="12.5" fill="#7C7768">gráfico, diagrama, fluxograma, SVG — saída visual que não cabe bem em texto puro do chat</text>
+  <text x="102" y="359" font-size="11.5" fill="#1B2A33">Mermaid para arquitetura · SVG para infográficos · React para dashboards reativos</text>
+
+  <!-- Decision rule -->
+  <g filter="url(#sh14b)"><rect x="44" y="390" width="792" height="52" rx="13" fill="#1B2A33"/></g>
+  <text x="440" y="411" font-size="14" font-weight="700" fill="#C2912C" text-anchor="middle">REGRA PRÁTICA DO OPERADOR</text>
+  <text x="440" y="432" font-size="13" fill="#FFFFFF" text-anchor="middle">Se o resultado vai além do chat → peça artifact. Se fica no chat → deixe como resposta normal.</text>
+
+  <text x="44" y="464" font-size="12.5" fill="#7C7768" font-style="italic">Artifact é assinado por você — não por Claude. Quem decide exportar assume autoria e consequência do que sai para o mundo.</text>
+</svg>

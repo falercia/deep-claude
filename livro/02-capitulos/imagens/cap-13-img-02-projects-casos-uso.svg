@@ -1,0 +1,76 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh13b" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule13b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="488" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 13.2 · INVARIANTE 3 — CAMADA DUPLA</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Seis padrões de uso de Projects</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule13b)"/>
+
+  <!-- Row 1 -->
+  <!-- 1 Cliente -->
+  <g filter="url(#sh13b)"><rect x="44" y="114" width="254" height="120" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <path d="M44,127 a12,12 0 0 1 12,-12 h230 a12,12 0 0 1 12,12 v18 h-254 z" fill="#C2912C"/>
+  <text x="64" y="139" font-size="13" font-weight="700" fill="#FFFFFF">1 · PROJETO DE CLIENTE</text>
+  <text x="64" y="162" font-size="12.5" fill="#1B2A33">Briefing, materiais, decisões</text>
+  <text x="64" y="178" font-size="12" fill="#7C7768">e histórico por cliente ativo</text>
+  <text x="64" y="198" font-size="12" fill="#7C7768">Consultorias, agências, B2B</text>
+  <text x="64" y="220" font-size="11.5" fill="#9A7A2E" font-weight="600">contexto recarregado a cada contato</text>
+
+  <!-- 2 Produto -->
+  <g filter="url(#sh13b)"><rect x="314" y="114" width="254" height="120" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/></g>
+  <path d="M314,127 a12,12 0 0 1 12,-12 h230 a12,12 0 0 1 12,12 v18 h-254 z" fill="#C2912C"/>
+  <text x="334" y="139" font-size="13" font-weight="700" fill="#FFFFFF">2 · PROJETO DE PRODUTO</text>
+  <text x="334" y="162" font-size="12.5" fill="#1B2A33">Specs, pesquisas de usuário</text>
+  <text x="334" y="178" font-size="12" fill="#7C7768">e decisões técnicas do roadmap</text>
+  <text x="334" y="198" font-size="12" fill="#7C7768">Times de produto e engenharia</text>
+  <text x="334" y="220" font-size="11.5" fill="#9A7A2E" font-weight="600">PRDs e tradeoffs com contexto acumulado</text>
+
+  <!-- 3 Pesquisa -->
+  <g filter="url(#sh13b)"><rect x="584" y="114" width="254" height="120" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <path d="M584,127 a12,12 0 0 1 12,-12 h230 a12,12 0 0 1 12,12 v18 h-254 z" fill="#2E7D8A"/>
+  <text x="604" y="139" font-size="13" font-weight="700" fill="#FFFFFF">3 · PROJETO DE PESQUISA</text>
+  <text x="604" y="162" font-size="12.5" fill="#1B2A33">Papers, dados primários</text>
+  <text x="604" y="178" font-size="12" fill="#7C7768">e hipóteses em teste</text>
+  <text x="604" y="198" font-size="12" fill="#7C7768">Pesquisa, R&amp;D, estratégia</text>
+  <text x="604" y="220" font-size="11.5" fill="#256A75" font-weight="600">aprofundamentos sucessivos em série</text>
+
+  <!-- Row 2 -->
+  <!-- 4 Domínio -->
+  <g filter="url(#sh13b)"><rect x="44" y="252" width="254" height="120" rx="12" fill="#FFFFFF" stroke="#BBD7DB"/></g>
+  <path d="M44,265 a12,12 0 0 1 12,-12 h230 a12,12 0 0 1 12,12 v18 h-254 z" fill="#2E7D8A"/>
+  <text x="64" y="277" font-size="13" font-weight="700" fill="#FFFFFF">4 · PROJETO DE DOMÍNIO</text>
+  <text x="64" y="300" font-size="12.5" fill="#1B2A33">Políticas, frameworks e casos</text>
+  <text x="64" y="316" font-size="12" fill="#7C7768">por área permanente (RH, jurídico)</text>
+  <text x="64" y="336" font-size="12" fill="#7C7768">Operações recorrentes</text>
+  <text x="64" y="358" font-size="11.5" fill="#256A75" font-weight="600">qualquer pergunta da área chega contextualizada</text>
+
+  <!-- 5 Pessoal -->
+  <g filter="url(#sh13b)"><rect x="314" y="252" width="254" height="120" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <path d="M314,265 a12,12 0 0 1 12,-12 h230 a12,12 0 0 1 12,12 v18 h-254 z" fill="#44525C"/>
+  <text x="334" y="277" font-size="13" font-weight="700" fill="#FFFFFF">5 · PROJETO PESSOAL</text>
+  <text x="334" y="300" font-size="12.5" fill="#1B2A33">Perfil, preferências e carreira</text>
+  <text x="334" y="316" font-size="12" fill="#7C7768">com materiais de aprendizado</text>
+  <text x="334" y="336" font-size="12" fill="#7C7768">Desenvolvimento individual</text>
+  <text x="334" y="358" font-size="11.5" fill="#44525C" font-weight="600">Claude calibrado para você especificamente</text>
+
+  <!-- 6 Evento -->
+  <g filter="url(#sh13b)"><rect x="584" y="252" width="254" height="120" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/></g>
+  <path d="M584,265 a12,12 0 0 1 12,-12 h230 a12,12 0 0 1 12,12 v18 h-254 z" fill="#44525C"/>
+  <text x="604" y="277" font-size="13" font-weight="700" fill="#FFFFFF">6 · PROJETO DE EVENTO</text>
+  <text x="604" y="300" font-size="12.5" fill="#1B2A33">Temporário: lançamento</text>
+  <text x="604" y="316" font-size="12" fill="#7C7768">campanha ou migração</text>
+  <text x="604" y="336" font-size="12" fill="#7C7768">Marketing, comunicação</text>
+  <text x="604" y="358" font-size="11.5" fill="#44525C" font-weight="600">criado com a iniciativa, arquivado ao final</text>
+
+  <text x="44" y="404" font-size="12.5" fill="#1B2A33" font-weight="600">Critério de criação: trabalho recorrente sobre tema específico → Project. Pergunta pontual → chat solto.</text>
+
+  <text x="44" y="468" font-size="12.5" fill="#7C7768" font-style="italic">Cada padrão é uma arquitetura mental que vira reflexo profissional. Projects que melhoram com o tempo separam usuário casual de usuário organizacional.</text>
+</svg>

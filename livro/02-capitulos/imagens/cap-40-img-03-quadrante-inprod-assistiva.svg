@@ -1,0 +1,77 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh39c" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule39c" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="axEnd39c" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1B2A33"/>
+    </marker>
+    <marker id="axEndUp39c" markerWidth="9" markerHeight="9" refX="3" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,7 L3,0 L6,7 Z" fill="#1B2A33"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 39.3 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Quando usar IA in-product vs. IA assistiva interna</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule39c)"/>
+
+  <!-- Axes -->
+  <line x1="150" y1="400" x2="800" y2="400" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEnd39c)"/>
+  <line x1="150" y1="400" x2="150" y2="130" stroke="#1B2A33" stroke-width="2" marker-end="url(#axEndUp39c)"/>
+
+  <!-- Axis labels -->
+  <text x="800" y="422" font-size="12.5" fill="#1B2A33" text-anchor="end" font-weight="600">EXPOSIÇÃO DO OUTPUT AO CLIENTE FINAL →</text>
+  <text x="150" y="422" font-size="11.5" fill="#7C7768">interno</text>
+  <text x="790" y="422" font-size="11.5" fill="#7C7768" text-anchor="end">externo direto</text>
+  <text x="130" y="400" font-size="12.5" fill="#1B2A33" text-anchor="end" font-weight="600" transform="rotate(-90 130 400)">CONSEQUÊNCIA IMEDIATA DE ERRO →</text>
+  <text x="130" y="395" font-size="11" fill="#7C7768" text-anchor="end">baixa</text>
+
+  <!-- Quadrant guides -->
+  <line x1="475" y1="155" x2="475" y2="400" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="3 4"/>
+  <line x1="150" y1="275" x2="800" y2="275" stroke="#CFC8B6" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- Q1: Low exposure, Low consequence (bottom-left) = Internal assistive -->
+  <rect x="152" y="277" width="321" height="121" rx="0" fill="#EFF6F7" opacity="0.5"/>
+  <g filter="url(#sh39c)">
+    <rect x="180" y="295" width="260" height="88" rx="12" fill="#EFF6F7" stroke="#BBD7DB"/>
+  </g>
+  <text x="310" y="320" font-size="14.5" font-weight="700" fill="#2E7D8A" text-anchor="middle">IA ASSISTIVA</text>
+  <text x="310" y="340" font-size="12" fill="#7C7768" text-anchor="middle">pré-vendas · Research · briefs</text>
+  <text x="310" y="358" font-size="12" fill="#7C7768" text-anchor="middle">revisão humana é o controle</text>
+  <text x="310" y="375" font-size="11.5" fill="#2E7D8A" font-weight="600" text-anchor="middle">eval de honestidade de fonte</text>
+
+  <!-- Q2: High exposure, High consequence (top-right) = In-product -->
+  <rect x="477" y="155" width="321" height="121" rx="0" fill="#FBF6EA" opacity="0.5"/>
+  <g filter="url(#sh39c)">
+    <rect x="510" y="165" width="260" height="100" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="640" y="192" font-size="14.5" font-weight="700" fill="#9A7A2E" text-anchor="middle">IA IN-PRODUCT</text>
+  <text x="640" y="214" font-size="12" fill="#7C7768" text-anchor="middle">copiloto · usuário final recebe</text>
+  <text x="640" y="232" font-size="12" fill="#7C7768" text-anchor="middle">tenant isolation obrigatório</text>
+  <text x="640" y="250" font-size="11.5" fill="#9A7A2E" font-weight="600" text-anchor="middle">golden set + loop + adversarial</text>
+
+  <!-- Q3: High exposure, Low consequence (bottom-right) — edge zone -->
+  <g filter="url(#sh39c)">
+    <rect x="510" y="295" width="260" height="88" rx="12" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="640" y="320" font-size="13.5" font-weight="700" fill="#B5532F" text-anchor="middle">ZONA DE RISCO</text>
+  <text x="640" y="340" font-size="12" fill="#7C7768" text-anchor="middle">output direto sem revisão humana</text>
+  <text x="640" y="358" font-size="12" fill="#B5532F" font-weight="600" text-anchor="middle">eval em produção é infraestrutura</text>
+  <text x="640" y="375" font-size="11" fill="#7C7768" text-anchor="middle">fallback obrigatório · never block</text>
+
+  <!-- Q4: Low exposure, High consequence (top-left) — high stakes internal -->
+  <g filter="url(#sh39c)">
+    <rect x="178" y="163" width="262" height="100" rx="12" fill="#F1ECE0" stroke="#D8D0BD"/>
+  </g>
+  <text x="309" y="188" font-size="13.5" font-weight="700" fill="#44525C" text-anchor="middle">ASSISTIVA DE ALTO RISCO</text>
+  <text x="309" y="208" font-size="12" fill="#7C7768" text-anchor="middle">jurídico · saúde · compliance</text>
+  <text x="309" y="226" font-size="12" fill="#7C7768" text-anchor="middle">revisão humana obrigatória</text>
+  <text x="309" y="244" font-size="11.5" fill="#44525C" font-weight="600" text-anchor="middle">MCP privado + audit log</text>
+
+  <text x="44" y="458" font-size="12.5" fill="#7C7768" font-style="italic">O quadrante determina o controle mínimo necessário — não a preferência do time. Mover um caso para quadrante errado cria risco ou custo desnecessário.</text>
+</svg>

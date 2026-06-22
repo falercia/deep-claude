@@ -1,0 +1,183 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh-t19a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule-t19a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="1" y="1" width="878" height="558" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker -->
+  <text x="44" y="46" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 19.1 · INVARIANTE 8 — RESPONSABILIDADE INDELEGÁVEL</text>
+
+  <!-- Title -->
+  <text x="44" y="77" font-size="23" font-weight="700" fill="#1B2A33">Anatomia do Claude Team</text>
+
+  <!-- Gold rule -->
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule-t19a)"/>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- WORKSPACE CENTRALIZADO — top anchor block                 -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <g filter="url(#sh-t19a)">
+    <rect x="44" y="112" width="792" height="76" rx="12" fill="#1B2A33"/>
+  </g>
+  <circle cx="69" cy="150" r="11" fill="#C2912C" opacity="0.85"/>
+  <text x="69" y="155" font-size="12" font-weight="700" fill="#FBF8F1" text-anchor="middle">W</text>
+  <text x="92" y="141" font-size="13.5" font-weight="700" fill="#E2C879" letter-spacing="1.5">WORKSPACE CENTRALIZADO</text>
+  <text x="92" y="160" font-size="12.5" font-weight="600" fill="#FBF8F1">Faturamento único · Políticas comuns · Admin unificado · Acesso Web, Desktop e Mobile</text>
+  <text x="92" y="178" font-size="11.5" fill="#A9BAC2">A partir de 5 usuários regulares — consulte o Apêndice Vivo (J) para valores correntes.</text>
+
+  <!-- Connector arrows: workspace → panels -->
+  <!-- left -->
+  <line x1="162" y1="188" x2="162" y2="204" stroke="#C2912C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="162,207 157,198 167,198" fill="#C2912C"/>
+  <!-- center -->
+  <line x1="430" y1="188" x2="430" y2="204" stroke="#C2912C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="430,207 425,198 435,198" fill="#C2912C"/>
+  <!-- right -->
+  <line x1="708" y1="188" x2="708" y2="204" stroke="#C2912C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="708,207 703,198 713,198" fill="#C2912C"/>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PANEL 1 — PAPÉIS  (left, x=44, w=236)                    -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <g filter="url(#sh-t19a)">
+    <rect x="44" y="208" width="236" height="270" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <!-- panel header -->
+  <rect x="44" y="208" width="236" height="38" rx="12" fill="#C2912C"/>
+  <rect x="44" y="230" width="236" height="16" fill="#C2912C"/>
+  <text x="162" y="231" font-size="13" font-weight="700" fill="#FFF" text-anchor="middle" letter-spacing="1">PAPÉIS</text>
+
+  <!-- Admin -->
+  <circle cx="73" cy="276" r="14" fill="#1B2A33"/>
+  <text x="73" y="281" font-size="10.5" font-weight="700" fill="#FFF" text-anchor="middle">ADM</text>
+  <text x="97" y="272" font-size="14" font-weight="700" fill="#1B2A33">Admin</text>
+  <text x="97" y="288" font-size="11.5" fill="#7C7768">Política e acesso total</text>
+  <text x="97" y="303" font-size="11.5" fill="#7C7768">Revoga imediatamente</text>
+  <line x1="62" y1="323" x2="268" y2="323" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- Member -->
+  <circle cx="73" cy="346" r="14" fill="#2E7D8A"/>
+  <text x="73" y="351" font-size="10.5" font-weight="700" fill="#FFF" text-anchor="middle">MBR</text>
+  <text x="97" y="342" font-size="14" font-weight="700" fill="#1B2A33">Member</text>
+  <text x="97" y="358" font-size="11.5" fill="#7C7768">Uso pleno do workspace</text>
+  <text x="97" y="373" font-size="11.5" fill="#7C7768">Projects e Skills compartilhados</text>
+  <line x1="62" y1="393" x2="268" y2="393" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- Guest -->
+  <circle cx="73" cy="416" r="14" fill="#7C7768"/>
+  <text x="73" y="421" font-size="10.5" font-weight="700" fill="#FFF" text-anchor="middle">GST</text>
+  <text x="97" y="412" font-size="14" font-weight="700" fill="#1B2A33">Guest</text>
+  <text x="97" y="428" font-size="11.5" fill="#7C7768">Acesso pontual a Projects</text>
+  <text x="97" y="443" font-size="11.5" fill="#7C7768">específicos via Admin</text>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PANEL 2 — PROJECTS COMPARTILHADOS (center, x=296, w=268) -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <g filter="url(#sh-t19a)">
+    <rect x="296" y="208" width="268" height="270" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <!-- panel header -->
+  <rect x="296" y="208" width="268" height="38" rx="12" fill="#2E7D8A"/>
+  <rect x="296" y="230" width="268" height="16" fill="#2E7D8A"/>
+  <text x="430" y="231" font-size="12" font-weight="700" fill="#FFF" text-anchor="middle" letter-spacing="1">PROJECTS COMPARTILHADOS</text>
+
+  <!-- item 1 -->
+  <circle cx="320" cy="271" r="6.5" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5"/>
+  <circle cx="320" cy="271" r="3" fill="#2E7D8A"/>
+  <text x="336" y="268" font-size="13.5" font-weight="700" fill="#1B2A33">Knowledge Base coletiva</text>
+  <text x="336" y="283" font-size="11.5" fill="#7C7768">Curadoria compartilhada por todo o time</text>
+  <line x1="312" y1="300" x2="552" y2="300" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- item 2 -->
+  <circle cx="320" cy="320" r="6.5" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5"/>
+  <circle cx="320" cy="320" r="3" fill="#2E7D8A"/>
+  <text x="336" y="317" font-size="13.5" font-weight="700" fill="#1B2A33">Custom Instructions</text>
+  <text x="336" y="332" font-size="11.5" fill="#7C7768">Padrões e políticas de uso uniformes</text>
+  <line x1="312" y1="349" x2="552" y2="349" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- item 3 -->
+  <circle cx="320" cy="369" r="6.5" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5"/>
+  <circle cx="320" cy="369" r="3" fill="#2E7D8A"/>
+  <text x="336" y="366" font-size="13.5" font-weight="700" fill="#1B2A33">Histórico auditável</text>
+  <text x="336" y="381" font-size="11.5" fill="#7C7768">Conversas rastreáveis quando necessário</text>
+  <line x1="312" y1="398" x2="552" y2="398" stroke="#E6DFC9" stroke-width="1"/>
+
+  <!-- item 4 -->
+  <circle cx="320" cy="418" r="6.5" fill="#EFF6F7" stroke="#2E7D8A" stroke-width="1.5"/>
+  <circle cx="320" cy="418" r="3" fill="#2E7D8A"/>
+  <text x="336" y="415" font-size="13.5" font-weight="700" fill="#1B2A33">Memória institucional</text>
+  <text x="336" y="430" font-size="11.5" fill="#7C7768">Conhecimento que não vai com as pessoas</text>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PANEL 3 — SKILLS DO TIME (right, x=580, w=256)           -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <g filter="url(#sh-t19a)">
+    <rect x="580" y="208" width="256" height="270" rx="12" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <!-- panel header -->
+  <rect x="580" y="208" width="256" height="38" rx="12" fill="#C2912C"/>
+  <rect x="580" y="230" width="256" height="16" fill="#C2912C"/>
+  <text x="708" y="231" font-size="13" font-weight="700" fill="#FFF" text-anchor="middle" letter-spacing="1">SKILLS DO TIME</text>
+
+  <!-- skill card 1 -->
+  <rect x="598" y="257" width="220" height="50" rx="8" fill="#FBF6EA" stroke="#E2C879" stroke-width="1.5"/>
+  <text x="614" y="276" font-size="13" font-weight="700" fill="#1B2A33">Fluxos de especialistas</text>
+  <text x="614" y="292" font-size="11.5" fill="#7C7768">Skills versionadas por veteranos</text>
+
+  <!-- skill card 2 -->
+  <rect x="598" y="318" width="220" height="50" rx="8" fill="#FBF6EA" stroke="#E2C879" stroke-width="1.5"/>
+  <text x="614" y="337" font-size="13" font-weight="700" fill="#1B2A33">Ativos reaplicáveis</text>
+  <text x="614" y="353" font-size="11.5" fill="#7C7768">Disponíveis a todos os Members</text>
+
+  <!-- skill card 3 -->
+  <rect x="598" y="379" width="220" height="50" rx="8" fill="#FBF6EA" stroke="#E2C879" stroke-width="1.5"/>
+  <text x="614" y="398" font-size="13" font-weight="700" fill="#1B2A33">Padrões escaláveis</text>
+  <text x="614" y="414" font-size="11.5" fill="#7C7768">Qualidade consistente em todo o time</text>
+
+  <!-- Connector arrows: panels → governance -->
+  <line x1="162" y1="479" x2="162" y2="493" stroke="#44525C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="162,496 157,487 167,487" fill="#44525C"/>
+  <line x1="430" y1="479" x2="430" y2="493" stroke="#44525C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="430,496 425,487 435,487" fill="#44525C"/>
+  <line x1="708" y1="479" x2="708" y2="493" stroke="#44525C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="708,496 703,487 713,487" fill="#44525C"/>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- GOVERNANÇA ADMINISTRATIVA — bottom band                   -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <g filter="url(#sh-t19a)">
+    <rect x="44" y="496" width="792" height="46" rx="11" fill="#1B2A33"/>
+  </g>
+
+  <!-- pillar 1: SSO/SAML -->
+  <text x="136" y="513" font-size="11" font-weight="700" fill="#E2C879" text-anchor="middle">SSO / SAML</text>
+  <text x="136" y="530" font-size="11" fill="#A9BAC2" text-anchor="middle">Integração corporativa</text>
+
+  <line x1="230" y1="503" x2="230" y2="534" stroke="#44525C" stroke-width="1"/>
+
+  <!-- pillar 2: Faturamento -->
+  <text x="340" y="513" font-size="11" font-weight="700" fill="#E2C879" text-anchor="middle">FATURAMENTO</text>
+  <text x="340" y="530" font-size="11" fill="#A9BAC2" text-anchor="middle">Centralizado, sem reembolsos</text>
+
+  <line x1="446" y1="503" x2="446" y2="534" stroke="#44525C" stroke-width="1"/>
+
+  <!-- pillar 3: Auditoria -->
+  <text x="560" y="513" font-size="11" font-weight="700" fill="#E2C879" text-anchor="middle">AUDITORIA DE USO</text>
+  <text x="560" y="530" font-size="11" fill="#A9BAC2" text-anchor="middle">Adoção, valor, treinamento</text>
+
+  <line x1="664" y1="503" x2="664" y2="534" stroke="#44525C" stroke-width="1"/>
+
+  <!-- pillar 4: Dados -->
+  <text x="752" y="513" font-size="11" font-weight="700" fill="#E2C879" text-anchor="middle">DADOS DE USO</text>
+  <text x="752" y="530" font-size="11" fill="#A9BAC2" text-anchor="middle">Não usados p/ treino por padrão</text>
+
+  <!-- Footer legend -->
+  <text x="44" y="554" font-size="12.5" fill="#7C7768" font-style="italic">Workspace compartilhado com gestão centralizada de Projects, Skills, faturamento e governança.</text>
+</svg>

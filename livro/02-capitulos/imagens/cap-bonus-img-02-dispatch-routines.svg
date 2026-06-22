@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="d-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="540" fill="#0d1b2a"/>
+  <text x="500" y="40" fill="#fef3c7" font-size="22" font-weight="700" text-anchor="middle">DISPATCH E ROUTINES — AUTOMAÇÃO QUE EXECUTA SOZINHA</text>
+  <text x="500" y="64" fill="#9ca3af" font-size="13" text-anchor="middle">Dispatch invoca workflows. Routines automatizam ciclos repetitivos no código.</text>
+
+  <!-- Dispatch -->
+  <g>
+    <rect x="60" y="100" width="430" height="380" rx="12" fill="#1b263b" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="275" y="130" fill="#bfdbfe" font-size="16" font-weight="700" text-anchor="middle">⚡ DISPATCH</text>
+    <text x="275" y="150" fill="#9ca3af" font-size="11" text-anchor="middle" font-style="italic">invocação de fluxos pré-configurados</text>
+
+    <text x="80" y="186" fill="#fef3c7" font-size="12" font-weight="700">O que é:</text>
+    <text x="80" y="206" fill="#e5e7eb" font-size="11">Mecanismo para disparar workflows do Claude</text>
+    <text x="80" y="222" fill="#e5e7eb" font-size="11">a partir de comandos curtos ou triggers</text>
+    <text x="80" y="238" fill="#e5e7eb" font-size="11">externos (webhook, agendamento, evento)</text>
+
+    <text x="80" y="270" fill="#fef3c7" font-size="12" font-weight="700">Casos típicos:</text>
+    <text x="80" y="290" fill="#e5e7eb" font-size="11">• /dispatch reuniao-prep "Cliente X às 14h"</text>
+    <text x="80" y="306" fill="#e5e7eb" font-size="11">• Webhook do Stripe dispara análise</text>
+    <text x="80" y="322" fill="#e5e7eb" font-size="11">• Slack /claude-research [tópico]</text>
+    <text x="80" y="338" fill="#e5e7eb" font-size="11">• Email tag específica aciona triagem</text>
+
+    <text x="80" y="370" fill="#fef3c7" font-size="12" font-weight="700">Vantagem:</text>
+    <text x="80" y="390" fill="#9ca3af" font-size="11">Você não precisa abrir Claude para</text>
+    <text x="80" y="406" fill="#9ca3af" font-size="11">iniciar workflow. Ele inicia sozinho</text>
+    <text x="80" y="422" fill="#9ca3af" font-size="11">no contexto onde o evento acontece</text>
+
+    <text x="275" y="454" fill="#bfdbfe" font-size="12" font-weight="700" text-anchor="middle">★ AUTOMAÇÃO TRIGGER-BASED</text>
+  </g>
+
+  <!-- Routines -->
+  <g>
+    <rect x="510" y="100" width="430" height="380" rx="12" fill="#1b263b" stroke="#86efac" stroke-width="2"/>
+    <text x="725" y="130" fill="#86efac" font-size="16" font-weight="700" text-anchor="middle">🔁 ROUTINES (Claude Code)</text>
+    <text x="725" y="150" fill="#9ca3af" font-size="11" text-anchor="middle" font-style="italic">automação de ciclos repetitivos em código</text>
+
+    <text x="530" y="186" fill="#fef3c7" font-size="12" font-weight="700">O que é:</text>
+    <text x="530" y="206" fill="#e5e7eb" font-size="11">Workflows recorrentes em Claude Code,</text>
+    <text x="530" y="222" fill="#e5e7eb" font-size="11">salvos como rotina nomeada e</text>
+    <text x="530" y="238" fill="#e5e7eb" font-size="11">re-invocáveis com parâmetros</text>
+
+    <text x="530" y="270" fill="#fef3c7" font-size="12" font-weight="700">Casos típicos:</text>
+    <text x="530" y="290" fill="#e5e7eb" font-size="11">• /rotina test-coverage [módulo]</text>
+    <text x="530" y="306" fill="#e5e7eb" font-size="11">• /rotina release-notes [versão]</text>
+    <text x="530" y="322" fill="#e5e7eb" font-size="11">• /rotina security-scan [pasta]</text>
+    <text x="530" y="338" fill="#e5e7eb" font-size="11">• /rotina migrate-api-v2 [endpoint]</text>
+
+    <text x="530" y="370" fill="#fef3c7" font-size="12" font-weight="700">Vantagem:</text>
+    <text x="530" y="390" fill="#9ca3af" font-size="11">Em vez de descrever o mesmo fluxo</text>
+    <text x="530" y="406" fill="#9ca3af" font-size="11">toda vez, salva como Routine e</text>
+    <text x="530" y="422" fill="#9ca3af" font-size="11">invoca com parâmetro específico</text>
+
+    <text x="725" y="454" fill="#86efac" font-size="12" font-weight="700" text-anchor="middle">★ FLUXOS NOMEADOS REUTILIZÁVEIS</text>
+  </g>
+</svg>

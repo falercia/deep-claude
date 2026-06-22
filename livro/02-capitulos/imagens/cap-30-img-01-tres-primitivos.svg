@@ -1,0 +1,95 @@
+<svg viewBox="0 0 880 490" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh29a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule29a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="488" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 29.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Os três primitivos de um servidor MCP</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule29a)"/>
+
+  <!-- Column 1: RESOURCES (teal — leitura sem efeito) -->
+  <g filter="url(#sh29a)">
+    <rect x="44" y="116" width="252" height="318" rx="13" fill="#FFFFFF" stroke="#BBD7DB"/>
+  </g>
+  <path d="M44,129 a13,13 0 0 1 13,-13 h226 a13,13 0 0 1 13,13 v24 h-252 z" fill="#2E7D8A"/>
+  <text x="170" y="146" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">RESOURCES</text>
+
+  <text x="170" y="185" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Dados consultáveis</text>
+  <text x="170" y="202" font-size="11.5" fill="#7C7768" text-anchor="middle">leitura sem efeito colateral</text>
+
+  <rect x="64" y="218" width="212" height="28" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="170" y="236" font-size="12" fill="#1B2A33" text-anchor="middle" font-weight="600">Efeito colateral: NENHUM</text>
+
+  <text x="64" y="270" font-size="12" fill="#44525C">• Texto, imagens, conteúdo</text>
+  <text x="64" y="288" font-size="12" fill="#44525C">• Leitura de arquivos</text>
+  <text x="64" y="306" font-size="12" fill="#44525C">• Snapshot de banco</text>
+  <text x="64" y="324" font-size="12" fill="#44525C">• Conteúdo de URL interna</text>
+
+  <rect x="64" y="346" width="212" height="36" rx="8" fill="#EFF6F7" stroke="#CFE3E6"/>
+  <text x="170" y="360" font-size="11" fill="#256A75" text-anchor="middle" font-weight="600">GOVERNANÇA</text>
+  <text x="170" y="375" font-size="11" fill="#256A75" text-anchor="middle">Log recomendado</text>
+
+  <rect x="64" y="394" width="84" height="24" rx="12" fill="#EFF6F7" stroke="#BBD7DB"/>
+  <text x="106" y="410" font-size="11" fill="#2E7D8A" text-anchor="middle" font-weight="700">BAIXO RISCO</text>
+
+  <!-- Column 2: TOOLS (terracota — ação com efeito) -->
+  <g filter="url(#sh29a)">
+    <rect x="314" y="116" width="252" height="318" rx="13" fill="#FFFFFF" stroke="#E7CDBE"/>
+  </g>
+  <path d="M314,129 a13,13 0 0 1 13,-13 h226 a13,13 0 0 1 13,13 v24 h-252 z" fill="#B5532F"/>
+  <text x="440" y="146" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">TOOLS</text>
+
+  <text x="440" y="185" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Funções com efeito</text>
+  <text x="440" y="202" font-size="11.5" fill="#7C7768" text-anchor="middle">operações que mudam estado</text>
+
+  <rect x="334" y="218" width="212" height="28" rx="8" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="440" y="236" font-size="12" fill="#B5532F" text-anchor="middle" font-weight="600">Efeito colateral: REAL</text>
+
+  <text x="334" y="270" font-size="12" fill="#44525C">• Gravar registro</text>
+  <text x="334" y="288" font-size="12" fill="#44525C">• Enviar mensagem</text>
+  <text x="334" y="306" font-size="12" fill="#44525C">• Criar artefato</text>
+  <text x="334" y="324" font-size="12" fill="#44525C">• Acionar processo</text>
+
+  <rect x="334" y="346" width="212" height="36" rx="8" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="440" y="360" font-size="11" fill="#B5532F" text-anchor="middle" font-weight="600">GOVERNANÇA</text>
+  <text x="440" y="375" font-size="11" fill="#B5532F" text-anchor="middle">Escopo · Auditoria · Reversibilidade</text>
+
+  <rect x="334" y="394" width="84" height="24" rx="12" fill="#F0DDD2" stroke="#E7CDBE"/>
+  <text x="376" y="410" font-size="11" fill="#B5532F" text-anchor="middle" font-weight="700">ALTO RISCO</text>
+
+  <!-- Column 3: PROMPTS (dourado — templates de fluxo) -->
+  <g filter="url(#sh29a)">
+    <rect x="584" y="116" width="252" height="318" rx="13" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <path d="M584,129 a13,13 0 0 1 13,-13 h226 a13,13 0 0 1 13,13 v24 h-252 z" fill="#C2912C"/>
+  <text x="710" y="146" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">PROMPTS</text>
+
+  <text x="710" y="185" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Templates parametrizados</text>
+  <text x="710" y="202" font-size="11.5" fill="#7C7768" text-anchor="middle">pontos de entrada de fluxo</text>
+
+  <rect x="604" y="218" width="212" height="28" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="710" y="236" font-size="12" fill="#9A7A2E" text-anchor="middle" font-weight="600">Efeito colateral: INDIRETO</text>
+
+  <text x="604" y="270" font-size="12" fill="#44525C">• Templates com parâmetros</text>
+  <text x="604" y="288" font-size="12" fill="#44525C">• Fluxos padronizados</text>
+  <text x="604" y="306" font-size="12" fill="#44525C">• Boas práticas instaladas</text>
+  <text x="604" y="324" font-size="12" fill="#44525C">• Prompts nomeados</text>
+
+  <rect x="604" y="346" width="212" height="36" rx="8" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="710" y="360" font-size="11" fill="#9A7A2E" text-anchor="middle" font-weight="600">GOVERNANÇA</text>
+  <text x="710" y="375" font-size="11" fill="#9A7A2E" text-anchor="middle">Padronização de fluxo</text>
+
+  <rect x="604" y="394" width="100" height="24" rx="12" fill="#FBF6EA" stroke="#EADfBF"/>
+  <text x="654" y="410" font-size="11" fill="#9A7A2E" text-anchor="middle" font-weight="700">MÉDIO RISCO</text>
+
+  <!-- Caption -->
+  <text x="44" y="476" font-size="12.5" fill="#7C7768" font-style="italic">Escopo mínimo: o que pode ser Resource deve ser Resource. O que for Tool, com a menor superfície possível.</text>
+</svg>

@@ -1,0 +1,143 @@
+<svg viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="558" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + Title -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 10.1 · INVARIANTE 9 — OPERADOR</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">Anatomia da interface Claude Web</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule)"/>
+
+  <!-- INTERFACE MOCKUP FRAME -->
+  <g filter="url(#sh)">
+    <rect x="44" y="112" width="500" height="392" rx="10" fill="#FFFFFF" stroke="#CFC8B6" stroke-width="1.5"/>
+  </g>
+
+  <!-- Region 2: Top bar of interface (model selector + tools) -->
+  <rect x="44" y="112" width="500" height="38" rx="10" fill="#1B2A33"/>
+  <rect x="44" y="138" width="500" height="12" fill="#1B2A33"/>
+  <!-- model selector pill -->
+  <rect x="58" y="120" width="140" height="22" rx="11" fill="#44525C" stroke="#CFC8B6" stroke-width="0.5"/>
+  <text x="128" y="135" font-size="10.5" fill="#FFFFFF" text-anchor="middle">Claude Sonnet &#9660;</text>
+  <!-- tool chips -->
+  <rect x="208" y="122" width="64" height="18" rx="9" fill="#2E7D8A" opacity="0.85"/>
+  <text x="240" y="134" font-size="9.5" fill="#FFFFFF" text-anchor="middle">Pesq. Web</text>
+  <rect x="278" y="122" width="72" height="18" rx="9" fill="#C2912C" opacity="0.9"/>
+  <text x="314" y="134" font-size="9.5" fill="#FFFFFF" text-anchor="middle">Ext. Thinking</text>
+  <rect x="356" y="122" width="56" height="18" rx="9" fill="#44525C" opacity="0.8"/>
+  <text x="384" y="134" font-size="9.5" fill="#FFFFFF" text-anchor="middle">+ Tools</text>
+  <rect x="418" y="122" width="56" height="18" rx="9" fill="#44525C" opacity="0.8"/>
+  <text x="446" y="134" font-size="9.5" fill="#FFFFFF" text-anchor="middle">Anexar</text>
+
+  <!-- Region 1: Left sidebar -->
+  <rect x="44" y="150" width="130" height="354" fill="#F1ECE0"/>
+  <text x="59" y="172" font-size="10.5" font-weight="700" fill="#44525C">+ Nova conversa</text>
+  <line x1="58" y1="180" x2="166" y2="180" stroke="#D8D0BD" stroke-width="0.8"/>
+  <text x="59" y="196" font-size="9.5" fill="#7C7768">Histórico</text>
+  <text x="59" y="212" font-size="9" fill="#7C7768">  conversa de ontem</text>
+  <text x="59" y="226" font-size="9" fill="#7C7768">  brainstorm produto</text>
+  <text x="59" y="240" font-size="9" fill="#7C7768">  análise Q3</text>
+  <line x1="58" y1="250" x2="166" y2="250" stroke="#D8D0BD" stroke-width="0.8"/>
+  <text x="59" y="265" font-size="9.5" font-weight="700" fill="#44525C">Projects</text>
+  <text x="59" y="280" font-size="9" fill="#7C7768">  pesquisa de mercado</text>
+  <text x="59" y="294" font-size="9" fill="#7C7768">  ebook IA</text>
+  <text x="59" y="308" font-size="9" fill="#7C7768">  análise jurídica</text>
+  <line x1="58" y1="318" x2="166" y2="318" stroke="#D8D0BD" stroke-width="0.8"/>
+  <text x="59" y="333" font-size="9.5" fill="#7C7768">Artifacts</text>
+  <text x="59" y="348" font-size="9.5" fill="#7C7768">Configurações</text>
+  <text x="59" y="488" font-size="9" fill="#7C7768">conta@email.com</text>
+
+  <!-- Region 3: Chat body -->
+  <rect x="174" y="150" width="370" height="280" fill="#FFFFFF"/>
+  <!-- User message -->
+  <rect x="244" y="162" width="290" height="36" rx="8" fill="#F1ECE0"/>
+  <text x="254" y="176" font-size="9.5" fill="#44525C" font-style="italic">"Analise as tendências de adoção...</text>
+  <text x="254" y="190" font-size="9.5" fill="#44525C" font-style="italic">de Claude Code no Brasil em 2026"</text>
+  <!-- Claude response -->
+  <rect x="184" y="210" width="340" height="64" rx="8" fill="#FBF6EA" stroke="#EADfBF" stroke-width="0.5"/>
+  <text x="194" y="226" font-size="9.5" font-weight="700" fill="#9A7A2E">Claude:</text>
+  <text x="194" y="242" font-size="9" fill="#7C7768">A adoção mostra três padrões</text>
+  <text x="194" y="256" font-size="9" fill="#7C7768">distintos em 2026: startups de</text>
+  <text x="194" y="270" font-size="9" fill="#7C7768">software, consultorias e...</text>
+  <!-- Artifact panel indicator -->
+  <rect x="184" y="286" width="198" height="36" rx="6" fill="#EFF6F7" stroke="#CFE3E6" stroke-width="0.5"/>
+  <text x="194" y="300" font-size="9" font-weight="700" fill="#2E7D8A">Artifact: Análise de Mercado</text>
+  <text x="194" y="314" font-size="8.5" fill="#7C7768">painel lateral editável · exportável</text>
+  <text x="390" y="300" font-size="9" fill="#2E7D8A" text-anchor="end">&#x25A0; ver</text>
+  <!-- More messages placeholder -->
+  <rect x="184" y="334" width="340" height="8" rx="4" fill="#F1ECE0" opacity="0.6"/>
+  <rect x="184" y="348" width="280" height="8" rx="4" fill="#F1ECE0" opacity="0.4"/>
+  <rect x="184" y="362" width="320" height="8" rx="4" fill="#F1ECE0" opacity="0.3"/>
+  <rect x="184" y="376" width="200" height="8" rx="4" fill="#F1ECE0" opacity="0.2"/>
+
+  <!-- Region 4 and 5: Input + toolbar -->
+  <rect x="174" y="430" width="370" height="74" fill="#FFFFFF"/>
+  <rect x="184" y="438" width="350" height="44" rx="10" fill="#F1ECE0" stroke="#CFC8B6" stroke-width="0.8"/>
+  <text x="200" y="464" font-size="9.5" fill="#9A7A2E" font-style="italic">Pergunte qualquer coisa...</text>
+  <rect x="510" y="448" width="22" height="22" rx="11" fill="#C2912C"/>
+  <text x="521" y="463" font-size="11" fill="#FFFFFF" text-anchor="middle">&#x2191;</text>
+  <!-- Toolbar icons below input -->
+  <text x="200" y="496" font-size="9" fill="#7C7768">&#128206; · &#128247; · &#128196; · &#9881; · Shift+Enter = quebra linha</text>
+
+  <!-- ANNOTATION CARDS on the right -->
+
+  <!-- Annotation 1: Barra lateral -->
+  <circle cx="185" cy="330" r="10" fill="#2E7D8A" filter="url(#sh)"/>
+  <text x="185" y="334" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <line x1="195" y1="330" x2="560" y2="220" stroke="#2E7D8A" stroke-width="1" stroke-dasharray="3 3"/>
+  <g filter="url(#sh)">
+    <rect x="558" y="198" width="276" height="58" rx="8" fill="#FFFFFF" stroke="#CFE3E6"/>
+  </g>
+  <text x="574" y="216" font-size="12.5" font-weight="700" fill="#1B2A33">BARRA LATERAL ESQUERDA</text>
+  <text x="574" y="232" font-size="11" fill="#7C7768">Nova conversa · histórico · Projects</text>
+  <text x="574" y="247" font-size="11" fill="#7C7768">Artifacts · configurações da conta</text>
+
+  <!-- Annotation 2: Top bar -->
+  <circle cx="360" cy="132" r="10" fill="#C2912C" filter="url(#sh)"/>
+  <text x="360" y="136" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <line x1="370" y1="132" x2="558" y2="268" stroke="#C2912C" stroke-width="1" stroke-dasharray="3 3"/>
+  <g filter="url(#sh)">
+    <rect x="558" y="260" width="276" height="58" rx="8" fill="#FFFFFF" stroke="#EADfBF"/>
+  </g>
+  <text x="574" y="278" font-size="12.5" font-weight="700" fill="#1B2A33">BARRA SUPERIOR</text>
+  <text x="574" y="294" font-size="11" fill="#7C7768">Seletor de modelo · modos (extended</text>
+  <text x="574" y="309" font-size="11" fill="#7C7768">thinking) · ferramentas on/off por conversa</text>
+
+  <!-- Annotation 3: Chat body -->
+  <circle cx="360" cy="290" r="10" fill="#1B2A33" filter="url(#sh)"/>
+  <text x="360" y="294" font-size="10" font-weight="700" fill="#C2912C" text-anchor="middle">3</text>
+  <line x1="370" y1="290" x2="558" y2="330" stroke="#44525C" stroke-width="1" stroke-dasharray="3 3"/>
+  <g filter="url(#sh)">
+    <rect x="558" y="322" width="276" height="58" rx="8" fill="#FFFFFF" stroke="#E6DFC9"/>
+  </g>
+  <text x="574" y="340" font-size="12.5" font-weight="700" fill="#1B2A33">CORPO CENTRAL</text>
+  <text x="574" y="356" font-size="11" fill="#7C7768">Conversa renderizada · Markdown · código</text>
+  <text x="574" y="371" font-size="11" fill="#7C7768">tabelas · LaTeX · Artifacts em painel lateral</text>
+
+  <!-- Annotation 4+5: Input + toolbar -->
+  <circle cx="360" cy="458" r="10" fill="#2E7D8A" filter="url(#sh)"/>
+  <text x="360" y="462" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <line x1="370" y1="458" x2="558" y2="408" stroke="#2E7D8A" stroke-width="1" stroke-dasharray="3 3"/>
+  <g filter="url(#sh)">
+    <rect x="558" y="386" width="276" height="78" rx="8" fill="#FFFFFF" stroke="#CFE3E6"/>
+  </g>
+  <text x="574" y="404" font-size="12.5" font-weight="700" fill="#1B2A33">CAIXA DE ENTRADA</text>
+  <text x="574" y="420" font-size="11" fill="#7C7768">Texto · imagens · PDFs via drag-and-drop</text>
+  <text x="574" y="435" font-size="11" fill="#7C7768">Enter envia · Shift+Enter quebra linha</text>
+  <text x="574" y="450" font-size="12.5" font-weight="700" fill="#1B2A33">+ BARRA DE FERRAMENTAS</text>
+  <text x="574" y="457" font-size="10" fill="#7C7768">pesquisa web · extended thinking · MCP · anexos</text>
+
+  <!-- Caption -->
+  <text x="44" y="520" font-size="12.5" fill="#7C7768" font-style="italic">Cinco regiões principais — conhecer a topologia é o pré-requisito para fluência profissional.</text>
+
+  <!-- Keyboard shortcuts quick ref -->
+  <rect x="44" y="532" width="792" height="20" rx="8" fill="#F1ECE0"/>
+  <text x="440" y="546" font-size="10.5" fill="#7C7768" text-anchor="middle">Atalhos: Cmd+K busca histórico · Cmd+N nova conversa · / slash commands · Cmd+B mostra/oculta sidebar</text>
+</svg>

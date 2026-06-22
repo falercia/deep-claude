@@ -1,0 +1,118 @@
+<svg viewBox="0 0 880 500" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh15a" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule15a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <marker id="arrInk15a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#44525C"/>
+    </marker>
+    <marker id="arrGold15a" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C2912C"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="498" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <!-- Kicker + título -->
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 15.1 · INVARIANTE 1 — PLAUSIBILIDADE</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">O fluxo do Claude Research, fim a fim</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule15a)"/>
+
+  <!-- ETAPA 1: Pergunta -->
+  <g filter="url(#sh15a)">
+    <rect x="44" y="120" width="136" height="62" rx="12" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <text x="112" y="145" font-size="14" font-weight="700" fill="#1B2A33" text-anchor="middle">Pergunta</text>
+  <text x="112" y="163" font-size="11.5" fill="#7C7768" text-anchor="middle">do operador</text>
+  <text x="112" y="178" font-size="11" fill="#9A7A2E" text-anchor="middle" font-weight="600">escopo rico</text>
+
+  <!-- seta 1 -->
+  <path d="M180,151 H222" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+
+  <!-- ETAPA 2: Orquestrador -->
+  <g filter="url(#sh15a)">
+    <rect x="222" y="110" width="164" height="82" rx="12" fill="#1B2A33"/>
+  </g>
+  <text x="304" y="140" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Orquestrador</text>
+  <text x="304" y="159" font-size="11.5" fill="#C2912C" text-anchor="middle">decompõe em</text>
+  <text x="304" y="176" font-size="11.5" fill="#C2912C" text-anchor="middle">10–30 subqueries</text>
+
+  <!-- Fan de setas douradas ao leque de subagentes -->
+  <path d="M386,130 C440,130 440,158 482,158" fill="none" stroke="#C2912C" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arrGold15a)"/>
+  <path d="M386,151 H482" fill="none" stroke="#C2912C" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arrGold15a)"/>
+  <path d="M386,172 C440,172 440,242 482,242" fill="none" stroke="#C2912C" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arrGold15a)"/>
+
+  <!-- Label PARALELO -->
+  <text x="484" y="108" font-size="11" font-weight="700" fill="#9A7A2E" letter-spacing="0.5">PARALELO</text>
+
+  <!-- Subagentes -->
+  <g filter="url(#sh15a)">
+    <rect x="482" y="114" width="152" height="42" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <text x="558" y="133" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Subagente A</text>
+  <text x="558" y="149" font-size="11" fill="#7C7768" text-anchor="middle">busca + leitura de fontes</text>
+
+  <g filter="url(#sh15a)">
+    <rect x="482" y="172" width="152" height="42" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <text x="558" y="191" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Subagente B</text>
+  <text x="558" y="207" font-size="11" fill="#7C7768" text-anchor="middle">busca + leitura de fontes</text>
+
+  <g filter="url(#sh15a)">
+    <rect x="482" y="230" width="152" height="42" rx="10" fill="#FFFFFF" stroke="#E2D4AC"/>
+  </g>
+  <text x="558" y="249" font-size="13" font-weight="700" fill="#1B2A33" text-anchor="middle">Subagentes C–N</text>
+  <text x="558" y="265" font-size="11" fill="#7C7768" text-anchor="middle">dezenas de fontes</text>
+
+  <!-- Convergência para síntese -->
+  <path d="M634,135 C688,135 688,192 726,192" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+  <path d="M634,193 H726" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+  <path d="M634,251 C688,251 688,204 726,204" fill="none" stroke="#44525C" stroke-width="2.2" marker-end="url(#arrInk15a)"/>
+
+  <!-- ETAPA 4: Síntese -->
+  <g filter="url(#sh15a)">
+    <rect x="726" y="152" width="118" height="82" rx="12" fill="#FBF6EA" stroke="#E2D4AC"/>
+  </g>
+  <text x="785" y="181" font-size="13" font-weight="700" fill="#9A7A2E" text-anchor="middle">Síntese</text>
+  <text x="785" y="199" font-size="11" fill="#7C7768" text-anchor="middle">concilia fontes,</text>
+  <text x="785" y="215" font-size="11" fill="#7C7768" text-anchor="middle">prioriza Tier 1</text>
+
+  <!-- seta para baixo ao relatório -->
+  <path d="M785,234 V278" fill="none" stroke="#C2912C" stroke-width="2.2" marker-end="url(#arrGold15a)"/>
+
+  <!-- ETAPA 5: Relatório Final -->
+  <g filter="url(#sh15a)">
+    <rect x="44" y="284" width="810" height="100" rx="13" fill="#FFFFFF" stroke="#CFC8B6"/>
+  </g>
+  <path d="M44,297 a13,13 0 0 1 13,-13 h784 a13,13 0 0 1 13,13 v20 h-810 z" fill="#1B2A33"/>
+  <text x="64" y="312" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">RELATÓRIO FINAL COM CITAÇÕES</text>
+
+  <rect x="64" y="326" width="178" height="42" rx="8" fill="#F1ECE0" stroke="#CFC8B6"/>
+  <text x="153" y="342" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle">Seções organizadas</text>
+  <text x="153" y="358" font-size="11" fill="#7C7768" text-anchor="middle">estrutura editorial clara</text>
+
+  <rect x="256" y="326" width="178" height="42" rx="8" fill="#F1ECE0" stroke="#CFC8B6"/>
+  <text x="345" y="342" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle">Citações inline</text>
+  <text x="345" y="358" font-size="11" fill="#7C7768" text-anchor="middle">cada afirmação ancorada</text>
+
+  <rect x="448" y="326" width="178" height="42" rx="8" fill="#F1ECE0" stroke="#CFC8B6"/>
+  <text x="537" y="342" font-size="12" font-weight="700" fill="#1B2A33" text-anchor="middle">Lista de fontes</text>
+  <text x="537" y="358" font-size="11" fill="#7C7768" text-anchor="middle">dezenas a centenas</text>
+
+  <rect x="640" y="326" width="178" height="42" rx="8" fill="#FBF6EA" stroke="#E2D4AC"/>
+  <text x="729" y="342" font-size="12" font-weight="700" fill="#9A7A2E" text-anchor="middle">Contradições preservadas</text>
+  <text x="729" y="358" font-size="11" fill="#7C7768" text-anchor="middle">ambas as versões com contexto</text>
+
+  <!-- Caixa de alerta -->
+  <g filter="url(#sh15a)">
+    <rect x="44" y="402" width="810" height="46" rx="11" fill="#F0DDD2" stroke="#E7CDBE"/>
+  </g>
+  <text x="64" y="421" font-size="13" font-weight="700" fill="#B5532F">Invariante 1 aplicado</text>
+  <text x="64" y="438" font-size="11.5" fill="#7C7768">Volume de citações não é verdade verificada. Audite as fontes-âncora que sustentam a conclusão antes de usar em decisão.</text>
+
+  <!-- Legenda de rodapé -->
+  <text x="44" y="484" font-size="12.5" fill="#7C7768" font-style="italic">Orquestrador decompõe, subagentes pesquisam em paralelo, síntese consolida. O relatório é ponto de partida qualificado, não palavra final.</text>
+</svg>

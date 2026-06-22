@@ -1,0 +1,55 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <filter id="sh2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#1B2A33" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="goldRule2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C2912C"/><stop offset="1" stop-color="#E2C879"/>
+    </linearGradient>
+    <linearGradient id="riskBar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#DCEAEC"/><stop offset="1" stop-color="#E7B79F"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="468" rx="16" fill="#FBF8F1" stroke="#E6DFC9"/>
+
+  <text x="44" y="48" font-size="12.5" letter-spacing="2.5" font-weight="700" fill="#C2912C">DIAGRAMA 8.1 · INVARIANTE 6 — AUTONOMIA PROPORCIONAL</text>
+  <text x="44" y="78" font-size="23" font-weight="700" fill="#1B2A33">As quatro superfícies de acesso do Cowork</text>
+  <rect x="44" y="90" width="86" height="3.5" rx="1.75" fill="url(#goldRule2)"/>
+
+  <!-- risk axis -->
+  <rect x="44" y="128" width="14" height="280" rx="7" fill="url(#riskBar)"/>
+  <text x="51" y="120" font-size="11" fill="#B5532F" text-anchor="middle" font-weight="600">+ risco</text>
+  <text x="51" y="424" font-size="11" fill="#256A75" text-anchor="middle" font-weight="600">base</text>
+
+  <!-- four stacked surfaces, increasing reach/risk bottom→top -->
+  <!-- 1 pasta conectada (base) -->
+  <g filter="url(#sh2)"><rect x="82" y="356" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <circle cx="112" cy="382" r="14" fill="#2E7D8A"/><text x="112" y="387" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">1</text>
+  <text x="138" y="378" font-size="15" font-weight="700" fill="#1B2A33">Pasta conectada</text>
+  <text x="138" y="396" font-size="12.5" fill="#7C7768">arquivos reais, escopo escolhido por você — o limite mais importante</text>
+  <text x="822" y="387" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">disco local</text>
+
+  <!-- 2 sandbox -->
+  <g filter="url(#sh2)"><rect x="82" y="296" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#CFE3E6"/></g>
+  <circle cx="112" cy="322" r="14" fill="#2E7D8A"/><text x="112" y="327" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">2</text>
+  <text x="138" y="318" font-size="15" font-weight="700" fill="#1B2A33">Sandbox isolado</text>
+  <text x="138" y="336" font-size="12.5" fill="#7C7768">execução de código separada da sua máquina — recurso de segurança</text>
+  <text x="822" y="327" font-size="11.5" fill="#256A75" text-anchor="end" font-weight="600">ambiente isolado</text>
+
+  <!-- 3 computer use (preview) -->
+  <g filter="url(#sh2)"><rect x="82" y="236" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <circle cx="112" cy="262" r="14" fill="#B5532F"/><text x="112" y="267" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">3</text>
+  <text x="138" y="258" font-size="15" font-weight="700" fill="#1B2A33">Computer use <tspan fill="#B5532F" font-size="11" font-weight="700">· research preview</tspan></text>
+  <text x="138" y="276" font-size="12.5" fill="#7C7768">opera a tela e aplicativos — maior alcance, exige o freio mais explícito</text>
+  <text x="822" y="267" font-size="11.5" fill="#B5532F" text-anchor="end" font-weight="600">seus apps</text>
+
+  <!-- 4 conectores / MCP -->
+  <g filter="url(#sh2)"><rect x="82" y="176" width="756" height="52" rx="10" fill="#FFFFFF" stroke="#E7CDBE"/></g>
+  <circle cx="112" cy="202" r="14" fill="#B5532F"/><text x="112" y="207" font-size="14" font-weight="700" fill="#FFF" text-anchor="middle">4</text>
+  <text x="138" y="198" font-size="15" font-weight="700" fill="#1B2A33">Conectores e MCP</text>
+  <text x="138" y="216" font-size="12.5" fill="#7C7768">sistemas externos e compartilhados — ações frequentemente irreversíveis</text>
+  <text x="822" y="207" font-size="11.5" fill="#B5532F" text-anchor="end" font-weight="600">terceiros</text>
+
+  <text x="44" y="450" font-size="12.5" fill="#7C7768" font-style="italic">Cada superfície habilitada amplia o que o Cowork faz por você — e, na mesma medida, o que pode fazer de errado. Conceder acesso é decisão de proporcionalidade.</text>
+</svg>

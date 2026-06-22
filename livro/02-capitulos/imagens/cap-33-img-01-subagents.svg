@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="sa-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E97451"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="540" fill="#fefce8"/>
+  <text x="500" y="40" fill="#0d1b2a" font-size="22" font-weight="700" text-anchor="middle">SUBAGENTS — ORQUESTRAÇÃO DE EQUIPE DE AGENTES</text>
+  <text x="500" y="64" fill="#6b7280" font-size="13" text-anchor="middle">Em vez de um único agente fazendo tudo, agente principal delega para subagentes especializados</text>
+
+  <!-- Main agent -->
+  <rect x="380" y="100" width="240" height="80" rx="12" fill="#E97451" stroke="#fef3c7" stroke-width="2"/>
+  <text x="500" y="128" fill="#fef3c7" font-size="14" font-weight="700" text-anchor="middle">AGENTE PRINCIPAL</text>
+  <text x="500" y="148" fill="#fef3c7" font-size="11" text-anchor="middle">recebe objetivo</text>
+  <text x="500" y="166" fill="#fef3c7" font-size="11" text-anchor="middle">decompõe em subtarefas</text>
+
+  <line x1="450" y1="180" x2="180" y2="225" stroke="#E97451" stroke-width="2" marker-end="url(#sa-arr)"/>
+  <line x1="500" y1="180" x2="500" y2="225" stroke="#E97451" stroke-width="2" marker-end="url(#sa-arr)"/>
+  <line x1="550" y1="180" x2="820" y2="225" stroke="#E97451" stroke-width="2" marker-end="url(#sa-arr)"/>
+
+  <!-- Subagent 1 -->
+  <rect x="60" y="230" width="240" height="180" rx="10" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="256" fill="#0d1b2a" font-size="13" font-weight="700" text-anchor="middle">SUBAGENTE A</text>
+  <text x="180" y="274" fill="#374151" font-size="10" text-anchor="middle">especialista em pesquisa</text>
+  <text x="80" y="300" fill="#374151" font-size="10">Tools próprias:</text>
+  <text x="80" y="318" fill="#374151" font-size="10">• Web search</text>
+  <text x="80" y="334" fill="#374151" font-size="10">• WebFetch</text>
+  <text x="80" y="350" fill="#374151" font-size="10">• Knowledge Base</text>
+  <text x="80" y="372" fill="#2563eb" font-size="10" font-weight="700">Contexto próprio</text>
+  <text x="80" y="388" fill="#374151" font-size="10">isolado, sem poluir</text>
+  <text x="80" y="402" fill="#374151" font-size="10">o agente principal</text>
+
+  <!-- Subagent 2 -->
+  <rect x="380" y="230" width="240" height="180" rx="10" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="500" y="256" fill="#0d1b2a" font-size="13" font-weight="700" text-anchor="middle">SUBAGENTE B</text>
+  <text x="500" y="274" fill="#374151" font-size="10" text-anchor="middle">especialista em análise</text>
+  <text x="400" y="300" fill="#374151" font-size="10">Tools próprias:</text>
+  <text x="400" y="318" fill="#374151" font-size="10">• Bash (executa cálculo)</text>
+  <text x="400" y="334" fill="#374151" font-size="10">• Read arquivos</text>
+  <text x="400" y="350" fill="#374151" font-size="10">• Skills de modelagem</text>
+  <text x="400" y="372" fill="#16a34a" font-size="10" font-weight="700">Foco profundo</text>
+  <text x="400" y="388" fill="#374151" font-size="10">numa única responsabilidade,</text>
+  <text x="400" y="402" fill="#374151" font-size="10">sem distração de outras</text>
+
+  <!-- Subagent 3 -->
+  <rect x="700" y="230" width="240" height="180" rx="10" fill="#fde68a" stroke="#fb923c" stroke-width="2"/>
+  <text x="820" y="256" fill="#0d1b2a" font-size="13" font-weight="700" text-anchor="middle">SUBAGENTE C</text>
+  <text x="820" y="274" fill="#374151" font-size="10" text-anchor="middle">especialista em redação</text>
+  <text x="720" y="300" fill="#374151" font-size="10">Tools próprias:</text>
+  <text x="720" y="318" fill="#374151" font-size="10">• Templates</text>
+  <text x="720" y="334" fill="#374151" font-size="10">• Skill de escrita</text>
+  <text x="720" y="350" fill="#374151" font-size="10">• Style guide</text>
+  <text x="720" y="372" fill="#fb923c" font-size="10" font-weight="700">Especialização real</text>
+  <text x="720" y="388" fill="#374151" font-size="10">no estilo da casa,</text>
+  <text x="720" y="402" fill="#374151" font-size="10">não improvisação</text>
+
+  <!-- Aggregation -->
+  <line x1="180" y1="410" x2="450" y2="455" stroke="#E97451" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#sa-arr)"/>
+  <line x1="500" y1="410" x2="500" y2="455" stroke="#E97451" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#sa-arr)"/>
+  <line x1="820" y1="410" x2="550" y2="455" stroke="#E97451" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#sa-arr)"/>
+
+  <rect x="320" y="460" width="360" height="60" rx="10" fill="#E97451"/>
+  <text x="500" y="486" fill="#fef3c7" font-size="13" font-weight="700" text-anchor="middle">AGENTE PRINCIPAL CONSOLIDA</text>
+  <text x="500" y="506" fill="#fef3c7" font-size="11" text-anchor="middle">entrega final ao usuário, integrando os três trabalhos</text>
+</svg>
