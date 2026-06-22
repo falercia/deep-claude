@@ -17,19 +17,19 @@
 
 ## 4.1 — O CONCEITO INTUITIVO
 
-A Anthropic adotou desde Claude 3, em março de 2024, uma nomenclatura tripartite que se tornou padrão da indústria, com cada um dos três modelos otimizado para uma faixa diferente de capacidade, velocidade e custo. A nomenclatura inspirada em formas literárias é proposital: Opus é a forma mais longa e elaborada, Sonnet é a forma de equilíbrio entre profundidade e concisão, e Haiku é a forma mais enxuta e rápida. Conhecer essa estrutura é pré-requisito para usar Claude profissionalmente.
+A Anthropic adotou desde Claude 3, em março de 2024, uma nomenclatura tripartite com cada modelo otimizado para uma faixa diferente de capacidade, velocidade e custo. A nomenclatura em formas literárias é proposital: Opus é a forma mais longa e elaborada, Sonnet equilibra profundidade e concisão, e Haiku é a mais enxuta e rápida. Conhecer essa estrutura é pré-requisito para usar Claude profissionalmente.
 
-A confusão recorrente em organizações que começam a usar Claude é assumir que o melhor é sempre o mais caro — ou, inversamente, que o mais barato é sempre melhor escolha por economia. Ambas as posições produzem decisões erradas em casos típicos. Este capítulo te dá o mapa do que cada modelo é. O critério para escolher entre eles está no Capítulo 5.
+A confusão recorrente é assumir que o melhor é sempre o mais caro — ou que o mais barato é sempre a escolha por economia. Ambas as posições produzem decisões erradas. Este capítulo entrega o mapa do que cada modelo é. O critério para escolher entre eles está no Capítulo 5.
 
 ---
 
 ## 4.2 — ANALOGIA: A SELEÇÃO DE ARMAS DE UM CARPINTEIRO
 
-Pense em como um carpinteiro experiente escolhe ferramentas para diferentes tarefas. Para cortar uma única tábua grossa de madeira de lei, ele pega a serra circular potente — cara, pesada, consome energia, mas faz o trabalho com precisão e rapidez. Para fazer cortes simples em volume, em compensado fino, ele pega a tico-tico elétrica, ferramenta intermediária que serve para a maior parte do trabalho cotidiano. Para acertos finos e detalhes, ele pega um formão ou uma serrinha manual, ferramenta de baixíssimo custo operacional que entrega precisão suficiente sem desperdiçar a potência da serra grande.
+Um carpinteiro experiente escolhe ferramentas para cada tarefa. Para cortar tábua grossa de madeira de lei, pega a serra circular potente. Para cortes simples em volume, pega a tico-tico elétrica. Para acertos finos, um formão — baixíssimo custo operacional, precisão suficiente sem desperdiçar potência.
 
-O carpinteiro maduro não usa a serra circular para cortar uma fita estreita de madeira balsa — seria desperdício de potência, de energia e de risco de dano. Não usa o formão para cortar uma viga grossa de carvalho — levaria horas e ainda não ficaria bem feito. Cada ferramenta tem seu lugar, e parte da competência profissional está em saber rotear o trabalho certo para a ferramenta certa.
+O carpinteiro maduro não usa a serra circular para cortar fita estreita de balsa — desperdício de potência, energia e risco. Não usa o formão em viga grossa de carvalho — levaria horas. Cada ferramenta tem seu lugar; parte da competência está em rotear o trabalho certo para a ferramenta certa.
 
-Os modelos Claude funcionam exatamente assim. Opus é a serra circular potente, ideal para os trabalhos críticos que justificam o custo. Sonnet é a tico-tico elétrica, ferramenta de uso geral que cobre o grosso do trabalho profissional. Haiku é o formão de precisão — rápido e barato, ideal para cortes simples em volume. **Este capítulo descreve as ferramentas. O Capítulo 5 ensina a decidir qual pegar.**
+Opus é a serra circular potente. Sonnet é a tico-tico, ferramenta de uso geral para o grosso do trabalho. Haiku é o formão — rápido, barato, ideal para cortes simples em volume. **Este capítulo descreve as ferramentas. O Capítulo 5 ensina a decidir qual pegar.**
 
 ---
 
@@ -49,11 +49,11 @@ Cada modelo é descrito abaixo com suas especificidades técnicas e econômicas.
 
 ### 4.3.2 — O modo extended thinking
 
-Vale descrever uma capacidade adicional disponível em Opus e Sonnet a partir de 2024: o extended thinking, ou modo de raciocínio estendido. Quando ativado, o modelo executa internamente um processo de raciocínio prolongado antes de produzir a resposta final, gerando tokens de "pensamento" que ficam ocultos do usuário mas são usados pelo modelo para refinar a conclusão.
+Disponível em Opus e Sonnet, o extended thinking ativa raciocínio prolongado antes da resposta final, gerando tokens de "pensamento" ocultos usados para refinar a conclusão.
 
-Esse modo é especialmente útil em problemas que se beneficiam de tempo de processamento adicional: análises com várias restrições encadeadas, problemas matemáticos não triviais, decisões com trade-offs múltiplos, debug de código complicado. A contrapartida é custo maior em tokens — o modelo gera potencialmente centenas de milhares de tokens de raciocínio que entram na cobrança — e latência maior, de segundos a minutos por resposta.
+Útil em análises com restrições encadeadas, problemas matemáticos não triviais, decisões com trade-offs múltiplos, debug complexo. A contrapartida é custo maior em tokens — potencialmente centenas de milhares de tokens de raciocínio — e latência maior, de segundos a minutos.
 
-Em 2026, a recomendação prática é ativar extended thinking em Opus para tarefas verdadeiramente complexas, e usar Sonnet normal para o grosso da operação. Haiku não tem modo de extended thinking — seu posicionamento é velocidade, não profundidade. **O critério de quando ativar extended thinking está no Capítulo 5.**
+A recomendação prática: ativar em Opus para tarefas verdadeiramente complexas; usar Sonnet normal para o grosso da operação. Haiku não tem extended thinking — seu posicionamento é velocidade, não profundidade. **O critério de quando ativar está no Capítulo 5.**
 
 ### 4.3.3 — Janela de contexto
 
@@ -67,9 +67,9 @@ A escolha entre os três modelos não muda a janela de contexto disponível, mas
 
 ## 4.4 — EXEMPLO: RECONHECER A FAMÍLIA EM CAMPO
 
-Um gerente de produto numa startup de healthtech em São Paulo, em 2026, precisava avaliar a viabilidade de usar Claude para três funções simultâneas no produto: classificar sintomas relatados por usuários em categorias de triagem (centenas de milhares de entradas por mês), gerar rascunhos de relatórios médicos estruturados para revisão por profissionais de saúde (algumas centenas por semana), e analisar literatura científica recente para identificar protocolos emergentes relevantes (pedidos esporádicos de alta complexidade).
+Um gerente de produto de uma healthtech em São Paulo, em 2026, precisava avaliar Claude para três funções: classificar sintomas de triagem (centenas de milhares por mês), gerar rascunhos de relatórios médicos para revisão (algumas centenas por semana), e analisar literatura científica para protocolos emergentes (pedidos esporádicos de alta complexidade).
 
-Antes de qualquer decisão de roteamento, ele precisava entender o que cada modelo *era* — e esse entendimento produziu três percepções que mudaram o design do produto.
+Antes de decidir o roteamento, ele precisava entender o que cada modelo *era* — e esse entendimento produziu três percepções que mudaram o design do produto.
 
 Primeiro: Haiku era competente o suficiente para classificação de sintomas porque o esquema era fixo, os erros eram corrigíveis e o volume inviabilizava modelos maiores no custo. A capacidade não precisava ser premium — precisava ser consistente e rápida.
 
@@ -83,7 +83,7 @@ O gerente não tomou essas decisões pelo preço — tomou porque entendeu o que
 
 ## 4.5 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior mostra como o gerente da healthtech chegou às decisões certas entendendo o que cada modelo *é* antes de decidir qual usar; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que amarra o Invariante 4 (Encaixe) ao resultado real.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — é o ponto de julgamento que amarra o Invariante 4 (Encaixe) ao resultado real.
 
 **Aplicação 1 — Mapeamento da família para três tarefas reais da organização.**
 *Situação:* você usa Claude (ou está avaliando usá-lo) para pelo menos três tipos de tarefa diferentes, mas aplica o mesmo modelo para todas. *O que fazer:* liste as três tarefas; para cada uma, descreva em uma frase o perfil — complexidade do raciocínio exigido, tolerância a erro, volume e latência necessária; mapeie cada tarefa para o tier correspondente (Opus, Sonnet, Haiku) usando os critérios deste capítulo; não decida ainda qual implementar — apenas nomeie o encaixe. *O ponto de julgamento:* se as três tarefas mapearam para o mesmo tier, você provavelmente está subespecificando as diferenças entre elas. Reescreva o perfil de cada tarefa e procure onde o raciocínio exigido e a tolerância a erro divergem. Encaixe correto pressupõe distinção real — e forçar distinção revela o que você ainda não tinha articulado sobre as tarefas.
@@ -101,9 +101,9 @@ O exemplo anterior mostra como o gerente da healthtech chegou às decisões cert
 
 ## 4.6 — O CRITÉRIO DE QUANDO USAR CADA MODELO
 
-O critério operacional de roteamento — a árvore de três perguntas, os padrões de uso profissional, o exemplo memorável da logística — está no **Capítulo 5 — Quando Usar Opus, Sonnet, Haiku** ([L2-C05-quando-usar-modelos.md](L2-C05-quando-usar-modelos.md)).
+O critério operacional de roteamento — a árvore de três perguntas, os padrões de uso profissional, o exemplo memorável — está no **Capítulo 5** ([L2-C05-quando-usar-modelos.md](L2-C05-quando-usar-modelos.md)).
 
-A separação é proposital: conhecer o que cada modelo é (este capítulo) é pré-requisito para usar bem o critério de decisão (Cap. 5). Misturar as duas camadas torna o critério difícil de memorizar e difícil de explicar para outras pessoas.
+A separação é proposital: conhecer o que cada modelo é (este capítulo) precede usar bem o critério de decisão (Cap. 5). Misturar as duas camadas torna o critério difícil de memorizar e de explicar.
 
 ---
 

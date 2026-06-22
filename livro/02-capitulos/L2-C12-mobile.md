@@ -15,21 +15,19 @@
 
 ## 12.1 — O CONCEITO INTUITIVO
 
-Existe uma tendência inicial em usuários novos do Claude, especialmente os mais técnicos, de tratar a versão mobile como "irmã menor" das versões Web e Desktop. A ideia subjacente é que mobile serve para consultas rápidas em situações de necessidade, mas o trabalho sério acontece sempre em computador. Essa tendência subestima profundamente o que mobile entrega, e principalmente subestima as situações em que mobile entrega valor que nenhuma outra interface consegue.
+Usuários novos, especialmente os mais técnicos, tratam o mobile como "irmã menor" do Web — útil para consultas rápidas, mas nada sério. Essa leitura subestima o que mobile entrega e, principalmente, as situações em que ele entrega valor que nenhuma outra interface consegue.
 
-A versão mobile, disponível para iOS e Android, sincroniza automaticamente com sua conta. Você tem acesso ao mesmo histórico de conversas, aos mesmos Projects com Knowledge Base, ao mesmo seletor de modelos (tiers disponíveis correntes no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md)), à mesma capacidade de busca web. Mas adiciona três alavancas exclusivas que mudam a natureza do uso. A primeira é **voz nativa fluente**, que permite conversa por áudio com latência baixa em qualquer lugar. A segunda é **câmera integrada**, que abre o universo multimodal do mundo físico, com fotos de documentos, lugares, equipamentos, equações. A terceira é **disponibilidade em situações onde computador não existe**, ou seja, dirigindo, caminhando, em reunião presencial, em viagem, em fila, em qualquer momento da vida fora da mesa de trabalho.
+O app, disponível para iOS e Android, sincroniza com sua conta: mesmo histórico, mesmos Projects, mesmo seletor de modelos, mesma busca web. Mas adiciona três alavancas exclusivas: **voz nativa fluente** (conversa em áudio com latência baixa), **câmera integrada** (análise multimodal do mundo físico), e **disponibilidade onde computador não existe** (carro, caminhada, reunião presencial, fila, viagem).
 
-Para profissionais que entendem essas três alavancas, mobile vira parte integral do uso de IA, não acessório. Para os que ignoram, fica uma capacidade adormecida no celular esperando ativação consciente.
+Para profissionais que entendem essas três alavancas, mobile vira parte integral da operação. Para os que ignoram, fica capacidade adormecida esperando ativação consciente.
 
 ---
 
 ## 12.2 — ANALOGIA: O COLABORADOR QUE ANDA COM VOCÊ
 
-Pense na diferença entre dois cenários de colaboração profissional. No primeiro, você tem um analista sênior excelente, mas que só atende na sala dele, com horário comercial, com você precisando ir até lá quando precisa de ajuda. Ele é competente, mas as consultas são limitadas aos momentos em que você está disponível para ir até lá.
+Um analista sênior excelente que só atende na sala dele, com horário comercial, é útil — mas limitado aos momentos em que você pode ir até lá. O mesmo analista com fone de ouvido, disponível por voz onde quer que você esteja, muda a natureza da colaboração. Você está dirigindo para reunião, quer pensar em voz alta: ele está lá. Sala de espera com cinco minutos vagos: ele está lá. A qualidade não mudou — o acesso virou contínuo.
 
-No segundo, o mesmo analista usa fone de ouvido e está disponível por voz onde quer que você esteja. Você está dirigindo para uma reunião e quer pensar em voz alta sobre o que vai dizer. Ele está lá. Você caminhou pela rua, viu algo interessante, quer comentário rápido. Ele está lá. Você está em sala de espera entre reuniões com cinco minutos vagos. Ele está lá. A natureza da colaboração muda quando o acesso deixa de ser pontual e vira contínuo.
-
-Claude Mobile cumpre essa função. Conversa por voz no carro, brainstorm caminhando, foto de algo durante o dia para análise rápida, retomada de pensamento iniciado no Web em qualquer lugar. Para profissionais com agenda intensa, esse acesso contínuo a um colaborador inteligente compõe valor que não cabe em métricas simples.
+Claude Mobile cumpre essa função: voz no carro, brainstorm caminhando, foto de algo para análise rápida, retomada de pensamento iniciado no Web. Para profissionais com agenda intensa, esse acesso compõe valor que não cabe em métricas simples.
 
 ---
 
@@ -113,17 +111,17 @@ Mobile não é apenas "o mesmo Claude em tela menor". Há diferenças técnicas 
 
 ## 12.4 — EXEMPLO MEMORÁVEL: A HORA DO TRÂNSITO QUE VIROU ESCRITÓRIO
 
-Um diretor comercial brasileiro, atendendo clientes corporativos em São Paulo, enfrentava uma realidade dura. A combinação de trânsito da capital com agenda intensa significava aproximadamente duas horas por dia perdidas dentro do carro, frequentemente em momentos em que ele ainda precisava preparar a próxima reunião ou processar a anterior. Esse tempo, antes de Claude, era predominantemente improdutivo, com chamadas telefônicas pontuais sendo a única coisa viável.
+Um diretor comercial em São Paulo tinha duas horas diárias perdidas no trânsito — tempo que precisava para preparar ou processar reuniões, mas sem computador disponível. Chamadas telefônicas pontuais eram a única saída.
 
-Em meados de 2025, ele começou a experimentar Claude Mobile com voz durante esses deslocamentos. As primeiras semanas foram de adaptação, com ele aprendendo a estruturar pensamento por voz, descobrindo que tipo de pedido funcionava bem ditado e qual exigia tela depois. Em cerca de dois meses, tinha desenvolvido um fluxo que mudou sua produtividade diária.
+Em meados de 2025, começou a experimentar Claude Mobile com voz nos deslocamentos. Algumas semanas de adaptação para aprender a estruturar pensamento em voz alta, descobrir o que funcionava ditado e o que exigia tela. Em dois meses, tinha fluxo que mudou sua produtividade diária.
 
 Antes de cada reunião importante, ele usava cerca de quinze minutos no carro ditando "vou ter reunião com o CEO da empresa X em meia hora. O contexto é Y, o objetivo principal é Z, e eles têm preocupação sobre W. Me ajude a pensar em três pontos que devo enfatizar, dois riscos a antecipar, e uma pergunta de abertura que demonstre que entendo o problema deles". Claude respondia por voz, ele escutava, fazia perguntas adicionais, refinava. Quando chegava à reunião, tinha estrutura mental clara sem ter aberto laptop em momento algum.
 
 Depois das reuniões, voltando ao escritório ou para casa, ele usava outros quinze ou vinte minutos processando o que tinha acontecido. "A reunião com cliente X correu assim e assim, ele mencionou pontos A, B e C, e a decisão ficou em aberto sobre D. Me ajude a estruturar email de follow-up, com pontos de ação claros, e prazo sugerido para próxima conversa". Claude estruturava, ele refinava por voz, e ao chegar no destino tinha rascunho pronto que ele finalizava em três minutos no celular antes de enviar.
 
-Em seis meses, a hora morta do trânsito virou cerca de 90 minutos diários de trabalho cognitivo de qualidade. **Não foi velocidade extra, foi tempo recuperado de um pedaço da vida que antes era desperdiçado.** Em escala anual, são mais de 300 horas adicionais de trabalho qualificado, equivalente a quase dois meses úteis de produtividade extra sem aumentar horas trabalhadas formais.
+Em seis meses, a hora morta virou 90 minutos diários de trabalho cognitivo de qualidade. Em escala anual: mais de 300 horas adicionais de trabalho qualificado, quase dois meses úteis de produtividade extra, sem aumentar horas trabalhadas.
 
-A lição estrutural não é sobre dirigir e trabalhar — é sobre **IA como amplificador de momentos previamente improdutivos**. Toda agenda profissional tem dezenas de janelas curtas em que o computador não está disponível, e que somam tempo significativo ao longo do ano. Mobile com voz transforma essas janelas em pensamento estruturado, especialmente quando a tarefa é cognitiva mais que mecânica. **Quem descobre esse uso ganha vantagem competitiva sutil e durável.**
+A lição não é sobre dirigir e trabalhar — é sobre **IA como amplificador de momentos previamente improdutivos**. Toda agenda tem janelas curtas em que o computador não está disponível. Mobile com voz transforma essas janelas em pensamento estruturado. **Quem descobre esse uso ganha vantagem competitiva sutil e durável.**
 
 > 🎯 **PARA EXECUTIVOS**
 > Se você passa tempo significativo em situações de mãos livres mas mente disponível (dirigindo, caminhando, esperando), Claude Mobile com voz é provavelmente a alavanca de produtividade individual mais subutilizada do seu portfolio. Investir uma semana adaptando seu fluxo a essa modalidade costuma render dezenas de horas mensais de tempo produtivo recuperado.
@@ -132,7 +130,7 @@ A lição estrutural não é sobre dirigir e trabalhar — é sobre **IA como am
 
 ## 12.5 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Preparação de reunião por voz no deslocamento.**
 *Situação:* você tem uma reunião importante em menos de uma hora e está no carro, no metrô ou a pé. *O que fazer:* abra o Project do cliente ou tema no mobile (com Knowledge Base já carregada); ative o modo voz; fale o contexto resumido e o objetivo da reunião; peça três pontos para enfatizar, dois riscos para antecipar e uma pergunta de abertura que demonstre que você entende o problema do outro lado; escute a resposta; faça uma ou duas perguntas de refinamento por voz. *O ponto de julgamento:* quando chegar à reunião, você opera com a estrutura que o Claude ajudou a organizar — mas o julgamento de quais dos três pontos priorizar, que tom usar, e o que deixar de fora é seu. O mobile entrega a preparação mais rápido; a leitura da sala na hora é indelegável. O Operador que chega com estrutura pronta mas rígida usa a ferramenta como muleta; o que chega com estrutura pronta e flexível usa como alavanca (Invariante 9).

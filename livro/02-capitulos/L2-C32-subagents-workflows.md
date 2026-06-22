@@ -15,11 +15,11 @@
 
 ## 32.1 — O CONCEITO INTUITIVO
 
-Existe um ponto na complexidade de tarefas em que um único agente Claude, mesmo o mais capaz, começa a falhar. O contexto inflado prejudica atenção, a variedade de tools necessárias confunde a decisão sobre qual usar, a longa sequência de passos acumula erros que se compõem, a especialização em diferentes domínios é demandada simultaneamente. Para essas tarefas, a resposta arquitetural é Subagents: distribuir o trabalho entre múltiplos agentes especializados, com um agente principal orquestrando o conjunto.
+Existe um ponto na complexidade de tarefas em que um único agente Claude começa a falhar. Contexto inflado prejudica atenção, variedade de tools confunde a decisão sobre qual usar, sequência longa acumula erros compostos, especializações distintas são demandadas simultaneamente. A resposta arquitetural é Subagents: distribuir o trabalho entre múltiplos agentes especializados, com um agente principal orquestrando o conjunto.
 
-Subagents é capacidade nativa do Claude em 2026, disponível em Claude Code e em fluxos avançados: o agente principal invoca subagentes com objetivos delimitados, contexto isolado, conjunto próprio de tools e Skills específicas. Cada subagente trabalha em sua especialidade sem ser distraído por considerações fora do seu escopo, e o agente principal consolida os resultados em entrega final coerente. A analogia próxima do mundo profissional é a de gerente de projeto coordenando especialistas, em vez de tentar fazer tudo sozinho.
+Subagents é capacidade nativa do Claude em 2026, disponível em Claude Code e em fluxos avançados: o agente principal invoca subagentes com objetivos delimitados, contexto isolado e Skills específicas. Cada subagente trabalha em sua especialidade sem ser distraído pelo escopo alheio; o agente principal consolida os resultados em entrega coerente. A analogia é a de gerente de projeto coordenando especialistas, em vez de tentar fazer tudo sozinho.
 
-Para fluxos complexos que envolvem pesquisa profunda, análise estruturada, redação cuidadosa, validação técnica, o padrão multi-agente entrega resultado qualitativamente superior ao que agente único conseguiria. É o padrão que separa equipes maduras das que operam em fluxos simples.
+Para fluxos que envolvem pesquisa profunda, análise estruturada, redação e validação técnica, o padrão multi-agente entrega resultado qualitativamente superior ao que agente único conseguiria.
 
 ---
 
@@ -29,13 +29,13 @@ Para fluxos complexos que envolvem pesquisa profunda, análise estruturada, reda
 ![Diagrama 32.1 — Subagents em ação: decomposição, especialização, consolidação](imagens/cap-32-img-01-subagents.svg)
 
 
-O **agente principal** recebe o objetivo geral do usuário, faz decomposição em subtarefas que mapeiam para especializações disponíveis, invoca cada subagente apropriado com instruções específicas, e consolida os resultados em entrega final ao usuário. É o papel de coordenação, com visão de conjunto que cada subagente individual não precisa ter.
+O **agente principal** recebe o objetivo do usuário, decompõe em subtarefas, invoca cada subagente com instruções específicas e consolida os resultados. É o papel de coordenação — visão de conjunto que cada subagente não precisa ter.
 
-Cada **subagente** opera com contexto próprio, separado do agente principal. Isso é importante porque significa que o subagente não recebe a totalidade do contexto da conversa principal, apenas o que é relevante para sua tarefa específica. Com isso, o contexto fica focado, a atenção calibrada e a resposta de qualidade superior. Cada subagente pode usar conjunto próprio de tools, Skills específicas, modelos diferentes (Opus para tarefas que pedem profundidade, Sonnet para as mais comuns, Haiku para as mais simples).
+Cada **subagente** opera com contexto próprio, separado do principal: recebe apenas o que é relevante para sua tarefa, mantendo foco e qualidade superiores. Cada subagente pode usar tools, Skills e modelos diferentes (Opus para profundidade, Sonnet para tarefas comuns, Haiku para volume).
 
 A **especialização** pode seguir várias dimensões. Por domínio (subagente jurídico, subagente financeiro, subagente técnico). Por etapa do processo (subagente de pesquisa, subagente de análise, subagente de redação). Por modelo (subagente de raciocínio profundo em Opus, subagente de processamento em volume em Haiku). A escolha de como dividir depende da natureza da tarefa.
 
-A **comunicação** entre agente principal e subagentes é estruturada. O principal envia objetivo claro com critério de sucesso, o subagente executa e retorna resultado em formato estruturado; o principal aprova ou solicita refinamento. Não é conversa livre, é interface programática.
+A **comunicação** entre agente principal e subagentes é estruturada: o principal envia objetivo com critério de sucesso, o subagente retorna resultado em formato definido, o principal aprova ou solicita refinamento. Interface programática, não conversa livre.
 
 ---
 
@@ -49,33 +49,33 @@ Subagents rendem em alguns contextos e atrapalham em outros — a distinção é
 
 **Rendem em tarefas longas que se beneficiam de contexto isolado**, em que um único agente acumularia contexto grande demais. Refatoração de base de código grande, due diligence ampla, pesquisa de mercado profunda.
 
-**Atrapalham em tarefas simples**, em que dividir adiciona overhead sem ganho. Para perguntas simples, agente único é mais rápido e barato.
+**Atrapalham em tarefas simples** — dividir adiciona overhead sem ganho; agente único é mais rápido e barato.
 
-**Atrapalham quando a coordenação custa mais que a especialização rende**, ou seja, quando o agente principal precisa fazer trabalho desproporcional para integrar resultados que poderiam ter sido produzidos diretamente.
+**Atrapalham quando a coordenação custa mais que a especialização rende** — quando o principal faz trabalho desproporcional para integrar resultados que poderiam ter sido produzidos diretamente.
 
 ---
 
 ## 32.4 — EXEMPLO MEMORÁVEL: A PROPOSTA DE 8 PÁGINAS EM 25 MINUTOS
 
-Uma agência de consultoria estratégica brasileira, com cerca de 30 consultores, recebia regularmente RFPs (Request for Proposals) de potenciais clientes corporativos. Cada proposta de qualidade exigia entre 12 e 20 horas de trabalho consolidado de pesquisa, análise, formatação, customização. Em meio a múltiplos deals em curso, isso virava gargalo.
+Uma agência de consultoria estratégica brasileira com cerca de 30 consultores recebia regularmente RFPs de potenciais clientes. Cada proposta de qualidade exigia entre 12 e 20 horas de pesquisa, análise, formatação e customização — gargalo constante em meio a múltiplos deals.
 
-Em fevereiro de 2026, uma sócia construiu um fluxo multi-agente em Claude Code para preparar primeira versão de propostas. A arquitetura final ficou assim.
+Em fevereiro de 2026, uma sócia construiu um fluxo multi-agente em Claude Code para preparar a primeira versão de propostas. A arquitetura ficou assim.
 
-**Subagente Pesquisador** recebia nome da empresa cliente e setor, fazia varredura web e em bases internas, produzia briefing de 2 páginas sobre a empresa, contexto setorial, desafios típicos, decisões recentes. Usava Opus com Web Search ativo, com Skill de pesquisa corporativa.
+**Subagente Pesquisador** recebia nome e setor do cliente, fazia varredura web e em bases internas, produzia briefing de 2 páginas com contexto setorial, desafios típicos e decisões recentes. Usava Opus com Web Search e Skill de pesquisa corporativa.
 
-**Subagente Analista** recebia o briefing e o escopo do RFP, identificava qual oferta da consultoria melhor encaixava, identificava casos similares anteriores na base, propunha abordagem com cronograma e equipe, identificava riscos. Usava Opus com Knowledge Base da casa carregada.
+**Subagente Analista** recebia o briefing e o escopo do RFP, identificava a oferta mais adequada, casos similares na base, propunha abordagem com cronograma e equipe, mapeava riscos. Usava Opus com Knowledge Base da casa.
 
-**Subagente Redator** recebia briefing e análise, gerava primeira versão da proposta seguindo template padrão da casa, com tom e estrutura calibrados pela Skill de escrita corporativa. Usava Sonnet por velocidade, com Skill de proposta comercial.
+**Subagente Redator** recebia briefing e análise, gerava a primeira versão seguindo o template padrão, com tom calibrado pela Skill de escrita corporativa. Usava Sonnet por velocidade.
 
-**Subagente Revisor** recebia a proposta gerada, fazia checagem contra critérios de qualidade, identificava lacunas, propunha melhorias específicas. Usava Opus em modo extended thinking, com check-list de revisão da casa.
+**Subagente Revisor** recebia a proposta gerada, verificava critérios de qualidade, identificava lacunas e propunha melhorias. Usava Opus em extended thinking com checklist de revisão.
 
-**Agente Principal** orquestrava tudo. Recebia o RFP do usuário, disparava os subagentes em sequência apropriada, consolidava os resultados, entregava proposta final de 8 páginas com pontos de atenção marcados.
+**Agente Principal** recebia o RFP, disparava os subagentes em sequência, consolidava os resultados e entregava proposta final de 8 páginas com pontos de atenção marcados.
 
-O resultado, depois de duas semanas de refinamento dos prompts e Skills, foi notável. **Tempo médio para primeira versão de proposta caiu de 16 horas para 25 minutos.** Qualidade da primeira versão melhorou em testes cegos comparativos com versões manuais, principalmente pelo trabalho do Subagente Revisor que aplicava checklist consistente que humanos esqueciam.
+Após duas semanas de refinamento dos prompts e Skills, o resultado foi notável. **Tempo médio para a primeira versão de proposta caiu de 16 horas para 25 minutos.** A qualidade melhorou em testes cegos comparativos com versões manuais — principalmente pelo Subagente Revisor, que aplicava um checklist consistente que humanos frequentemente esqueciam.
 
-A revisão humana subsequente continuava existindo, com um consultor sênior dedicando 1 a 2 horas para polir, customizar para nuances específicas do cliente, validar números, ajustar tom. **O trabalho total caiu de 16 horas para cerca de 2 horas humanas, com qualidade superior.** Em três meses, a vazão de propostas qualificadas quintuplicou, sem aumento de pessoal.
+Um consultor sênior ainda dedicava 1 a 2 horas para polir, validar números e ajustar tom. **O trabalho total caiu de 16 horas para cerca de 2 horas humanas, com qualidade superior.** Em três meses, a vazão de propostas qualificadas quintuplicou sem aumento de pessoal.
 
-A lição estrutural é que **tarefas que pareciam exigir muitas horas humanas frequentemente são compostas de subtarefas especializáveis, e quando especializadas em subagentes coordenados, viram fração do esforço original**. Esse padrão se aplica a praticamente toda tarefa cognitiva complexa em organizações de conhecimento, e quem domina arquitetura multi-agente capta vantagem desproporcional sobre quem ainda opera com agente único genérico.
+A lição estrutural: **tarefas que parecem exigir muitas horas humanas são frequentemente compostas de subtarefas especializáveis — quando divididas em subagentes coordenados, viram fração do esforço original.** Quem domina essa arquitetura capta vantagem desproporcional sobre quem ainda opera com agente único genérico.
 
 ---
 
@@ -83,31 +83,29 @@ A lição estrutural é que **tarefas que pareciam exigir muitas horas humanas f
 
 Subagents pode ser orquestrado em padrões que valem ser conhecidos.
 
-**Pipeline sequencial** é o padrão mais simples, com subagentes executando em sequência, cada um recebendo input do anterior. Ideal para fluxos lineares como o exemplo da proposta acima.
+**Pipeline sequencial** — subagentes executam em sequência, cada um recebendo o output do anterior. Ideal para fluxos lineares como o exemplo da proposta.
 
-**Paralelismo** dispara múltiplos subagentes simultaneamente para subtarefas independentes, com agente principal consolidando ao final. Reduz tempo total mas exige tarefas verdadeiramente independentes.
+**Paralelismo** — múltiplos subagentes simultâneos para subtarefas independentes; o principal consolida ao final. Reduz tempo total, mas exige independência real entre as tarefas.
 
-**Orquestrador com especialistas** tem agente central que decide dinamicamente qual subagente invocar para cada parte da tarefa, em vez de sequência fixa. Mais flexível mas mais complexo.
+**Orquestrador com especialistas** — agente central decide dinamicamente qual subagente invocar, em vez de sequência fixa. Mais flexível, mais complexo.
 
-**Hierarquia** tem múltiplos níveis de subagentes, com subagente principal que por sua vez invoca subagentes próprios. Útil em tarefas verdadeiramente grandes. Limite prático recomendado: não mais que dois níveis de hierarquia antes de testar o comportamento exaustivamente — cada nível adicional multiplica a superfície de falha e o custo de debug.
+**Hierarquia** — múltiplos níveis de subagentes, cada nível invocando os próprios. Útil em tarefas grandes; limite prático: não mais que dois níveis antes de testar exaustivamente — cada nível adicional multiplica a superfície de falha e o custo de debug.
 
-**Debate** tem subagentes adversariais discutindo, com agente principal sintetizando o melhor de cada posição. Para decisões com trade-offs onde múltiplas perspectivas importam. O risco específico deste padrão: loop de refinamento sem convergência, onde os subagentes continuam produzindo posições sem que o principal consiga sintetizar. Adicione limite de rodadas de debate e critério explícito de resolução antes de ativar.
+**Debate** — subagentes adversariais discutem; o principal sintetiza. Para decisões com trade-offs onde múltiplas perspectivas importam. Risco específico: loop sem convergência. Defina limite de rodadas e critério explícito de resolução antes de ativar.
 
 ---
 
 ## 32.6 — GOVERNANÇA DE SUBAGENTS: O QUE A ABERTURA PROMETEU E O CORPO PRECISA ENTREGAR
 
-A abertura deste capítulo afirma que "sem tracing e sem rollback, sub-rotina vira loop opaco com custo composto crescente". Esta seção entrega o método para evitar exatamente isso.
+A abertura deste capítulo afirma que "sem tracing e sem rollback, sub-rotina vira loop opaco com custo composto crescente". Subagents sem governança têm quatro pontos de falha típicos em produção:
 
-Subagents sem governança têm quatro pontos de falha típicos que aparecem em produção:
+**1. Custo acumulado invisível.** Cadeia de subagentes pode consumir tokens muito acima do estimado, especialmente quando algum entra em loop. Configure alertas de custo por execução antes de colocar em produção. Em Claude Code, `--max-turns` limita turnos por subagente; use-a.
 
-**1. Custo acumulado invisível.** Cadeia de subagentes pode consumir tokens em volume muito acima do estimado, especialmente quando subagentes chamam outros subagentes ou quando qualquer deles entra em loop. Configure alertas de custo por execução e por janela de tempo antes de colocar fluxo multi-agente em produção. Em Claude Code, a configuração `--max-turns` limita o número de turnos por subagente; use-a.
+**2. Falha silenciosa de subagente.** Output vazio ou malformado pode não interromper o fluxo — o principal continua com input degradado e entrega resultado aparentemente correto mas incorreto. Implemente validação de schema no output de cada subagente: se não passar, o fluxo interrompe e reporta o ponto de falha.
 
-**2. Falha silenciosa de subagente.** Subagente que retorna resultado vazio ou malformado pode não interromper o fluxo — o agente principal pode continuar com input degradado e entregar resultado aparentemente correto mas incorreto. Implemente validação de schema no output de cada subagente antes de passar para o próximo. Se o output não passa na validação, o fluxo interrompe e reporta o ponto de falha.
+**3. Erro com ferramenta destrutiva sem rollback.** Subagente com tools de escrita pode executar ação irreversível antes que o contexto errado seja percebido. Para qualquer subagente com ferramentas destrutivas: (a) adicione confirmação humana antes da ação, (b) implemente dry-run, ou (c) use padrão de staging onde a ação é reversível por um período definido.
 
-**3. Erro com ferramenta destrutiva sem rollback.** Subagente com acesso a tools de escrita (criar arquivo, enviar mensagem, modificar banco de dados) pode executar ação irreversível antes que você perceba que o contexto estava errado. Para qualquer subagente com ferramentas destrutivas: (a) adicione passo de confirmação humana antes da ação, ou (b) implemente dry-run que mostra o que seria feito sem executar, ou (c) use pattern de staging onde a ação é reversível por um período definido.
-
-**4. Debug impossível sem tracing.** Quando um fluxo de 4 subagentes entrega resultado errado, sem tracing você não sabe em qual subagente o erro entrou. Cada subagente deve logar: input recebido, output produzido, tools chamadas, tempo de execução. Em Claude Code, o arquivo `.claude/` registra a sessão; para fluxos multi-agente em produção, considere logging explícito no prompt de cada subagente.
+**4. Debug impossível sem tracing.** Quando um fluxo de 4 subagentes entrega resultado errado, sem tracing você não sabe onde o erro entrou. Cada subagente deve logar: input, output, tools chamadas e tempo de execução. Em Claude Code, `.claude/` registra a sessão; em produção, adicione logging explícito no prompt de cada subagente.
 
 ### O pré-flight check antes de colocar multi-agente em produção
 

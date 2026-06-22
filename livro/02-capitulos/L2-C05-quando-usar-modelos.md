@@ -17,29 +17,25 @@
 
 ## 5.1 — O CONCEITO INTUITIVO
 
-Saber que Opus existe é diferente de saber quando Opus vence. A distinção parece óbvia até você observar equipes em produção: a maioria usa um único modelo para tudo, ou adota política por convicção ("sempre Sonnet porque é o mais equilibrado") em vez de critério testado. Ambas as abordagens desperdiçam, embora em direções diferentes.
+Saber que Opus existe é diferente de saber quando Opus vence. A distinção parece óbvia até você observar equipes em produção: a maioria usa um único modelo para tudo, ou adota política por convicção ("sempre Sonnet") em vez de critério testado. Ambas as abordagens desperdiçam, em direções diferentes.
 
-A confusão tem raiz em como aprendemos sobre modelos: as comparações costumam ser benchmarks agregados, que medem desempenho médio em tarefas padronizadas. O problema é que sua operação não é padronizada — ela tem um perfil específico de complexidade, volume, tolerância a latência e custo. O encaixe correto emerge da sobreposição entre o perfil da tarefa e o perfil do modelo. Benchmark agregado não captura isso.
+A confusão tem raiz em como aprendemos sobre modelos: benchmarks agregados medem desempenho médio em tarefas padronizadas. O problema é que sua operação tem perfil específico de complexidade, volume, tolerância a latência e custo. O encaixe correto emerge da sobreposição entre o perfil da tarefa e o perfil do modelo. Benchmark agregado não captura isso.
 
-O que este capítulo entrega é o critério operacional: uma sequência de perguntas que qualquer profissional consegue responder sem precisar de especialização técnica, cujo resultado é a escolha de modelo que a equipe pode defender e medir.
+Este capítulo entrega o critério operacional: uma sequência de perguntas que qualquer profissional responde sem especialização técnica, cujo resultado é a escolha de modelo que a equipe pode defender e medir.
 
 ---
 
 ## 5.2 — ANALOGIA: O DESPACHANTE E OS TRÊS PORTAIS
 
-Imagine um escritório que recebe petições todos os dias — centenas delas, de natureza completamente diferente. Há o despachante experiente sentado na entrada que lê o cabeçalho de cada petição em segundos e decide por qual portal ela passa.
+Um escritório que recebe centenas de petições por dia tem um despachante experiente que lê o cabeçalho de cada uma em segundos e decide por qual portal ela passa.
 
-Petições com "urgência simples — renovação de cadastro, confirmação de endereço, consulta de status": portal rápido. Resposta em dois minutos, custo baixo, sem revisar cada linha. Qualquer erro é corrigível no mesmo dia.
+Portal rápido: "renovação de cadastro, confirmação de endereço, consulta de status." Resposta em dois minutos, custo baixo, erros corrigíveis no mesmo dia. Portal padrão: "análise de contrato, revisão de prazo legal, resposta a cliente corporativo." Revisor com conhecimento, qualidade consistente. Portal especializado: "recurso judicial, análise de risco de alto valor, comunicação de crise." Advogado sênior, zero tolerância a erro.
 
-Petições com "análise de contrato, revisão de prazo legal, resposta a cliente corporativo": portal padrão. Revisor com conhecimento de procedimento, tempo razoável, qualidade consistente.
+O despachante não escolhe pelo tamanho da petição nem por hábito. Escolhe pela natureza da consequência: o que acontece se errarmos? Quanto custa o retrabalho?
 
-Petições com "recurso de decisão judicial, análise de risco de contrato de alto valor, comunicação de crise": portal especializado. Advogado sênior, tempo estendido, zero tolerância a erro de raciocínio.
+Esse é o roteamento entre Opus, Sonnet e Haiku. A família Claude é os três portais; o framework é o critério do despachante; o profissional que internalizou o critério toma essa decisão certa centenas de vezes por dia, sem hesitar.
 
-O despachante não escolhe o portal pelo tamanho físico da petição, nem pelo nome do cliente, nem por hábito. Ele escolhe pela natureza da consequência: o que acontece se errarmos aqui? Quanto tempo temos? Qual é o custo de retrabalho?
-
-Esse é o roteamento entre Opus, Sonnet e Haiku. A família Claude é os três portais; o framework de decisão é o critério do despachante; o profissional que internalizou o critério é o despachante que toma essa decisão certa centenas de vezes por dia, sem hesitar.
-
-> 📌 **Nota de distinção:** a analogia do carpinteiro no Cap. 4 descreve *o que cada ferramenta é*. Esta do despachante descreve *o processo de decisão*. São complementares — a competência é ter as duas camadas.
+> 📌 **Nota de distinção:** a analogia do carpinteiro no Cap. 4 descreve *o que cada ferramenta é*. Esta do despachante descreve *o processo de decisão*. São complementares.
 
 ---
 
@@ -117,7 +113,7 @@ O framework de três perguntas diz qual caminho tomar. Esta seção diz onde cad
 
 ## 5.5 — PADRÕES DE USO PROFISSIONAL
 
-Operações maduras raramente usam um único modelo. O padrão recorrente é roteamento coordenado entre os três, com proporções que variam por caso mas obedecem a uma lógica comum.
+Operações maduras raramente usam um único modelo. O padrão recorrente é roteamento coordenado entre os três, com proporções que variam mas obedecem a lógica comum.
 
 **Padrão 1 — Haiku como classificador de entrada.** Em pipelines com volume alto, um classificador baseado em Haiku na frente analisa cada chamada e decide qual modelo a processa. Custo de classificação é próximo de zero; a economia nos modelos maiores é imediata. É frequentemente o passo com maior ROI de toda a otimização.
 
@@ -135,19 +131,13 @@ Operações maduras raramente usam um único modelo. O padrão recorrente é rot
 
 ## 5.6 — EXEMPLO MEMORÁVEL: O ASSISTENTE QUE TROCOU DE PELE TRÊS VEZES POR HORA
 
-Uma empresa brasileira de logística operava em 2025 um assistente conversacional para motoristas em campo, atendendo cerca de 800 motoristas com volume de aproximadamente 12 mil chamadas por hora em horário de pico. O sistema cobria desde dúvidas operacionais simples até troubleshooting de problemas mecânicos complexos. Quando começaram, usavam Claude Sonnet para tudo, gastando cerca de US$ 18 mil por mês, com qualidade aceitável mas com casos extremos sendo subatendidos.
+Uma empresa brasileira de logística operava em 2025 um assistente conversacional para 800 motoristas em campo, com cerca de 12 mil chamadas por hora no pico. O sistema cobria desde dúvidas simples até troubleshooting mecânico complexo. Usavam Sonnet para tudo — US$ 18 mil por mês, qualidade aceitável, mas casos extremos subatendidos.
 
-Em janeiro de 2026, aplicaram roteamento estruturado entre os três modelos. A arquitetura ficou assim.
+Em janeiro de 2026, aplicaram roteamento estruturado. A arquitetura: um classificador em Haiku analisava cada mensagem em menos de 100ms e a categoriza. Mensagens simples ("qual o próximo endereço?", "como confirmo entrega?") eram respondidas pelo próprio Haiku — 65% do volume, custo próximo de zero. Mensagens moderadas (recusa de entrega, atraso em rota) iam para Sonnet, que resolvia 95% sem escalonamento humano — 30% do volume. Mensagens complexas (barulho anormal no motor, situação sem procedimento padrão) iam para Opus com extended thinking, que avaliava contexto rico e escalonava para humano quando necessário — 5% do volume.
 
-Um classificador inicial rodando em Haiku analisava cada mensagem do motorista em menos de 100 milissegundos e a classificava em uma de três categorias. Mensagens simples — "qual o próximo endereço?", "como confirmo entrega no app?", "qual telefone do supervisor?" — eram respondidas pelo próprio Haiku no mesmo turno, sem encaminhamento. Cerca de 65% do volume caía nessa categoria, com custo unitário próximo de zero.
+Resultado três meses depois: custo mensal de US$ 18 mil para US$ 8 mil (−56%). Qualidade subiu nas três categorias — Haiku entregava velocidade, Sonnet profundidade adequada, Opus tratava os casos difíceis com qualidade que antes ficava na média de Sonnet. Taxa de escalonamento para humano caiu de 12% para 3%.
 
-Mensagens moderadas — "o cliente recusou a entrega, o que faço?", "estou em rota com atraso, posso pular endereço?", "tenho dúvida sobre nota fiscal do cliente X" — eram encaminhadas para Sonnet, que resolvia 95% delas sem escalonamento humano. Cerca de 30% do volume caía nessa faixa.
-
-Mensagens complexas — "tem barulho diferente no motor desde a parada anterior, é seguro continuar?", "estou em situação que não tem procedimento padrão, preciso de orientação" — eram encaminhadas para Opus em modo extended thinking, que avaliava contexto rico, propunha diagnósticos, e em casos de risco escalonava para humano de plantão. Cerca de 5% do volume caía aqui.
-
-O resultado consolidado três meses após estabilização foi notável em três dimensões. O custo total mensal caiu de US$ 18 mil para cerca de US$ 8 mil, redução de 56%. A qualidade percebida pelos motoristas subiu em todas as três categorias: Haiku entregava velocidade brutal em respostas simples, Sonnet resolvia procedimentos com profundidade adequada, e Opus tratava casos complexos com qualidade que antes ficava na média de Sonnet. A taxa de escalonamento para suporte humano caiu de 12% para 3%, liberando dois atendentes para outras funções.
-
-A lição estrutural não é sobre redução de custo. É sobre **redesenhar a aplicação para usar a família Claude como portfolio coordenado em vez de modelo único**. Quando você roteia cada tipo de pedido para o modelo apropriado, ganha simultaneamente velocidade, qualidade e economia — três objetivos que costumam estar em trade-off em outras decisões. A maioria das organizações deixa esse alinhamento na mesa por não aplicar roteamento.
+A lição estrutural não é sobre redução de custo. É sobre **usar a família Claude como portfolio coordenado em vez de modelo único**. Quando você roteia cada pedido para o modelo apropriado, ganha velocidade, qualidade e economia simultaneamente — três objetivos normalmente em trade-off.
 
 > 🎯 **PARA EXECUTIVOS**
 > Se sua organização usa um único modelo Claude para tudo, é altamente provável que esteja desperdiçando entre 30% e 60% do orçamento, com perda simultânea de qualidade em casos extremos. Implementar roteamento entre Opus, Sonnet e Haiku é um dos investimentos com maior ROI imediato em qualquer operação de IA usando Claude.
@@ -156,7 +146,7 @@ A lição estrutural não é sobre redução de custo. É sobre **redesenhar a a
 
 ## 5.7 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior mostra como uma empresa de logística transformou modelo único em portfolio coordenado e colheu economia e qualidade simultaneamente; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa roteamento como decisão fundamentada de roteamento como suposição.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — é o ponto de julgamento que separa roteamento como decisão fundamentada de roteamento como suposição.
 
 **Aplicação 1 — Aplicar a árvore de três perguntas a um workflow existente.**
 *Situação:* sua organização usa Claude (ou está implementando) para um caso de uso definido, com modelo fixo escolhido por conveniência ou por padrão. *O que fazer:* aplique as três perguntas do framework a esse caso de uso: (1) exige raciocínio profundo ou saída de alto risco? (2) é estruturalmente simples e de alto volume? (3) é caso intermediário? Registre a resposta a cada pergunta com evidência concreta — não "achamos que é complexo", mas "o tipo de erro gerado por Sonnet nesse caso custou X". *O ponto de julgamento:* se você não tem evidência para responder às três perguntas, você não tem critério de roteamento — tem hábito. O ponto de julgamento é exatamente distinguir os dois: o modelo correto não é o que você usou até hoje, é o que os dados da sua operação indicam.

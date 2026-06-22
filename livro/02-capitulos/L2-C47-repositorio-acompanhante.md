@@ -17,9 +17,9 @@
 
 Você chegou ao fim de um livro que, deliberadamente, recusou-se a te dar os números. Em quarenta e poucos capítulos, toda vez que a explicação chegou perto de um preço por milhão de tokens, de uma posição em benchmark, de um tamanho de janela de contexto ou de um nome de versão de modelo, o texto parou, nomeou o que estava em jogo e apontou para outro lugar. Esse "outro lugar" tem nome e endereço: o repositório acompanhante, em **github.com/falercia/deep-claude**.
 
-A recusa não foi omissão. Foi arquitetura. Um livro impresso é uma fotografia: carimba o estado do mundo no instante em que foi para a gráfica. Um ecossistema de IA é um filme: muda de quadro a cada poucas semanas. Imprimir o número do filme dentro da fotografia é a forma mais garantida de produzir uma obra que nasce desatualizada — não porque o autor errou, mas porque o mundo andou à frente dele. A Camada Dupla é a resposta a esse descompasso estrutural: o que dura entra no livro, na sua cabeça, com cadência de revisão medida em anos; o que muda entra no repositório, na documentação datada, com cadência medida em semanas.
+A recusa não foi omissão. Foi arquitetura. Um livro impresso é uma fotografia: carimba o estado do mundo no instante em que foi para a gráfica. Um ecossistema de IA é um filme: muda de quadro a cada poucas semanas. Imprimir o número do filme dentro da fotografia é a forma mais garantida de produzir uma obra que nasce desatualizada. A Camada Dupla é a resposta a esse descompasso estrutural: o que dura entra no livro, com cadência de revisão medida em anos; o que muda entra no repositório, com cadência medida em semanas.
 
-O repositório acompanhante não é um apêndice opcional nem um brinde de marketing. É a outra metade desta obra. Quem terminar o livro sem visitar o repositório aproveitou o método e ignorou a sua atualização — ficou com o mapa e dispensou a bússola que diz onde o terreno mudou desde que o mapa foi desenhado.
+O repositório acompanhante não é um apêndice opcional nem um brinde de marketing. É a outra metade desta obra. Quem terminar o livro sem visitar o repositório aproveitou o método e ignorou a sua atualização — ficou com o mapa e dispensou a bússola que diz onde o terreno mudou.
 
 ![Diagrama 47.1 — Decore o padrão, consulte o número](imagens/cap-47-img-01-camada-dupla.svg)
 
@@ -27,9 +27,9 @@ O repositório acompanhante não é um apêndice opcional nem um brinde de marke
 
 ## 47.2 — ANALOGIA: O ATLAS E O BOLETIM
 
-Pense em como um navegador sério trabalha. Ele tem duas fontes de informação que jamais confunde. A primeira é a carta náutica — o atlas dos contornos do litoral, das profundidades, dos padrões de corrente. A carta muda pouco; um bom atlas serve por anos, e o navegador o estuda até conhecer de cor a forma da costa. A segunda é o boletim meteorológico e a tábua de marés — informação que ele consulta toda manhã, porque muda todo dia, e que seria suicida tentar decorar.
+Pense em como um navegador sério trabalha. Ele tem duas fontes de informação que jamais confunde. A primeira é a carta náutica — o atlas dos contornos do litoral, das profundidades, dos padrões de corrente. A carta muda pouco; um bom atlas serve por anos. A segunda é o boletim meteorológico e a tábua de marés — informação que ele consulta toda manhã, porque muda todo dia, e que seria suicida tentar decorar.
 
-O navegador competente não imprime a previsão do tempo dentro da carta náutica. Seria absurdo: a carta duraria uma manhã. Ele mantém os dois separados, cada um na sua cadência, e cruza os dois no momento da decisão — a carta diz onde estão os recifes, o boletim diz se hoje dá para passar perto deles.
+O navegador competente não imprime a previsão do tempo dentro da carta náutica. Ele mantém os dois separados, cada um na sua cadência, e cruza os dois no momento da decisão — a carta diz onde estão os recifes, o boletim diz se hoje dá para passar perto deles.
 
 Este livro é a carta náutica do ecossistema Claude: os contornos duráveis, os padrões de arquitetura, a mecânica dos trade-offs, a forma da costa que não muda com o release. O repositório acompanhante é o boletim: versões correntes, preços, benchmarks, regulação vigente, recursos executáveis atualizados. Decisão executiva boa cruza os dois — o padrão internalizado do livro, o número fresco do repositório. Decisão ruim decora o boletim de ontem e navega com ele amanhã.
 
@@ -41,7 +41,7 @@ O repositório acompanhante carrega quatro classes de conteúdo, todas unidas po
 
 ### 47.3.1 — Os números do Apêndice Vivo
 
-O Apêndice Vivo (Capítulo 46) é a face impressa da camada datada; o repositório é onde esses números efetivamente vivem e se atualizam. Versões correntes de cada tier da família Claude, preços por milhão de tokens, posições em benchmark público, tamanhos de janela, limites de uso por plano — tudo com **fonte por linha e data do snapshot**. A edição impressa do apêndice carimba a data em que foi fechada; a edição viva, no repositório, é atualizada conforme o ecossistema se move. Quando a operação precisa do número da semana, é ao repositório que se vai — nunca à memória de um número lido meses atrás.
+O Apêndice Vivo (Capítulo 46) é a face impressa da camada datada; o repositório é onde esses números efetivamente vivem e se atualizam. Versões correntes de cada tier da família Claude, preços por milhão de tokens, posições em benchmark público, tamanhos de janela, limites de uso por plano — tudo com **fonte por linha e data do snapshot**. A edição impressa carimba a data em que foi fechada; a edição viva, no repositório, é atualizada conforme o ecossistema se move. Quando a operação precisa do número da semana, é ao repositório que se vai — nunca à memória de um número lido meses atrás.
 
 ### 47.3.2 — Os recursos executáveis
 
@@ -53,7 +53,7 @@ Vimos no Capítulo 35 que sistema de IA sem avaliação é fé, não engenharia.
 
 ### 47.3.4 — As correções e o registro de mudança
 
-Nenhuma obra técnica está livre de erro, e nenhuma sobre IA está livre de envelhecimento. O repositório carrega a errata e o registro de versão: o que mudou no ecossistema desde a última edição, o que no livro precisa ser lido com a ressalva de uma capacidade nova, onde um padrão descrito ganhou exceção. É o mecanismo que permite à obra continuar honesta depois de impressa — porque admite, publicamente e com data, o que o tempo alterou.
+Nenhuma obra técnica está livre de erro, e nenhuma sobre IA está livre de envelhecimento. O repositório carrega a errata e o registro de versão: o que mudou no ecossistema desde a última edição, o que no livro precisa ser lido com a ressalva de uma capacidade nova, onde um padrão descrito ganhou exceção. É o mecanismo que permite à obra continuar honesta depois de impressa — admite, publicamente e com data, o que o tempo alterou.
 
 ---
 
@@ -83,13 +83,13 @@ O sinal de que você internalizou a Camada Dupla é simples: você para de senti
 
 Ao longo dos dezoito meses seguintes, o ecossistema se moveu três vezes: novas versões de modelo, mudança de preço relativo entre tiers, uma capacidade nova que antes exigia um modelo premium e passou a caber no balanceado. A cada movimento, a equipe atualizou a planilha — o número — e a arquitetura de roteamento — o padrão — permaneceu intacta. A lógica "classifique na entrada, roteie por complexidade, verifique no ponto consequente" não envelheceu uma única vez, porque era padrão, não release.
 
-A lição estrutural é o livro inteiro num episódio. Se ela tivesse cravado os nomes de modelo e os preços dentro do documento de arquitetura, teria reescrito a arquitetura três vezes em dezoito meses — e provavelmente errado em alguma das pressas. Porque separou as camadas, atualizou só o que muda e preservou o que dura. **O documento de decisão dela tem exatamente a mesma estrutura deste livro: método no corpo, número na camada viva. É por isso que continua válido enquanto os releases passam.**
+Se ela tivesse cravado os nomes de modelo e os preços dentro do documento de arquitetura, teria reescrito a arquitetura três vezes em dezoito meses. Porque separou as camadas, atualizou só o que muda e preservou o que dura. **O documento de decisão dela tem exatamente a mesma estrutura deste livro: método no corpo, número na camada viva. É por isso que continua válido enquanto os releases passam.**
 
 ---
 
 ## 47.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo da líder de engenharia em Florianópolis mostra a Camada Dupla funcionando em decisão de arquitetura de produto; esta seção entrega o roteiro para replicar a disciplina em três contextos distintos. Cada aplicação segue a forma *situação → o que fazer → o ponto de julgamento*, porque a separação entre padrão e número é um hábito operacional — não um evento de configuração.
+Três aplicações para replicar a disciplina de Camada Dupla em contextos distintos. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento*, porque a separação entre padrão e número é um hábito operacional — não um evento de configuração.
 
 **Aplicação 1 — Criar o "Apêndice Vivo" interno da sua organização.**
 *Situação:* a equipe toma decisões de modelo, tier e custo citando números lidos há semanas ou meses — em artigos, neste livro, em reuniões passadas. Quando o fornecedor muda preços ou lança nova versão, ninguém sabe ao certo se o raciocínio da última decisão ainda vale. *O que fazer:* crie um documento interno datado — uma planilha, uma página de Notion, um arquivo no repositório da equipe — com as seguintes linhas: modelo em uso por caso de uso, custo por milhão de tokens (input/output), tamanho de janela de contexto, data do snapshot, e fonte verificável. Atualize a cada mudança relevante no ecossistema, com data e link para o anúncio original. *O ponto de julgamento:* se alguém citar um número numa reunião de orçamento ou arquitetura, a pergunta-padrão deve ser "de quando é esse número e está no Apêndice Vivo?" — não "parece certo". O Invariante 3 é uma disciplina de time: o padrão está na cabeça de quem leu o livro; o número precisa estar num lugar que qualquer membro da equipe possa verificar hoje (Invariante 3 — Camada Dupla: decore o padrão, consulte o número).

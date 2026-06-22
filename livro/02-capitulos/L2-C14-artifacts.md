@@ -17,19 +17,19 @@
 
 ## 14.1 — O CONCEITO INTUITIVO
 
-Em junho de 2024 a Anthropic anunciou uma capacidade que mudou silenciosamente a forma como muitos profissionais usam Claude no dia a dia, e cujo impacto continua sendo subestimado por usuários que ainda operam em modo de chat puro. A capacidade se chama Artifacts, e a ideia central é deslocar saídas estruturadas (código, documentos, diagramas, aplicações pequenas) do fluxo da conversa para um painel lateral dedicado, onde o conteúdo é renderizado, fica editável, pode ser exportado e evolui em versões sucessivas conforme você pede refinamentos.
+Artifacts desloca saídas estruturadas (código, documentos, diagramas, aplicações pequenas) do fluxo da conversa para um painel lateral dedicado, onde o conteúdo é renderizado, fica editável, pode ser exportado e evolui em versões sucessivas.
 
-A diferença prática é maior do que parece à primeira descrição. Em modo de chat puro, quando você pede a Claude um código de Python ou um documento estruturado, o resultado vem como bloco de texto dentro da resposta, e você precisa copiar manualmente para outro lugar para usar. Quando você refina e pede uma versão melhorada, recebe outro bloco que precisa comparar visualmente com o anterior, sem histórico claro de versões. Artifacts resolvem isso de forma elegante. O conteúdo aparece em painel separado, é renderizado em formato apropriado (código com syntax highlight, Markdown formatado, HTML executando ao vivo, diagramas desenhados), e cada refinamento atualiza a versão anterior em vez de criar duplicata no chat.
+Em chat puro, quando você pede um código de Python ou documento estruturado, o resultado vem como bloco de texto — copie manualmente para outro lugar, compare versões visualmente sem histórico claro. Artifacts resolvem isso: painel separado, renderização em formato apropriado (código com syntax highlight, Markdown formatado, HTML executando ao vivo, diagramas desenhados), e cada refinamento atualiza a versão anterior em vez de criar duplicata no chat.
 
-Para uso profissional, Artifacts viraram peça central. Apresentações de proposta, dashboards interativos, calculadoras de ROI, protótipos de aplicação, relatórios executivos, todos podem ser construídos como artifacts dentro de uma conversa de Claude, evoluindo iterativamente até o resultado final, e exportados quando prontos. O fluxo de trabalho deixa de envolver alternância constante entre Claude e ferramentas separadas, e passa a acontecer integralmente dentro do ambiente da plataforma.
+Para uso profissional, Artifacts viraram peça central. Apresentações, dashboards interativos, calculadoras de ROI, protótipos, relatórios executivos — todos constroem dentro de Claude, evoluem iterativamente e exportam quando prontos. O fluxo acontece integralmente na plataforma.
 
 ---
 
 ## 14.2 — ANALOGIA: A PRANCHETA DO ARQUITETO
 
-Pense na diferença entre dois modos de trabalhar com um arquiteto. No primeiro, você conversa com ele sobre o que quer, ele faz desenhos rápidos em guardanapos, escreve anotações em pedaços de papel soltos, e você sai da reunião com uma pilha de notas avulsas que precisa interpretar depois. No segundo, ele trabalha em prancheta dedicada ao seu projeto, com cada desenho organizado, cada versão marcada, possibilidade de revisar a versão 3 quando você quer comparar com a versão 7, e exportar o desenho final quando estiver pronto. O conteúdo da conversa é o mesmo, mas a estrutura da entrega muda completamente.
+Dois modos de trabalhar com um arquiteto. No primeiro, ele faz rascunhos em guardanapos e você sai com notas avulsas. No segundo, ele trabalha em prancheta dedicada — cada versão marcada, possibilidade de comparar a v3 com a v7, exportação quando pronto.
 
-Artifacts são a prancheta. Quando você está em conversa pura, todo material estruturado que Claude produz fica embaralhado dentro do fluxo de mensagens, sem hierarquia clara, sem versionamento, sem exportabilidade nativa. Quando você usa Artifacts, esse material ganha lugar próprio, com histórico de versões, edição ao vivo, renderização rica, e botões claros de exportação. Para uso profissional, essa diferença organizacional vale muito, e é o tipo de melhoria que parece pequena no marketing mas que rende todo dia em produtividade real.
+Artifacts são a prancheta. Em chat puro, material estruturado fica embaralhado no fluxo, sem versionamento, sem exportação nativa. Com Artifacts, o material ganha lugar próprio — histórico de versões, edição ao vivo, renderização rica, botões claros de exportação. Diferença que parece pequena no marketing e rende todo dia em produtividade real.
 
 ---
 
@@ -139,9 +139,7 @@ O reflexo de transformar tudo em artifact é erro tão comum quanto não usar ar
 
 ## 14.4 — EXEMPLO MEMORÁVEL: O PROTÓTIPO QUE VIROU PRODUTO
 
-Em meados de 2025, uma empreendedora brasileira tinha uma ideia para um produto SaaS B2B simples, voltado a pequenas empresas que queriam acompanhar indicadores financeiros básicos. Sem experiência em programação, sua jornada normal seria contratar um desenvolvedor freelancer para construir protótipo, esperar duas a quatro semanas, gastar entre R$ 15 mil e R$ 30 mil, e só então conseguir mostrar para potenciais clientes.
-
-Em vez disso, ela decidiu testar uma abordagem diferente usando Claude com Artifacts. A jornada que se seguiu, ao longo de cerca de cinco dias, vale conhecer porque é representativa do que essa ferramenta permite para profissionais não técnicos.
+Em meados de 2025, uma empreendedora brasileira tinha ideia para um SaaS B2B simples — indicadores financeiros básicos para pequenas empresas. Sem experiência em programação, o caminho normal seria contratar freelancer, esperar duas a quatro semanas, gastar R$ 15 a 30 mil, e só então mostrar para clientes. Em vez disso, ela testou Claude com Artifacts durante cinco dias.
 
 No primeiro dia, ela descreveu para Claude o conceito do produto em conversa estruturada. Em algumas iterações de refinamento, chegou a um documento de Markdown bem articulado descrevendo as funcionalidades essenciais, com priorização clara. O documento já foi gerado como artifact, com formatação rica e exportável.
 

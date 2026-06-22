@@ -16,11 +16,11 @@
 
 ## 29.1 — O CONCEITO INTUITIVO
 
-Vimos no Capítulo 13 o que é MCP como padrão técnico aberto. Neste capítulo aprofundamos como esse padrão se materializa em arquiteturas corporativas reais em 2026. A diferença entre conhecer MCP conceitualmente e operar MCP em escala é grande, e organizações que dominam o segundo nível constroem capacidades de IA que se diferenciam profundamente das que ficam no primeiro.
+Vimos no Capítulo 13 o que é MCP como padrão técnico aberto. Neste capítulo aprofundamos como esse padrão se materializa em arquiteturas corporativas reais em 2026. A diferença entre conhecer MCP conceitualmente e operar MCP em escala é grande — organizações que dominam o segundo nível constroem capacidades de IA que se diferenciam profundamente das que ficam no primeiro.
 
-A questão central que arquiteturas corporativas de MCP precisam resolver é a integração coerente entre três classes de sistemas que coexistem em qualquer empresa moderna. SaaS externos como GitHub, Slack, Notion e Salesforce, com servidores MCP oficiais mantidos pelos fornecedores. Sistemas internos como ERP customizado, CRM próprio e banco de dados corporativo, com servidores MCP que a organização constrói. E recursos locais como arquivos no computador do usuário, ferramentas nativas e apps específicos, acessados via Cowork mode e servidores MCP locais.
+A questão central é integrar três classes de sistemas que coexistem em qualquer empresa moderna. SaaS externos como GitHub, Slack, Notion e Salesforce, com servidores MCP oficiais mantidos pelos fornecedores. Sistemas internos como ERP customizado, CRM próprio e banco de dados corporativo, com servidores MCP que a organização constrói. Recursos locais como arquivos no computador do usuário, ferramentas nativas e apps específicos, acessados via Cowork mode e servidores MCP locais.
 
-Cada uma dessas classes tem características próprias de segurança, governança, escala e manutenção. Uma arquitetura corporativa madura tece essas classes em conjunto coerente, com Claude operando fluentemente entre elas sob políticas claras.
+Cada classe tem características próprias de segurança, governança, escala e manutenção. Uma arquitetura madura tece essas classes em conjunto coerente, com Claude operando entre elas sob políticas claras.
 
 ---
 
@@ -28,21 +28,21 @@ Cada uma dessas classes tem características próprias de segurança, governanç
 
 ![Diagrama 29.1 — Claude + MCP em Arquitetura Corporativa](imagens/cap-29-img-01-mcp-corporativo.svg)
 
-A **camada de SaaS externos** inclui dezenas de serviços usados pela empresa que oferecem servidores MCP oficiais. GitHub para repositórios, Slack para comunicação, Notion para documentação, Linear ou Jira para tickets, Google Drive ou OneDrive para arquivos, Salesforce ou HubSpot para CRM, Stripe ou similar para pagamentos. Cada um expõe seus próprios Resources (dados consultáveis), Tools (ações executáveis) e Prompts (templates de fluxo). A vantagem aqui é manutenção zero pela sua empresa, atualização contínua pelo fornecedor, padrão de qualidade alto.
+A **camada de SaaS externos** inclui serviços que oferecem servidores MCP oficiais: GitHub, Slack, Notion, Linear ou Jira, Google Drive, Salesforce ou HubSpot, Stripe. Cada um expõe Resources (dados consultáveis), Tools (ações executáveis) e Prompts (templates de fluxo). A vantagem: manutenção zero pela sua empresa, atualização contínua pelo fornecedor.
 
-A **camada de MCP interno** é onde a empresa investe trabalho próprio. Servidores MCP construídos pelo time interno para expor sistemas legados, bancos de dados próprios, APIs específicas, ERPs customizados. Esse trabalho exige investimento real mas paga dividendos altos. Uma vez que sistemas internos estão expostos via MCP, qualquer cliente MCP (Claude, futuros agentes, ferramentas internas) pode acessá-los sem integração ad hoc.
+A **camada de MCP interno** é onde a empresa investe trabalho próprio. Servidores construídos pelo time para expor sistemas legados, bancos de dados próprios, APIs específicas, ERPs customizados. Uma vez expostos via MCP, qualquer cliente MCP (Claude, futuros agentes, ferramentas internas) pode acessá-los sem integração ad hoc.
 
-A **camada de filesystem e local** opera no Desktop e Code de cada usuário individual. Servidores MCP que dão acesso a pastas específicas, apps locais, ferramentas próprias, repositórios git locais. Configurável por usuário, com permissão granular.
+A **camada de filesystem e local** opera no Desktop e Code de cada usuário. Servidores MCP que dão acesso a pastas específicas, apps locais, repositórios git locais. Configurável por usuário, com permissão granular.
 
-A **camada de governança** é o que diferencia operação madura de operação ad hoc. Mas governança não é lista de políticas — é processo com dono e critério de decisão.
+A **camada de governança** é o que diferencia operação madura de ad hoc. Governança não é lista de políticas — é processo com dono e critério de decisão.
 
-**Catálogo aprovado:** antes de um servidor MCP chegar a usuários, passa por revisão técnica (escopo de permissões está correto?), revisão de segurança (quais dados esse servidor expõe?), e aprovação do responsável de segurança da informação. Em Enterprise, o Admin controla centralmente quais MCPs podem ser ativados; em Team, essa disciplina precisa ser construída como processo interno.
+**Catálogo aprovado:** antes de chegar a usuários, cada servidor passa por revisão técnica (escopo de permissões correto?), revisão de segurança (quais dados expõe?), e aprovação do responsável de segurança da informação. Em Enterprise, o Admin controla centralmente quais MCPs podem ser ativados; em Team, essa disciplina precisa ser construída como processo interno.
 
 **Permissões granulares por função:** o servidor MCP do data warehouse não precisa expor todas as tabelas para todos os usuários. O princípio de menor privilégio aplica: cada servidor expõe apenas o que cada função de usuário precisa. Isso reduz superfície de ataque e facilita auditoria.
 
-**Logs de auditoria de toda chamada:** cada chamada a um servidor MCP — qual Tool foi chamada, com quais parâmetros, por qual usuário, com qual resultado — deve ser registrada com timestamp. Esse log é o que permite responder "quem consultou quais dados sensíveis em qual conversa", requisito de compliance em setores regulados e pré-requisito para diagnóstico quando algo dá errado.
+**Logs de auditoria de toda chamada:** cada chamada — qual Tool, quais parâmetros, qual usuário, qual resultado — deve ser registrada com timestamp. Esse log permite responder "quem consultou quais dados em qual conversa", requisito de compliance em setores regulados e pré-requisito para diagnóstico.
 
-**Processo de revisão obrigatório antes de novos servidores em produção:** servidor MCP sem revisão é surface de ataque não intencionalmente auditada. O processo precisa ter checklist documentado, responsável de aprovação identificado, e prazo definido — não "quando der".
+**Processo de revisão antes de novos servidores em produção:** servidor MCP sem revisão é superfície de ataque não auditada. O processo precisa ter checklist documentado, responsável identificado e prazo definido.
 
 Sem essa camada, MCP em escala vira passivo de segurança — e a arquitetura corporativa se torna coleção de integrações ad hoc.
 
@@ -50,7 +50,7 @@ Sem essa camada, MCP em escala vira passivo de segurança — e a arquitetura co
 
 ## 29.3 — QUANDO CONSTRUIR MCP CORPORATIVO — E QUANDO NÃO CONSTRUIR
 
-Antes dos casos de uso, o critério de decisão que a maioria dos capítulos sobre MCP omite.
+O critério de decisão que a maioria dos capítulos sobre MCP omite.
 
 **Construa MCP corporativo quando:**
 - O sistema não tem Connector oficial disponível e será acessado por dez ou mais pessoas regularmente
@@ -72,40 +72,40 @@ O critério prático mais direto: **se o Connector resolve, use o Connector. MCP
 
 Três arquiteturas aparecem repetidamente em organizações maduras.
 
-O primeiro é **MCP do data warehouse** que permite Claude consultar dados estruturados da empresa. Servidor MCP custom expondo views específicas do BigQuery, Snowflake ou Redshift, com permissões granulares sobre quais tabelas cada usuário pode acessar. Profissionais de negócio passam a fazer análises ad hoc em linguagem natural, sem precisar saber SQL ou pedir ajuda do time de dados para cada consulta simples.
+**MCP do data warehouse**: servidor custom expondo views específicas do BigQuery, Snowflake ou Redshift, com permissões granulares por tabela. Profissionais de negócio fazem análises ad hoc em linguagem natural, sem precisar saber SQL nem pedir ajuda do time de dados.
 
-O segundo é **MCP do ERP corporativo** que conecta Claude a sistemas SAP, Oracle ou similares. Encapsula APIs complexas em interfaces simples para o modelo, permitindo consultas como "qual a posição financeira da unidade X no último trimestre" ou "liste contratos pendentes de aprovação acima de R$ 500k". Para finanças e operações, é diferencial enorme.
+**MCP do ERP corporativo**: conecta Claude a SAP, Oracle ou similares, encapsulando APIs complexas em interfaces simples. Permite consultas como "qual a posição financeira da unidade X no último trimestre" ou "liste contratos pendentes acima de R$ 500k". Para finanças e operações, é diferencial enorme.
 
-O terceiro é **MCP do help desk** que conecta Claude ao ZenDesk, Freshdesk ou similares. Atendentes humanos consultam histórico do cliente, casos similares anteriores, base de conhecimento, em linguagem natural durante a conversa com o cliente. Tempo de atendimento cai dramaticamente, qualidade da resposta sobe.
+**MCP do help desk**: conecta Claude ao ZenDesk, Freshdesk ou similares. Atendentes consultam histórico do cliente, casos anteriores e base de conhecimento em linguagem natural durante a conversa. Tempo de atendimento cai, qualidade da resposta sobe.
 
 ---
 
 ## 29.4 — EXEMPLO MEMORÁVEL: O VAREJO QUE UNIFICOU 14 SISTEMAS LEGADOS
 
-Uma rede brasileira de varejo com 200 lojas, faturamento anual de R$ 4 bilhões, e 14 sistemas legados acumulados em 25 anos de operação, decidiu em 2025 que precisava modernizar acesso a dados sem migrar tudo de uma vez. Os sistemas variavam desde mainframe legado dos anos 1990 até SaaS modernos contratados recentemente, e cada análise corporativa relevante exigia consulta a múltiplos deles — com integrações ad hoc construídas e reconstruídas a cada ciclo.
+Uma rede brasileira de varejo com 200 lojas, R$ 4 bilhões de faturamento e 14 sistemas legados acumulados em 25 anos decidiu em 2025 modernizar o acesso a dados sem migrar tudo de uma vez. Cada análise corporativa relevante exigia consulta a múltiplos sistemas — com integrações ad hoc construídas e reconstruídas a cada ciclo.
 
-A estratégia adotada foi construir camada MCP corporativa sobre os 14 sistemas, em vez de tentar migrar para arquitetura unificada. Em cerca de oito meses, com investimento de aproximadamente R$ 1,2 milhão entre time dedicado e infraestrutura, foram construídos 14 servidores MCP, um por sistema, cada um expondo Resources e Tools relevantes em formato padronizado.
+A estratégia: construir camada MCP corporativa sobre os 14 sistemas, em vez de migrar para arquitetura unificada. Em cerca de oito meses, com investimento de aproximadamente R$ 1,2 milhão, foram construídos 14 servidores MCP, um por sistema, cada um expondo Resources e Tools em formato padronizado.
 
-A partir desse ponto, qualquer cliente MCP (Claude para usuários executivos, ferramentas internas para times técnicos, agentes futuros) podia consultar qualquer sistema via interface padronizada. Análises que antes exigiam dias de coordenação entre times técnicos passaram a ser respondidas em minutos por executivos diretamente em Claude.
+A partir daí, qualquer cliente MCP podia consultar qualquer sistema via interface padronizada. Análises que antes exigiam dias de coordenação passaram a ser respondidas em minutos por executivos diretamente no Claude.
 
-O resultado em doze meses foi notável. **Tempo médio para responder pergunta executiva que envolvia múltiplos sistemas caiu de 2 a 4 dias para 5 a 15 minutos.** Time de BI passou de gargalo absoluto para consultor estratégico. Equipes de negócio ganharam autonomia para análises que antes dependiam de fila. **E o ativo construído, a camada MCP, continua rendendo valor para qualquer ferramenta nova de IA que aparece, sem necessidade de reconstrução.**
+Em doze meses: **tempo médio para responder pergunta executiva envolvendo múltiplos sistemas caiu de 2-4 dias para 5-15 minutos.** Time de BI passou de gargalo para consultor estratégico. Equipes de negócio ganharam autonomia para análises que antes dependiam de fila. **A camada MCP continua rendendo valor para qualquer ferramenta nova de IA que aparece, sem reconstrução.**
 
-A lição estrutural é poderosa. **Em empresas com sistemas legados, investir em camada MCP corporativa é provavelmente a alavanca de modernização de IA com maior ROI durável. Não substitui modernização eventual dos sistemas, mas viabiliza valor enquanto a modernização acontece, e os ativos construídos continuam relevantes mesmo após a modernização.**
+A lição estrutural: **em empresas com sistemas legados, camada MCP corporativa é provavelmente a alavanca de modernização de IA com maior ROI durável. Não substitui a modernização eventual, mas viabiliza valor enquanto ela acontece — e os ativos construídos permanecem relevantes mesmo depois.**
 
 ---
 
 ## 29.5 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta o resultado; esta seção entrega o roteiro. Três aplicações que você pode iniciar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa adoção inteligente de adoção ingênua.
+Três aplicações que você pode iniciar esta semana, cada uma na forma *situação → o que fazer → o ponto de julgamento* — porque o ponto de julgamento é o que separa adoção inteligente de adoção ingênua.
 
 **Aplicação 1 — Mapeamento de candidatos a MCP interno.**
-*Situação:* a organização usa Claude para trabalho de conhecimento, mas cada consulta a dados internos exige copiar-colar manual ou pedir ajuda do time técnico. *O que fazer:* liste os cinco sistemas mais consultados pelo time; para cada um, verifique se há Connector oficial e se o volume de uso justifica MCP próprio (critério da seção 29.3). Priorize o de maior frequência de consulta e com log de auditoria exigido. Estime horas semanais desperdiçadas em acesso manual. *O ponto de julgamento:* o ROI fecha em menos de seis meses de operação? Se sim, construa. Se não, restrinja ao Connector existente e reavalie em doze meses.
+*Situação:* cada consulta a dados internos exige copiar-colar manual ou ajuda do time técnico. *O que fazer:* liste os cinco sistemas mais consultados; para cada um, verifique se há Connector oficial e se o volume justifica MCP próprio (critério da seção 29.3). Priorize o de maior frequência de consulta com log de auditoria exigido. Estime horas semanais desperdiçadas em acesso manual. *O ponto de julgamento:* o ROI fecha em menos de seis meses? Se sim, construa. Se não, restrinja ao Connector existente e reavalie em doze meses.
 
 **Aplicação 2 — Primeiro servidor MCP interno em produção.**
-*Situação:* o sistema prioritário da aplicação anterior não tem Connector oficial, é acessado por mais de dez pessoas e exige log de auditoria. *O que fazer:* construa o servidor expondo apenas Resources (somente leitura) na primeira versão; nenhuma Tool com efeito colateral até o processo de governança estar estabelecido. Defina o dono de manutenção antes de iniciar a construção. Configure log de chamadas desde o primeiro deploy, não como etapa posterior. *O ponto de julgamento:* o primeiro servidor está pronto para produção somente quando o catálogo de aprovação, o checklist de segurança e o dono identificado estiverem documentados. Sem os três, o servidor fica em staging.
+*Situação:* o sistema prioritário não tem Connector oficial, é acessado por mais de dez pessoas e exige log de auditoria. *O que fazer:* construa expondo apenas Resources (somente leitura) na primeira versão; nenhuma Tool com efeito colateral até o processo de governança estar estabelecido. Defina o dono de manutenção antes de iniciar. Configure log de chamadas desde o primeiro deploy. *O ponto de julgamento:* o servidor vai para produção somente quando catálogo de aprovação, checklist de segurança e dono estiverem documentados. Sem os três, fica em staging.
 
 **Aplicação 3 — Governança da camada MCP em escala.**
-*Situação:* a organização tem cinco ou mais servidores MCP ativos e começa a perder controle sobre quem aprovou o quê. *O que fazer:* institua o catálogo aprovado como processo formal: nenhum servidor novo entra em uso sem revisão técnica, revisão de segurança e aprovação do responsável de segurança da informação. Defina threshold de revisão periódica (trimestral para servidores com Tools de efeito, semestral para servidores somente leitura). Consolide logs de chamadas de todos os servidores num único ponto de auditoria. *O ponto de julgamento:* em uma auditoria surpresa, você consegue responder em menos de quinze minutos quais servidores estão ativos, quem os aprovou e quando foi a última revisão de segurança? Se não, a governança ainda não existe — existe a intenção dela.
+*Situação:* a organização tem cinco ou mais servidores ativos e começa a perder controle sobre quem aprovou o quê. *O que fazer:* institua o catálogo aprovado como processo formal: nenhum servidor novo entra em uso sem revisão técnica, revisão de segurança e aprovação do responsável de segurança. Defina revisão periódica (trimestral para Tools de efeito, semestral para somente leitura). Consolide logs num único ponto de auditoria. *O ponto de julgamento:* em auditoria surpresa, você responde em quinze minutos quais servidores estão ativos, quem os aprovou e quando foi a última revisão? Se não, a governança ainda não existe — existe a intenção dela.
 
 > 🔧 **EXERCÍCIO**
 > Escolha um sistema interno que o time acessa manualmente hoje. Aplique o critério da seção 29.3: tem Connector? Dez ou mais usuários? Log de auditoria exigido? Há dono disponível para manutenção? Escreva as respostas em uma tabela com uma linha por critério. Se o resultado apontar para construção, documente também quem seria o dono e qual seria o checklist de revisão de segurança mínimo antes de ativar. Se não escrever o dono antes de qualquer linha de código, a decisão de construir está incompleta.

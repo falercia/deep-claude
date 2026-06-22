@@ -1,15 +1,14 @@
-# Lançamento
+# Pasta de Lançamento — Deep Claude
 
-> Materiais de divulgação da obra *Deep Claude*.
-> Para o autor e para leitores que desejam compartilhar.
+> Esta pasta centraliza tudo que é necessário para levar *Deep Claude · O Currículo Executivo do Ecossistema Anthropic* ao leitor certo. Materiais de produção final, divulgação e kit para o autor.
 
 ---
 
-## Por que esta pasta existe
+## O que é esta pasta
 
-A obra *Deep Claude* foi escrita para virar referência em português sobre o ecossistema Claude. Para que cumpra essa função, precisa chegar a quem mais se beneficia: CTOs, Heads de Tecnologia, AI Engineers, executivos em transformação. Esta pasta carrega materiais de divulgação para apoiar a chegada da obra ao público correto.
+`lancamento/` é a pasta operacional do lançamento do Livro 2 da série *Inteligência Aumentada*. Não é marketing de vaidade — é o conjunto de materiais que conecta a obra a CTOs, Heads de Tecnologia, AI Engineers e executivos brasileiros que mais se beneficiam dela.
 
-Materiais aqui são para uso público com atribuição (CC-BY 4.0). Qualquer pessoa pode compartilhar para divulgar a obra, desde que atribua corretamente.
+Todo material aqui segue os princípios editoriais do livro: sem hype, sem números inventados, sem promessa exagerada, com atribuição clara.
 
 ---
 
@@ -17,108 +16,57 @@ Materiais aqui são para uso público com atribuição (CC-BY 4.0). Qualquer pes
 
 ```
 lancamento/
-  README.md                    — este arquivo
-  capa-livro/                  — arte final da capa em formatos diversos
-  imagens-divulgacao/          — banners, cards para LinkedIn/Instagram
-  posts/                       — posts modelo para LinkedIn, X, Instagram
-  threads/                     — threads para X expandindo conceitos do livro
-  decks-resumo/                — apresentações resumo (PDF e PPTX)
-  scripts-video/               — roteiros de vídeo curto e longo
-  prensa/                      — release para imprensa, biografia, fotos
-  faq.md                       — FAQ sobre o livro
+  README.md                    — este arquivo: contexto e orientação
+  CHECKLIST-LANCAMENTO.md      — passos sequenciais até o lançamento público
+  KIT-DIVULGACAO.md            — posts, threads, e-mail, one-pager (com placeholders)
+```
+
+### Subpastas a criar conforme o fluxo avança
+
+```
+lancamento/
+  assets/                      — capa em formatos finais (PDF, PNG, EPUB-cover)
+  imagens-divulgacao/          — banners e cards para LinkedIn/Instagram/X
+  posts/                       — posts modelo prontos para uso
+  prensa/                      — release para imprensa, bio, fotos em alta resolução
+  faq/                         — FAQ do livro (dúvidas frequentes de leitor e imprensa)
 ```
 
 ---
 
-## Cobertura inicial — v1.0 (jul/2026)
+## Princípios desta pasta
 
-Materiais essenciais para o lançamento:
+**Sem números inventados.** Tiragem, receita, leitores, depoimentos — nada é estimado. Placeholders explícitos onde o dado real ainda não existe.
 
-| Material | Formato | Uso |
-|---|---|---|
-| Imagens de divulgação base | PNG, vários formatos | LinkedIn, Instagram, X |
-| 10 posts modelo | Markdown | LinkedIn, X |
-| FAQ do livro | Markdown | Resposta a dúvidas comuns |
-| Press kit | PDF + assets | Imprensa e mídia especializada |
-| Deck resumo (20 slides) | PDF + PPTX | Apresentações executivas |
+**Sem promessa exagerada.** O livro não "transforma em expert em 30 dias". O livro entrega profundidade operacional e critério executivo. A comunicação reflete isso.
 
----
+**Materiais reutilizáveis por terceiros.** Posts e threads são escritos para que outros profissionais possam compartilhar autenticamente, sem parecer venda.
 
-## Cobertura roadmap
-
-### v1.1 — out/2026
-- Materiais de curso/mentoria (decks completos por capítulo)
-- Scripts de vídeo expandindo conceitos chave
-- Estudos de caso anonimizados
-
-### v1.2 — jan/2027
-- Materiais para parcerias (palestras corporativas, workshops B2B)
-- Materiais para Anthropic Partner Program (se aplicável)
+**Atribuição padrão:** quando compartilhar qualquer material desta pasta, use:
+> *"Material de divulgação de Deep Claude · O Currículo Executivo do Ecossistema Anthropic por Fabio Garcia (2026). Licenciado sob CC-BY 4.0. Repositório: github.com/falercia/deep-claude"*
 
 ---
 
-## Como usar
+## Conexão com o resto do repositório
 
-**Para o leitor que quer compartilhar:**
-
-1. Use qualquer material desta pasta para divulgar a obra
-2. Atribua corretamente conforme CC-BY 4.0
-3. Mencione o autor (Fabio Garcia) e o livro (*Deep Claude*) quando compartilhar
-4. Link para o repositório ou para o livro
-
-**Para autores e palestrantes:**
-
-1. Decks resumo podem ser usados como base de apresentações
-2. Customize conforme seu público
-3. Mantenha atribuição
-
-**Para imprensa e mídia:**
-
-1. Press kit em `prensa/` tem release, biografia, fotos em alta resolução
-2. Para entrevistas, contato via GitHub Issues ou canais oficiais
+- O posicionamento editorial vive em `livro/_plano/POSICIONAMENTO-L2.md` — leia antes de criar qualquer material novo de divulgação.
+- Os números do ecossistema (versões, preços, benchmarks) vivem em `apendice-vivo/` — nunca use valores fixos nos materiais de lançamento; aponte ao Apêndice Vivo.
+- A licença dos materiais desta pasta é CC-BY 4.0 (conteúdo); código sob MIT.
 
 ---
 
-## Princípios
+## Responsabilidades do autor (REQUER INPUT HUMANO)
 
-**Sem hype.** Materiais comunicam com clareza e profundidade, não com slogans inflados. Linguagem executiva consistente com o livro.
+Os seguintes itens não podem ser produzidos sem o autor:
 
-**Sem promessa exagerada.** "Vai dominar Claude em uma semana" não. "Vai entender o ecossistema profundamente e ter currículo executivo" sim.
-
-**Compartilhável por terceiros.** Materiais são desenhados para que outros profissionais possam compartilhar autenticamente, sem parecer venda.
-
-**Atribuição clara.** Cada material carrega instrução de atribuição no metadado.
-
----
-
-## Como contribuir
-
-Você organizou estudo do livro ou palestrou sobre o tema? Quer compartilhar versão para a comunidade?
-
-1. Abra issue com label `material-comunidade`
-2. Descreva o material e o contexto de uso
-3. Abra PR com o material e licença explícita
-
-Materiais aprovados ficam em `lancamento/comunidade/` com atribuição ao contribuidor.
-
-Veja [CONTRATO.md](../CONTRATO.md) para princípios completos.
+- [ ] ISBN — solicitação à Biblioteca Nacional (ou câmara do livro)
+- [ ] Ficha CIP — gerada pelo ISBN
+- [ ] Depoimentos reais de leitores beta
+- [ ] Foto do autor em alta resolução para kit de imprensa
+- [ ] Aprovação da capa final
+- [ ] Definição das datas de lançamento
+- [ ] Revisão e aprovação de todo material de divulgação antes de publicar
 
 ---
 
-## Atribuição padrão
-
-Quando compartilhar materiais desta pasta, use a atribuição:
-
-> "Material extraído de *Deep Claude · Currículo Executivo do Ecossistema Anthropic* por Fabio Garcia (2026). Licenciado sob CC-BY 4.0. Repositório: github.com/falercia/deep-claude"
-
----
-
-## Princípio raiz
-
-Esta pasta existe para que o livro chegue a quem mais se beneficia, não para promover o autor. Cada material é avaliado por: "isso ajuda CTO/Head a tomar decisão melhor sobre IA?" Se sim, entra. Se não, fica fora.
-
----
-
-## Capítulos relacionados
-
-Esta pasta apoia a divulgação dos 46 capítulos da obra. Não amarra a capítulo específico — amarra à obra como sistema.
+*Esta pasta é operacional, não decorativa. Se um material não tem responsável claro e data de entrega, não pertence aqui — pertence ao `_plano/`.*

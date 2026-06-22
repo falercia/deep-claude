@@ -15,23 +15,21 @@
 
 ## 8.1 — O CONCEITO INTUITIVO
 
-Existe uma diferença categórica entre pedir uma resposta e delegar um resultado. Quando você usa um chat, você decompõe o trabalho em perguntas: pergunta uma coisa, lê, formula a próxima, copia o que serve, cola onde precisa, formata, revisa. Você continua sendo o sistema operacional do processo — a IA é só o processador. O esforço de coordenação fica todo com você, e em tarefas de muitos passos esse esforço de coordenação frequentemente custa mais do que cada passo individual.
+Há uma diferença categórica entre pedir uma resposta e delegar um resultado. No chat, você decompõe o trabalho em perguntas: pergunta, lê, formula a próxima, copia, cola, formata, revisa. Você é o sistema operacional do processo — a IA é o processador. O esforço de coordenação fica com você, e em tarefas de muitos passos esse esforço frequentemente custa mais do que cada passo individual.
 
-Cowork inverte essa relação. Em vez de quebrar o trabalho em prompts, você entrega o desfecho: "consolide estes quatro relatórios em um sumário executivo de duas páginas", "organize esta pasta de downloads por projeto e cliente", "extraia as cláusulas de rescisão destes dezoito contratos e me devolva uma tabela comparável". Cowork recebe o objetivo e conduz os passos — abre os arquivos, lê, sintetiza, escreve, formata, salva — sem você coordenar cada movimento. A própria Anthropic descreve o produto numa frase que vale gravar: *não é um assistente de chat; é um sistema que executa trabalho de conhecimento de múltiplos passos em seu nome.*
+Cowork inverte essa relação. Em vez de quebrar o trabalho em prompts, você entrega o desfecho: "consolide estes quatro relatórios em um sumário de duas páginas", "extraia as cláusulas de rescisão destes dezoito contratos e me devolva uma tabela comparável". Cowork conduz os passos — abre, lê, sintetiza, escreve, formata, salva — sem você coordenar cada movimento. A Anthropic descreve: *não é um assistente de chat; é um sistema que executa trabalho de conhecimento de múltiplos passos em seu nome.*
 
-O que torna isso possível é o lugar onde Cowork roda. Ele vive no desktop, que é onde o trabalho de conhecimento realmente acontece: nas pastas locais, nos arquivos, nos aplicativos do dia a dia. Cowork transita entre eles, cruza informação de várias fontes e completa a tarefa sem pedir que você seja o maestro de cada etapa. O trabalho que ele faz melhor é o de alto esforço e repetível — exatamente a classe de tarefa que, por ser tediosa, costuma ser adiada ou feita mal.
-
-Mas a inversão tem um preço que este capítulo não vai esconder. No momento em que você delega um resultado em vez de pedir uma resposta, você também transfere uma fatia de controle. A máquina passa a tomar decisões intermediárias que você não viu acontecer. É por isso que Cowork não é, em essência, um capítulo sobre uma ferramenta de produtividade. É um capítulo sobre **governança da autonomia delegada** — e a ferramenta é o caso mais nítido do Invariante 6 em toda a sua biblioteca de aplicativos.
+A inversão tem um preço. No momento em que você delega um resultado, você também transfere uma fatia de controle — a máquina toma decisões intermediárias que você não viu acontecer. Cowork não é, em essência, um capítulo sobre produtividade. É um capítulo sobre **governança da autonomia delegada** — e a ferramenta é o caso mais nítido do Invariante 6 em toda a sua biblioteca de aplicativos.
 
 ---
 
 ## 8.2 — ANALOGIA: O ESTAGIÁRIO COM A CHAVE DA SALA
 
-Imagine que você contratou um analista júnior excepcionalmente rápido e incansável. Você pode usá-lo de dois jeitos. No primeiro, ele fica do lado de fora da sua sala e você o chama para perguntas pontuais: "me explique este contrato", "resuma este relatório". Ele responde bem, mas tudo que entra e sai da sala passa pelas suas mãos. Esse é o chat.
+Você contratou um analista júnior excepcionalmente rápido. Pode usá-lo de dois jeitos. No primeiro, ele fica do lado de fora e você o chama para perguntas pontuais. Tudo que entra e sai da sala passa pelas suas mãos. Esse é o chat.
 
-No segundo jeito, você entrega a ele a chave da sala, aponta para o arquivo de documentos e diz: "organize tudo isto, prepare o dossiê e deixe na minha mesa até as cinco". Agora ele abre gavetas, lê papéis, move pastas, descarta o que julga irrelevante e monta o entregável sozinho. Esse é o Cowork. O ganho é óbvio — você recupera horas. Mas note o que mudou: você deu a um agente rápido a chave de uma sala com documentos reais, e ele vai tomar dezenas de microdecisões que você não vai testemunhar.
+No segundo, você entrega a ele a chave da sala e diz: "organize tudo, prepare o dossiê e deixe na minha mesa até as cinco". Ele abre gavetas, lê papéis, move pastas, monta o entregável sozinho. Esse é o Cowork. O ganho é óbvio — você recupera horas. O que mudou: você deu a um agente rápido a chave de uma sala com documentos reais, e ele vai tomar dezenas de microdecisões que você não vai testemunhar.
 
-Nenhum gestor competente entrega a chave da sala sem três coisas: saber **quais salas** o estagiário pode entrar (escopo de acesso), **ver o que ele fez** antes de o trabalho virar oficial (observabilidade), e **conseguir desfazer** um erro antes que ele cause dano (reversibilidade). Um estagiário com a chave de todas as salas, trabalhando sem supervisão e sem possibilidade de desfazer o que mexeu, não é uma alavanca de produtividade — é um passivo esperando para acontecer. O bom uso de Cowork é, ponto por ponto, a versão digital desse julgamento gerencial. A ferramenta dá a você os três controles; o Invariante 6 diz que usá-los não é opcional.
+Nenhum gestor competente entrega a chave sem três coisas: saber **quais salas** o estagiário pode entrar (escopo de acesso), **ver o que ele fez** antes de o trabalho virar oficial (observabilidade), e **conseguir desfazer** um erro antes que ele cause dano (reversibilidade). Um estagiário com a chave de todas as salas, sem supervisão e sem reversibilidade, não é alavanca — é passivo esperando para acontecer. O bom uso de Cowork é a versão digital desse julgamento gerencial. O Invariante 6 diz que usá-los não é opcional.
 
 ---
 
@@ -82,13 +80,13 @@ Releia esses quatro mecanismos com o Invariante 6 em mente e perceba o que eles 
 
 A Anthropic identifica quatro famílias de trabalho onde Cowork rende mais, e elas formam um mapa útil do que delegar primeiro.
 
-A **organização e gestão de arquivos locais** é o caso de entrada. Sistemas de arquivos acumulam mais rápido do que qualquer pessoa organiza. Apontar Cowork para uma pasta de rascunhos, downloads e anexos e pedir que renomeie, classifique, deduplique e separe o relevante resolve uma classe de trabalho que quase ninguém faz com disciplina.
+A **organização e gestão de arquivos locais** é o caso de entrada. Sistemas de arquivos acumulam mais rápido do que qualquer pessoa organiza. Apontar Cowork para uma pasta e pedir que renomeie, classifique, deduplique e separe o relevante resolve uma classe de trabalho que quase ninguém faz com disciplina.
 
-A **preparação de documentos a partir de fontes** ataca o gargalo real da escrita executiva. A parte difícil de um relatório raramente é redigir — é reunir e sintetizar as fontes. Entregue a Cowork o conjunto de arquivos-fonte e ele devolve um rascunho estruturado, deixando para você o trabalho que de fato exige seu julgamento: o refino.
+A **preparação de documentos a partir de fontes** ataca o gargalo real da escrita executiva. A parte difícil de um relatório raramente é redigir — é reunir e sintetizar as fontes. Entregue os arquivos-fonte e Cowork devolve rascunho estruturado; o refino fica com você.
 
-A **síntese de pesquisa complexa** comprime o tempo de leitura cruzada. Você fornece a pergunta e um conjunto de fontes; Cowork identifica o que é relevante e devolve um resumo pronto para revisão. O valor não está em ler por você, e sim em transformar horas de leitura dispersa em um ponto de partida revisável.
+A **síntese de pesquisa complexa** comprime o tempo de leitura cruzada. Você fornece a pergunta e o conjunto de fontes; Cowork transforma horas de leitura dispersa em ponto de partida revisável.
 
-A **extração de dados de arquivos não estruturados** é talvez a de maior retorno silencioso. Contratos, relatórios e registros são densos por natureza. Cowork lê e devolve a informação que importa em formato estruturado e comparável — a tarefa que, por ser tediosa, costuma ser adiada e que, justamente por isso, esconde decisões mal informadas.
+A **extração de dados de arquivos não estruturados** tem o maior retorno silencioso. Cowork lê contratos, relatórios e registros densos e devolve a informação em formato estruturado e comparável — a tarefa que, por ser tediosa, costuma ser adiada e que esconde decisões mal informadas.
 
 Sobre essas quatro classes, somam-se as capacidades que outros capítulos deste volume detalham: **Skills e plugins** (Capítulo 31) que especializam Cowork em formatos e fluxos recorrentes; **tarefas agendadas e Dispatch** (Capítulos 19 e 21), que permitem disparar trabalho de Cowork de forma recorrente ou a partir do celular; e os **artefatos**, visualizações vivas que persistem entre sessões. O ponto a reter não é a lista de recursos — é o critério: Cowork brilha onde o trabalho é de alto esforço, estruturável e repetível, e perde sentido onde o trabalho é, no fundo, uma decisão sua que nenhuma máquina deveria tomar.
 
@@ -145,7 +143,7 @@ A lição estrutural é o Invariante 6 inteiro num único episódio. A autonomia
 
 ## 8.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Extração estruturada de documentos densos.**
 *Situação:* você tem um conjunto de documentos longos (contratos, relatórios, atas) e precisa extrair informações específicas de cada um para comparar ou decidir. *O que fazer:* conecte Cowork apenas à pasta que contém esses documentos; entregue o objetivo como resultado esperado ("devolva uma tabela com as cláusulas X, Y e Z de cada arquivo"); instrua explicitamente que ambiguidades sejam sinalizadas para revisão humana em vez de inferidas; leia o plano antes de aprovar; acompanhe a execução e pare se ver algo inesperado. *O ponto de julgamento:* verifique os documentos de maior valor ou risco antes de usar a tabela como insumo de decisão — Cowork entrega a extração com fluência, mas erros de interpretação ocorrem com a mesma confiança que acertos (Invariante 1). A proporcionalidade entre o que você verifica e o raio de impacto da decisão é o Invariante 6 em estado puro.
@@ -167,7 +165,7 @@ Vale conhecer com clareza onde Cowork exige cautela redobrada.
 
 A primeira é o **estado de research preview de capacidades-chave**. Computer use, em particular, ainda amadurece, e features de produto mudam em cadência rápida — disponibilidade, escopo e comportamento descritos aqui são a foto do momento da redação, e o que é volátil mora no Apêndice Vivo (J), não no corpo deste capítulo.
 
-A segunda é a **confiança plausível em saídas não verificadas**. Cowork herda o traço de todo LLM: erra com a mesma fluência com que acerta (Invariante 1). Saída de Cowork é ponto de partida revisável, nunca verdade pronta — e quanto maior o raio de impacto, mais cara é a etapa de verificação que você pular.
+A segunda é a **confiança plausível em saídas não verificadas**. Cowork herda o traço de todo LLM: erra com a mesma fluência com que acerta (Invariante 1). Saída de Cowork é ponto de partida revisável, nunca verdade pronta.
 
 A terceira é o **escopo de acesso concedido em excesso**. A tentação de montar a pasta-raiz "para facilitar" troca conveniência momentânea por raio de impacto permanente. O hábito maduro é o oposto: o menor escopo que resolve a tarefa, ampliado só quando necessário.
 

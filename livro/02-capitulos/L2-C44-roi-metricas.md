@@ -9,9 +9,9 @@
 
 > 🧭 **Por que este capítulo é a aplicação do Invariante 5 — Custo Composto**
 >
-> O Invariante 5 enuncia que o custo e o valor da IA se acumulam por uso. Cada chamada ao modelo não é um evento isolado: ela se multiplica pelo volume, pelo tier escolhido, pela redundância arquitetural, pelo tamanho do contexto — e por todos os trimestres futuros em que esse padrão se repetir. ROI de IA exige medir o composto, não a chamada. Quem mede a chamada toma decisões de orçamento com uma régua curta demais para o problema que está dimensionando.
+> O Invariante 5 enuncia que o custo e o valor da IA se acumulam por uso. Cada chamada ao modelo não é um evento isolado: ela se multiplica pelo volume, pelo tier escolhido, pela redundância arquitetural, pelo tamanho do contexto — e por todos os trimestres futuros em que esse padrão se repetir. ROI de IA exige medir o composto, não a chamada. Quem mede a chamada toma decisões de orçamento com uma régua curta demais para o problema.
 >
-> O Framework 7 — Custo Composto em Três Tempos (F7) do Livro 1 formaliza essa mecânica com precisão cirúrgica: o custo total é a função de chamadas × tier × redundância × tamanho de contexto. Este capítulo é a aterrissagem executiva desse framework: como transformar a fórmula em método de avaliação, em orçamento defensável e em critério de escala que sobrevive à pergunta do CFO.
+> O Framework 7 — Custo Composto em Três Tempos (F7) do Livro 1 formaliza essa mecânica: o custo total é a função de chamadas × tier × redundância × tamanho de contexto. Este capítulo é a aterrissagem executiva desse framework: como transformar a fórmula em método de avaliação, em orçamento defensável e em critério de escala que sobrevive à pergunta do CFO.
 
 ---
 
@@ -25,7 +25,7 @@ O software tradicional resolve um problema específico e o efeito é direto: um 
 
 ### O custo é composto e invisível
 
-O custo de uma chamada à API é minúsculo. O custo de dez mil chamadas por dia, multiplicado por um system prompt de 8 mil tokens reprocessado em cada uma delas, multiplicado por um tier premium usado onde Sonnet bastaria, multiplicado por doze meses, é outra ordem de grandeza. Esse é o princípio central do Invariante 5: o custo não é por chamada — é o padrão arquitetural acumulado ao longo do tempo. Organizações que olham só a fatura mensal nunca enxergam o composto: comparam números absolutos sem ver a trajetória.
+O custo de uma chamada à API é minúsculo. O custo de dez mil chamadas por dia, multiplicado por um system prompt de 8 mil tokens reprocessado em cada uma, multiplicado por um tier premium usado onde Sonnet bastaria, multiplicado por doze meses, é outra ordem de grandeza. Esse é o princípio central do Invariante 5: o custo não é por chamada — é o padrão arquitetural acumulado ao longo do tempo. Organizações que olham só a fatura mensal nunca enxergam o composto.
 
 ### O baseline é incerto
 
@@ -33,7 +33,7 @@ Para calcular ganho, você precisa saber de onde partiu. Quanto tempo um analist
 
 ### A atribuição é disputada
 
-Quando a produtividade de uma equipe sobe depois que ela adota IA, quanto disso é Claude? Quanto é o novo processo que veio junto? Quanto é o treinamento que aconteceu ao mesmo tempo? Quanto é a curva de aprendizagem que qualquer nova ferramenta traz? Atribuição limpa é rara, e sem ela, ROI vira narrativa que qualquer pessoa consegue contestar.
+Quando a produtividade de uma equipe sobe depois que ela adota IA, quanto disso é Claude? Quanto é o novo processo que veio junto? Quanto é o treinamento que aconteceu ao mesmo tempo? Atribuição limpa é rara, e sem ela, ROI vira narrativa que qualquer pessoa consegue contestar.
 
 ![Diagrama 44.1 — As quatro dificuldades de medir ROI de IA](imagens/cap-44-img-01-dificuldades-roi.svg)
 
@@ -47,7 +47,7 @@ Uma empresa de logística decide substituir os veículos diesel de sua frota por
 
 O gerente ruim soma o custo de carregamento elétrico, compara com o custo do diesel, divide pelo número de viagens, e apresenta uma economia anualizada com três casas decimais. Resultado: planilha impecável, análise errada. Ele não mediu o composto — não incluiu manutenção diferencial, vida útil de bateria, custo de infraestrutura de carregamento, impacto na roteirização por limitação de autonomia, treinamento de motoristas, custo de inatividade durante recarga.
 
-O gerente bom começa pelo uso real. Mapeia quais rotas têm perfil adequado para elétrico (curtas, ciclo previsível), quais não têm, e o que muda em cada uma. Mede baseline de custo operacional por rota, não por veículo em abstrato. Define métricas honestas: custo por km rodado, disponibilidade operacional, custo de manutenção por ano, não "economia teórica de combustível".
+O gerente bom começa pelo uso real. Mapeia quais rotas têm perfil adequado para elétrico, quais não têm, e o que muda em cada uma. Mede baseline de custo operacional por rota, não por veículo em abstrato. Define métricas honestas: custo por km rodado, disponibilidade operacional, custo de manutenção por ano — não "economia teórica de combustível".
 
 ROI de IA segue o mesmo princípio. A pergunta correta não é "quanto esse modelo custa por chamada?" — é "qual é o custo por resultado entregue, medido desde o baseline real, ao longo do tempo de uso?" O gerente de frota que mede custo por km rodado é o arquiteto de IA que mede custo por feature por usuário. O que varia é o veículo, não o método.
 
@@ -81,7 +81,7 @@ Essa granularidade muda a conversa com o CFO. Em vez de defender um número tota
 
 O Framework F7 — Custo Composto em Três Tempos (→ [L1-F7-composto-3t.md](../../Livro-1-Os-Invariantes/03-frameworks/L1-F7-composto-3t.md)) oferece o mapa estrutural: as três alavancas que determinam onde o custo composto cresce — T1 (tier de modelo), T2 (topologia de chamada, onde mora o prompt caching do Cap. 25), T3 (tamanho de contexto). A atribuição por feature revela qual alavanca está fora de controle.
 
-A ordem de intervenção importa: T1 primeiro (roteamento de modelo como alavanca de custo — Cap. 5), T2 segundo (redundância e caching), T3 por último. A tentação de otimizar tamanho de prompt antes de roteamento de tier é o erro mais comum: marginal e visível, em vez de substancial e arquitetural.
+A ordem de intervenção importa: T1 primeiro (roteamento de modelo — Cap. 5), T2 segundo (redundância e caching), T3 por último. A tentação de otimizar tamanho de prompt antes de roteamento de tier é o erro mais comum: marginal e visível, em vez de substancial e arquitetural.
 
 ### 44.3.3 — TCO de uma solução com Claude
 
@@ -103,7 +103,7 @@ O Custo Total de Propriedade (TCO) de uma solução com Claude tem quatro compon
 
 FinOps é a disciplina de visibilidade, atribuição e otimização de custo em infraestrutura de nuvem. Aplicada a LLMs, o princípio central é o mesmo: custo não gerenciado cresce até ser notado — e quando é notado na fatura, o padrão arquitetural já está estabelecido e é caro de mudar.
 
-A alavanca de maior impacto é o roteamento de modelo, que o Cap. 5 trata em detalhe. A lógica FinOps é direta: rotear 70-80% das chamadas para o tier adequado (não o premium por padrão) é a intervenção de maior retorno antes de qualquer outra otimização. Um classificador leve na entrada da pipeline — o próprio T1 do Framework F7 — decide a rota com base em sinais de complexidade da tarefa. Esse classificador custa muito menos do que as chamadas que ele desvia do tier premium.
+A alavanca de maior impacto é o roteamento de modelo (Cap. 5): rotear 70-80% das chamadas para o tier adequado — não o premium por padrão — é a intervenção de maior retorno antes de qualquer outra otimização. Um classificador leve na entrada da pipeline (T1 do Framework F7) decide a rota com base em sinais de complexidade da tarefa. Esse classificador custa muito menos do que as chamadas que ele desvia do tier premium.
 
 Práticas complementares de FinOps para LLM:
 
@@ -142,7 +142,7 @@ Exemplos de métricas honestas por categoria de valor:
 - Tempo de onboarding de novo cliente para features que usam IA de geração de conteúdo
 - NPS de segmento de clientes que usa produto habilitado por IA, vs. segmento sem acesso
 
-A distinção do Cap. 36 — LLMOps — entre eval de qualidade e log de uso aplica-se aqui: log de uso são métricas de vaidade; evals que medem resultado real são métricas honestas. O mesmo framework de observabilidade que opera o sistema serve para medir o valor.
+A distinção do Cap. 36 — LLMOps — entre eval de qualidade e log de uso aplica-se aqui: log de uso são métricas de vaidade; evals que medem resultado real são métricas honestas.
 
 ---
 
@@ -229,7 +229,7 @@ Dezoito meses depois, o custo por relatório caiu e o prazo de entrega caiu — 
 
 ## 44.7 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo da Atlas Consultoria mostra o percurso de uma análise; esta seção entrega o roteiro. Três aplicações que qualquer equipe pode iniciar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento*, porque o passo a passo é replicável, mas é o ponto de julgamento que separa FinOps de IA de fatura surpresa.
+Três aplicações que qualquer equipe pode iniciar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento*, porque o passo a passo é replicável, mas é o ponto de julgamento que separa FinOps de IA de fatura surpresa.
 
 **Aplicação 1 — Instrumentar atribuição de custo por feature em 48 horas.**
 *Situação:* a organização usa Claude via API em dois ou mais casos de uso — suporte, análise, geração de conteúdo — mas o log de uso mostra apenas o total da conta. O CFO perguntou qual caso de uso consome mais. *O que fazer:* adicione um campo de metadado (`feature_id`) em cada chamada à API identificando o caso de uso que a originou; configure um dashboard simples que agrupa custo por `feature_id`; rode por duas semanas para ter amostra representativa. *O ponto de julgamento:* quando o dado chegar, verifique se o caso de uso mais caro é o de maior valor documentado — ou se é um feature periférico consumindo recursos de forma desproporcional. Custo sem atribuição é convicção; custo com atribuição é evidência. O Invariante 5 não é sobre o total da fatura — é sobre o composto por decisão arquitetural.

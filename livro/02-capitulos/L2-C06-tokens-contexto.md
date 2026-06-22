@@ -15,27 +15,27 @@
 
 ## 6.1 — O CONCEITO INTUITIVO
 
-Quando você escreve para Claude, imagina uma folha em branco infinita — quanto mais você colocar, mais o modelo vai saber. Essa intuição é errada em dois sentidos que custam caro quando ignorados.
+Quando você escreve para Claude, imagina uma folha em branco infinita — quanto mais você colocar, mais o modelo vai saber. Essa intuição é errada em dois sentidos.
 
-O primeiro: a folha tem tamanho. O modelo processa uma janela finita de tokens por vez. Tudo que não couber nessa janela é invisível — não esquecido, nunca visto. Uma conversa longa o suficiente começa a perder suas próprias premissas quando elas foram ditas nos primeiros turnos e a janela avançou além delas.
+Primeiro: a folha tem tamanho. O modelo processa uma janela finita de tokens por vez. Tudo que não couber é invisível — não esquecido, nunca visto. Uma conversa longa começa a perder suas próprias premissas quando elas foram ditas nos primeiros turnos e a janela avançou além delas.
 
-O segundo: a folha tem zonas. Mesmo dentro da janela disponível, o modelo não lê tudo com a mesma atenção. O início e o fim recebem atenção desproporcional. O meio é onde ideias se perdem silenciosamente — sem erro, sem aviso, apenas com menos peso efetivo na geração da resposta. Isso é o Invariante 2 em operação.
+Segundo: a folha tem zonas. O início e o fim recebem atenção desproporcional. O meio é onde ideias se perdem silenciosamente — sem erro, sem aviso, apenas com menos peso efetivo. Isso é o Invariante 2 em operação.
 
-O resultado prático dessas duas realidades é que **gerenciar contexto é uma decisão ativa, não um comportamento de fundo**. Deixar o histórico crescer indefinidamente, colar documentos inteiros no meio da conversa, enterrar instruções críticas atrás de dez parágrafos de contexto — cada um desses hábitos tem um custo mensurável em qualidade de resposta, custo financeiro, ou ambos.
+**Gerenciar contexto é uma decisão ativa, não um comportamento de fundo.** Deixar o histórico crescer indefinidamente, colar documentos inteiros no meio da conversa, enterrar instruções críticas atrás de dez parágrafos — cada hábito tem custo mensurável em qualidade ou em fatura.
 
-Este capítulo é um refresher operacional. O tratamento profundo de tokens está no [Capítulo 3 do Livro 1](../../Livro-1-Os-Invariantes/02-capitulos/L1-C03-tokens.md); o tratamento profundo de janela de contexto está no [Capítulo 4 do Livro 1](../../Livro-1-Os-Invariantes/02-capitulos/L1-C04-janela-de-contexto.md). O que este capítulo faz é calibrar sua intuição operacional para usar Claude com consciência de espaço — e dar o critério de decisão que separa uso maduro de uso caro.
+Este capítulo é um refresher operacional. O tratamento profundo de tokens está no [Capítulo 3 do Livro 1](../../Livro-1-Os-Invariantes/02-capitulos/L1-C03-tokens.md); de janela de contexto, no [Capítulo 4 do Livro 1](../../Livro-1-Os-Invariantes/02-capitulos/L1-C04-janela-de-contexto.md). O que aqui está é o critério de decisão que separa uso maduro de uso caro.
 
 ---
 
 ## 6.2 — ANALOGIA: A MESA DE REUNIÃO COM MEMÓRIA CURTA
 
-Imagine que você convoca Claude para uma reunião longa. Ele chega, senta, e tem na frente uma mesa com espaço limitado — digamos, que cabem confortavelmente cem folhas. Cada coisa que você coloca na conversa, seja uma pergunta, uma resposta, um documento que você cola, uma instrução que você deu — ocupa folhas nessa mesa.
+Imagine que você convoca Claude para uma reunião longa. Ele tem na frente uma mesa com espaço para cem folhas. Cada pergunta, resposta, documento e instrução ocupa folhas nessa mesa.
 
-A mesa funciona bem enquanto está organizada. O problema começa quando ela enche. A partir daí, para cada folha nova que você coloca, uma folha antiga vai para o chão — e o que está no chão é invisível. Se a regra mais importante da reunião estava na terceira folha, e você chegou na centésima, essa regra pode ter ido para o chão. O modelo não vai avisar. Ele vai simplesmente não seguir o que não vê.
+Quando ela enche, para cada folha nova, uma antiga vai para o chão — invisível. Se a regra mais importante estava na terceira folha e você chegou na centésima, ela pode ter ido para o chão. O modelo não vai avisar — vai simplesmente não seguir o que não vê.
 
-Mas há algo mais: mesmo antes de encher, Claude não lê todas as folhas com a mesma atenção. Ele presta muita atenção no que está bem na sua frente — o início da mesa e o final da pilha — e atenção decrescente no meio. Uma instrução enterrada no vigésimo documento da pilha é tratada como contexto de apoio, não como regra. Uma instrução no topo, ou repetida logo antes da pergunta, é tratada como centro da tarefa.
+Mesmo antes de encher, Claude não lê todas as folhas com a mesma atenção. Início e final da pilha recebem atenção máxima; o meio, atenção decrescente. Uma instrução enterrada no vigésimo documento é contexto de apoio, não regra. Uma instrução no topo, ou repetida logo antes da pergunta, é o centro da tarefa.
 
-A gestão de contexto é, em essência, a arte de decidir o que fica na mesa, em que ordem, e o que vai para um arquivo externo que pode ser recuperado quando necessário — em vez de ocupar espaço de trabalho permanente.
+Gestão de contexto é a arte de decidir o que fica na mesa, em que ordem, e o que vai para arquivo externo — em vez de ocupar espaço de trabalho permanente.
 
 ---
 
@@ -63,23 +63,23 @@ Os tamanhos de janela disponíveis crescem a cada geração de modelo. O que nã
 
 O consumo de contexto tem quatro fontes, em ordem crescente de invisibilidade:
 
-**O system prompt** é a instrução base que define o comportamento do modelo. Em claude.ai com Projects, é o contexto configurado para o projeto. Na API, é o parâmetro `system`. Em conversas curtas, é barato. Em produção com milhares de chamadas, system prompts longos e não-cacheados são o maior item da fatura — e muitas equipes não percebem porque ele é constante, está sempre lá, e nunca aparece como "custo da conversa desta semana".
+**O system prompt** é a instrução base. Em claude.ai com Projects, é o contexto do projeto; na API, é o parâmetro `system`. Em produção com milhares de chamadas, system prompts longos e não-cacheados são o maior item da fatura — e muitas equipes não percebem porque ele é constante e nunca aparece como "custo da conversa desta semana".
 
-**O histórico acumulado** é o que cresce de forma mais insidiosa. Em uma conversa de trinta turnos, o modelo recebe na trigésima mensagem o histórico completo dos vinte e nove anteriores. Isso significa que cada turno reenvia para o modelo tudo que foi dito antes. A conversa de trinta turnos custa significativamente mais que trinta vezes o custo do primeiro turno — porque o primeiro turno era curto e o trigésimo carrega tudo que veio antes.
+**O histórico acumulado** cresce de forma insidiosa. Em trinta turnos, o modelo recebe na mensagem 30 o histórico completo dos 29 anteriores. A conversa de trinta turnos custa muito mais que trinta vezes o custo do primeiro turno — porque cada turno reenvia tudo que veio antes.
 
-**Documentos colados** são o candidato mais óbvio. Quando você cola um PDF de oitenta páginas no chat, você está gastando dezenas de milhares de tokens de input. O custo é imediato e visível. O que é menos óbvio: esse documento fica no histórico de todos os turnos subsequentes da mesma conversa, relido (e pago) a cada nova mensagem.
+**Documentos colados** são o candidato mais óbvio: um PDF de oitenta páginas consome dezenas de milhares de tokens. O custo é imediato e visível. O que é menos óbvio: o documento fica no histórico de todos os turnos subsequentes, relido e pago a cada nova mensagem.
 
 **O extended thinking**, quando habilitado, gera tokens internos de raciocínio que contam para a janela e para a cobrança — embora não apareçam no texto de resposta. Em consultas muito complexas com raciocínio estendido, o consumo de tokens de thinking pode superar o da resposta visível. Para turnos subsequentes, a plataforma Claude descarta automaticamente os blocos de thinking anteriores para preservar espaço de contexto.
 
 ### 6.3.4 — Context rot: por que contexto longo degrada
 
-A documentação oficial da Anthropic usa o termo *context rot* para descrever o que acontece quando o contexto cresce sem curadoria: "As token count grows, accuracy and recall degrade — a phenomenon known as context rot." Essa não é uma metáfora informal: é a terminologia técnica usada pela própria Anthropic para descrever a degradação.
+A documentação da Anthropic usa o termo *context rot*: "As token count grows, accuracy and recall degrade." Não é metáfora — é terminologia técnica.
 
-Context rot não é um bug. É o comportamento esperado de uma arquitetura transformer quando o contexto excede a escala em que ela consegue manter atenção uniforme. O mecanismo de atenção, que é o coração do transformer, computa relações entre tokens de forma que fica mais difusa conforme o número de tokens cresce. Informações no início e no fim da janela são naturalmente ancorradas. Informações no centro competem por atenção com tudo ao seu redor, e saem perdendo.
+Context rot não é bug. É comportamento esperado de um transformer quando o contexto excede a escala em que ele mantém atenção uniforme. O mecanismo de atenção fica mais difuso conforme o número de tokens cresce. Informações nas pontas são ancorradas; informações no centro competem por atenção com tudo ao redor, e saem perdendo.
 
-O resultado prático documentado por Liu et al. (2023) no estudo *Lost in the Middle* — e reproduzido em avaliações independentes desde então — é que a taxa de recuperação correta de informação em janelas longas segue uma curva em U: alta nas extremidades, com queda significativa no centro. Em configurações com janelas acima de 32 mil tokens e informação posicionada após o primeiro terço da janela, a queda de recall pode chegar a 40-50% em relação ao desempenho nas pontas.
+Liu et al. (2023), *Lost in the Middle*, documentaram que a taxa de recuperação correta em janelas longas segue curva em U: alta nas extremidades, queda no centro. Com janelas acima de 32 mil tokens e informação no primeiro terço, o recall pode cair 40–50% em relação ao desempenho nas pontas.
 
-A consequência para uso operacional: uma instrução crítica enterrada no meio de um contexto longo tem chance real de ser sub-seguida — não porque o modelo "não saiba" a regra, mas porque o peso efetivo que ela recebe na geração da resposta é menor do que você esperaria.
+A consequência operacional: instrução crítica enterrada no meio tem chance real de ser sub-seguida — não porque o modelo "não sabe" a regra, mas porque o peso efetivo que ela recebe é menor do que você espera.
 
 > ⚠️ **POSTMORTEM — O projeto que morreu por excesso de contexto**
 > *O que tentaram:* Uma equipe de engenharia de produto empilhou na janela tudo que parecia relevante para o trimestre — specs de três épicos, logs de decisões passadas, transcrições de entrevistas de usuário, roadmap completo e threads de Slack exportados — na esperança de que o modelo "conhecesse o contexto inteiro" e produzisse análises integradas sem precisar de pergunta bem formulada.
@@ -103,11 +103,11 @@ O Framework F4 do Livro 1 — Engenharia de Prompt Estendida ([L1-F4](../../Livr
 
 ## 6.4 — CRITÉRIO DE DECISÃO: QUANDO ENXUGAR, QUANDO REINICIAR, QUANDO EXTERNALIZAR
 
-Esta é a seção que transforma o capítulo em ferramenta de uso diário. A maioria gerencia contexto por instinto — cola tudo que parece relevante, espera que o modelo saiba o que é mais importante, e só percebe o problema quando a qualidade da resposta cai sem motivo aparente ou quando a fatura surpreende no fim do mês.
+A maioria gerencia contexto por instinto — cola tudo que parece relevante, espera que o modelo saiba o que é mais importante, e percebe o problema quando a qualidade cai ou a fatura surpreende.
 
-O critério abaixo é deliberado. Não é um checklist de configuração: é um critério de decisão que aplica o Invariante 2 e o Invariante 3 (Camada Dupla — padrão durável, número volátil) a situações reais de uso.
+O critério abaixo aplica o Invariante 2 e o Invariante 3 a situações reais de uso.
 
-**A pergunta de partida é uma só:** o que está no contexto agora é informação que o modelo precisa para esta resposta — ou é histórico que acumulou sem curadoria?
+**A pergunta de partida:** o que está no contexto agora é informação que o modelo precisa para esta resposta — ou é histórico que acumulou sem curadoria?
 
 ### Tabela de decisão: Enxugar / Reiniciar / Externalizar
 
@@ -154,7 +154,7 @@ A lição não é "use Projects". É a que o Invariante 2 sempre entregou: densi
 
 ## 6.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior mostra como uma coordenadora de projetos resolveu context rot substituindo histórico acumulado por contexto curado e estruturado nas extremidades certas; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que ancora o Invariante 2 ao resultado.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que ancora o Invariante 2 ao resultado.
 
 **Aplicação 1 — Auditar um prompt de alto uso e reposicionar instruções críticas.**
 *Situação:* você tem um prompt que usa frequentemente, mas às vezes o modelo não segue uma ou mais das suas instruções, sem motivo aparente. *O que fazer:* abra o prompt e mapeie onde cada instrução está — início, meio ou fim; identifique as instruções que são invioláveis (formato fixo, restrição de conteúdo, critério de qualidade); mova cada instrução inviolável para o início do prompt ou para imediatamente antes da pergunta final; instruções de contexto e apoio ficam no meio. *O ponto de julgamento:* rode o prompt reformatado cinco vezes com inputs variados e observe se as instruções invioláveis estão sendo seguidas com mais consistência. Se a consistência melhorou, você confirmou que era problema de posição. Se não, o problema é outro — a instrução é ambígua ou há conflito com outra instrução — e isso é um diagnóstico igualmente valioso.

@@ -17,21 +17,21 @@
 
 ## 30.1 — ONDE O CAPÍTULO 28 PAROU E ESTE COMEÇA
 
-O [Capítulo 29 — MCP Corporativo](L2-C29-claude-mcp.md) estabeleceu as três camadas de arquitetura corporativa (SaaS externo, MCP interno, filesystem local), o critério de quando construir versus usar Connector existente, e a necessidade de governança como processo — catálogo, checklist, log de chamadas, dono identificado.
+O [Capítulo 29 — MCP Corporativo](L2-C29-claude-mcp.md) estabeleceu as três camadas de arquitetura corporativa (SaaS externo, MCP interno, filesystem local), o critério de quando construir versus usar Connector existente, e a governança como processo — catálogo, checklist, log de chamadas, dono identificado.
 
-Este capítulo assume tudo isso como pré-requisito e avança para o nível de quem **constrói** servidores MCP próprios, opera **múltiplos servidores em composição**, expõe capacidades via **transporte remoto**, e precisa de **segurança e governança de profundidade** — não apenas políticas de adoção, mas arquitetura de escopo, mitigação de ataques, e operação em produção sustentável.
+Este capítulo avança para quem **constrói** servidores MCP próprios, opera **múltiplos servidores em composição**, expõe capacidades via **transporte remoto**, e precisa de **segurança e governança de profundidade** — arquitetura de escopo, mitigação de ataques e operação sustentável em produção.
 
-O [Capítulo 23 — Tool Use](L2-C23-tool-use.md) estabeleceu o loop fundamental: o modelo emite requisições estruturadas, o executor decide e realiza, o resultado retorna ao modelo. MCP não muda esse loop — ele padroniza a camada de **descoberta e contrato** das ferramentas, para que servidores de qualquer provedor falem o mesmo idioma com qualquer cliente. Quando você constrói um servidor MCP, está construindo a interface que o modelo encontrará na outra ponta desse loop.
+O [Capítulo 23 — Tool Use](L2-C23-tool-use.md) estabeleceu o loop fundamental: o modelo emite requisições estruturadas, o executor decide e realiza, o resultado retorna ao modelo. MCP padroniza a camada de **descoberta e contrato** das ferramentas, para que servidores de qualquer provedor falem o mesmo idioma com qualquer cliente. Quando você constrói um servidor MCP, está construindo a interface que o modelo encontrará na outra ponta desse loop.
 
 ---
 
 ## 30.2 — ANALOGIA: A SUBESTAÇÃO ELÉTRICA
 
-Conectar um único servidor MCP é como ligar um eletrodoméstico na tomada — simples, direto, bem definido. Construir e operar infraestrutura de múltiplos servidores MCP, com transporte remoto, autenticação, composição e auditoria, é como projetar uma subestação elétrica que distribui energia para dezenas de pontos de consumo.
+Conectar um único servidor MCP é como ligar um eletrodoméstico na tomada. Construir e operar infraestrutura de múltiplos servidores, com transporte remoto, autenticação, composição e auditoria, é como projetar uma subestação elétrica que distribui energia para dezenas de pontos de consumo.
 
-Na subestação, a tensão de entrada (capacidade bruta do modelo) é transformada e distribuída em circuitos menores, cada um com seu disjuntor próprio, calibrado para a carga específica. Corte um circuito, os outros não caem. Sobrecarregue sem disjuntor, o incêndio se propaga. A auditoria da subestação não é opcional porque a energia que passa por ela alimenta sistemas críticos — e um curto-circuito não notificado pode apagar o prédio inteiro.
+Na subestação, a tensão de entrada é transformada e distribuída em circuitos menores, cada um com seu disjuntor calibrado para a carga específica. Corte um circuito, os outros não caem. Sobrecarregue sem disjuntor, o incêndio se propaga. Auditoria não é opcional quando a energia alimenta sistemas críticos.
 
-A analogia tem um limite deliberado: tomadas não tentam reescrever o consumidor. Servidores MCP remotos maliciosos podem tentar fazer exatamente isso — contaminar o contexto do modelo com instruções disfarçadas de dados. O projeto da subestação precisa incluir esse vetor que tomadas eléctricas não têm.
+A analogia tem um limite deliberado: tomadas não tentam reescrever o consumidor. Servidores MCP remotos maliciosos podem contaminar o contexto do modelo com instruções disfarçadas de dados. O projeto da subestação precisa incluir esse vetor que tomadas elétricas não têm.
 
 ---
 
@@ -39,33 +39,29 @@ A analogia tem um limite deliberado: tomadas não tentam reescrever o consumidor
 
 ### 30.3.1 — Os três primitivos de um servidor MCP
 
-O protocolo MCP define três tipos de primitivo que um servidor pode expor. Cada um tem semântica distinta, e a maioria das implementações subutiliza dois deles.
+O protocolo MCP define três tipos de primitivo. Cada um tem semântica distinta, e a maioria das implementações subutiliza dois deles.
 
-**Resources** são dados consultáveis — texto, imagens, conteúdo estruturado — que o cliente pode solicitar ao servidor e incluir como contexto para o modelo. Diferente de ferramentas, resources são operações sem efeito colateral: leitura de um arquivo, snapshot de um banco, conteúdo de uma URL interna. O cliente decide quando e como incluí-los no contexto; o servidor apenas os fornece quando solicitado.
+**Resources** são dados consultáveis — texto, imagens, conteúdo estruturado — que o cliente solicita ao servidor e inclui como contexto para o modelo. São operações sem efeito colateral: leitura de arquivo, snapshot de banco, conteúdo de URL interna. O servidor os fornece quando solicitado; o cliente decide quando incluí-los.
 
-**Tools** são funções com efeito colateral — operações que mudam estado no mundo: gravar um registro, enviar uma mensagem, criar um artefato, acionar um processo. O modelo decide quando chamar uma tool, mas a execução real acontece no servidor. É aqui que o Invariante 6 incide mais diretamente: tools com efeito irreversível (enviar e-mail, acionar transação financeira, modificar registro de produção) exigem escopo, auditoria e reversibilidade proporcionais ao risco.
+**Tools** são funções com efeito colateral — operações que mudam estado: gravar um registro, enviar uma mensagem, acionar um processo. O modelo decide quando chamar, mas a execução ocorre no servidor. É aqui que o Invariante 6 incide mais diretamente: tools com efeito irreversível exigem escopo, auditoria e reversibilidade proporcionais ao risco.
 
-**Prompts** são templates parametrizados que o servidor oferece ao cliente como pontos de entrada de fluxo. Em vez de o usuário construir um prompt complexo para acionar um fluxo específico, o servidor expõe um Prompt nomeado com parâmetros bem definidos. O cliente invoca o Prompt, preenche os parâmetros, e recebe o template montado. É o mecanismo mais subutilizado dos três — e provavelmente o mais valioso para organizações que querem padronizar fluxos sem depender de cada usuário saber o prompt certo.
+**Prompts** são templates parametrizados que o servidor oferece como pontos de entrada de fluxo. O servidor expõe um Prompt nomeado com parâmetros bem definidos; o cliente invoca, preenche e recebe o template montado. É o mecanismo mais subutilizado dos três — e o mais valioso para organizações que querem padronizar fluxos sem depender de cada usuário saber o prompt certo.
 
 
 ![Diagrama 30.1 — Os três primitivos de um servidor MCP](imagens/cap-30-img-01-tres-primitivos.svg)
 
 
-**A decisão de exposição por primitivo** deve seguir o princípio de escopo mínimo: o que pode ser Resource, deve ser Resource — operação de leitura não requer as garantias de governança de uma Tool. O que for Tool, deve ter a menor superfície possível — uma tool que lê E escreve faz mais do que deveria. Prompts são o mecanismo pelo qual você instala boas práticas de uso diretamente no servidor, disponíveis a qualquer cliente sem depender de memória humana.
+**A decisão de exposição por primitivo** segue o princípio de escopo mínimo: o que pode ser Resource deve ser Resource — leitura não requer as garantias de governança de uma Tool. O que for Tool deve ter a menor superfície possível. Prompts são o mecanismo pelo qual você instala boas práticas diretamente no servidor, disponíveis a qualquer cliente sem depender de memória humana.
 
 ---
 
 ### 30.3.2 — Transporte: stdio local versus HTTP remoto
 
-O protocolo MCP separa explicitamente a camada de **mensagens** (JSON-RPC 2.0, independente de transporte) da camada de **transporte** (como essas mensagens trafegam). Essa separação tem implicações arquiteturais sérias.
+O protocolo MCP separa a camada de **mensagens** (JSON-RPC 2.0) da camada de **transporte**. Essa separação tem implicações arquiteturais sérias.
 
-**Stdio (standard input/output)** é o transporte para servidores locais: o cliente inicia o servidor como subprocesso na mesma máquina, e eles se comunicam via stdin/stdout. Sem rede, sem autenticação de transporte, sem overhead de conexão. É o modelo padrão de Claude Desktop para servidores locais — simples de implementar, zero latência de rede, segurança derivada do isolamento de processo da máquina local.
+**Stdio (standard input/output)** é o transporte para servidores locais: o cliente inicia o servidor como subprocesso na mesma máquina e se comunica via stdin/stdout. Sem rede, sem autenticação de transporte, zero latência. É o modelo padrão de Claude Desktop para servidores locais. A superfície de ataque é a máquina local: quem controla o executável controla tudo; o binário instalado e a configuração trusted são o perímetro.
 
-A implicação de segurança do stdio é que a superfície de ataque é essencialmente a máquina local: quem controla o executável do servidor, controla tudo. Servidores locais não requerem autenticação de rede, mas o binário que você instala e a configuração que você trust são o perímetro.
-
-**HTTP Remoto (Streamable HTTP)** é o transporte para servidores remotos: o cliente envia requisições HTTP POST para o servidor, que pode responder com eventos SSE (Server-Sent Events) para streaming. Este é o transporte de produção para servidores centralizados acessados por múltiplos clientes.
-
-Com HTTP remoto, toda a pilha de segurança de rede passa a ser relevante: TLS 1.3 obrigatório, autenticação de cada requisição, validação de origem, rate limiting. A distância entre o cliente e o servidor deixa de ser apenas latência — é também superfície de interceptação, man-in-the-middle, e tokens expostos em trânsito.
+**HTTP Remoto (Streamable HTTP)** é o transporte de produção para servidores centralizados acessados por múltiplos clientes: requisições HTTP POST, respostas via SSE para streaming. Toda a pilha de segurança de rede torna-se relevante: TLS 1.3 obrigatório, autenticação por requisição, validação de origem, rate limiting. A distância é também superfície de interceptação, man-in-the-middle e tokens expostos em trânsito.
 
 
 ![Diagrama 30.2 — Stdio local versus HTTP remoto](imagens/cap-30-img-02-transportes.svg)
@@ -80,57 +76,55 @@ Com HTTP remoto, toda a pilha de segurança de rede passa a ser relevante: TLS 1
 | **Auditoria** | Log local, difícil de centralizar | Log centralizado via middleware |
 | **Quando usar** | Servidor de arquivo local, tool de desenvolvedor | Servidor corporativo compartilhado, SaaS |
 
-A decisão de transporte é, na prática, uma decisão de quem usa o servidor. Servidor de uso individual em uma máquina: stdio. Servidor compartilhado por uma equipe, departamento ou organização: HTTP remoto com toda a pilha de autenticação.
+A decisão é simples: uso individual em uma máquina → stdio. Servidor compartilhado por equipe ou organização → HTTP remoto com toda a pilha de autenticação.
 
 ---
 
 ### 30.3.3 — Autenticação, escopo e permissões em servidores remotos
 
-Servidores MCP remotos devem tratar cada requisição de cliente como não confiável até autenticada e autorizada. Isso não é paranoia — é o padrão de qualquer API de produção, e MCP não tem nenhuma razão para ser diferente.
+Servidores MCP remotos devem tratar cada requisição como não confiável até autenticada e autorizada — é o padrão de qualquer API de produção.
 
-**Autenticação de transporte** é a primeira linha: toda comunicação via TLS 1.3 sem downgrade. Tokens em transit sem TLS são tokens expostos. Em ambientes corporativos com múltiplos serviços internos, mTLS (mutual TLS) adiciona autenticação bidirecional — o cliente prova identidade para o servidor e o servidor prova identidade para o cliente, eliminando a classe de ataque em que um servidor impostor recebe tráfego legítimo.
+**Autenticação de transporte** é a primeira linha: TLS 1.3 sem downgrade obrigatório. Tokens em trânsito sem TLS são tokens expostos. Em ambientes corporativos, mTLS adiciona autenticação bidirecional — cliente e servidor provam identidade mutuamente, eliminando servidores impostores.
 
-**OAuth 2.1 com PKCE** é o modelo de autorização recomendado para servidores MCP remotos que acessam recursos de terceiros. O fluxo padrão é: o cliente MCP inicia o fluxo OAuth, o usuário autentica na fonte de autoridade, o servidor MCP recebe token de acesso com escopo delimitado, e usa esse token para chamar a API downstream. A implicação crítica: o servidor MCP jamais deve armazenar credenciais de usuário — deve receber e repassar tokens com o escopo mínimo necessário para a operação em curso.
+**OAuth 2.1 com PKCE** é o modelo de autorização recomendado para servidores remotos que acessam recursos de terceiros: o cliente inicia o fluxo, o usuário autentica na fonte de autoridade, o servidor recebe token de acesso com escopo delimitado e o usa para chamar a API downstream. Implicação crítica: o servidor jamais armazena credenciais de usuário — recebe e repassa tokens com o escopo mínimo necessário para a operação em curso.
 
-**Validação de audiência de token** é o detalhe que determina a diferença entre OAuth implementado e OAuth implementado corretamente: o servidor deve verificar que o token foi emitido **para ele**, não apenas que é um token válido. Um token roubado de outro serviço não deve ser aceito. A validação de audience (`aud` claim) faz essa verificação.
+**Validação de audiência de token**: o servidor deve verificar que o token foi emitido **para ele**, não apenas que é um token válido. Um token roubado de outro serviço não deve ser aceito. A validação do `aud` claim faz essa verificação.
 
-**Princípio de escopo mínimo** aplicado a servidores MCP: cada tool deve solicitar apenas as permissões necessárias para sua operação específica. Um servidor que acessa um data warehouse não precisa de permissão de escrita. Uma tool que lê documentos de um bucket S3 não precisa de acesso a outros buckets. Escopo amplo pode parecer conveniente na construção — e vira passivo de auditoria e superfície de ataque em produção.
+**Escopo mínimo** por tool: cada operação solicita apenas as permissões necessárias. Servidor que acessa data warehouse não precisa de escrita. Tool que lê um bucket S3 não precisa de acesso a outros. Escopo amplo parece conveniente na construção — vira passivo de auditoria em produção.
 
 ---
 
 ### 30.3.4 — Composição de múltiplos servidores e roteamento
 
-Um cliente MCP pode conectar a múltiplos servidores simultaneamente. Essa capacidade de composição é onde a arquitetura de MCP se torna genuinamente poderosa — e onde surgem os problemas de governança mais sutis.
+Um cliente MCP pode conectar a múltiplos servidores simultaneamente — onde a arquitetura se torna genuinamente poderosa e onde surgem os problemas de governança mais sutis.
 
-**Namespacing e roteamento** são o primeiro problema. Se dois servidores expõem uma tool com o mesmo nome (`search`), o cliente precisa de regra de desambiguação. Boas implementações usam namespacing explícito no nome da tool: `github.search` e `notion.search` em vez de dois `search` em conflito. Ao construir seu servidor, trate o nome de cada primitivo como interface pública — mudanças quebram clientes.
+**Namespacing e roteamento**: se dois servidores expõem uma tool com o mesmo nome (`search`), o cliente precisa de regra de desambiguação. Use namespacing explícito: `github.search` e `notion.search` em vez de dois `search` em conflito. Trate o nome de cada primitivo como interface pública — mudanças quebram clientes.
 
-**Federação de contexto** é o problema de gerenciamento. Cada servidor pode retornar Resources que são incluídos no contexto do modelo. Com múltiplos servidores ativos, o context window se enche rapidamente. O cliente precisa de estratégia explícita: quais Resources são incluídos automaticamente, quais por demanda, quais têm TTL de cache. Sem essa estratégia, o contexto cresce sem controle e a qualidade das respostas degrada. O [Capítulo 6 — Tokens e Contexto](L2-C06-tokens-contexto.md) estabelece a economia que fundamenta esse gerenciamento.
+**Federação de contexto**: cada servidor pode retornar Resources incluídos no contexto do modelo. Com múltiplos servidores ativos, o context window se enche rapidamente. O cliente precisa de estratégia: quais Resources são incluídos automaticamente, quais por demanda, quais têm TTL de cache. Sem estratégia, o contexto cresce e a qualidade degrada. O [Capítulo 6 — Tokens e Contexto](L2-C06-tokens-contexto.md) estabelece a economia que fundamenta esse gerenciamento.
 
-**Isolamento de falha** é a propriedade que separa arquitetura de composição madura de coleção frágil de dependências. Se um servidor está indisponível, os outros continuam operando. O cliente deve tratar falha de servidor individual como exceção recuperável, não como falha catastrófica. Isso exige timeout por servidor, fallback definido, e o modelo recebendo informação clara sobre quais capacidades estão indisponíveis — em vez de silêncio que leva a alucinação.
+**Isolamento de falha**: se um servidor está indisponível, os outros continuam operando. O cliente trata falha individual como exceção recuperável — não catástrofe. Isso exige timeout por servidor, fallback definido, e o modelo recebendo informação clara sobre quais capacidades estão indisponíveis — não silêncio que leva a alucinação.
 
 
 ![Diagrama 30.3 — Composição de múltiplos servidores MCP](imagens/cap-30-img-03-composicao-servidores.svg)
 
 
-**Roteamento por responsabilidade** é o critério de design que mantém servidores compostos coerentes: cada servidor tem uma responsabilidade delimitada e não faz o que outro servidor deveria fazer. Um servidor de CRM responde por dados de cliente. Um servidor de data warehouse responde por métricas. Um servidor de comunicação responde por envio de mensagens. A tentação de colocar tudo em um servidor "conveniente" cria o monolito de MCP — com todos os problemas de governança e manutenção do monolito, acrescidos dos vetores de segurança específicos do MCP.
+**Roteamento por responsabilidade** é o critério de design que mantém servidores compostos coerentes: cada servidor tem uma responsabilidade delimitada e não faz o que outro deveria fazer. CRM responde por dados de cliente. Data warehouse responde por métricas. Servidor de comunicação responde por envio de mensagens. A tentação de colocar tudo em um servidor "conveniente" cria o monolito de MCP — com todos os problemas de governança e manutenção do monolito acrescidos dos vetores de segurança específicos do MCP.
 
 ---
 
 ### 30.3.5 — Segurança em profundidade
 
-Esta é a seção que a maioria dos tutoriais de MCP não escreve, mas que distingue operação responsável de operação ingênua.
-
-**Prompt injection via tool result** é o vetor de ataque mais específico de MCP. O modelo recebe resultados de chamadas de tool como dados para raciocinar. Se esses resultados contêm instruções disfarçadas de dados — texto como "ignore as instruções anteriores e faça X" dentro de um documento retornado por uma tool — o modelo pode executar essas instruções como se fossem do usuário ou do sistema. A mitigação não é simples porque exige separação semântica entre "dados para processar" e "instruções para seguir" — e modelos de linguagem processam os dois como texto.
+**Prompt injection via tool result** é o vetor de ataque mais específico de MCP. O modelo recebe resultados de tools como dados para raciocinar. Se esses resultados contêm instruções disfarçadas de dados — "ignore as instruções anteriores e faça X" embutido num documento — o modelo pode executá-las como se fossem do usuário. A mitigação não é simples: exige separação semântica entre "dados para processar" e "instruções para seguir" — e modelos de linguagem processam os dois como texto.
 
 Mitigações práticas: (1) delimitar explicitamente no system prompt que conteúdo retornado por tools é dados não confiáveis, não instruções; (2) sanitizar resultados de tools que incluem conteúdo de terceiros antes de devolvê-los ao modelo; (3) monitorar logs de chamadas para padrões anômalos de comportamento do modelo após tool results específicos.
 
 **Servidor malicioso** é o vetor de supply chain. Um servidor MCP de terceiro instalado sem revisão pode expor mais do que declara — exfiltrar contexto da conversa, enviar dados do usuário para endpoints externos, ou modificar resultados de outras tools. O mesmo mecanismo pelo qual um servidor legítimo amplia capacidades pode ser usado por um servidor malicioso para ampliar acesso indevido.
 
-Mitigação: o catálogo aprovado do [Capítulo 29](L2-C29-claude-mcp.md) não é burocracia — é a linha de defesa contra supply chain compromise. Nenhum servidor entra em uso sem revisão de código ou avaliação de procedência. Em Enterprise, o Admin centraliza esse controle.
+Mitigação: o catálogo aprovado do [Capítulo 29](L2-C29-claude-mcp.md) não é burocracia — é a defesa contra supply chain compromise. Nenhum servidor entra em uso sem revisão de código ou avaliação de procedência. Em Enterprise, o Admin centraliza esse controle.
 
-**Confused deputy** é o ataque mais sutil. O servidor MCP age com suas próprias permissões em vez das do usuário — dando ao modelo acesso mais amplo do que o usuário teria se operasse diretamente. O cenário clássico: o servidor tem um token de serviço com acesso amplo, o usuário tem permissão limitada, mas o modelo via MCP acessa recursos que o usuário não deveria alcançar. A mitigação é token passthrough — o servidor usa o token do usuário, não um token de serviço próprio, garantindo que o modelo opere com exatamente as permissões que o usuário teria diretamente. Quando token passthrough não é possível, escopo explícito de operação por usuário, com validação server-side de que a operação solicitada está dentro das permissões do usuário autenticado.
+**Confused deputy** é o ataque mais sutil. O servidor MCP age com suas próprias permissões em vez das do usuário — dando ao modelo acesso mais amplo do que o usuário teria se operasse diretamente. Cenário clássico: servidor com token de serviço de acesso amplo, usuário com permissão limitada, mas o modelo via MCP acessando recursos que o usuário não deveria alcançar. A mitigação é token passthrough — o servidor usa o token do usuário, não um token de serviço próprio, garantindo que o modelo opere com exatamente as permissões que o usuário teria diretamente. Quando passthrough não é possível: escopo explícito de operação por usuário com validação server-side.
 
-**Superfície de exfiltração** é o risco que o modelo, manipulado por prompt injection, chame uma tool para exfiltrar dados. A mitigação é categorizar tools por tipo de dado que podem acessar e aplicar controles de egress: uma tool que lê documentos confidenciais não deveria poder escrever em endpoints externos. Separação de tools de leitura e escrita, com validação de destino para tools de saída.
+**Superfície de exfiltração**: modelo manipulado por prompt injection chama uma tool para exfiltrar dados. A mitigação é categorizar tools por tipo de dado que podem acessar e aplicar controles de egress — tool que lê documentos confidenciais não deveria escrever em endpoints externos. Separe tools de leitura e escrita; valide destino em tools de saída.
 
 
 ![Diagrama 30.4 — Quatro vetores de ataque em servidores MCP](imagens/cap-30-img-04-vetores-ataque.svg)
@@ -157,18 +151,18 @@ Mitigação: o catálogo aprovado do [Capítulo 29](L2-C29-claude-mcp.md) não �
 
 ### 30.3.6 — MCP em produção: versionamento, observabilidade e rate limiting
 
-Construir um servidor MCP que funciona em desenvolvimento é diferente de operar um que sustenta produção.
+Construir um servidor que funciona em desenvolvimento é diferente de operar um que sustenta produção.
 
-**Versionamento de API de servidor** é o problema que aparece quando clientes em produção dependem de tools que você precisa modificar. Mudanças de nome de tool ou schema de parâmetros quebram clientes silenciosamente — o modelo tenta chamar a tool antiga, recebe erro ou resultado inesperado, e degrada sem alertar. A disciplina é tratar primitivos MCP como API pública: versionamento semântico, período de deprecação com anúncio, e backward compatibility como constraint de design, não aspiração.
+**Versionamento de API de servidor** é o problema que aparece quando clientes em produção dependem de tools que você precisa modificar. Mudanças de nome de tool ou schema de parâmetros quebram clientes silenciosamente — o modelo tenta chamar a tool antiga, recebe erro ou resultado inesperado, e degrada sem alertar. Trate primitivos MCP como API pública: versionamento semântico, período de deprecação com anúncio, backward compatibility como constraint de design.
 
 **Observabilidade** em servidores MCP tem três camadas:
 - **Log de chamadas** (o mínimo): qual tool foi chamada, por qual usuário, com quais parâmetros, com qual resultado, com qual timestamp. Este é o requisito de compliance e o pré-requisito para qualquer diagnóstico. Servidor MCP sem log de chamadas em produção é caixa-preta.
 - **Métricas de latência e erro**: p50/p95/p99 de latência por tool, taxa de erro por tool, disponibilidade do servidor. Ferramentas que degradam sem alert afetam qualidade das respostas sem sintoma visível.
 - **Tracing distribuído**: quando o servidor MCP é parte de uma cadeia agentica mais longa (ver [Capítulo 32 — Subagents e Workflows](L2-C32-subagents-workflows.md)), o span do MCP deve ser parte do trace global — o mesmo trace ID que identifica a requisição do usuário deve atravessar o servidor MCP para que um incidente seja rastreável de ponta a ponta.
 
-**Rate limiting** tem dois planos distintos. No plano do servidor, protege o serviço subjacente de sobrecarga: um modelo em loop agentico pode chamar uma tool dezenas de vezes por minuto sem um usuário humano percebendo. Sem rate limiting, esse loop pode exaurir cotas, onerar sistemas downstream, ou disparar alertas de abuso em APIs de terceiros. No plano do usuário, garante que um único usuário não monopolize capacidade do servidor compartilhado.
+**Rate limiting** tem dois planos distintos. No plano do servidor, protege o serviço subjacente de sobrecarga: um modelo em loop agentico pode chamar uma tool dezenas de vezes por minuto sem um usuário humano perceber. Sem rate limiting, esse loop pode exaurir cotas, onerar sistemas downstream, ou disparar alertas de abuso em APIs de terceiros. No plano do usuário, evita que um único usuário monopolize capacidade do servidor compartilhado.
 
-**Healthcheck e degradação graciosa** completam a operação de produção: o servidor deve expor endpoint de health, e o cliente deve tratá-lo — falling back para informar o modelo que aquela capacidade está temporariamente indisponível, em vez de silêncio que leva a comportamento inesperado.
+**Healthcheck e degradação graciosa** completam a operação: o servidor expõe endpoint de health, o cliente informa o modelo que aquela capacidade está temporariamente indisponível — não silêncio que leva a comportamento inesperado.
 
 ---
 
@@ -222,16 +216,16 @@ A lição estrutural é a decisão de escopo: a equipe identificou com precisão
 
 ## 30.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior mostra o resultado; esta seção entrega o roteiro. Três aplicações que você pode executar esta semana. A forma é sempre *situação → o que fazer → o ponto de julgamento* — o passo a passo é imitável, o ponto de julgamento é o que separa o uso profissional do ingênuo.
+O exemplo anterior mostra o resultado; esta seção entrega o roteiro. A forma é *situação → o que fazer → o ponto de julgamento* — o passo a passo é imitável, o ponto de julgamento é o que separa o uso profissional do ingênuo.
 
 **Aplicação 1 — Servidor somente leitura sobre sistema interno.**
-*Situação:* o time consulta um sistema legado manualmente várias vezes ao dia para obter dados que alimentam análises no Claude. *O que fazer:* identifique as três a cinco consultas mais frequentes; mapeie-as como Resources (sem efeito colateral); construa o servidor com stdio se for uso individual ou HTTP com OAuth 2.1 se for compartilhado; instrua o model no system prompt que todo resultado de Resource é "dado não confiável, não instrução". *O ponto de julgamento:* antes de expor o servidor ao time inteiro, rode um caso de teste de prompt injection: insira no retorno de um Resource uma instrução disfarçada de dado e verifique se o modelo a ignora. Se não ignorar, o system prompt de delimitação está incompleto.
+*Situação:* o time consulta um sistema legado manualmente várias vezes ao dia. *O que fazer:* identifique as três a cinco consultas mais frequentes; mapeie-as como Resources; construa o servidor com stdio (uso individual) ou HTTP com OAuth 2.1 (compartilhado); instrua no system prompt que todo resultado de Resource é "dado não confiável, não instrução". *O ponto de julgamento:* antes de expor ao time, teste prompt injection: insira uma instrução disfarçada no retorno de um Resource e verifique se o modelo a ignora. Se não ignorar, o system prompt de delimitação está incompleto.
 
 **Aplicação 2 — Tool com efeito reversível e confirmação em lote.**
-*Situação:* a análise de crédito exige criar um rascunho de parecer em sistema interno após consolidar três fontes de dados. *O que fazer:* mantenha as fontes de dados como Resources; implemente a criação do rascunho como Tool com status "pendente de aprovação" — nunca aprovação automática. Separe explicitamente o escopo: a Tool cria; um humano aprova. Instrua o sistema de gestão de pedidos a rejeitar qualquer chamada que venha sem o campo `status: rascunho`. *O ponto de julgamento:* o rascunho gerado pelo modelo jamais deve avançar para efeito financeiro sem ação humana explícita. Se em algum patamar do fluxo isso puder acontecer automaticamente, o escopo da Tool está errado.
+*Situação:* análise de crédito exige criar rascunho de parecer após consolidar três fontes de dados. *O que fazer:* mantenha fontes de dados como Resources; implemente a criação do rascunho como Tool com status "pendente de aprovação" — nunca automático. A Tool cria; um humano aprova. Instrua o sistema a rejeitar chamadas sem o campo `status: rascunho`. *O ponto de julgamento:* o rascunho jamais avança para efeito financeiro sem ação humana explícita. Se em algum ponto do fluxo isso puder acontecer automaticamente, o escopo da Tool está errado.
 
 **Aplicação 3 — Composição de dois servidores com isolamento de falha.**
-*Situação:* o fluxo do sistema precisa consultar tanto o ERP interno quanto um SaaS externo com Connector disponível. *O que fazer:* opere os dois servidores com namespacing explícito nos nomes das tools (`erp.consultar_cliente`, `saas.buscar_pedido`); configure timeout independente por servidor; instrua o modelo sobre o que fazer quando um dos servidores estiver indisponível (continuar com o que tem, reportar a lacuna ao usuário, nunca inferir o dado ausente). *O ponto de julgamento:* faça um teste de resiliência: derrube um dos servidores e observe se o modelo interrompe o fluxo corretamente ou continua com dado ausente sem avisar. Comportamento correto é reportar a indisponibilidade; comportamento incorreto é silêncio ou inferência.
+*Situação:* o fluxo precisa consultar ERP interno e SaaS externo. *O que fazer:* use namespacing explícito (`erp.consultar_cliente`, `saas.buscar_pedido`); configure timeout independente por servidor; instrua o modelo a reportar a lacuna quando um servidor estiver indisponível — nunca inferir o dado ausente. *O ponto de julgamento:* derrube um dos servidores e observe se o modelo reporta a indisponibilidade ou continua em silêncio com dado ausente. Silêncio ou inferência são comportamento incorreto.
 
 > 🔧 **EXERCÍCIO**
 > Pegue o sistema interno de maior frequência de consulta manual na sua organização. Mapeie cada operação em Resource ou Tool usando o critério da seção 30.3.1 (efeito colateral = Tool; leitura = Resource). Para cada Tool identificada, escreva o nível de reversibilidade (reversível / parcialmente reversível / irreversível) e o que a tabela de escopo da seção 30.4 prescreve. Se alguma Tool for irreversível e você não conseguir imaginar um ponto de confirmação humana antes dela, o servidor não está pronto para produção.
@@ -254,11 +248,11 @@ O que é durável e fica neste capítulo: o padrão de três primitivos (Resourc
 
 ## 30.8 — LIMITAÇÕES E O QUE ESTE CAPÍTULO NÃO RESOLVE
 
-**MCP não resolve o problema de confiança no modelo.** Governança de servidor MCP protege os sistemas acessados pelo modelo — não garante que o modelo usará as ferramentas corretamente. Um modelo pode chamar uma tool com parâmetros errados, interpretar resultados de forma equivocada, ou escolher a tool errada para uma situação. Validação do comportamento do modelo (evals, monitoramento de saída) é complementar e não substituível por governança de servidor.
+**MCP não resolve o problema de confiança no modelo.** Governança de servidor protege os sistemas acessados — não garante que o modelo usará as ferramentas corretamente. Validação do comportamento (evals, monitoramento de saída) é complementar e não substituível por governança de servidor.
 
-**Composição de múltiplos servidores não é gratuita em tokens.** Cada Resource incluído, cada tool result, consome context window. O [Capítulo 6 — Tokens e Contexto](L2-C06-tokens-contexto.md) estabelece a economia; em composição de múltiplos servidores, essa economia precisa ser gerenciada ativamente ou a qualidade degrada à medida que o contexto satura.
+**Composição de múltiplos servidores não é gratuita em tokens.** Cada Resource, cada tool result, consome context window. O [Capítulo 6 — Tokens e Contexto](L2-C06-tokens-contexto.md) estabelece a economia que precisa ser gerenciada ativamente — contexto saturado degrada qualidade.
 
-**Segurança de MCP é um campo em rápida evolução.** Os vetores descritos neste capítulo são os documentados ao momento desta edição — novos padrões de ataque específicos de MCP surgirão. A disciplina de revisão periódica de segurança dos servidores em uso é insubstituível; este capítulo dá o framework, não a lista completa de ameaças.
+**Segurança de MCP é campo em rápida evolução.** Os vetores descritos são os documentados ao momento desta edição — novos padrões de ataque surgirão. Revisão periódica dos servidores em uso é insubstituível; este capítulo dá o framework, não a lista completa de ameaças.
 
 ---
 

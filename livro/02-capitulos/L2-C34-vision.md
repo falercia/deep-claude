@@ -11,21 +11,21 @@
 >
 > *"O modelo entrega o plausível, não o verdadeiro — e os dois coincidem, até a hora em que não."*
 >
-> Vision é o Invariante 1 em sua forma mais traiçoeira. Um modelo que alucina um texto num chat produz uma frase que parece errada quando lida com atenção. Um modelo que alucina um número numa tabela de imagem produz um dígito que parece absolutamente correto — porque está no formato certo, na casa decimal certa, e nenhum elemento visual no entorno entrega a mentira. O plausível e o verdadeiro se parecem tanto que a divergência entre eles não tem sinal de aviso.
+> Vision é o Invariante 1 em sua forma mais traiçoeira. Um modelo que alucina texto num chat produz uma frase que parece errada quando lida com atenção. Um modelo que alucina um número numa tabela de imagem produz um dígito que parece correto — está no formato certo, na casa decimal certa, e nenhum elemento visual entrega a mentira. O plausível e o verdadeiro se parecem tanto que a divergência não tem sinal de aviso.
 >
-> Vision não é uma ferramenta de extração de verdade. É uma ferramenta de extração de plausibilidade visual — e a diferença entre as duas, em contextos de decisão, pode custar caro. Este capítulo ensina a usar a capacidade de forma que o custo da divergência, quando ela ocorre, sempre recaia onde pode ser absorvido.
+> Vision não é ferramenta de extração de verdade — é ferramenta de extração de plausibilidade visual. A diferença, em contextos de decisão, pode custar caro. Este capítulo ensina a usar a capacidade de forma que o custo da divergência, quando ocorre, recaia onde pode ser absorvido.
 
 ---
 
 ## 34.1 — O CONCEITO INTUITIVO
 
-Até recentemente, um modelo de linguagem só entendia texto. Para trabalhar com uma imagem, era preciso descrever a imagem em palavras — e a qualidade da análise dependia inteiramente da qualidade da descrição. Isso criava um gargalo óbvio: quem não conseguia descrever o que via em termos precisos não conseguia aproveitar a capacidade do modelo.
+Até recentemente, um modelo de linguagem só entendia texto. Para trabalhar com uma imagem, era preciso descrevê-la em palavras — e a qualidade da análise dependia inteiramente da qualidade da descrição. Isso criava um gargalo óbvio: quem não sabia descrever o que via em termos precisos não aproveitava a capacidade do modelo.
 
 Vision elimina esse gargalo. O modelo aceita a imagem diretamente como input e raciocina sobre ela da mesma forma que raciocina sobre texto: lê, interpreta, compara, extrai, responde. Uma foto de um contrato, uma tela de sistema, um gráfico de barras, uma nota fiscal manuscrita — tudo isso pode ser enviado ao modelo, que devolve análise, transcrição, interpretação ou extração estruturada.
 
-O ganho prático é imenso. Workflows que antes exigiam digitalização manual, OCR dedicado, ou um humano transcrevendo dados visuais podem ser automatizados ou acelerados por vision. E a fluência do modelo ao lidar com esses materiais costuma impressionar quem experimenta pela primeira vez.
+Workflows que antes exigiam digitalização manual, OCR dedicado, ou um humano transcrevendo dados visuais podem ser automatizados ou acelerados por vision.
 
-Mas há um detalhe que transforma vision em armadilha para quem não conhece o mecanismo: o modelo descreve o que não consegue ler com a mesma fluência com que descreve o que lê corretamente. Um número ilegível numa imagem de baixa resolução não produz "não consigo ler". Produz um número que parece certo. Uma palavra apagada num manuscrito antigo não produz "texto ilegível". Produz uma palavra plausível. Uma célula de tabela ambígua não produz incerteza — produz um valor.
+O detalhe que transforma vision em armadilha: o modelo descreve o que não consegue ler com a mesma fluência com que descreve o que lê corretamente. Um número ilegível numa imagem de baixa resolução não produz "não consigo ler" — produz um número que parece certo. Uma palavra apagada num manuscrito não produz "texto ilegível" — produz uma palavra plausível. Uma célula de tabela ambígua não produz incerteza — produz um valor.
 
 **Vision é input plausível-mas-falível.** Essa frase é o núcleo do capítulo inteiro.
 
@@ -33,13 +33,13 @@ Mas há um detalhe que transforma vision em armadilha para quem não conhece o m
 
 ## 34.2 — ANALOGIA: O PERITO GRAFOTÉCNICO RÁPIDO DEMAIS
 
-Imagine que você contratou um perito grafotécnico excepcionalmente rápido. Em segundos, ele analisa qualquer documento, transcreve manuscritos, lê tabelas, descreve diagramas, e devolve um relatório estruturado. A velocidade é impressionante. A maioria dos laudos está correta.
+Imagine que você contratou um perito grafotécnico excepcionalmente rápido. Em segundos, ele analisa qualquer documento, transcreve manuscritos, lê tabelas, descreve diagramas e devolve um relatório estruturado. A velocidade é impressionante. A maioria dos laudos está correta.
 
-O problema aparece quando ele encontra uma página manchada, uma assinatura sobreposta, um número mal impresso. Um perito humano diria: "esta parte está ilegível, preciso de uma cópia melhor". O seu perito rápido não faz isso. Ele completa o laudo sem pausa, com o mesmo tom seguro, preenchendo a parte obscura com o que parecia mais provável dado o contexto. O laudo fica completo, bem formatado, e plausível — e errado em exatamente o trecho que você mais precisava de acerto.
+O problema aparece quando ele encontra uma página manchada, uma assinatura sobreposta, um número mal impresso. Um perito humano diria: "esta parte está ilegível, preciso de uma cópia melhor". O seu perito rápido não faz isso — completa o laudo sem pausa, com o mesmo tom seguro, preenchendo a parte obscura com o que parecia mais provável. O laudo fica completo, bem formatado e plausível — e errado em exatamente o trecho que você mais precisava de acerto.
 
-Você só descobre o erro se conferir o original. A maioria não vai conferir porque o laudo parece perfeito.
+Você só descobre o erro se conferir o original. A maioria não confere porque o laudo parece perfeito.
 
-Vision funciona assim. O modelo é o perito rápido. A pergunta de governança não é "o perito é bom?" — ele é, na média, muito bom. A pergunta é: **"para esta tarefa específica, o custo de um erro plausível que parece certo é aceitável sem verificação?"**
+Vision funciona assim. O modelo é o perito rápido. A pergunta de governança não é "o perito é bom?" — na média, é muito bom. A pergunta é: **"para esta tarefa específica, o custo de um erro plausível que parece certo é aceitável sem verificação?"**
 
 ---
 
@@ -47,11 +47,11 @@ Vision funciona assim. O modelo é o perito rápido. A pergunta de governança n
 
 ### 34.3.1 — Input visual e tokenização
 
-Quando você envia uma imagem ao modelo, ela não é processada como os pixels chegam. O modelo converte a imagem em uma representação interna — um conjunto de tokens visuais — e raciocina sobre essa representação da mesma forma que raciocina sobre tokens de texto.
+Quando você envia uma imagem ao modelo, ela não chega como pixels brutos. O modelo converte a imagem em tokens visuais e raciocina sobre essa representação da mesma forma que raciocina sobre texto.
 
-**Imagens têm custo em tokens proporcional à resolução.** Uma imagem de alta resolução consome mais tokens do que uma de baixa resolução. Para uma aplicação que processa centenas de imagens por dia, a escolha de resolução importa tanto no custo de API quanto no consumo de janela de contexto da sessão. Valores concretos de custo por imagem ficam no [Apêndice J — Apêndice Vivo](../04-apendices/L2-APX-J-apendice-vivo.md), porque mudam com frequência.
+**Imagens têm custo em tokens proporcional à resolução.** Para aplicações que processam centenas de imagens por dia, a escolha de resolução importa tanto no custo de API quanto no consumo de janela de contexto. Valores concretos ficam no [Apêndice J — Apêndice Vivo](../04-apendices/L2-APX-J-apendice-vivo.md), porque mudam com frequência.
 
-A resolução também afeta a qualidade de análise — mas não linearmente. Em muitas tarefas de extração de documentos, resolução moderada é suficiente — e mais econômica. Redimensionar imagens antes de enviar ao modelo é uma otimização válida e frequentemente esquecida.
+A resolução afeta a qualidade de análise, mas não linearmente. Em muitas tarefas de extração, resolução moderada é suficiente — e mais econômica. Redimensionar imagens antes de enviar ao modelo é uma otimização válida e frequentemente esquecida.
 
 
 ![Diagrama 34.1 — Input visual: do pixel ao token](imagens/cap-34-img-01-pixel-token.svg)
@@ -59,35 +59,35 @@ A resolução também afeta a qualidade de análise — mas não linearmente. Em
 
 ### 34.3.2 — Casos de uso: onde vision entrega valor
 
-Vision cobre uma gama ampla de tarefas. Algumas são mais confiáveis que outras, e esse gradiente importa no design do fluxo.
+Vision cobre uma gama ampla de tarefas. Algumas são mais confiáveis que outras — esse gradiente importa no design do fluxo.
 
-**Extração de documentos estruturados.** Formulários, faturas, contratos escaneados, notas fiscais — vision consegue identificar campos, extrair valores e devolver JSON estruturado. Funciona bem para documentos limpos e de boa resolução. É o caso de uso de maior retorno operacional.
+**Extração de documentos estruturados.** Formulários, faturas, contratos escaneados, notas fiscais — vision identifica campos, extrai valores e devolve JSON estruturado. Funciona bem para documentos limpos e de boa resolução. Maior retorno operacional.
 
-**Leitura de tabelas.** Vision lê tabelas razoavelmente bem quando as células são bem delimitadas e o texto é legível. O problema aparece em tabelas densas, com células mescladas, texto diminuto ou baixo contraste. Nessas condições, erros de leitura surgem sem sinal visível.
+**Leitura de tabelas.** Razoável quando as células são bem delimitadas e o texto é legível. Problemas aparecem em tabelas densas, com células mescladas, texto diminuto ou baixo contraste — erros de leitura surgem sem sinal visível.
 
-**Análise de gráficos e visualizações.** Vision descreve gráficos de barras, linhas, pizza, scatter plots. Identifica tendências, compara categorias, lê rótulos visíveis. A leitura de valores exatos em gráficos sem rótulos numéricos explícitos é estimada, não medida — e deve ser tratada como tal.
+**Análise de gráficos e visualizações.** Vision descreve gráficos de barras, linhas, pizza, scatter plots; identifica tendências, compara categorias, lê rótulos visíveis. Valores exatos em gráficos sem rótulos numéricos explícitos são estimados, não medidos — trate como tal.
 
-**OCR de manuscritos.** Vision transcende o OCR clássico porque entende contexto: um manuscrito médico com abreviações e termos técnicos é mais bem lido por vision do que por OCR simples que não conhece o domínio. Mas manuscritos ambíguos ou ilegíveis geram transcrições plausíveis que podem estar erradas.
+**OCR de manuscritos.** Vision supera o OCR clássico porque entende contexto: um manuscrito médico com abreviações e termos técnicos é mais bem lido do que por OCR simples. Mas manuscritos ambíguos geram transcrições plausíveis que podem estar erradas.
 
-**Descrição de imagens.** Descrever o conteúdo de fotos, ilustrações, capturas de tela — vision faz isso com alta qualidade para fins de acessibilidade, catalogação ou documentação.
+**Descrição de imagens.** Fotos, ilustrações, capturas de tela — vision faz isso com alta qualidade para acessibilidade, catalogação ou documentação.
 
-**Diagramas e esquemas técnicos.** Vision entende diagramas de fluxo, arquiteturas de sistema, plantas baixas, esquemas elétricos simples. A leitura de detalhes finos (valores em componentes, números de identificação) deve ser verificada.
+**Diagramas e esquemas técnicos.** Diagramas de fluxo, arquiteturas de sistema, plantas baixas, esquemas elétricos simples. Detalhes finos (valores em componentes, números de identificação) devem ser verificados.
 
-**Interpretação de telas (screenshots).** Vision lê interfaces gráficas, identifica botões, menus e estados. Este é o input visual que alimenta Computer Use — tema tratado no capítulo que cobre essa capacidade.
+**Interpretação de telas (screenshots).** Vision lê interfaces gráficas, identifica botões, menus e estados. É o input visual que alimenta Computer Use — tema tratado no capítulo que cobre essa capacidade.
 
 ### 34.3.3 — As limitações reais e perigosas
 
-Aqui está o núcleo do Invariante 1 aplicado ao visual. Estas não são limitações menores: são falhas com perfil de risco específico que precisam de contramedida deliberada no design do workflow.
+Estas não são limitações menores: são falhas com perfil de risco específico que precisam de contramedida deliberada no design do workflow.
 
-**Alucinação de texto em imagens.** Esta é a limitação mais perigosa. Quando o modelo encontra texto numa imagem que está degradado, sobreposto, muito pequeno ou em fonte incomum, ele completa o que parece plausível — não o que está legível. O resultado é texto transcrito com aparência de fidelidade que pode diferir do original. Em contextos onde o texto importa (valores, nomes, CPFs, datas), este é o ponto de falha crítico.
+**Alucinação de texto em imagens.** A limitação mais perigosa. Quando o modelo encontra texto degradado, sobreposto, muito pequeno ou em fonte incomum, completa o que parece plausível — não o que está legível. O resultado é texto transcrito com aparência de fidelidade que pode diferir do original. Em contextos onde o texto importa (valores, nomes, CPFs, datas), este é o ponto de falha crítico.
 
-**Erros em números de tabelas.** Tabelas densas com muitos números são um ambiente fértil para erro de leitura. O modelo pode transpor dígitos, ler um 6 como 8, misturar a linha de uma célula com a da célula adjacente. O erro é difícil de detectar porque a célula errada tem o mesmo formato das células corretas.
+**Erros em números de tabelas.** Tabelas densas são ambiente fértil para erro de leitura. O modelo pode transpor dígitos, ler um 6 como 8, misturar a linha de uma célula com a adjacente. O erro é difícil de detectar porque a célula errada tem o mesmo formato das corretas.
 
-**Contagem imprecisa.** Pedir ao modelo que conte objetos numa imagem — pessoas, itens, unidades — é confiável até quantidades pequenas. Para contagens maiores ou para objetos sobrepostos, a precisão cai e a estimativa que o modelo devolver parecerá tão segura quanto a contagem exata. Não há sinal de aviso.
+**Contagem imprecisa.** Contar objetos — pessoas, itens, unidades — é confiável até quantidades pequenas. Para contagens maiores ou objetos sobrepostos, a precisão cai e a estimativa parecerá tão segura quanto a contagem exata. Não há sinal de aviso.
 
-**Sensibilidade a resolução e qualidade.** Imagens de baixa resolução, com ruído, desfoque ou compressão excessiva degradam a qualidade da análise — mas o modelo nem sempre informa isso espontaneamente. A saída produzida numa imagem ruim pode ter a mesma estrutura de saída de uma imagem boa. O operador precisa inspecionar a qualidade de input antes de confiar no output.
+**Sensibilidade a resolução e qualidade.** Imagens de baixa resolução, com ruído ou compressão excessiva degradam a análise — mas o modelo nem sempre informa isso. A saída de uma imagem ruim pode ter a mesma estrutura de uma imagem boa. O operador precisa inspecionar a qualidade do input antes de confiar no output.
 
-**Leitura de texto muito pequeno.** Rodapés, notas de contrato, índices remissivos, texto de aviso — se o texto couber em poucos pixels, vision pode errar na transcrição mesmo com imagem de boa qualidade.
+**Leitura de texto muito pequeno.** Rodapés, notas de contrato, texto de aviso — se couber em poucos pixels, vision pode errar na transcrição mesmo com imagem de boa qualidade.
 
 **Texto espelhado ou rotacionado.** Vision lida razoavelmente com pequenas rotações, mas texto espelhado ou invertido pode produzir leitura errada.
 
@@ -99,7 +99,7 @@ Aqui está o núcleo do Invariante 1 aplicado ao visual. Estas não são limita�
 
 ## 34.4 — DECISÃO: VISION VS FERRAMENTA ESPECIALIZADA E PROTOCOLO DE VERIFICAÇÃO
 
-Esta seção é o critério de decisão que separa este capítulo de um tutorial. A pergunta não é "vision consegue fazer X?" — na maioria dos casos, consegue, de alguma forma. A pergunta é: **"para este caso de uso, com este custo de erro, o nível de confiabilidade de vision é suficiente — ou preciso de verificação, ferramenta dedicada, ou as duas?"**
+A pergunta não é "vision consegue fazer X?" — na maioria dos casos, consegue. A pergunta é: **"para este caso de uso, com este custo de erro, a confiabilidade de vision é suficiente — ou preciso de verificação, ferramenta dedicada, ou as duas?"**
 
 ### Quando vision é suficiente sem verificação especial
 
@@ -118,9 +118,9 @@ Esta seção é o critério de decisão que separa este capítulo de um tutorial
 
 ### Quando OCR dedicado ou ferramenta especializada é a escolha certa
 
-- **Alto volume com precisão obrigatória sem revisão humana por item.** OCR dedicado (como Tesseract calibrado por domínio, ou serviços especializados) pode ser auditado com métricas de acurácia contra ground truth. Vision não tem esse SLA por padrão.
-- **Fluxo de produção onde o custo de erro por item é irreversível.** Um sistema de processamento de notas fiscais em lote que alimenta contabilidade não pode ter erro plausível-silencioso por imagem. Precisa de accuracy mensurável, com gate de confiança por extração.
-- **Documentos com padrão fixo e processamento de escala industrial.** Formulários com layout padronizado (boletos, DANFE, documentos oficiais) têm ferramentas verticais calibradas para aquele layout exato, com taxas de acurácia documentadas.
+- **Alto volume com precisão obrigatória sem revisão humana por item.** OCR dedicado pode ser auditado com métricas de acurácia contra ground truth. Vision não tem esse SLA por padrão.
+- **Fluxo de produção onde o custo de erro por item é irreversível.** Um sistema de processamento de notas fiscais em lote que alimenta contabilidade não pode ter erro plausível-silencioso. Precisa de acurácia mensurável, com gate de confiança por extração.
+- **Documentos com padrão fixo em escala industrial.** Formulários com layout padronizado (boletos, DANFE, documentos oficiais) têm ferramentas verticais calibradas para aquele layout exato, com taxas de acurácia documentadas.
 
 | Situação | Abordagem recomendada |
 |----------|----------------------|
@@ -135,11 +135,11 @@ Esta seção é o critério de decisão que separa este capítulo de um tutorial
 
 Este é o ponto onde o design do prompt muda o perfil de risco da extração. Três práticas estruturais:
 
-**1. Peça citação de posição.** Em vez de "extraia os valores desta tabela", use: "extraia os valores desta tabela e, para cada valor, cite a linha e coluna de origem como referência de posição". Isso cria uma trilha de auditabilidade — o revisor humano pode ir ao campo específico da imagem original para conferir.
+**1. Peça citação de posição.** Em vez de "extraia os valores desta tabela", use: "extraia os valores e, para cada um, cite a linha e coluna de origem". Isso cria trilha de auditabilidade — o revisor pode ir ao campo específico da imagem original para conferir.
 
-**2. Exija marcação de incerteza.** Instrua o modelo explicitamente: "se algum campo estiver ilegível, parcialmente visível, ou se houver ambiguidade, marque como `[VERIFICAR]` em vez de inferir". Isso não elimina a alucinação, mas reduz a frequência dela ao tornar a incerteza um resultado legítimo. O modelo que tem permissão para dizer "não sei" com frequência menor ao dizer "aqui está minha melhor estimativa não sinalizada".
+**2. Exija marcação de incerteza.** Instrua o modelo: "se algum campo estiver ilegível, parcialmente visível ou ambíguo, marque como `[VERIFICAR]` em vez de inferir". Isso não elimina a alucinação, mas reduz a frequência ao tornar a incerteza um resultado legítimo.
 
-**3. Separe extração de interpretação.** Dois passes diferentes: o primeiro extrai literalmente o que está na imagem (transcrição); o segundo interpreta o que foi extraído (análise). Misturar os dois passa a responsabilidade de interpretação para uma camada que não deveria ter essa responsabilidade.
+**3. Separe extração de interpretação.** Dois passes distintos: o primeiro extrai literalmente o que está na imagem; o segundo interpreta o que foi extraído. Misturar os dois transfere a responsabilidade de interpretação para uma camada que não deveria tê-la.
 
 > 💡 **Exemplo de prompt de extração auditável**
 >
@@ -149,32 +149,32 @@ Este é o ponto onde o design do prompt muda o perfil de risco da extração. Tr
 
 ## 34.5 — EXEMPLO MEMORÁVEL: A AUDITORIA DE BOLETOS QUE NÃO FECHAVA
 
-*Cenário ilustrativo brasileiro.* Uma empresa de médio porte em Belo Horizonte tinha um processo de conciliação financeira que envolvia comparar dezenas de boletos digitalizados por semana contra o sistema de contas a pagar. O analista responsável precisava extrair manualmente o valor, data de vencimento e código de barras de cada boleto, conferir contra o sistema, e arquivar.
+*Cenário ilustrativo brasileiro.* Uma empresa de médio porte em Belo Horizonte comparava dezenas de boletos digitalizados por semana contra o sistema de contas a pagar. O analista extraía manualmente valor, data de vencimento e código de barras de cada boleto, conferia e arquivava.
 
-A empresa implementou um workflow com vision para automatizar a extração. Os resultados iniciais pareceram excelentes: a maioria dos campos era extraída corretamente, o tempo do analista caiu drasticamente, e o processo ganhou velocidade.
+A empresa implementou vision para automatizar a extração. Os resultados iniciais pareceram excelentes: a maioria dos campos extraída corretamente, o tempo do analista caiu drasticamente.
 
-Três semanas depois, a conciliação começou a não fechar. Após investigação, o time encontrou o padrão: em boletos digitalizados com qualidade de scanner abaixo do padrão — páginas levemente inclinadas, contraste inconsistente, resolução reduzida — o modelo ocasionalmente transpunha dígitos no valor do boleto. Um boleto de R$ 12.847,60 podia virar R$ 12.874,60. A diferença era pequena, o formato estava perfeito, e nenhuma flag tinha sido levantada.
+Três semanas depois, a conciliação começou a não fechar. O time encontrou o padrão: em boletos com qualidade de scanner abaixo do padrão — inclinação, contraste inconsistente, resolução reduzida — o modelo transpunha dígitos no valor. Um boleto de R$ 12.847,60 virava R$ 12.874,60. A diferença era pequena, o formato estava perfeito, nenhuma flag levantada.
 
-O problema não era que vision funcionava mal. Era que o design do workflow assumia confiabilidade sem medir. A correção foi direta: (a) o prompt passou a exigir marcação `[VERIFICAR]` em qualquer campo com baixo contraste detectável; (b) uma regra de validação cruzou o dígito verificador do código de barras contra o valor extraído — boletos com divergência entravam em fila de revisão humana; (c) imagens abaixo de um limiar de contraste foram roteadas para reescaneamento antes de entrar no pipeline.
+O problema não era que vision funcionava mal — era que o design assumia confiabilidade sem medir. A correção: (a) o prompt passou a exigir `[VERIFICAR]` em campos com baixo contraste detectável; (b) uma regra de validação cruzou o dígito verificador do código de barras contra o valor extraído; (c) imagens abaixo de um limiar de contraste foram roteadas para reescaneamento.
 
-O resultado: o volume de revisão humana subiu de zero para cerca de 8% dos boletos — exatamente os que tinham qualidade de scan deficiente. Os 92% restantes saíam com confiança documentada. A conciliação voltou a fechar.
+Resultado: revisão humana subiu de zero para 8% dos boletos — exatamente os com scan deficiente. Os 92% restantes saíam com confiança documentada. A conciliação voltou a fechar.
 
-A lição é o Invariante 1 inteiro num único episódio de operação: vision entrega o plausível; o plausível e o verdadeiro coincidem na maioria dos casos; o design do fluxo precisa isolar os casos onde não coincidem antes que o custo seja pago.
+A lição é o Invariante 1 num único episódio: vision entrega o plausível; o plausível e o verdadeiro coincidem na maioria dos casos; o design do fluxo precisa isolar os casos onde não coincidem antes que o custo seja pago.
 
 ---
 
 ## 34.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior ilustra o custo de assumir confiabilidade sem medir; esta seção entrega o roteiro para não cometer o mesmo erro. Três aplicações ordenadas pelo nível de risco do erro. A forma é *situação → o que fazer → o ponto de julgamento*.
+Três aplicações ordenadas pelo nível de risco do erro. A forma é *situação → o que fazer → o ponto de julgamento*.
 
 **Aplicação 1 — Triagem e catalogação visual de baixo risco.**
-*Situação:* o time precisa classificar um conjunto grande de imagens — fotos de produtos, screenshots de interface, documentos digitalizados — para indexação ou triagem inicial. Erros individuais têm baixo custo. *O que fazer:* use vision diretamente com um prompt de descrição estruturada; peça ao modelo que classifique cada imagem em categorias predefinidas e extraia metadados visíveis; processe em lote. Não é necessário pedir marcação de incerteza para triagem exploratória. *O ponto de julgamento:* revise uma amostra de 5% dos resultados para estimar a taxa de erro real neste conjunto. Se a taxa de erro na amostra for superior ao que o processo downstream tolera, volte para a aplicação 2.
+*Situação:* o time precisa classificar um conjunto grande de imagens — fotos de produtos, screenshots de interface, documentos digitalizados — para indexação ou triagem inicial. Erros individuais têm baixo custo. *O que fazer:* use vision com um prompt de descrição estruturada; peça classificação em categorias predefinidas e extração de metadados visíveis; processe em lote. Marcação de incerteza não é necessária para triagem exploratória. *O ponto de julgamento:* revise uma amostra de 5% dos resultados para estimar a taxa de erro real. Se for superior ao que o processo downstream tolera, vá para a aplicação 2.
 
 **Aplicação 2 — Extração de documentos com protocolo de verificação.**
-*Situação:* o processo de contas a pagar exige extrair CNPJ, valor e data de vencimento de boletos digitalizados. Um erro nessa extração impacta conciliação financeira. *O que fazer:* construa o prompt com os três elementos auditáveis da seção 34.4: (a) peça citação de posição para cada campo extraído; (b) instrua o modelo a marcar `[VERIFICAR]` em campos de baixo contraste ou resolução insuficiente; (c) implemente uma regra de validação cruzada independente do modelo — no caso de boleto, cruze o dígito verificador do código de barras contra o valor extraído. Itens marcados `[VERIFICAR]` ou que falham na validação cruzada vão para fila de revisão humana. *O ponto de julgamento:* qual percentual de itens vai para revisão humana com a sua coleção real de documentos? Se for zero, o limiar de marcação de incerteza está frouxo demais. Se for acima de 30%, a qualidade de scan está abaixo do mínimo operável.
+*Situação:* o processo de contas a pagar exige extrair CNPJ, valor e data de vencimento de boletos digitalizados. Um erro impacta conciliação financeira. *O que fazer:* construa o prompt com os três elementos auditáveis da seção 34.4: (a) citação de posição para cada campo extraído; (b) marcação `[VERIFICAR]` em campos de baixo contraste ou resolução insuficiente; (c) regra de validação cruzada independente do modelo — no caso de boleto, cruze o dígito verificador do código de barras contra o valor extraído. Itens marcados ou que falham na validação cruzada vão para fila de revisão humana. *O ponto de julgamento:* que percentual de itens vai para revisão? Se zero, o limiar de incerteza está frouxo demais. Se acima de 30%, a qualidade de scan está abaixo do mínimo operável.
 
 **Aplicação 3 — Extração crítica com OCR dedicado em paralelo.**
-*Situação:* o fluxo processa centenas de documentos por dia com valores que alimentam sistemas contábeis ou jurídicos. Erro individual tem custo alto; revisão humana por item é inviável em escala. *O que fazer:* use vision para extração semântica e contexto (identificar tipo de documento, extrair campos de linguagem natural, entender estrutura); use OCR dedicado com SLA de acurácia documentado para os campos críticos (valores, CPF/CNPJ, datas). Compare os dois outputs — quando divergirem, o item vai para revisão humana. Isso usa os pontos fortes de cada abordagem: vision para entender, OCR para medir acurácia. *O ponto de julgamento:* a taxa de divergência entre vision e OCR é o seu indicador de saúde do pipeline. Se a taxa de divergência sobe, algo mudou — qualidade do scan, tipo de documento, ou comportamento do modelo.
+*Situação:* o fluxo processa centenas de documentos por dia com valores que alimentam sistemas contábeis ou jurídicos. Custo de erro alto; revisão humana por item inviável em escala. *O que fazer:* use vision para extração semântica e contexto (tipo de documento, campos de linguagem natural, estrutura); use OCR dedicado com SLA de acurácia documentado para os campos críticos (valores, CPF/CNPJ, datas). Compare os dois outputs — quando divergirem, o item vai para revisão humana. Vision para entender; OCR para medir acurácia. *O ponto de julgamento:* a taxa de divergência entre vision e OCR é o indicador de saúde do pipeline. Se sobe, algo mudou — qualidade do scan, tipo de documento, ou comportamento do modelo.
 
 > 🔧 **EXERCÍCIO**
 > Pegue um conjunto de dez documentos reais que você ou o time processa hoje (boletos, notas fiscais, contratos, formulários). Use vision com um prompt de extração simples nos dez. Depois, compare os resultados com os valores reais. Registre: quantos campos foram extraídos corretamente, quantos foram transpostos ou errados, e em quais documentos os erros se concentraram (imagens de baixa qualidade? campos pequenos? tabelas densas?). Esse teste revela o perfil de falha específico do seu conjunto — e é a informação que determina qual das três aplicações acima é a certa para o seu caso.
@@ -183,7 +183,7 @@ O exemplo anterior ilustra o custo de assumir confiabilidade sem medir; esta se�
 
 ## 34.7 — CAMADA VIVA: O QUE PERTENCE AO APÊNDICE J
 
-Este é o conjunto de informações que mudam com frequência e que não estão no corpo deste capítulo deliberadamente:
+Informações que mudam com frequência e que não estão no corpo deste capítulo deliberadamente:
 
 - Número exato de tokens por imagem por resolução para cada modelo corrente
 - Custo por imagem por tier de modelo
@@ -200,17 +200,17 @@ O que está no corpo deste capítulo — e que sobrevive a mudanças de versão 
 
 ## 34.8 — LIMITAÇÕES E CUIDADOS
 
-**A alucinação visual não tem sinal de aviso.** Esta assimetria torna vision mais perigosa do que outras capacidades do modelo — não menos. Numa resposta de texto, um erro factual frequentemente destoa do contexto ou pode ser verificado rapidamente. Um número errado numa célula de tabela extraída de uma imagem tem o mesmo formato de um número certo. A única contramedida é o design do processo, não a inspeção visual do output.
+**A alucinação visual não tem sinal de aviso.** Numa resposta de texto, um erro factual frequentemente destoa do contexto ou pode ser verificado rapidamente. Um número errado numa célula de tabela extraída de imagem tem o mesmo formato de um número certo. A única contramedida é o design do processo, não a inspeção visual do output.
 
-**Qualidade de input é variável não controlável pelo prompt.** Você pode instruir o modelo a extrair com precisão, marcar incertezas, citar posições — mas se a imagem de entrada for de baixa qualidade, a instrução tem limite. O controle de qualidade de input (resolução mínima, contraste, inclinação, formato) é responsabilidade do pipeline, não do prompt.
+**Qualidade de input é variável não controlável pelo prompt.** Você pode instruir o modelo a marcar incertezas e citar posições — mas se a imagem for de baixa qualidade, a instrução tem limite. O controle de qualidade de input (resolução mínima, contraste, inclinação) é responsabilidade do pipeline, não do prompt.
 
-**Vision não é OCR determinístico.** OCR clássico, mesmo imperfeito, é determinístico e auditável: dado o mesmo input, devolve o mesmo output. Vision é probabilístico: o mesmo input pode, em execuções diferentes, produzir outputs ligeiramente diferentes. Para fluxos de produção em lote, essa variabilidade precisa ser considerada na arquitetura de validação.
+**Vision não é OCR determinístico.** OCR clássico é determinístico e auditável: dado o mesmo input, devolve o mesmo output. Vision é probabilístico: o mesmo input pode, em execuções diferentes, produzir outputs ligeiramente diferentes. Para fluxos em lote, essa variabilidade precisa ser considerada na arquitetura de validação.
 
-**Tabelas densas exigem atenção especial.** O risco de erro é desproporcional em tabelas com muitas linhas, células mescladas, texto pequeno ou cabeçalhos complexos. Para esses casos, vision como extrator direto — sem nenhuma verificação — é uma aposta alta.
+**Tabelas densas exigem atenção especial.** O risco de erro é desproporcional em tabelas com muitas linhas, células mescladas ou texto pequeno. Vision como extrator direto sem verificação é uma aposta alta nesses casos.
 
-**Imagem grande ≠ melhor análise.** Acima de uma resolução efetiva, adicionar mais pixels não melhora a qualidade de extração mas aumenta o custo em tokens. Encontrar a resolução efetiva para a tarefa específica é otimização de engenharia válida.
+**Imagem grande ≠ melhor análise.** Acima de uma resolução efetiva, mais pixels não melhoram a extração — apenas aumentam o custo em tokens. Encontrar a resolução efetiva para a tarefa é otimização de engenharia válida.
 
-**Confidencialidade de imagens.** Imagens enviadas ao modelo via API são processadas pelos servidores da Anthropic sob a política de privacidade vigente. Documentos com dados pessoais sensíveis (saúde, financeiros, jurídicos), imagens de tela com informações confidenciais, ou qualquer material sob NDA precisam passar pela avaliação de compliance antes de entrar num pipeline de vision em produção.
+**Confidencialidade de imagens.** Imagens enviadas via API são processadas pelos servidores da Anthropic sob a política de privacidade vigente. Documentos com dados pessoais sensíveis (saúde, financeiros, jurídicos) ou material sob NDA precisam passar por avaliação de compliance antes de entrar num pipeline de vision em produção.
 
 ---
 

@@ -15,21 +15,21 @@
 
 ## 7.1 — O CONCEITO INTUITIVO
 
-Quando você pede a um colega para revisar um texto, o resultado depende de quem você escolheu. Se você pediu ao advogado, ele vai apontar imprecisões legais. Se pediu ao jornalista, vai ajustar clareza e ritmo. Se pediu ao CFO, vai questionar as premissas numéricas. O texto é o mesmo. A instrução é a mesma. O resultado é radicalmente diferente porque você escolheu um papel diferente para quem revisar.
+Quando você pede a um colega para revisar um texto, o resultado depende de quem você escolheu. O advogado aponta imprecisões legais. O jornalista ajusta clareza e ritmo. O CFO questiona premissas numéricas. O texto é o mesmo. A instrução é a mesma. O resultado é radicalmente diferente porque você escolheu um papel diferente.
 
-Com um modelo de linguagem, a lógica é idêntica — com uma diferença importante: você escolhe o papel antes de perguntar, e pode mudá-lo a qualquer momento. O Claude não vem com papel fixo. Vem com disposição para ocupar o papel que você define. Quando você não define nada, o modelo ocupa um papel genérico — útil, mas não especializado. Quando você define com precisão, o modelo opera dentro dos parâmetros que você estabeleceu, calibrando vocabulário, tom, profundidade, público e restrições.
+Com um modelo de linguagem, a lógica é idêntica — com uma diferença: você escolhe o papel antes de perguntar, e pode mudá-lo a qualquer momento. Claude não vem com papel fixo: vem com disposição para ocupar o papel que você define. Quando você não define nada, o modelo ocupa um papel genérico — útil, mas não especializado. Quando você define com precisão, ele opera dentro dos parâmetros que você estabeleceu, calibrando vocabulário, tom, profundidade e restrições.
 
-Essa possibilidade de configurar o comportamento do modelo é o que este capítulo explora. Não como lista de botões a pressionar, mas como exercício de operação: entender o que muda quando você configura, quando vale o esforço, e quando a configuração vira muleta que esconde falta de critério.
+Este capítulo explora essa possibilidade — não como lista de botões, mas como exercício de operação: entender o que muda quando você configura, quando vale o esforço, e quando a configuração vira muleta que esconde falta de critério.
 
 ---
 
 ## 7.2 — ANALOGIA: O ATOR E O DIRETOR
 
-Existe uma diferença entre um ator que improvisa no palco e um ator que recebe direção cuidadosa antes de entrar em cena. Sem direção, o ator bom ainda entrega algo — é criativo, reagente, tecnicamente competente. Com direção, o mesmo ator sabe exatamente quem está interpretando, para qual público, com que objetivo dramático, dentro de que restrições narrativas. A diferença no resultado é substancial, e a diferença não vem do talento do ator — vem da qualidade da direção.
+A diferença entre um ator que improvisa e um ator que recebe direção cuidadosa não vem do talento — vem da qualidade da direção. Sem ela, o ator entrega algo; com ela, sabe exatamente quem interpreta, para qual público, com que objetivo, dentro de que restrições.
 
-O Claude é o ator. Você é o diretor. A persona é o personagem que o ator vai interpretar. O modo de uso é o tipo de cena em que ele vai atuar. E as instruções de sistema são o briefing de pré-estreia que o ator carrega durante toda a peça.
+Claude é o ator. Você é o diretor. A persona é o personagem. O modo de uso é o tipo de cena. As instruções de sistema são o briefing que o ator carrega durante toda a peça.
 
-Um diretor mediano coloca o ator no palco com "seja natural". Um diretor competente diz: "você é um detetive cansado que acredita que o suspeito é inocente mas precisa seguir o protocolo — mantenha a voz baixa, não improvise acusações, e quando o interrogatório endurecer, conserve o controle". A diferença entre os dois é o que este capítulo ensina a fazer.
+Um diretor mediano coloca o ator no palco com "seja natural". Um diretor competente diz: "você é um detetive cansado que acredita que o suspeito é inocente, mas precisa seguir o protocolo — mantenha a voz baixa, não improvise acusações, e quando o interrogatório endurecer, conserve o controle". Essa diferença é o que este capítulo ensina a fazer.
 
 ---
 
@@ -41,9 +41,9 @@ A forma mais duradoura e confiável de configurar o comportamento do modelo é a
 
 A documentação oficial da Anthropic é clara sobre o efeito: definir um papel no system prompt "foca o comportamento e o tom do Claude para o seu caso de uso" e "mesmo uma única frase faz diferença". O princípio subjacente é que o modelo é altamente responsivo a contexto de enquadramento — a instrução de sistema não restringe apenas o que o modelo faz, mas molda como ele interpreta cada mensagem que recebe depois.
 
-Na interface de chat do Claude (versão web, desktop ou mobile), o equivalente funcional da instrução de sistema é a seção de instruções personalizadas ou preferências persistentes que você configura uma vez e se aplicam a conversas subsequentes. Nomes de features e caminhos de navegação mudam com atualizações de produto — o que é durável é o conceito: qualquer mecanismo que estabelece instruções antes do início da conversa funciona como instrução de sistema, e o efeito sobre o comportamento é o mesmo.
+Na interface de chat do Claude, o equivalente funcional é a seção de instruções personalizadas ou preferências persistentes, configuradas uma vez e aplicadas a conversas subsequentes. Nomes de features mudam com atualizações de produto — o que é durável é o conceito: qualquer mecanismo que estabelece instruções antes do início da conversa funciona como instrução de sistema.
 
-No uso via API, a instrução de sistema é o parâmetro `system` da chamada — o lugar onde desenvolvedores colocam a configuração que define como o modelo se comporta para todos os usuários de uma aplicação. Esse mecanismo é durável: ele existia no início da API do Claude e é provável que exista em qualquer versão futura, porque é a camada que permite ao operador da aplicação controlar o comportamento sem depender de cada usuário fazer a configuração certa.
+No uso via API, a instrução de sistema é o parâmetro `system` da chamada — onde desenvolvedores colocam a configuração que define o comportamento do modelo para todos os usuários de uma aplicação. É a camada que permite ao operador controlar o comportamento sem depender de cada usuário fazer a configuração certa.
 
 Uma instrução de sistema eficaz tipicamente responde a quatro perguntas:
 
@@ -92,8 +92,6 @@ E o mesmo modo pode ser usado sem persona configurada — mas o resultado será 
 ---
 
 ## 7.4 — QUANDO CRIAR PERSONA REUTILIZÁVEL, QUANDO INSTRUIR NO TURNO, QUANDO EVITAR PERSONA
-
-Esta é a seção de decisão. A maioria dos usuários cai em um de dois erros opostos: cria personas para tudo (overhead sem retorno) ou não cria persona nenhuma (perda de consistência e qualidade). O critério abaixo ajuda a encontrar o meio certo.
 
 ### O critério de decisão
 
@@ -151,7 +149,7 @@ A distinção entre persona e modo apareceu organicamente no uso. A persona ("o 
 
 ## 7.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior mostra como uma diretora de estratégia transformou uma tarefa recorrente de duas horas e meia em quarenta minutos de curadoria e revisão, usando persona precisa e modo variável; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que amarra o Invariante 9 ao uso real.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que amarra o Invariante 9 ao uso real.
 
 **Aplicação 1 — Criar uma persona reutilizável para uma tarefa recorrente de alto custo de inconsistência.**
 *Situação:* você tem uma tarefa que repete toda semana — análise de contratos, briefing de reunião, revisão de textos de equipe — e a qualidade varia conforme você instrui o modelo de forma diferente a cada vez. *O que fazer:* construa uma instrução de sistema respondendo às quatro perguntas: quem é o modelo (papel e especialidade), para quem fala (público e expertise), com que objetivo (o que a resposta deve alcançar), e dentro de que restrições (o que não fazer, o que evitar); mantenha em menos de 150 palavras; salve no Project correspondente; use por três ciclos consecutivos sem modificar a persona entre eles. *O ponto de julgamento:* após três ciclos, compare: você ainda está re-instruindo comportamentos no turno que a persona deveria cobrir? Se sim, esses comportamentos precisam entrar na persona — o turno não é o lugar de instrução estrutural. Se não, a persona está cobrindo o que precisa cobrir e o turno fica livre para o conteúdo da tarefa, que é onde pertence.
@@ -171,11 +169,11 @@ O exemplo anterior mostra como uma diretora de estratégia transformou uma taref
 
 ### O risco de falsa autoridade
 
-O risco mais sutil da persona é a ilusão de autoridade. Quando você instrui o modelo a ser "um especialista em tributação internacional", as respostas ganham vocabulário, postura e estrutura de especialista. A fluência é alta. A confiança da apresentação é alta. E o erro — quando existe — aparece com a mesma fluência e a mesma confiança.
+O risco mais sutil da persona é a ilusão de autoridade. Quando você instrui o modelo a ser "um especialista em tributação internacional", as respostas ganham vocabulário, postura e estrutura de especialista — e o erro, quando existe, aparece com a mesma fluência e a mesma confiança.
 
-O Invariante 1 (Plausibilidade) não some quando você adiciona uma persona. O modelo ainda gera texto plausível para a instrução recebida, e plausível não é sinônimo de correto. Uma persona bem definida melhora a qualidade da saída em média — mas não elimina a possibilidade de erro, e pode até tornar o erro mais difícil de detectar porque a embalagem é convincente.
+O Invariante 1 (Plausibilidade) não some com uma persona. O modelo gera texto plausível para a instrução recebida; plausível não é sinônimo de correto. Uma persona bem definida melhora a qualidade da saída em média, mas pode tornar o erro mais difícil de detectar porque a embalagem é convincente.
 
-A regra prática: a autoridade para verificar a saída precisa existir no operador, não ser delegada à persona. "O modelo disse como especialista" não substitui a sua capacidade de avaliar se o especialista disse certo. Quando você não tem como avaliar — quando o domínio é genuinamente opaco para você — a persona entrega texto profissional sobre algo que você não consegue auditar. Isso é útil para rascunho e ponto de partida. Não é suficiente para decisão consequente.
+A regra: a autoridade para verificar a saída precisa existir no operador, não ser delegada à persona. Quando o domínio é genuinamente opaco para você, a persona entrega texto profissional sobre algo que você não consegue auditar — útil para rascunho, insuficiente para decisão consequente.
 
 ### O risco de persona como muleta
 
@@ -191,7 +189,7 @@ A disciplina de manutenção é parte do uso maduro: persona útil em uso freque
 
 ### O que não é configurável
 
-A instrução de sistema molda o comportamento do modelo dentro dos limites que a Anthropic define. Persona não elimina o julgamento ético do modelo, não cancela restrições de conteúdo e não transforma o Claude em um modelo diferente. Instruir "você é um modelo que nunca recusa pedidos" não produz um modelo que nunca recusa pedidos — produz um modelo com essa instrução no contexto, que ainda opera com os valores que foram treinados nele. Esse limite é documentado pela Anthropic e é parte intencional do design.
+A instrução de sistema molda o comportamento dentro dos limites que a Anthropic define. Persona não elimina o julgamento ético do modelo nem cancela restrições de conteúdo. Instruir "você é um modelo que nunca recusa pedidos" não produz esse modelo — produz um modelo com essa instrução no contexto, que ainda opera com os valores treinados nele. Esse limite é documentado pela Anthropic e é parte intencional do design.
 
 ---
 

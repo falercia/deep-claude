@@ -1,11 +1,32 @@
 # deep-claude
 
-> O ecossistema Claude na mesa do executivo brasileiro.
-> Companheiro executável do livro **Deep Claude · Currículo Executivo do Ecossistema Anthropic** (Fabio Garcia, 2026).
+> O livro **Deep Claude · Currículo Executivo do Ecossistema Anthropic** e seu companion executável — juntos, num repositório só.
+> Fabio Garcia, 2026.
 
 [![Licença código](https://img.shields.io/badge/c%C3%B3digo-MIT-blue)](#licença)
 [![Licença conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC--BY%204.0-lightgrey)](#licença)
 [![Cadência Apêndice Vivo](https://img.shields.io/badge/ap%C3%AAndice%20vivo-mensal-orange)](./apendice-vivo/)
+
+---
+
+## Estrutura do repositório
+
+```
+deep-claude/
+├── livro/                   # Manuscrito completo de Deep Claude
+│   ├── caps/                # 47 capítulos + Cap 5b + Apêndice K
+│   ├── diagramas/           # ~110 diagramas SVG
+│   └── _build/              # Build do livro (HTML, PDF)
+├── apendice-vivo/           # Modelos, preços, benchmarks — cadência mensal
+├── labs/                    # Exercícios práticos por capítulo
+├── prompts/                 # Biblioteca de prompts setoriais executáveis
+├── skills/                  # Skills prontos para Claude Code e Cowork
+├── mcps/                    # Tutoriais e exemplos de servidores MCP
+├── governance/              # Templates de governança corporativa de IA
+└── lancamento/              # Materiais editoriais de divulgação
+```
+
+**Camada Dupla em prática.** O padrão durável — frameworks, arquiteturas, vocabulário operacional, fluxos de adoção — vive no texto do livro (`livro/`). O número volátil — modelos vigentes, preços, benchmarks, janelas de contexto, artefatos executáveis — vive nas pastas práticas, com cadência declarada e changelog datado.
 
 ---
 
@@ -21,7 +42,7 @@ Este repositório é também a outra metade da série iniciada por [`inteligenci
 
 ## Para quem é
 
-**Para o leitor do livro.** Você terminou *Deep Claude* e quer aterrissar o currículo executivo no seu time, com Apêndice Vivo para calibração mensal, prompts setoriais executáveis, skills prontos para Claude Code e Cowork, templates de governança. Está no lugar certo. Comece em [`/apendice-vivo`](./apendice-vivo/).
+**Para o leitor do livro.** O manuscrito completo está em [`/livro`](./livro/). Se você quer aterrissar o currículo executivo no seu time — Apêndice Vivo para calibração mensal, prompts setoriais executáveis, skills prontos para Claude Code e Cowork, templates de governança — comece em [`/apendice-vivo`](./apendice-vivo/).
 
 **Para o CTO ou Head de Tecnologia em adoção real.** Você precisa estabelecer governança formal de IA, decidir entre Opus, Sonnet e Haiku conforme caso, montar comitê de IA, construir AI cards por sistema. Está no lugar certo. Comece em [`/governance`](./governance/) e leia o [CONTRATO.md](./CONTRATO.md).
 
@@ -31,8 +52,9 @@ Este repositório é também a outra metade da série iniciada por [`inteligenci
 
 ## O que vive aqui
 
-| Pasta | Conteúdo | Capítulos relacionados |
+| Pasta | Conteúdo | Referência |
 |---|---|---|
+| [`/livro`](./livro/) | Manuscrito completo de *Deep Claude*: 47 capítulos + Cap 5b + Apêndice K, ~110 diagramas SVG, build em `_build/` | O livro inteiro |
 | [`/apendice-vivo`](./apendice-vivo/) | Modelos, preços, benchmarks, janelas de contexto, SLAs. Cadência mensal, changelog datado, errata pública | Cap 45 Apêndice Vivo · Cap 4 Modelos · Cap 5 Quando usar tier |
 | [`/labs`](./labs/) | Exercícios práticos por capítulo, código executável, datasets de exemplo, scripts de validação | Cap 9, 21, 22, 27, 28, 29, 30, 31, 32, 33, 34, 35 |
 | [`/prompts`](./prompts/) | Biblioteca de prompts setoriais executáveis: jurídico, saúde, finanças, SaaS, suporte, RH, marketing, educação | Cap 36-40 (casos por setor) |
@@ -52,7 +74,9 @@ git clone https://github.com/falercia/deep-claude.git
 cd deep-claude
 ```
 
-Três caminhos a partir daqui, conforme seu objetivo:
+Quatro caminhos a partir daqui, conforme seu objetivo:
+
+**0. Quero ler o livro.** Abra [`/livro`](./livro/) e navegue pelos capítulos. O build em `livro/_build/` serve a versão HTML navegável localmente. Se preferir ir direto ao conteúdo prático, os demais caminhos abaixo partem do pressuposto que você já leu (ou está lendo) os capítulos indicados em cada pasta.
 
 **1. Quero a referência viva atualizada.** Abra [`/apendice-vivo`](./apendice-vivo/) e leia o snapshot do mês corrente. Em cinco minutos você tem modelos vigentes, preços normalizados em USD e BRL, benchmarks atualizados e janelas de contexto por modelo. Atualizado todo mês entre os dias 1 e 7.
 
@@ -64,12 +88,13 @@ Três caminhos a partir daqui, conforme seu objetivo:
 
 ## Estado atual
 
-**Versão 1.0 publicada em julho de 2026, com Apêndice Vivo seed, READMEs estruturados das sete pastas, prompts setoriais essenciais e templates de governança críticos.** Demais artefatos seguem roadmap de evolução versionada.
+**Versão 1.0 publicada em julho de 2026, com livro completo (47 capítulos + Cap 5b + Apêndice K + ~110 diagramas), Apêndice Vivo seed, READMEs estruturados das sete pastas práticas, prompts setoriais essenciais e templates de governança críticos.** Demais artefatos seguem roadmap de evolução versionada.
 
 ### Cobertura por pasta
 
 | Pasta | v1.0 (jul/2026) | v1.1 (out/2026) | v1.2 (jan/2027) |
 |---|---|---|---|
+| `/livro` | Manuscrito completo | Revisões pós-feedback | Edição revisada |
 | `/apendice-vivo` | Seed completo | Atualização mensal contínua | Atualização mensal contínua |
 | `/labs` | Labs base (Cap 9, 21, 30) | Labs API/Tool Use/RAG (Cap 22, 27) | Labs Computer Use/Vision/Evals (Cap 32, 33, 34) |
 | `/prompts` | 5 prompts seed (1 por setor crítico) | Cobertura completa Cap 36-40 | Variantes regionais e por porte |
@@ -142,5 +167,5 @@ Atribuição: Fabio Garcia, *Deep Claude · Currículo Executivo do Ecossistema 
 
 ---
 
-> *"O livro carrega o método; o repositório carrega o código. Quem terminar o livro sem visitar o repositório aproveitou metade."*
+> *"O livro carrega o método; o companion carrega o código. Ambos estão aqui. Quem ler sem executar aproveitou metade."*
 > — *Deep Claude*, Capítulo 46

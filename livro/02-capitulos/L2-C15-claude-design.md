@@ -15,25 +15,23 @@
 
 ## 15.1 — O CONCEITO INTUITIVO
 
-Existe um custo que todo profissional que já precisou comunicar uma ideia visual conhece de cor: o custo de transformar intenção em artefato. Você sabe o que quer — três direções para uma landing page, um deck que não pareça feito às pressas, um protótipo navegável para testar com clientes — mas entre saber e ter existe um vão. Designers experientes racionam exploração porque cada direção custa horas; quem não tem formação em design simplesmente não atravessa o vão, e a ideia morre como descrição verbal de algo que ninguém viu.
+Todo profissional que já precisou comunicar uma ideia visual conhece o custo: entre saber o que quer e ter o artefato existe um vão. Designers racionam exploração porque cada direção custa horas; quem não tem formação em design não atravessa o vão, e a ideia morre como descrição verbal.
 
-Claude Design ataca esse vão. Você descreve o que precisa e o Claude constrói uma primeira versão — não um esboço esquemático, mas um artefato visual renderizado: uma tela, um deck, uma página interativa. A partir daí você refina por conversa, por comentários ancorados em elementos específicos, por edição direta no canvas, ou por controles deslizantes que o próprio Claude monta para a tarefa. O ciclo é *descrever → gerar → refinar → julgar*, repetido até o artefato estar certo. A Anthropic posiciona o produto como uma forma de "colaborar com o Claude para criar trabalho visual polido" — protótipos, designs, slides, one-pagers e mais.
+Claude Design ataca esse vão. Você descreve e o Claude constrói a primeira versão — não esboço esquemático, mas artefato visual renderizado: tela, deck, página interativa. A partir daí você refina por conversa, por comentários ancorados em elementos específicos, por edição direta no canvas, ou por controles deslizantes que o próprio Claude monta. O ciclo é *descrever → gerar → refinar → julgar*, repetido até o artefato estar certo.
 
-A descrição soa como "Artifacts para design", e há parentesco — mas a diferença de categoria importa, e é o que justifica este capítulo existir separado do Capítulo 14. Artifacts geram um entregável estruturado dentro do fluxo da conversa. Claude Design é uma superfície dedicada, que conhece a sua marca, sustenta projetos visuais de múltiplas telas, valida o que produz contra as suas diretrizes antes de mostrar, e empacota o resultado para a engenharia construir de verdade. Onde Artifacts é a prancheta que aparece ao lado do chat, Claude Design é o ateliê — com o seu sistema de design embutido nas paredes.
+Soa como "Artifacts para design", mas a diferença de categoria importa. Artifacts geram entregável estruturado no fluxo da conversa. Claude Design é superfície dedicada que conhece a sua marca, sustenta projetos de múltiplas telas, valida o que produz contra as suas diretrizes antes de mostrar, e empacota o resultado para a engenharia construir de verdade.
 
-Mas o ponto que organiza o capítulo inteiro não é a lista de capacidades. É o deslocamento que a ferramenta provoca. Quando produzir vira barato e instantâneo, o valor migra para cima na cadeia: para a especificação (saber pedir), para o julgamento (reconhecer o que presta), e para a governança (garantir que o que sai respeita a marca, a verdade e a lei). Claude Design é poderoso na exata medida em que você opera bem essas três camadas que ele *não* automatiza. Quem trata a ferramenta como uma máquina de terceirizar o gosto recebe, em alta velocidade, design medíocre com a sua marca em cima.
+O ponto que organiza o capítulo não é a lista de capacidades — é o deslocamento. Quando produzir vira barato, o valor migra para a especificação (saber pedir), o julgamento (reconhecer o que presta) e a governança (garantir que o que sai respeita marca, verdade e lei). Quem trata a ferramenta como máquina de terceirizar o gosto recebe, em alta velocidade, design medíocre com a própria marca em cima.
 
 ---
 
 ## 15.2 — ANALOGIA: O ATELIÊ COM UM PROTOTIPADOR INCANSÁVEL
 
-Imagine que você dirige um estúdio criativo e contratou um prototipador sobre-humano: rápido, infatigável, capaz de produzir em minutos a versão visual de qualquer ideia que você descreva. Você pode usá-lo de dois jeitos profundamente diferentes.
+Dois usos de um prototipador sobre-humano. No primeiro, ele é parceiro de exploração: você diz "me mostre cinco direções para esta home", olha as cinco, descarta três, cruza os pontos fortes. Em uma tarde percorreu espaço de possibilidades que sozinho levaria uma semana. Você continua sendo o diretor de arte — o prototipador produz, você decide.
 
-No primeiro, você o usa como parceiro de exploração. Diz "me mostre cinco direções para esta home", olha as cinco, descarta três, aponta o que funciona em duas, pede para cruzar os pontos fortes, ajusta o espaçamento aqui, a tipografia ali — e em uma tarde você percorreu um espaço de possibilidades que sozinho levaria uma semana para esboçar. Você continua sendo o diretor de arte. O prototipador produz; você decide. Esse é o uso que rende.
+No segundo, você entrega o briefing inteiro: "faça tudo, do conceito à versão final". Ele faz. Devolve algo polido, que parece pronto. E aí mora o risco: "parece pronto" e "está certo" são coisas diferentes, e um prototipador que produz com confiança uniforme não sinaliza qual decisão foi inspirada e qual foi chute estatístico bem-acabado. Sem exercer julgamento ao longo do caminho, você não consegue exercê-lo no fim.
 
-No segundo, você lhe entrega o briefing inteiro e diz "faça tudo, do conceito à versão final que vai pro ar". Ele faz. Devolve algo polido, plausível, que parece pronto. E é exatamente aí que mora o risco, porque "parece pronto" e "está certo" são coisas diferentes — e um prototipador que produz com confiança uniforme não sinaliza qual das suas decisões foi inspirada e qual foi um chute estatístico bem-acabado. Se você não exerceu julgamento ao longo do caminho, você não tem como exercê-lo no fim: a única coisa que sobrou para julgar é um fato consumado.
-
-A diferença entre os dois usos não está na ferramenta — é o mesmo prototipador. Está em *quanto da cadeia você decidiu conduzir*. Nenhum diretor de arte competente assina uma campanha que não dirigiu. O bom uso de Claude Design é, ponto por ponto, a versão digital dessa direção de arte: a máquina amplia drasticamente quanto você consegue explorar e produzir, e o seu trabalho deixa de ser desenhar para virar dirigir — especificar com clareza, julgar com critério, e saber a hora de tirar a mão da máquina e passar o bastão para a engenharia.
+A diferença não está na ferramenta — está em quanto da cadeia você decidiu conduzir. Nenhum diretor de arte competente assina campanha que não dirigiu. O bom uso de Claude Design é a versão digital dessa direção: a máquina amplia o quanto você explora e produz; o seu trabalho deixa de ser desenhar para virar dirigir.
 
 ---
 
@@ -129,7 +127,7 @@ A lição estrutural é a redistribuição, não a substituição. Claude Design
 
 ## 15.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Do mockup estático ao protótipo navegável para teste, sem PR.**
 *Situação:* você tem o mockup de uma funcionalidade e quer testar com cinco usuários antes de comprometer a engenharia. *O que fazer:* aponte o design system para herdar a marca; suba o mockup e descreva o fluxo entre as telas; peça o protótipo navegável; refine cliques e estados pelos comentários inline; compartilhe por link de visualização escopado apenas para o teste. *O ponto de julgamento:* confirme que está testando a **hipótese certa** — o fluxo e a mensagem —, não a fidelidade de pixel; e que nada que o usuário vê promete o que a engenharia ainda não vai entregar. Um teste que valida a tela errada custa mais caro do que não testar.
@@ -149,7 +147,7 @@ O exemplo anterior conta uma história; esta seção entrega o roteiro. Três ap
 
 Vale conhecer com clareza onde Claude Design exige cautela redobrada.
 
-A primeira é o **estado de research preview e a cadência rápida**. O produto nasceu como produto do Anthropic Labs e evolui depressa — modelo que o alimenta, destinos de exportação, escopo e disponibilidade descritos aqui são a foto do momento da redação. O que é volátil mora no Apêndice Vivo (J), não no corpo deste capítulo; decore o mecanismo, consulte o número.
+A primeira é o **estado de research preview e a cadência rápida**. O produto evolui depressa — modelo, destinos de exportação e disponibilidade são camada volátil que mora no Apêndice Vivo (J); decore o mecanismo, consulte o número.
 
 A segunda é a **economia de tokens do microajuste**. Trabalho visual iterativo pode consumir mais do que parece, e Design compartilha o pool de uso com Code e chat. Pedir à máquina cada retoque que sua mão resolveria é troca ruim — de custo e de tempo. A disciplina é usar autonomia onde ela dá salto, não onde ela só substitui um gesto trivial seu.
 

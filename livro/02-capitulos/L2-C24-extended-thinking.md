@@ -17,27 +17,25 @@
 
 ## 24.1 — O CONCEITO INTUITIVO
 
-Existe uma distinção fundamental no modo como seres humanos resolvem problemas. Algumas questões são respondidas quase instantaneamente, por reconhecimento de padrão: "qual a capital do Brasil?", "como se escreve 'gerência'?", "qual é o formato padrão de um CNPJ?". Outras exigem pausa, exploração, rascunho mental — descobrir que o prazo vence na sexta e que sexta é hoje, e então recalcular todo o cronograma a partir disso, mantendo na cabeça as restrições que se acumulam.
+Algumas questões são respondidas quase instantaneamente, por reconhecimento de padrão: "qual a capital do Brasil?", "como se escreve 'gerência'?". Outras exigem pausa, exploração, rascunho mental — descobrir que o prazo vence na sexta e que sexta é hoje, e então recalcular o cronograma inteiro mantendo restrições que se acumulam.
 
-Claude, em modo padrão, responde como alguém que processa tudo em uma única passagem linear. O modelo lê o prompt, gera tokens um a um — cada token produzido com base nos anteriores e no contexto disponível, sem possibilidade de voltar atrás formalmente. É rápido e suficiente para a esmagadora maioria das tarefas.
+Claude, em modo padrão, responde em uma única passagem linear: lê o prompt, gera tokens um a um com base nos anteriores, sem voltar atrás. É rápido e suficiente para a esmagadora maioria das tarefas.
 
-Extended thinking muda essa equação para problemas específicos. Quando ativado, o modelo gera primeiro uma sequência privada de tokens de raciocínio — o "pensamento" — antes da resposta final visível ao usuário. Esses tokens permitem explorar caminhos, verificar hipóteses, detectar contradições e revisar conclusões intermediárias antes de se comprometer com a resposta. O resultado é um processo mais parecido com rascunho-e-revisão do que com ditado direto.
+Extended thinking muda essa equação para problemas específicos. Quando ativado, o modelo gera primeiro uma sequência privada de tokens de raciocínio antes da resposta final visível. Esses tokens permitem explorar caminhos, verificar hipóteses, detectar contradições e revisar conclusões intermediárias antes de se comprometer com a resposta — mais parecido com rascunho-e-revisão do que com ditado direto.
 
-O ganho real, quando existe, é mensurável: em matemática competitiva (AIME 2024), ciências em nível de doutorado (GPQA Diamond) e raciocínio multi-etapa com muitas restrições, o extended thinking produz melhorias substanciais de acurácia. A melhora segue uma curva logarítmica: mais tokens de raciocínio geram ganhos decrescentes, mas os primeiros incrementos costumam ser significativos.
+O ganho real é mensurável: em matemática competitiva (AIME 2024), ciências em nível de doutorado (GPQA Diamond) e raciocínio multi-etapa com muitas restrições, o extended thinking produz melhorias substanciais de acurácia. A melhora segue curva logarítmica: mais tokens de raciocínio geram ganhos decrescentes, mas os primeiros incrementos costumam ser significativos.
 
-O limite que este capítulo vai estabelecer com clareza: raciocínio estendido não cura alucinação. Se o modelo não sabe um fato, pensar mais não vai fazer o fato aparecer — vai apenas gerar um caminho de raciocínio mais elaborado chegando a uma conclusão plausível e errada. O Invariante 1 permanece intacto: o modelo é motor de plausibilidade, independentemente de quanto tempo ele "pensou".
+O limite que este capítulo estabelece com clareza: raciocínio estendido não cura alucinação. Se o modelo não sabe um fato, pensar mais não o fará aparecer — apenas gera um caminho de raciocínio mais elaborado chegando a uma conclusão plausível e errada. O Invariante 1 permanece: o modelo é motor de plausibilidade, independentemente de quanto tempo ele "pensou".
 
 ---
 
 ## 24.2 — ANALOGIA: O CONSULTOR COM TEMPO PARA TRABALHAR
 
-Imagine dois cenários com o mesmo consultor especialista. No primeiro, você o para no corredor e pergunta: "você acha que devemos expandir para o nordeste agora?" Ele responde em quarenta segundos, com base no que já sabe sobre o mercado. A resposta é informada, mas improvisada.
+Imagine dois cenários com o mesmo consultor. No primeiro, você o para no corredor: ele responde em quarenta segundos, informado mas improvisado. No segundo, você envia a pergunta por escrito e ele trabalha dois dias — estuda os números, verifica três hipóteses, descobre que uma premissa sua estava errada, chega à reunião com análise mais robusta.
 
-No segundo cenário, você agenda uma reunião para sexta, envia a pergunta por escrito, e deixa o consultor trabalhar dois dias no problema antes da reunião. Ele estuda os números, verifica três hipóteses contra os dados, descobre que uma premissa da sua pergunta está errada, e chega à reunião com uma análise mais robusta e com a inconsistência identificada.
+O segundo produziu algo melhor? Depende: apenas se o problema era complexo o suficiente para se beneficiar de dois dias. Se você perguntou "qual o CNPJ da filial de Recife?", os dois dias extras só adicionaram custo. E se o consultor não tiver acesso aos dados certos, produz análise elaborada sobre premissas equivocadas de qualquer forma.
 
-O segundo consultor produziu algo melhor? Em geral, sim — mas apenas se o problema era suficientemente complexo para se beneficiar de dois dias de trabalho. Se você perguntou "qual o CNPJ da filial de Recife?", os dois dias extras não adicionaram nada além de custo. E em ambos os casos, se o consultor não tiver acesso aos dados certos, ele vai produzir uma análise bem elaborada baseada em premissas equivocadas.
-
-Extended thinking é o segundo cenário. Melhor para problemas que têm estrutura suficiente para se beneficiar de exploração. Inútil para recuperação de informação simples. Incapaz de transformar ausência de dado em dado.
+Extended thinking é o segundo cenário: melhor para problemas com estrutura suficiente para se beneficiar de exploração; inútil para recuperação de informação simples; incapaz de transformar ausência de dado em dado.
 
 ---
 
@@ -45,11 +43,11 @@ Extended thinking é o segundo cenário. Melhor para problemas que têm estrutur
 
 ### 24.3.1 — Tokens de raciocínio: o que são e onde vivem
 
-Quando extended thinking está ativo, a resposta do modelo é composta de dois blocos distintos. O primeiro é o bloco de thinking — a sequência interna de raciocínio que o modelo gera antes de formular a resposta final. O segundo é a resposta propriamente dita, visível ao usuário.
+Quando extended thinking está ativo, a resposta é composta de dois blocos. O primeiro é o bloco de thinking — a sequência interna de raciocínio gerada antes da resposta final. O segundo é a resposta propriamente dita, visível ao usuário.
 
-Os tokens de raciocínio podem ser exibidos ao usuário como parte do output ou permanecer internos, dependendo da configuração da plataforma. O que não varia: esses tokens são gerados, consomem tempo de inferência e entram na cobrança.
+Os tokens de raciocínio podem ser exibidos ou permanecer internos, dependendo da configuração da plataforma. O que não varia: são gerados, consomem tempo de inferência e entram na cobrança.
 
-A propriedade mais relevante para fins práticos: os tokens de raciocínio são "não alinhados ao personagem" no sentido de que o processo interno de exploração pode incluir passos contraditórios, hipóteses descartadas e caminhos mortos — exatamente como um rascunho humano. A resposta final passa pelo processo de alinhamento normal; o thinking block não necessariamente. Isso cria uma assimetria importante que retomaremos em 23.5.
+A propriedade mais relevante: o processo interno pode incluir passos contraditórios, hipóteses descartadas e caminhos mortos — exatamente como um rascunho humano. A resposta final passa pelo processo de alinhamento normal; o thinking block não necessariamente. Isso cria uma assimetria importante que retomaremos em 23.5.
 
 ### 24.3.2 — Thinking budget e effort: controles disponíveis
 
@@ -65,7 +63,7 @@ O mecanismo mais recente — **adaptive thinking com effort** — substitui o bu
 
 Extended thinking e adaptive thinking estão disponíveis nos tiers Opus e Sonnet da família Claude. O tier Haiku — posicionado para velocidade e volume — não oferece essa capacidade, alinhada ao seu propósito: Haiku é o modelo para tarefas onde latência e custo mínimos são o critério dominante, não profundidade de raciocínio.
 
-A progressão é instrutiva como padrão, não como release. As primeiras gerações expunham um *thinking budget* explícito; gerações seguintes adotaram modo adaptativo, em que o próprio modelo calibra quanto pensar, e o controle manual por tokens passou a mecanismo herdado. A direção — menos configuração manual, mais calibração automática — tende a continuar. O nome exato do parâmetro e quais modelos o suportam vivem no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md); verifique antes de configurar.
+As primeiras gerações expunham um *thinking budget* explícito; gerações seguintes adotaram modo adaptativo, em que o próprio modelo calibra quanto pensar, e o controle manual por tokens passou a mecanismo herdado. A direção — menos configuração manual, mais calibração automática — tende a continuar. O nome exato do parâmetro e quais modelos o suportam vivem no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md); verifique antes de configurar.
 
 ![Diagrama 24.1 — Fluxo de uma resposta com extended thinking](imagens/cap-24-img-01-fluxo-thinking.svg)
 
@@ -79,7 +77,7 @@ Isso tem implicação direta para o uso prático: não existe benefício em simp
 
 ## 24.4 — FRAMEWORK DE DECISÃO: QUANDO ATIVAR, QUANDO ECONOMIZAR, COMO MEDIR
 
-A pergunta prática é simples: esta tarefa se beneficia de raciocínio estendido o suficiente para justificar o custo adicional em tokens e latência? A tabela abaixo organiza o critério.
+A pergunta prática: esta tarefa se beneficia de raciocínio estendido o suficiente para justificar o custo adicional em tokens e latência? A tabela abaixo organiza o critério.
 
 ### Tabela 24.1 — Quando ativar vs. quando é desperdício
 
@@ -107,15 +105,15 @@ Ative extended thinking quando a tarefa atende a pelo menos dois dos três crit�
 
 ### Como medir o ganho real: protocolo A/B mínimo
 
-Não ative extended thinking assumindo que vai ajudar. O protocolo correto:
+Não ative extended thinking assumindo que vai ajudar.
 
-**Passo 1 — Defina a métrica de qualidade antes de testar.** Para matemática: acurácia binária (correto/errado). Para análise: rubrica de 1-5 por critério predefinido. Para código: taxa de testes passando. Sem métrica prévia, o viés de confirmação vai fazer você "ver" melhora onde ela não existe.
+**Passo 1 — Defina a métrica de qualidade antes de testar.** Para matemática: acurácia binária (correto/errado). Para análise: rubrica de 1-5 por critério predefinido. Para código: taxa de testes passando. Sem métrica prévia, o viés de confirmação faz você "ver" melhora onde ela não existe.
 
 **Passo 2 — Rode o mesmo prompt com e sem thinking, dez vezes cada.** Variância importa. Uma amostra de um não é dado.
 
 **Passo 3 — Compare custo total, não custo por resposta.** Se thinking aumenta acurácia em 20% mas triplica o custo por chamada, o ROI depende do custo de uma resposta errada no seu caso específico.
 
-**Passo 4 — Teste o menor budget que entrega o ganho.** Começar do mínimo (1.024 tokens) e subir é mais eficiente do que começar do máximo e tentar cortar.
+**Passo 4 — Teste o menor budget que entrega o ganho.** Começar do mínimo (1.024 tokens) e subir é mais eficiente do que começar do máximo e cortar.
 
 ![Diagrama 24.2 — Protocolo de decisão: ativar ou não extended thinking](imagens/cap-24-img-02-decisao-thinking.svg)
 
@@ -123,15 +121,15 @@ Não ative extended thinking assumindo que vai ajudar. O protocolo correto:
 
 ## 24.5 — A ARMADILHA COGNITIVA: O THINKING VISÍVEL AUMENTA CONFIANÇA, NÃO VERACIDADE
 
-Este é o ponto mais importante do capítulo — e o mais negligenciado nas discussões sobre extended thinking.
+Este é o ponto mais importante do capítulo — e o mais negligenciado.
 
-Quando o usuário vê o bloco de raciocínio antes da resposta, algo previsível acontece: a confiança aumenta. Você viu o "trabalho". Acompanhou os passos. Parece rigoroso.
+Quando o usuário vê o bloco de raciocínio antes da resposta, a confiança aumenta. Você viu o "trabalho". Acompanhou os passos. Parece rigoroso.
 
 O problema é documentado pela própria Anthropic: "o raciocínio estendido às vezes acaba sendo enganoso; Claude às vezes inventa passos plausíveis para chegar onde quer chegar." Mais diretamente: "o raciocínio 'falso' de Claude pode ser muito convincente."
 
-É o Invariante 1 operando em nova roupagem. O motor de plausibilidade não gera apenas respostas plausíveis — gera *raciocínios* plausíveis. Um raciocínio plausível que conduz a uma conclusão errada é mais perigoso do que uma resposta diretamente errada: o caminho de raciocínio ativa a confiança do leitor de um modo que uma resposta seca não ativaria.
+É o Invariante 1 em nova roupagem. O motor de plausibilidade não gera apenas respostas plausíveis — gera *raciocínios* plausíveis. Um raciocínio plausível que conduz a uma conclusão errada é mais perigoso do que uma resposta diretamente errada: o caminho de raciocínio ativa a confiança do leitor de um modo que uma resposta seca não ativaria.
 
-A Anthropic é direta sobre o problema de fidelidade (*faithfulness*): não temos como garantir que o bloco de thinking representa fielmente o que realmente acontece dentro do modelo. Modelos frequentemente tomam decisões com base em fatores que não discutem explicitamente no processo de raciocínio visível. Isso significa que o thinking visível não é uma janela transparente para o processo cognitivo do modelo — é uma narrativa sobre esse processo.
+A Anthropic é direta sobre o problema de fidelidade (*faithfulness*): não temos como garantir que o bloco de thinking representa fielmente o que acontece dentro do modelo. Modelos frequentemente tomam decisões com base em fatores que não discutem explicitamente no raciocínio visível. O thinking visível não é janela transparente — é uma narrativa sobre o processo.
 
 ### A analogia da perícia judicial
 
@@ -141,7 +139,7 @@ O thinking visível funciona da mesma forma. Ele constrói um edifício persuasi
 
 ### Implicação operacional
 
-**Nunca use o thinking visível como substituto de verificação externa.** O bloco de thinking confirmando uma afirmação factual não é evidência adicional de que a afirmação é verdadeira — é evidência de que o modelo gerou um raciocínio coerente com ela, o que é propriedade muito diferente.
+**Nunca use o thinking visível como substituto de verificação externa.** O bloco de thinking confirmando uma afirmação factual não é evidência adicional de que a afirmação é verdadeira — é evidência de que o modelo gerou um raciocínio coerente com ela. Propriedade muito diferente.
 
 Se a afirmação precisaria de verificação sem o thinking visível, precisa da mesma verificação com ele. A cadeia de raciocínio não muda o status epistêmico da conclusão.
 
@@ -153,26 +151,26 @@ Se a afirmação precisaria de verificação sem o thinking visível, precisa da
 
 **Sem extended thinking** — o contador usa Claude para obter uma visão geral inicial. Claude responde com os principais benefícios do FUNDAP e das regras gerais de ICMS, estrutura uma resposta clara e bem organizada. Tempo: segundos.
 
-**Com extended thinking** — o contador usa Claude para analisar se a estrutura planejada (filial ES com exportação triangulada) é consistente com as regras de estabelecimento permanente para fins de PIS/COFINS e se há risco de autuação com base em precedentes do CARF. O modelo gera um bloco de raciocínio que explora três interpretações possíveis da Instrução Normativa relevante, identifica que o ponto crítico é a caracterização de "operações próprias" versus "operações em conta de terceiros", e conclui que há ambiguidade legal que precisa de parecer especializado.
+**Com extended thinking** — o contador usa Claude para analisar se a estrutura planejada (filial ES com exportação triangulada) é consistente com as regras de estabelecimento permanente para fins de PIS/COFINS e se há risco de autuação com base em precedentes do CARF. O modelo explora três interpretações da Instrução Normativa relevante, identifica que o ponto crítico é a caracterização de "operações próprias" versus "operações em conta de terceiros", e conclui que há ambiguidade legal que precisa de parecer especializado.
 
 **O que mudou:** a tarefa do primeiro caso é recuperação e síntese — extended thinking não ajudaria. A do segundo é raciocínio multi-etapa com restrições legais sobrepostas — exatamente o perfil que se beneficia do thinking.
 
-**O que não mudou:** a resposta do segundo caso, por mais elaborada que seja, não é substituto de consulta a advogado tributarista e verificação de precedentes recentes no CARF. O Invariante 1 permanece: a conclusão é plausível; veracidade exige verificação externa.
+**O que não mudou:** a resposta do segundo caso, por mais elaborada, não substitui consulta a advogado tributarista e verificação de precedentes recentes no CARF. O Invariante 1 permanece: a conclusão é plausível; veracidade exige verificação externa.
 
 ---
 
 ## 24.7 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-Três aplicações com a forma *situação → o que fazer → o ponto de julgamento*. Extended thinking tem custo real em tokens e latência — o ponto de julgamento define onde esse custo é justificado.
+Três aplicações com a forma *situação → o que fazer → o ponto de julgamento*. Extended thinking tem custo real em tokens e latência — o ponto de julgamento define onde esse custo se justifica.
 
-**Aplicação 1 — Revisão de contrato com múltiplas cláusulas interdependentes.**
-*Situação:* você tem um contrato de 30 páginas com cláusulas que se referenciam mutuamente — penalidades que dependem de definições no preâmbulo, limites de responsabilidade que interagem com exclusões no anexo. Precisa identificar inconsistências e riscos que surgem da combinação das cláusulas, não de cada uma isoladamente. *O que fazer:* ative extended thinking (effort `high`) e estruture o prompt pedindo explicitamente que o modelo mapeie as dependências entre cláusulas antes de fazer qualquer afirmação sobre risco. Inclua o contrato completo no contexto e defina no system prompt as categorias de risco que o seu contexto jurídico considera relevantes. Peça que a resposta cite o número de cada cláusula referenciada. *O ponto de julgamento:* o thinking visível pode apresentar um argumento legal coerente baseado em uma leitura que um jurista experiente rejeitaria por razões de prática forense ou jurisprudência recente. A saída não substitui revisão de advogado — ela organiza e aponta; o julgamento sobre o que é risco real permanece com o especialista humano que conhece o contexto regulatório atual.
+**Aplicação 1 — Revisão de contrato com cláusulas interdependentes.**
+*Situação:* contrato de 30 páginas com cláusulas que se referenciam mutuamente — penalidades que dependem de definições no preâmbulo, limites de responsabilidade que interagem com exclusões no anexo. Você precisa identificar inconsistências e riscos que surgem da combinação das cláusulas, não de cada uma isoladamente. *O que fazer:* ative extended thinking (effort `high`) e estruture o prompt pedindo que o modelo mapeie as dependências entre cláusulas antes de qualquer afirmação sobre risco. Inclua o contrato completo no contexto, defina no system prompt as categorias de risco relevantes para o seu contexto jurídico, e peça que a resposta cite o número de cada cláusula referenciada. *O ponto de julgamento:* o thinking visível pode apresentar um argumento legal coerente baseado em uma leitura que um jurista experiente rejeitaria por razões de prática forense ou jurisprudência recente. A saída organiza e aponta; o julgamento sobre o que é risco real permanece com o especialista que conhece o contexto regulatório atual.
 
 **Aplicação 2 — Diagnóstico de causa raiz em sistema com múltiplas camadas.**
-*Situação:* um sistema em produção está falhando de forma intermitente — logs mostram erros em três serviços diferentes, métricas de banco indicam lentidão em horários específicos, e o time não consegue determinar se é problema de aplicação, de infraestrutura ou de dados. *O que fazer:* compile os logs, métricas e configuração relevantes em um bloco de contexto estruturado; ative thinking com effort `high`; instrua o modelo a raciocinar explicitamente sobre hipóteses alternativas e descartar as que contradizem a evidência antes de concluir. Use pseudocódigo ou estrutura de dados no contexto (não o código completo) para tornar o contexto denso e navegável sem inflá-lo desnecessariamente. *O ponto de julgamento:* rode o protocolo A/B — mesmo prompt com e sem thinking, cinco vezes cada. Se a hipótese de causa raiz for diferente entre os grupos, você encontrou um caso onde o raciocínio adicional muda a conclusão. Se for idêntica, extended thinking era overhead desnecessário para esse diagnóstico específico.
+*Situação:* sistema em produção falhando de forma intermitente — logs mostram erros em três serviços, métricas de banco indicam lentidão em horários específicos, e o time não consegue determinar se é problema de aplicação, infraestrutura ou dados. *O que fazer:* compile logs, métricas e configuração relevantes em bloco de contexto estruturado; ative thinking com effort `high`; instrua o modelo a raciocinar sobre hipóteses alternativas e descartar as que contradizem a evidência antes de concluir. Use pseudocódigo no contexto (não código completo) para manter o contexto denso e navegável. *O ponto de julgamento:* rode o protocolo A/B — mesmo prompt com e sem thinking, cinco vezes cada. Se a hipótese de causa raiz divergir entre os grupos, o raciocínio adicional está mudando a conclusão. Se for idêntica, extended thinking era overhead desnecessário para esse diagnóstico.
 
 **Aplicação 3 — Planejamento de projeto com restrições conflitantes.**
-*Situação:* você precisa planejar um projeto com prazo fixo, orçamento limitado, dependências entre entregáveis e três restrições de recursos que se contradizem parcialmente (pessoa A não pode trabalhar com pessoa B no mesmo sprint; entregável C depende de D que depende de A que tem disponibilidade limitada nas semanas 3 e 4). *O que fazer:* liste todas as restrições explicitamente no prompt, peça que o modelo raciocine em voz alta sobre cada possível sequência antes de propor um cronograma, e especifique que o modelo deve identificar os trade-offs que está fazendo (o que ele prioriza quando as restrições são mutuamente exclusivas). *O ponto de julgamento:* o cronograma proposto é um ponto de partida para negociação, não uma decisão. Verifique explicitamente os trade-offs que o modelo declarou: eles refletem as prioridades reais do projeto? Se o modelo escolheu priorizar prazo sobre qualidade sem que você tivesse declarado essa preferência, você precisa corrigir a premissa, não apenas o cronograma.
+*Situação:* projeto com prazo fixo, orçamento limitado, dependências entre entregáveis e restrições de recursos que se contradizem parcialmente (pessoa A não pode trabalhar com pessoa B no mesmo sprint; entregável C depende de D que depende de A com disponibilidade limitada nas semanas 3 e 4). *O que fazer:* liste todas as restrições explicitamente no prompt, peça que o modelo raciocine em voz alta sobre cada sequência possível antes de propor um cronograma, e especifique que ele deve identificar os trade-offs que está fazendo quando as restrições são mutuamente exclusivas. *O ponto de julgamento:* o cronograma proposto é ponto de partida para negociação, não decisão. Verifique os trade-offs declarados pelo modelo: eles refletem as prioridades reais do projeto? Se o modelo priorizou prazo sobre qualidade sem que você tivesse declarado essa preferência, corrija a premissa, não apenas o cronograma.
 
 > 🔧 **EXERCÍCIO**
 > Pegue um problema técnico ou analítico real que você resolveu recentemente por tentativa e erro — um diagnóstico, uma decisão de arquitetura, uma análise com dados conflitantes. Rode o mesmo problema com Claude, com e sem thinking ativado, e compare: (1) a conclusão foi diferente? (2) o caminho de raciocínio visível revelou uma premissa que você assumia implicitamente? (3) o thinking levou a uma conclusão correta por um raciocínio que você não consegue verificar passo a passo? Essa terceira pergunta é o ponto de atenção central do Invariante 1 aplicado ao thinking estendido.
@@ -181,16 +179,16 @@ Três aplicações com a forma *situação → o que fazer → o ponto de julgam
 
 ## 24.8 — CAMADA VIVA: O QUE MUDA E O QUE FICA
 
-Extended thinking é uma área em rápida evolução. O Apêndice Vivo (J) deve ser consultado para:
+O Apêndice Vivo (J) deve ser consultado para:
 
 - **Modelos com suporte a adaptive thinking vs. budget_tokens** — a linha de corte muda a cada geração
 - **Preço por token de raciocínio por tier** — pode diferir do preço de output padrão
 - **Budget máximo por versão de modelo** — muda entre releases
 - **Latência típica por faixa de budget** — relevante para decisão de produto
 
-**O que não muda** (e por isso fica no corpo do capítulo):
+**O que não muda:**
 
-O trade-off fundamental entre computação na inferência e custo/latência/veracidade é estrutural. Qualquer modelo que gere tokens adicionais antes de responder vai incorrer em custo adicional de tempo e dinheiro. Qualquer modelo que gere mais tokens plausíveis vai produzir raciocínios mais elaborados que podem ser corretos ou elegantemente errados. O critério de quando usar — tarefas multi-etapa com restrições, não recuperação factual simples — vai sobreviver a múltiplas gerações de modelos porque deriva da natureza do problema, não da tecnologia.
+O trade-off entre computação na inferência e custo/latência/veracidade é estrutural. Qualquer modelo que gere tokens adicionais antes de responder incorre em custo adicional de tempo e dinheiro. Qualquer modelo que gere mais tokens plausíveis produz raciocínios mais elaborados que podem ser corretos ou elegantemente errados. O critério de quando usar — tarefas multi-etapa com restrições, não recuperação factual simples — sobrevive a múltiplas gerações porque deriva da natureza do problema, não da tecnologia.
 
 ---
 
@@ -198,43 +196,43 @@ O trade-off fundamental entre computação na inferência e custo/latência/vera
 
 ### Limitações verificadas
 
-**Extended thinking não cura alucinação.** Se o modelo não tem o dado ou o dado no corpus de treinamento está errado, raciocinar mais produz conclusões erradas mais convincentes. A verificação externa continua sendo obrigatória para fatos de domínio restrito.
+**Extended thinking não cura alucinação.** Se o modelo não tem o dado, raciocinar mais produz conclusões erradas mais convincentes. Verificação externa continua obrigatória para fatos de domínio restrito.
 
 **Extended thinking não resolve contexto insuficiente.** Se o prompt não tem as informações necessárias, o modelo raciocina a partir do que tem — incluindo pressupostos não verificados que preenchem lacunas com plausibilidade.
 
-**Raciocínio visível não é janela transparente.** A Anthropic documenta que "modelos frequentemente tomam decisões com base em fatores que não discutem explicitamente no processo de thinking." O bloco de thinking é uma narrativa sobre o processo, não o processo em si.
+**Raciocínio visível não é janela transparente.** A Anthropic documenta que "modelos frequentemente tomam decisões com base em fatores que não discutem explicitamente no processo de thinking." O bloco de thinking é narrativa sobre o processo, não o processo em si.
 
-**Budget excessivo pode piorar resultados.** Em alguns casos documentados, budgets muito altos levam o modelo a "overthink" — explorar caminhos que o desviam de respostas corretas que chegaria mais diretamente com budget menor.
+**Budget excessivo pode piorar resultados.** Em casos documentados, budgets muito altos levam o modelo a "overthink" — explorar caminhos que o desviam de respostas corretas que alcançaria com budget menor.
 
-**Custo composto é real.** Um pipeline com extended thinking ativado em todas as chamadas — inclusive nas que não se beneficiam dele — pode multiplicar custos sem ganho proporcional. O Invariante 5 (Custo Composto) aplica-se com força total aqui.
+**Custo composto é real.** Um pipeline com extended thinking ativado em todas as chamadas — inclusive nas que não se beneficiam dele — multiplica custos sem ganho proporcional. O Invariante 5 (Custo Composto) aplica-se com força total aqui.
 
 ### Conexões com outros capítulos
 
 **Capítulo 4 — Todos os Modelos Claude:** a seção 4.3.2 introduz extended thinking no contexto de seleção de modelo. Este capítulo aprofunda o critério operacional de quando ativar e como medir o ganho real.
 
-**Capítulo 16 — Claude Research:** Research usa raciocínio estendido internamente em algumas configurações. A limitação do Invariante 1 — pesquisa entrega cobertura e síntese, não verdade verificada — se aplica independentemente de quanto raciocínio interno aconteceu antes do relatório final.
+**Capítulo 16 — Claude Research:** Research usa raciocínio estendido internamente em algumas configurações. A limitação do Invariante 1 — pesquisa entrega cobertura e síntese, não verdade verificada — aplica-se independentemente de quanto raciocínio interno aconteceu antes do relatório final.
 
-**Capítulo 8 — Claude Cowork:** Cowork em tarefas complexas de múltiplos passos pode se beneficiar de adaptive thinking nos nós de decisão. O mesmo critério de proporcionalidade do Invariante 6 (Autonomia Proporcional) aplica-se ao thinking budget: ative onde agrega, não como default global.
+**Capítulo 8 — Claude Cowork:** Cowork em tarefas complexas pode se beneficiar de adaptive thinking nos nós de decisão. O critério de proporcionalidade do Invariante 6 aplica-se ao thinking budget: ative onde agrega, não como default global.
 
-**Invariante 1 (L1 — Os Invariantes):** "O modelo entrega o plausível, não o verdadeiro — e os dois coincidem, até a hora em que não." Extended thinking não muda essa mecânica fundamental: amplia a capacidade de produzir plausível elaborado, não de produzir verdadeiro verificado.
+**Invariante 1 (L1 — Os Invariantes):** "O modelo entrega o plausível, não o verdadeiro — e os dois coincidem, até a hora em que não." Extended thinking não muda essa mecânica: amplia a capacidade de produzir plausível elaborado, não de produzir verdadeiro verificado.
 
 ---
 
 ## RESUMO EXECUTIVO DO CAPÍTULO 24
 
-Extended thinking é uma capacidade real com ganhos reais em classe específica de tarefa — e com armadilhas reais quando mal compreendida.
+Extended thinking tem ganhos reais em classe específica de tarefa — e armadilhas reais quando mal compreendida.
 
-**O que é:** o modelo gera tokens de raciocínio privados antes da resposta final. Isso permite exploração de hipóteses, verificação de consistência e correção de caminhos errados antes do commit na resposta.
+**O que é:** o modelo gera tokens de raciocínio privados antes da resposta final, permitindo exploração de hipóteses, verificação de consistência e correção de caminhos errados antes de se comprometer com a resposta.
 
 **Quando ajuda:** problemas de múltiplas restrições simultâneas, matemática não trivial, debug de causa raiz não óbvia, análise estratégica com premissas conflitantes. O critério: múltiplos passos dependentes + espaço de soluções não trivial + custo de erro > custo de latência.
 
 **Quando não ajuda:** recuperação factual, sumarização simples, classificação, tradução, qualquer tarefa onde a resposta depende de um dado que o modelo simplesmente não tem.
 
-**A armadilha central:** o thinking visível aumenta a confiança do leitor sem aumentar necessariamente a veracidade da conclusão. Raciocínio elaborado que chega a uma premissa errada é mais perigoso do que resposta diretamente errada, porque a estrutura do argumento desativa a vigilância crítica.
+**A armadilha central:** o thinking visível aumenta a confiança do leitor sem aumentar necessariamente a veracidade da conclusão. Raciocínio elaborado que chega a uma premissa errada é mais perigoso do que resposta diretamente errada — a estrutura do argumento desativa a vigilância crítica.
 
 **O custo:** tokens de raciocínio são cobráveis. A curva de retorno é logarítmica. Budget excessivo não otimiza resultado. O ponto ótimo requer teste A/B, não intuição.
 
-**O que sobrevive às versões:** o trade-off entre computação na inferência e custo/latência/veracidade. Isso é estrutural, não uma característica de modelo específico.
+**O que sobrevive às versões:** o trade-off entre computação na inferência e custo/latência/veracidade. Estrutural, não característica de modelo específico.
 
 ---
 

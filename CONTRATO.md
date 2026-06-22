@@ -1,6 +1,6 @@
 # Contrato de Uso e Contribuição
 
-Este documento define os princípios de uso, contribuição e operação do repositório `deep-claude`.
+Este documento define os princípios de uso, contribuição e operação do repositório `deep-claude`, que contém o manuscrito completo do livro **Deep Claude** (`livro/`) e seu companion executável (pastas práticas: `apendice-vivo/`, `labs/`, `prompts/`, `skills/`, `mcps/`, `governance/`, `lancamento/`).
 
 ---
 
@@ -8,15 +8,15 @@ Este documento define os princípios de uso, contribuição e operação do repo
 
 ### O que você pode fazer
 
-Você pode clonar este repositório, forkar para uso interno da sua casa, customizar prompts, skills e templates ao seu contexto, integrar ao seu stack interno de IA. O licenciamento dual (MIT para código, CC-BY 4.0 para conteúdo) garante máxima liberdade.
+Você pode clonar este repositório, ler o livro em `livro/`, forkar para uso interno da sua casa, customizar prompts, skills e templates ao seu contexto, integrar ao seu stack interno de IA. O licenciamento dual (MIT para código, CC-BY 4.0 para conteúdo textual, incluindo o manuscrito) garante máxima liberdade.
 
 ### O que você deve fazer
 
-Você deve atribuir a obra original quando reutilizar conteúdo textual em material público (artigos, posts, decks, vídeos). A atribuição é o que sustenta o modelo aberto deste repositório. Sem atribuição, o ecossistema editorial brasileiro de IA fica empobrecido.
+Você deve atribuir a obra original quando reutilizar conteúdo textual — do livro ou das pastas práticas — em material público (artigos, posts, decks, vídeos). A atribuição é o que sustenta o modelo aberto deste repositório. Sem atribuição, o ecossistema editorial brasileiro de IA fica empobrecido.
 
 ### O que você não deve fazer
 
-Você não deve aplicar artefatos deste repositório em produção sem entender os capítulos correspondentes do livro. Prompts setoriais respeitam contexto regulatório brasileiro (CFM, OAB, BACEN, LGPD); aplicar fora desse contexto ou sem entender o método gera resultado raso ou risco operacional. O livro é o mapa; o repositório é o atalho. Sem mapa, atalho vira armadilha.
+Você não deve aplicar artefatos das pastas práticas em produção sem entender os capítulos correspondentes do livro (`livro/`). Prompts setoriais respeitam contexto regulatório brasileiro (CFM, OAB, BACEN, LGPD); aplicar fora desse contexto ou sem entender o método gera resultado raso ou risco operacional. O livro é o mapa; as pastas práticas são o atalho. Sem mapa, atalho vira armadilha.
 
 ---
 
@@ -82,4 +82,4 @@ Este repositório existe para acelerar a transformação do leitor em profission
 
 ---
 
-*Última revisão: 2026-06-06*
+*Última revisão: 2026-06-22*

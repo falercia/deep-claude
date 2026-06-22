@@ -15,21 +15,21 @@
 
 ## 11.1 — O CONCEITO INTUITIVO
 
-A versão Desktop do Claude, disponível para macOS, Windows e Linux, costuma ser descrita por usuários casuais como "Claude Web em app nativo", e essa descrição é tecnicamente correta mas profundamente incompleta. O Desktop oferece acesso à mesma interface conversacional, à mesma família de modelos, ao mesmo histórico de conversas e Projects sincronizados com a conta. Mas a diferença que importa, e que justifica instalar o app mesmo se você usa o Web intensivamente, está em três capacidades adicionais que apenas o Desktop entrega.
+A versão Desktop do Claude é descrita por usuários casuais como "Claude Web em app nativo" — tecnicamente correto, mas profundamente incompleto. A diferença está em três capacidades que apenas o Desktop entrega.
 
-A primeira é **acesso direto a arquivos locais**, com Claude podendo ler, escrever, modificar arquivos em pastas específicas do seu computador que você concedeu permissão. Não é mais upload manual de arquivo um por um, é integração contínua com o sistema de arquivos local. A segunda é **conexão com servidores MCP locais**, que permite integrar Claude com aplicações, bancos de dados, ferramentas internas que rodam na sua máquina, sem necessidade de exposição via internet. A terceira é **Cowork mode**, capacidade que permite Claude ler tela do seu computador, clicar em interfaces, digitar em campos, controlar aplicações nativas como Finder, Notes, Apple Mail, com supervisão e aprovação granular.
+**Acesso direto a arquivos locais**: Claude lê, escreve e modifica arquivos em pastas específicas do seu computador que você autorizou — não mais upload manual um por um, mas integração contínua com o sistema de arquivos. **Conexão com servidores MCP locais**: integração com aplicações, bancos de dados e ferramentas internas rodando na sua máquina, sem exposição via internet. **Cowork mode**: Claude lê sua tela, clica em interfaces, digita em campos, controla aplicações nativas como Finder, Notes e Apple Mail — com supervisão e aprovação granular.
 
-Quando você entende essas três capacidades, percebe que o Desktop não é alternativa ao Web, é complemento que desbloqueia classes inteiras de uso impossíveis no navegador. Profissionais maduros operam com os dois, escolhendo conforme a tarefa.
+Desktop não é alternativa ao Web: é complemento que desbloqueia classes inteiras de uso impossíveis no navegador. Profissionais maduros operam com os dois, escolhendo conforme a tarefa.
 
 ---
 
 ## 11.2 — ANALOGIA: O ASSISTENTE QUE ENTRA NA SUA SALA
 
-Pense na diferença entre dois modos de receber assistência profissional. No primeiro, você se conecta com um assistente competente por chamada de vídeo. Conversam, ele te ajuda a pensar, te dá conselhos, talvez você compartilhe a tela ocasionalmente para mostrar algo. A interação é rica, mas ele continua do outro lado da tela, sem poder mexer no que está aqui no seu lado.
+Dois modos de assistência. No primeiro, um assistente competente te ajuda por chamada de vídeo: conversa, analisa, aconselha — mas fica do outro lado da tela.
 
-No segundo, o mesmo assistente está fisicamente na sua sala, com acesso ao seu computador, aos seus arquivos, às suas ferramentas. Ele continua conversando com você, mas agora também consegue executar diretamente o trabalho operacional. "Organize esses cinquenta PDFs em pastas por cliente" deixa de ser pedido teórico e vira execução real, com ele clicando, organizando, renomeando. A mudança de natureza da assistência é qualitativa, e o tipo de problema que vira solucionável muda dramaticamente.
+No segundo, ele está fisicamente na sala, com acesso ao seu computador e arquivos. "Organize esses cinquenta PDFs em pastas por cliente" deixa de ser pedido teórico e vira execução real. A mudança é qualitativa — o tipo de problema que vira solucionável muda dramaticamente.
 
-Claude Desktop com Cowork mode é exatamente essa segunda configuração. Continua oferecendo conversa, raciocínio e análise, mas adiciona a capacidade de operar diretamente no seu ambiente. Para muitos fluxos de trabalho, especialmente os que envolvem ferramentas locais, organização de arquivos, integração com apps nativos, essa adição é a diferença entre "Claude é ferramenta útil" e "Claude é parte da minha operação cotidiana".
+Claude Desktop com Cowork mode é essa segunda configuração. Mantém conversa, raciocínio e análise — e adiciona operação direta no seu ambiente. Para fluxos que envolvem ferramentas locais e apps nativos, essa adição é a diferença entre "ferramenta útil" e "parte da minha operação cotidiana".
 
 ---
 
@@ -88,15 +88,15 @@ A escolha entre Web e Desktop não é exclusiva, é situacional. Os critérios s
 
 **Desktop é ideal** para automação de PC com arquivos locais, integração com aplicações nativas, uso de servidores MCP customizados rodando em sua máquina, acesso rápido via atalho global. Para fluxos que envolvem operação real no seu sistema, Desktop é onde a mágica acontece.
 
-Em prática, profissionais maduros operam com os dois. Conversa exploratória, escrita criativa, pesquisa profunda fica no Web. Automação operacional, manipulação de arquivos do trabalho, integração com sistemas internos fica no Desktop. A mesma conta sincroniza histórico, Projects e configurações entre eles, então não há fricção em alternar.
+Na prática, profissionais maduros operam com os dois. Conversa, escrita e pesquisa ficam no Web. Automação, arquivos locais e integração com sistemas internos ficam no Desktop. A mesma conta sincroniza histórico e Projects — não há fricção em alternar.
 
 ---
 
 ## 11.4 — EXEMPLO MEMORÁVEL: A AUTOMAÇÃO QUE LIBERTOU CINCO HORAS POR SEMANA
 
-Um diretor de operações brasileiro, gerenciando uma operação de e-commerce com cerca de quarenta funcionários, tinha uma rotina chata mas crítica. Toda segunda-feira de manhã, dedicava cerca de cinco horas para consolidar relatórios da semana anterior. Os dados estavam espalhados em vários lugares, com extratos de meio de pagamento baixados como PDFs, relatórios de marketplaces em CSVs, planilhas de NF emitidas em pasta da nuvem, log de devoluções no sistema interno. O trabalho consistia em baixar tudo, abrir planilha mestre, copiar números de cada fonte, fazer conferência cruzada, gerar relatório consolidado para o time executivo.
+Um diretor de operações de e-commerce com quarenta funcionários tinha uma rotina crítica mas tediosa: toda segunda de manhã, cinco horas para consolidar relatórios da semana anterior. Extratos de pagamento em PDF, relatórios de marketplace em CSV, planilhas de NF na nuvem, log de devoluções no sistema interno. Abrir tudo, copiar, conferir cruzado, gerar relatório consolidado para o executivo.
 
-Em janeiro de 2026, ele decidiu testar automação via Claude Desktop, depois de um podcast em que ouviu sobre Cowork mode. O processo de setup levou cerca de oito horas distribuídas em duas semanas, com instrução cuidadosa do que precisava ser feito em cada passo.
+Em janeiro de 2026, testou automação via Claude Desktop. Setup: cerca de oito horas distribuídas em duas semanas.
 
 A solução final ficou estruturada assim. Domingo à noite, scheduled task em Claude (vamos ver no Capítulo 19) disparava o fluxo. Claude Desktop abria pasta de downloads, identificava extratos baixados na semana, lia cada PDF, extraía valores relevantes. Em paralelo, conectava ao MCP de Google Drive, abria as planilhas de NF, lia os números, validava integridade. Em seguida, abria o sistema interno via Cowork, navegava até o log de devoluções, copiava os números da semana. Consolidava todos os dados em planilha mestre, fazia cálculo de margem, gerava relatório executivo em Markdown com tabelas. Por fim, salvava o relatório em pasta específica e enviava notificação para o diretor avisando que estava pronto para revisão.
 
@@ -111,7 +111,7 @@ A lição estrutural não é sobre automação isolada — é sobre **mudança n
 
 ## 11.5 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Consolidação de dados locais via workspace folder.**
 *Situação:* você tem arquivos de trabalho em pastas locais — relatórios mensais, planilhas de acompanhamento, registros exportados de sistemas internos — e precisa de um documento consolidado regularmente. *O que fazer:* no Desktop, conceda acesso apenas à pasta específica que contém esses arquivos; descreva o entregável esperado com critério de seleção ("consolide os arquivos deste mês em um sumário executivo; ignore arquivos de rascunho com sufixo _v1"); ao receber o consolidado, verifique os números de maior impacto contra as fontes originais antes de usar o documento. *O ponto de julgamento:* o Desktop acessa os seus arquivos reais — o que errar ali erra na sua base de trabalho real. Verificar os números-chave não é desconfiança da ferramenta; é o exercício obrigatório de quem delegou resultado (não resposta) a um sistema que age, não apenas responde. A proporcionalidade entre verificação e impacto da decisão é o Invariante 9 materializado no seu sistema de arquivos.

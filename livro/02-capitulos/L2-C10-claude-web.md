@@ -19,19 +19,19 @@
 
 ## 10.1 — O CONCEITO INTUITIVO
 
-A interface web do Claude, acessível em claude.ai, é provavelmente o ponto de entrada de mais de 90% das pessoas que conhecem a plataforma. É também, paradoxalmente, a interface que a maioria dos usuários explora menos profundamente, ficando na superfície de chat conversacional sem descobrir as camadas de produtividade que estão a um clique de distância. Conhecer bem essa interface é o que separa usuário casual, que tira valor moderado da ferramenta, do usuário profissional, que tira valor que justifica seu tempo dedicado.
+A interface web do Claude, em claude.ai, é o ponto de entrada de mais de 90% dos usuários — e paradoxalmente a interface que a maioria explora menos, ficando na superfície conversacional sem descobrir as camadas de produtividade a um clique de distância. A lacuna entre usuário casual e profissional não é de acesso: é de competência de uso.
 
-Este capítulo é deliberadamente prático. Sem filosofia de IA: percorremos a interface com cuidado, identificamos cada região da tela, explicamos o que cada elemento faz e quais fluxos profissionais merecem ser internalizados. Ao terminar, você saberá o que existe em cada canto da interface e terá repertório de padrões que rendem ROI imediato no dia a dia.
+Este capítulo é deliberadamente prático. Percorremos a interface, identificamos cada região, explicamos o que cada elemento faz e quais fluxos merecem ser internalizados.
 
-A grande mudança que aconteceu entre 2023 e 2026 foi a evolução da claude.ai de "interface conversacional para um LLM" para "ambiente de trabalho integrado para uso profissional". Hoje a interface contém seleção de modelo, ferramentas como busca web e extended thinking, sistema de Projects com Knowledge Base persistente, Artifacts para saída estruturada, integração com MCP, configurações granulares de comportamento. Quem ainda usa apenas o campo de texto está deixando a maior parte da plataforma intocada.
+Entre 2023 e 2026, claude.ai evoluiu de "chat para um LLM" para "ambiente de trabalho integrado": seleção de modelo, busca web, extended thinking, Projects com Knowledge Base, Artifacts, integração com MCP, configurações granulares. Quem ainda usa só o campo de texto deixa a maior parte da plataforma intocada.
 
 ---
 
 ## 10.2 — ANALOGIA: O ESCRITÓRIO QUE VOCÊ NUNCA EXPLOROU
 
-Pense em uma empresa de coworking premium em que você assinou plano completo mas só usa uma mesa em um canto. Existem salas de reunião com videoconferência, biblioteca técnica especializada, área de café com mesas de discussão, sala de meditação, espaço de eventos, network de profissionais qualificados, eventos de aprendizado, ferramentas de produtividade integradas, serviços de impressão e digitalização, secretaria, suporte de TI. Você paga pelo conjunto inteiro, mas só usa uma mesa. Pessoas que conhecem o espaço e usam as várias camadas tiram retorno radicalmente superior pela mesma mensalidade.
+Você assinou um coworking premium mas só usa uma mesa. Salas de reunião, biblioteca especializada, eventos de aprendizado, suporte de TI — tudo pago, quase nada usado. Quem explora o espaço tira retorno radicalmente superior pela mesma mensalidade.
 
-Claude Web tem essa estrutura. A mesa onde você digita o prompt é apenas a entrada principal. Em volta dela há recursos que mudam fundamentalmente a forma como você trabalha com IA, mas que só rendem se você souber que existem e como usar. Este capítulo é o tour guiado pelo coworking, com cada sala identificada e seu propósito explicado, para que você decida quais incorporar ao seu fluxo profissional.
+Claude Web tem essa estrutura. A caixa de texto é a entrada principal. Em volta dela há recursos que mudam a forma como você trabalha com IA, mas só rendem se você souber que existem. Este capítulo é o tour — cada sala identificada, cada propósito explicado.
 
 ---
 
@@ -150,23 +150,13 @@ O quinto é **artifacts para saída estruturada**. Quando o resultado vai ser us
 
 ## 10.5 — EXEMPLO MEMORÁVEL: O CONSULTOR QUE TRIPLICOU OUTPUT EM SEMANAS
 
-Um consultor estratégico brasileiro, atendendo clientes corporativos em projetos de transformação digital, começou a usar Claude no início de 2025 para acelerar trabalho de pesquisa e redação. No primeiro mês operou exatamente como a maioria dos usuários começa, com perguntas pontuais em conversas separadas, esperando "milagre" de prompts curtos, e ficando moderadamente impressionado com os resultados sem ainda extrair o potencial real.
+Um consultor estratégico brasileiro, atendendo clientes em projetos de transformação digital, começou com prompts pontuais em conversas separadas — ficando moderadamente impressionado sem extrair o potencial real. Após um workshop intensivo de uma semana, mudou radicalmente.
 
-Em fevereiro de 2025, depois de um workshop intensivo de uma semana sobre uso profissional de Claude, ele mudou radicalmente sua forma de operar. As mudanças foram pontuais mas se acumularam em transformação grande.
+Cinco mudanças: configurou o profile no settings com descrição executiva, para cada conversa já começar calibrada. Criou Projects específicos por cliente, com Knowledge Base contendo briefings, decisões anteriores e instruções persistentes. Adotou iteração refinadora consistente — três a quatro turnos de "vá fundo aqui", "adicione contraevidência". Passou a usar artifacts para todos os entregáveis estruturados. Ativou extended thinking em análises estratégicas críticas.
 
-Primeiro, configurou o profile no settings com descrição executiva detalhada sobre como ele trabalha, suas áreas de expertise, suas preferências de formato. Cada conversa nova começava com Claude já calibrado para o tom certo, sem precisar reexplicar a cada conversa.
+Três meses depois: output mensal triplicou (mesmas horas trabalhadas), qualidade percebida pelos clientes subiu, satisfação no trabalho aumentou — menos trabalho mecânico, mais análise estratégica.
 
-Segundo, criou Projects específicos para cada cliente em curso, com a Knowledge Base contendo briefings, materiais de research da empresa cliente, decisões anteriores tomadas, instruções persistentes sobre como abordar aquele cliente específico. Conversas dentro do Project começavam já com contexto completo carregado.
-
-Terceiro, adotou rotina de iteração refinadora consistente, em que primeira resposta sempre era refinada com três ou quatro turnos de "vá fundo aqui", "estruture diferente", "adicione contraevidência", até o resultado ficar alinhado com o nível de qualidade esperado por seus clientes corporativos.
-
-Quarto, começou a usar artifacts para todos os entregáveis estruturados, com decks, tabelas comparativas, frameworks de análise, sendo gerados como artifacts editáveis que ele exportava e refinava em ferramentas finais.
-
-Quinto, adotou extended thinking em todas as análises estratégicas críticas, aceitando o custo adicional em troca de profundidade de raciocínio que diferenciava o trabalho dele de competidores.
-
-O resultado, três meses depois das mudanças, foi notável em três dimensões. O **output mensal** triplicou aproximadamente, em horas faturáveis equivalentes de trabalho entregue, mantendo o mesmo número de horas trabalhadas. A **qualidade percebida pelos clientes** subiu, com vários comentando que o material entregue parecia produto de equipes maiores. E a **satisfação no trabalho** aumentou, porque ele passou menos tempo em trabalho mecânico (research básico, formatação) e mais tempo em análise estratégica e relacionamento com cliente.
-
-A lição estrutural não foi sobre Claude — foi sobre o profissional. **A ferramenta era a mesma; o que mudou foi a competência de uso. Em poucas semanas de aprendizado deliberado, ele saiu de operação superficial para fluência profissional, e o retorno se materializou em receita e em qualidade de vida.** Qualquer profissional pode replicar essa mudança. A maioria não replica porque não dedica o tempo curto necessário para aprender a usar bem.
+A lição não foi sobre Claude. **A ferramenta era a mesma; o que mudou foi a competência de uso. Em semanas de aprendizado deliberado, ele saiu de operação superficial para fluência profissional.** Qualquer profissional pode replicar. A maioria não replica porque não dedica o tempo necessário.
 
 > 🎯 **PARA EXECUTIVOS**
 > Treinamento intensivo em uso profissional de Claude para profissionais de conhecimento na sua organização costuma render entre 30% e 200% de aumento de produtividade individual, em poucas semanas. O investimento em horas de treinamento estruturado é trivial comparado ao ROI, e a maioria das empresas deixa esse ganho na mesa.
@@ -175,7 +165,7 @@ A lição estrutural não foi sobre Claude — foi sobre o profissional. **A fer
 
 ## 10.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Primeira mensagem de contexto antes de qualquer pedido.**
 *Situação:* você tem uma análise complexa para fazer e vai precisar de vários turnos de conversa para chegar no resultado certo. *O que fazer:* antes de qualquer pergunta, escreva uma mensagem estruturada com papel, contexto e restrições — "Sou gerente de produto em fintech, vou trabalhar com você numa análise de priorização de roadmap para o próximo trimestre; prefiro respostas em português executivo, com tabelas quando houver comparação, sem emojis; vou enviar os dados em seguida". Depois envie os dados e o pedido. *O ponto de julgamento:* ao final da análise, verifique se Claude operou dentro do contexto que você definiu ou fez suposições que você não autorizou. O operador que investe dois minutos na primeira mensagem calibra toda a conversa; o que não investe passa o tempo restante corrigindo curso. A qualidade final é função direta da competência de quem configura — não da ferramenta (Invariante 9).
@@ -296,4 +286,4 @@ Em uma semana, aplique sistematicamente as cinco práticas. Configure profile de
 
 ---
 
-> *"A interface mais usada é a mais subutilizada. Aprender a usar bem é investimento que se paga em semanas."*
+> *"A interface mais usada é a mais subutilizada. A lacuna não é de acesso — é de competência de operação. E competência de operação se adquire em semanas, não em anos."*

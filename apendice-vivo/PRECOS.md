@@ -136,6 +136,7 @@ total mensal: $750 (Sonnet 4.6)
 
 ## Mudanças recentes
 
+- **2026-06-22**: preços da família Claude (Opus 4.8 $5/$25, Sonnet 4.6 $3/$15, Haiku 4.5 $1/$5 por MTok) **reconferidos por busca web — sem mudança** desde 2026-06-18. Demais provedores e a cotação USD/BRL do mês permanecem para reconferência próxima ao fechamento de junho.
 - **2026-06-18**: snapshot populado com preços correntes confirmados por fonte primária (Anthropic docs, Google AI pricing). OpenAI confirmado por pesquisa web (verificar em fonte primária antes de orçamento).
 - **2026-06-06**: snapshot seed criado.
 

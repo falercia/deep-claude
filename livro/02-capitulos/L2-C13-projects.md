@@ -16,21 +16,21 @@
 
 ## 13.1 — O CONCEITO INTUITIVO
 
-Existe um momento na curva de aprendizado de Claude em que a pessoa percebe um problema recorrente, e esse momento é onde o salto de competência acontece. O problema é que cada conversa começa do zero, sem memória do que foi discutido antes, sem acesso aos documentos relevantes, sem o contexto que tornaria a interação produtiva. Você passa cinco minutos no início de cada conversa explicando quem você é, o que está fazendo, qual o contexto, antes de poder pedir o que realmente quer. Multiplique isso por dezenas de conversas por semana, e o desperdício fica evidente.
+Há um momento na curva de aprendizado de Claude em que o problema fica evidente: cada conversa começa do zero. Cinco minutos reexplicando quem você é, o que está fazendo, qual o contexto — antes de poder pedir o que realmente quer. Multiplique por dezenas de conversas por semana e o desperdício é óbvio.
 
-Claude Projects é a resposta arquitetural para esse problema. Project é um espaço de trabalho persistente que carrega três elementos importantes para todas as conversas dentro dele. A primeira é a Knowledge Base, com arquivos que o Claude consulta automaticamente quando relevante. A segunda são as Custom Instructions, que funcionam como system prompt persistente, configurando comportamento esperado em todas as interações daquele projeto. A terceira é o histórico de conversas anteriores, que pode ser referenciado quando necessário.
+Claude Projects é a resposta arquitetural. Project é espaço de trabalho persistente que carrega três elementos para todas as conversas dentro dele: **Knowledge Base** (arquivos consultados automaticamente), **Custom Instructions** (system prompt persistente que configura o comportamento), e **histórico de conversas anteriores** (referenciável quando necessário).
 
-Para quem entende Projects e os usa bem, Claude deixa de ser ferramenta de consulta pontual e vira algo mais próximo de colaborador organizacional, com memória de contexto, conhecimento de domínio específico e padrão de trabalho calibrado. A diferença prática em produtividade é dramática, e a barreira de entrada é trivial. Em poucos minutos de configuração, você ganha capacidade que estava sentada na plataforma o tempo todo, esperando ser ativada.
+Para quem usa Projects bem, Claude deixa de ser ferramenta de consulta pontual e vira colaborador organizacional — memória de contexto, conhecimento de domínio, padrão de trabalho calibrado. A diferença em produtividade é dramática; a barreira de entrada, trivial.
 
 ---
 
 ## 13.2 — ANALOGIA: A SALA DE TRABALHO DEDICADA
 
-Pense na diferença entre duas formas de trabalhar com um consultor experiente sobre um projeto longo. Na primeira forma, você o encontra em um café diferente toda semana, e cada encontro começa com você reexplicando o contexto inteiro, mostrando documentos no celular ou imprimindo em papel, recapitulando o que decidiu antes. O consultor é tão competente quanto sempre, mas o tempo útil de cada encontro fica drasticamente reduzido pela necessidade constante de recontextualizar.
+Duas formas de trabalhar com um consultor num projeto longo. Na primeira, vocês se encontram em cafés diferentes toda semana: cada encontro começa com você reexplicando o contexto inteiro, mostrando documentos, recapitulando decisões. O consultor é competente — mas o tempo útil de cada encontro é reduzido pela recontextualização constante.
 
-Na segunda forma, você aluga uma sala de trabalho dedicada para o projeto, com biblioteca contendo todos os documentos relevantes, quadro com decisões já tomadas, briefing escrito do projeto, e o consultor entra na sala já com tudo isso à disposição. Cada encontro começa onde o anterior terminou, com o trabalho avançando em vez de retroceder ao ponto de partida.
+Na segunda, você aluga uma sala de trabalho dedicada: biblioteca com os documentos relevantes, quadro com decisões já tomadas, briefing escrito. O consultor entra com tudo carregado — cada encontro começa onde o anterior terminou.
 
-Projects são a sala de trabalho dedicada. Cada projeto é seu próprio ambiente, com biblioteca própria, regras próprias, histórico próprio. Quando você inicia uma conversa dentro de um Project, Claude já chega com tudo carregado, e o tempo dedicado a contextualizar pode ser redirecionado para o trabalho substantivo. Quem opera com essa estrutura tira valor proporcionalmente maior da plataforma.
+Projects são essa sala. Cada projeto tem biblioteca própria, regras próprias, histórico próprio. Quando você abre uma conversa dentro de um Project, Claude chega com tudo carregado — e o tempo de contextualização vira tempo de trabalho substantivo.
 
 ---
 
@@ -94,13 +94,9 @@ O **projeto de evento** é o padrão para iniciativas temporárias, como lançam
 
 ## 13.4 — EXEMPLO MEMORÁVEL: A AGÊNCIA QUE DIGITALIZOU MEMÓRIA INSTITUCIONAL
 
-Uma agência brasileira de comunicação estratégica, com cerca de 40 funcionários atendendo cerca de 25 clientes corporativos ativos, enfrentava em 2025 um problema crônico que vale conhecer porque é universal. A memória institucional sobre cada cliente estava espalhada em emails, decks antigos, anotações pessoais, dropbox compartilhado, slack de canal por cliente. Quando um novo membro da equipe entrava em um cliente, levava semanas para se contextualizar. Quando um cliente fazia uma pergunta que dependia de decisão tomada dois anos atrás, ninguém lembrava onde estava o registro. Quando alguém saía da empresa, o conhecimento ia junto.
+Uma agência brasileira de comunicação estratégica com 40 funcionários e 25 clientes ativos enfrentava em 2025 o problema crônico que é universal em serviços profissionais: memória institucional espalhada em emails, decks antigos, Slack e Dropbox. Novo membro levava semanas para se contextualizar. Cliente perguntava sobre decisão de dois anos atrás e ninguém sabia onde estava o registro. Quando alguém saía, o conhecimento ia junto.
 
-Em janeiro de 2026, a sócia diretora propôs um experimento estruturado usando Claude Projects. Em vez de tentar resolver tudo de uma vez, escolheram três clientes-piloto, e dedicaram duas semanas para construir Projects bem feitos para cada um.
-
-A construção seguiu um protocolo cuidadoso. Para cada cliente, uma pessoa do time foi designada como "curador da memória". Essa pessoa passou três a quatro dias coletando materiais relevantes, decks antigos, briefings, comunicações importantes, decisões registradas, contratos vigentes. Filtraram para os documentos verdadeiramente importantes (em média cerca de 40 a 60 por cliente), e adicionaram à Knowledge Base do Project respectivo. Custom Instructions foram escritas em conjunto com o líder da conta, capturando tom da relação, sensibilidades específicas, padrões de entrega esperados pelo cliente.
-
-Depois das duas semanas de setup, abriram acesso aos Projects para os times respectivos. Os primeiros dias foram de adaptação, com colaboradores aprendendo a abrir o Project antes de iniciar trabalho, com perguntas começando dentro do contexto carregado. Em três semanas, o padrão já era natural.
+Em janeiro de 2026, a sócia diretora propôs experimento com três clientes-piloto usando Claude Projects. Para cada cliente, um "curador da memória" passou três a quatro dias coletando e filtrando materiais (40 a 60 documentos reais por cliente), adicionou à Knowledge Base, e escreveu Custom Instructions junto com o líder da conta. Setup total: duas semanas por cliente.
 
 Os resultados em três meses surpreenderam até a direção que tinha promovido o experimento.
 
@@ -112,7 +108,7 @@ Terceiro, e talvez o mais inesperado, o **valor percebido pelos clientes** subiu
 
 Depois desse piloto, a agência sistematizou Projects para todos os 25 clientes, com um curador designado em cada conta, e protocolo de atualização mensal da Knowledge Base. **A memória institucional saiu do território da intuição individual e virou ativo organizacional auditável.** Os colaboradores passaram a contribuir ativamente, sabendo que o conhecimento organizado beneficiaria colegas e clientes.
 
-A lição estrutural não foi sobre Claude nem sobre IA — foi sobre **dar forma à memória institucional**. Toda organização de conhecimento sofre com esse problema, e Projects oferece estrutura simples e poderosa para resolvê-lo. **Quem trata Projects como recurso técnico secundário deixa o maior valor da plataforma intocado. Quem trata como arquitetura cognitiva organizacional transforma a operação.**
+A lição não foi sobre Claude — foi sobre **dar forma à memória institucional**. Toda organização de conhecimento sofre com esse problema. **Quem trata Projects como recurso técnico secundário deixa o maior valor da plataforma intocado. Quem trata como arquitetura cognitiva organizacional transforma a operação.**
 
 > 🎯 **PARA EXECUTIVOS**
 > Empresas de serviços profissionais (consultoria, advocacia, agências, contabilidade, R&D) com memória institucional dispersa têm em Projects uma oportunidade clara de ganho operacional. O investimento é modesto (poucas semanas de setup por área crítica), o retorno é estrutural (onboarding mais rápido, qualidade consistente, fidelização de clientes), e a alavanca é cumulativa (Projects melhoram com o tempo se mantidos).
@@ -121,7 +117,7 @@ A lição estrutural não foi sobre Claude nem sobre IA — foi sobre **dar form
 
 ## 13.5 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Project de cliente com Custom Instructions específicas.**
 *Situação:* você atende um cliente recorrente — seja como consultor, prestador de serviço ou gerente de conta — e toda semana repassa o contexto da relação antes de qualquer conversa produtiva. *O que fazer:* crie um Project para esse cliente; adicione à Knowledge Base os documentos que você consultaria manualmente — briefing, histórico de decisões, contratos vigentes, materiais do cliente; escreva Custom Instructions específicas com tom da relação, sensibilidades conhecidas, formato esperado de entregas; use o Project por uma semana para todas as tarefas relacionadas a esse cliente e compare o tempo de contextualização com o período anterior. *O ponto de julgamento:* após a primeira semana, revise as Custom Instructions à luz do que funcionou e do que precisou correção nas conversas. O document na extremidade do contexto — a instrução que chega antes de tudo — define o frame inteiro das respostas; instrução vaga na extremidade produz resultado vago na saída. Ajustar essa extremidade é o trabalho mais alavancado que existe no Project (Invariante 2 — Extremidades).

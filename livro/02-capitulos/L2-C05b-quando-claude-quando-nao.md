@@ -9,7 +9,7 @@
 
 > 🧭 **Por que este capítulo é a aplicação do Invariante 4 — Encaixe**
 >
-> O Capítulo 5 resolveu a pergunta interna à família Claude: dado que você já escolheu Claude, qual tier usar? Este capítulo recua um passo e resolve a pergunta anterior: **devia ser Claude?** A escolha entre Claude, outro modelo de fronteira, um modelo local ou open-weight, automação determinística tradicional ou nada de IA é uma decisão de encaixe entre tarefa e ferramenta — não de marca, não de familiaridade, não de entusiasmo com a mais recente demonstração pública. Errar esse encaixe custa mais do que errar o tier: você aplica a ferramenta errada ao problema certo e cria um ativo de baixo valor com alto custo de manutenção. Este capítulo entrega o critério para não cometer esse erro.
+> O Capítulo 5 resolveu a pergunta interna à família Claude: dado que você já escolheu Claude, qual tier usar? Este capítulo recua um passo: **devia ser Claude?** A escolha entre Claude, outro modelo de fronteira, um modelo local ou open-weight, automação determinística ou nada de IA é uma decisão de encaixe entre tarefa e ferramenta — não de marca, não de familiaridade, não de entusiasmo com a última demonstração pública. Errar esse encaixe custa mais do que errar o tier: você aplica a ferramenta errada ao problema certo e cria um ativo de baixo valor com alto custo de manutenção.
 >
 > Âncora completa: **Framework 2 — Diagnóstico de Encaixe** → [L1-F2-encaixe-5.md](../../Livro-1-Os-Invariantes/03-frameworks/L1-F2-encaixe-5.md)
 
@@ -17,13 +17,13 @@
 
 ## 5b.1 — O CONCEITO INTUITIVO
 
-A história do mercado de IA se repete com variações pequenas: surge uma ferramenta nova, ela recebe manchetes, equipes adotam por antecipação, e seis meses depois alguém pergunta por que o custo subiu sem que a qualidade dos resultados tenha subido na mesma proporção. O diagnóstico raro, porém correto, é quase sempre o mesmo: a ferramenta foi aplicada a tarefas que não pediam aquela ferramenta.
+A história do mercado de IA se repete: surge uma ferramenta nova, equipes adotam por antecipação, e seis meses depois alguém pergunta por que o custo subiu sem que a qualidade dos resultados tenha acompanhado. O diagnóstico correto é quase sempre o mesmo: a ferramenta foi aplicada a tarefas que não a pediam.
 
 Claude é um modelo de linguagem de fronteira, projetado e otimizado para tarefas que exigem raciocínio profundo, geração fluente de linguagem natural, análise de ambiguidade, integração de contexto complexo e produção de saída com nuance. Quando a tarefa tem essas características, Claude performa com vantagem sustentável. Quando a tarefa não tem essas características, Claude tende a ser, ao mesmo tempo, caro demais, lento demais, e — paradoxalmente — impreciso demais: a riqueza probabilística do modelo se torna ruído onde o que a tarefa pede é exatidão determinística.
 
-A decisão de encaixe não é uma pergunta de lealdade de fornecedor. É uma pergunta técnica com dimensões econômicas, de governança e de risco. Formulada com rigor: **esta tarefa, neste volume, com esta tolerância de erro, com esses dados, sob esta governança, se beneficia de Claude mais do que de qualquer alternativa disponível?**
+A decisão de encaixe não é lealdade de fornecedor. É uma pergunta técnica com dimensões econômicas, de governança e de risco: **esta tarefa, neste volume, com esta tolerância de erro, com esses dados, sob esta governança, se beneficia de Claude mais do que de qualquer alternativa disponível?**
 
-Quando a resposta é sim, Claude é a escolha. Quando a resposta é não, a resposta honesta é dizer não — e este capítulo diz quando e por quê.
+Quando a resposta é sim, Claude é a escolha. Quando é não, este capítulo diz por quê — e o diz com honestidade.
 
 ---
 
@@ -31,41 +31,41 @@ Quando a resposta é sim, Claude é a escolha. Quando a resposta é não, a resp
 
 A tabela da seção seguinte operacionaliza esses critérios. Antes de chegar a ela, vale entender o que cada um mede — e por que são critérios, não checklist.
 
-Os critérios abaixo são **estruturalmente duráveis**: não dependem de versões específicas de modelos, de preços correntes ou de benchmarks do momento. Os números que os acompanham em decisões reais — custo por milhão de tokens, pontuação em evals específicos, tamanho de janela de contexto — são voláteis e moram no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md).
+Os critérios abaixo são **estruturalmente duráveis**: não dependem de versões de modelos, preços correntes ou benchmarks do momento. Os números que os acompanham em decisões reais — custo por milhão de tokens, pontuação em evals, tamanho de janela de contexto — são voláteis e moram no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md).
 
 ### 5b.2.1 — Profundidade de raciocínio exigida
 
-É o critério que mais diferencia Claude de alternativas. Tarefas que exigem raciocínio encadeado em múltiplas etapas, manuseio de ambiguidade semântica, síntese de contexto heterogêneo e geração de output com nuance favorecem modelos de fronteira. Tarefas que pedem resposta correta dentro de um espaço pequeno de possibilidades predefinidas — classificação binária, extração de campos com esquema fixo, roteamento por regra — não se beneficiam dessa profundidade: a precisão do raciocínio é irrelevante quando a resposta correta é "sim ou não" ou "campo A ou campo B".
+É o critério que mais diferencia Claude de alternativas. Tarefas que exigem raciocínio encadeado, manuseio de ambiguidade semântica, síntese de contexto heterogêneo e output com nuance favorecem modelos de fronteira. Tarefas que pedem resposta dentro de um espaço pequeno de possibilidades predefinidas — classificação binária, extração de campos com esquema fixo, roteamento por regra — não se beneficiam dessa profundidade: o raciocínio é irrelevante quando a resposta correta é "sim ou não" ou "campo A ou campo B".
 
 Pergunta de triagem: **a tarefa exige que o modelo forme julgamento, ou apenas que ele reconheça e repita um padrão?**
 
 ### 5b.2.2 — Ecossistema de ferramentas e integração
 
-Claude tem integração nativa com o ecossistema Anthropic — API, MCP, Claude Code, Artifacts, Claude Cowork, Design, Research — e uma cadência de atualização de produto intensa. Se o fluxo de trabalho se beneficia dessas integrações, ou se a organização já tem investimento acumulado em prompts e configurações Claude, o custo de migração para uma alternativa precisa entrar na conta. Por outro lado, se o ambiente técnico da organização tem integrações consolidadas com outro ecossistema (Azure OpenAI com Microsoft 365, Gemini com Google Workspace), o custo de encaixe técnico inclina a balança em outra direção. O critério não é "qual modelo é mais capaz em abstrato", mas "qual encaixe técnico produz menos fricção operacional neste ambiente específico".
+Claude tem integração nativa com o ecossistema Anthropic — API, MCP, Claude Code, Artifacts, Cowork, Design, Research. Se o fluxo de trabalho se beneficia dessas integrações, ou se a organização já tem investimento acumulado em prompts e configurações Claude, o custo de migração para uma alternativa precisa entrar na conta. Se o ambiente técnico tem integrações consolidadas com outro ecossistema (Azure OpenAI com Microsoft 365, Gemini com Google Workspace), a balança inclina em outra direção. O critério não é "qual modelo é mais capaz em abstrato", mas "qual encaixe técnico produz menos fricção neste ambiente".
 
 ### 5b.2.3 — Governança, residência e sensibilidade do dado
 
-Este critério frequentemente mata a discussão antes dos outros entrarem. Dados pessoais sensíveis, registros de saúde, informações jurídicas privilegiadas, segredos comerciais e dados com restrições reguladas impõem exigências de residência geográfica, isolamento de tenant e auditabilidade que a escolha do modelo não controla diretamente — mas que a escolha do provedor e da modalidade de implantação controlam completamente. Um modelo local ou open-weight rodando on-premises é, para alguns regimes regulatórios, a única opção legalmente admissível, independentemente de qualquer comparação de capacidade.
+Este critério frequentemente encerra a discussão antes dos outros entrarem. Dados pessoais sensíveis, registros de saúde, informações jurídicas privilegiadas e dados regulados impõem exigências de residência geográfica, isolamento de tenant e auditabilidade que a escolha do provedor e da modalidade de implantação controlam — não a escolha do modelo. Um modelo local ou open-weight on-premises é, para alguns regimes regulatórios, a única opção legalmente admissível, independentemente de qualquer comparação de capacidade.
 
 Pergunta de triagem: **os dados desta tarefa podem sair do perímetro da organização? Sob qual regime legal?**
 
 ### 5b.2.4 — Custo e latência
 
-Claude é precificado como serviço de fronteira — premium em relação a modelos menores e a soluções determinísticas. Para tarefas de alto volume e baixa complexidade, a conta não fecha: a diferença de custo entre Claude e um modelo local menor ou uma regra determinística, multiplicada pelo volume, tende a ser maior do que qualquer ganho de qualidade. Latência segue o mesmo raciocínio: Claude tem tempos de resposta adequados para uso interativo e pipelines de volume moderado; para aplicações com requisito de resposta em dezenas de milissegundos em escala massiva, a arquitetura precisa de outra camada.
+Claude é precificado como serviço de fronteira — premium em relação a modelos menores e soluções determinísticas. Para tarefas de alto volume e baixa complexidade, a conta não fecha: a diferença de custo multiplicada pelo volume supera qualquer ganho de qualidade. Latência segue o mesmo raciocínio: Claude é adequado para uso interativo e pipelines de volume moderado; para resposta em dezenas de milissegundos em escala massiva, a arquitetura precisa de outra camada.
 
 ### 5b.2.5 — Reversibilidade e risco do erro
 
-Tarefas onde o erro é irreversível ou de alto custo de correção pedem o modelo que melhor controla a qualidade do raciocínio — e pedem, acima de tudo, revisão humana na saída, independentemente do modelo escolhido. O Invariante 8 (Responsabilidade Indelegável) não é sobre modelos; é sobre o fato de que a responsabilidade pelo output permanece com o humano que assina, não com o modelo que gerou. Para tarefas onde o erro tem baixo custo de reversão e pode ser corrigido por amostragem, modelos menores ou automação determinística são candidatos legítimos.
+Tarefas onde o erro é irreversível ou de alto custo de correção pedem revisão humana na saída, independentemente do modelo. O Invariante 8 (Responsabilidade Indelegável) não é sobre modelos: a responsabilidade pelo output permanece com o humano que assina. Para tarefas onde o erro tem baixo custo de reversão e pode ser corrigido por amostragem, modelos menores ou automação determinística são candidatos legítimos.
 
 ### 5b.2.6 — Maturidade do caso de uso
 
-Há uma diferença importante entre um caso de uso exploratório e um caso de uso em produção estável. Em exploração, a flexibilidade de Claude — sua capacidade de lidar com inputs variados, de produzir output rico para avaliação humana, de adaptar formato — é uma vantagem clara. Em produção estável com volume alto e input bem-estruturado, a mesma flexibilidade pode ser um custo desnecessário: o caso pode ter amadurecido até o ponto onde automação determinística — um conjunto de regras, um workflow codificado, um modelo menor fine-tuned — entrega o mesmo resultado a fração do custo e com muito mais previsibilidade.
+Em exploração, a flexibilidade de Claude — lidar com inputs variados, produzir output rico para avaliação humana, adaptar formato — é vantagem clara. Em produção estável com volume alto e input bem-estruturado, a mesma flexibilidade pode ser custo desnecessário: o caso pode ter amadurecido até o ponto onde automação determinística — regras, workflow codificado, modelo menor fine-tuned — entrega o mesmo resultado a fração do custo e com muito mais previsibilidade.
 
 ---
 
 ## 5b.3 — TABELA DE DECISÃO: QUANDO CADA CAMINHO BRILHA
 
-A tabela que segue é um instrumento de raciocínio, não uma prescrição automática. Leia as colunas como "quando esta opção tem vantagem comparativa" — e aplique os critérios da seção anterior para calibrar para o seu caso específico.
+A tabela que segue é um instrumento de raciocínio, não uma prescrição automática. Leia as colunas como "quando esta opção tem vantagem comparativa" — e aplique os critérios da seção anterior para calibrar ao seu caso.
 
 | Situação | Claude (fronteira, via API ou produto) | Outro modelo de fronteira (GPT, Gemini, outros) | Modelo local ou open-weight | Automação determinística (regras, scripts, workflows codificados) | Nada de IA |
 |---|---|---|---|---|---|
@@ -86,15 +86,15 @@ A tabela que segue é um instrumento de raciocínio, não uma prescrição autom
 
 > 🎯 **PARA EXECUTIVOS**
 >
-> A pergunta que mais frequentemente não é feita nas reuniões de adoção de IA é: **precisamos mesmo de um modelo de fronteira para isso?** Equipes otimistas adotam Claude — ou qualquer modelo de fronteira — como padrão para toda nova iniciativa, e o custo sobe antes que o valor apareça.
+> A pergunta que mais frequentemente não é feita nas reuniões de adoção de IA é: **precisamos mesmo de um modelo de fronteira para isso?** Equipes otimistas adotam Claude como padrão para toda nova iniciativa, e o custo sobe antes que o valor apareça.
 >
 > A disciplina executiva começa com três políticas de encaixe, antes de assinar qualquer contrato de plataforma.
 >
-> **Primeira:** estabeleça uma tipologia das suas tarefas antes de escolher modelo. Separe raciocínio profundo (síntese, análise, geração com nuance) de trabalho estruturado de alto volume (classificação, extração, roteamento). A primeira categoria justifica modelos de fronteira; a segunda raramente justifica. Essa separação, feita uma vez, orienta dezenas de decisões de arquitetura.
+> **Primeira:** estabeleça uma tipologia das suas tarefas antes de escolher modelo. Separe raciocínio profundo (síntese, análise, nuance) de trabalho estruturado de alto volume (classificação, extração, roteamento). A primeira categoria justifica modelos de fronteira; a segunda raramente. Essa separação, feita uma vez, orienta dezenas de decisões de arquitetura.
 >
-> **Segunda:** custo total não é custo de API. Inclua integração, manutenção de prompts, revisão humana de output, custo de governança de dado e eventual fine-tuning de alternativa. Modelos menores parecem baratos na célula da planilha e caros na conta de manutenção; o inverso é verdadeiro para modelos de fronteira em tarefas de alta complexidade. A comparação honesta é total cost of ownership por unidade de valor entregue.
+> **Segunda:** custo total não é custo de API. Inclua integração, manutenção de prompts, revisão humana, governança de dado e eventual fine-tuning de alternativa. Modelos menores parecem baratos na planilha e caros na manutenção; o inverso vale para modelos de fronteira em alta complexidade. A comparação honesta é total cost of ownership por unidade de valor entregue.
 >
-> **Terceira:** governança de dado decide antes de capacidade de modelo. Se os dados da tarefa não podem sair do perímetro da organização, a discussão sobre "Claude vs. GPT vs. Gemini" é prematura. A pergunta correta é "on-premises ou cloud com conformidade verificada?" — e essa resposta pode eliminar todas as opções de cloud.
+> **Terceira:** governança de dado decide antes de capacidade de modelo. Se os dados não podem sair do perímetro da organização, a discussão "Claude vs. GPT vs. Gemini" é prematura. A pergunta correta é "on-premises ou cloud com conformidade verificada?" — e essa resposta pode eliminar todas as opções de cloud.
 >
 > Claude é uma ferramenta excelente no seu perfil. Excelente no perfil errado ainda é errado.
 
@@ -102,22 +102,22 @@ A tabela que segue é um instrumento de raciocínio, não uma prescrição autom
 
 ## 5b.5 — NA PRÁTICA: TRÊS SITUAÇÕES E O QUE FAZER
 
-As situações abaixo são compostas e ilustrativas. Cada uma segue a forma — *situação → o que fazer → ponto de julgamento* — porque o passo a passo é replicável, mas o ponto de julgamento é onde o critério vira decisão.
+As situações abaixo são compostas e ilustrativas, na forma *situação → o que fazer → ponto de julgamento*: o passo a passo é replicável, mas o ponto de julgamento é onde o critério vira decisão.
 
 **Situação 1 — A triagem de contratos jurídicos.**
-*Situação:* um escritório de advocacia recebe centenas de contratos por mês. Parte deles exige análise crítica de cláusulas atípicas, síntese de riscos e redação de pareceres. Parte exige apenas conferência de campos padrão (partes, objeto, data de vigência, valor) para registro em sistema. *O que fazer:* aplicar Claude (ou equivalente de fronteira) à primeira categoria — raciocínio profundo, saída com nuance, revisão de advogado sênior. Para a segunda categoria, avaliar extração determinística com estrutura fixa antes de qualquer modelo de IA; se a variação nos contratos for alta, considerar modelo menor fine-tuned. *Ponto de julgamento:* qual proporção do volume cai em cada categoria? Se 80% é conferência de campos, usar Claude para tudo é pagar preço de fronteira por extração estruturada. O erro aqui é emocional, não técnico: a equipe não quer "desclassificar" parte do trabalho, então aplica o modelo premium indiscriminadamente.
+*Situação:* um escritório de advocacia recebe centenas de contratos por mês. Parte exige análise crítica de cláusulas atípicas, síntese de riscos e redação de pareceres. Parte exige apenas conferência de campos padrão (partes, objeto, vigência, valor) para registro. *O que fazer:* aplicar Claude à primeira categoria — raciocínio profundo, saída com nuance, revisão de advogado sênior. Para a segunda, avaliar extração determinística com estrutura fixa; se a variação for alta, considerar modelo menor fine-tuned. *Ponto de julgamento:* se 80% é conferência de campos, usar Claude para tudo é pagar preço de fronteira por extração estruturada. O erro é emocional, não técnico: a equipe não quer "desclassificar" parte do trabalho e aplica o modelo premium indiscriminadamente.
 
 **Situação 2 — O atendimento de suporte de SaaS.**
-*Situação:* empresa de SaaS atende 50 mil tickets por mês. Análise do histórico revela que 60% são perguntas com resposta em base de conhecimento, 30% exigem diagnóstico técnico com múltiplas variáveis e 10% são casos de escalada com contexto acumulado em múltiplas conversas. *O que fazer:* aplicar automação determinística (busca em base de conhecimento + template de resposta) na primeira categoria; Claude ou equivalente na segunda e terceira. Implementar classificador de entrada em modelo menor para rotear antes de consumir tokens do modelo de fronteira. *Ponto de julgamento:* o classificador precisa de teste rigoroso antes de produção — falso negativo (caso complexo classificado como simples) gera resposta inadequada e custo de escalonamento que anula a economia de roteamento. Teste com amostra auditada manualmente, não com presunção de que "o modelo vai acertar".
+*Situação:* empresa de SaaS atende 50 mil tickets por mês: 60% são perguntas com resposta em base de conhecimento, 30% exigem diagnóstico técnico e 10% são casos de escalada com contexto acumulado. *O que fazer:* aplicar automação determinística (busca em base de conhecimento + template) na primeira categoria; Claude na segunda e terceira. Implementar classificador em modelo menor para rotear antes de consumir tokens do modelo de fronteira. *Ponto de julgamento:* o classificador precisa de teste rigoroso — falso negativo (caso complexo classificado como simples) gera resposta inadequada e custo de escalonamento que anula a economia do roteamento. Teste com amostra auditada manualmente, não com presunção de que "o modelo vai acertar".
 
 **Situação 3 — A análise de risco regulatório em banco.**
-*Situação:* área de compliance precisa analisar, semanalmente, documentos regulatórios emitidos pelo banco central e por reguladores setoriais, cruzando com políticas internas para identificar impactos. Dados incluem informações internas sensíveis e documentos não públicos. *O que fazer:* avaliar se a política de segurança da organização permite envio de dados a cloud de terceiro — muitos bancos têm política de não saída para dado classificado. Se sim, usar Claude via API com contrato de processamento de dados adequado, com revisão humana do output. Se não, avaliar modelo open-weight rodando on-premises com capacidade de janela de contexto suficiente para os documentos. *Ponto de julgamento:* a comparação de capacidade entre "Claude via cloud" e "modelo open-weight on-premises" é secundária à conformidade regulatória. Escolher a ferramenta mais capaz que a política de dado não admite é erro de sequência de decisão.
+*Situação:* área de compliance analisa semanalmente documentos regulatórios do banco central e reguladores setoriais, cruzando com políticas internas para identificar impactos. Dados incluem informações sensíveis e documentos não públicos. *O que fazer:* avaliar se a política de segurança permite envio a cloud de terceiro — muitos bancos têm política de não saída para dado classificado. Se sim, usar Claude via API com contrato de processamento adequado e revisão humana do output. Se não, avaliar modelo open-weight on-premises com janela de contexto suficiente. *Ponto de julgamento:* a comparação de capacidade entre "Claude via cloud" e "modelo on-premises" é secundária à conformidade regulatória. Escolher a ferramenta mais capaz que a política não admite é erro de sequência de decisão.
 
 > 🔧 **EXERCÍCIO**
 >
-> Escolha uma iniciativa de IA ativa ou planejada na sua organização — ou na sua rotina, se for uso individual. Aplique os seis critérios da seção 5b.2 a essa iniciativa, respondendo cada um com evidência concreta, não com intuição.
+> Escolha uma iniciativa de IA ativa ou planejada na sua organização — ou na sua rotina, se for uso individual. Aplique os seis critérios da seção 5b.2, respondendo cada um com evidência concreta, não com intuição.
 >
-> Ao terminar, responda: **a escolha de ferramenta que você está usando (ou planejando usar) sobrevive a esse escrutínio?** Se sim, a decisão está fundamentada. Se não — se algum critério aponta para outra opção —, o exercício de valor é registrar qual critério mudaria a decisão e o que impede de agir sobre ele. Às vezes o impedimento é técnico; com mais frequência é político ou emocional. Nomear o impedimento é o primeiro passo para resolvê-lo.
+> Ao terminar: **a escolha de ferramenta sobrevive a esse escrutínio?** Se não — se algum critério aponta para outra opção —, registre qual critério mudaria a decisão e o que impede de agir. Às vezes o impedimento é técnico; com mais frequência é político ou emocional. Nomear o impedimento é o primeiro passo para resolvê-lo.
 
 ---
 

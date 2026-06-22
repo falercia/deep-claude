@@ -16,21 +16,21 @@
 
 ## 9.1 — O CONCEITO INTUITIVO
 
-Existe um marco temporal claro na história da assistência de IA em desenvolvimento de software, e ele é fevereiro de 2025, quando a Anthropic lançou Claude Code como research preview público. Antes dessa data, ferramentas de IA para desenvolvedores eram predominantemente autocompletes inteligentes (GitHub Copilot) ou IDEs com IA embarcada para edição assistida (Cursor, Continue). Cada uma tinha seu valor, mas todas operavam no paradigma de "desenvolvedor faz, IA ajuda". A primeira sugere a próxima linha, a segunda ajuda você a modificar trecho que você está editando. Em ambos os casos, você dirige a operação.
+Antes do Claude Code, ferramentas de IA para desenvolvimento operavam no paradigma "desenvolvedor faz, IA ajuda": Copilot sugere a próxima linha, Cursor edita o trecho que você está modificando. Em ambos os casos, você dirige cada passo.
 
-Claude Code inverteu esse paradigma. Você descreve um objetivo — "implemente sistema de autenticação com Google OAuth, escreva testes e abra pull request" — e o sistema executa todos os passos necessários: planeja arquitetura, lê código existente, escreve arquivos novos, modifica arquivos existentes, roda testes, comita mudanças, abre PR. Você revisa o resultado, em vez de operar cada passo. A natureza do trabalho mudou de execução assistida para orquestração de execução, e essa mudança é qualitativamente diferente do que veio antes.
+Claude Code inverteu esse paradigma. Você descreve um objetivo — "implemente autenticação com Google OAuth, escreva testes e abra PR" — e o sistema executa tudo: planeja arquitetura, lê código existente, escreve e modifica arquivos, roda testes, comita, abre PR. Você revisa o resultado em vez de operar cada passo. A natureza do trabalho mudou de execução assistida para orquestração de execução.
 
-Para profissionais de software que entendem essa mudança e adotam Claude Code com fluência, ganhos de produtividade entre 3x e 10x em diversos tipos de tarefa são consistentemente relatados. Para quem ainda usa como se fosse autocomplete sofisticado, a ferramenta entrega valor moderado mas perde a maior parte do que ela permite. Este capítulo é o que te dá o entendimento para extrair o potencial real.
+Para quem adota com fluência, ganhos de 3x a 10x em produtividade são consistentemente relatados. Para quem ainda usa como autocomplete sofisticado, a ferramenta entrega valor moderado e perde a maior parte do que permite. Este capítulo é o que te dá entendimento para extrair o potencial real.
 
 ---
 
 ## 9.2 — ANALOGIA: O ESTAGIÁRIO QUE ENTREGA O TICKET COMPLETO
 
-Pense na diferença entre dois tipos de assistente em uma equipe de engenharia. O primeiro é um estagiário recém-chegado que precisa de orientação detalhada para cada coisa. Você abre o editor, ele olha por cima do seu ombro, sugere a próxima linha que provavelmente faz sentido, e você decide se aceita ou descarta. Quando você está perdido, ele ajuda. Quando você sabe o caminho, ele atrapalha. Ele economiza tempo em linhas, mas você ainda dirige integralmente o trabalho.
+Dois tipos de assistente em uma equipe de engenharia. O primeiro olha por cima do seu ombro e sugere a próxima linha enquanto você digita — útil, mas você ainda dirige cada passo. Esse é o Copilot.
 
-O segundo é um desenvolvedor júnior competente que você pode atribuir um ticket fechado e esperar entrega razoável. "Implemente endpoint de upload de arquivos, com validação de tamanho e tipo, logs estruturados, e testes cobrindo cenários principais". Ele lê a especificação, olha o código existente, propõe arquitetura, executa, testa, e te apresenta o resultado em pull request para review. Quando ele entrega, você revisa o conjunto, comenta o que precisa ajustar, e ele itera até estar bom para merge.
+O segundo recebe um ticket fechado e entrega: "implemente endpoint de upload com validação de tamanho e tipo, logs estruturados, testes cobrindo cenários principais". Ele lê o código existente, propõe arquitetura, executa, testa, abre PR. Você revisa o conjunto e ele itera até merger. Esse é o Claude Code.
 
-Os dois são úteis em situações diferentes. O autocomplete sofisticado tipo Copilot é o primeiro estagiário, ótimo para acelerar trabalho linha por linha. Claude Code é o segundo desenvolvedor júnior, dirigido por ticket inteiro, com autonomia para executar fluxos completos. Quando uma equipe entende essa diferença, distribui o trabalho conforme apropriado, ganhando produtividade que nenhum dos dois sozinhos entregaria.
+Os dois são úteis em situações diferentes. Copilot acelera linha por linha. Claude Code executa fluxos completos dirigidos por objetivo. Quem entende essa diferença distribui o trabalho conforme o perfil de cada ferramenta.
 
 ---
 
@@ -58,11 +58,11 @@ O arquivo **CLAUDE.md** na raiz do projeto é mecanismo poderoso para passar ins
 
 ### 9.3.2 — Instalação e setup
 
-A instalação é via npm, com um único comando: `npm install -g @anthropic-ai/claude-code`. Após instalar, você roda `claude` no terminal dentro de qualquer projeto, autentica com sua conta Anthropic, e a sessão começa.
+Instalação via npm: `npm install -g @anthropic-ai/claude-code`. Após instalar, rode `claude` no terminal dentro de qualquer projeto, autentique com sua conta Anthropic e a sessão começa.
 
-Algumas configurações iniciais valem ser feitas para tirar máximo proveito. Primeiro, criar `CLAUDE.md` na raiz do projeto com contexto e regras. Segundo, configurar `.claude/settings.json` com preferências como modelo padrão e permissões. Terceiro, em projetos com servidores MCP relevantes (banco de dados, GitHub, sistemas internos), configurar acesso para que Claude Code possa usar essas ferramentas integradas. Quarto, se sua equipe usa hooks customizados ou skills, integrar no projeto.
+Configurações iniciais que valem o esforço: criar `CLAUDE.md` na raiz com contexto e regras; configurar `.claude/settings.json` com modelo padrão e permissões; conectar servidores MCP relevantes (banco de dados, GitHub, sistemas internos); integrar hooks e skills da equipe.
 
-Para uso profissional consistente, vale tratar a configuração de Claude Code do projeto como infraestrutura versionada junto ao código. CLAUDE.md e settings.json no Git, revisados como qualquer artefato técnico. Isso garante que todos no time tenham experiência consistente.
+Para uso profissional consistente, trate CLAUDE.md e settings.json como infraestrutura versionada no Git — revisada como qualquer artefato técnico. Isso garante experiência consistente para todos no time.
 
 ### 9.3.3 — Comparação com alternativas
 
@@ -183,9 +183,9 @@ Tempo total típico: entre 3 e 7 minutos para tarefa que tradicionalmente leva e
 
 ## 9.5 — EXEMPLO MEMORÁVEL: A MIGRAÇÃO DE 3 SEMANAS QUE VIROU 2 DIAS
 
-Uma startup brasileira de fintech enfrentou em meados de 2025 um problema que vale conhecer. A base de código frontend, com cerca de 180 mil linhas em TypeScript, precisava ser migrada de versão antiga de uma biblioteca de componentes para versão nova, com API ligeiramente diferente. A estimativa inicial do time era de três semanas com dois desenvolvedores dedicados — cerca de 240 horas-pessoa.
+Uma startup brasileira de fintech precisou migrar 180 mil linhas de TypeScript de uma biblioteca de componentes para versão nova com API diferente. A estimativa inicial: três semanas com dois desenvolvedores — 240 horas-pessoa.
 
-A senior eng. responsável decidiu testar uma abordagem alternativa usando Claude Code, em dia que ela estaria sozinha na casa em finalidade de semana prolongado. Configurou cuidadosamente o setup do projeto. Primeiro, escreveu CLAUDE.md detalhado descrevendo o projeto, a biblioteca antiga e a nova, com mapeamento explícito de mudanças de API que tinha estudado no changelog. Segundo, configurou Claude Code para usar Opus em modo extended thinking, com plano explícito sendo apresentado antes de cada conjunto de mudanças. Terceiro, instruiu que o agente trabalhasse em branches separadas por módulo, com PRs incrementais que ela revisaria.
+A senior eng. responsável decidiu testar uma abordagem alternativa num fim de semana prolongado. Configurou o setup cuidadosamente: CLAUDE.md detalhado com mapeamento explícito das mudanças de API, Opus em extended thinking com plano explícito antes de cada conjunto de mudanças, e instrução para trabalhar em branches separadas por módulo com PRs incrementais para ela revisar.
 
 Sábado pela manhã, ela iniciou. O primeiro pedido foi "leia toda a base e identifique todos os componentes que usam a biblioteca antiga, classificando por complexidade de migração". O resultado, em cerca de quinze minutos, foi um documento estruturado com 312 componentes classificados em três tiers de complexidade, com estimativa de esforço para cada e identificação de bloqueadores potenciais.
 
@@ -206,7 +206,7 @@ A lição estrutural não é sobre Claude Code substituir engenheiros — é sob
 
 ## 9.6 — NA PRÁTICA: TRÊS APLICAÇÕES REPLICÁVEIS
 
-O exemplo anterior conta uma história; esta seção entrega o roteiro. Três aplicações que você pode rodar esta semana. Cada uma segue a mesma forma — *situação → o que fazer → o ponto de julgamento* — porque o passo a passo é replicável, mas é o ponto de julgamento que separa uso profissional de uso ingênuo.
+Três aplicações que você pode rodar esta semana. Cada uma segue a forma *situação → o que fazer → o ponto de julgamento* — o ponto de julgamento é o que separa uso profissional de uso ingênuo.
 
 **Aplicação 1 — Feature end-to-end com Modo Plan e revisão de PR.**
 *Situação:* o produto pediu uma funcionalidade nova, você tem a especificação e a codebase tem cobertura de testes razoável. *O que fazer:* abra Claude Code no terminal do projeto; descreva o objetivo completo ("implemente X com testes cobrindo Y e Z, e abra PR"); peça o Modo Plan antes de qualquer modificação; leia o plano com atenção a quais arquivos serão tocados e quais testes escritos; aprove ou ajuste antes de executar; revise o PR com foco em comportamento e arquitetura, não em sintaxe. *O ponto de julgamento:* decida se o PR está pronto para merge — não baseado na confiança de que "o Claude fez", mas na revisão que você fez. O agente entregou; a aprovação para produção é sua, indelegável (Invariante 8). Se a codebase não tem testes suficientes para você detectar a diferença entre "parece certo" e "está certo", reduza a autonomia antes de começar.
@@ -224,17 +224,15 @@ O exemplo anterior conta uma história; esta seção entrega o roteiro. Três ap
 
 ## 9.7 — LIMITAÇÕES E CUIDADOS
 
-Estas são as limitações e cuidados que separam uso profissional de uso ingênuo.
+A primeira é **revisão humana continua sendo prerrequisito**. Claude Code é potente mas não infalível. Cada PR aberto precisa de review humano antes de merge — com foco em comportamento e arquitetura, não em sintaxe. Indispensável.
 
-A primeira é **revisão humana continua sendo prerrequisito**. Claude Code é potente mas não infalível. Cada PR aberto pelo sistema precisa de review humano antes de merge, especialmente em código de produção. A revisão é diferente da revisão de PR humano (foco em validação de comportamento e arquitetura, menos em sintaxe), mas é indispensável.
+A segunda é **acesso a sistemas sensíveis**. Com acesso a bash, tools com efeitos no mundo e sistemas via MCP, Claude Code pode causar dano se mal instruído. Configure permissões com cuidado, use ambientes isolados e mantenha logs do que o sistema executa.
 
-A segunda é **acesso a sistemas sensíveis**. Quando Claude Code tem acesso a bash, a tools com efeitos no mundo, ou a sistemas via MCP, ele pode causar dano se mal instruído. Em ambientes de produção, configure permissões cuidadosamente, use ambientes isolados quando apropriado, e mantenha logs de tudo que o sistema executa.
+A terceira é **custos em tokens que escalem**. Sessões longas com Opus em extended thinking e múltiplos subagentes consomem tokens significativamente acima de conversas comuns. Instrumente e monitore em equipes grandes.
 
-A terceira é **custos em tokens podem escalar**. Sessões longas de Claude Code, especialmente com Opus em extended thinking e múltiplos subagentes, consomem tokens significativamente mais do que conversas comuns. Vale instrumentar e monitorar, principalmente em equipes grandes.
+A quarta é **dependência crítica da qualidade do CLAUDE.md**. Sem instruções claras, o sistema opera com suposições genéricas. Equipes que investem no arquivo colhem retorno proporcional.
 
-A quarta é **dependência crítica de qualidade do CLAUDE.md**. Sem instruções claras no arquivo, o sistema opera com suposições genéricas, e a qualidade cai. Equipes que investem em escrever CLAUDE.md cuidadoso colhem retorno proporcional.
-
-A quinta é **conhecimento de bibliotecas e ferramentas atuais**. Claude tem conhecimento até a data de corte do treino, e pode ter informação desatualizada sobre bibliotecas que evoluíram. Para bibliotecas novas ou versões recentes, force consulta à documentação atual via WebFetch ou MCP.
+A quinta é **conhecimento de bibliotecas com corte de treino**. Para versões recentes, force consulta à documentação atual via WebFetch ou MCP.
 
 ---
 
