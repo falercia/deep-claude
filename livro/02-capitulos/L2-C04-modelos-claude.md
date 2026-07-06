@@ -45,6 +45,8 @@ Cada modelo é descrito abaixo com suas especificidades técnicas e econômicas.
 
 **O tier de velocidade (Haiku)** é o modelo de latência mínima e custo mínimo, posicionado para tarefas simples em alto volume. A capacidade é competente para classificação, extração de dados estruturados, roteamento, tradução e sumarização curta. Velocidade é a maior da família. Custo é radicalmente menor que Opus — cerca de vinte vezes menos, na proporção histórica; valor corrente no Apêndice Vivo.
 
+**O tier de fronteira (classe Mythos), acima do trio.** A partir de 2026, a família ganhou uma camada que se posiciona *acima* de Opus em capacidade, entregue em duas formas que compartilham o mesmo modelo e diferem apenas nas salvaguardas: uma versão de uso geral com salvaguardas fortes e uma versão de acesso restrito com salvaguardas removidas para ciberdefesa. É a serra de bancada industrial ao lado do trio de ferramentas do dia a dia: reservada para o topo da curva de dificuldade — planejamento, arquitetura, problemas de horizonte longo — e substancialmente mais cara, com tendência a ser cobrada por *crédito de uso* e não por inclusão na assinatura. Dois cuidados que o encaixe (Invariante 4) impõe aqui: primeiro, o tier de fronteira **redireciona** automaticamente certas requisições sensíveis para o tier premium, então parte do trabalho "roda em Opus" mesmo quando você pediu o topo; segundo, o prêmio de preço só se paga em tarefas onde uma resposta melhor vale horas de trabalho a jusante — produção e volume continuam no balanceado. Nomes de versão, preços e o mecanismo de cobrança vigente ficam no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md).
+
 ![Diagrama 4.1 — A Família Claude em 2026](imagens/cap-04-img-01-familia-claude.svg)
 
 ### 4.3.2 — O modo extended thinking
@@ -122,7 +124,8 @@ A separação é proposital: conhecer o que cada modelo é (este capítulo) prec
 
 | Conceito | Síntese |
 |----------|---------|
-| **Opus (tier premium)** | Fronteira absoluta de capacidade, melhor para raciocínio profundo e escrita crítica — preço corrente no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md) |
+| **Tier de fronteira (classe Mythos)** | Camada acima do trio desde 2026; para o topo da curva de dificuldade. Redireciona requisições sensíveis ao premium; caro e tende a cobrança por crédito de uso — detalhes no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md) |
+| **Opus (tier premium)** | Fronteira geral de capacidade, melhor para raciocínio profundo e escrita crítica — preço corrente no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md) |
 | **Sonnet (tier balanceado)** | Padrão para a maioria das aplicações em produção — versão e preço correntes no Apêndice Vivo |
 | **Haiku (tier de velocidade)** | Custo mínimo, latência mínima, ideal para alto volume — versão e preço correntes no Apêndice Vivo |
 | **Extended thinking** | Raciocínio estendido disponível em Opus e Sonnet; ausente em Haiku. Ativar seletivamente |

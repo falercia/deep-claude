@@ -166,7 +166,7 @@ Três aplicações que você pode rodar esta semana. Cada uma segue a forma *sit
 
 > 📋 **Apêndice J — o que fica aqui vs. no corpo**
 >
-> Versões específicas de cada modelo (ex.: Claude Opus 4.5, Sonnet 4.5, Haiku 3.5), preços correntes por milhão de tokens, janelas de contexto exatas e disponibilidade de extended thinking por tier são números voláteis — mudam a cada release. Esses dados ficam exclusivamente no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md), atualizado continuamente. O que está neste capítulo é o padrão estrutural: a lógica de roteamento, os critérios de encaixe, os anti-padrões. Esses duram.
+> Versões específicas de cada modelo (ex.: Claude Fable 5, Opus 4.8, Sonnet 5, Haiku 4.5), preços correntes por milhão de tokens, o mecanismo de cobrança vigente (assinatura vs. *usage credits*), janelas de contexto exatas e disponibilidade de extended thinking por tier são números voláteis — mudam a cada release. Esses dados ficam exclusivamente no [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md), atualizado continuamente. O que está neste capítulo é o padrão estrutural: a lógica de roteamento, os critérios de encaixe, os anti-padrões. Esses duram.
 
 ---
 

@@ -1049,7 +1049,7 @@ Fabio Garcia
 <h2 id="explicação-técnica">2.3 — EXPLICAÇÃO TÉCNICA</h2>
 <h3 id="a-história-em-linha-do-tempo">2.3.1 — A história em linha do tempo</h3>
 <p>A Anthropic foi fundada em 2021 por Dario Amodei e sua irmã Daniela Amodei, junto com outros pesquisadores que saíram da OpenAI naquele ano. Dario era VP de Pesquisa da OpenAI antes da saída, e participou de marcos como GPT-2 e GPT-3. O motivo da saída, declarado publicamente em entrevistas posteriores, foi divergência sobre prioridade de segurança no desenvolvimento de modelos avançados. A percepção dos fundadores era de que o ritmo de lançamento estava avançando mais rápido que a maturidade dos métodos de garantia de segurança, e que valeria a pena criar uma empresa que invertesse essa prioridade.</p>
-<p>A empresa passou os primeiros dois anos sem produto comercial, dedicando-se a pesquisa fundamental em alinhamento, interpretabilidade e segurança de modelos. O primeiro paper público de impacto foi sobre Constitutional AI, em dezembro de 2022, que vamos detalhar adiante. Em março de 2023, lançaram Claude 1 ao público, marcando entrada comercial. Em julho de 2023, Claude 2 saiu junto com a interface claude.ai. Em março de 2024, a família Claude 3 foi anunciada, organizada nos três tiers nomeados Opus, Sonnet e Haiku, padrão que se mantém em 2026. Em outubro de 2024 anunciaram Computer Use, capacidade de o modelo operar interface gráfica de computador. Em novembro de 2024, anunciaram MCP, padrão aberto para conectar modelos a ferramentas. Em fevereiro de 2025, Claude Code virou produto público. Setembro de 2025 trouxe Sonnet 4.5 com 77,2% no SWE-bench. A partir daí, a cadência de lançamentos acelerou — portfólio corrente de modelos e capacidades no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
+<p>A empresa passou os primeiros dois anos sem produto comercial, dedicando-se a pesquisa fundamental em alinhamento, interpretabilidade e segurança de modelos. O primeiro paper público de impacto foi sobre Constitutional AI, em dezembro de 2022, que vamos detalhar adiante. Em março de 2023, lançaram Claude 1 ao público, marcando entrada comercial. Em julho de 2023, Claude 2 saiu junto com a interface claude.ai. Em março de 2024, a família Claude 3 foi anunciada, organizada nos três tiers nomeados Opus, Sonnet e Haiku — estrutura que segue como espinha dorsal em 2026, agora com uma camada de fronteira acima dela (a classe Mythos, entregue como Fable e Mythos); lineup corrente no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>. Em outubro de 2024 anunciaram Computer Use, capacidade de o modelo operar interface gráfica de computador. Em novembro de 2024, anunciaram MCP, padrão aberto para conectar modelos a ferramentas. Em fevereiro de 2025, Claude Code virou produto público. Setembro de 2025 trouxe Sonnet 4.5 com 77,2% no SWE-bench. A partir daí, a cadência de lançamentos acelerou — portfólio corrente de modelos e capacidades no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
 <blockquote>
 <p>📊 <strong>Diagrama 2.1 — A História da Anthropic e do Claude</strong></p>
 <figure>
@@ -1594,6 +1594,7 @@ Defender, em domínio regulado, por que recusas explícitas viram vantagem compe
 <p><strong>O tier premium (Opus)</strong> ocupa a fronteira absoluta de capacidade da família. Lidera benchmarks de codificação complexa e raciocínio multi-etapa — números correntes no Apêndice Vivo. A qualidade da escrita é notavelmente superior em comparações cegas com humanos. Velocidade é moderada: suficiente para uso interativo, mas não para real-time de alta concorrência. Custo é o mais alto da família — o delta em relação aos outros tiers é substancial, na faixa de 5× a 20× dependendo do modelo comparado; valor corrente no Apêndice Vivo.</p>
 <p><strong>O tier balanceado (Sonnet)</strong> é a melhor combinação de capacidade, velocidade e custo para a maioria das operações em produção. Fica muito próximo de Opus em capacidade geral, mas com latência menor e custo dramaticamente inferior. Em 2026, Sonnet é o modelo recomendado como ponto de partida para qualquer nova aplicação.</p>
 <p><strong>O tier de velocidade (Haiku)</strong> é o modelo de latência mínima e custo mínimo, posicionado para tarefas simples em alto volume. A capacidade é competente para classificação, extração de dados estruturados, roteamento, tradução e sumarização curta. Velocidade é a maior da família. Custo é radicalmente menor que Opus — cerca de vinte vezes menos, na proporção histórica; valor corrente no Apêndice Vivo.</p>
+<p><strong>O tier de fronteira (classe Mythos), acima do trio.</strong> A partir de 2026, a família ganhou uma camada que se posiciona <em>acima</em> de Opus em capacidade, entregue em duas formas que compartilham o mesmo modelo e diferem apenas nas salvaguardas: uma versão de uso geral com salvaguardas fortes e uma versão de acesso restrito com salvaguardas removidas para ciberdefesa. É a serra de bancada industrial ao lado do trio de ferramentas do dia a dia: reservada para o topo da curva de dificuldade — planejamento, arquitetura, problemas de horizonte longo — e substancialmente mais cara, com tendência a ser cobrada por <em>crédito de uso</em> e não por inclusão na assinatura. Dois cuidados que o encaixe (Invariante 4) impõe aqui: primeiro, o tier de fronteira <strong>redireciona</strong> automaticamente certas requisições sensíveis para o tier premium, então parte do trabalho “roda em Opus” mesmo quando você pediu o topo; segundo, o prêmio de preço só se paga em tarefas onde uma resposta melhor vale horas de trabalho a jusante — produção e volume continuam no balanceado. Nomes de versão, preços e o mecanismo de cobrança vigente ficam no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
 <figure>
 <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODgwIDQ5MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmb250LWZhbWlseT0iJ0ludGVyJywnU2Vnb2UgVUknLCdIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiI+CiAgPGRlZnM+CiAgICA8ZmlsdGVyIGlkPSJzaDRhIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj4KICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjIiIHN0ZERldmlhdGlvbj0iMy41IiBmbG9vZC1jb2xvcj0iIzFCMkEzMyIgZmxvb2Qtb3BhY2l0eT0iMC4xMiIvPgogICAgPC9maWx0ZXI+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRSdWxlNGEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjQzI5MTJDIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRTJDODc5Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPG1hcmtlciBpZD0iYXhFbmQ0YSIgbWFya2VyV2lkdGg9IjkiIG1hcmtlckhlaWdodD0iOSIgcmVmWD0iNiIgcmVmWT0iMyIgb3JpZW50PSJhdXRvIiBtYXJrZXJVbml0cz0ic3Ryb2tlV2lkdGgiPgogICAgICA8cGF0aCBkPSJNMCwwIEw3LDMgTDAsNiBaIiBmaWxsPSIjMUIyQTMzIi8+CiAgICA8L21hcmtlcj4KICA8L2RlZnM+CgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSI4NzgiIGhlaWdodD0iNDg4IiByeD0iMTYiIGZpbGw9IiNGQkY4RjEiIHN0cm9rZT0iI0U2REZDOSIvPgoKICA8dGV4dCB4PSI0NCIgeT0iNDgiIGZvbnQtc2l6ZT0iMTIuNSIgbGV0dGVyLXNwYWNpbmc9IjIuNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI0MyOTEyQyI+RElBR1JBTUEgNC4xIMK3IElOVkFSSUFOVEUgNCDigJQgRU5DQUlYRTwvdGV4dD4KICA8dGV4dCB4PSI0NCIgeT0iNzgiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxQjJBMzMiPkEgRmFtw61saWEgQ2xhdWRlOiB0csOqcyB0aWVycyBkZSBvdGltaXphw6fDo288L3RleHQ+CiAgPHJlY3QgeD0iNDQiIHk9IjkwIiB3aWR0aD0iODYiIGhlaWdodD0iMy41IiByeD0iMS43NSIgZmlsbD0idXJsKCNnb2xkUnVsZTRhKSIvPgoKICA8IS0tIGF4ZXMgLS0+CiAgPGxpbmUgeDE9IjE1MCIgeTE9IjQxNSIgeDI9IjgyMCIgeTI9IjQxNSIgc3Ryb2tlPSIjMUIyQTMzIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXhFbmQ0YSkiLz4KICA8bGluZSB4MT0iMTUwIiB5MT0iNDE1IiB4Mj0iMTUwIiB5Mj0iMTI0IiBzdHJva2U9IiMxQjJBMzMiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNheEVuZDRhKSIvPgoKICA8dGV4dCB4PSI0OTAiIHk9IjQ0NiIgZm9udC1zaXplPSIxMi41IiBmaWxsPSIjMUIyQTMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iNjAwIj5DVVNUTyBFIExBVMOKTkNJQSDihpI8L3RleHQ+CiAgPHRleHQgeD0iNDkwIiB5PSI0NjAiIGZvbnQtc2l6ZT0iMTEuNSIgZmlsbD0iIzdDNzc2OCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+bWVub3Ig4oaQ4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oCU4oaSIG1haW9yPC90ZXh0PgogIDx0ZXh0IHg9IjEzOCIgeT0iMjcwIiBmb250LXNpemU9IjEyLjUiIGZpbGw9IiMxQjJBMzMiIGZvbnQtd2VpZ2h0PSI2MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAxMzggMjcwKSI+Q0FQQUNJREFERSDihpI8L3RleHQ+CiAgPHRleHQgeD0iMTI2IiB5PSIyNzAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiM3Qzc3NjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAxMjYgMjcwKSI+bWVub3Ig4oaQ4oCU4oCU4oCU4oCU4oaSIG1haW9yPC90ZXh0PgoKICA8IS0tIHF1YWRyYW50IGRpdmlkZXJzIC0tPgogIDxsaW5lIHgxPSI0NjAiIHkxPSIxMzQiIHgyPSI0NjAiIHkyPSI0MTUiIHN0cm9rZT0iI0NGQzhCNiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSI0IDQiLz4KICA8bGluZSB4MT0iMTUwIiB5MT0iMjc1IiB4Mj0iODIwIiB5Mj0iMjc1IiBzdHJva2U9IiNDRkM4QjYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iNCA0Ii8+CgogIDwhLS0gT1BVUyDigJQgYWx0YSBjYXBhY2lkYWRlLCBhbHRvIGN1c3RvOiB0b3AtcmlnaHQgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3NoNGEpIj4KICAgIDxyZWN0IHg9IjQ5NCIgeT0iMTQyIiB3aWR0aD0iMjk4IiBoZWlnaHQ9IjEyMCIgcng9IjEzIiBmaWxsPSIjRkJGNkVBIiBzdHJva2U9IiNFMkQ0QUMiLz4KICA8L2c+CiAgPHBhdGggZD0iTTQ5NCwxNTUgYTEzLDEzIDAgMCAxIDEzLC0xMyBoMjcyIGExMywxMyAwIDAgMSAxMywxMyB2MjIgaC0yOTggeiIgZmlsbD0iI0MyOTEyQyIvPgogIDx0ZXh0IHg9IjUzMCIgeT0iMTcxIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjRkZGRkZGIj5PUFVTPC90ZXh0PgogIDx0ZXh0IHg9Ijc4NCIgeT0iMTcxIiBmb250LXNpemU9IjExLjUiIGZpbGw9IiNGQkVGRDAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtc3R5bGU9Iml0YWxpYyI+dGllciBwcmVtaXVtPC90ZXh0PgogIDx0ZXh0IHg9IjUxMCIgeT0iMjAwIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjOUE3QTJFIj5Gcm9udGVpcmEgYWJzb2x1dGEgZGUgY2FwYWNpZGFkZTwvdGV4dD4KICA8dGV4dCB4PSI1MTAiIHk9IjIxOCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzdDNzc2OCI+cmFjaW9jw61uaW8gcHJvZnVuZG8gwrcgZXNjcml0YSBjcsOtdGljYTwvdGV4dD4KICA8dGV4dCB4PSI1MTAiIHk9IjIzNiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzdDNzc2OCI+ZGVjaXPDo28gaXJyZXZlcnPDrXZlbCDCtyBleHRlbmRlZCB0aGlua2luZzwvdGV4dD4KICA8dGV4dCB4PSI1MTAiIHk9IjI1MiIgZm9udC1zaXplPSIxMS41IiBmaWxsPSIjOUE3QTJFIiBmb250LXdlaWdodD0iNjAwIj5+NS0xMCUgZGFzIHRhcmVmYXMgwrcgY3VzdG8gbWFpcyBhbHRvPC90ZXh0PgoKICA8IS0tIEhBSUtVIOKAlCBiYWl4YSBjYXBhY2lkYWRlLCBiYWl4byBjdXN0bzogYm90dG9tLWxlZnQgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3NoNGEpIj4KICAgIDxyZWN0IHg9IjE3MCIgeT0iMjkwIiB3aWR0aD0iMjY4IiBoZWlnaHQ9IjEwOCIgcng9IjEzIiBmaWxsPSIjRUZGNkY3IiBzdHJva2U9IiNCQkQ3REIiLz4KICA8L2c+CiAgPHBhdGggZD0iTTE3MCwzMDMgYTEzLDEzIDAgMCAxIDEzLC0xMyBoMjQyIGExMywxMyAwIDAgMSAxMywxMyB2MjIgaC0yNjggeiIgZmlsbD0iIzJFN0Q4QSIvPgogIDx0ZXh0IHg9IjIwOCIgeT0iMzE5IiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjRkZGRkZGIj5IQUlLVTwvdGV4dD4KICA8dGV4dCB4PSI0MzAiIHk9IjMxOSIgZm9udC1zaXplPSIxMS41IiBmaWxsPSIjRENFRkYxIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXN0eWxlPSJpdGFsaWMiPnRpZXIgZGUgdmVsb2NpZGFkZTwvdGV4dD4KICA8dGV4dCB4PSIxODgiIHk9IjM0NiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzI1NkE3NSI+TGF0w6puY2lhIG3DrW5pbWEsIGN1c3RvIG3DrW5pbW88L3RleHQ+CiAgPHRleHQgeD0iMTg4IiB5PSIzNjQiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM3Qzc3NjgiPmNsYXNzaWZpY2FyIMK3IGV4dHJhaXIgwrcgcm90ZWFyIMK3IHJlYWwtdGltZTwvdGV4dD4KICA8dGV4dCB4PSIxODgiIHk9IjM4MiIgZm9udC1zaXplPSIxMS41IiBmaWxsPSIjMjU2QTc1IiBmb250LXdlaWdodD0iNjAwIj5+MjUtNDUlIGRvIHZvbHVtZSDCtyB+MjDDlyBtYWlzIGJhcmF0byBxdWUgT3B1czwvdGV4dD4KCiAgPCEtLSBTT05ORVQg4oCUIGVxdWlsw61icmlvOiBjZW50ZXIgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3NoNGEpIj4KICAgIDxyZWN0IHg9IjI5MCIgeT0iMTk2IiB3aWR0aD0iMjY4IiBoZWlnaHQ9Ijg4IiByeD0iMTMiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0NGQzhCNiIvPgogIDwvZz4KICA8cGF0aCBkPSJNMjkwLDIwOSBhMTMsMTMgMCAwIDEgMTMsLTEzIGgyNDIgYTEzLDEzIDAgMCAxIDEzLDEzIHYyMiBoLTI2OCB6IiBmaWxsPSIjNDQ1MjVDIi8+CiAgPHRleHQgeD0iMzI2IiB5PSIyMjUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNGRkZGRkYiPlNPTk5FVDwvdGV4dD4KICA8dGV4dCB4PSI1NTAiIHk9IjIyNSIgZm9udC1zaXplPSIxMS41IiBmaWxsPSIjRDBEOERDIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXN0eWxlPSJpdGFsaWMiPnRpZXIgYmFsYW5jZWFkbzwvdGV4dD4KICA8dGV4dCB4PSIzMDgiIHk9IjI1MiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzQ0NTI1QyI+TyBkZWZhdWx0IGNvbnNjaWVudGUgcGFyYSBwcm9kdcOnw6NvPC90ZXh0PgogIDx0ZXh0IHg9IjMwOCIgeT0iMjcwIiBmb250LXNpemU9IjEyIiBmaWxsPSIjN0M3NzY4Ij5jYXBhY2lkYWRlIHByw7N4aW1hIGEgT3B1cyDCtyBjdXN0byBtdWl0byBtZW5vcjwvdGV4dD4KCiAgPCEtLSBjZW50ZXIgbGFiZWwgbm90ZSAtLT4KICA8cmVjdCB4PSIzMDgiIHk9IjI3MiIgd2lkdGg9IjIzMiIgaGVpZ2h0PSIyMiIgcng9IjYiIGZpbGw9IiNGMUVDRTAiIHN0cm9rZT0iI0Q4RDBCRCIvPgogIDx0ZXh0IHg9IjQyNCIgeT0iMjg3IiBmb250LXNpemU9IjExLjUiIGZpbGw9IiM0NDUyNUMiIGZvbnQtd2VpZ2h0PSI2MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPn41MC03MCUgZGFzIHRhcmVmYXMgwrcgcGFkcsOjbyBkZSBwYXJ0aWRhPC90ZXh0PgoKICA8dGV4dCB4PSI0NCIgeT0iNDc4IiBmb250LXNpemU9IjEyLjUiIGZpbGw9IiM3Qzc3NjgiIGZvbnQtc3R5bGU9Iml0YWxpYyI+VHLDqnMgdGllcnMsIGNhZGEgdW0gb3RpbWl6YWRvIHBhcmEgdW1hIGZhaXhhIGRlIGNhcGFjaWRhZGUsIHZlbG9jaWRhZGUgZSBjdXN0by4gVmVyc8O1ZXMgZSBwcmXDp29zIGNvcnJlbnRlczogQXDDqm5kaWNlIFZpdm8uPC90ZXh0Pgo8L3N2Zz4K" alt="" /><figcaption>Diagrama 4.1 — A Família Claude em 2026</figcaption>
 </figure>
@@ -1653,26 +1654,30 @@ Defender, em domínio regulado, por que recusas explícitas viram vantagem compe
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Opus (tier premium)</strong></td>
-<td>Fronteira absoluta de capacidade, melhor para raciocínio profundo e escrita crítica — preço corrente no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a></td>
+<td><strong>Tier de fronteira (classe Mythos)</strong></td>
+<td>Camada acima do trio desde 2026; para o topo da curva de dificuldade. Redireciona requisições sensíveis ao premium; caro e tende a cobrança por crédito de uso — detalhes no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a></td>
 </tr>
 <tr class="even">
+<td><strong>Opus (tier premium)</strong></td>
+<td>Fronteira geral de capacidade, melhor para raciocínio profundo e escrita crítica — preço corrente no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a></td>
+</tr>
+<tr class="odd">
 <td><strong>Sonnet (tier balanceado)</strong></td>
 <td>Padrão para a maioria das aplicações em produção — versão e preço correntes no Apêndice Vivo</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Haiku (tier de velocidade)</strong></td>
 <td>Custo mínimo, latência mínima, ideal para alto volume — versão e preço correntes no Apêndice Vivo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Extended thinking</strong></td>
 <td>Raciocínio estendido disponível em Opus e Sonnet; ausente em Haiku. Ativar seletivamente</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Janela de contexto</strong></td>
 <td>200k tokens em modo padrão, compartilhada entre input e output; limite exato no Apêndice Vivo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>O próximo passo</strong></td>
 <td>O critério de quando usar cada tier está no Capítulo 5</td>
 </tr>
@@ -1818,7 +1823,7 @@ Defender, em domínio regulado, por que recusas explícitas viram vantagem compe
 <h2 id="camada-viva-2">5.8 — CAMADA VIVA</h2>
 <blockquote>
 <p>📋 <strong>Apêndice J — o que fica aqui vs. no corpo</strong></p>
-<p>Versões específicas de cada modelo (ex.: Claude Opus 4.5, Sonnet 4.5, Haiku 3.5), preços correntes por milhão de tokens, janelas de contexto exatas e disponibilidade de extended thinking por tier são números voláteis — mudam a cada release. Esses dados ficam exclusivamente no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>, atualizado continuamente. O que está neste capítulo é o padrão estrutural: a lógica de roteamento, os critérios de encaixe, os anti-padrões. Esses duram.</p>
+<p>Versões específicas de cada modelo (ex.: Claude Fable 5, Opus 4.8, Sonnet 5, Haiku 4.5), preços correntes por milhão de tokens, o mecanismo de cobrança vigente (assinatura vs. <em>usage credits</em>), janelas de contexto exatas e disponibilidade de extended thinking por tier são números voláteis — mudam a cada release. Esses dados ficam exclusivamente no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>, atualizado continuamente. O que está neste capítulo é o padrão estrutural: a lógica de roteamento, os critérios de encaixe, os anti-padrões. Esses duram.</p>
 </blockquote>
 <hr />
 <h2 id="limitações-e-cuidados-2">5.9 — LIMITAÇÕES E CUIDADOS</h2>
@@ -13799,14 +13804,134 @@ Validação UAU semanal — 5 critérios</code></pre>
 <p>Os números abaixo são úteis para decisão informada <strong>agora</strong>. Não os memorize. Aprenda a ler a fonte e a atualizar com ela. Toda decisão arquitetural de longo prazo deve assumir que estes números mudam — o que <strong>não</strong> muda é o padrão descrito nos capítulos do Livro 1.</p>
 </blockquote>
 <hr />
-<h2 id="data-do-snapshot-inicial">DATA DO SNAPSHOT INICIAL</h2>
-<p><strong>Versão v0.1 — 2026-05-31.</strong> Primeira edição operacional. Cobertura inicial focada nas três famílias frontier proprietárias, principais open-weights e benchmarks que ainda discriminam capacidade. Será expandida conforme a demanda da operação.</p>
+<h2 id="data-do-snapshot">DATA DO SNAPSHOT</h2>
+<p><strong>Versão v0.2 — 2026-07-05.</strong> Snapshot atualizado com a rodada de fronteira da família Claude (Fable 5 / Mythos 5 / Opus 4.8 / Sonnet 5 / Haiku 4.5), preços por milhão de tokens conferidos na fonte oficial, o novo <strong>modelo de precificação por <em>usage credits</em></strong> e a mudança de tokenizer. As demais famílias proprietárias (GPT, Gemini, Grok) e os open-weights mantêm a estrutura mapeada; o populamento numérico por linha, com fonte oficial de cada vendor, entra em rodadas seguintes — sem fabricar número que não tenha fonte primária.</p>
+<blockquote>
+<p><strong>Como este bloco foi checado:</strong> cada preço e data abaixo tem link para a fonte primária da Anthropic (docs de pricing e posts de anúncio), consultada em 2026-07-05. Nenhum número foi estimado.</p>
+</blockquote>
 <hr />
 <h2 id="seção-1-famílias-de-modelo-proprietários">SEÇÃO 1 — FAMÍLIAS DE MODELO PROPRIETÁRIOS</h2>
 <h3 id="anthropic-família-claude">1.1 — Anthropic — Família Claude</h3>
-<p><strong>Status:</strong> ativa, com três tiers canônicos (Opus · Sonnet · Haiku). <strong>Posicionamento estratégico:</strong> força relativa em código, escrita executiva, filosofia de alignment pública (Constitutional AI). <strong>Fonte primária:</strong> <a href="https://docs.claude.com/en/docs/about-claude/models">docs.claude.com — models</a> · <a href="https://www.anthropic.com/news">anthropic.com/news</a> · <a href="https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html">Anthropic Release Timeline</a>.</p>
+<p><strong>Status:</strong> ativa. A nomenclatura em formas literárias, que começou tripartite (Opus · Sonnet · Haiku) com Claude 3, ganhou em 2026 uma <strong>camada de fronteira acima de Opus</strong>: a classe <strong>Mythos</strong>. O trio de trabalho diário permanece Opus/Sonnet/Haiku; acima dele fica o tier de fronteira, entregue em duas formas — <strong>Fable</strong> (com salvaguardas fortes, para uso geral) e <strong>Mythos</strong> (as mesmas capacidades com salvaguardas de cyber removidas, acesso restrito). <em>Fable</em> vem de <em>fabula</em> (“aquilo que se conta”), parente do grego <em>mythos</em>: a salvaguarda é o que separa os dois nomes. <strong>Posicionamento estratégico:</strong> força relativa em código, agentes de horizonte longo, escrita executiva, e uma filosofia de alignment pública (Constitutional AI). O tier de fronteira (Mythos-class) é, segundo a própria Anthropic, o mais capaz que já disponibilizaram. <strong>Fonte primária:</strong> <a href="https://platform.claude.com/docs/en/about-claude/pricing">platform.claude.com — pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview">platform.claude.com — models overview</a> · <a href="https://www.anthropic.com/news">anthropic.com/news</a>.</p>
+<h4 id="lineup-e-preços-correntes-snapshot-2026-07-05">Lineup e preços correntes (snapshot 2026-07-05)</h4>
+<p>Preços em USD por milhão de tokens (MTok). “Cache read” = leitura de cache (10% do input). Janela de contexto de 1M tokens no padrão para os modelos de fronteira e Sonnet 5; Haiku opera em janela menor. Fonte da tabela: <a href="https://platform.claude.com/docs/en/about-claude/pricing">pricing oficial</a>, consultada em 2026-07-05.</p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 18%" />
+<col style="width: 12%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>ID de API</th>
+<th>Input</th>
+<th>Output</th>
+<th>Batch (in/out)</th>
+<th>Cache read</th>
+<th>Papel no encaixe (Inv. 4)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Fable 5</strong></td>
+<td><code>claude-fable-5</code></td>
+<td>$10</td>
+<td>$50</td>
+<td>$5 / $25</td>
+<td>$1</td>
+<td>Fronteira geral: planejamento, arquitetura e os problemas mais difíceis / horizonte longo. O modelo mais caro da lista.</td>
+</tr>
+<tr class="even">
+<td><strong>Mythos 5</strong> <em>(restrito — <a href="https://anthropic.com/glasswing">Glasswing</a>)</em></td>
+<td>—</td>
+<td>$10</td>
+<td>$50</td>
+<td>$5 / $25</td>
+<td>$1</td>
+<td>Mesmo modelo do Fable, salvaguardas de cyber removidas. Ciberdefesa de fronteira; acesso só a parceiros aprovados.</td>
+</tr>
+<tr class="odd">
+<td><strong>Opus 4.8</strong></td>
+<td><code>claude-opus-4-8</code></td>
+<td>$5</td>
+<td>$25</td>
+<td>$2,50 / $12,50</td>
+<td>$0,50</td>
+<td>Fronteira geral a metade do preço do Fable; é para onde o Fable <strong>redireciona</strong> requisições sensíveis (cyber/bio/destilação). Fast mode a $10/$50.</td>
+</tr>
+<tr class="even">
+<td><strong>Sonnet 5</strong> <em>(intro, até 31/ago/2026)</em></td>
+<td><code>claude-sonnet-5</code></td>
+<td>$2</td>
+<td>$10</td>
+<td>$1 / $5</td>
+<td>$0,20</td>
+<td>Cavalo de batalha de produção; <strong>default de Free e Pro</strong>. Roteie bulk/coding aqui.</td>
+</tr>
+<tr class="odd">
+<td><strong>Sonnet 5</strong> <em>(padrão, a partir de 01/set/2026)</em></td>
+<td><code>claude-sonnet-5</code></td>
+<td>$3</td>
+<td>$15</td>
+<td>$1,50 / $7,50</td>
+<td>$0,30</td>
+<td>Mesmo modelo, preço padrão após a janela introdutória.</td>
+</tr>
+<tr class="even">
+<td><strong>Haiku 4.5</strong></td>
+<td><code>claude-haiku-4-5</code></td>
+<td>$1</td>
+<td>$5</td>
+<td>$0,50 / $2,50</td>
+<td>$0,10</td>
+<td>Volume alto, latência baixa: classificação, extração, roteamento. Um décimo do preço do Fable.</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p><strong>Versões correntes desta rodada e benchmarks correspondentes ficam para atualização no próximo snapshot, com link individual por afirmação.</strong> Esta é a estrutura — o conteúdo numérico vivo será populado conforme o autor confirmar fontes oficiais por linha.</p>
+<p><strong>Multiplicadores de cache</strong> (sobre o input base): escrita de 5 min = 1,25×; escrita de 1 h = 2×; leitura (hit) = 0,1×. Válidos para toda a família.</p>
+</blockquote>
+<h4 id="tokenizer-novo-afeta-contagem-de-tokens-e-logo-custo">Tokenizer novo (afeta contagem de tokens e, logo, custo)</h4>
+<p>Opus 4.7+, Fable 5, Mythos 5 e Sonnet 5 usam um <strong>tokenizer novo</strong>: o mesmo texto passa a mapear para mais tokens — cerca de <strong>1,0× a 1,35×</strong> conforme o tipo de conteúdo. Consequência prática: um custo comparado modelo-a-modelo <em>por token</em> subestima o custo real <em>por tarefa</em> nesses modelos. A Anthropic calibrou o preço introdutório do Sonnet 5 para que a migração a partir do Sonnet 4.6 seja aproximadamente custo-neutra. Fonte: <a href="https://www.anthropic.com/news/claude-sonnet-5">nota de rodapé do anúncio do Sonnet 5</a>.</p>
+<h4 id="o-modelo-de-precificação-por-usage-credits-mudança-estrutural-não-só-de-número">O modelo de precificação por <em>usage credits</em> (mudança estrutural, não só de número)</h4>
+<p>A novidade que mais importa para orçamento não é um preço — é um <strong>mecanismo de cobrança</strong>. Para os modelos de fronteira (a começar pelo Fable 5), a Anthropic passou a <strong>desacoplar o acesso da inclusão fixa na assinatura</strong>, movendo-o para <em>usage credits</em> (crédito de uso medido):</p>
+<table>
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plano / superfície</th>
+<th>Como o Fable 5 é cobrado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pro, Max, Team, Enterprise <em>premium</em></td>
+<td>Incluído até <strong>50% dos limites semanais de uso até 07/jul/2026</strong>; depois disso, via <strong>usage credits</strong>. Fonte: <a href="https://www.anthropic.com/news/redeploying-fable-5">post de redeploy</a>.</td>
+</tr>
+<tr class="even">
+<td>Enterprise <em>standard</em></td>
+<td><strong>Sem franquia</strong>: usage credits desde o dia 1. Se os créditos não estiverem habilitados, o Fable 5 simplesmente não roda.</td>
+</tr>
+<tr class="odd">
+<td>API / Enterprise por consumo</td>
+<td>Metered desde sempre, a $10/<span class="math inline">50<em>p</em><em>o</em><em>r</em><em>M</em><em>T</em><em>o</em><em>k</em>.||<em>M</em><em>a</em><em>r</em><em>k</em><em>e</em><em>t</em><em>p</em><em>l</em><em>a</em><em>c</em><em>e</em><em>s</em>(<em>C</em><em>l</em><em>a</em><em>u</em><em>d</em><em>e</em><em>P</em><em>l</em><em>a</em><em>t</em><em>f</em><em>o</em><em>r</em><em>m</em><em>o</em><em>n</em><em>A</em><em>W</em><em>S</em>, <em>C</em><em>l</em><em>a</em><em>u</em><em>d</em><em>e</em><em>i</em><em>n</em><em>M</em><em>i</em><em>c</em><em>r</em><em>o</em><em>s</em><em>o</em><em>f</em><em>t</em><em>F</em><em>o</em><em>u</em><em>n</em><em>d</em><em>r</em><em>y</em>)|<em>F</em><em>a</em><em>t</em><em>u</em><em>r</em><em>a</em><em>d</em><em>o</em><em>e</em><em>m</em> *  * <em>C</em><em>l</em><em>a</em><em>u</em><em>d</em><em>e</em><em>C</em><em>o</em><em>n</em><em>s</em><em>u</em><em>m</em><em>p</em><em>t</em><em>i</em><em>o</em><em>n</em><em>U</em><em>n</em><em>i</em><em>t</em><em>s</em>(<em>C</em><em>C</em><em>U</em>) *  *  : 100<em>C</em><em>C</em><em>U</em> = <em>U</em><em>S</em></span> 1,00, convertidos das taxas por token.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>O que a Anthropic NÃO publicou</strong> (trate como desconhecido, confira no seu dashboard, não modele em cima): o que “50% dos limites semanais” equivale em tokens/mensagens/dólares por plano, e a conversão crédito→dólar depois de 07/jul. O único número confirmado é a taxa por token da API. Fonte da franquia e do corte: <a href="https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans">manage usage credits</a> · <a href="https://www.anthropic.com/news/redeploying-fable-5">post de redeploy</a>.</p>
+</blockquote>
+<p><strong>Linha do tempo do Fable 5 (contexto do porquê houve dois cortes):</strong> lançado 09/jun/2026 → controles de exportação dos EUA em 12/jun (acesso suspenso globalmente) → controles suspensos em 30/jun → <strong>redeploy global em 01/jul</strong> com nova janela → <strong>corte para usage credits em 07/jul</strong>. O primeiro corte anunciado (23/jun) nunca ocorreu porque o modelo estava offline. Fonte: <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">anúncio Fable/Mythos</a> · <a href="https://www.anthropic.com/news/redeploying-fable-5">redeploy</a>.</p>
+<blockquote>
+<p>🧭 <strong>Leitura durável (o que este número diz sobre o padrão — Inv. 3):</strong> dois movimentos aqui sobrevivem à rodada específica. Primeiro, <strong>surgiu um tier de fronteira acima do topo anterior</strong> — a hierarquia de capacidade/custo se estende para cima, não só para os lados. Segundo, <strong>o acesso a modelos de fronteira migra de “incluído na assinatura” para “crédito medido”</strong> — sinal de que capacidade de ponta tende a ser precificada por consumo, não por assinatura plana. A decisão que dura não é “qual o preço do Fable”; é a <strong>política de roteamento</strong>: reserve o tier de fronteira para julgamento e problemas difíceis, mande produção/bulk para o balanceado, e escreva essa regra antes de a fatura chegar. O número muda; a disciplina de roteamento é o Invariante 4 operando sobre o Invariante 3.</p>
 </blockquote>
 <hr />
 <h3 id="openai-família-gpt">1.2 — OpenAI — Família GPT</h3>
@@ -14010,45 +14135,51 @@ Validação UAU semanal — 5 critérios</code></pre>
 </table>
 <hr />
 <h2 id="seção-5-padrões-de-preço-e-latência">SEÇÃO 5 — PADRÕES DE PREÇO E LATÊNCIA</h2>
-<blockquote>
-<p>Esta seção será populada com snapshots por tier (premium, balanceado, pequeno) e por família, com fonte por linha. Os números mudam frequentemente e devem ser conferidos no pricing page oficial de cada vendor.</p>
-</blockquote>
+<p>Os números por família mudam a cada release e devem ser conferidos no pricing oficial de cada vendor. Para a família Claude, o snapshot corrente está na <strong>Seção 1.1</strong> deste apêndice. A leitura por <em>tier</em> abaixo é o padrão que dura; a faixa de proporção entre tiers é o que importa reter.</p>
 <table>
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 61%" />
-<col style="width: 23%" />
+<col style="width: 6%" />
+<col style="width: 70%" />
+<col style="width: 22%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Tier</th>
-<th>Faixa típica observada</th>
-<th>Cuidado</th>
+<th>Referência corrente na família Claude (por MTok, 2026-07-05)</th>
+<th>Cuidado de leitura</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Premium proprietário</td>
-<td>Faixa significativamente mais cara que balanceado</td>
-<td>Variação alta entre vendors; comparar input vs output</td>
+<td>Fronteira (Mythos-class)</td>
+<td>Fable 5 · $10 / $50 — o mais caro da lista</td>
+<td>Reserve para julgamento e horizonte longo; cobrança tende a <em>usage credits</em> na assinatura</td>
 </tr>
 <tr class="even">
-<td>Balanceado proprietário</td>
-<td>Faixa intermediária</td>
-<td>Cavalo de batalha da maioria das aplicações</td>
+<td>Premium</td>
+<td>Opus 4.8 · $5 / $25 (metade do Fable)</td>
+<td>Fronteira geral e fallback de segurança do Fable</td>
 </tr>
 <tr class="odd">
-<td>Pequeno proprietário</td>
-<td>Significativamente mais barato</td>
-<td>Cobre o grosso de tarefas estruturadas</td>
+<td>Balanceado</td>
+<td>Sonnet 5 · $2 / $10 intro (→ $3 / $15 em set/2026)</td>
+<td>Cavalo de batalha de produção; default de Free/Pro</td>
 </tr>
 <tr class="even">
+<td>Pequeno / velocidade</td>
+<td>Haiku 4.5 · $1 / $5</td>
+<td>Um décimo do Fable; volume e latência</td>
+</tr>
+<tr class="odd">
 <td>Open weights self-hosted</td>
-<td>TCO total varia por hardware</td>
-<td>Comparar com proprietário considerando ops</td>
+<td>TCO varia por hardware</td>
+<td>Comparar com proprietário <strong>incluindo</strong> ops</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>Padrão a reter (não o número): a família mantém uma razão <strong>input:output de 1:5</strong> em todos os tiers, e cada degrau de tier costuma dobrar ou halvar o preço do adjacente. É a <em>forma</em> da curva de custo — não o valor absoluto — que informa a arquitetura.</p>
+</blockquote>
 <p>Fontes oficiais de pricing (consultar diretamente): - <a href="https://www.anthropic.com/pricing">Anthropic pricing</a> - <a href="https://openai.com/api/pricing/">OpenAI pricing</a> - <a href="https://ai.google.dev/pricing">Google AI Studio pricing</a> - <a href="https://api-docs.deepseek.com/quick_start/pricing">DeepSeek pricing</a></p>
 <hr />
 <h2 id="seção-6-regulação-e-mercado-br-camada-de-apêndice-vivo">SEÇÃO 6 — REGULAÇÃO E MERCADO BR (camada de Apêndice Vivo)</h2>
@@ -14119,15 +14250,15 @@ Validação UAU semanal — 5 critérios</code></pre>
 </tr>
 <tr class="even">
 <td>v0.2</td>
-<td>(próxima)</td>
-<td>Primeira rodada de números por família proprietária + benchmarks líderes</td>
-<td>Autor + revisão</td>
+<td>2026-07-05</td>
+<td>Família Claude populada: lineup + preços por MTok (Fable 5, Mythos 5, Opus 4.8, Sonnet 5, Haiku 4.5); tokenizer novo; <strong>modelo de precificação por usage credits</strong> (corte do Fable em 07/jul); tier de fronteira Mythos-class acima de Opus. Fonte oficial por linha.</td>
+<td>Editor executivo</td>
 </tr>
 <tr class="odd">
 <td>v0.3</td>
-<td>(mensal)</td>
-<td>Atualização padrão</td>
-<td>Autor</td>
+<td>(próxima)</td>
+<td>Números por família proprietária concorrente (GPT, Gemini, Grok) + benchmarks líderes</td>
+<td>Autor + revisão</td>
 </tr>
 </tbody>
 </table>
