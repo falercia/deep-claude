@@ -112,6 +112,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
 <li><a href="#dedicatória">DEDICATÓRIA</a></li>
 <li><a href="#prefácio">PREFÁCIO</a></li>
 <li><a href="#como-ler-este-livro">COMO LER ESTE LIVRO</a></li>
+<li><a href="#o-que-mudou-nesta-edição">O Que Mudou Nesta Edição</a></li>
 <li><a href="#sumário">SUMÁRIO</a></li>
 <li><a href="#capítulo-1">CAPÍTULO 1</a></li>
 <li><a href="#capítulo-2">CAPÍTULO 2</a></li>
@@ -339,6 +340,28 @@ Fabio Garcia
 <p><strong>Repositório acompanhante</strong>. A obra fecha com o repositório <code>deep-claude</code> em github.com/falercia/deep-claude, que carrega prompts executáveis, skills, templates de governança, tutoriais MCP e labs por capítulo. Quem ignora o repositório aproveita metade.</p>
 <hr />
 <p>Você está pronto para começar. Boa leitura.</p>
+<div class="page-break">
+
+</div>
+<h1 id="o-que-mudou-nesta-edição">O Que Mudou Nesta Edição</h1>
+<p>Este é o livro vivo da série: o corpo ensina o que dura, e o Apêndice Vivo (J) carrega o número da semana, com fonte e data. Esta página resume, em linguagem direta, o que mudou desde a versão anterior da edição digital — leia em dois minutos e decida se precisa reler algo.</p>
+<h2 id="edição-de-agosto-de-2026-revisão-de-12-de-agosto">Edição de agosto de 2026 (revisão de 12 de agosto)</h2>
+<p><strong>O que entrou nos capítulos.</strong></p>
+<ol type="1">
+<li><strong>Capítulo 45 (Segurança, Compliance e LGPD)</strong> ganhou a seção 45.3.6 sobre marcação de conteúdo gerado: desde agosto de 2026, o que o Claude gera carrega marca d’água invisível no texto e metadados assinados em arquivos, em qualquer produto e em qualquer país. A seção explica o que isso significa para a sua operação — inclusive o fato de que os documentos que sua empresa emite com apoio do Claude saem marcados — e o princípio que evita o erro caro: <strong>a marca prova processamento, não autoria</strong>.</li>
+<li><strong>Capítulo 5 (Quando Usar Cada Modelo)</strong> ganhou o Padrão 6: roteamento também é continuidade. Classificadores de segurança podem redirecionar sua requisição para outro modelo sem a sua aplicação escolher, e a fronteira do que redireciona muda quando o fornecedor recalibra salvaguardas — não só quando lança modelo. Sua política de roteamento precisa declarar qual degradação aceita, por escrito, antes do incidente.</li>
+<li><strong>Capítulo 4 (Todos os Modelos Claude)</strong> ganhou dois avisos de comparação: compare custo por tarefa e nunca por token (tokenizers mudam entre gerações), e o tier premium pode oferecer modo de velocidade premium (fast mode) com sobrepreço.</li>
+</ol>
+<p><strong>O que mudou no Apêndice Vivo (agora na versão 0.4).</strong></p>
+<ol type="1">
+<li><strong>Marcas d’água:</strong> seção nova com os dois mecanismos (watermark no texto, C2PA em arquivos), o que cobrem, o que não provam e onde acompanhar as ferramentas de detecção prometidas.</li>
+<li><strong>Sonnet 5:</strong> o aumento de preço programado para 1º de setembro <strong>foi cancelado</strong> — US$ 2/10 por milhão de tokens virou o preço padrão. Se você orçou com US$ 3/15, revise para baixo.</li>
+<li><strong>Fable 5:</strong> salvaguardas de biologia recalibradas em 7 de agosto — perguntas cotidianas de saúde deixaram de cair no fallback; só usos sensíveis (virologia, toxicologia, design molecular) seguem redirecionados ao Opus 5.</li>
+<li><strong>Fonte única de números:</strong> os espaços reservados para preços de concorrentes (GPT, Gemini, Grok) agora apontam para a Trilha do Número do Livro 1, que é a camada multi-vendor da série. Um número, um lugar, uma manutenção.</li>
+</ol>
+<p><strong>Por que isso importa.</strong> Em nove dias de agosto, um preço anunciado morreu antes de entrar em vigor, uma salvaguarda mudou de fronteira sem release de modelo e todo texto gerado passou a carregar assinatura invisível. Nenhuma dessas mudanças exigiu reescrever um capítulo — os três já ensinavam o padrão; o apêndice absorveu o número. É o desenho do livro funcionando.</p>
+<hr />
+<p><em>O histórico completo, com fonte primária por item, está no controle de versão do Apêndice Vivo e no repositório. Ative watch no GitHub para ser notificado das próximas revisões.</em></p>
 <div class="page-break">
 
 </div>
@@ -1590,8 +1613,8 @@ Defender, em domínio regulado, por que recusas explícitas viram vantagem compe
 <hr />
 <h2 id="explicação-técnica-2">4.3 — EXPLICAÇÃO TÉCNICA</h2>
 <h3 id="a-família-em-detalhe">4.3.1 — A família em detalhe</h3>
-<p>Cada modelo é descrito abaixo com suas especificidades técnicas e econômicas. Versões exatas, preços por milhão de tokens e benchmarks atualizados ficam no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a> — aqui está o padrão estrutural, que dura.</p>
-<p><strong>O tier premium (Opus)</strong> ocupa a fronteira absoluta de capacidade da família. Lidera benchmarks de codificação complexa e raciocínio multi-etapa — números correntes no Apêndice Vivo. A qualidade da escrita é notavelmente superior em comparações cegas com humanos. Velocidade é moderada: suficiente para uso interativo, mas não para real-time de alta concorrência. Custo é o mais alto da família — o delta em relação aos outros tiers é substancial, na faixa de 5× a 20× dependendo do modelo comparado; valor corrente no Apêndice Vivo.</p>
+<p>Cada modelo é descrito abaixo com suas especificidades técnicas e econômicas. Versões exatas, preços por milhão de tokens e benchmarks atualizados ficam no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a> — aqui está o padrão estrutural, que dura. Um cuidado de comparação que atravessa gerações: compare <strong>custo por tarefa</strong>, nunca custo por token — tokenizers mudam entre gerações de modelo, e o mesmo texto pode mapear para quantidades diferentes de tokens em modelos diferentes, o que torna a comparação por token sistematicamente enganosa.</p>
+<p><strong>O tier premium (Opus)</strong> ocupa a fronteira absoluta de capacidade da família. Lidera benchmarks de codificação complexa e raciocínio multi-etapa — números correntes no Apêndice Vivo. A qualidade da escrita é notavelmente superior em comparações cegas com humanos. Velocidade é moderada: suficiente para uso interativo, mas não para real-time de alta concorrência. Custo é o mais alto da família — o delta em relação aos outros tiers é substancial, na faixa de 5× a 20× dependendo do modelo comparado; valor corrente no Apêndice Vivo. Em algumas gerações, o tier premium oferece ainda um modo de velocidade premium (<em>fast mode</em>): a mesma capacidade com saída significativamente mais rápida, cobrada com sobrepreço — útil quando latência interativa importa mais que custo; disponibilidade e preço corrente no Apêndice Vivo.</p>
 <p><strong>O tier balanceado (Sonnet)</strong> é a melhor combinação de capacidade, velocidade e custo para a maioria das operações em produção. Fica muito próximo de Opus em capacidade geral, mas com latência menor e custo dramaticamente inferior. Em 2026, Sonnet é o modelo recomendado como ponto de partida para qualquer nova aplicação.</p>
 <p><strong>O tier de velocidade (Haiku)</strong> é o modelo de latência mínima e custo mínimo, posicionado para tarefas simples em alto volume. A capacidade é competente para classificação, extração de dados estruturados, roteamento, tradução e sumarização curta. Velocidade é a maior da família. Custo é radicalmente menor que Opus — cerca de vinte vezes menos, na proporção histórica; valor corrente no Apêndice Vivo.</p>
 <p><strong>O tier de fronteira (classe Mythos), acima do trio.</strong> A partir de 2026, a família ganhou uma camada que se posiciona <em>acima</em> de Opus em capacidade, entregue em duas formas que compartilham o mesmo modelo e diferem apenas nas salvaguardas: uma versão de uso geral com salvaguardas fortes e uma versão de acesso restrito com salvaguardas removidas para ciberdefesa. É a serra de bancada industrial ao lado do trio de ferramentas do dia a dia: reservada para o topo da curva de dificuldade — planejamento, arquitetura, problemas de horizonte longo — e substancialmente mais cara, com tendência a ser cobrada por <em>crédito de uso</em> e não por inclusão na assinatura. Dois cuidados que o encaixe (Invariante 4) impõe aqui: primeiro, o tier de fronteira <strong>redireciona</strong> automaticamente certas requisições sensíveis para o tier premium, então parte do trabalho “roda em Opus” mesmo quando você pediu o topo; segundo, o prêmio de preço só se paga em tarefas onde uma resposta melhor vale horas de trabalho a jusante — produção e volume continuam no balanceado. Nomes de versão, preços e o mecanismo de cobrança vigente ficam no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
@@ -1798,6 +1821,7 @@ Defender, em domínio regulado, por que recusas explícitas viram vantagem compe
 <p><strong>Padrão 3 — Opus seletivo para o que importa.</strong> Reservar Opus para 5 a 10% de tarefas verdadeiramente críticas é o padrão da operação madura. Usar Opus para tudo é desperdício; evitá-lo completamente é deixar valor na mesa nos casos que o justificam.</p>
 <p><strong>Padrão 4 — Extended thinking seletivo.</strong> Ativar modo de raciocínio estendido (disponível em Opus e Sonnet) apenas em tarefas que se beneficiam claramente, medindo ganho de qualidade contra custo adicional. Em testes A/B, extended thinking ganha em problemas genuinamente complexos e não justifica o custo em problemas simples. Essa medição vale ser feita para cada caso de uso antes de ativar por padrão.</p>
 <p><strong>Padrão 5 — Proporção típica em produção.</strong> Organizações que implementam roteamento estruturado convergem para algo próximo de: 5–10% Opus (casos críticos), 50–70% Sonnet (cavalo de batalha), 25–45% Haiku (triagem e volume). Essa proporção não é prescritiva — é o ponto de partida para medir e ajustar.</p>
+<p><strong>Padrão 6 — Roteamento também é continuidade, não só custo.</strong> Nos tiers superiores da família, classificadores de segurança podem redirecionar uma requisição para outro modelo em vez de bloqueá-la — o fornecedor chama isso de <em>fallback automático</em>, e ele acontece sem que sua aplicação escolha. A consequência para quem opera em produção: a política de roteamento precisa declarar, por escrito e antes do incidente, qual modelo a operação aceita como degradação para cada classe de tarefa. E há um corolário que pega arquitetos desprevenidos: <strong>salvaguarda é parâmetro vivo</strong>. O fornecedor recalibra classificadores entre releases, e a fronteira do que redireciona muda sem anúncio de modelo novo — a política de roteamento merece revisão quando a salvaguarda muda, não só quando o lineup muda. O mecanismo corrente, os pares de fallback vigentes e as datas ficam na Seção 1.1 do <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
 <figure>
 <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODgwIDQ3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmb250LWZhbWlseT0iJ0ludGVyJywnU2Vnb2UgVUknLCdIZWx2ZXRpY2EgTmV1ZScsQXJpYWwsc2Fucy1zZXJpZiI+CiAgPGRlZnM+CiAgICA8ZmlsdGVyIGlkPSJzaDgiIHg9Ii0yMCUiIHk9Ii0yMCUiIHdpZHRoPSIxNDAlIiBoZWlnaHQ9IjE0MCUiPgogICAgICA8ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMiIgc3RkRGV2aWF0aW9uPSIzLjUiIGZsb29kLWNvbG9yPSIjMUIyQTMzIiBmbG9vZC1vcGFjaXR5PSIwLjEyIi8+CiAgICA8L2ZpbHRlcj4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZFJ1bGU4IiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0MyOTEyQyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0UyQzg3OSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxtYXJrZXIgaWQ9ImF4RW5kIiBtYXJrZXJXaWR0aD0iOSIgbWFya2VySGVpZ2h0PSI5IiByZWZYPSI2IiByZWZZPSIzIiBvcmllbnQ9ImF1dG8iIG1hcmtlclVuaXRzPSJzdHJva2VXaWR0aCI+CiAgICAgIDxwYXRoIGQ9Ik0wLDAgTDcsMyBMMCw2IFoiIGZpbGw9IiMxQjJBMzMiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9Ijg3OCIgaGVpZ2h0PSI0NjgiIHJ4PSIxNiIgZmlsbD0iI0ZCRjhGMSIgc3Ryb2tlPSIjRTZERkM5Ii8+CgogIDx0ZXh0IHg9IjQ0IiB5PSI0OCIgZm9udC1zaXplPSIxMi41IiBsZXR0ZXItc3BhY2luZz0iMi41IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjQzI5MTJDIj5ESUFHUkFNQSA1LjIgwrcgSU5WQVJJQU5URSA0IOKAlCBFTkNBSVhFPC90ZXh0PgogIDx0ZXh0IHg9IjQ0IiB5PSI3OCIgZm9udC1zaXplPSIyMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFCMkEzMyI+UG9ydGZvbGlvIGRlIHJvdGVhbWVudG8sIG7Do28gbW9kZWxvIMO6bmljbzwvdGV4dD4KICA8cmVjdCB4PSI0NCIgeT0iOTAiIHdpZHRoPSI4NiIgaGVpZ2h0PSIzLjUiIHJ4PSIxLjc1IiBmaWxsPSJ1cmwoI2dvbGRSdWxlOCkiLz4KCiAgPCEtLSBheGVzIC0tPgogIDxsaW5lIHgxPSIxNTAiIHkxPSI0MDAiIHgyPSI4MDAiIHkyPSI0MDAiIHN0cm9rZT0iIzFCMkEzMyIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2F4RW5kKSIvPgogIDxsaW5lIHgxPSIxNTAiIHkxPSI0MDAiIHgyPSIxNTAiIHkyPSIxMjgiIHN0cm9rZT0iIzFCMkEzMyIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2F4RW5kKSIvPgogIDx0ZXh0IHg9IjgwMCIgeT0iNDI0IiBmb250LXNpemU9IjEyLjUiIGZpbGw9IiMxQjJBMzMiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtd2VpZ2h0PSI2MDAiPlZPTFVNRSDihpI8L3RleHQ+CiAgPHRleHQgeD0iMTM4IiB5PSIxMjQiIGZvbnQtc2l6ZT0iMTIuNSIgZmlsbD0iIzFCMkEzMyIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC13ZWlnaHQ9IjYwMCIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDEzOCAxMjQpIiA+Q09NUExFWElEQURFIOKGkjwvdGV4dD4KCiAgPCEtLSBxdWFkcmFudCBndWlkZXMgLS0+CiAgPGxpbmUgeDE9IjQ3NSIgeTE9IjE1MCIgeDI9IjQ3NSIgeTI9IjQwMCIgc3Ryb2tlPSIjQ0ZDOEI2IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMgNCIvPgogIDxsaW5lIHgxPSIxNTAiIHkxPSIyNzUiIHgyPSI4MDAiIHkyPSIyNzUiIHN0cm9rZT0iI0NGQzhCNiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIzIDQiLz4KCiAgPCEtLSBPcHVzIHpvbmU6IGFsdGEgY29tcGxleGlkYWRlLCBiYWl4byB2b2x1bWUgKHRvcC1sZWZ0KSAtLT4KICA8ZyBmaWx0ZXI9InVybCgjc2g4KSI+PHJlY3QgeD0iMTc4IiB5PSIxNjYiIHdpZHRoPSIyNjYiIGhlaWdodD0iOTIiIHJ4PSIxMiIgZmlsbD0iI0ZCRjZFQSIgc3Ryb2tlPSIjRTJENEFDIi8+PC9nPgogIDx0ZXh0IHg9IjE5OCIgeT0iMTk0IiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjOUE3QTJFIj5PUFVTPC90ZXh0PgogIDx0ZXh0IHg9IjE5OCIgeT0iMjE2IiBmb250LXNpemU9IjEyIiBmaWxsPSIjN0M3NzY4Ij5hbHRhIGNvbXBsZXhpZGFkZSDCtyBiYWl4byB2b2x1bWU8L3RleHQ+CiAgPHRleHQgeD0iMTk4IiB5PSIyMzQiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM3Qzc3NjgiPmRlY2lzw6NvIGlycmV2ZXJzw612ZWwsIGVzY3JpdGEgY3LDrXRpY2E8L3RleHQ+CiAgPHRleHQgeD0iMTk4IiB5PSIyNTAiIGZvbnQtc2l6ZT0iMTEuNSIgZmlsbD0iIzlBN0EyRSIgZm9udC13ZWlnaHQ9IjYwMCI+fjUtMTAlPC90ZXh0PgoKICA8IS0tIEhhaWt1IHpvbmU6IGJhaXhhIGNvbXBsZXhpZGFkZSwgYWx0byB2b2x1bWUgKGJvdHRvbS1yaWdodCkgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3NoOCkiPjxyZWN0IHg9IjUwNiIgeT0iMjkwIiB3aWR0aD0iMjY2IiBoZWlnaHQ9IjkyIiByeD0iMTIiIGZpbGw9IiNFRkY2RjciIHN0cm9rZT0iI0JCRDdEQiIvPjwvZz4KICA8dGV4dCB4PSI1MjYiIHk9IjMxOCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzI1NkE3NSI+SEFJS1U8L3RleHQ+CiAgPHRleHQgeD0iNTI2IiB5PSIzNDAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM3Qzc3NjgiPmJhaXhhIGNvbXBsZXhpZGFkZSDCtyBhbHRvIHZvbHVtZTwvdGV4dD4KICA8dGV4dCB4PSI1MjYiIHk9IjM1OCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzdDNzc2OCI+Y2xhc3NpZmljYXIsIGV4dHJhaXIsIHJvdGVhciwgcmVhbC10aW1lPC90ZXh0PgogIDx0ZXh0IHg9IjUyNiIgeT0iMzc0IiBmb250LXNpemU9IjExLjUiIGZpbGw9IiMyNTZBNzUiIGZvbnQtd2VpZ2h0PSI2MDAiPn4yNS00NSU8L3RleHQ+CgogIDwhLS0gU29ubmV0IHpvbmU6IGNlbnRlci9kZWZhdWx0IGRpYWdvbmFsIGJhbmQgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3NoOCkiPjxyZWN0IHg9IjM3MiIgeT0iMjQ4IiB3aWR0aD0iMjEwIiBoZWlnaHQ9Ijc0IiByeD0iMTIiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0NGQzhCNiIvPjwvZz4KICA8dGV4dCB4PSIzOTIiIHk9IjI3NiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzQ0NTI1QyI+U09OTkVUPC90ZXh0PgogIDx0ZXh0IHg9IjM5MiIgeT0iMjk2IiBmb250LXNpemU9IjEyIiBmaWxsPSIjN0M3NzY4Ij5vIGRlZmF1bHQgY29uc2NpZW50ZTwvdGV4dD4KICA8dGV4dCB4PSIzOTIiIHk9IjMxMyIgZm9udC1zaXplPSIxMS41IiBmaWxsPSIjNDQ1MjVDIiBmb250LXdlaWdodD0iNjAwIj5+NTAtNzAlIMK3IGNvYnJlIG8gZ3Jvc3NvPC90ZXh0PgoKICA8dGV4dCB4PSI0NCIgeT0iNDQ4IiBmb250LXNpemU9IjEyLjUiIGZpbGw9IiM3Qzc3NjgiIGZvbnQtc3R5bGU9Iml0YWxpYyI+T3BlcmHDp8OjbyBtYWR1cmEgcm90ZWlhIGVudHJlIG9zIHRyw6pzIHBvciBzaW5hbCBkZSBjb21wbGV4aWRhZGUgbmEgZW50cmFkYSDigJQgZ2FuaGEgdmVsb2NpZGFkZSwgcXVhbGlkYWRlIGUgY3VzdG8gYW8gbWVzbW8gdGVtcG8sIHRyw6pzIG9iamV0aXZvcyBxdWUgY29zdHVtYW0gZXN0YXIgZW0gdHJhZGUtb2ZmLjwvdGV4dD4KPC9zdmc+Cg==" alt="" /><figcaption>Diagrama 5.2 — Portfolio de Roteamento em Produção</figcaption>
 </figure>
@@ -13590,6 +13614,9 @@ Validação UAU semanal — 5 critérios</code></pre>
 <p><em>O Invariante violado:</em> Inv. 8 — Responsabilidade Indelegável. O RACI definia quem podia usar o fluxo, mas não o que o fluxo podia acessar. Escopo de permissão sem dono nominado não é controle — é superfície aberta. Os detalhes operacionais correntes de configuração de escopo em servidores MCP estão no <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
 <p><em>O que teria evitado:</em> Princípio do escopo mínimo aplicado antes do deploy: o servidor MCP deveria ter acesso apenas ao subconjunto de dados necessário para o caso de uso aprovado, não ao CRM inteiro. Revisão periódica de servidores ativos — o mesmo controle de Connectors descrito no Cap. 42 — teria identificado o drift de acesso antes do incidente.</p>
 </blockquote>
+<h3 id="marcação-de-conteúdo-gerado-watermarking-e-proveniência-de-saída">45.3.6 — Marcação de conteúdo gerado: watermarking e proveniência de saída</h3>
+<p>A partir de 2026, o conteúdo que o Claude gera passou a carregar marcação legível por máquina. A Anthropic, signatária do código de conduta do Artigo 50(2) do AI Act europeu (transparência de conteúdo gerado por IA), embute a marca em duas camadas complementares: um <strong>watermark estatístico imperceptível tecido no próprio texto</strong>, aplicado no nível do modelo — presente, portanto, em qualquer superfície: API, apps, Claude Code, Cowork — e <strong>metadados de proveniência assinados no padrão aberto C2PA</strong> anexados a arquivos suportados. A marca no texto viaja com o conteúdo no copy-paste e pode persistir através de alguma edição. A aplicação é mundial, não restrita à União Europeia: manter dois comportamentos por região custa mais do que cumprir o padrão mais alto em todo lugar, e esse efeito Bruxelas tende a se repetir com os demais fornecedores signatários. Quais modelos marcam, desde quando e com quais ferramentas de detecção — números e datas — ficam na Seção 1.1 do <a href="../04-apendices/L2-APX-J-apendice-vivo.md">Apêndice Vivo (J)</a>.</p>
+<p>Para o controlador brasileiro, três consequências práticas. Primeira, e a mais importante: <strong>a marca prova processamento, não autoria</strong>. Documento humano que passou pelo Claude para revisão, tradução ou reformatação sai marcado; conteúdo gerado por IA e depois pesadamente editado, parafraseado ou convertido de formato pode não carregar marca detectável. Qualquer política interna — de RH, de comunicação, jurídica — que trate detecção de marca como veredicto de autoria erra nos dois sentidos, e o custo do erro recai sobre pessoas. Segunda: sua operação <strong>emite</strong> conteúdo marcado. Relatórios, propostas, comunicados e pareceres que passaram pelo Claude carregam a marca ao sair com o logotipo da sua empresa; a decisão sobre o que isso significa para cada tipo de documento é de governança (Cap. 42), não de engenharia, e precisa existir antes que um cliente ou um regulador pergunte. Terceira: escreva a política de uso de detecção antes que alguém use o detector — marca detectada abre conversa, não conclui julgamento. O princípio geral da proveniência de saída, tratado como padrão de mercado e não como mecanismo de um fornecedor, está no Capítulo 19 do Livro 1.</p>
 <h2 id="o-critério-de-decisão-2">45.4 — O CRITÉRIO DE DECISÃO</h2>
 <h3 id="o-que-pode-entrar-no-claude-por-classificação-de-dado">O que pode entrar no Claude por classificação de dado</h3>
 <figure>
@@ -13715,6 +13742,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 <li>Versões correntes das certificações da Anthropic (SOC 2, ISO 27001) com data de auditoria</li>
 <li>Políticas de retenção de dados e ZDR correntes (revisadas periodicamente pela Anthropic)</li>
 <li>Versão do DPA disponível para Enterprise e o que cobre na transferência internacional</li>
+<li>Mecanismo corrente de marcação de conteúdo gerado (watermark no texto, metadados C2PA em arquivos), modelos cobertos e ferramentas de detecção disponíveis (Seção 1.1 do Apêndice J)</li>
 </ul>
 <p><strong>Fontes primárias para monitoramento:</strong></p>
 <ul>
@@ -13805,16 +13833,16 @@ Validação UAU semanal — 5 critérios</code></pre>
 </blockquote>
 <hr />
 <h2 id="data-do-snapshot">DATA DO SNAPSHOT</h2>
-<p><strong>Versão v0.2 — 2026-07-05.</strong> Snapshot atualizado com a rodada de fronteira da família Claude (Fable 5 / Mythos 5 / Opus 4.8 / Sonnet 5 / Haiku 4.5), preços por milhão de tokens conferidos na fonte oficial, o novo <strong>modelo de precificação por <em>usage credits</em></strong> e a mudança de tokenizer. As demais famílias proprietárias (GPT, Gemini, Grok) e os open-weights mantêm a estrutura mapeada; o populamento numérico por linha, com fonte oficial de cada vendor, entra em rodadas seguintes — sem fabricar número que não tenha fonte primária.</p>
+<p><strong>Versão v0.4 — 2026-08-12.</strong> Primeira renovação de versão do apêndice. Quatro movimentos: (1) <strong>Sonnet 5 consolidado em $2/$10</strong> — a Anthropic cancelou o aumento programado para $3/$15 em 01/set/2026 e converteu o preço de lançamento em preço padrão; (2) <strong>recalibração das salvaguardas de biologia do Fable 5</strong> (07/ago): fallbacks de biologia caíram ~85%, e o roteamento bio → Opus 5 ficou restrito a usos dual-use; (3) <strong>marcação de conteúdo gerado (watermarking)</strong>: modelos lançados a partir de 02/ago/2026 embutem watermark no texto e metadados C2PA em arquivos, com aplicação mundial; (4) os placeholders numéricos das famílias concorrentes foram substituídos por referência cruzada ao <strong>L1-APX-J (Trilha do Número)</strong>, consolidando a decisão de fonte única de números da série. Demais preços da família Claude reconferidos na fonte oficial, sem alteração.</p>
 <blockquote>
-<p><strong>Como este bloco foi checado:</strong> cada preço e data abaixo tem link para a fonte primária da Anthropic (docs de pricing e posts de anúncio), consultada em 2026-07-05. Nenhum número foi estimado.</p>
+<p><strong>Como este bloco foi checado:</strong> cada preço e data abaixo tem link para a fonte primária da Anthropic (docs de pricing, posts de anúncio e Help Center), consultada em 2026-08-12. Nenhum número foi estimado.</p>
 </blockquote>
 <hr />
 <h2 id="seção-1-famílias-de-modelo-proprietários">SEÇÃO 1 — FAMÍLIAS DE MODELO PROPRIETÁRIOS</h2>
 <h3 id="anthropic-família-claude">1.1 — Anthropic — Família Claude</h3>
 <p><strong>Status:</strong> ativa. A nomenclatura em formas literárias, que começou tripartite (Opus · Sonnet · Haiku) com Claude 3, ganhou em 2026 uma <strong>camada de fronteira acima de Opus</strong>: a classe <strong>Mythos</strong>. O trio de trabalho diário permanece Opus/Sonnet/Haiku; acima dele fica o tier de fronteira, entregue em duas formas — <strong>Fable</strong> (com salvaguardas fortes, para uso geral) e <strong>Mythos</strong> (as mesmas capacidades com salvaguardas de cyber removidas, acesso restrito). <em>Fable</em> vem de <em>fabula</em> (“aquilo que se conta”), parente do grego <em>mythos</em>: a salvaguarda é o que separa os dois nomes. <strong>Posicionamento estratégico:</strong> força relativa em código, agentes de horizonte longo, escrita executiva, e uma filosofia de alignment pública (Constitutional AI). O tier de fronteira (Mythos-class) é, segundo a própria Anthropic, o mais capaz que já disponibilizaram. <strong>Fonte primária:</strong> <a href="https://platform.claude.com/docs/en/about-claude/pricing">platform.claude.com — pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview">platform.claude.com — models overview</a> · <a href="https://www.anthropic.com/news">anthropic.com/news</a>.</p>
-<h4 id="lineup-e-preços-correntes-snapshot-2026-07-05">Lineup e preços correntes (snapshot 2026-07-05)</h4>
-<p>Preços em USD por milhão de tokens (MTok). “Cache read” = leitura de cache (10% do input). Janela de contexto de 1M tokens no padrão para os modelos de fronteira e Sonnet 5; Haiku opera em janela menor. Fonte da tabela: <a href="https://platform.claude.com/docs/en/about-claude/pricing">pricing oficial</a>, consultada em 2026-07-05.</p>
+<h4 id="lineup-e-preços-correntes-snapshot-2026-08-03">Lineup e preços correntes (snapshot 2026-08-03)</h4>
+<p>Preços em USD por milhão de tokens (MTok). “Cache read” = leitura de cache (10% do input). Janela de contexto de 1M tokens no padrão para os modelos de fronteira e Sonnet 5; Haiku opera em janela menor. Fonte da tabela: <a href="https://platform.claude.com/docs/en/about-claude/pricing">pricing oficial</a>, consultada em 2026-08-03.</p>
 <table>
 <colgroup>
 <col style="width: 9%" />
@@ -13856,31 +13884,31 @@ Validação UAU semanal — 5 critérios</code></pre>
 <td>Mesmo modelo do Fable, salvaguardas de cyber removidas. Ciberdefesa de fronteira; acesso só a parceiros aprovados.</td>
 </tr>
 <tr class="odd">
+<td><strong>Opus 5</strong></td>
+<td><code>claude-opus-5</code></td>
+<td>$5</td>
+<td>$25</td>
+<td>$2,50 / $12,50</td>
+<td>$0,50</td>
+<td>Novo topo do tier Opus (GA 24/jul/2026): quase-fronteira à metade do preço do Fable; <strong>default do plano Max</strong>. Recebe o fallback de <strong>biologia</strong> do Fable. Fast mode a $10/$50.</td>
+</tr>
+<tr class="even">
 <td><strong>Opus 4.8</strong></td>
 <td><code>claude-opus-4-8</code></td>
 <td>$5</td>
 <td>$25</td>
 <td>$2,50 / $12,50</td>
 <td>$0,50</td>
-<td>Fronteira geral a metade do preço do Fable; é para onde o Fable <strong>redireciona</strong> requisições sensíveis (cyber/bio/destilação). Fast mode a $10/$50.</td>
+<td>Tier Opus da geração anterior; é para onde o Fable <strong>redireciona</strong> requisições de <strong>cyber</strong> e destilação (biologia passou ao Opus 5 em 24/jul). Fast mode a $10/$50.</td>
 </tr>
-<tr class="even">
-<td><strong>Sonnet 5</strong> <em>(intro, até 31/ago/2026)</em></td>
+<tr class="odd">
+<td><strong>Sonnet 5</strong></td>
 <td><code>claude-sonnet-5</code></td>
 <td>$2</td>
 <td>$10</td>
 <td>$1 / $5</td>
 <td>$0,20</td>
-<td>Cavalo de batalha de produção; <strong>default de Free e Pro</strong>. Roteie bulk/coding aqui.</td>
-</tr>
-<tr class="odd">
-<td><strong>Sonnet 5</strong> <em>(padrão, a partir de 01/set/2026)</em></td>
-<td><code>claude-sonnet-5</code></td>
-<td>$3</td>
-<td>$15</td>
-<td>$1,50 / $7,50</td>
-<td>$0,30</td>
-<td>Mesmo modelo, preço padrão após a janela introdutória.</td>
+<td>Cavalo de batalha de produção; <strong>default de Free e Pro</strong>. Roteie bulk/coding aqui. O preço de lançamento ($2/$10) virou <strong>padrão</strong> em ago/2026: o aumento programado para $3/$15 em 01/set/2026 <strong>foi cancelado</strong> pela Anthropic.</td>
 </tr>
 <tr class="even">
 <td><strong>Haiku 4.5</strong></td>
@@ -13897,7 +13925,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 <p><strong>Multiplicadores de cache</strong> (sobre o input base): escrita de 5 min = 1,25×; escrita de 1 h = 2×; leitura (hit) = 0,1×. Válidos para toda a família.</p>
 </blockquote>
 <h4 id="tokenizer-novo-afeta-contagem-de-tokens-e-logo-custo">Tokenizer novo (afeta contagem de tokens e, logo, custo)</h4>
-<p>Opus 4.7+, Fable 5, Mythos 5 e Sonnet 5 usam um <strong>tokenizer novo</strong>: o mesmo texto passa a mapear para mais tokens — cerca de <strong>1,0× a 1,35×</strong> conforme o tipo de conteúdo. Consequência prática: um custo comparado modelo-a-modelo <em>por token</em> subestima o custo real <em>por tarefa</em> nesses modelos. A Anthropic calibrou o preço introdutório do Sonnet 5 para que a migração a partir do Sonnet 4.6 seja aproximadamente custo-neutra. Fonte: <a href="https://www.anthropic.com/news/claude-sonnet-5">nota de rodapé do anúncio do Sonnet 5</a>.</p>
+<p>Os modelos da geração 4.7 em diante — incluindo Opus 5, Fable 5, Mythos 5 e Sonnet 5 — usam um <strong>tokenizer novo</strong>: o mesmo texto passa a mapear para <strong>aproximadamente 30% mais tokens</strong>, variando com o tipo de conteúdo (número oficial da Anthropic). Consequência prática: um custo comparado modelo-a-modelo <em>por token</em> subestima o custo real <em>por tarefa</em> nesses modelos. A Anthropic calibrou o preço de lançamento do Sonnet 5 (convertido em preço padrão em ago/2026) para que a migração a partir do Sonnet 4.6 seja aproximadamente custo-neutra. Fonte: <a href="https://www.anthropic.com/news/claude-sonnet-5">nota de rodapé do anúncio do Sonnet 5</a>.</p>
 <h4 id="o-modelo-de-precificação-por-usage-credits-mudança-estrutural-não-só-de-número">O modelo de precificação por <em>usage credits</em> (mudança estrutural, não só de número)</h4>
 <p>A novidade que mais importa para orçamento não é um preço — é um <strong>mecanismo de cobrança</strong>. Para os modelos de fronteira (a começar pelo Fable 5), a Anthropic passou a <strong>desacoplar o acesso da inclusão fixa na assinatura</strong>, movendo-o para <em>usage credits</em> (crédito de uso medido):</p>
 <table>
@@ -13930,6 +13958,43 @@ Validação UAU semanal — 5 critérios</code></pre>
 <p>⚠️ <strong>O que a Anthropic NÃO publicou</strong> (trate como desconhecido, confira no seu dashboard, não modele em cima): o que “50% dos limites semanais” equivale em tokens/mensagens/dólares por plano, e a conversão crédito→dólar depois de 07/jul. O único número confirmado é a taxa por token da API. Fonte da franquia e do corte: <a href="https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans">manage usage credits</a> · <a href="https://www.anthropic.com/news/redeploying-fable-5">post de redeploy</a>.</p>
 </blockquote>
 <p><strong>Linha do tempo do Fable 5 (contexto do porquê houve dois cortes):</strong> lançado 09/jun/2026 → controles de exportação dos EUA em 12/jun (acesso suspenso globalmente) → controles suspensos em 30/jun → <strong>redeploy global em 01/jul</strong> com nova janela → <strong>corte para usage credits em 07/jul</strong>. O primeiro corte anunciado (23/jun) nunca ocorreu porque o modelo estava offline. Fonte: <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">anúncio Fable/Mythos</a> · <a href="https://www.anthropic.com/news/redeploying-fable-5">redeploy</a>.</p>
+<p><strong>Automatic fallbacks na API (beta, desde 24/jul/2026):</strong> requisições flagged pelos classificadores de segurança em Opus 5 ou Fable 5 podem rotear automaticamente para outro modelo em vez de serem bloqueadas — a requisição sempre chega ao melhor modelo disponível. Em Claude.ai, Claude Code e Cowork, o fallback é o comportamento padrão. Fonte: <a href="https://www.anthropic.com/news/claude-opus-5">anúncio Opus 5</a>. Consequência para arquitetura: a política de roteamento deixou de ser só decisão de custo e virou também decisão de <em>continuidade</em> — escreva qual modelo aceita como degradação antes de o classificador decidir por você.</p>
+<p><strong>Recalibração das salvaguardas de biologia do Fable 5 (07/ago/2026):</strong> a Anthropic reescreveu a constituição do classificador de biologia do Fable 5 e reduziu os fallbacks relacionados a biologia em <strong>~85%</strong> (queda total de fallbacks por superfície: ~67% no Claude.ai, ~55% no Cowork, ~17% no Claude Code, ~7% na API). O fallback bio → Opus 5 <strong>permanece</strong>, mas restrito a usos dual-use (virologia, toxicologia, design molecular); saúde cotidiana, interpretação de exames, educação e suporte clínico passam a rodar no próprio Fable 5. Fonte: <a href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards">Improving Fable 5’s biology safeguards</a>. Consequência para arquitetura: <strong>salvaguarda é parâmetro vivo</strong> — a fronteira do que roteia muda por recalibração de classificador, sem release de modelo. Reavalie a política de roteamento também quando o vendor recalibrar salvaguardas, não só quando lançar modelo.</p>
+<h4 id="marcação-de-conteúdo-gerado-watermarking-modelos-lançados-a-partir-de-02ago2026">Marcação de conteúdo gerado (watermarking) — modelos lançados a partir de 02/ago/2026</h4>
+<p>A Anthropic assinou o Code of Practice do <strong>Artigo 50(2) do EU AI Act</strong> (transparência de conteúdo gerado por IA) e passou a marcar o que o Claude gera, com anúncio público em 11/ago/2026. Dois mecanismos complementares:</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 44%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mecanismo</th>
+<th>Como funciona</th>
+<th>Escopo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Watermark embutido no texto</strong></td>
+<td>Marca estatística imperceptível, tecida no próprio texto no <strong>nível do modelo</strong>; não altera significado nem legibilidade; sobrevive a copy-paste e “pode persistir através de alguma edição”</td>
+<td>Todo texto gerado por modelos lançados a partir de 02/ago/2026, em todas as superfícies (API, Claude, Claude Code, Cowork, Tag) e cloud partners</td>
+</tr>
+<tr class="even">
+<td><strong>Metadados de proveniência assinados</strong></td>
+<td>Padrão aberto <strong>C2PA</strong>, anexado a arquivos suportados (.svg, .png, .jpg); permite detectar adulteração</td>
+<td>Onde o produto suporta processamento de arquivos; pode não estar disponível em toda plataforma</td>
+</tr>
+</tbody>
+</table>
+<p>Aplicação <strong>mundial</strong>, não restrita à União Europeia. Modelos anteriores a 02/ago/2026 estão em período de transição, com suporte a marcação em desenvolvimento. Ferramentas de detecção para usuários e terceiros foram prometidas em documentação técnica futura. Fonte: <a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">How Claude marks AI-generated content</a> (Help Center oficial, 11/ago/2026).</p>
+<blockquote>
+<p>⚠️ <strong>Limitação que decide casos de uso: a marca prova <em>processamento</em>, não <em>autoria</em>.</strong> Texto humano que o Claude revisou, traduziu ou reformatou sai marcado. E ausência de marca não prova ausência de IA: edição pesada, paráfrase, trechos curtos, conversão de formato ou remoção de metadados degradam ou eliminam o sinal. Política de RH, jurídico ou compliance que trate detecção de marca como prova de autoria por IA está errada por construção — nos dois sentidos.</p>
+</blockquote>
+<blockquote>
+<p>🧭 <strong>Leitura durável (Inv. 3):</strong> dois padrões sobrevivem a esta rodada. Primeiro, <strong>proveniência de conteúdo virou camada de infraestrutura</strong>, não feature de produto — a marca nasce no modelo e viaja com o conteúdo, o que significa que qualquer pipeline que consuma saída de LLM herda a marca sem escolher. Segundo, é o <strong>efeito Bruxelas operando em IA generativa</strong>: obrigação europeia (Art. 50) aplicada mundialmente porque manter dois comportamentos por região custa mais do que cumprir o padrão mais alto em todo lugar. A decisão que dura: trate proveniência como propriedade do dado, catalogue onde sua operação gera, consome e reemite conteúdo marcado, e nunca use marca como juiz de autoria.</p>
+</blockquote>
 <blockquote>
 <p>🧭 <strong>Leitura durável (o que este número diz sobre o padrão — Inv. 3):</strong> dois movimentos aqui sobrevivem à rodada específica. Primeiro, <strong>surgiu um tier de fronteira acima do topo anterior</strong> — a hierarquia de capacidade/custo se estende para cima, não só para os lados. Segundo, <strong>o acesso a modelos de fronteira migra de “incluído na assinatura” para “crédito medido”</strong> — sinal de que capacidade de ponta tende a ser precificada por consumo, não por assinatura plana. A decisão que dura não é “qual o preço do Fable”; é a <strong>política de roteamento</strong>: reserve o tier de fronteira para julgamento e problemas difíceis, mande produção/bulk para o balanceado, e escreva essa regra antes de a fatura chegar. O número muda; a disciplina de roteamento é o Invariante 4 operando sobre o Invariante 3.</p>
 </blockquote>
@@ -13937,13 +14002,13 @@ Validação UAU semanal — 5 critérios</code></pre>
 <h3 id="openai-família-gpt">1.2 — OpenAI — Família GPT</h3>
 <p><strong>Status:</strong> ativa, com tier premium e variantes reduzidas (mini, nano). <strong>Posicionamento estratégico:</strong> força relativa em raciocínio matemático competitivo e em <em>computer use</em>. <strong>Fonte primária:</strong> <a href="https://platform.openai.com/docs/models">platform.openai.com — models</a> · <a href="https://openai.com/news">openai.com/news</a>.</p>
 <blockquote>
-<p>Conteúdo numérico será populado na próxima edição.</p>
+<p><strong>Números desta família:</strong> consulte o <strong>L1-APX-J (Trilha do Número)</strong>, a camada única de números multi-vendor da série, com preço, janela, release e fonte primária por linha. Decisão editorial (v0.4): este apêndice mantém populamento numérico apenas da família Claude; duplicar números entre os dois apêndices criaria dois pontos de manutenção que inevitavelmente divergiriam.</p>
 </blockquote>
 <hr />
 <h3 id="google-deepmind-família-gemini">1.3 — Google DeepMind — Família Gemini</h3>
 <p><strong>Status:</strong> ativa, com tier premium (Pro) e variante de produção em volume (Flash). <strong>Posicionamento estratégico:</strong> força relativa em multimodal (vídeo, imagem, áudio) e em contexto longo; pricing premium frequentemente agressivo. <strong>Fonte primária:</strong> <a href="https://ai.google.dev/gemini-api/docs/models/gemini">ai.google.dev/gemini-api/docs/models/gemini</a> · <a href="https://blog.google/technology/ai">blog.google/technology/ai</a>.</p>
 <blockquote>
-<p>Conteúdo numérico será populado na próxima edição.</p>
+<p><strong>Números desta família:</strong> consulte o <strong>L1-APX-J (Trilha do Número)</strong>, a camada única de números multi-vendor da série, com preço, janela, release e fonte primária por linha. Decisão editorial (v0.4): este apêndice mantém populamento numérico apenas da família Claude; duplicar números entre os dois apêndices criaria dois pontos de manutenção que inevitavelmente divergiriam.</p>
 </blockquote>
 <hr />
 <h3 id="xai-família-grok">1.4 — xAI — Família Grok</h3>
@@ -13999,7 +14064,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 </tbody>
 </table>
 <blockquote>
-<p>Conteúdo numérico será populado na próxima edição.</p>
+<p><strong>Números desta família:</strong> consulte o <strong>L1-APX-J (Trilha do Número)</strong>, a camada única de números multi-vendor da série, com preço, janela, release e fonte primária por linha. Decisão editorial (v0.4): este apêndice mantém populamento numérico apenas da família Claude; duplicar números entre os dois apêndices criaria dois pontos de manutenção que inevitavelmente divergiriam.</p>
 </blockquote>
 <hr />
 <h2 id="seção-3-benchmarks-que-ainda-discriminam">SEÇÃO 3 — BENCHMARKS QUE AINDA DISCRIMINAM</h2>
@@ -14078,7 +14143,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 </table>
 <h3 id="líderes-correntes-desta-rodada">Líderes correntes desta rodada</h3>
 <blockquote>
-<p>Conteúdo a popular: por benchmark, qual modelo lidera no momento do snapshot, com link direto ao leaderboard ou paper. <strong>Manter sem atualização paralela em outros documentos da obra.</strong></p>
+<p><strong>Líderes por benchmark:</strong> consulte a Seção 2 do <strong>L1-APX-J (Trilha do Número)</strong>, que mantém a tabela de líderes com score, data de captura e fonte por linha. Decisão editorial (v0.4): uma única tabela de líderes na série — manter duas atualizações paralelas do mesmo número é o erro que este apêndice existe para evitar.</p>
 </blockquote>
 <hr />
 <h2 id="seção-4-leaderboards-públicos">SEÇÃO 4 — LEADERBOARDS PÚBLICOS</h2>
@@ -14145,7 +14210,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 <thead>
 <tr class="header">
 <th>Tier</th>
-<th>Referência corrente na família Claude (por MTok, 2026-07-05)</th>
+<th>Referência corrente na família Claude (por MTok, 2026-08-12)</th>
 <th>Cuidado de leitura</th>
 </tr>
 </thead>
@@ -14157,12 +14222,12 @@ Validação UAU semanal — 5 critérios</code></pre>
 </tr>
 <tr class="even">
 <td>Premium</td>
-<td>Opus 4.8 · $5 / $25 (metade do Fable)</td>
-<td>Fronteira geral e fallback de segurança do Fable</td>
+<td>Opus 5 / Opus 4.8 · $5 / $25 (metade do Fable)</td>
+<td>Quase-fronteira e fallback de segurança do Fable (bio dual-use → Opus 5; cyber → Opus 4.8)</td>
 </tr>
 <tr class="odd">
 <td>Balanceado</td>
-<td>Sonnet 5 · $2 / $10 intro (→ $3 / $15 em set/2026)</td>
+<td>Sonnet 5 · $2 / $10 (aumento de set/2026 cancelado; preço de lançamento virou padrão)</td>
 <td>Cavalo de batalha de produção; default de Free/Pro</td>
 </tr>
 <tr class="even">
@@ -14209,7 +14274,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 </tr>
 <tr class="odd">
 <td>AI Act (União Europeia)</td>
-<td>Em fases de aplicação progressiva</td>
+<td>Aplicação geral desde 02/ago/2026 (Art. 50 incluído; watermarking do Claude é materialização direta, ver Seção 1.1); obrigações High-Risk adiadas para 02/dez/2027 pelo Regulamento (UE) 2026/1744</td>
 <td><a href="https://artificialintelligenceact.eu/">artificialintelligenceact.eu</a></td>
 </tr>
 <tr class="even">
@@ -14256,8 +14321,20 @@ Validação UAU semanal — 5 critérios</code></pre>
 </tr>
 <tr class="odd">
 <td>v0.3</td>
+<td>2026-08-03</td>
+<td><strong>Claude Opus 5</strong> adicionado (GA 24/jul, $5/$25, default do Max); fallback do Fable ajustado (bio → Opus 5, cyber → Opus 4.8); <em>automatic fallbacks</em> na API (beta); tokenizer quantificado (~30%); demais preços reconferidos sem alteração.</td>
+<td>Editor executivo</td>
+</tr>
+<tr class="even">
+<td>v0.4</td>
+<td>2026-08-12</td>
+<td><strong>Sonnet 5 consolidado em $2/$10</strong> (aumento de 01/set/2026 <strong>cancelado</strong> pela Anthropic; preço de lançamento virou padrão); recalibração das salvaguardas de biologia do Fable 5 (07/ago: fallbacks bio −85%, roteamento bio → Opus 5 restrito a dual-use); <strong>marcação de conteúdo gerado</strong> (watermark embutido no texto + metadados C2PA em arquivos, modelos ≥ 02/ago/2026, aplicação mundial, Art. 50(2) do EU AI Act); placeholders de famílias concorrentes e benchmarks substituídos por referência cruzada ao L1-APX-J (fonte única de números da série); Seção 6 atualizada (Reg. UE 2026/1744).</td>
+<td>Editor executivo</td>
+</tr>
+<tr class="odd">
+<td>v0.5</td>
 <td>(próxima)</td>
-<td>Números por família proprietária concorrente (GPT, Gemini, Grok) + benchmarks líderes</td>
+<td>Documentação técnica de detecção de marcas (prometida pela Anthropic); benchmarks com scores auditados de terceiros para a classe Mythos/Opus 5; conferir equivalência dos usage credits no dashboard</td>
 <td>Autor + revisão</td>
 </tr>
 </tbody>
