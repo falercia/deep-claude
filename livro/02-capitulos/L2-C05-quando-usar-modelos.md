@@ -125,6 +125,8 @@ Operações maduras raramente usam um único modelo. O padrão recorrente é rot
 
 **Padrão 5 — Proporção típica em produção.** Organizações que implementam roteamento estruturado convergem para algo próximo de: 5–10% Opus (casos críticos), 50–70% Sonnet (cavalo de batalha), 25–45% Haiku (triagem e volume). Essa proporção não é prescritiva — é o ponto de partida para medir e ajustar.
 
+**Padrão 6 — Roteamento também é continuidade, não só custo.** Nos tiers superiores da família, classificadores de segurança podem redirecionar uma requisição para outro modelo em vez de bloqueá-la — o fornecedor chama isso de *fallback automático*, e ele acontece sem que sua aplicação escolha. A consequência para quem opera em produção: a política de roteamento precisa declarar, por escrito e antes do incidente, qual modelo a operação aceita como degradação para cada classe de tarefa. E há um corolário que pega arquitetos desprevenidos: **salvaguarda é parâmetro vivo**. O fornecedor recalibra classificadores entre releases, e a fronteira do que redireciona muda sem anúncio de modelo novo — a política de roteamento merece revisão quando a salvaguarda muda, não só quando o lineup muda. O mecanismo corrente, os pares de fallback vigentes e as datas ficam na Seção 1.1 do [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md).
+
 ![Diagrama 5.2 — Portfolio de Roteamento em Produção](imagens/cap-05-img-02-portfolio-roteamento.svg)
 
 ---

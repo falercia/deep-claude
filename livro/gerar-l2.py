@@ -33,6 +33,7 @@ PARATEXTO_FRENTE = [
     ("00-paratexto/L2-PT-01-dedicatoria.md", "Dedicatória"),
     ("00-paratexto/L2-PT-02-prefacio.md", "Prefácio"),
     ("00-paratexto/L2-PT-03-como-ler.md", "Como Ler Este Livro"),
+    ("00-paratexto/L2-PT-03b-o-que-mudou.md", "O Que Mudou Nesta Edição"),
     ("00-paratexto/L2-PT-04-sumario.md", "Sumário"),
 ]
 

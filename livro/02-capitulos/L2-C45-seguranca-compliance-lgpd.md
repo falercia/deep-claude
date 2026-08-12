@@ -145,6 +145,12 @@ A Anthropic implementou defesas no nível do modelo e publicou pesquisa sobre de
 >
 > *O que teria evitado:* Princípio do escopo mínimo aplicado antes do deploy: o servidor MCP deveria ter acesso apenas ao subconjunto de dados necessário para o caso de uso aprovado, não ao CRM inteiro. Revisão periódica de servidores ativos — o mesmo controle de Connectors descrito no Cap. 42 — teria identificado o drift de acesso antes do incidente.
 
+### 45.3.6 — Marcação de conteúdo gerado: watermarking e proveniência de saída
+
+A partir de 2026, o conteúdo que o Claude gera passou a carregar marcação legível por máquina. A Anthropic, signatária do código de conduta do Artigo 50(2) do AI Act europeu (transparência de conteúdo gerado por IA), embute a marca em duas camadas complementares: um **watermark estatístico imperceptível tecido no próprio texto**, aplicado no nível do modelo — presente, portanto, em qualquer superfície: API, apps, Claude Code, Cowork — e **metadados de proveniência assinados no padrão aberto C2PA** anexados a arquivos suportados. A marca no texto viaja com o conteúdo no copy-paste e pode persistir através de alguma edição. A aplicação é mundial, não restrita à União Europeia: manter dois comportamentos por região custa mais do que cumprir o padrão mais alto em todo lugar, e esse efeito Bruxelas tende a se repetir com os demais fornecedores signatários. Quais modelos marcam, desde quando e com quais ferramentas de detecção — números e datas — ficam na Seção 1.1 do [Apêndice Vivo (J)](../04-apendices/L2-APX-J-apendice-vivo.md).
+
+Para o controlador brasileiro, três consequências práticas. Primeira, e a mais importante: **a marca prova processamento, não autoria**. Documento humano que passou pelo Claude para revisão, tradução ou reformatação sai marcado; conteúdo gerado por IA e depois pesadamente editado, parafraseado ou convertido de formato pode não carregar marca detectável. Qualquer política interna — de RH, de comunicação, jurídica — que trate detecção de marca como veredicto de autoria erra nos dois sentidos, e o custo do erro recai sobre pessoas. Segunda: sua operação **emite** conteúdo marcado. Relatórios, propostas, comunicados e pareceres que passaram pelo Claude carregam a marca ao sair com o logotipo da sua empresa; a decisão sobre o que isso significa para cada tipo de documento é de governança (Cap. 42), não de engenharia, e precisa existir antes que um cliente ou um regulador pergunte. Terceira: escreva a política de uso de detecção antes que alguém use o detector — marca detectada abre conversa, não conclui julgamento. O princípio geral da proveniência de saída, tratado como padrão de mercado e não como mecanismo de um fornecedor, está no Capítulo 19 do Livro 1.
+
 ## 45.4 — O CRITÉRIO DE DECISÃO
 
 ### O que pode entrar no Claude por classificação de dado
@@ -273,6 +279,7 @@ Esta é a seção de maior volatilidade deste livro.
 - Versões correntes das certificações da Anthropic (SOC 2, ISO 27001) com data de auditoria
 - Políticas de retenção de dados e ZDR correntes (revisadas periodicamente pela Anthropic)
 - Versão do DPA disponível para Enterprise e o que cobre na transferência internacional
+- Mecanismo corrente de marcação de conteúdo gerado (watermark no texto, metadados C2PA em arquivos), modelos cobertos e ferramentas de detecção disponíveis (Seção 1.1 do Apêndice J)
 
 **Fontes primárias para monitoramento:**
 
