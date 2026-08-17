@@ -1,9 +1,9 @@
 # Preços — Snapshot
 
-> **Snapshot 2026-06-18 · rascunho para conferência do autor**
-> Atualizado em: 2026-06-18 (populamento com dados correntes — ver CHANGELOG-APENDICE.md)
-> Atualizado anteriormente: 2026-06-06 (seed inicial)
-> Próxima atualização: 2026-07-01 a 2026-07-07
+> **Snapshot 2026-08-12**
+> Atualizado em: 2026-08-12 (família Claude reconferida na fonte primária; OpenAI e Gemini atualizados conforme verificação de agosto — ver CHANGELOG-APENDICE.md)
+> Atualizado anteriormente: 2026-06-18
+> Próxima atualização: setembro/2026 (checagem mensal)
 > Cotação USD/BRL referência: ver abaixo
 > Fonte: ver [`FONTES.md`](./FONTES.md)
 
@@ -19,56 +19,58 @@ Preços de API são cobrados por **token**, normalmente por milhão de tokens (M
 
 ---
 
-## Anthropic — Claude (junho 2026)
+## Anthropic — Claude (agosto 2026)
 
 **Tabela de preços confirmados por fonte primária:**
 
 | Modelo | Input ($/MTok) | Output ($/MTok) | Cache write 5min | Cache write 1h | Cache read (hit) | Batch input | Batch output |
 |---|---|---|---|---|---|---|---|
 | **Claude Fable 5** | $10,00 | $50,00 | $12,50 | $20,00 | $1,00 | $5,00 | $25,00 |
+| **Claude Mythos 5** (restrito, Glasswing) | $10,00 | $50,00 | $12,50 | $20,00 | $1,00 | $5,00 | $25,00 |
+| **Claude Opus 5** | $5,00 | $25,00 | $6,25 | $10,00 | $0,50 | $2,50 | $12,50 |
 | **Claude Opus 4.8** | $5,00 | $25,00 | $6,25 | $10,00 | $0,50 | $2,50 | $12,50 |
+| **Claude Sonnet 5** | $2,00 | $10,00 | $2,50 | $4,00 | $0,20 | $1,00 | $5,00 |
 | **Claude Sonnet 4.6** | $3,00 | $15,00 | $3,75 | $6,00 | $0,30 | $1,50 | $7,50 |
 | **Claude Haiku 4.5** | $1,00 | $5,00 | $1,25 | $2,00 | $0,10 | $0,50 | $2,50 |
 
-· fonte: https://platform.claude.com/docs/en/about-claude/pricing · data: 2026-06-18
+· fonte: https://platform.claude.com/docs/en/about-claude/pricing · data: 2026-08-12
 
 **Notas:**
 - Todos os valores em USD por milhão de tokens (MTok).
+- **Sonnet 5: aumento cancelado.** O preço de lançamento ($2/$10) virou preço padrão; o aumento programado para $3/$15 em 01/09/2026 **não vai ocorrer** (nota oficial na página de pricing, capturada em 12/08/2026).
+- **Tokenizer novo (geração 4.7+, incl. Opus 5, Fable 5, Sonnet 5):** o mesmo texto mapeia para ~30% mais tokens. Compare **custo por tarefa**, nunca custo por token, ao cruzar gerações.
 - Cache write cobra a 1,25x (5 min) ou 2x (1h) o preço de input; cache read cobra a 0,1x o preço de input.
 - Batch API processa requisições de forma assíncrona (até 24h); desconto de 50% sobre input e output.
-- Claude Mythos 5 (disponibilidade limitada, Project Glasswing): mesmos preços de Fable 5 ($10/$50 per MTok).
-- **Fast mode (research preview)** para Opus 4.8: $10 input / $50 output por MTok. Para Opus 4.6/4.7: $30/$150 por MTok.
+- **Fast mode (research preview)** para Opus 5 e Opus 4.8: $10 input / $50 output por MTok. Indisponível em Opus 4.7 (erro) e 4.6 (roda em velocidade padrão).
 - **Data residency (US-only inference)**: multiplicador de 1,1x sobre todos os tokens.
+- **Usage credits:** nos planos de assinatura, o acesso ao Fable 5 é cobrado via crédito de uso medido desde 07/07/2026; a única taxa publicada é a da API ($10/$50). Marketplaces (AWS, Microsoft Foundry) faturam em CCU: 100 CCU = US$ 1,00.
 
 **Sempre confirmar em:** https://platform.claude.com/docs/en/about-claude/pricing
 
 ---
 
-## OpenAI — GPT (junho 2026)
+## OpenAI — GPT (agosto 2026)
 
 | Modelo | Input ($/MTok) | Output ($/MTok) | Observação |
 |---|---|---|---|
-| **GPT-5.5** | $5,00 | $30,00 | Flagship; batch e flex: $2,50/$15,00 |
-| **GPT-5.5 Pro** | $30,00 | $180,00 | Tier máximo de raciocínio |
-| **GPT-4.1** | $2,00 | $8,00 | Não-raciocínio; 1M contexto |
-| **GPT-4.1 mini** | $0,40 | $1,60 | Velocidade/custo |
-| **GPT-4.1 nano** | $0,10 | $0,40 | Ultra-baixo custo |
-| **o3** | $2,00 | $8,00 | Raciocínio; substitui o1 |
-| **o4-mini** | $1,10 | $4,40 | Raciocínio econômico |
+| **GPT-5.6 Sol** | $5,00 | $30,00 | Flagship da família 5.6 (lançada 09/07/2026) |
+| **GPT-5.6 Terra** | $2,00 | $12,00 | Tier balanceado; preço pós-corte de 30/07/2026 |
+| **GPT-5.6 Luna** | $0,20 | $1,20 | Tier de volume; corte de ~80% em 30/07/2026 |
+| **GPT-5.5 Pro** | $30,00 | $180,00 | Tier "research-grade" da geração anterior (verificado jun/2026) |
 
-· fonte: https://openai.com/api/pricing/ (via WebSearch confirmando dados de terceiros) · data: 2026-06-18
+· fonte: https://developers.openai.com/api/docs/pricing · data: 2026-08-12 (verificação de agosto conforme L1-APX-J)
 
-**Atenção:** Preços OpenAI acima foram obtidos por pesquisa web (terceiros e busca direta). Confirmar na página oficial antes de orçamento: https://openai.com/api/pricing/
+**Atenção:** o tier de volume da OpenAI teve dois repricings em 2026; é o preço mais volátil do mercado. Confirmar na página oficial antes de orçamento: https://developers.openai.com/api/docs/pricing
 
 ---
 
-## Google Gemini (junho 2026)
+## Google Gemini (agosto 2026)
 
 ### Via Gemini API (ai.google.dev) — Paid Tier
 
 | Modelo | Input ($/MTok) | Output ($/MTok) | Cache read | Observação |
 |---|---|---|---|---|
-| **Gemini 3.1 Pro Preview** | $2,00 (≤200K prompt) / $4,00 (>200K) | $12,00 (≤200K) / $18,00 (>200K) | $0,20 (≤200K) / $0,40 (>200K) | Preview; pode mudar |
+| **Gemini 3.1 Pro** | $2,00 (≤200K prompt) / $4,00 (>200K) | $12,00 (≤200K) / $18,00 (>200K) | $0,20 (≤200K) / $0,40 (>200K) | Flagship (release 19/02/2026); janela de 2M tokens |
 | **Gemini 2.5 Pro** | $1,25 (≤200K) / $2,50 (>200K) | $10,00 (≤200K) / $15,00 (>200K) | $0,125 (≤200K) / $0,25 (>200K) | Stable; inclui tokens de thinking |
 | **Gemini 2.5 Flash** | $0,30 (texto/img/vídeo) / $1,00 (áudio) | $2,50 | $0,03 (texto) | Raciocínio híbrido; thinking budgets |
 | **Gemini 2.5 Flash-Lite** | $0,10 (texto/img/vídeo) / $0,30 (áudio) | $0,40 | $0,01 (texto) | Mais econômico |
@@ -136,6 +138,7 @@ total mensal: $750 (Sonnet 4.6)
 
 ## Mudanças recentes
 
+- **2026-08-12**: snapshot de agosto. **Sonnet 5 consolidado em $2/$10** (aumento de 01/09 cancelado pela Anthropic — fonte primária); Opus 5 e Mythos 5 adicionados à tabela; fast mode atualizado (Opus 5/4.8, $10/$50); notas de tokenizer (~30%, geração 4.7+) e usage credits/CCU; OpenAI atualizado para família GPT-5.6 (Sol $5/$30, Terra $2/$12, Luna $0,20/$1,20 pós-corte de 30/07); Gemini 3.1 Pro consolidado como flagship GA.
 - **2026-06-22**: preços da família Claude (Opus 4.8 $5/$25, Sonnet 4.6 $3/$15, Haiku 4.5 $1/$5 por MTok) **reconferidos por busca web — sem mudança** desde 2026-06-18. Demais provedores e a cotação USD/BRL do mês permanecem para reconferência próxima ao fechamento de junho.
 - **2026-06-18**: snapshot populado com preços correntes confirmados por fonte primária (Anthropic docs, Google AI pricing). OpenAI confirmado por pesquisa web (verificar em fonte primária antes de orçamento).
 - **2026-06-06**: snapshot seed criado.

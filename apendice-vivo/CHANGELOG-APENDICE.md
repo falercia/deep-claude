@@ -5,6 +5,33 @@
 
 ---
 
+## 2026-08-12 — Atualização de agosto (cobre também o ciclo de julho, não executado)
+
+> Nota de honestidade editorial: o ciclo planejado de julho não foi publicado nesta pasta. Esta atualização de agosto incorpora tudo que mudou desde o snapshot de 18/06 — e julho foi o mês mais denso do ano.
+
+### Modelos (MODELOS.md)
+- **Claude Opus 5** (GA 24/07): novo topo do tier Opus, default do plano Max; **Claude Sonnet 5** adicionado (default de Free/Pro)
+- Timeline do Fable 5: blackout por controles de exportação (12–30/06), redeploy global (01/07), usage credits nos planos pagos (07/07), recalibração das salvaguardas de biologia (07/08, fallbacks bio −85%)
+- **Watermarking**: modelos Claude lançados a partir de 02/08 marcam todo conteúdo gerado (watermark no texto + C2PA em arquivos), mundialmente
+- OpenAI: família **GPT-5.6** (Sol/Terra/Luna, 09/07) substitui GPT-5.5 como geração corrente
+- Gemini 3.1 Pro consolidado como flagship GA (janela 2M)
+
+### Preços (PRECOS.md)
+- **Sonnet 5 consolidado em $2/$10** — o aumento programado para $3/$15 em 01/09/2026 foi **cancelado** pela Anthropic (fonte primária, capturada 12/08)
+- Opus 5 e Mythos 5 tabulados; fast mode corrigido (Opus 5/4.8, $10/$50); notas de tokenizer (~30% mais tokens na geração 4.7+) e CCU (100 = US$ 1,00)
+- OpenAI: corte de 30/07 (Terra −20%, Luna −80%) refletido
+
+### Regulação (REGULACAO.md)
+- EU AI Act: **aplicação geral desde 02/08/2026** (Art. 50 incluído, não adiado); Digital Omnibus formalizado como **Regulamento (UE) 2026/1744** (DOUE 24/07, vigor 27/07); alto risco → 02/12/2027, Anexo I → 02/08/2028
+- Linha nova: Art. 50 na prática — watermarking da Anthropic (11/08) como primeira materialização de fornecedor
+- PL 2338: parecer de mai/2026, votação de 27/05 não concluída, sinal público de adiamento para dez/2026 ou 2027
+
+### Pendências deste ciclo (não atualizadas, honestamente declaradas)
+- `BENCHMARKS.md` e `JANELAS-SLA.md` permanecem no snapshot de 18/06 — aguardando scores auditados por terceiros para a classe Mythos/Opus 5 e a migração de referência (ARC-AGI 3, OSWorld 2.0)
+- Cotação USD/BRL segue TBD
+
+---
+
 ## 2026-07 (planejado — lançamento oficial)
 
 ### Adicionado
