@@ -4,8 +4,8 @@ Produção da edição DIGITAL do Livro 2 — Deep Claude.
 
 Gera, a partir do manuscrito canônico em deep-claude/livro/:
   1. _build/L2-consolidado.md   (paths de imagem -> file:// absolutos)
-  2. Deep-Claude-EDICAO-DIGITAL.pdf   (pandoc -> weasyprint, 16x24cm)
-  3. Deep-Claude-EDICAO-DIGITAL.html  (HTML navegavel autocontido, SVG embutido)
+  2. Inteligencia-Aumentada-L2-Deep-Claude.pdf   (pandoc -> weasyprint, 16x24cm)
+  3. Inteligencia-Aumentada-L2-Deep-Claude-web.html  (HTML navegavel autocontido, SVG embutido)
 
 Sem sangria de grafica (edicao digital). Capa SVG embutida como pagina 1.
 """
@@ -237,7 +237,7 @@ def gerar_pdf():
         "--metadata=lang:pt-BR",
     ], check=True)
     import weasyprint
-    pdf = BASE / "Deep-Claude-EDICAO-DIGITAL.pdf"
+    pdf = BASE / "Inteligencia-Aumentada-L2-Deep-Claude.pdf"
     weasyprint.HTML(filename=str(html), base_url=str(BASE)).write_pdf(
         str(pdf), stylesheets=[weasyprint.CSS(filename=str(css))])
     mb = pdf.stat().st_size / (1024 * 1024)
@@ -247,7 +247,7 @@ def gerar_pdf():
 
 def gerar_html():
     md = consolidar("data")
-    out = BASE / "Deep-Claude-EDICAO-DIGITAL.html"
+    out = BASE / "Inteligencia-Aumentada-L2-Deep-Claude-web.html"
     subprocess.run([
         "pandoc", str(md),
         "-f", "markdown+raw_html+definition_lists+fenced_code_blocks+pipe_tables",

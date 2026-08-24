@@ -57,3 +57,9 @@ _backup-*/
 * 2.html
 *.bak
 *.stale
+
+# Intermediarios de build do livro (gerados por livro/gerar-l2.py)
+livro/_build/L2-*
+
+# Backups datados (padrao .bak-AAAAMMDD)
+*.bak-*
