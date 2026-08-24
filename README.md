@@ -1,11 +1,52 @@
-# deep-claude
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="livro/00-paratexto/imagens/capa-deep-claude-dark.png">
+    <img src="livro/00-paratexto/imagens/capa-deep-claude.png" width="300" alt="Capa de Deep Claude">
+  </picture>
+</p>
 
-> O livro **Deep Claude · Currículo Executivo do Ecossistema Anthropic** e seu companion executável — juntos, num repositório só.
-> Fabio Garcia, 2026.
+<h1 align="center">Deep Claude</h1>
 
-[![Licença código](https://img.shields.io/badge/c%C3%B3digo-MIT-blue)](#licença)
-[![Licença conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC--BY%204.0-lightgrey)](#licença)
-[![Cadência Apêndice Vivo](https://img.shields.io/badge/ap%C3%AAndice%20vivo-mensal-orange)](./apendice-vivo/)
+<p align="center">
+  <strong>Currículo Executivo do Ecossistema Anthropic</strong><br>
+  Livro 2 da série <em>Inteligência Aumentada</em> · Fabio Garcia, 2026
+</p>
+
+<p align="center">
+  <a href="https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf">
+    <img src="https://img.shields.io/badge/Baixar%20o%20livro-PDF-B31B1B?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Baixar o PDF">
+  </a>
+  <a href="https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude-web.html">
+    <img src="https://img.shields.io/badge/Ler%20no%20navegador-HTML-0A66C2?style=for-the-badge&logo=html5&logoColor=white" alt="Ler no navegador">
+  </a>
+</p>
+
+<p align="center">
+  <a href="./LICENSE-MIT"><img src="https://img.shields.io/badge/c%C3%B3digo-MIT-blue" alt="Licença do código"></a>
+  <a href="./LICENSE-CC-BY"><img src="https://img.shields.io/badge/conte%C3%BAdo-CC--BY%204.0-lightgrey" alt="Licença do conteúdo"></a>
+  <a href="./apendice-vivo/"><img src="https://img.shields.io/badge/ap%C3%AAndice%20vivo-mensal-orange" alt="Cadência do Apêndice Vivo"></a>
+  <a href="./CHANGELOG.md"><img src="https://img.shields.io/github/v/release/falercia/deep-claude?label=vers%C3%A3o&color=success" alt="Versão publicada"></a>
+</p>
+
+---
+
+## Baixar
+
+| Formato | Arquivo | Para quem |
+|---|---|---|
+| **PDF** | [Inteligencia-Aumentada-L2-Deep-Claude.pdf](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf) | Leitura offline, impressão, anotação |
+| **HTML** | [Inteligencia-Aumentada-L2-Deep-Claude-web.html](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude-web.html) | Leitura no navegador, arquivo único autocontido |
+| **Companion** | [pastas práticas deste repositório](#o-que-vive-aqui) | Quem vai colocar em produção |
+
+Distribuição gratuita. Os links acima apontam sempre para a edição mais recente, então podem ser compartilhados sem medo de envelhecer. Histórico completo em [Releases](https://github.com/falercia/deep-claude/releases) e em [CHANGELOG.md](./CHANGELOG.md).
+
+---
+
+## O que é isto
+
+47 capítulos, o Capítulo 5b, o Apêndice K e cerca de 110 diagramas sobre como operar o ecossistema Claude em escala corporativa, mais o companion executável que transforma cada capítulo em artefato pronto para pipeline.
+
+O livro carrega o padrão durável, ou seja, frameworks de decisão, arquiteturas de aplicação, vocabulário operacional e fluxos de adoção institucional. As pastas práticas carregam o que muda, com modelos vigentes, preços, benchmarks, skills versionados, MCPs de referência, prompts setoriais e templates de governança, sob cadência mensal declarada.
 
 ---
 
@@ -14,9 +55,12 @@
 ```
 deep-claude/
 ├── livro/                   # Manuscrito completo de Deep Claude
-│   ├── caps/                # 47 capítulos + Cap 5b + Apêndice K
-│   ├── diagramas/           # ~110 diagramas SVG
-│   └── _build/              # Build do livro (HTML, PDF)
+│   ├── 00-paratexto/        # Capa, títulos, colofão, imagens
+│   ├── 02-capitulos/        # 47 capítulos + Cap 5b
+│   ├── 03-casos/            # Casos setoriais
+│   ├── 04-apendices/        # Apêndices, incluindo o Apêndice K e o APX-J vivo
+│   ├── _build/              # Intermediários de build (gerados)
+│   └── gerar-l2.py          # Pipeline que produz o PDF e o HTML publicados
 ├── apendice-vivo/           # Modelos, preços, benchmarks — cadência mensal
 ├── labs/                    # Exercícios práticos por capítulo
 ├── prompts/                 # Biblioteca de prompts setoriais executáveis
@@ -76,7 +120,7 @@ cd deep-claude
 
 Quatro caminhos a partir daqui, conforme seu objetivo:
 
-**0. Quero ler o livro.** Abra [`/livro`](./livro/) e navegue pelos capítulos. O build em `livro/_build/` serve a versão HTML navegável localmente. Se preferir ir direto ao conteúdo prático, os demais caminhos abaixo partem do pressuposto que você já leu (ou está lendo) os capítulos indicados em cada pasta.
+**0. Quero ler o livro.** Baixe o [PDF](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf) ou abra a [edição HTML](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude-web.html) no navegador. Quem prefere ler o fonte em Markdown, capítulo a capítulo, encontra tudo em [`/livro`](./livro/). Se preferir ir direto ao conteúdo prático, os demais caminhos abaixo partem do pressuposto que você já leu (ou está lendo) os capítulos indicados em cada pasta.
 
 **1. Quero a referência viva atualizada.** Abra [`/apendice-vivo`](./apendice-vivo/) e leia o snapshot do mês corrente. Em cinco minutos você tem modelos vigentes, preços normalizados em USD e BRL, benchmarks atualizados e janelas de contexto por modelo. Atualizado todo mês entre os dias 1 e 7.
 
