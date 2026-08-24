@@ -1,0 +1,86 @@
+name: Publicar release do livro
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag existente a republicar (ex: v1.1.0)'
+        required: true
+
+permissions:
+  contents: write
+
+env:
+  PDF: livro/Inteligencia-Aumentada-L2-Deep-Claude.pdf
+  HTML: livro/Inteligencia-Aumentada-L2-Deep-Claude-web.html
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Gate de assets obrigatorios
+        run: |
+          set -e
+          falhou=0
+          for f in "$PDF" "$HTML"; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Asset obrigatorio ausente: $f. Release abortada."
+              falhou=1
+              continue
+            fi
+            tamanho=$(stat -c%s "$f")
+            if [ "$tamanho" -lt 500000 ]; then
+              echo "::error::$f tem apenas $tamanho bytes, build provavelmente quebrado. Release abortada."
+              falhou=1
+            else
+              echo "OK: $f ($(numfmt --to=iec $tamanho))"
+            fi
+          done
+          [ "$falhou" -eq 0 ] || exit 1
+
+      - name: Montar corpo da release
+        run: |
+          set -e
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          VERSAO="${TAG#v}"
+          {
+            cat .github/RELEASE_TEMPLATE.md
+            echo
+            echo "### O que mudou nesta versao"
+            echo
+            secao=$(awk -v v="$VERSAO" '
+              $0 ~ "^## \\["v"\\]" { p=1; next }
+              p && /^## \[/ { exit }
+              p { print }
+            ' CHANGELOG.md)
+            if [ -n "$(echo "$secao" | tr -d '[:space:]')" ]; then
+              echo "$secao"
+            else
+              echo "_Sem secao correspondente no CHANGELOG para a versao $VERSAO._"
+            fi
+            echo
+            echo "[Changelog completo](https://github.com/falercia/deep-claude/blob/main/CHANGELOG.md)"
+            echo
+            echo "---"
+            echo
+            echo "Primeira vez por aqui? Comece pelo [README](https://github.com/falercia/deep-claude#readme). Distribuicao gratuita, compartilhe com sua equipe."
+          } > release-notes.md
+          echo "--- previa ---"
+          cat release-notes.md
+
+      - name: Publicar
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: Deep Claude · ${{ github.event.inputs.tag || github.ref_name }}
+          body_path: release-notes.md
+          files: |
+            livro/Inteligencia-Aumentada-L2-Deep-Claude.pdf
+            livro/Inteligencia-Aumentada-L2-Deep-Claude-web.html
