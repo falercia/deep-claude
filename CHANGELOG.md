@@ -6,6 +6,29 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 
 ---
 
+## [1.1.1] — 2026-08-24
+
+**Revisão da camada de distribuição: o leitor precisa saber onde clicar.**
+
+### Adicionado
+
+- README com capa, badges de download e bloco "Baixar" no topo, antes de qualquer texto editorial
+- `.github/RELEASE_TEMPLATE.md`: cabeçalho fixo das notas de release, com tabela de download em primeiro lugar
+- `.github/workflows/release.yml`: publicação automática ao empurrar tag `v*`, com gate que aborta se o PDF ou o HTML estiverem ausentes ou truncados, e corpo montado a partir da seção correspondente deste changelog
+
+### Alterado
+
+- **Nomes canônicos dos entregáveis, congelados a partir desta versão**: `Inteligencia-Aumentada-L2-Deep-Claude.pdf` e `Inteligencia-Aumentada-L2-Deep-Claude-web.html`, substituindo `Deep-Claude-EDICAO-DIGITAL.*`. O nome fixo é o que faz `releases/latest/download/` funcionar como link permanente, compartilhável sem envelhecer
+- `livro/gerar-l2.py` passa a gravar com os nomes canônicos
+- Árvore de `livro/` no README corrigida para a estrutura real (`00-paratexto`, `02-capitulos`, `03-casos`, `04-apendices`)
+- Convenção de tags unificada em SemVer puro (`vX.Y.Z`). A tag legada `livro-v1.0` permanece como histórico e não se repete
+
+### Corrigido
+
+- `.gitignore` passa a cobrir os intermediários `livro/_build/L2-*` e os backups no padrão `.bak-AAAAMMDD`, que apareciam como untracked a cada sessão
+
+---
+
 ## [1.1.0] — 2026-08-17
 
 **Ciclo de agosto: watermarking, Sonnet 5 consolidado e sincronização da camada pública de números.**
