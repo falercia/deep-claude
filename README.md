@@ -16,8 +16,8 @@
   <a href="https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf">
     <img src="https://img.shields.io/badge/Baixar%20o%20livro-PDF-B31B1B?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Baixar o PDF">
   </a>
-  <a href="https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude-web.html">
-    <img src="https://img.shields.io/badge/Ler%20no%20navegador-HTML-0A66C2?style=for-the-badge&logo=html5&logoColor=white" alt="Ler no navegador">
+  <a href="https://falercia.github.io/deep-claude/ler/">
+    <img src="https://img.shields.io/badge/Ler%20online-gr%C3%A1tis-0A66C2?style=for-the-badge&logo=html5&logoColor=white" alt="Ler online">
   </a>
 </p>
 
@@ -28,6 +28,10 @@
   <a href="./CHANGELOG.md"><img src="https://img.shields.io/github/v/release/falercia/deep-claude?label=vers%C3%A3o&color=success" alt="Versão publicada"></a>
 </p>
 
+<p align="center">
+  <strong><a href="https://falercia.github.io/deep-claude/">Página do livro</a></strong> · leitura online, PDF e sumário completo
+</p>
+
 ---
 
 ## Baixar
@@ -35,7 +39,7 @@
 | Formato | Arquivo | Para quem |
 |---|---|---|
 | **PDF** | [Inteligencia-Aumentada-L2-Deep-Claude.pdf](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf) | Leitura offline, impressão, anotação |
-| **HTML** | [Inteligencia-Aumentada-L2-Deep-Claude-web.html](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude-web.html) | Leitura no navegador, arquivo único autocontido |
+| **HTML** | [ler online, sem download](https://falercia.github.io/deep-claude/ler/) | Leitura no navegador, arquivo único autocontido |
 | **Companion** | [pastas práticas deste repositório](#o-que-vive-aqui) | Quem vai colocar em produção |
 
 Distribuição gratuita. Os links acima apontam sempre para a edição mais recente, então podem ser compartilhados sem medo de envelhecer. Histórico completo em [Releases](https://github.com/falercia/deep-claude/releases) e em [CHANGELOG.md](./CHANGELOG.md).
@@ -120,7 +124,7 @@ cd deep-claude
 
 Quatro caminhos a partir daqui, conforme seu objetivo:
 
-**0. Quero ler o livro.** Baixe o [PDF](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf) ou abra a [edição HTML](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude-web.html) no navegador. Quem prefere ler o fonte em Markdown, capítulo a capítulo, encontra tudo em [`/livro`](./livro/). Se preferir ir direto ao conteúdo prático, os demais caminhos abaixo partem do pressuposto que você já leu (ou está lendo) os capítulos indicados em cada pasta.
+**0. Quero ler o livro.** Baixe o [PDF](https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf) ou abra a [edição HTML](https://falercia.github.io/deep-claude/ler/) no navegador. Quem prefere ler o fonte em Markdown, capítulo a capítulo, encontra tudo em [`/livro`](./livro/). Se preferir ir direto ao conteúdo prático, os demais caminhos abaixo partem do pressuposto que você já leu (ou está lendo) os capítulos indicados em cada pasta.
 
 **1. Quero a referência viva atualizada.** Abra [`/apendice-vivo`](./apendice-vivo/) e leia o snapshot do mês corrente. Em cinco minutos você tem modelos vigentes, preços normalizados em USD e BRL, benchmarks atualizados e janelas de contexto por modelo. Atualizado todo mês entre os dias 1 e 7.
 

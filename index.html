@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Claude · Currículo Executivo do Ecossistema Anthropic</title>
+<meta name="description" content="Quarenta e sete capítulos sobre operar Claude em escala corporativa, da primeira conversa até governança, ROI e compliance. Mais o companion executável que transforma cada capítulo em artefato de pipeline.">
+<meta property="og:title" content="Deep Claude · Currículo Executivo do Ecossistema Anthropic">
+<meta property="og:description" content="Os Invariantes aplicados a um ecossistema inteiro.">
+<meta property="og:type" content="book">
+<meta property="og:image" content="livro/00-paratexto/imagens/capa-deep-claude.png">
+<meta property="og:url" content="https://falercia.github.io/deep-claude/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#17181A; --bg-2:#1D1F22; --bg-3:#222427;
+    --fg:#F6F4EF; --fg-suave:#9B968B; --rule:#3A3C40; --acento:#E9683C;
+    --sans:'IBM Plex Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --serif:'IBM Plex Serif',Georgia,'Times New Roman',serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --max:1120px; --gutter:clamp(1.25rem,5vw,4rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;
+       -webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+
+  .topo{position:sticky;top:0;z-index:50;background:rgba(23,24,26,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+  .topo-wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+  .marca{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-suave);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .marca b{color:var(--fg);font-weight:600}
+  .topo-links{display:flex;align-items:center;gap:6px;flex-shrink:0}
+  .topo-links a{font-size:13px;font-weight:500;color:var(--fg-suave);padding:7px 11px;border-radius:6px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .topo-links a:hover{color:var(--fg)}
+  .topo-links .destaque{background:var(--acento);color:#17181A;font-weight:600}
+  .topo-links .destaque:hover{background:#F07E56;color:#17181A}
+  @media (max-width:720px){.topo-links .some{display:none}.marca{font-size:10px;letter-spacing:.08em}}
+
+  header.hero{border-bottom:1px solid var(--rule);padding:clamp(40px,5vw,64px) 0 clamp(40px,6vw,72px);position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(760px 380px at 88% -20%, rgba(233,104,60,.14), transparent 62%)}
+  .hero-grid{position:relative;z-index:1;display:grid;gap:clamp(32px,5vw,64px);align-items:center}
+  @media (min-width:900px){.hero-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr)}}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acento);margin-bottom:20px}
+  h1{font-family:var(--serif);font-size:clamp(38px,6vw,68px);line-height:1.02;font-weight:600;letter-spacing:-.02em}
+  .sub{font-family:var(--serif);font-size:clamp(19px,2.4vw,27px);color:var(--acento);margin-top:12px;font-weight:400;font-style:italic}
+  .tese{margin-top:26px;font-size:clamp(17px,2vw,21px);font-weight:600;max-width:30ch;line-height:1.35}
+  .lead{margin-top:16px;color:var(--fg-suave);font-size:16px;max-width:56ch}
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .stat{border:1px solid var(--rule);border-radius:8px;padding:10px 16px;background:var(--bg-2)}
+  .stat b{display:block;font-family:var(--mono);font-size:20px;font-weight:600;line-height:1.2}
+  .stat span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-suave)}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:8px;padding:12px 20px;
+       font-size:14px;font-weight:600;transition:.18s;background:transparent;font-family:inherit;cursor:pointer}
+  .btn:hover{border-color:var(--acento);color:var(--acento)}
+  .btn-primario{background:var(--acento);color:#17181A;border-color:var(--acento)}
+  .btn-primario:hover{background:#F07E56;border-color:#F07E56;color:#17181A}
+  .btn small{font-weight:400;opacity:.75;font-size:12px}
+  .capa-wrap{display:flex;justify-content:center}
+  .capa{width:min(320px,72vw);border-radius:4px;border:1px solid var(--rule);box-shadow:0 30px 70px rgba(0,0,0,.6);display:block}
+
+  section{padding:clamp(48px,7vw,84px) 0;border-bottom:1px solid var(--rule)}
+  .titulo-secao{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acento);margin-bottom:14px}
+  h2{font-family:var(--serif);font-size:clamp(25px,3.4vw,38px);font-weight:600;letter-spacing:-.015em;line-height:1.18;margin-bottom:14px}
+  .sub-secao{color:var(--fg-suave);max-width:64ch;margin-bottom:36px}
+  .tres{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .bloco{border:1px solid var(--rule);border-left:2px solid var(--acento);border-radius:0 10px 10px 0;padding:22px;background:var(--bg-2)}
+  .bloco h3{font-size:15px;font-weight:600;margin-bottom:8px;letter-spacing:.01em}
+  .bloco p{color:var(--fg-suave);font-size:14.5px}
+
+  .lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+  .item{border:1px solid var(--rule);border-radius:10px;padding:20px;background:var(--bg-2);transition:.18s;display:flex;gap:16px}
+  .item:hover{border-color:#4A4D52;background:var(--bg-3)}
+  .item .n{font-family:var(--mono);font-size:13px;color:var(--acento);font-weight:600;flex-shrink:0;padding-top:2px}
+  .item h3{font-size:15.5px;font-weight:600;margin-bottom:6px}
+  .item p{color:var(--fg-suave);font-size:14px;font-style:italic;font-family:var(--serif)}
+  .item .plano{font-style:normal;font-family:var(--sans)}
+
+  .ponte{background:var(--bg-2)}
+  .ponte-card{display:grid;gap:26px;align-items:center;border:1px solid var(--rule);border-radius:12px;padding:clamp(22px,3vw,34px);background:var(--bg)}
+  @media (min-width:760px){.ponte-card{grid-template-columns:120px minmax(0,1fr) auto}}
+  .ponte-card img{width:120px;border-radius:3px;border:1px solid var(--rule);display:block}
+  .ponte-card .rotulo{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);margin-bottom:6px}
+  .ponte-card h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:6px}
+  .ponte-card p{color:var(--fg-suave);font-size:14.5px;max-width:52ch}
+
+  .baixar{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+  .fmt{border:1px solid var(--rule);border-radius:10px;padding:22px;background:var(--bg-2);display:flex;flex-direction:column;gap:8px}
+  .fmt h3{font-size:16px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .fmt p{color:var(--fg-suave);font-size:14px;flex:1}
+  .fmt .btn{margin-top:10px;align-self:flex-start}
+  .fmt .meta{font-family:var(--mono);font-size:11px;color:var(--fg-suave);letter-spacing:.06em}
+
+  footer{padding:clamp(44px,6vw,68px) 0;text-align:center;background:var(--bg-2)}
+  footer .assinatura{font-family:var(--serif);font-size:22px;font-weight:600}
+  footer .cargo{color:var(--fg-suave);margin-top:5px;font-size:14px}
+  footer .frase{margin-top:20px;color:var(--acento);font-family:var(--serif);font-style:italic;font-size:17px}
+  footer .links{margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  footer .licenca{margin-top:26px;font-family:var(--mono);font-size:11px;color:var(--fg-suave);letter-spacing:.04em}
+</style>
+</head>
+<body>
+
+<nav class="topo">
+  <div class="wrap topo-wrap">
+    <a class="marca" href="#topo">Inteligência Aumentada · <b>Livro 2</b></a>
+    <div class="topo-links">
+      <a class="some" href="https://falercia.github.io/lt/">Todos os links</a>
+      <a class="some" href="https://github.com/falercia/deep-claude" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> GitHub</a>
+      <a class="destaque" href="ler/">Ler online</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Série Inteligência Aumentada · Livro 2 · Gratuito</p>
+      <h1>Deep Claude</h1>
+      <p class="sub">Currículo Executivo do Ecossistema Anthropic</p>
+      <p class="tese">Os Invariantes aplicados a um ecossistema inteiro.</p>
+      <p class="lead">Quarenta e sete capítulos sobre operar Claude em escala corporativa, da primeira conversa até governança, ROI e compliance. Mais o companion executável que transforma cada capítulo em artefato de pipeline.</p>
+      <div class="stats">
+        <div class="stat"><b>1.001</b><span>páginas</span></div>
+        <div class="stat"><b>47</b><span>capítulos</span></div>
+        <div class="stat"><b>110</b><span>diagramas</span></div>
+        <div class="stat"><b>0</b><span>custo</span></div>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primario" href="ler/">Ler online, grátis</a>
+        <a class="btn" href="https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1.8v8.4"/><path d="M4.4 6.8 8 10.4l3.6-3.6"/><path d="M2.2 13.2h11.6"/></svg> Baixar o PDF <small>4,5 MB</small></a>
+      </div>
+    </div>
+    <div class="capa-wrap">
+      <img class="capa" src="livro/00-paratexto/imagens/capa-deep-claude.png" alt="Capa de Deep Claude" width="640" height="960">
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="titulo-secao">O que é isto</p>
+    <h2>Não é documentação, é currículo de adoção.</h2>
+    <p class="sub-secao">A documentação oficial responde como usar. Este livro responde quando usar, quem assina embaixo e o que medir depois.</p>
+    <div class="tres">
+        <div class="bloco"><h3>O padrão</h3><p>O livro carrega o que dura, frameworks de decisão, arquiteturas de aplicação, vocabulário operacional e fluxos de adoção institucional.</p></div>
+        <div class="bloco"><h3>O número</h3><p>As pastas práticas carregam o que muda, modelos vigentes, preços, benchmarks, skills versionados, MCPs de referência e templates de governança.</p></div>
+        <div class="bloco"><h3>A cadência</h3><p>O Apêndice Vivo é revisado mensalmente, com data declarada. Nenhum número entra no livro fingindo ser permanente.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="titulo-secao">O currículo</p>
+    <h2>Quarenta e sete capítulos, cinco blocos</h2>
+    <p class="sub-secao">Do primeiro contato com Claude até governança formal, ROI e compliance. Cada bloco fecha um nível de maturidade de adoção.</p>
+    <div class="lista">
+        <article class="item"><span class="n">01</span><div><h3>Fundamentos</h3><p class="plano"><strong style="color:var(--fg);font-weight:500">Capítulos 1 a 7.</strong> Como Claude funciona, anatomia da conversa, modelos, quando usar e quando não, tokens, contexto e personas</p></div></article>
+        <article class="item"><span class="n">02</span><div><h3>Superfícies</h3><p class="plano"><strong style="color:var(--fg);font-weight:500">Capítulos 8 a 21.</strong> Cowork, Claude Code, web, desktop, mobile, Projects, Artifacts, Design, Research, voz, tarefas agendadas, Team e Enterprise</p></div></article>
+        <article class="item"><span class="n">03</span><div><h3>Engenharia</h3><p class="plano"><strong style="color:var(--fg);font-weight:500">Capítulos 22 a 36.</strong> API e SDKs, tool use, extended thinking, prompt avançado e caching, embeddings, RAG, MCP, skills, subagents, computer use, vision, evals e LLMOps</p></div></article>
+        <article class="item"><span class="n">04</span><div><h3>Casos setoriais</h3><p class="plano"><strong style="color:var(--fg);font-weight:500">Capítulos 37 a 41.</strong> Jurídico, saúde, financeiro, SaaS e suporte, RH, marketing e educação</p></div></article>
+        <article class="item"><span class="n">05</span><div><h3>Institucional</h3><p class="plano"><strong style="color:var(--fg);font-weight:500">Capítulos 42 a 47.</strong> Governança executiva, adoção, ROI e métricas, segurança, compliance, LGPD e o repositório acompanhante</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="titulo-secao">Para quem é</p>
+    <h2>Três leitores, três portas de entrada</h2>
+    <p class="sub-secao">O livro traz trilha de leitura por nível, então dá para começar por onde faz sentido em vez de ler linearmente.</p>
+    <div class="tres">
+        <div class="bloco"><h3>Quem lidera adoção</h3><p>CTO e head de tecnologia que precisa montar comitê de IA, decidir entre modelos por caso e construir AI cards por sistema.</p></div>
+        <div class="bloco"><h3>Quem coloca em produção</h3><p>Engenheiro que vai desenhar RAG, MCP, subagents e avaliação com rastreabilidade e rollback.</p></div>
+        <div class="bloco"><h3>Quem responde pelo risco</h3><p>Jurídico, compliance e governança, com runbook de incidente, LGPD e trilha de auditoria.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="baixar">
+  <div class="wrap">
+    <p class="titulo-secao">Baixar e ler</p>
+    <h2>Três formas de acessar, todas gratuitas</h2>
+    <p class="sub-secao">Os links apontam sempre para a edição mais recente, então podem ser compartilhados sem envelhecer.</p>
+    <div class="baixar">
+      <div class="fmt">
+        <h3>Ler no navegador</h3>
+        <p>O livro completo em página única, abre direto, sem download e sem cadastro. Funciona no celular.</p>
+        <span class="meta">HTML · leitura imediata</span>
+        <a class="btn btn-primario" href="ler/">Abrir o livro</a>
+      </div>
+      <div class="fmt">
+        <h3><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1.8v8.4"/><path d="M4.4 6.8 8 10.4l3.6-3.6"/><path d="M2.2 13.2h11.6"/></svg> Baixar o PDF</h3>
+        <p>Para leitura offline, impressão e anotação. Diagramação de livro, com sumário navegável.</p>
+        <span class="meta">PDF · 4,5 MB · 1.001 páginas</span>
+        <a class="btn btn-primario" href="https://github.com/falercia/deep-claude/releases/latest/download/Inteligencia-Aumentada-L2-Deep-Claude.pdf">Baixar agora</a>
+      </div>
+      <div class="fmt">
+        <h3>Companion executável</h3>
+        <p>Apêndice Vivo com números calibrados mensalmente, skills, MCPs, prompts setoriais e templates de governança.</p>
+        <span class="meta">Repositório · atualização contínua</span>
+        <a class="btn" href="https://github.com/falercia/deep-claude" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Ver no GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ponte">
+  <div class="wrap">
+    <p class="titulo-secao">A série</p>
+    <h2>Dois livros, uma tese</h2>
+    <p class="sub-secao">O Livro 1 estabelece o método vendor-neutral. O Livro 2 aplica esse método a um ecossistema inteiro. Dá para ler em qualquer ordem, mas a sequência foi pensada.</p>
+    <div class="ponte-card">
+      <img src="https://raw.githubusercontent.com/falercia/inteligencia-aumentada/main/livro/capa-l1.png" alt="Capa de Inteligência Aumentada" loading="lazy">
+      <div>
+        <p class="rotulo">Livro 1 da série</p>
+        <h3>Inteligência Aumentada</h3>
+        <p>Nove princípios que continuam verdadeiros quando o modelo da moda for substituído. Um método de julgamento, decisão e governança de IA que não pertence a nenhum fornecedor.</p>
+      </div>
+      <a class="btn btn-primario" href="https://falercia.github.io/inteligencia-aumentada/">Conhecer</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="assinatura">Fabio Garcia</p>
+    <p class="cargo">CTO e Head de Tecnologia</p>
+    <p class="frase">"Modelos passam. Método fica."</p>
+    <div class="links">
+      <a class="btn" href="https://falercia.github.io/lt/">Todos os links</a>
+      <a class="btn" href="https://github.com/falercia/deep-claude" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Repositório</a>
+      <a class="btn btn-primario" href="https://br.linkedin.com/in/falercia" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="licenca">Conteúdo em CC BY 4.0 · Código em MIT · Fabio Garcia, 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
