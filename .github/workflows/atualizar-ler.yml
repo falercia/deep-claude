@@ -1,0 +1,43 @@
+name: Atualizar leitor online
+
+# Mantém ler/index.html em dia com o HTML do livro.
+# Sem isto, uma edição nova atualizaria o PDF da release e deixaria a página
+# de leitura servindo a edição antiga, sem nenhum aviso.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'livro/*-web.html'
+      - 'scripts/atualizar-ler.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-ler
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regerar o leitor
+        run: python3 scripts/atualizar-ler.py
+
+      - name: Commitar se mudou
+        run: |
+          set -e
+          if [ -z "$(git status --porcelain ler/index.html)" ]; then
+            echo "Leitor já estava em dia, nada a commitar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ler/index.html
+          git commit -m "Atualiza o leitor online a partir do HTML do livro"
+          git push
+          echo "Leitor atualizado e publicado."
