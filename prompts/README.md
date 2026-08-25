@@ -13,9 +13,9 @@ Prompts aqui são ponto de partida calibrado, não documento final. Adapte ao se
 
 ---
 
-## Ponte com `inteligencia-aumentada-recursos`
+## Ponte com `inteligencia-aumentada`
 
-O repositório-irmão [`inteligencia-aumentada-recursos`](https://github.com/falercia/inteligencia-aumentada-recursos) carrega 30 prompts profissionais em qualidade plena, em XML versionado, com golden set, prefill, self-critique e changelog datado.
+O repositório-irmão [`inteligencia-aumentada`](https://github.com/falercia/inteligencia-aumentada) carrega 30 prompts profissionais em qualidade plena, em XML versionado, com golden set, prefill, self-critique e changelog datado.
 
 **Esta pasta complementa, não duplica.** O que vive aqui:
 

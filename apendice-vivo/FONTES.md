@@ -115,7 +115,7 @@
 
 ## Repositório-irmão
 
-- **`inteligencia-aumentada-recursos`**: https://github.com/falercia/inteligencia-aumentada-recursos
+- **`inteligencia-aumentada`**: https://github.com/falercia/inteligencia-aumentada
 
 ---
 

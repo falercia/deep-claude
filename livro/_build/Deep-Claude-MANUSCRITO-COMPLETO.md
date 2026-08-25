@@ -13507,7 +13507,7 @@ Atua há mais de uma década com tecnologia, dados e inteligência artificial, l
 
 Mantém os repositórios acompanhantes:
 
-- `inteligencia-aumentada-recursos` (Livro 1): github.com/falercia/inteligencia-aumentada-recursos
+- `inteligencia-aumentada` (Livro 1): github.com/falercia/inteligencia-aumentada
 - `deep-claude` (Livro 2): github.com/falercia/deep-claude
 
 Ambos sob licenciamento dual MIT (código) e CC-BY 4.0 (conteúdo).

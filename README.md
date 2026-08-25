@@ -80,7 +80,7 @@ A obra **Deep Claude** opera sob a Camada Dupla aplicada ao ecossistema Anthropi
 
 Sem o livro, este repositório é catálogo sem mapa, com receitas que o leitor desentendido aplicará no contexto errado. Sem o repositório, o livro é vocabulário sem executável, com método que o leitor entendeu mas não consegue colocar em produção sem reescrever cada artefato. Juntos, os dois materializam o currículo executivo do ecossistema Claude, com o leitor que opera com os dois saindo com modelo mental sólido, ativos prontos para entrar em pipeline e calibração temporal mantida via Apêndice Vivo de cadência mensal.
 
-Este repositório é também a outra metade da série iniciada por [`inteligencia-aumentada-recursos`](https://github.com/falercia/inteligencia-aumentada-recursos). O primeiro repositório carrega os Invariantes da IA aplicados em qualquer modelo; este carrega a vertical Claude. Quem usa os dois opera em patamar de domínio raro no mercado brasileiro.
+Este repositório é também a outra metade da série iniciada por [`inteligencia-aumentada`](https://github.com/falercia/inteligencia-aumentada). O primeiro repositório carrega os Invariantes da IA aplicados em qualquer modelo; este carrega a vertical Claude. Quem usa os dois opera em patamar de domínio raro no mercado brasileiro.
 
 ---
 
@@ -149,13 +149,13 @@ Quatro caminhos a partir daqui, conforme seu objetivo:
 
 ---
 
-## Ponte com `inteligencia-aumentada-recursos`
+## Ponte com `inteligencia-aumentada`
 
-Este repositório é a segunda metade de um sistema editorial. O primeiro repositório, [`inteligencia-aumentada-recursos`](https://github.com/falercia/inteligencia-aumentada-recursos), carrega os Invariantes da IA aplicados de forma genérica, com 30 prompts profissionais multi-modelo, governança transversal e infraestrutura de evals. Este repositório, `deep-claude`, carrega a vertical específica do ecossistema Claude da Anthropic.
+Este repositório é a segunda metade de um sistema editorial. O primeiro repositório, [`inteligencia-aumentada`](https://github.com/falercia/inteligencia-aumentada), carrega os Invariantes da IA aplicados de forma genérica, com 30 prompts profissionais multi-modelo, governança transversal e infraestrutura de evals. Este repositório, `deep-claude`, carrega a vertical específica do ecossistema Claude da Anthropic.
 
 | Repositório | Foco | Público |
 |---|---|---|
-| `inteligencia-aumentada-recursos` | Invariantes da IA (padrão durável) | Profissional generalista |
+| `inteligencia-aumentada` | Invariantes da IA (padrão durável) | Profissional generalista |
 | `deep-claude` | Ecossistema Claude (aplicação vertical) | Profissional Claude (vertical específica) |
 
 **Como usar os dois juntos.** Aprenda os Invariantes em *Inteligência Aumentada* e seu repositório; aplique no ecossistema Claude com *Deep Claude* e este repositório; consulte os Apêndices Vivos de ambos para se manter calibrado no tempo.
@@ -206,7 +206,7 @@ Atribuição: Fabio Garcia, *Deep Claude · Currículo Executivo do Ecossistema 
 **Fabio Garcia** — CTO e Head de Tecnologia, autor da série *Inteligência Aumentada*.
 
 - GitHub: [@falercia](https://github.com/falercia)
-- Repositório do Livro 1: [`inteligencia-aumentada-recursos`](https://github.com/falercia/inteligencia-aumentada-recursos)
+- Repositório do Livro 1: [`inteligencia-aumentada`](https://github.com/falercia/inteligencia-aumentada)
 - Para sugestões, abra issue neste repositório.
 
 ---

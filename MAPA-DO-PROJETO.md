@@ -10,7 +10,7 @@ Dois livros com uma tese: **"Modelos passam. Método fica."** O corpo dos livros
 
 | Livro | Título | Papel | Onde vive |
 |---|---|---|---|
-| **L1** | Os Invariantes da IA (Inteligência Aumentada) | O método, vendor-neutral. Multi-vendor por definição | Rascunho: pasta `Livro-1-Os-Invariantes` · Distribuição: releases do repo `inteligencia-aumentada-recursos` |
+| **L1** | Os Invariantes da IA (Inteligência Aumentada) | O método, vendor-neutral. Multi-vendor por definição | Rascunho: pasta `Livro-1-Os-Invariantes` · Distribuição: releases do repo `inteligencia-aumentada` |
 | **L2** | Deep Claude | O produto, específico de Claude. É o "livro vivo" da série | Repo `deep-claude`, pasta `livro/` |
 
 ---
@@ -26,7 +26,7 @@ Duas camadas:
 - `livro/` — manuscrito completo do L2, apêndices (incl. `L2-APX-J-apendice-vivo.md`), edição digital (PDF/HTML) e pipeline `livro/gerar-l2.py`. Edita-se e commita-se direto aqui.
 - `apendice-vivo/` (raiz) — **camada pública de números da série** (MODELOS, PRECOS, BENCHMARKS, REGULACAO, JANELAS-SLA, FONTES, CHANGELOG-APENDICE). É para cá que o repo do L1 aponta. Checagem mensal atualiza esta pasta.
 
-### 3. `~/Documents/Repositorios/Github falercia/inteligencia-aumentada-recursos` (repo público acompanhante do L1)
+### 3. `~/Documents/Repositorios/Github falercia/inteligencia-aumentada` (repo público acompanhante do L1)
 Recursos práticos do L1: agents, prompts, evals, datasets, ferramentas, governance. Regras:
 - `apendice-vivo/` daqui é **só um ponteiro** para o `deep-claude/apendice-vivo/` — nunca duplicar números aqui.
 - `livro/` daqui carrega a edição digital corrente do L1 (PDF/HTML) para distribuição.
@@ -44,7 +44,7 @@ Reservado para versionar o manuscrito completo do L1 (espelho do rascunho, estru
 | Checagem mensal dos apêndices vivos (task agendada) | `Livro-1-Os-Invariantes` + `deep-claude` (+ `-recursos` se for fechar release) |
 | Revisão editorial / escrita do L1 | `Livro-1-Os-Invariantes` |
 | Qualquer trabalho no L2 (texto, apêndice, build) | `deep-claude` |
-| Publicar nova edição do L1 | `Livro-1-Os-Invariantes` + `inteligencia-aumentada-recursos` |
+| Publicar nova edição do L1 | `Livro-1-Os-Invariantes` + `inteligencia-aumentada` |
 | Atualizar números públicos (preços, modelos, regulação) | `deep-claude` (pasta `apendice-vivo/`) |
 
 ---
