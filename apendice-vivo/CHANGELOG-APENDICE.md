@@ -5,6 +5,31 @@
 
 ---
 
+## 2026-10-01 — Atualização de outubro (cobre também setembro, não aplicado)
+
+> Nota de honestidade editorial: os checks de 01/09 e 18/09 produziram diffs que não foram aplicados. Esta atualização incorpora os dois. O check de 01/09 afirmou que não havia modelo Claude novo; o Fable 5.1 foi lançado no mesmo dia, e o erro está registrado aqui.
+
+### Errata (correções de snapshots anteriores)
+- **Usage credits**: o snapshot de agosto fixava o corte do Fable em 07/07 para todos os planos. Fonte oficial (Help Center): Max e premium incluem o Fable até 50% dos limites semanais, sem data de término; Pro e standard usam usage credits, e a promoção terminou em 19/07.
+- **Cache read "a 10% em toda a família"**: falso desde 01/09 (Fable 5.1 e Mythos 5.1 a 0,025x).
+- **Watermark e "efeito Bruxelas por custo"**: a razão declarada é limitação técnica de escopo regional.
+- **PL 2338**: o registro de "parecer em maio" não é confirmado pela ficha, que mostra "Aguardando Parecer".
+
+### Modelos e preços
+- Claude: Fable 5.1 e Mythos 5.1 (01/09, US$ 10/50, cache read US$ 0,25), Opus 5.5 (22/09, US$ 4/20), Sonnet 5.5 (28/09, US$ 2/10). Haiku 5.5 anunciado, não lançado.
+- OpenAI: GPT-6 Astra (03/09, US$ 10/50), GPT-6.1 Sol (29/09, US$ 2/10), Luna; Sol 5.6 promocional a US$ 4/20 até ao menos 21/11.
+- Google: Gemini 3.8 Flash. xAI e DeepSeek: números na camada multi-vendor (L1-APX-J).
+- Cobrança além do token: session-hour (US$ 0,08), residência 1,1x, ferramentas.
+
+### Regulação
+- PL 2338: Aguardando Parecer; apensações de 01/09 e 02/09. ANPD: metodologia do sandbox (19/08); Lei 15.352/2026 a confirmar. Watermark: API de detecção em private preview (01/09).
+
+### Pendências deste ciclo (declaradas)
+- `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06. Scores de setembro (Fable 5.1, GPT-6 Astra) são autorreportados e não entram.
+- Cotação USD/BRL segue TBD. Retenção de 30 dias versus retenção zero do Fable 5.1 e tokenizer do Opus 5.5: divergência ou lacuna na fonte oficial.
+
+---
+
 ## 2026-08-12 — Atualização de agosto (cobre também o ciclo de julho, não executado)
 
 > Nota de honestidade editorial: o ciclo planejado de julho não foi publicado nesta pasta. Esta atualização de agosto incorpora tudo que mudou desde o snapshot de 18/06 — e julho foi o mês mais denso do ano.

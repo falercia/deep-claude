@@ -6,6 +6,31 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 
 ---
 
+## [1.2.0] — 2026-10-01
+
+**Ciclo de setembro e outubro: geração Claude 5.1/5.5, cobrança além do token e três correções de interpretação.**
+
+### Adicionado
+
+- **L2-APX-J → v0.5**: Fable 5.1 e Mythos 5.1 (01/set, cache read US$ 0,25), Opus 5.5 (22/set, US$ 4/20) e Sonnet 5.5 (28/set, US$ 2/10); breaking changes de API da geração 5.x; betas de API; bloco "Cobrança deixou de ser só por token" (session-hour, residência 1,1x, ferramentas, Fast mode); salvaguardas como produto (Life Sciences Verification Program, Enterprise Frontier Safeguards); Model Hardware Standard; segunda camada do watermark (SynthID-Text, API de detecção em private preview); anti-destilação e effort por superfície
+- `/apendice-vivo`: snapshot 2026-10-01 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE), com GPT-6 e Gemini 3.8 Flash na camada pública
+- Página "O Que Mudou Nesta Edição" com a seção de outubro
+
+### Corrigido
+
+- **Usage credits** (L2-APX-J e `/apendice-vivo/PRECOS.md`): Max e premium com Fable incluído até 50% dos limites semanais, sem data de fim; Pro e standard em usage credits, promoção encerrada em 19/07 (não 07/07)
+- **Multiplicador de cache** "válido para toda a família": exceção do Fable 5.1 e Mythos 5.1 (0,025x)
+- **Efeito Bruxelas por custo** no L2-APX-J e na seção 45.3.6 do Cap. 45: a razão declarada é limitação técnica de escopo regional
+- **PL 2338** na camada pública: o registro de parecer em maio não é confirmado pela ficha da Câmara ("Aguardando Parecer")
+- Erro de omissão do check de 01/09 registrado: afirmou que não havia modelo Claude novo no dia do Fable 5.1
+
+### Pendente (declarado)
+
+- `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06, aguardando scores auditados de terceiros; scores de setembro são autorreportados
+- Haiku 5.5 (anunciado, não lançado); tokenizer do Opus 5.5 e do Fable 5.1; divergência entre retenção de 30 dias e retenção zero no Fable 5.1; defaults de plano; número da Lei 15.352/2026; cotação USD/BRL
+
+---
+
 ## [1.1.1] — 2026-08-24
 
 **Revisão da camada de distribuição: o leitor precisa saber onde clicar.**

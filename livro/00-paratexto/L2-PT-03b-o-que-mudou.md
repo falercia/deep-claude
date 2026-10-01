@@ -2,6 +2,23 @@
 
 Este é o livro vivo da série: o corpo ensina o que dura, e o Apêndice Vivo (J) carrega o número da semana, com fonte e data. Esta página resume, em linguagem direta, o que mudou desde a versão anterior da edição digital — leia em dois minutos e decida se precisa reler algo.
 
+## Edição de outubro de 2026 (revisão de 1º de outubro)
+
+**O que mudou no corpo.** Uma correção de interpretação, na seção 45.3.6 do Capítulo 45: o texto atribuía a marca d'água mundial a um cálculo de custo da Anthropic. A razão que a empresa declara é outra, uma limitação técnica de escopo regional, com sinal de que pode regionalizar depois. O padrão continua valendo, agora mais honesto: obrigação europeia que vira comportamento global por atrito de arquitetura, não por estratégia.
+
+**O que mudou no Apêndice Vivo (agora na versão 0.5).**
+
+1. **Nova geração da família Claude.** Fable 5.1 (1º de setembro), Opus 5.5 (22 de setembro, US$ 4/20) e Sonnet 5.5 (28 de setembro, US$ 2/10). O Fable 5.1 manteve US$ 10/50, mas a leitura de cache caiu para US$ 0,25. Se você compara só entrada e saída, está olhando o número errado.
+2. **Contrato de API mudou.** Tool use forçado retorna erro, o raciocínio do Opus 5.5 não pode ser desligado e o histórico da conversa precisa ser append-only. Rode sua suíte de avaliação antes de trocar de modelo, mesmo com o preço igual ou menor.
+3. **Cobrança deixou de ser só por token.** Agentes gerenciados cobrem horas de sessão (US$ 0,08 por hora em execução), residência de dados nos EUA custa 1,1x e ferramentas têm tarifa própria.
+4. **Correção de erro nosso.** A tabela de usage credits da versão 0.4 estava errada: em Max e seats premium o Fable fica incluído até 50% dos limites semanais, sem data de término; em Pro e seats standard o corte foi em 19 de julho, não 7 de julho.
+5. **Salvaguardas viraram produto.** Programa de verificação para ciências da vida (17 de setembro) e Enterprise Frontier Safeguards (1º de setembro) mudam o que seu contrato precisa dizer sobre retenção e monitoramento.
+6. **Regulação.** O PL 2338 segue aguardando parecer do relator na Câmara; a API de detecção de marcas d'água está em private preview desde 1º de setembro.
+
+**Por que isso importa.** Em dois meses, o preço de topo convergiu entre os dois grandes fornecedores e a disputa migrou para o custo de cache, a unidade de cobrança passou a incluir o tempo de vida do agente, e um erro do próprio apêndice foi corrigido com fonte. Nenhum capítulo precisou de reescrita de padrão, a não ser a correção de interpretação acima.
+
+---
+
 ## Edição de agosto de 2026 (revisão de 12 de agosto)
 
 **O que entrou nos capítulos.**

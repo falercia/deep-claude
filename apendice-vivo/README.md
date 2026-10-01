@@ -15,6 +15,12 @@ Sem Apêndice Vivo, o livro técnico fica obsoleto em meses. Com cadência mensa
 
 ---
 
+## Última atualização
+
+**2026-10-01**: geração Claude 5.1/5.5, GPT-6 e Gemini 3.8 Flash, correção da nota de usage credits, bloco de cobrança além do token e regulação (PL 2338, ANPD, watermark). `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06, aguardando scores auditados. Detalhes no [CHANGELOG-APENDICE.md](./CHANGELOG-APENDICE.md).
+
+---
+
 ## Estrutura
 
 | Arquivo | Conteúdo |
