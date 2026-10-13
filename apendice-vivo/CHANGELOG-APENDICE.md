@@ -5,6 +5,24 @@
 
 ---
 
+## 2026-10-09 — Reconferência mensal de outubro
+
+### Errata
+- **Cache read do Sonnet 5.5**: o snapshot de 01/10 registrava US$ 0,20 por MTok. A página oficial de pricing mostra US$ 0,10 (0,05x do input); o US$ 0,20 é do Sonnet 5 e do Opus 5.5.
+
+### Modelos e preços
+- Claude: **Haiku 5.5** lançado em 07/10 (`claude-haiku-5-5`), US$ 0,10/0,50 até 100k tokens de prompt e US$ 0,50/2,50 acima, cache read US$ 0,01 e US$ 0,05, Batch com 50%, contexto de 1M, saída de 128K, retirada não antes de 07/10/2027. Tokenizer novo (cerca de 30% mais tokens que o Haiku 4.5). Fable 5.1, Opus 5.5, Sonnet 5.5, Sonnet 5 e Haiku 4.5 sem mudança de preço.
+- OpenAI: GPT-6 Astra, GPT-6.1 Sol e Luna sem mudança na página oficial.
+- Google: tarifas dos Gemini 3.6, 3.7 e 3.8 Flash dobram em 01/01/2027 (3.8 Flash: US$ 1,50/7,50).
+
+### Regulação
+- PL 2338: sem mudança na ficha (Aguardando Parecer, 37 apensadas, última ação em 02/09). ANPD e AI Act: sem fonte primária nova.
+
+### Pendências deste ciclo (declaradas)
+- Conteúdo dos posts de 06/10 (Cyber Verification Program), 08/10 (Usage Policy 2026 e Cyber Mission) não lido. Usage credits no Help Center não reconferido. Número da Lei 15.352/2026 e do Reg. (UE) 2026/1744 a confirmar. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06.
+
+---
+
 ## 2026-10-01 — Atualização de outubro (cobre também setembro, não aplicado)
 
 > Nota de honestidade editorial: os checks de 01/09 e 18/09 produziram diffs que não foram aplicados. Esta atualização incorpora os dois. O check de 01/09 afirmou que não havia modelo Claude novo; o Fable 5.1 foi lançado no mesmo dia, e o erro está registrado aqui.

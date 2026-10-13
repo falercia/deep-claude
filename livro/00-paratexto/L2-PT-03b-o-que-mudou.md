@@ -2,6 +2,21 @@
 
 Este é o livro vivo da série: o corpo ensina o que dura, e o Apêndice Vivo (J) carrega o número da semana, com fonte e data. Esta página resume, em linguagem direta, o que mudou desde a versão anterior da edição digital — leia em dois minutos e decida se precisa reler algo.
 
+## Edição de outubro de 2026 (revisão de 9 de outubro)
+
+**O que mudou no corpo.** Nada. Um ponto do Capítulo 4 merece revisão futura: a razão de custo entre Haiku e Opus mudou de ordem de grandeza, e o texto já remete o valor corrente ao Apêndice Vivo.
+
+**O que mudou no Apêndice Vivo (agora na versão 0.6).**
+
+1. **Haiku 5.5.** Lançado em 7 de outubro por US$ 0,10 de entrada e US$ 0,50 de saída por milhão de tokens, até 100 mil tokens de prompt, e US$ 0,50 e US$ 2,50 acima disso. É o primeiro Haiku com nível de esforço ajustável. Se você orçou o Haiku 4.5 a US$ 1 e US$ 5, o custo por token caiu, mas o tokenizer novo gera cerca de 30% mais tokens, então meça por tarefa.
+2. **O preço virou função do tamanho do prompt.** No Haiku 5.5 a mesma chamada muda de faixa conforme o contexto enviado, e a faixa vale por requisição.
+3. **Correção de erro nosso.** A leitura de cache do Sonnet 5.5 custa US$ 0,10 por milhão de tokens, e não US$ 0,20 como a versão 0.5 registrava.
+4. **Regulação.** Reconferida sem mudança de fato: o PL 2338 segue aguardando parecer do relator.
+
+**Por que isso importa.** O tier pequeno absorveu em um ciclo a capacidade que antes exigia o tier acima, e ainda mudou a forma de cobrar. O padrão que o livro ensina, rotear por encaixe e medir custo por tarefa, seguiu valendo sem reescrita. O que mudou foi o número.
+
+---
+
 ## Edição de outubro de 2026 (revisão de 1º de outubro)
 
 **O que mudou no corpo.** Uma correção de interpretação, na seção 45.3.6 do Capítulo 45: o texto atribuía a marca d'água mundial a um cálculo de custo da Anthropic. A razão que a empresa declara é outra, uma limitação técnica de escopo regional, com sinal de que pode regionalizar depois. O padrão continua valendo, agora mais honesto: obrigação europeia que vira comportamento global por atrito de arquitetura, não por estratégia.

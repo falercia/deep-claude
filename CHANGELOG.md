@@ -6,6 +6,27 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 
 ---
 
+## [1.2.1] — 2026-10-09
+
+**Reconferência mensal de outubro: Haiku 5.5 e uma errata de cache.**
+
+### Adicionado
+
+- **L2-APX-J → v0.6**: Haiku 5.5 (07/10, US$ 0,10/0,50 até 100k tokens de prompt e US$ 0,50/2,50 acima, contexto de 1M, retirada não antes de 07/10/2027), breaking change de parâmetros de amostragem, tokenizer, anúncios de política e segurança de 06/10 e 08/10
+- `/apendice-vivo`: snapshot 2026-10-09 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE), com o aviso do aumento de tarifa do Gemini Flash em 01/01/2027
+- Página "O Que Mudou Nesta Edição" com a seção de 9 de outubro
+
+### Corrigido
+
+- **Cache read do Sonnet 5.5** (L2-APX-J e `/apendice-vivo/PRECOS.md`): US$ 0,10 por MTok (0,05x do input), e não US$ 0,20
+
+### Pendente (declarado)
+
+- Conteúdo dos posts de Usage Policy 2026 e Cyber Verification Program; usage credits no Help Center; tokenizer do Opus 5.5 e do Fable 5.1; retenção de 30 dias versus retenção zero no Fable 5.1; número da Lei 15.352/2026; Reg. (UE) 2026/1744 no Jornal Oficial; `BENCHMARKS.md` e `JANELAS-SLA.md` aguardando scores auditados
+- No corpo, o Capítulo 4 (tier Haiku) diz que o custo é "cerca de vinte vezes menos" que o Opus. Com o Haiku 5.5 a US$ 0,10 contra US$ 4 do Opus 5.5 a razão é outra; decisão editorial pendente: remover a razão e remeter ao Apêndice Vivo
+
+---
+
 ## [1.2.0] — 2026-10-01
 
 **Ciclo de setembro e outubro: geração Claude 5.1/5.5, cobrança além do token e três correções de interpretação.**

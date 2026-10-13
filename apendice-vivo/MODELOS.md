@@ -1,8 +1,8 @@
 # Modelos — Snapshot
 
-> **Snapshot 2026-10-01**
-> Atualizado em: 2026-10-01 (Fable 5.1, Opus 5.5, Sonnet 5.5, GPT-6, Gemini 3.8 Flash — ver CHANGELOG-APENDICE.md)
-> Atualizado anteriormente: 2026-08-12
+> **Snapshot 2026-10-09**
+> Atualizado em: 2026-10-09 (Haiku 5.5 — ver CHANGELOG-APENDICE.md)
+> Atualizado anteriormente: 2026-10-01
 > Próxima atualização: novembro/2026 (checagem mensal)
 > Fonte: ver [`FONTES.md`](./FONTES.md)
 
@@ -40,9 +40,10 @@ Anthropic mantém múltiplas gerações ativas. Em agosto/2026, a estrutura tem 
 | **Claude Opus 4.8** | `claude-opus-4-8` | Tier Opus da geração anterior; recebe fallback de cyber do Fable 5 | 1M tokens (200K no Microsoft Foundry) |
 | **Claude Sonnet 5** | `claude-sonnet-5` | Cavalo de batalha de produção; default de Free e Pro | 1M tokens |
 | **Claude Sonnet 4.6** | `claude-sonnet-4-6` | Geração anterior do tier balanceado, ainda ativa | 1M tokens |
-| **Claude Haiku 4.5** | `claude-haiku-4-5-20251001` / alias `claude-haiku-4-5` | Modelo mais rápido; volume e latência | 200K tokens |
+| **Claude Haiku 5.5** | `claude-haiku-5-5` | Tier pequeno (GA 07/out/2026); volume e latência; primeiro Haiku com effort ajustável (padrão medium) e thinking adaptativo; retirada não antes de 07/out/2027 | 1M tokens (saída 128K) |
+| **Claude Haiku 4.5** (geração anterior) | `claude-haiku-4-5-20251001` / alias `claude-haiku-4-5` | Modelo mais rápido da geração anterior; volume e latência | 200K tokens |
 
-· fonte: https://platform.claude.com/docs/en/about-claude/models/overview · data: 2026-10-01. Fable 5, Mythos 5, Opus 5 e Sonnet 5 passam a geração anterior (sem deprecação anunciada). Haiku 5.5 anunciado para "as próximas semanas".
+· fonte: https://platform.claude.com/docs/en/about-claude/models/overview · data: 2026-10-09 (linha do Haiku 5.5 em https://platform.claude.com/docs/en/models/haiku-5-5/overview; a página models/overview consultada ainda lista só a geração 4.x e não serve como fonte de deprecação). Fable 5, Mythos 5, Opus 5 e Sonnet 5 passam a geração anterior (sem deprecação anunciada).
 
 **Nota sobre Claude Fable 5 e Mythos 5.** Lançados em 09/06/2026. Timeline do Fable 5: controles de exportação dos EUA suspenderam o acesso global de 12 a 30/06; redeploy mundial em 01/07; migração para usage credits nos planos pagos em 07/07. Requisições sensíveis sofrem fallback automático: cibersegurança → Opus 4.8; biologia dual-use (virologia, toxicologia, design molecular) → Opus 5. Em 07/08/2026, a Anthropic recalibrou o classificador de biologia, reduzindo fallbacks de biologia em ~85% — salvaguarda é parâmetro vivo, muda sem release de modelo. Mythos 5 tem acesso restrito via Project Glasswing (aprovação necessária).
 
@@ -105,6 +106,7 @@ Para CTOs avaliando alternativas com soberania total de dados, modelos abertos c
 
 ## Mudanças recentes
 
+- **2026-10-09**: Claude Haiku 5.5 (GA 07/10, `claude-haiku-5-5`, 1M de contexto, tokenizer novo, `temperature`, `top_p` e `top_k` não padrão retornam erro 400).
 - **2026-10-01**: Fable 5.1, Opus 5.5 e Sonnet 5.5; GPT-6 Astra e 6.1 Sol; Gemini 3.8 Flash; watermark com API de detecção em private preview.
 - **2026-08-12**: snapshot atualizado — Claude Opus 5 (GA 24/07) e Sonnet 5 adicionados; timeline do Fable 5 (blackout jun, redeploy 01/07, usage credits 07/07, recalibração bio 07/08); watermarking (modelos ≥ 02/08); família GPT-5.6 (Sol/Terra/Luna, 09/07, corte 30/07); Gemini 3.1 Pro consolidado como flagship.
 - **2026-06-18**: snapshot populado com dados correntes — modelos identificados com API IDs e janelas de contexto confirmadas por fonte primária (Anthropic docs, Google AI pricing).
