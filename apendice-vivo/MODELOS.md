@@ -1,8 +1,8 @@
 # Modelos — Snapshot
 
-> **Snapshot 2026-10-09**
-> Atualizado em: 2026-10-09 (Haiku 5.5 — ver CHANGELOG-APENDICE.md)
-> Atualizado anteriormente: 2026-10-01
+> **Snapshot 2026-11-01**
+> Atualizado em: 2026-11-01 (Gemini 4 Argon e GPT-6.1 Terra — ver CHANGELOG-APENDICE.md)
+> Atualizado anteriormente: 2026-10-09
 > Próxima atualização: novembro/2026 (checagem mensal)
 > Fonte: ver [`FONTES.md`](./FONTES.md)
 
@@ -63,6 +63,7 @@ Anthropic mantém múltiplas gerações ativas. Em agosto/2026, a estrutura tem 
 |---|---|---|
 | **GPT-6 Astra** | Flagship (03/09/2026); Astra Ultrafast para latência | Substituiu a família 5.6 como topo |
 | **GPT-6.1 Sol** | Flagship de eficiência (29/09/2026) | Capacidade comparável à do Astra, segundo a OpenAI |
+| **GPT-6.1 Terra** | Tier balanceado | Listado na página de pricing de 01/11/2026 |
 | **GPT-6 Luna** | Tier de volume | Reverificar relação com a Luna 5.6 |
 | **GPT-5.6 Sol** | Flagship; raciocínio complexo, coding, agentes | Família GPT-5.6 lançada em 09/07/2026 |
 | **GPT-5.6 Terra** | Tier balanceado | Corte de preço de ~20% em 30/07/2026 |
@@ -82,6 +83,7 @@ Anthropic mantém múltiplas gerações ativas. Em agosto/2026, a estrutura tem 
 | Modelo | API ID | Posicionamento | Janela de contexto |
 |---|---|---|---|
 | **Gemini 3.1 Pro** | `gemini-3.1-pro` | Flagship (release 19/02/2026); multimodal, agêntico | 2M tokens |
+| **Gemini 4 Argon** | — | Novo na página de pricing de 01/11/2026; data de lançamento e janela de contexto não constam na página consultada **[a confirmar]** | — |
 | **Gemini 3.8 Flash** | — | GA (set/2026); agentes e código; contexto 1M, saída 64K | 1M tokens |
 | **Gemini 2.5 Pro** | `gemini-2.5-pro` | Raciocínio complexo e coding; stable release | 1M tokens |
 | **Gemini 2.5 Flash** | `gemini-2.5-flash` | Raciocínio híbrido; velocidade + thinking budgets | 1M tokens |
@@ -106,6 +108,7 @@ Para CTOs avaliando alternativas com soberania total de dados, modelos abertos c
 
 ## Mudanças recentes
 
+- **2026-11-01**: Claude sem mudança de lineup. Gemini 4 Argon e GPT-6.1 Terra aparecem nas páginas oficiais de pricing; datas de lançamento não constam nas páginas.
 - **2026-10-09**: Claude Haiku 5.5 (GA 07/10, `claude-haiku-5-5`, 1M de contexto, tokenizer novo, `temperature`, `top_p` e `top_k` não padrão retornam erro 400).
 - **2026-10-01**: Fable 5.1, Opus 5.5 e Sonnet 5.5; GPT-6 Astra e 6.1 Sol; Gemini 3.8 Flash; watermark com API de detecção em private preview.
 - **2026-08-12**: snapshot atualizado — Claude Opus 5 (GA 24/07) e Sonnet 5 adicionados; timeline do Fable 5 (blackout jun, redeploy 01/07, usage credits 07/07, recalibração bio 07/08); watermarking (modelos ≥ 02/08); família GPT-5.6 (Sol/Terra/Luna, 09/07, corte 30/07); Gemini 3.1 Pro consolidado como flagship.

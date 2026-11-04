@@ -30,7 +30,10 @@
 
 ## DATA DO SNAPSHOT
 
-**Versão v0.6 — 2026-10-09.**
+**Versão v0.7 — 2026-11-01.**
+Reconferência mensal contra as fontes oficiais, cobrindo 09/out a 01/nov. **Sem mudança de preço, de lineup ou de mecanismo de cobrança na família Claude.** Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, Sonnet 5, Opus 5 e Haiku 4.5 conferem linha a linha com a [página oficial de pricing](https://platform.claude.com/docs/en/about-claude/pricing) e com a [visão geral de modelos](https://platform.claude.com/docs/en/about-claude/models/overview); nenhum modelo novo, e Fable 5.1 segue como o de numeração mais alta. Multiplicadores de cache reconfirmados (0,025× no Fable 5.1 e no Mythos 5.1, 0,05× no Opus 5.5 e no Sonnet 5.5, 0,1× nos demais). A página de pricing atribui o tokenizer novo (cerca de 30% mais tokens) aos "Claude 4.7 e posteriores", o que inclui Opus 5.5 e Fable 5.1 e encerra essa pendência pela leitura do texto, sem número específico por modelo. Não há janela introdutória listada. Posts do período sem efeito na tabela, segundo o [newsroom](https://www.anthropic.com/news): acordo com a GSA (27/10, desconto de 40% para parceiros governamentais em Claude Enterprise, Claude for Government e API, que não altera os preços públicos), protocolo do S-1 (26/10), defesas contra destilação (12/10) e atualização sobre avaliadores independentes (15/10). Concorrentes e regulação: ver L1-APX-J. **Pendentes (declaradas):** conteúdo dos posts de 06/10 e 08/10 (Cyber Verification Program, Usage Policy 2026, Cyber Mission), usage credits no Help Center e a página de deprecações, que não foram lidos nesta rodada.
+
+**Histórico v0.6 — 2026-10-09.**
 Reconferência mensal contra as fontes oficiais, cobrindo 01/out a 09/out. Dois movimentos e uma correção: (1) **Haiku 5.5 lançado em 07/10/2026**, `claude-haiku-5-5`, US$ 0,10/0,50 até 100k tokens de prompt e US$ 0,50/2,50 acima, cache read US$ 0,01 e US$ 0,05, contexto de 1M, retirada não antes de 07/10/2027; é o primeiro Haiku com effort ajustável e com o tokenizer novo (cerca de 30% mais tokens que o Haiku 4.5); (2) novos posts de política e segurança da Anthropic (Cyber Verification Program ampliado em 06/10, Usage Policy 2026 e Cyber Mission em 08/10), cujo conteúdo ainda não foi lido; (3) **correção:** o cache read do Sonnet 5.5 é US$ 0,10 (0,05× do input), e não US$ 0,20 como constava na v0.5. Fable 5.1, Opus 5.5, Sonnet 5.5, Sonnet 5 e Haiku 4.5 reconferidos, sem mudança de preço. Usage credits: sem registro novo em anthropic.com/news; Help Center não reconferido nesta rodada.
 
 **Histórico v0.5 — 2026-10-01.**
@@ -56,9 +59,9 @@ Primeira renovação de versão do apêndice. Quatro movimentos: (1) **Sonnet 5 
 **Posicionamento estratégico:** força relativa em código, agentes de horizonte longo, escrita executiva, e uma filosofia de alignment pública (Constitutional AI). O tier de fronteira (Mythos-class) é, segundo a própria Anthropic, o mais capaz que já disponibilizaram.
 **Fonte primária:** [platform.claude.com — pricing](https://platform.claude.com/docs/en/about-claude/pricing) · [platform.claude.com — models overview](https://platform.claude.com/docs/en/about-claude/models/overview) · [anthropic.com/news](https://www.anthropic.com/news).
 
-#### Lineup e preços correntes (snapshot 2026-10-01)
+#### Lineup e preços correntes (snapshot 2026-11-01)
 
-Preços em USD por milhão de tokens (MTok). "Cache read" = leitura de cache (10% do input). Janela de contexto de 1M tokens no padrão para os modelos de fronteira e Sonnet 5; Haiku 4.5 opera em janela menor; o Haiku 5.5 tem 1M. Fonte da tabela: [pricing oficial](https://platform.claude.com/docs/en/about-claude/pricing), consultada em 2026-10-01.
+Preços em USD por milhão de tokens (MTok). "Cache read" = leitura de cache (10% do input). Janela de contexto de 1M tokens no padrão para os modelos de fronteira e Sonnet 5; Haiku 4.5 opera em janela menor; o Haiku 5.5 tem 1M. Fonte da tabela: [pricing oficial](https://platform.claude.com/docs/en/about-claude/pricing), reconferida em 2026-11-01 (sem mudança desde 2026-10-09).
 
 | Modelo | ID de API | Input | Output | Batch (in/out) | Cache read | Papel no encaixe (Inv. 4) |
 |--------|-----------|-------|--------|----------------|-----------|---------------------------|
@@ -74,7 +77,7 @@ Preços em USD por milhão de tokens (MTok). "Cache read" = leitura de cache (10
 | **Haiku 5.5** | `claude-haiku-5-5` | $0,10 (≤100k) / $0,50 (>100k) | $0,50 / $2,50 | $0,05 / $0,25 (≤100k) | $0,01 (≤100k) / $0,05 | Tier pequeno (GA 07/10/2026): volume e latência, primeiro Haiku com effort ajustável. Preço escalonado pelo tamanho do prompt (input, cache reads e writes), por requisição. Contexto de 1M, saída de 128K, thinking adaptativo com effort padrão `medium`. Retirada não antes de 07/10/2027. |
 | **Haiku 4.5** *(geração anterior)* | `claude-haiku-4-5` | $1 | $5 | $0,50 / $2,50 | $0,10 | Volume alto, latência baixa: classificação, extração, roteamento. Um décimo do preço do Fable. |
 
-> **Multiplicadores de cache** (sobre o input base): escrita de 5 min = 1,25×; escrita de 1 h = 2×; leitura (hit) = 0,1×, **exceto Fable 5.1 e Mythos 5.1, em que a leitura é 0,025× (US$ 0,25 por MTok)**. Opus 5.5 lê a US$ 0,20 e o Sonnet 5.5 a US$ 0,10, ambos 0,05× do input. Fonte: [pricing oficial](https://platform.claude.com/docs/en/about-claude/pricing), 01/out/2026.
+> **Multiplicadores de cache** (sobre o input base): escrita de 5 min = 1,25×; escrita de 1 h = 2×; leitura (hit) = 0,1×, **exceto Fable 5.1 e Mythos 5.1, em que a leitura é 0,025× (US$ 0,25 por MTok)**. Opus 5.5 lê a US$ 0,20 e o Sonnet 5.5 a US$ 0,10, ambos 0,05× do input. Fonte: [pricing oficial](https://platform.claude.com/docs/en/about-claude/pricing), reconfirmado em 01/nov/2026.
 
 #### Tokenizer novo (afeta contagem de tokens e, logo, custo)
 
@@ -304,7 +307,7 @@ Os release notes de 12/ago a 01/out não registram mudança em usage credits nem
 
 Os números por família mudam a cada release e devem ser conferidos no pricing oficial de cada vendor. Para a família Claude, o snapshot corrente está na **Seção 1.1** deste apêndice. A leitura por *tier* abaixo é o padrão que dura; a faixa de proporção entre tiers é o que importa reter.
 
-| Tier | Referência corrente na família Claude (por MTok, 2026-10-01) | Cuidado de leitura |
+| Tier | Referência corrente na família Claude (por MTok, 2026-11-01) | Cuidado de leitura |
 |------|--------------------------------------------------------------|--------------------|
 | Fronteira (Mythos-class) | Fable 5.1 · $10 / $50 (cache read $0,25) — o mais caro da lista | Reserve para julgamento e horizonte longo; cobrança tende a *usage credits* na assinatura |
 | Premium | Opus 5.5 · $4 / $20 (40% do Fable 5.1); Opus 5 e Opus 4.8 seguem a $5 / $25 | Quase-fronteira; fallback de dual-use do Fable. Refaça a varredura de effort antes de comparar custo por tarefa |
@@ -345,7 +348,8 @@ Fontes oficiais de pricing (consultar diretamente):
 | v0.4 | 2026-08-12 | **Sonnet 5 consolidado em $2/$10** (aumento de 01/set/2026 **cancelado** pela Anthropic; preço de lançamento virou padrão); recalibração das salvaguardas de biologia do Fable 5 (07/ago: fallbacks bio −85%, roteamento bio → Opus 5 restrito a dual-use); **marcação de conteúdo gerado** (watermark embutido no texto + metadados C2PA em arquivos, modelos ≥ 02/ago/2026, aplicação mundial, Art. 50(2) do EU AI Act); placeholders de famílias concorrentes e benchmarks substituídos por referência cruzada ao L1-APX-J (fonte única de números da série); Seção 6 atualizada (Reg. UE 2026/1744). | Editor executivo |
 | v0.5 | 2026-10-01 | **Geração 5.1/5.5**: Fable 5.1 (01/set), Opus 5.5 (22/set, $4/$20) e Sonnet 5.5 (28/set); tabela de lineup e Seção 5 reescritas; breaking changes de API (tool use forçado, thinking, computer use, advisor); betas de API; salvaguardas como produto (LSVP, EFS); Model Hardware Standard; anúncios de produto; reconferência de usage credits e tokenizer (sem mudança); Seção 6 revisada (EU Omnibus, PL 2338, ANPD). Pendências sinalizadas no texto. | Editor executivo (proposta, aguarda aprovação) |
 | v0.6 | 2026-10-09 | **Haiku 5.5** (GA 07/10, US$ 0,10/0,50 até 100k e 0,50/2,50 acima); correção do cache read do Sonnet 5.5 (US$ 0,10); breaking change de parâmetros do Haiku 5.5; Seção 5 e anúncios atualizados; tokenizer do Haiku 5.5 registrado; Seção 6 reconferida (PL 2338, ANPD, AI Act) sem mudança de fato. | Editor executivo (aprovado pelo autor) |
-| v0.7 | (próxima) | Ler Usage Policy 2026 e Cyber Verification Program; tokenizer do Opus 5.5 e do Fable 5.1; reconciliação retenção 30 dias versus retenção zero; defaults de plano e usage credits no Help Center; detecção de marcas; scores auditados | Autor + revisão |
+| v0.7 | 2026-11-01 | Reconferência mensal: preços, lineup e multiplicadores de cache da família Claude sem mudança; tokenizer 4.7 em diante confirmado na página de pricing (cobre Opus 5.5 e Fable 5.1); posts de 09/10 a 01/11 registrados (GSA, S-1, destilação, avaliadores independentes). Pendências declaradas. | Editor executivo (aprovado pelo autor) |
+| v0.8 | (próxima) | Ler Usage Policy 2026, Cyber Verification Program e Cyber Mission; reconciliação retenção 30 dias versus retenção zero; defaults de plano e usage credits no Help Center; página de deprecações; detecção de marcas; scores auditados | Autor + revisão |
 
 ---
 

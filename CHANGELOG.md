@@ -6,6 +6,23 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 
 ---
 
+## [1.2.2] — 2026-11-01
+
+**Reconferência mensal de novembro: família Claude sem mudança de preço, camada pública atualizada.**
+
+### Adicionado
+
+- **L2-APX-J → v0.7**: reconferência da família Claude contra a página oficial de pricing e a visão geral de modelos (Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, Sonnet 5, Opus 5, Haiku 4.5: sem mudança); multiplicadores de cache reconfirmados; tokenizer de "4.7 e posteriores" confirmado na página de pricing; posts de 09/10 a 01/11 registrados
+- `/apendice-vivo`: snapshot 2026-11-01 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE), com Gemini 4 Argon (US$ 2/10 até 30/11, US$ 4/20 a partir de 01/12), GPT-6.1 Terra (US$ 1/5) e PL 2338 com 40 apensadas
+- Página "O Que Mudou Nesta Edição" com a seção de 1º de novembro
+
+### Pendente (declarado)
+
+- Conteúdo dos posts de 06/10 e 08/10 (Cyber Verification Program, Usage Policy 2026, Cyber Mission); usage credits no Help Center; página de deprecações; número da Lei 15.352/2026 e andamento da ANPD (a lista de notícias carrega dinamicamente e não foi lida); data de publicação do Reg. (UE) 2026/1744 no Jornal Oficial; preço do Gemini 4 Argon sem data de lançamento em fonte primária; Gemini 3.8 Pro não verificado; `BENCHMARKS.md` e `JANELAS-SLA.md` aguardando scores auditados
+- No corpo, o Capítulo 4 (razão de custo Haiku versus Opus) segue com decisão editorial pendente
+
+---
+
 ## [1.2.1] — 2026-10-09
 
 **Reconferência mensal de outubro: Haiku 5.5 e uma errata de cache.**

@@ -2,6 +2,20 @@
 
 Este é o livro vivo da série: o corpo ensina o que dura, e o Apêndice Vivo (J) carrega o número da semana, com fonte e data. Esta página resume, em linguagem direta, o que mudou desde a versão anterior da edição digital — leia em dois minutos e decida se precisa reler algo.
 
+## Edição de novembro de 2026 (revisão de 1º de novembro)
+
+**O que mudou no corpo.** Nada. O ponto do Capítulo 4 sobre a razão de custo entre Haiku e Opus segue pendente de decisão editorial.
+
+**O que mudou no Apêndice Vivo (agora na versão 0.7).**
+
+1. **Família Claude sem mudança de preço.** Fable 5.1, Opus 5.5, Sonnet 5.5 e Haiku 5.5 conferem com a página oficial. Nenhum modelo novo desde o Haiku 5.5, e nenhuma janela introdutória de preço em vigor. Em um mês de mercado agitado, a decisão correta para quem roteia por encaixe foi não mexer.
+2. **Tokenizer.** A página oficial de preços atribui o tokenizer novo, com cerca de 30% mais tokens, a todos os modelos Claude 4.7 em diante, o que cobre o Opus 5.5 e o Fable 5.1. A pendência aberta em outubro está encerrada.
+3. **Preço de outros fornecedores.** Os números de concorrentes moram no Apêndice J do Livro 1. Um aviso de agenda para quem orça: o Gemini 4 Argon, novo na página do Google, sai de US$ 2/10 para US$ 4/20 por milhão de tokens em 1º de dezembro de 2026.
+
+**Por que isso importa.** O preço deixou de ser um número e virou uma função, do tamanho do prompt, do horário e da data. Planilha de custo com um preço por modelo envelhece em semanas. O padrão que o livro ensina, medir custo por tarefa e rotear por encaixe, continua valendo sem reescrita.
+
+---
+
 ## Edição de outubro de 2026 (revisão de 9 de outubro)
 
 **O que mudou no corpo.** Nada. Um ponto do Capítulo 4 merece revisão futura: a razão de custo entre Haiku e Opus mudou de ordem de grandeza, e o texto já remete o valor corrente ao Apêndice Vivo.

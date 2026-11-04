@@ -5,6 +5,24 @@
 
 ---
 
+## 2026-11-01 — Reconferência mensal de novembro
+
+### Modelos e preços
+- Claude: **sem mudança**. Fable 5.1 (US$ 10/50, cache read 0,25), Opus 5.5 (4/20; 0,20), Sonnet 5.5 (2/10; 0,10), Haiku 5.5 (0,10/0,50 até 100k tokens de prompt; 0,50/2,50 acima), Sonnet 5 (2/10), Opus 5 (5/25) e Haiku 4.5 (1/5) conferem com a página oficial de pricing. Nenhum modelo novo, nenhuma janela introdutória listada. Tokenizer novo atribuído a "Claude 4.7 e posteriores".
+- OpenAI: **GPT-6.1 Terra** na página de pricing (US$ 1/5, cache read 0,05). Astra (10/50), Sol 6.1 (2/10) e Luna (0,10/0,50) sem mudança. Sol 5.6 a US$ 4/20 promocional "at least through Nov 21, 2026".
+- Google: **Gemini 4 Argon** na página de pricing, US$ 2/10 até 30/11/2026 e US$ 4/20 a partir de 01/12/2026, sem free tier. 3.8 Flash segue em 0,75/3,75 até 31/12/2026 e 1,50/7,50 em 01/01/2027. Gemini 3.8 Pro não verificado.
+- As páginas de OpenAI e Google não trazem data de alteração: o que mudou depois de 09/10 não é afirmável, só o estado de 01/11.
+
+### Regulação
+- PL 2338: situação inalterada ("Aguardando Parecer do(a) Relator(a)"), agora com 40 apensadas; últimas ações: apensações pela Mesa em 26/10 e 27/10.
+- EU AI Act: Regulamento (UE) 2026/1744 ("Digital Omnibus on AI") confirmado no EUR-Lex, com entrada em vigor em 27/07/2026. A data de publicação (24/07) e os prazos de 02/12/2027, 02/08/2028 e 02/12/2026 seguem apoiados em fonte secundária.
+- ANPD: **não verificado** (a lista de notícias carrega dinamicamente). Lei 15.352/2026 sem fonte primária.
+
+### Pendências deste ciclo (declaradas)
+- Posts de 06/10 e 08/10 da Anthropic, usage credits no Help Center, página de deprecações, número da Lei 15.352/2026 e andamento da ANPD, data de lançamento do Gemini 4 Argon. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06.
+
+---
+
 ## 2026-10-09 — Reconferência mensal de outubro
 
 ### Errata

@@ -1,8 +1,8 @@
 # Preços — Snapshot
 
-> **Snapshot 2026-10-09**
-> Atualizado em: 2026-10-09 (Haiku 5.5, correção do cache read do Sonnet 5.5, aumento de tarifa do Gemini Flash em 01/01/2027 — ver CHANGELOG-APENDICE.md)
-> Atualizado anteriormente: 2026-10-01
+> **Snapshot 2026-11-01**
+> Atualizado em: 2026-11-01 (Claude sem mudança; Gemini 4 Argon e GPT-6.1 Terra adicionados — ver CHANGELOG-APENDICE.md)
+> Atualizado anteriormente: 2026-10-09
 > Próxima atualização: novembro/2026 (checagem mensal)
 > Cotação USD/BRL referência: ver abaixo
 > Fonte: ver [`FONTES.md`](./FONTES.md)
@@ -64,13 +64,14 @@ Preços de API são cobrados por **token**, normalmente por milhão de tokens (M
 |---|---|---|---|
 | **GPT-6 Astra** (03/set/2026) | $10,00 | $50,00 | Flagship; cache read $1,00; contexto 1M; Fast 2x, Ultrafast 6x |
 | **GPT-6.1 Sol** (29/09/2026) | $2,00 | $10,00 | Capacidade comparável à do Astra segundo a OpenAI; system card em 29/09 |
-| **GPT-6 Luna** | $0,10 | $0,50 | Tier de volume na página de pricing de out/2026 |
-| **GPT-5.6 Sol** | $5,00 | $30,00 | Flagship da família 5.6 (lançada 09/07/2026) |
-| **GPT-5.6 Terra** | $2,00 | $12,00 | Tier balanceado; preço pós-corte de 30/07/2026 |
+| **GPT-6.1 Terra** | $1,00 | $5,00 | Tier balanceado; cache read $0,05; Flex/Batch a 50%, Fast 2x (página de 01/11/2026) |
+| **GPT-6 Luna** | $0,10 | $0,50 | Tier de volume; cache read $0,01 (página de 01/11/2026) |
+| **GPT-5.6 Sol** | $4,00 | $20,00 | Flagship da família 5.6 (lançada 09/07/2026); preço promocional "at least through Nov 21, 2026" segundo a página de 01/11/2026 |
+| **GPT-5.6 Terra** | $2,00 | $12,00 | Tier balanceado; preço pós-corte de 30/07/2026. Não apareceu na leitura de 01/11/2026 (dado de 12/08, reverificar) |
 | **GPT-5.6 Luna** | $0,20 | $1,20 | Tier de volume; corte de ~80% em 30/07/2026 |
 | **GPT-5.5 Pro** | $30,00 | $180,00 | Tier "research-grade" da geração anterior (verificado jun/2026) |
 
-· fonte: https://developers.openai.com/api/docs/pricing · data: 2026-10-01 (linhas GPT-6) e 2026-08-12 (linhas GPT-5.6, **reverificar se ainda listadas**). O Sol 5.6 foi cortado para $4/$20 promocional até ao menos 21/11/2026 (corte de 21/08).
+· fonte: https://developers.openai.com/api/docs/pricing · data: 2026-11-01 (linhas GPT-6 e Sol 5.6) e 2026-08-12 (demais linhas GPT-5.6, **reverificar se ainda listadas**). A página não traz data de alteração; não é possível afirmar o que mudou depois de 09/10.
 
 **Atenção:** o tier de volume da OpenAI teve dois repricings em 2026; é o preço mais volátil do mercado. Confirmar na página oficial antes de orçamento: https://developers.openai.com/api/docs/pricing
 
@@ -83,12 +84,13 @@ Preços de API são cobrados por **token**, normalmente por milhão de tokens (M
 | Modelo | Input ($/MTok) | Output ($/MTok) | Cache read | Observação |
 |---|---|---|---|---|
 | **Gemini 3.1 Pro** | $2,00 (≤200K prompt) / $4,00 (>200K) | $12,00 (≤200K) / $18,00 (>200K) | $0,20 (≤200K) / $0,40 (>200K) | Flagship (release 19/02/2026); janela de 2M tokens |
+| **Gemini 4 Argon** | $2,00 até 30/11/2026; $4,00 a partir de 01/12/2026 | $10,00 até 30/11/2026; $20,00 a partir de 01/12/2026 | — | Novo na página de pricing (leitura de 01/11/2026); sem free tier; Batch e Flex a $1/$5 (indo a $2/$10); Priority $3,60/$18 (indo a $7,20/$36). **Data de lançamento não consta na página consultada** |
 | **Gemini 3.8 Flash** | $0,75 (tarifa padrão até 31/12/2026); $1,50 a partir de 01/01/2027 | $3,75; $7,50 a partir de 01/01/2027 | — | GA; contexto 1M e saída 64K (página do modelo); batch com 50% |
 | **Gemini 2.5 Pro** | $1,25 (≤200K) / $2,50 (>200K) | $10,00 (≤200K) / $15,00 (>200K) | $0,125 (≤200K) / $0,25 (>200K) | Stable; inclui tokens de thinking |
 | **Gemini 2.5 Flash** | $0,30 (texto/img/vídeo) / $1,00 (áudio) | $2,50 | $0,03 (texto) | Raciocínio híbrido; thinking budgets |
 | **Gemini 2.5 Flash-Lite** | $0,10 (texto/img/vídeo) / $0,30 (áudio) | $0,40 | $0,01 (texto) | Mais econômico |
 
-· fonte: https://ai.google.dev/gemini-api/docs/pricing · data: 2026-06-18
+· fonte: https://ai.google.dev/gemini-api/docs/pricing · data: 2026-11-01 (Gemini 4 Argon e 3.8 Flash), 2026-06-18 (demais linhas, não reverificadas). A página tem cerca de 143 mil caracteres e foi lida só em parte; **Gemini 3.8 Pro não foi verificado e não deve ser citado**.
 
 **Notas:**
 - Output de Gemini inclui tokens de thinking quando aplicável.
