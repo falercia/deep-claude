@@ -13,6 +13,7 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 ### Adicionado
 
 - **L2-APX-J → v0.8**: Claude Fable 5.2 e Mythos 5.2 (09/11, US$ 8/40, cache read 0,20, Fast mode 16/80); bloco novo da geração 5.2 com os eventos de 29/10 a 23/11 (Usage and Cost Analytics API, Message threads, Managed Agents auto-hospedado, Linked billing, Enterprise Frontier Safeguards em beta) e as mudanças de integração (verificação de prefixo em todas as contas, thinking descartado fora do par 5.2, advisor, computer use, retenção de 30 dias); pisos de retirada e aposentadorias (Sonnet 4.5 em 30/11, Opus 4.5 em 22/01/2027); Fast mode do Opus 4.8 removido em 30/11; marca d'água estendida a sete modelos anteriores com a ressalva de parâmetros de amostragem
+- **Produto no L2-APX-J**: bloco novo com Claude Sheets e Whiteboards (beta, 10/nov), Claude Data (GA, 10/nov), conectores interativos e Claude Meetings (beta no Google Meet para Team e Enterprise, 12/nov), com defaults de governança por plano
 - `/apendice-vivo`: snapshot 2026-11-25 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE), com GPT-6.2 Astra e Sol, janelas de background da OpenAI, Argon GA em 13/10 e PL 2338 com 45 apensadas
 - Página "O Que Mudou Nesta Edição" com a seção de 25 de novembro
 

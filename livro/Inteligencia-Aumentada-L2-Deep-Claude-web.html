@@ -354,6 +354,7 @@ Fabio Garcia
 <li><strong>Datas de saída.</strong> O Sonnet 4.5 deixa a API em 30 de novembro e o Opus 4.5 em 22 de janeiro de 2027. A página oficial de deprecações passou a publicar a data mínima de retirada de Fable 5, Opus 4.8, Opus 5 e Sonnet 5. Se você não sabe quais fluxos chamam quais modelos, este é o mês de fazer o inventário.</li>
 <li><strong>Integração.</strong> A regra que proíbe editar o histórico preservando o raciocínio do modelo passou a valer para todas as contas de API, e o raciocínio do Fable 5.2 é descartado se a conversa migra para outro modelo. Roteamento dinâmico no meio da conversa ficou mais caro.</li>
 <li><strong>Retenção de dados e planos.</strong> O Fable 5.2 exige retenção de 30 dias, e a retenção zero passa pelo Enterprise Frontier Safeguards, em beta desde 23 de novembro. Nos planos, o Help Center e o anúncio do 5.2 dizem coisas diferentes sobre o Pro; o apêndice registra a divergência e orienta orçar pelo Help Center.</li>
+<li><strong>O Claude virou superfície de trabalho.</strong> Claude Sheets e Whiteboards entraram em beta em todos os planos pagos, o Claude Data (ex-Dashboards) virou GA com métricas certificadas pelo time de dados, e o Claude Meetings começou a entrar em chamadas do Google Meet para Team e Enterprise. Atenção de governança: esses recursos nascem ligados no Team e desligados no Enterprise, exceto o Claude Data, que passou a vir ligado no Enterprise em 20 de novembro.</li>
 <li><strong>Marca d’água.</strong> Chegou a sete modelos mais antigos neste mês, com uma ressalva nova: mudar <code>temperature</code>, <code>top_p</code> ou <code>top_k</code> do padrão pode gerar texto sem marca.</li>
 </ol>
 <p><strong>Por que isso importa.</strong> Em um mês, o preço do topo caiu, o degrau entre fronteira e premium voltou de 2,5x para 2x e dois modelos ganharam data para sair do ar. Nenhum capítulo precisou de padrão novo, só de perder números que não deviam estar lá.</p>
@@ -13880,7 +13881,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 </blockquote>
 <hr />
 <h2 id="data-do-snapshot">DATA DO SNAPSHOT</h2>
-<p><strong>Versão v0.8 — 2026-11-25.</strong> Estado da família Claude em 25 de novembro de 2026, conferido nas fontes oficiais. <strong>O topo baixou de preço pela primeira vez:</strong> o Fable 5.2 e o Mythos 5.2, lançados em 09/nov, custam US$ 8/40 por MTok, 20% abaixo do Fable 5.1, com leitura de cache a US$ 0,20 e, pela primeira vez no tier de fronteira, Fast mode (US$ 16/80). Na mesma janela: o Fast mode do Opus 4.8 é removido em 30/nov, o Sonnet 4.5 sai da API em 30/nov, o Opus 4.5 foi depreciado em 23/nov com saída em 22/jan/2027, e a página de deprecações passou a publicar piso de retirada para Fable 5, Opus 4.8, Opus 5 e Sonnet 5. Fora do preço: marca d’água estendida a sete modelos anteriores (03/nov e 16/nov), Linked billing em beta (17/nov), Enterprise Frontier Safeguards em beta com retenção zero para organizações elegíveis (23/nov) e Managed Agents auto-hospedado (12/nov). Opus 5.5, Sonnet 5.5, Haiku 5.5, Sonnet 5, Opus 5 e Haiku 4.5 sem mudança de preço. Fontes: <a href="https://platform.claude.com/docs/en/about-claude/pricing">pricing</a>, <a href="https://platform.claude.com/docs/en/about-claude/models/overview">visão geral de modelos</a>, <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations">deprecações</a>, <a href="https://platform.claude.com/docs/pt-BR/release-notes/overview">notas de versão</a>, <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">anúncio do Fable 5.2</a> e <a href="https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan">Help Center</a>, todos lidos em 25/nov/2026.</p>
+<p><strong>Versão v0.8 — 2026-11-25.</strong> Estado da família Claude em 25 de novembro de 2026, conferido nas fontes oficiais. <strong>O topo baixou de preço pela primeira vez:</strong> o Fable 5.2 e o Mythos 5.2, lançados em 09/nov, custam US$ 8/40 por MTok, 20% abaixo do Fable 5.1, com leitura de cache a US$ 0,20 e, pela primeira vez no tier de fronteira, Fast mode (US$ 16/80). Na mesma janela: o Fast mode do Opus 4.8 é removido em 30/nov, o Sonnet 4.5 sai da API em 30/nov, o Opus 4.5 foi depreciado em 23/nov com saída em 22/jan/2027, e a página de deprecações passou a publicar piso de retirada para Fable 5, Opus 4.8, Opus 5 e Sonnet 5. No produto: Claude Sheets e Whiteboards em beta e Claude Data em GA (10/nov), e Claude Meetings em beta no Google Meet para Team e Enterprise (12/nov). Fora do preço: marca d’água estendida a sete modelos anteriores (03/nov e 16/nov), Linked billing em beta (17/nov), Enterprise Frontier Safeguards em beta com retenção zero para organizações elegíveis (23/nov) e Managed Agents auto-hospedado (12/nov). Opus 5.5, Sonnet 5.5, Haiku 5.5, Sonnet 5, Opus 5 e Haiku 4.5 sem mudança de preço. Fontes: <a href="https://platform.claude.com/docs/en/about-claude/pricing">pricing</a>, <a href="https://platform.claude.com/docs/en/about-claude/models/overview">visão geral de modelos</a>, <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations">deprecações</a>, <a href="https://platform.claude.com/docs/pt-BR/release-notes/overview">notas de versão</a>, <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">anúncio do Fable 5.2</a> e <a href="https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan">Help Center</a> e <a href="https://claude.com/resources/articles/sheets-whiteboards-data">artigo de produto de 10/nov</a>, todos lidos em 25/nov/2026.</p>
 <p><strong>Histórico v0.7 — 2026-11-01.</strong> Reconferência mensal contra as fontes oficiais, cobrindo 09/out a 01/nov. <strong>Sem mudança de preço, de lineup ou de mecanismo de cobrança na família Claude.</strong> Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, Sonnet 5, Opus 5 e Haiku 4.5 conferem linha a linha com a <a href="https://platform.claude.com/docs/en/about-claude/pricing">página oficial de pricing</a> e com a <a href="https://platform.claude.com/docs/en/about-claude/models/overview">visão geral de modelos</a>; nenhum modelo novo, e Fable 5.1 segue como o de numeração mais alta. Multiplicadores de cache reconfirmados (0,025× no Fable 5.1 e no Mythos 5.1, 0,05× no Opus 5.5 e no Sonnet 5.5, 0,1× nos demais). A página de pricing atribui o tokenizer novo (cerca de 30% mais tokens) aos “Claude 4.7 e posteriores”, o que inclui Opus 5.5 e Fable 5.1 e encerra essa pendência pela leitura do texto, sem número específico por modelo. Não há janela introdutória listada. Posts do período sem efeito na tabela, segundo o <a href="https://www.anthropic.com/news">newsroom</a>: acordo com a GSA (27/10, desconto de 40% para parceiros governamentais em Claude Enterprise, Claude for Government e API, que não altera os preços públicos), protocolo do S-1 (26/10), defesas contra destilação (12/10) e atualização sobre avaliadores independentes (15/10). Concorrentes e regulação: ver L1-APX-J. <strong>Pendentes (declaradas):</strong> conteúdo dos posts de 06/10 e 08/10 (Cyber Verification Program, Usage Policy 2026, Cyber Mission), usage credits no Help Center e a página de deprecações, que não foram lidos nesta rodada.</p>
 <p><strong>Histórico v0.6 — 2026-10-09.</strong> Reconferência mensal contra as fontes oficiais, cobrindo 01/out a 09/out. Dois movimentos e uma correção: (1) <strong>Haiku 5.5 lançado em 07/10/2026</strong>, <code>claude-haiku-5-5</code>, US$ 0,10/0,50 até 100k tokens de prompt e US$ 0,50/2,50 acima, cache read US$ 0,01 e US$ 0,05, contexto de 1M, retirada não antes de 07/10/2027; é o primeiro Haiku com effort ajustável e com o tokenizer novo (cerca de 30% mais tokens que o Haiku 4.5); (2) novos posts de política e segurança da Anthropic (Cyber Verification Program ampliado em 06/10, Usage Policy 2026 e Cyber Mission em 08/10), cujo conteúdo ainda não foi lido; (3) <strong>correção:</strong> o cache read do Sonnet 5.5 é US$ 0,10 (0,05× do input), e não US$ 0,20 como constava na v0.5. Fable 5.1, Opus 5.5, Sonnet 5.5, Sonnet 5 e Haiku 4.5 reconferidos, sem mudança de preço. Usage credits: sem registro novo em anthropic.com/news; Help Center não reconferido nesta rodada.</p>
 <p><strong>Histórico v0.5 — 2026-10-01.</strong> Segunda renovação de versão, cobrindo o intervalo 12/ago a 01/out. Seis movimentos: (1) <strong>geração 5.1/5.5 da família Claude</strong>: Fable 5.1 (01/set, US$ 10/50, cache read cai para US$ 0,25), <strong>Opus 5.5</strong> (22/set, <strong>US$ 4/20</strong>, 20% abaixo do Opus 5) e <strong>Sonnet 5.5</strong> (28/set, US$ 2/10, mesmo preço do Sonnet 5); Haiku 5.5 anunciado para “as próximas semanas”, ainda não lançado; (2) <strong>breaking changes de API comuns à geração</strong>: tool use forçado retorna erro 400, thinking não pode ser desligado no Opus 5.5, blocos de thinking presos a modelo e conversa, nova ferramenta de computer use; (3) <strong>salvaguardas como produto</strong>: Life Sciences Verification Program (17/set), Enterprise Frontier Safeguards (01/set) e fallbacks redesenhados no Fable 5.1; (4) <strong>Model Hardware Standard</strong> em research preview (27/ago), agentes operando instrumentos físicos; (5) novas betas de API (compact on demand, tools definidas na mensagem, efforts por mensagem, mensagens de sistema com escopo de turno); (6) tokenizer e usage credits <strong>reconferidos</strong>: sem mudança documentada. O Sonnet 5 permanece em US$ 2/10, sem janela introdutória listada no pricing oficial.</p>
@@ -14280,6 +14281,68 @@ Validação UAU semanal — 5 critérios</code></pre>
 </tr>
 </tbody>
 </table>
+<h4 id="produto-o-claude-virou-superfície-de-trabalho-novembro-de-2026">Produto: o Claude virou superfície de trabalho (novembro de 2026)</h4>
+<p>Em novembro a Anthropic lançou, fora da API, as peças que levam o trabalho do dia a dia para dentro do Claude. Estado em 25/nov/2026:</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 13%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Produto</th>
+<th>Status e data</th>
+<th>Planos e superfícies</th>
+<th>O que faz</th>
+<th>Limites e governança</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Claude Sheets</strong></td>
+<td>Beta, 10/nov/2026</td>
+<td>Todos os planos pagos; web, desktop e mobile</td>
+<td>Planilha com abas, fórmulas, formatação e listas suspensas gerada a partir de um pedido; cada edição do Claude fica registrada; coedição com o time</td>
+<td>A própria Anthropic diz que a funcionalidade ainda é simples; para Excel completo, exportar para .xlsx ou CSV ou usar o Claude for Excel. Ligado por padrão no Team, desligado no Enterprise (Organization settings &gt; Artifacts)</td>
+</tr>
+<tr class="even">
+<td><strong>Claude Whiteboards</strong></td>
+<td>Beta, 10/nov/2026</td>
+<td>Todos os planos pagos; web, desktop e mobile</td>
+<td>Quadro compartilhado: transforma um plano em linha do tempo com responsáveis e datas, agrupa notas por tema, responde sobre um recorte selecionado, vira documento ou apresentação; exporta para Lucid, Miro e Vani by Zoho</td>
+<td>Mesmo padrão de governança do Sheets</td>
+</tr>
+<tr class="odd">
+<td><strong>Claude Data</strong> (antigo Claude Dashboards)</td>
+<td>GA em 10/nov/2026; consultas certificadas e compartilhamento ao vivo seguem em beta</td>
+<td>Todos os planos pagos; web, desktop e mobile</td>
+<td>Painéis sobre warehouse ou CRM (Redshift, BigQuery, ClickHouse, Snowflake, Salesforce), métricas com selo de certificação do time de dados, histórico com reversão, atualização em cadência configurável</td>
+<td>Exige conector de dados. No compartilhamento ao vivo, quem vê não roda consultas com o acesso do autor. Ligado por padrão no Team; no Enterprise, ligado por padrão desde 20/nov/2026</td>
+</tr>
+<tr class="even">
+<td><strong>Conectores interativos</strong></td>
+<td>10/nov/2026</td>
+<td>Não especificado</td>
+<td>Apps de parceiros (Adobe, Atlassian, Box, Notion) abrem dentro do Claude, ao lado da conversa ou em tela cheia</td>
+<td>No Enterprise, o admin decide quem usa quais produtos e conectores</td>
+</tr>
+<tr class="odd">
+<td><strong>Claude Meetings</strong></td>
+<td>Beta em implantação desde 12/nov/2026</td>
+<td>Team e Enterprise; Claude e Claude Desktop</td>
+<td>O Claude entra numa chamada do <strong>Google Meet</strong> como participante visível, toma notas, responde perguntas e monta documentos, quadros e slides durante a reunião</td>
+<td>Único provedor de vídeo citado: Google Meet. Participante visível, não gravador oculto</td>
+</tr>
+</tbody>
+</table>
+<p>Outros itens de produto do mês, nas notas de versão do Help Center: Personal Finance in Claude (beta, 05/nov, Pro, Max e Ultra, só nos EUA); controles de segurança e administração no Enterprise (05/nov); tags de projeto para rastrear gasto por centro de custo no Enterprise (beta, 06/nov); canal de release no Claude Desktop (17/nov); computer use em beta para Team e Enterprise (20/nov); instalar artifacts como apps no Mac e no Windows e enviar ou salvar arquivos em apps conectados (beta, 24/nov).</p>
+<p>Fontes: <a href="https://claude.com/resources/articles/sheets-whiteboards-data">Introducing Claude Whiteboards, Claude Sheets, and Claude Data</a> · <a href="https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors">More ways to work with Claude</a> · <a href="https://support.claude.com/en/articles/12138966-release-notes">release notes do Help Center</a>, lidos em 25/nov/2026. Nenhum preço específico foi publicado para esses produtos.</p>
+<blockquote>
+<p>🧭 <strong>Leitura durável (Inv. 3 e 4):</strong> a disputa saiu do modelo e foi para a superfície de trabalho, o lugar onde o time planeja, decide e registra. Duas consequências que sobrevivem a esta rodada. Primeiro, <strong>o default de governança muda por plano</strong>: o mesmo recurso nasce ligado no Team e desligado (ou ligado com data marcada) no Enterprise, então a decisão de quem acessa qual conector precisa existir antes da data, não depois. Segundo, <strong>dado gerado por IA sem métrica certificada só acelera a discussão sobre qual número está certo</strong>: o recurso mais valioso do Claude Data não é o painel, é o selo do time de dados.</p>
+</blockquote>
 <h4 id="geração-5.1-5.5-o-que-mudou-entre-12ago-e-01out">Geração 5.1 / 5.5: o que mudou entre 12/ago e 01/out</h4>
 <table>
 <colgroup>
@@ -14882,7 +14945,7 @@ Validação UAU semanal — 5 critérios</code></pre>
 <tr class="odd">
 <td>v0.8</td>
 <td>2026-11-25</td>
-<td><strong>Fable 5.2 e Mythos 5.2</strong> ($8/$40, cache read $0,20, Fast mode $16/$80); Fast mode do Opus 4.8 removido em 30/nov; pisos de retirada e aposentadorias (Sonnet 4.5 em 30/nov, Opus 4.5 em 22/jan/2027); bloco novo da geração 5.2 (eventos de novembro e mudanças de integração); usage credits reescritos pelo Help Center, com divergência do anúncio declarada; retenção de 30 dias versus EFS reconciliada; anti-destilação estendida a todas as contas; marca d’água estendida a sete modelos anteriores; Seções 5 e 6 reescritas.</td>
+<td><strong>Fable 5.2 e Mythos 5.2</strong> ($8/$40, cache read $0,20, Fast mode $16/$80); Fast mode do Opus 4.8 removido em 30/nov; pisos de retirada e aposentadorias (Sonnet 4.5 em 30/nov, Opus 4.5 em 22/jan/2027); bloco novo da geração 5.2 (eventos de novembro e mudanças de integração); usage credits reescritos pelo Help Center, com divergência do anúncio declarada; retenção de 30 dias versus EFS reconciliada; anti-destilação estendida a todas as contas; marca d’água estendida a sete modelos anteriores; bloco novo de produto (Sheets, Whiteboards, Data, conectores interativos, Meetings); Seções 5 e 6 reescritas.</td>
 <td>Editor executivo (aprovado pelo autor)</td>
 </tr>
 <tr class="even">
