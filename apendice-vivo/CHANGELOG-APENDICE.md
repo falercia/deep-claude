@@ -5,6 +5,26 @@
 
 ---
 
+## 2026-11-25 — Reconferência mensal de novembro (segunda leitura)
+
+### Modelos e preços
+- Claude: **Fable 5.2 e Mythos 5.2** (09/11, `claude-fable-5-2` e `claude-mythos-5-2`), US$ 8/40, cache write 10 e 16, cache read 0,20, Batch 4/20, Fast mode 16/80, 1M de contexto e 128K de saída. Primeiro corte de preço do tier de fronteira. Fable 5.1 vira geração anterior, retirada não antes de 01/09/2027. Opus 5.5, Sonnet 5.5, Haiku 5.5, Sonnet 5, Opus 5 e Haiku 4.5 sem mudança.
+- Claude, ciclo de vida: Fast mode do Opus 4.8 removido em 30/11/2026; Sonnet 4.5 sai da API em 30/11/2026; Opus 4.5 depreciado em 23/11 e sai em 22/01/2027; pisos de retirada publicados para Fable 5 (09/06/2027), Opus 4.8 (28/05/2027), Sonnet 5 (30/06/2027) e Opus 5 (24/07/2027).
+- Claude, planos: usage credits reconferidos no Help Center. Divergência declarada entre Help Center (Pro e seats standard sem Fable nos limites) e anúncio do 5.2 (incluído até 50%).
+- OpenAI: **GPT-6.2 Astra** (US$ 8/40, cache 0,40) e **GPT-6.2 Sol** (US$ 2/10, cache 0,10), 17/11. Janelas de background com 30% (2 h) e 40% (8 h) de desconto. Ultrafast 3x até 28/02/2027 e 6x a partir de 01/03/2027. Promoção do Sol 5.6 até 30/11/2026. Terra 6.1 e Luna aparecem a 0,50/2,50 e 0,05/0,25 numa tabela sem rótulo de tier: a confirmar.
+- Google: Gemini 4 Argon com GA em 13/10/2026 (changelog); degrau de 01/12 confirmado em todos os tiers; 3.1 Pro reconferido (2/12 e 4/18). Gemini 4 Neon, Carbon e Hydrogen não aparecem nas páginas oficiais e não entram.
+- DeepSeek e xAI: preços sem mudança. DeepSeek deixa de cobrar por chamada as buscas disparadas pelo modelo desde 18/11.
+
+### Regulação
+- PL 2338: "Aguardando Parecer do(a) Relator(a)", agora com 45 apensadas; apensações pela Mesa em 11/11, 12/11 e 13/11.
+- EU AI Act: próximo marco em 02/12/2026 (fim da graça do Art. 50(2)); marca d'água do Claude estendida a sete modelos anteriores em 03/11 e 16/11.
+- ANPD: **não verificado** (lista de notícias carrega dinamicamente). Lei 15.352/2026 sem fonte primária.
+
+### Pendências deste ciclo (declaradas)
+- Data de fim da oferta de lançamento do Fable 5.2; lista de modelos com retenção zero no EFS; status do Haiku 4.5 (piso de retirada vencido); janela de contexto do GPT-6.2; tier de Terra 6.1 e Luna; ANPD. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06.
+
+---
+
 ## 2026-11-01 — Reconferência mensal de novembro
 
 ### Modelos e preços

@@ -1,9 +1,9 @@
 # Preços — Snapshot
 
-> **Snapshot 2026-11-01**
-> Atualizado em: 2026-11-01 (Claude sem mudança; Gemini 4 Argon e GPT-6.1 Terra adicionados — ver CHANGELOG-APENDICE.md)
-> Atualizado anteriormente: 2026-10-09
-> Próxima atualização: novembro/2026 (checagem mensal)
+> **Snapshot 2026-11-25**
+> Atualizado em: 2026-11-25 (Fable 5.2 a US$ 8/40; GPT-6.2 Astra e Sol; janelas de background da OpenAI — ver CHANGELOG-APENDICE.md)
+> Atualizado anteriormente: 2026-11-01
+> Próxima atualização: dezembro/2026 (checagem mensal)
 > Cotação USD/BRL referência: ver abaixo
 > Fonte: ver [`FONTES.md`](./FONTES.md)
 
@@ -13,24 +13,26 @@
 
 Preços de API são cobrados por **token**, normalmente por milhão de tokens (MTok = 1.000.000). Input e output têm preços distintos, com output tipicamente 3-5x mais caro que input.
 
-**Desconto por caching** (prompt caching) reduz significativamente custo de input em chamadas repetidas. Anthropic oferece cache read a 10% do preço de input (desconto de 90%) nas gerações anteriores e no Haiku 5.5, a 5% no Opus 5.5 e no Sonnet 5.5 (US$ 0,20 e US$ 0,10 por MTok) e a 2,5% no Fable 5.1 e no Mythos 5.1 (US$ 0,25 por MTok). Para detalhes, ver Capítulo 25 do livro.
+**Desconto por caching** (prompt caching) reduz significativamente custo de input em chamadas repetidas. Anthropic oferece cache read a 10% do preço de input (desconto de 90%) nas gerações anteriores e no Haiku 5.5, a 5% no Opus 5.5 e no Sonnet 5.5 (US$ 0,20 e US$ 0,10 por MTok) e a 2,5% no tier de fronteira: Fable 5.2 e Mythos 5.2 (US$ 0,20 por MTok), Fable 5.1 e Mythos 5.1 (US$ 0,25). Para detalhes, ver Capítulo 25 do livro.
 
 **Desconto por batch** (Batch API) oferece 50% de desconto para requisições não-síncronas processadas em até 24h. Para detalhes, ver Capítulo 21 do livro.
 
 ---
 
-## Anthropic — Claude (outubro 2026)
+## Anthropic — Claude (novembro 2026)
 
 **Tabela de preços confirmados por fonte primária:**
 
 | Modelo | Input ($/MTok) | Output ($/MTok) | Cache write 5min | Cache write 1h | Cache read (hit) | Batch input | Batch output |
 |---|---|---|---|---|---|---|---|
-| **Claude Fable 5.1** (01/set/2026) | $10,00 | $50,00 | $12,50 | $20,00 | $0,25 | $5,00 | $25,00 |
+| **Claude Fable 5.2** (09/nov/2026) | $8,00 | $40,00 | $10,00 | $16,00 | $0,20 | $4,00 | $20,00 |
+| **Claude Mythos 5.2** (restrito) | $8,00 | $40,00 | $10,00 | $16,00 | $0,20 | $4,00 | $20,00 |
+| **Claude Fable 5.1** (01/set/2026, geração anterior) | $10,00 | $50,00 | $12,50 | $20,00 | $0,25 | $5,00 | $25,00 |
 | **Claude Mythos 5.1** (restrito) | $10,00 | $50,00 | $12,50 | $20,00 | $0,25 | $5,00 | $25,00 |
 | **Claude Opus 5.5** (22/set/2026) | $4,00 | $20,00 | $5,00 | $8,00 | $0,20 | $2,00 | $10,00 |
 | **Claude Sonnet 5.5** (28/set/2026) | $2,00 | $10,00 | $2,50 | $4,00 | $0,10 | $1,00 | $5,00 |
 | **Claude Haiku 5.5** (07/out/2026), prompt até 100k tokens | $0,10 | $0,50 | $0,125 | $0,20 | $0,01 | $0,05 | $0,25 |
-| **Claude Haiku 5.5**, prompt acima de 100k tokens | $0,50 | $2,50 | $0,625 | n/d | $0,05 | $0,25 | $1,25 |
+| **Claude Haiku 5.5**, prompt acima de 100k tokens | $0,50 | $2,50 | $0,625 | $1,00 | $0,05 | $0,25 | $1,25 |
 | **Claude Fable 5** | $10,00 | $50,00 | $12,50 | $20,00 | $1,00 | $5,00 | $25,00 |
 | **Claude Mythos 5** (restrito, Glasswing) | $10,00 | $50,00 | $12,50 | $20,00 | $1,00 | $5,00 | $25,00 |
 | **Claude Opus 5** | $5,00 | $25,00 | $6,25 | $10,00 | $0,50 | $2,50 | $12,50 |
@@ -39,58 +41,60 @@ Preços de API são cobrados por **token**, normalmente por milhão de tokens (M
 | **Claude Sonnet 4.6** | $3,00 | $15,00 | $3,75 | $6,00 | $0,30 | $1,50 | $7,50 |
 | **Claude Haiku 4.5** (geração anterior) | $1,00 | $5,00 | $1,25 | $2,00 | $0,10 | $0,50 | $2,50 |
 
-· fonte: https://platform.claude.com/docs/en/about-claude/pricing · data: 2026-10-09 (linhas 5.1/5.5 e Opus 5.5 também em platform.claude.com/docs/en/models/*/overview; Haiku 5.5 também em platform.claude.com/docs/en/models/haiku-5-5/overview e anthropic.com/claude-haiku-5-5). Fable 5, Mythos 5, Opus 5 e Sonnet 5 permanecem listados como geração anterior. "n/d" = a página consultada não publica o valor.
+· fonte: https://platform.claude.com/docs/en/about-claude/pricing · data: 2026-11-25 (Fable 5.2 também em https://www.anthropic.com/claude-fable-and-mythos-5-2). Fable 5.1, Fable 5, Mythos 5, Opus 5, Opus 4.8 e Sonnet 5 permanecem listados como geração anterior. Sonnet 4.5 sai da API em 30/11/2026 e Opus 4.5 em 22/01/2027.
 
 **Notas:**
 - Todos os valores em USD por milhão de tokens (MTok).
 - **Sonnet 5: aumento cancelado.** O preço de lançamento ($2/$10) virou preço padrão; o aumento programado para $3/$15 em 01/09/2026 **não vai ocorrer** (nota oficial na página de pricing, capturada em 12/08/2026).
-- **Tokenizer novo (geração 4.7+, incl. Opus 5, Fable 5, Sonnet 5):** o mesmo texto mapeia para ~30% mais tokens. Compare **custo por tarefa**, nunca custo por token, ao cruzar gerações.
-- Cache write cobra a 1,25x (5 min) ou 2x (1h) o preço de input; cache read cobra a 0,1x o preço de input, **exceto Fable 5.1 e Mythos 5.1 (0,025x) e Opus 5.5 e Sonnet 5.5 (0,05x)**.
+- **Fable 5.2 (09/11/2026):** primeiro corte de preço do tier de fronteira, 20% abaixo do Fable 5.1. Fast mode a $16 input / $80 output, até 2,5x mais rápido.
+- **Tokenizer novo (geração 4.7+, toda a geração 5.x):** o mesmo texto mapeia para ~30% mais tokens. Compare **custo por tarefa**, nunca custo por token, ao cruzar gerações.
+- Cache write cobra a 1,25x (5 min) ou 2x (1h) o preço de input; cache read cobra a 0,1x o preço de input, **exceto Fable 5.2, Mythos 5.2, Fable 5.1 e Mythos 5.1 (0,025x) e Opus 5.5 e Sonnet 5.5 (0,05x)**.
 - **Haiku 5.5 (07/10/2026):** preço escalonado pelo tamanho do prompt, medido por requisição e contando input, cache reads e cache writes; até 100k tokens custa $0,10/$0,50, acima disso $0,50/$2,50. Contexto de 1M, saída de 128K, retirada não antes de 07/10/2027. Usa o tokenizer novo, cerca de 30% mais tokens que o Haiku 4.5, e rejeita `temperature`, `top_p` e `top_k` não padrão com erro 400. Fontes: https://www.anthropic.com/claude-haiku-5-5 e https://platform.claude.com/docs/en/models/haiku-5-5/overview.
-- **Opus 5.5** custa 40% do Fable 5.1 e 80% do Opus 5; Fast mode (research preview, só Claude API) a $8 input / $40 output.
+- **Opus 5.5** custa metade do Fable 5.2 e 80% do Opus 5; Fast mode (research preview, só Claude API) a $8 input / $40 output.
 - **Cobrança além do token:** Managed Agents cobra **US$ 0,08 por session-hour** em estado `running` (sem Batch, sem cloud parceira); `inference_geo: "us"` multiplica todos os tokens por 1,1x (Claude 4.6+); web search US$ 10 por 1.000 buscas; web fetch sem custo adicional; code execution grátis junto de search/fetch, e fora disso 1.550 h grátis por organização por mês e US$ 0,05 por hora depois; toolsets de computer use e browser use somam cerca de 4.500 e 6.600 tokens de input por requisição.
 - Batch API processa requisições de forma assíncrona (até 24h); desconto de 50% sobre input e output.
-- **Fast mode (research preview)** para Opus 5 e Opus 4.8: $10 input / $50 output por MTok. Indisponível em Opus 4.7 (erro) e 4.6 (roda em velocidade padrão).
+- **Fast mode:** Fable 5.2 e Mythos 5.2 a $16/$80; Opus 5.5 a $8/$40; Opus 5 a $10/$50 (research preview). **Opus 4.8: depreciado, removido em 30/11/2026.** Não combina com Batch. Indisponível em Opus 4.7 (erro) e 4.6 (roda em velocidade padrão).
 - **Data residency (US-only inference)**: multiplicador de 1,1x sobre todos os tokens.
-- **Usage credits (corrigido em 01/10/2026):** em Max e seats premium, Fable 5 e 5.1 são parte do plano até 50% dos limites semanais, sem data de término; em Pro e seats standard o acesso é por usage credits, e a promoção anterior terminou em 19/07/2026 (não 07/07); a única taxa publicada é a da API ($10/$50). Fonte: https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan. Marketplaces (AWS, Microsoft Foundry) faturam em CCU: 100 CCU = US$ 1,00.
+- **Usage credits (reconferido em 25/11/2026):** em Max, Ultra e seats premium, Fable 5, 5.1 e 5.2 são parte do plano até 50% dos limites semanais, sem data de término; em Pro e seats standard o Help Center diz que o Fable não entra nos limites do plano e é cobrado por usage credits (o anúncio do 5.2 diz o contrário, incluído até 50%: divergência declarada, vale o Help Center para orçamento); a única taxa publicada é a da API ($8/$40 no 5.2). Fonte: https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan. Marketplaces (AWS, Microsoft Foundry) faturam em CCU: 100 CCU = US$ 1,00.
 
 **Sempre confirmar em:** https://platform.claude.com/docs/en/about-claude/pricing
 
 ---
 
-## OpenAI — GPT (outubro 2026)
+## OpenAI — GPT (novembro 2026)
 
-| Modelo | Input ($/MTok) | Output ($/MTok) | Observação |
-|---|---|---|---|
-| **GPT-6 Astra** (03/set/2026) | $10,00 | $50,00 | Flagship; cache read $1,00; contexto 1M; Fast 2x, Ultrafast 6x |
-| **GPT-6.1 Sol** (29/09/2026) | $2,00 | $10,00 | Capacidade comparável à do Astra segundo a OpenAI; system card em 29/09 |
-| **GPT-6.1 Terra** | $1,00 | $5,00 | Tier balanceado; cache read $0,05; Flex/Batch a 50%, Fast 2x (página de 01/11/2026) |
-| **GPT-6 Luna** | $0,10 | $0,50 | Tier de volume; cache read $0,01 (página de 01/11/2026) |
-| **GPT-5.6 Sol** | $4,00 | $20,00 | Flagship da família 5.6 (lançada 09/07/2026); preço promocional "at least through Nov 21, 2026" segundo a página de 01/11/2026 |
-| **GPT-5.6 Terra** | $2,00 | $12,00 | Tier balanceado; preço pós-corte de 30/07/2026. Não apareceu na leitura de 01/11/2026 (dado de 12/08, reverificar) |
-| **GPT-5.6 Luna** | $0,20 | $1,20 | Tier de volume; corte de ~80% em 30/07/2026 |
-| **GPT-5.5 Pro** | $30,00 | $180,00 | Tier "research-grade" da geração anterior (verificado jun/2026) |
+| Modelo | Input ($/MTok) | Cache read | Output ($/MTok) | Observação |
+|---|---|---|---|---|
+| **GPT-6.2 Astra** (17/11/2026) | $8,00 | $0,40 | $40,00 | Flagship; tarifa Standard |
+| **GPT-6.2 Sol** (17/11/2026) | $2,00 | $0,10 | $10,00 | Tarifa Standard |
+| **GPT-6.1 Terra** | $0,50 | $0,025 | $2,50 | **[a confirmar]**: valor de uma tabela sem rótulo de tier; era $1,00/$5,00 em 01/11 |
+| **GPT-6 Luna** | $0,05 | $0,005 | $0,25 | **[a confirmar]**: mesma tabela sem rótulo; era $0,10/$0,50 em 01/11 |
+| **GPT-5.6 Sol** | — | — | — | Preço promocional até 30/11/2026 (a página não traz a linha de preço) |
 
-· fonte: https://developers.openai.com/api/docs/pricing · data: 2026-11-01 (linhas GPT-6 e Sol 5.6) e 2026-08-12 (demais linhas GPT-5.6, **reverificar se ainda listadas**). A página não traz data de alteração; não é possível afirmar o que mudou depois de 09/10.
+· fonte: https://developers.openai.com/api/docs/pricing · data: 2026-11-25.
+
+- **Janelas de background (beta):** tokens 30% abaixo do Standard com conclusão em até 2 horas e 40% abaixo em até 8 horas, para GPT-6.2 Astra, GPT-6.2 Sol, GPT-6.1 Terra e GPT-6 Luna.
+- **Ultrafast** no GPT-6.2 Astra e Sol: 3x o Standard até 28/02/2027 e 6x a partir de 01/03/2027.
+- GPT-6 Astra ($10/$50) e GPT-6.1 Sol ($2/$10) seguem como geração anterior.
 
 **Atenção:** o tier de volume da OpenAI teve dois repricings em 2026; é o preço mais volátil do mercado. Confirmar na página oficial antes de orçamento: https://developers.openai.com/api/docs/pricing
 
 ---
 
-## Google Gemini (outubro 2026)
+## Google Gemini (novembro 2026)
 
 ### Via Gemini API (ai.google.dev) — Paid Tier
 
 | Modelo | Input ($/MTok) | Output ($/MTok) | Cache read | Observação |
 |---|---|---|---|---|
 | **Gemini 3.1 Pro** | $2,00 (≤200K prompt) / $4,00 (>200K) | $12,00 (≤200K) / $18,00 (>200K) | $0,20 (≤200K) / $0,40 (>200K) | Flagship (release 19/02/2026); janela de 2M tokens |
-| **Gemini 4 Argon** | $2,00 até 30/11/2026; $4,00 a partir de 01/12/2026 | $10,00 até 30/11/2026; $20,00 a partir de 01/12/2026 | — | Novo na página de pricing (leitura de 01/11/2026); sem free tier; Batch e Flex a $1/$5 (indo a $2/$10); Priority $3,60/$18 (indo a $7,20/$36). **Data de lançamento não consta na página consultada** |
+| **Gemini 4 Argon** | $2,00 até 30/11/2026; $4,00 a partir de 01/12/2026 | $10,00 até 30/11/2026; $20,00 a partir de 01/12/2026 | $0,10 (indo a $0,20) | GA em 13/10/2026; sem free tier; Batch e Flex a $1/$5 (indo a $2/$10); Priority $3,60/$18 (indo a $7,20/$36) |
 | **Gemini 3.8 Flash** | $0,75 (tarifa padrão até 31/12/2026); $1,50 a partir de 01/01/2027 | $3,75; $7,50 a partir de 01/01/2027 | — | GA; contexto 1M e saída 64K (página do modelo); batch com 50% |
 | **Gemini 2.5 Pro** | $1,25 (≤200K) / $2,50 (>200K) | $10,00 (≤200K) / $15,00 (>200K) | $0,125 (≤200K) / $0,25 (>200K) | Stable; inclui tokens de thinking |
 | **Gemini 2.5 Flash** | $0,30 (texto/img/vídeo) / $1,00 (áudio) | $2,50 | $0,03 (texto) | Raciocínio híbrido; thinking budgets |
 | **Gemini 2.5 Flash-Lite** | $0,10 (texto/img/vídeo) / $0,30 (áudio) | $0,40 | $0,01 (texto) | Mais econômico |
 
-· fonte: https://ai.google.dev/gemini-api/docs/pricing · data: 2026-11-01 (Gemini 4 Argon e 3.8 Flash), 2026-06-18 (demais linhas, não reverificadas). A página tem cerca de 143 mil caracteres e foi lida só em parte; **Gemini 3.8 Pro não foi verificado e não deve ser citado**.
+· fonte: https://ai.google.dev/gemini-api/docs/pricing · data: 2026-11-25 (Gemini 4 Argon, 3.8 Flash e 3.1 Pro), 2026-06-18 (linhas 2.5, não reverificadas). **Gemini 3.8 Pro, Gemini 4 Neon, Carbon e Hydrogen não aparecem nas páginas oficiais lidas e não devem ser citados.**
 
 **Notas:**
 - Output de Gemini inclui tokens de thinking quando aplicável.
@@ -145,7 +149,7 @@ total mensal: $750 (Sonnet 4.6)
 
 **Otimizações típicas** (Cap 25 e Cap 35 do livro):
 
-- **Prompt caching**: cache read a uma fração do preço de input (10% na maioria dos modelos, 5% no Opus 5.5 e no Sonnet 5.5, 2,5% no Fable 5.1)
+- **Prompt caching**: cache read a uma fração do preço de input (10% na geração anterior e no Haiku 5.5, 5% no Opus 5.5 e no Sonnet 5.5, 2,5% no tier de fronteira)
 - **Batch API**: 50% de desconto para fluxos não-síncronos
 - **Router pattern**: rotear casos simples para Haiku, complexos para Sonnet, críticos para Opus
 - **Compressão de prompt**: reduzir tokens de entrada via XML enxuto
@@ -154,6 +158,8 @@ total mensal: $750 (Sonnet 4.6)
 
 ## Mudanças recentes
 
+- **2026-11-25**: **Fable 5.2 e Mythos 5.2** a $8/$40 (cache read $0,20, Fast mode $16/$80); Fast mode do Opus 4.8 removido em 30/11; usage credits reconferidos no Help Center. OpenAI: **GPT-6.2 Astra ($8/$40) e Sol ($2/$10)**, janelas de background com 30% e 40% de desconto, Ultrafast dobra em 01/03/2027, promoção do Sol 5.6 até 30/11. Google: Argon GA em 13/10, degrau de 01/12 confirmado.
+- **2026-11-01**: Claude sem mudança; Gemini 4 Argon e GPT-6.1 Terra adicionados.
 - **2026-10-09**: **Haiku 5.5** (07/10, $0,10/$0,50 até 100k tokens de prompt e $0,50/$2,50 acima); correção do cache read do Sonnet 5.5 ($0,10, e não $0,20); notas de cache atualizadas (0,05x no Opus 5.5 e no Sonnet 5.5); aumento de tarifa do Gemini Flash em 01/01/2027. OpenAI reconferida na página oficial: GPT-6 Astra $10/$50, GPT-6.1 Sol $2/$10 e Luna $0,10/$0,50, sem mudança. Fable 5.1, Opus 5.5, Sonnet 5.5, Sonnet 5 e Haiku 4.5 reconferidos, sem mudança.
 - **2026-10-01**: geração Claude 5.1/5.5 (Fable 5.1 cache read $0,25; Opus 5.5 $4/$20; Sonnet 5.5 $2/$10); correção da nota de usage credits (Help Center); bloco de cobrança além do token (session-hour, residência 1,1x, ferramentas); GPT-6 Astra, GPT-6.1 Sol e Luna; Gemini 3.8 Flash.
 - **2026-08-12**: snapshot de agosto. **Sonnet 5 consolidado em $2/$10** (aumento de 01/09 cancelado pela Anthropic — fonte primária); Opus 5 e Mythos 5 adicionados à tabela; fast mode atualizado (Opus 5/4.8, $10/$50); notas de tokenizer (~30%, geração 4.7+) e usage credits/CCU; OpenAI atualizado para família GPT-5.6 (Sol $5/$30, Terra $2/$12, Luna $0,20/$1,20 pós-corte de 30/07); Gemini 3.1 Pro consolidado como flagship GA.

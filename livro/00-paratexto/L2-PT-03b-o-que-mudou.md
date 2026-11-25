@@ -2,6 +2,23 @@
 
 Este é o livro vivo da série: o corpo ensina o que dura, e o Apêndice Vivo (J) carrega o número da semana, com fonte e data. Esta página resume, em linguagem direta, o que mudou desde a versão anterior da edição digital — leia em dois minutos e decida se precisa reler algo.
 
+## Edição de novembro de 2026 (revisão de 25 de novembro)
+
+**O que mudou no corpo.** O Capítulo 4 (Todos os Modelos Claude) deixou de carregar duas razões de custo fixas, a do Opus contra os outros tiers e a do Haiku contra o Opus, que mudaram de ordem de grandeza em dois meses. Também saiu a frase que dava o Sonnet como ponto de partida recomendado: o fornecedor alterna essa recomendação entre gerações, e hoje recomenda o Opus 5.5. O texto agora ensina a regra que não muda, comece pelo menor tier que passa na sua suíte de avaliação.
+
+**O que mudou no Apêndice Vivo (agora na versão 0.8).**
+
+1. **O topo baixou de preço.** O Claude Fable 5.2 e o Mythos 5.2, lançados em 9 de novembro, custam US$ 8/40 por milhão de tokens, 20% abaixo do Fable 5.1, com leitura de cache a US$ 0,20. É a primeira vez que o tier de fronteira fica mais barato de uma geração para a outra.
+2. **Fast mode no topo.** O Fable 5.2 responde até 2,5x mais rápido por US$ 16/80. No Opus 4.8, o Fast mode sai em 30 de novembro; quem usa precisa migrar para o Opus 5.5.
+3. **Datas de saída.** O Sonnet 4.5 deixa a API em 30 de novembro e o Opus 4.5 em 22 de janeiro de 2027. A página oficial de deprecações passou a publicar a data mínima de retirada de Fable 5, Opus 4.8, Opus 5 e Sonnet 5. Se você não sabe quais fluxos chamam quais modelos, este é o mês de fazer o inventário.
+4. **Integração.** A regra que proíbe editar o histórico preservando o raciocínio do modelo passou a valer para todas as contas de API, e o raciocínio do Fable 5.2 é descartado se a conversa migra para outro modelo. Roteamento dinâmico no meio da conversa ficou mais caro.
+5. **Retenção de dados e planos.** O Fable 5.2 exige retenção de 30 dias, e a retenção zero passa pelo Enterprise Frontier Safeguards, em beta desde 23 de novembro. Nos planos, o Help Center e o anúncio do 5.2 dizem coisas diferentes sobre o Pro; o apêndice registra a divergência e orienta orçar pelo Help Center.
+6. **Marca d'água.** Chegou a sete modelos mais antigos neste mês, com uma ressalva nova: mudar `temperature`, `top_p` ou `top_k` do padrão pode gerar texto sem marca.
+
+**Por que isso importa.** Em um mês, o preço do topo caiu, o degrau entre fronteira e premium voltou de 2,5x para 2x e dois modelos ganharam data para sair do ar. Nenhum capítulo precisou de padrão novo, só de perder números que não deviam estar lá.
+
+---
+
 ## Edição de novembro de 2026 (revisão de 1º de novembro)
 
 **O que mudou no corpo.** Nada. O ponto do Capítulo 4 sobre a razão de custo entre Haiku e Opus segue pendente de decisão editorial.

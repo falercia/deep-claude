@@ -6,6 +6,29 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 
 ---
 
+## [1.2.3] — 2026-11-25
+
+**Reconferência de novembro: o topo da família Claude baixou de preço.**
+
+### Adicionado
+
+- **L2-APX-J → v0.8**: Claude Fable 5.2 e Mythos 5.2 (09/11, US$ 8/40, cache read 0,20, Fast mode 16/80); bloco novo da geração 5.2 com os eventos de 29/10 a 23/11 (Usage and Cost Analytics API, Message threads, Managed Agents auto-hospedado, Linked billing, Enterprise Frontier Safeguards em beta) e as mudanças de integração (verificação de prefixo em todas as contas, thinking descartado fora do par 5.2, advisor, computer use, retenção de 30 dias); pisos de retirada e aposentadorias (Sonnet 4.5 em 30/11, Opus 4.5 em 22/01/2027); Fast mode do Opus 4.8 removido em 30/11; marca d'água estendida a sete modelos anteriores com a ressalva de parâmetros de amostragem
+- `/apendice-vivo`: snapshot 2026-11-25 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE), com GPT-6.2 Astra e Sol, janelas de background da OpenAI, Argon GA em 13/10 e PL 2338 com 45 apensadas
+- Página "O Que Mudou Nesta Edição" com a seção de 25 de novembro
+
+### Corrigido
+
+- **Usage credits** reescritos a partir do Help Center (Max, Ultra e premium com Fable até 50% dos limites; Pro e standard por usage credits), com a divergência do anúncio do 5.2 declarada
+- **Retenção do Fable**: a divergência entre retenção de 30 dias e retenção zero, aberta desde a v0.5, foi reconciliada pelas notas de versão (30 dias é a regra; retenção zero via EFS ou autorização)
+- **Capítulo 4**: saem as razões de custo fixas entre tiers (5× a 20×, "cerca de vinte vezes") e a frase que dava o Sonnet como ponto de partida recomendado; entra a regra de encaixe. Fecha a pendência aberta em 09/10
+- **Seção 5 do APX-J**: o degrau Fable para Opus voltou de 2,5× para 2×; o texto passa a dizer que a razão entre tiers é decisão comercial de cada geração
+
+### Pendente (declarado)
+
+- Data de fim da oferta de lançamento do Fable 5.2; lista de modelos com retenção zero no EFS; status do Haiku 4.5 (piso de retirada vencido); defaults de plano; Usage Policy 2026 e Cyber Mission; ANPD e Lei 15.352/2026; `BENCHMARKS.md` e `JANELAS-SLA.md` aguardando scores auditados
+
+---
+
 ## [1.2.2] — 2026-11-01
 
 **Reconferência mensal de novembro: família Claude sem mudança de preço, camada pública atualizada.**

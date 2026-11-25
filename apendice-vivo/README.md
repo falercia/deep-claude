@@ -17,7 +17,9 @@ Sem Apêndice Vivo, o livro técnico fica obsoleto em meses. Com cadência mensa
 
 ## Última atualização
 
-**2026-11-01**: família Claude sem mudança de preço; Gemini 4 Argon e GPT-6.1 Terra entram na camada pública; PL 2338 com 40 apensadas, ainda aguardando parecer. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06. Detalhes no [CHANGELOG-APENDICE.md](./CHANGELOG-APENDICE.md).
+**2026-11-25**: o topo baixou de preço. Claude Fable 5.2 e Mythos 5.2 (09/11) a US$ 8/40 e GPT-6.2 Astra (17/11) no mesmo preço; Fast mode chega ao tier de fronteira da Anthropic e a OpenAI passa a dar 30% a 40% de desconto a quem aceita esperar horas. Sonnet 4.5 e Fast mode do Opus 4.8 saem em 30/11; Opus 4.5 sai em 22/01/2027. PL 2338 com 45 apensadas, ainda aguardando parecer. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06. Detalhes no [CHANGELOG-APENDICE.md](./CHANGELOG-APENDICE.md).
+
+Anterior, **2026-11-01**: família Claude sem mudança de preço; Gemini 4 Argon e GPT-6.1 Terra entram na camada pública; PL 2338 com 40 apensadas, ainda aguardando parecer. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06. Detalhes no [CHANGELOG-APENDICE.md](./CHANGELOG-APENDICE.md).
 
 Anterior, **2026-10-09**: Haiku 5.5 (lançado em 07/10), correção do cache read do Sonnet 5.5 e aviso do aumento de tarifa do Gemini Flash em 01/01/2027. Regulação reconferida sem mudança de fato. `BENCHMARKS.md` e `JANELAS-SLA.md` seguem no snapshot de 18/06. Detalhes no [CHANGELOG-APENDICE.md](./CHANGELOG-APENDICE.md).
 
