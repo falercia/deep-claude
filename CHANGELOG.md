@@ -8,21 +8,24 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/) e o versionament
 
 ## [1.2.3] — 2026-11-25
 
-**Reconferência de novembro: o topo da família Claude baixou de preço.**
+**Edição de 25 de novembro de 2026: o topo da família Claude baixou de preço, e o Claude virou lugar de trabalho.**
 
-### Adicionado
+### O que mudou para quem lê
 
-- **L2-APX-J → v0.8**: Claude Fable 5.2 e Mythos 5.2 (09/11, US$ 8/40, cache read 0,20, Fast mode 16/80); bloco novo da geração 5.2 com os eventos de 29/10 a 23/11 (Usage and Cost Analytics API, Message threads, Managed Agents auto-hospedado, Linked billing, Enterprise Frontier Safeguards em beta) e as mudanças de integração (verificação de prefixo em todas as contas, thinking descartado fora do par 5.2, advisor, computer use, retenção de 30 dias); pisos de retirada e aposentadorias (Sonnet 4.5 em 30/11, Opus 4.5 em 22/01/2027); Fast mode do Opus 4.8 removido em 30/11; marca d'água estendida a sete modelos anteriores com a ressalva de parâmetros de amostragem
-- **Produto no L2-APX-J**: bloco novo com Claude Sheets e Whiteboards (beta, 10/nov), Claude Data (GA, 10/nov), conectores interativos e Claude Meetings (beta no Google Meet para Team e Enterprise, 12/nov), com defaults de governança por plano
-- `/apendice-vivo`: snapshot 2026-11-25 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE), com GPT-6.2 Astra e Sol, janelas de background da OpenAI, Argon GA em 13/10 e PL 2338 com 45 apensadas
+- **Fable 5.2 e Mythos 5.2, lançados em 9 de novembro, custam US$ 8/40 por milhão de tokens**, 20% abaixo do Fable 5.1. É a primeira vez que o tier de fronteira fica mais barato de uma geração para a outra. A leitura de cache cai para US$ 0,20, e o topo ganha **Fast mode** (US$ 16/80, até 2,5x mais rápido).
+- **O Claude saiu do chat.** Claude Sheets e Claude Whiteboards entraram em beta em todos os planos pagos (10/nov), o Claude Data, antigo Dashboards, ficou disponível para todos com métricas certificadas pelo time de dados, e o **Claude Meetings** começou a entrar em chamadas do Google Meet para Team e Enterprise (12/nov). O apêndice traz o que cada um faz, os limites que a própria Anthropic declara e o default de governança por plano.
+- **Datas que pedem ação.** O Sonnet 4.5 e o Fast mode do Opus 4.8 saem em 30 de novembro; o Opus 4.5 sai em 22 de janeiro de 2027. A página oficial passou a publicar a data mínima de retirada de Fable 5, Opus 4.8, Opus 5 e Sonnet 5.
+- **Integração ficou mais estrita.** A regra que proíbe editar o histórico preservando o raciocínio vale agora para todas as contas de API, e o raciocínio do Fable 5.2 é descartado se a conversa muda de modelo.
+- **Retenção e planos, sem ambiguidade.** O Fable 5.2 exige retenção de 30 dias; retenção zero passa pelo Enterprise Frontier Safeguards, em beta desde 23/nov. A tabela de usage credits foi reescrita a partir do Help Center, com a divergência do anúncio sobre o plano Pro declarada.
+- **Dois erros de método corrigidos no corpo.** O Capítulo 4 deixou de carregar razões de custo fixas entre tiers e de recomendar o Sonnet como ponto de partida; o texto ensina a regra que dura, comece pelo menor tier que passa na sua avaliação.
+- **Fora da família Claude**, a camada pública `/apendice-vivo` registra o GPT-6.2 Astra (US$ 8/40, o mesmo preço do Fable 5.2) e Sol, as janelas de background da OpenAI (30% a 40% mais baratas para quem aceita esperar), o Gemini 4 Argon dobrando de preço em 1º de dezembro e o PL 2338 com 45 projetos apensados, ainda sem parecer.
+
+### Registro técnico
+
+- **L2-APX-J → v0.8**: lineup com Fable 5.2 e Mythos 5.2; bloco "Geração 5.2" com os eventos de 29/10 a 23/11 (Usage and Cost Analytics API, Message threads, Managed Agents auto-hospedado, Linked billing, EFS) e as mudanças de integração (prefixo, thinking fora do par 5.2, advisor, computer use, retenção); bloco "Produto" (Sheets, Whiteboards, Data, conectores interativos, Meetings); pisos de retirada e aposentadorias; marca d'água estendida a sete modelos anteriores, com a ressalva de parâmetros de amostragem; Seções 5 e 6 reescritas (degrau Fable para Opus volta a 2x)
+- **Corrigido**: usage credits (Help Center), divergência de retenção aberta desde a v0.5, Capítulo 4 (razões de custo e ponto de partida), Seção 5 do APX-J
+- `/apendice-vivo`: snapshot 2026-11-25 (MODELOS, PRECOS, REGULACAO, README e CHANGELOG-APENDICE)
 - Página "O Que Mudou Nesta Edição" com a seção de 25 de novembro
-
-### Corrigido
-
-- **Usage credits** reescritos a partir do Help Center (Max, Ultra e premium com Fable até 50% dos limites; Pro e standard por usage credits), com a divergência do anúncio do 5.2 declarada
-- **Retenção do Fable**: a divergência entre retenção de 30 dias e retenção zero, aberta desde a v0.5, foi reconciliada pelas notas de versão (30 dias é a regra; retenção zero via EFS ou autorização)
-- **Capítulo 4**: saem as razões de custo fixas entre tiers (5× a 20×, "cerca de vinte vezes") e a frase que dava o Sonnet como ponto de partida recomendado; entra a regra de encaixe. Fecha a pendência aberta em 09/10
-- **Seção 5 do APX-J**: o degrau Fable para Opus voltou de 2,5× para 2×; o texto passa a dizer que a razão entre tiers é decisão comercial de cada geração
 
 ### Pendente (declarado)
 
